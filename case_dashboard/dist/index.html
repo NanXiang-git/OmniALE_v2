@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OmniALE 音视频任务、答卷与评分看板">
+  <title>OmniALE · 任务图谱</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="results.css">
+  <script defer src="vendor/marked.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="results.js"></script>
+  <script defer src="results-ui.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <aside class="sidebar">
+    <a href="#" class="brand" aria-label="OmniALE 首页"><span class="brand-symbol">O<span>↗</span></span><span>Omni<span class="brand-light">ALE</span><small>AUDIOVISUAL TASK ATLAS</small></span></a>
+    <div class="workspace-tag"><span class="status-dot"></span> 在线工作空间 <span>V2</span></div>
+    <div class="nav-label">WORKSPACE / 工作台</div>
+    <nav aria-label="主导航">
+      <button class="nav-item active" data-view="packages"><span class="nav-icon">▦</span>正式题包<span class="nav-count">14</span></button>
+      <button class="nav-item" data-view="concepts"><span class="nav-icon">◈</span>全部 Case 图谱<span class="nav-count">48</span></button>
+      <button class="nav-item" data-view="results"><span class="nav-icon">▥</span>答卷与评分<span class="nav-count">14</span></button>
+    </nav>
+    <div class="nav-label category-label">CAPABILITIES / 能力维度</div>
+    <nav id="category-nav" aria-label="能力筛选"></nav>
+    <div class="sidebar-bottom"><div class="local-badge">◉ &nbsp; GITHUB COLLECTION</div><p>从任务出发，回到真实声画。</p><div class="sidebar-divider"></div><span>题面 · 答卷 · 评分记录</span><small>14 份冻结答卷已接入</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumbs"><span>工作空间</span><b>/</b><span id="breadcrumb">正式题包</span></div><div class="topbar-right"><span class="subtle">在线浏览 · 无需登录</span><span class="round-mark">OA</span></div></header>
+    <div class="hosting-note" style="padding:10px 28px;background:#eef3e6;font-size:12px;color:#526b40;line-height:1.8">网页媒体为压缩浏览预览，不能据此重新判定像素、音质或评分。原文件由同仓库 Releases 保存；93 分钟源片直接加载原文件。<a href="../../asset-manifest.json">文件清单</a> · <a href="https://github.com/NanXiang-git/OmniALE_v2">GitHub 仓库</a></div><main id="main" tabindex="-1"></main>
+    <footer class="footer"><span>OmniALE <b>任务图谱</b></span><span id="build-note"></span></footer>
+  </div>
+  <dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-head"><div><span class="eyebrow" id="viewer-kind">PUBLIC MATERIAL</span><h2 id="viewer-title"></h2></div><button class="icon-button" id="close-viewer" aria-label="关闭预览">✕</button></div><div id="viewer-body"></div><div class="viewer-foot"><span id="viewer-meta"></span><a class="button" id="viewer-source" target="_blank" rel="noopener">打开原文件 ↗</a></div></dialog>
+  <div role="status" id="toast"></div>
+  <noscript>本看板需要浏览器启用 JavaScript；页面脚本随站点提供。</noscript>
+</body>
+</html>
