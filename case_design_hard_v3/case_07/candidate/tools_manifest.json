@@ -1,0 +1,32 @@
+{
+  "version": "case3-resolve-green-v3.1-draft",
+  "status": "installed_pending_internal_bridge_preflight",
+  "required_software": {
+    "name": "DaVinci Resolve",
+    "edition": "Free",
+    "installed_version": "21.1.2.10",
+    "external_scripting": "not_required; external connection returned None",
+    "internal_scripting": "pending_preflight",
+    "license": "Free edition; no Studio-only tools required"
+  },
+  "allowed_interfaces": [
+    "Internal Lua API via preconfigured bridge",
+    "Internal Python scripting if verified",
+    "GUI"
+  ],
+  "auxiliary_tools": [
+    "Python",
+    "OpenCV",
+    "FFmpeg",
+    "preinstalled local segmentation/tracking models"
+  ],
+  "models": [],
+  "gpu": null,
+  "wall_minutes": 120,
+  "experiment_started": false,
+  "bridge": {
+    "protocol": "TOOL_PROTOCOL.md",
+    "status": "specified_not_implemented_or_validated",
+    "source": "independent implementation planned; upstream bridge source not found in case directory"
+  }
+}

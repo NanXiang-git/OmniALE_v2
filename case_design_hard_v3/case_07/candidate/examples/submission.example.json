@@ -1,0 +1,33 @@
+{
+  "version": "case3-resolve-green-v3.1-draft",
+  "source_case_id": "07",
+  "resolve_project": "REPLACE_WITH_ACTUAL_PROJECT",
+  "clips": [
+    {
+      "clip_id": "clip_1",
+      "output": "output_1.mp4",
+      "frame_map": {
+        "start": 0,
+        "end_exclusive": 100,
+        "step": 1,
+        "mode": "identity"
+      },
+      "render_job_id": "REPLACE_WITH_ACTUAL_JOB_ID",
+      "timeline_name": "REPLACE_WITH_CLIP_1_TIMELINE_NAME"
+    },
+    {
+      "clip_id": "clip_2",
+      "output": "output_2.mp4",
+      "frame_map": {
+        "start": 0,
+        "end_exclusive": 100,
+        "step": 1,
+        "mode": "identity"
+      },
+      "render_job_id": "REPLACE_WITH_ACTUAL_JOB_ID",
+      "timeline_name": "REPLACE_WITH_CLIP_2_TIMELINE_NAME"
+    }
+  ],
+  "project_file": "project.drp",
+  "readme": "README.md"
+}
