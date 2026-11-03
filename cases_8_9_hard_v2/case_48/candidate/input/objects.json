@@ -1,0 +1,59 @@
+{
+  "objects": [
+    {
+      "id": "space",
+      "name": "真实画面的空间",
+      "values": [
+        "outdoor",
+        "indoor",
+        "title"
+      ]
+    },
+    {
+      "id": "arm",
+      "name": "开场女性机械前臂的身体侧别",
+      "values": [
+        "body_right",
+        "body_left"
+      ]
+    },
+    {
+      "id": "jacket",
+      "name": "开场青年男性外套主色",
+      "values": [
+        "blue",
+        "burgundy"
+      ]
+    },
+    {
+      "id": "rifle",
+      "name": "狙击手的长枪使用姿态",
+      "values": [
+        "aiming",
+        "lowered"
+      ]
+    },
+    {
+      "id": "capsule",
+      "name": "监看窗内唯一C7容器盖",
+      "values": [
+        "sealed",
+        "open"
+      ]
+    },
+    {
+      "id": "switch",
+      "name": "监看窗内唯一S3开关",
+      "values": [
+        "off",
+        "on"
+      ]
+    }
+  ],
+  "visibility": [
+    "visible",
+    "not_visible",
+    "visible_uncertain"
+  ],
+  "state_null_when_not_known": true
+}

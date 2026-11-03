@@ -1,0 +1,57 @@
+{
+  "source_duration": 180,
+  "output_duration": 198,
+  "fps": 25,
+  "hold_policy": "repeat the final frame strictly before each anchor",
+  "segments": [
+    {
+      "kind": "source",
+      "source_start": 0,
+      "source_end": 62,
+      "output_start": 0,
+      "output_end": 62
+    },
+    {
+      "kind": "hold",
+      "anchor_source_time": 62,
+      "output_start": 62,
+      "output_end": 68,
+      "frame_source_time": 61.96
+    },
+    {
+      "kind": "source",
+      "source_start": 62,
+      "source_end": 96,
+      "output_start": 68,
+      "output_end": 102
+    },
+    {
+      "kind": "hold",
+      "anchor_source_time": 96,
+      "output_start": 102,
+      "output_end": 108,
+      "frame_source_time": 95.96
+    },
+    {
+      "kind": "source",
+      "source_start": 96,
+      "source_end": 154,
+      "output_start": 108,
+      "output_end": 166
+    },
+    {
+      "kind": "hold",
+      "anchor_source_time": 154,
+      "output_start": 166,
+      "output_end": 172,
+      "frame_source_time": 153.96
+    },
+    {
+      "kind": "source",
+      "source_start": 154,
+      "source_end": 180,
+      "output_start": 172,
+      "output_end": 198
+    }
+  ]
+}

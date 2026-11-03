@@ -1,0 +1,92 @@
+{
+  "phases": [
+    {
+      "id": "P1",
+      "start": 0,
+      "end": 25,
+      "title": "词元与身份"
+    },
+    {
+      "id": "P2",
+      "start": 25,
+      "end": 55,
+      "title": "查询、键和值"
+    },
+    {
+      "id": "P3",
+      "start": 55,
+      "end": 85,
+      "title": "原始分数"
+    },
+    {
+      "id": "P4",
+      "start": 85,
+      "end": 115,
+      "title": "因果遮罩"
+    },
+    {
+      "id": "P5",
+      "start": 115,
+      "end": 150,
+      "title": "加权传递"
+    },
+    {
+      "id": "P6",
+      "start": 150,
+      "end": 180,
+      "title": "更新表示"
+    }
+  ],
+  "tokens": [
+    {
+      "id": "T1",
+      "text": "小猫"
+    },
+    {
+      "id": "T2",
+      "text": "追逐"
+    },
+    {
+      "id": "T3",
+      "text": "红球"
+    }
+  ],
+  "query_key_convention": "query=row, key=column",
+  "T3_scores": [
+    1,
+    2,
+    0
+  ],
+  "T3_weights": [
+    0.245,
+    0.665,
+    0.09
+  ],
+  "values": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "weighted_sum": [
+    0.335,
+    0.755
+  ],
+  "mask": "causal, no future tokens",
+  "final_representation": "output projection of weighted value sum, then add original representation; no final numerical vector supplied",
+  "pause_anchors": [
+    25,
+    55,
+    85,
+    115,
+    150
+  ]
+}

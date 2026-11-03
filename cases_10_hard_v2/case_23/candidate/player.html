@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>注意力课程 · 音频描述</title><link rel="stylesheet" href="player/style.css"></head><body>
+<main><header><p class="eyebrow">无障碍课程 / 修订工作台</p><h1>注意力：信息怎样汇聚</h1><p class="intro">听教师讲解，也听见图中的变化。六个阶段共用同一条学习进度。</p></header>
+<section class="player"><div class="toolbar"><button id="toggle" aria-pressed="false">开启音频描述</button><button id="replay">从头播放</button><span id="mode">教师原课 · 180 秒</span></div>
+<video id="raw" src="input/lesson_v2.mp4" preload="auto" controls playsinline></video><video id="extended" preload="auto" controls playsinline hidden></video>
+<div class="readout"><span id="status" role="status">正在载入课程……</span><span id="position">源进度 00:00</span></div></section>
+<section><h2>六个阶段</h2><nav id="nav" aria-label="课程阶段"></nav></section><details><summary>关于两个版本</summary><p>关闭描述时播放原始课程；开启后播放保留教师原声的描述版。章节按钮跳到相应教学阶段，阶段末尾的描述暂停属于上一阶段。暂停中关闭再开启时，会续接当前暂停，不从头重复。</p><p>这是题方原创图示课程。教师声音由系统语音合成，概念参考与素材说明见 SOURCES.md。</p></details>
+</main><script src="player/app.js"></script></body></html>

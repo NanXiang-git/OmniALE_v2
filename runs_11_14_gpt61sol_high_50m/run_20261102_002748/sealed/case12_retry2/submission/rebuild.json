@@ -1,0 +1,6 @@
+{
+  "argv": ["{python}", "{submission}/rebuild.py", "--input", "{input}", "--submission", "{submission}", "--output", "{output}"],
+  "dependencies": ["Python 3 standard library", "FFmpeg with libass and libx264", "assets/DejaVuSans.ttf"],
+  "audio": "Copy the source AAC packets unchanged (48 kHz stereo)",
+  "video": "704x576, source 25 fps, lossless x264, submitted ASS burned by libass"
+}

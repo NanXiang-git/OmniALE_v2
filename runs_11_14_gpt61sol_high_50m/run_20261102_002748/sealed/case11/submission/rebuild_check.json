@@ -1,0 +1,38 @@
+{
+  "executed": true,
+  "offline": true,
+  "source": "/candidate/input/source.mp4",
+  "asset_source": "submission/cues/*.wav",
+  "rebuild_argv": [
+    "python3",
+    "/workspace/submission/rebuild.py",
+    "--input",
+    "/candidate/input",
+    "--assets",
+    "/workspace/submission",
+    "--output",
+    "/workspace/scratch/rebuild_check"
+  ],
+  "result": "Generated from source video and supplied cue WAVs; rebuilt media passed verify.py; verified media copied to final submission.",
+  "tts_called_during_rebuild": false,
+  "media_artifacts": {
+    "accessible_course.mp4": {
+      "sha256": "515f35a38d13e580d146b5f66b027f38871f454e4b1991b743f358e1d42b8ea0",
+      "bytes": 4951262
+    },
+    "mix.wav": {
+      "sha256": "957ce6eac2298d84dfa99cdebdabc7f64c783098a673bf8e87ab9da96fece74e",
+      "bytes": 19008044
+    },
+    "base_track.wav": {
+      "sha256": "61eb2a588c330b33d2cc2f120afcd2c706efae25ee513b2f6b2cd30195d18cb8",
+      "bytes": 19008044
+    },
+    "ad_track.wav": {
+      "sha256": "5ce25f7f7109c2bb0db5d4333dcdc2907112faa0f62af54f9ede785967a6a545",
+      "bytes": 19008044
+    }
+  },
+  "verification_report": "public_checks.json",
+  "recorded_utc": "2026-11-01T17:13:54.490636+00:00"
+}

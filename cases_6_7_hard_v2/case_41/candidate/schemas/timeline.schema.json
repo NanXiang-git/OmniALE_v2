@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "fps": {
+      "const": 25
+    },
+    "width": {
+      "const": 1280
+    },
+    "height": {
+      "const": 720
+    },
+    "master_gain_db": {
+      "type": "number",
+      "minimum": -24,
+      "maximum": 12
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_in_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 139839
+          },
+          "source_out_frame": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 139840
+          },
+          "original_gain_db": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "number",
+                "minimum": -60,
+                "maximum": 6
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source_in_frame",
+          "source_out_frame",
+          "original_gain_db"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 40,
+      "maxItems": 90
+    }
+  },
+  "required": [
+    "version",
+    "fps",
+    "width",
+    "height",
+    "master_gain_db",
+    "segments"
+  ],
+  "additionalProperties": false
+}

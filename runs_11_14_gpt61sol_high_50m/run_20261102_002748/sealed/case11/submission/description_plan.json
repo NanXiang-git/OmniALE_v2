@@ -1,0 +1,134 @@
+{
+  "language": "zh-CN",
+  "timebase": "output_seconds",
+  "sample_rate": 48000,
+  "voice": "V05",
+  "cues": [
+    {
+      "id": "AD01",
+      "start": 7.35,
+      "end": 17.392521,
+      "wav": "cues/AD01.wav",
+      "text": "两个“她”是T1和T3；查询是T3。T2是“告诉”，T4是“书”，T5是“给”，T6是“我”。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD02",
+      "start": 26.35,
+      "end": 32.621875,
+      "wav": "cues/AD02.wav",
+      "text": "起初H1在上，H2在下；两个头的最高来源都是T3。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD03",
+      "start": 39.45,
+      "end": 45.67175,
+      "wav": "cues/AD03.wav",
+      "text": "T1和T3的位置互换；两个“她”的身份、各头的权重都没变。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD04",
+      "start": 58.5,
+      "end": 66.957542,
+      "wav": "cues/AD04.wav",
+      "text": "头面板已对调为H2在上、H1在下。只换布局，两头最高仍是T3。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD05",
+      "start": 79.4,
+      "end": 88.185667,
+      "wav": "cues/AD05.wav",
+      "text": "H1里，T3一路下降，T1一路上升。两者交叉后，最高来源已改为T1。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD06",
+      "start": 89.6,
+      "end": 93.877167,
+      "wav": "cues/AD06.wav",
+      "text": "H2始终不变，仍以T3为最高来源。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD07",
+      "start": 97.5,
+      "end": 104.059583,
+      "wav": "cues/AD07.wav",
+      "text": "查询仍是T3；变化的是H1对来源的权重，不是查询身份。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD08",
+      "start": 108.2,
+      "end": 111.330208,
+      "wav": "cues/AD08.wav",
+      "text": "查询改为另一个“她”，T1。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD09",
+      "start": 117.9,
+      "end": 125.553604,
+      "wav": "cues/AD09.wav",
+      "text": "H1最高来源是T5“给”，其次T2“告诉”；H2最高来源则是T4“书”。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD09B",
+      "start": 138.25,
+      "end": 140.044813,
+      "wav": "cues/AD09B.wav",
+      "text": "H1屏蔽T5。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD10",
+      "start": 149.6,
+      "end": 159.730875,
+      "wav": "cues/AD10.wav",
+      "text": "只有H1屏蔽T5“给”，其权重归零。其余五项在头内重新归一化，T2“告诉”升为最高。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD11",
+      "start": 165.0,
+      "end": 170.468187,
+      "wav": "cues/AD11.wav",
+      "text": "H2完全不变，T5仍参与；最高仍是T4“书”。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD12",
+      "start": 172.15,
+      "end": 175.142542,
+      "wav": "cues/AD12.wav",
+      "text": "融合中，H1乘零点七。",
+      "voice": "V05",
+      "gain": 1.0
+    },
+    {
+      "id": "AD13",
+      "start": 184.2,
+      "end": 193.169625,
+      "wav": "cues/AD13.wav",
+      "text": "H2乘零点三。融合后T2“告诉”最高，T4“书”其次；T5仍有H2的贡献。",
+      "voice": "V05",
+      "gain": 1.0
+    }
+  ]
+}

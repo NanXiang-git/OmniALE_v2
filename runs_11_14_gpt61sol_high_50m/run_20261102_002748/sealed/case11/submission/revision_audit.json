@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "old_cue_id": 1,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD01"
+      ],
+      "reason": "保留初始查询为T3，但明确两个“她”分别是T1与T3，并补全其余词元的名称和编号，避免仅凭同字或位置认人。"
+    },
+    {
+      "old_cue_id": 2,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD02",
+        "AD04"
+      ],
+      "reason": "旧句仅称H1在上、H2在下；新版先有此初态，随后头面板互换，须说明换位后的H2在上、H1在下，以及权重未随布局变化。"
+    },
+    {
+      "old_cue_id": 3,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD03",
+        "AD04"
+      ],
+      "reason": "删除从左到右始终T1到T6的错误断言。新版T1与T3互换位置，编号随对象；词元换位与后来的头面板换位分别描述，各头权重均未因此改变。"
+    },
+    {
+      "old_cue_id": 4,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD05",
+        "AD06",
+        "AD07"
+      ],
+      "reason": "新版连续变化仅发生在H1：T3下降、T1上升并交叉，H1最高转为T1；H2保持T3最高。此时查询仍是T3，不能继续称两个头都以T3最高。"
+    },
+    {
+      "old_cue_id": 5,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD08",
+        "AD09"
+      ],
+      "reason": "新版96秒查询已经改为另一个“她”T1；此后H1以T5“给”最高、T2“告诉”其次，H2以T4“书”最高。删除查询仍为T3的旧结论。"
+    },
+    {
+      "old_cue_id": 6,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD09B",
+        "AD10",
+        "AD11"
+      ],
+      "reason": "新版126秒只在H1屏蔽T5，归零后其余五项在H1内部重新归一化，T2成为局部最高；H2完全不变，T5仍参与且最高仍是T4。不能泛称六项均参与或全局屏蔽。"
+    },
+    {
+      "old_cue_id": 7,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD12",
+        "AD13"
+      ],
+      "reason": "新版融合系数明确为0.7乘H1加0.3乘H2，并非等权；实际语音分别读出H1乘零点七、H2乘零点三。"
+    },
+    {
+      "old_cue_id": 8,
+      "action": "rewrite",
+      "new_cue_ids": [
+        "AD13"
+      ],
+      "reason": "最终加权最高为T2“告诉”，其次为T4“书”，不再是T3。另说明T5虽在H1被屏蔽，仍有H2对融合的贡献，区分局部屏蔽与整体结果。"
+    }
+  ]
+}
