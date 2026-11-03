@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "case_id",
+    "files"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0"
+    },
+    "case_id": {
+      "const": "07"
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "rgba_1",
+        "rgba_2",
+        "dark_1",
+        "light_1",
+        "dark_2",
+        "light_2",
+        "report"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "rgba_1": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rgba_2": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dark_1": {
+          "type": "string",
+          "minLength": 1
+        },
+        "light_1": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dark_2": {
+          "type": "string",
+          "minLength": 1
+        },
+        "light_2": {
+          "type": "string",
+          "minLength": 1
+        },
+        "report": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

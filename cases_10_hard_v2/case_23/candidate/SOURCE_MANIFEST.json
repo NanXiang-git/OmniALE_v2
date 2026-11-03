@@ -1,0 +1,97 @@
+{
+  "reference_scope": "Conceptual references; lesson media independently authored, not downloaded source-video footage. Reference snapshots retained privately.",
+  "network_references": [
+    {
+      "name": "attention_license.txt",
+      "url": "https://raw.githubusercontent.com/3b1b/videos/master/LICENSE.txt",
+      "resolved_url": "https://raw.githubusercontent.com/3b1b/videos/master/LICENSE.txt",
+      "bytes": 20849,
+      "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1",
+      "acquired_utc": "2026-11-01T12:47:48Z",
+      "status": "downloaded_not_semantically_reviewed",
+      "snapshot_name": "attention_license.txt"
+    },
+    {
+      "name": "attention_source.py",
+      "url": "https://raw.githubusercontent.com/3b1b/videos/master/_2024/transformers/attention.py",
+      "resolved_url": "https://raw.githubusercontent.com/3b1b/videos/master/_2024/transformers/attention.py",
+      "bytes": 145651,
+      "sha256": "a7bea64ca6149b5365e0ec49906cf2100b3686cf8e27f4f85dd5722bbc118ef5",
+      "acquired_utc": "2026-11-01T12:47:47Z",
+      "status": "downloaded_not_semantically_reviewed",
+      "snapshot_name": "attention_source.py"
+    },
+    {
+      "url": "https://www.3blue1brown.com/lessons/attention",
+      "status": 200,
+      "sha256": "ff533089fd84445485a690522ee7b4c730be381660bceccd7d64c08998d4403b",
+      "bytes": 129441,
+      "snapshot_name": "official_attention.html",
+      "snapshot_file_mtime_utc": "2026-11-01T16:17:33.313033+00:00"
+    }
+  ],
+  "delivered_inputs": [
+    {
+      "path": "input/lesson_v1.mp4",
+      "bytes": 2645794,
+      "sha256": "03b149fb89fe32032beb4762d0b845bc18c6ad8e8f6b7c73262c3d29da3d5881"
+    },
+    {
+      "path": "input/lesson_v2.mp4",
+      "bytes": 2975381,
+      "sha256": "596729ff08fa8221b3bd906fefdf5d07344eb237d9a91026959f8d6423c43d3e"
+    },
+    {
+      "path": "input/old_description/01.wav",
+      "bytes": 605710,
+      "sha256": "b597365f887124866ef7a0c8a94638f18dbb8fe24eb188939489b2fadb0a4ccc"
+    },
+    {
+      "path": "input/old_description/02.wav",
+      "bytes": 667660,
+      "sha256": "1334c09124f27b7c09cb39bec7ce334b1953f5b5de2823bbf0f12200790bed94"
+    },
+    {
+      "path": "input/old_description/03.wav",
+      "bytes": 731190,
+      "sha256": "22ff43547d3a0144b859652528c99c264b731885029480b4d5ae67e79c42910e"
+    },
+    {
+      "path": "input/old_description/04.wav",
+      "bytes": 529398,
+      "sha256": "0bdcdd2dd6b821164b564c3ae02221a4434a144bb7420324d38edc5740657d7a"
+    },
+    {
+      "path": "input/old_description/05.wav",
+      "bytes": 977176,
+      "sha256": "c387fb5e73f2a179f3db18afd53b6b3f1da3cd9afb35857b782bf7d2e7cbcafb"
+    },
+    {
+      "path": "input/old_description/06.wav",
+      "bytes": 869838,
+      "sha256": "7f61fd3e36955f396434667317393baab4194e7090f066b0cc9ff083cf7c6bbe"
+    },
+    {
+      "path": "input/old_description.json",
+      "bytes": 1474,
+      "sha256": "d022cbeb695eb8a6a0c4a67fbbc50eca6b65c767f611e66757223135ad65902f"
+    },
+    {
+      "path": "input/phase_facts.json",
+      "bytes": 1431,
+      "sha256": "052343c36a59becb68214b6d5f940a7cb95c44edd858f1da1dd3414450f10dc5"
+    },
+    {
+      "path": "input/teacher.wav",
+      "bytes": 17280044,
+      "sha256": "159785df00e1450e9922fcf589d52034c84d1c6e5202f0f939b5b7ff0ae3d04f"
+    },
+    {
+      "path": "input/teacher_transcript.json",
+      "bytes": 1465,
+      "sha256": "b9febe9506e1cd91bfea03068ff54ea499b160492eb904b7edc288435131be33"
+    }
+  ],
+  "creator": "omniALE controlled attention lesson",
+  "speech_engine": "Microsoft Huihui Desktop; no voice cloning"
+}

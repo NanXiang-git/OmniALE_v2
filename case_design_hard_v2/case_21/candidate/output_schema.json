@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "case_id",
+    "files"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0"
+    },
+    "case_id": {
+      "const": "21"
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "video",
+        "edit",
+        "mix",
+        "foley",
+        "ambience",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "video": {
+          "type": "string",
+          "minLength": 1
+        },
+        "edit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mix": {
+          "type": "string",
+          "minLength": 1
+        },
+        "foley": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ambience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

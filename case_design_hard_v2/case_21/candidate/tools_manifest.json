@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "tools": [
+    "ffmpeg8",
+    "Python3.13",
+    "numpy",
+    "opencv",
+    "local NLE or scripting"
+  ],
+  "budget": {
+    "wall_minutes": 120,
+    "gpu": "not required"
+  },
+  "network": "candidate-only sandbox; no source internet lookup or authoring/evaluator access",
+  "source_family_overlap": "Tears of Steel also used by originalCase26; run separate solver sessions and report family-level dependence"
+}

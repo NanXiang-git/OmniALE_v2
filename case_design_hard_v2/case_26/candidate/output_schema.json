@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "case_id",
+    "files"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0"
+    },
+    "case_id": {
+      "const": "26"
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "master",
+        "preview",
+        "repair",
+        "project",
+        "report"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "master": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preview": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repair": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "report": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

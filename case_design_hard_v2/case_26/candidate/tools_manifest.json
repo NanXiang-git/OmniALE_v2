@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "tools": [
+    "ffmpeg8",
+    "Python3.13",
+    "numpy",
+    "opencv",
+    "local restoration tools/models permitted"
+  ],
+  "budget": {
+    "wall_minutes": 120,
+    "gpu": "not guaranteed"
+  },
+  "network": "candidate-only filesystem; no other cases, truth or raw source access",
+  "source_family_overlap": "Case21 uses same Tears of Steel04_5a; independent solver session required",
+  "reproducibility_scope": "declarative correction replay only; report original processing separately"
+}

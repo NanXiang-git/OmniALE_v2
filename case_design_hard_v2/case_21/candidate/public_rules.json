@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "case_id": "21",
+  "pass_threshold": 80,
+  "automatic_weights": {
+    "delivery": 5,
+    "source_mapping": 15,
+    "replacement_actions": 15,
+    "protected_ranges": 5,
+    "audio_events": 10,
+    "mix_rebuild": 10
+  },
+  "hard_constraints": {
+    "video": "24–28seconds inclusive,576–672frames,24fps,960x506,48kHz stereo AAC",
+    "source": "only04_2a/04_4b/04_5a;04_4a forbidden; every rendered frame must match exact project source mapping: grayscale correlation>=0.94 AND RGB MAE<=0.035; no crop, mirror, overlays, color change, interpolation or invented frames",
+    "speed": "rational num/den within[0.9,1.1]; output_count=ceil((out-in)*den/num); nearest previous source frame floor(k*num/den); all segments>=24 outputframes; no reversed or repeated source intervals",
+    "protected": "first48frames exactly04_2a[0,48) at1x; last48frames exactly04_2a[96,144) at1x; each occurs exactly once",
+    "replacement": "new close-up must show seated man turn from side to forward and bring microphone into frame before hand action; later retain frontal response after hand release. Each required visible action core must be covered fully at declared rate. At least144 sourceframes of04_4b.",
+    "hand_action": "use FIRST reach from small keyboard towards gray ball controller, sustained visible grip, release and return; second similar reach/grip later in source not a substitute. First hand chain uninterrupted; include preparation and released result.",
+    "audio": "two events only: sleeve at first clear reach onset, release at first clear hand separation; match visible annotated uncertainty window plus2 outputframes. Do not add impact for partly off-screen first contact. Event IDs unique and assigned correct sound.",
+    "mix": "submit PCM16 WAV48k stereo foley/ambience/mix at exact video sample count; actual stems vs project reconstruction normalized correlation>=0.98 and MAE<=0.003; sum stems equals mix<=0.0001 MAE; actual video audio correlation>=0.97, gain ratio0.9–1.1; no clipping peak>=0.999",
+    "project": "edit.json is executable declarative project, validated against schema; trusted renderer reconstructs all source frames and all audio samples. No solver executable is run.",
+    "stem_gain": "Each actual stem/mix RMS gain relative to project reconstruction must be0.97–1.03; waveform correlation alone cannot validate changed gains."
+  },
+  "automatic_rule": "Each group receives weight iff all its gates pass, otherwise0; no formal total without valid independent judge.",
+  "judge_items": [
+    {
+      "id": "causal_continuity",
+      "weight": 15,
+      "critical": true,
+      "criterion": "从覆盖镜头进入新近景，第一轮伸手—握持—松开—近景反应—覆盖收尾关系可理解；不混用第二轮或将角色/结果错接。手部不可见之处不脑补具体按钮或对白。",
+      "rating_anchors": {
+        "0": "关键顺序反转、错轮次、角色状态矛盾导致因果不可理解。",
+        "0.5": "事件顺序和主体关系成立，局部转场或省略较生硬。",
+        "1": "镜头关系、视线和动作阶段自然，保护段与新内容衔接清晰。"
+      }
+    },
+    {
+      "id": "replacement_quality",
+      "weight": 10,
+      "critical": true,
+      "criterion": "04_4b真实替代旧宽镜头，选点保留转头/举麦和后续面部反应，不按旧切点机械截断；手部操纵器操作完整且无反复动作伪造。",
+      "rating_anchors": {
+        "0": "替换未成立、关键新反应缺失或错误动作替代。",
+        "0.5": "替换和关键内容完整但节奏或切点需要修整。",
+        "1": "新近景与手部插入彼此支持，核心行为清楚且剪辑点有余量。"
+      }
+    },
+    {
+      "id": "sound_edit",
+      "weight": 10,
+      "critical": true,
+      "criterion": "实际两种拟音对应可见伸手/松手并随重剪迁移，环境声跨切连续；没有旧落点幽灵声、假接触撞击或不可听事件。原片无同期对白，不凭口型杜撰台词。",
+      "rating_anchors": {
+        "0": "主要拟音错位/缺失/重复或声音误导动作性质。",
+        "0.5": "两处事件同步成立，但音量、衔接或质感生硬。",
+        "1": "拟音自然随动作，底声连续，修改后没有旧声残留。"
+      }
+    },
+    {
+      "id": "editorial_craft",
+      "weight": 5,
+      "critical": false,
+      "criterion": "24–28秒总体节奏有准备、操作和回应，无非故意闪帧、声音爆点、异常冻结或字幕；绿幕为工作剪辑保留，不要求VFX修复。",
+      "rating_anchors": {
+        "0": "成片技术/节奏明显不可用。",
+        "0.5": "可理解但部分停顿或切换粗糙。",
+        "1": "节奏稳定、声画完整、工作剪辑可继续交接。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "required": [
+    "summary",
+    "source_observations",
+    "audio_changes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 1500
+    },
+    "source_observations": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1800
+    },
+    "audio_changes": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 1200
+    }
+  }
+}

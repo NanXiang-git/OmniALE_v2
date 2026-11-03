@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "allowed": "local matting/segmentation/editing and scripts; model inference supplied by external orchestrator",
+  "network": "candidate-only filesystem; no public internet tools; no hidden truth/reference",
+  "budget": {
+    "wall_minutes": 120,
+    "gpu": "not guaranteed"
+  },
+  "runtime": "Python3.13/numpy/OpenCV/ffmpeg8 available via administrator",
+  "input_frames": "100 per clip; no additional upscaling required"
+}

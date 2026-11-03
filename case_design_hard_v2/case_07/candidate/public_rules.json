@@ -1,0 +1,107 @@
+{
+  "version": "2.0",
+  "case_id": "07",
+  "pass_threshold": 80,
+  "automatic_weights": {
+    "delivery": 5,
+    "interior": 10,
+    "background": 5,
+    "soft_edges": 15,
+    "occlusion": 10,
+    "temporal": 5,
+    "color": 5,
+    "preview": 5
+  },
+  "automatic_rule": "Per clip compute metrics, linearly clamp quality from good/bad anchors; equal clip weighting. Hard gates separately apply to each clip.",
+  "anchors": {
+    "interior_mae": [
+      0.01,
+      0.1
+    ],
+    "background_mae": [
+      0.005,
+      0.06
+    ],
+    "soft_mae": [
+      0.025,
+      0.18
+    ],
+    "gradient_mae": [
+      0.015,
+      0.12
+    ],
+    "event_mae": [
+      0.025,
+      0.18
+    ],
+    "temporal_mae": [
+      0.012,
+      0.09
+    ],
+    "composite_mae": [
+      0.02,
+      0.15
+    ],
+    "foreground_soft_mae": [
+      0.04,
+      0.2
+    ]
+  },
+  "hard_constraints": {
+    "inputs": "2 clips,100 distinct consecutive source frames each,512x288; benchmark25fps. PNG authoritative; MP4 for browsing only.",
+    "archives": "ZIP_STORED or DEFLATED, exactly0000.png..0099.png at ZIP root, no links/extra paths; RGBA8 straight alpha sRGB; each decompressed PNG<=2MB.",
+    "preview": "dark_1/light_1/dark_2/light_2 MP4,100frames,512x288,25fps,no audio; linear-light recomposition using corresponding supplied background; per-frame RGB MAE<=0.035",
+    "identity": "clip1 only long-haired woman with glasses; clip2 adult+child both. Blue-shirt bearded man is excluded even when he occludes target. Strip excluded; no completion behind occluders.",
+    "interior": "truth alpha>=0.95: candidate alpha<0.5 on>10% interior for>=7 consecutive frames fails. Mean interior alpha error<=0.10.",
+    "background": "truth alpha<=0.01 mean alpha<=0.06",
+    "soft_edges": "mean absolute alpha error on0.02<truth<0.98<=0.12; Sobel edge error reported separately",
+    "occlusion": "event-region mean alpha error<=0.12; no ignored frames or duplicated static masks",
+    "color": "four-background linear compositing error on truth alpha>0.02<=0.15; invisible RGB is not graded",
+    "frame_map": "exact identity mapping0..99 in each clip; no skipped frames",
+    "temporal": "fixed truth backward flow; compare candidate-vs-truth warp residual only in visible correspondence mask, mean<=0.09",
+    "straight_foreground_color": "mean sRGB foreground error in truth0.05<alpha<0.95<=0.15; RGB below alpha0.05 not graded"
+  },
+  "metric_definitions": {
+    "soft_edges": "0.7*quality(soft_mae)+0.3*quality(gradient_mae), Sobel divided by4, mean x/y absolute error on3px truth contour band",
+    "occlusion": "region where target amodal alpha>0.03 and foreground excluded alpha>0.03; also visible target in outer12px canvas band",
+    "temporal": "|(pred_t-warp(pred_prev))-(truth_t-warp(truth_prev))|, fixed Farneback flow with trusted photometric and visibility mask",
+    "color": "50% four-background linear compositing quality and50% unassociated sRGB foreground quality in soft truth pixels; composite anchor0.02/0.15, foreground0.04/0.20",
+    "foreground": "original foreground color transformed with premultiplied resampling then unassociated; mathematical layer truth"
+  },
+  "judge_items": [
+    {
+      "id": "identity_visibility",
+      "weight": 15,
+      "critical": true,
+      "criterion": "原输入、候选与真值对照：两镜头目标身份正确，clip2成人与孩子均保留；蓝衣男子和竖条完全排除，遮挡后及时显露，不补全被挡身体。",
+      "rating_anchors": {
+        "0": "换身份、混入干扰人/遮挡物或大段丢失目标。",
+        "0.5": "主要身份与显隐正确，局部显露有短暂瑕疵。",
+        "1": "身份、两人间隙、遮挡/重新显露均正确且连续。"
+      }
+    },
+    {
+      "id": "edge_usability",
+      "weight": 15,
+      "critical": true,
+      "criterion": "实际深浅背景及棋盘重合成中，长发、眼镜、手指、衣服与两人间隙自然；无明显黑边、原背景染色、硬切边或整圈侵蚀。",
+      "rating_anchors": {
+        "0": "主要轮廓不可用或明显大范围色边/硬边。",
+        "0.5": "可用于合成但局部发丝/手部或颜色边缘需修补。",
+        "1": "所有主要边缘在多背景下自然，细节和软透明保留。"
+      }
+    },
+    {
+      "id": "temporal_quality",
+      "weight": 10,
+      "critical": false,
+      "criterion": "逐帧/连续观看，无不随原运动的遮罩跳变、呼吸、冻结、粘背景；出画/遮挡不是凭空淡出。",
+      "rating_anchors": {
+        "0": "持续闪烁/冻结或明显错帧。",
+        "0.5": "总体连续，少量局部不稳定。",
+        "1": "与真实运动和遮挡同步，未见影响复用的时序错误。"
+      }
+    }
+  ],
+  "unverified": "missing judge or environment =>formal_total=null; hard failure =>accepted=false"
+}

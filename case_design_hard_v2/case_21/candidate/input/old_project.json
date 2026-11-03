@@ -1,0 +1,71 @@
+{
+  "version": "2.0",
+  "segments": [
+    {
+      "id": "intro",
+      "source": "04_2a.mp4",
+      "in_frame": 0,
+      "out_frame": 48,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "old_prepare",
+      "source": "04_4a.mp4",
+      "in_frame": 0,
+      "out_frame": 120,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "coverage",
+      "source": "04_2a.mp4",
+      "in_frame": 48,
+      "out_frame": 96,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "second_operation",
+      "source": "04_5a.mp4",
+      "in_frame": 408,
+      "out_frame": 624,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "old_response",
+      "source": "04_4a.mp4",
+      "in_frame": 120,
+      "out_frame": 240,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "outro",
+      "source": "04_2a.mp4",
+      "in_frame": 96,
+      "out_frame": 144,
+      "rate_num": 24,
+      "rate_den": 24
+    }
+  ],
+  "audio_events": [
+    {
+      "id": "reach",
+      "source": "sleeve.wav",
+      "out_frame": 229,
+      "gain": 1
+    },
+    {
+      "id": "release",
+      "source": "release.wav",
+      "out_frame": 367,
+      "gain": 1
+    }
+  ],
+  "ambience": {
+    "source_start_sample": 0,
+    "gain": 1
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "required": [
+    "method",
+    "target_policy",
+    "alpha_mode",
+    "compositing",
+    "frame_map"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "type": "string",
+      "minLength": 12
+    },
+    "target_policy": {
+      "type": "string",
+      "minLength": 8
+    },
+    "alpha_mode": {
+      "const": "straight"
+    },
+    "compositing": {
+      "const": "linear-light sRGB transfer"
+    },
+    "frame_map": {
+      "type": "object",
+      "required": [
+        "clip_1",
+        "clip_2"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "clip_1": {
+          "type": "array",
+          "minItems": 100,
+          "maxItems": 100,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 99
+          }
+        },
+        "clip_2": {
+          "type": "array",
+          "minItems": 100,
+          "maxItems": 100,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 99
+          }
+        }
+      }
+    }
+  }
+}

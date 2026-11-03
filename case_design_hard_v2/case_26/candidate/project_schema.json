@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "input",
+    "operation",
+    "neutral",
+    "step",
+    "strength",
+    "rounding",
+    "frame_map"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "1.0"
+    },
+    "input": {
+      "const": "input/damaged.mkv"
+    },
+    "operation": {
+      "const": "add_signed8_correction"
+    },
+    "neutral": {
+      "const": 128
+    },
+    "step": {
+      "const": 2
+    },
+    "strength": {
+      "const": 1.0
+    },
+    "rounding": {
+      "const": "nearest_even_then_clip_uint8"
+    },
+    "frame_map": {
+      "type": "array",
+      "minItems": 624,
+      "maxItems": 624,
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 623
+      }
+    }
+  }
+}

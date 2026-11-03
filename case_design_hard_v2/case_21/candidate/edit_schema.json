@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "segments",
+    "audio_events",
+    "ambience"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0"
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "in_frame",
+          "out_frame",
+          "rate_num",
+          "rate_den"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]{1,24}$"
+          },
+          "source": {
+            "enum": [
+              "04_2a.mp4",
+              "04_4b.mp4",
+              "04_5a.mp4"
+            ]
+          },
+          "in_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 623
+          },
+          "out_frame": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 624
+          },
+          "rate_num": {
+            "type": "integer",
+            "minimum": 9,
+            "maximum": 25
+          },
+          "rate_den": {
+            "type": "integer",
+            "minimum": 10,
+            "maximum": 24
+          }
+        }
+      }
+    },
+    "audio_events": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "out_frame",
+          "gain"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "enum": [
+              "reach",
+              "release"
+            ]
+          },
+          "source": {
+            "enum": [
+              "sleeve.wav",
+              "release.wav"
+            ]
+          },
+          "out_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 671
+          },
+          "gain": {
+            "type": "number",
+            "minimum": 0.5,
+            "maximum": 1.5
+          }
+        }
+      }
+    },
+    "ambience": {
+      "type": "object",
+      "required": [
+        "source_start_sample",
+        "gain"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source_start_sample": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 480000
+        },
+        "gain": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 1.5
+        }
+      }
+    }
+  }
+}
