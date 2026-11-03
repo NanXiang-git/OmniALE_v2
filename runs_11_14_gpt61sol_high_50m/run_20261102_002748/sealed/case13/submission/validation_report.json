@@ -1,0 +1,161 @@
+{
+  "technical_checks_only": true,
+  "subjective_judge_run": false,
+  "checks": {
+    "json_schema": true,
+    "source_ids_covered": true,
+    "speaker_references": true,
+    "screen_text_unvoiced": true,
+    "effects_formula": true,
+    "role_activity_inside_plan": true,
+    "stem_sum": true,
+    "audio_formats": true,
+    "mobile_formula": true,
+    "mix.wav_loudness": true,
+    "mix.wav_true_peak": true,
+    "dub_zh.mp4_loudness": true,
+    "dub_zh.mp4_true_peak": true,
+    "mobile_loudness": true,
+    "mobile_true_peak": true,
+    "video_format": true,
+    "subtitle_reading_limits": true,
+    "burned_simultaneous_line_limits": true
+  },
+  "media": {
+    "characters/celia.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/thom_young.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/thom_older.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/captain.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/barley.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/operator.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "characters/assistant.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "mix.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "effects_track.wav": {
+      "samplerate": 48000,
+      "channels": 2,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    },
+    "mobile_mix.wav": {
+      "samplerate": 48000,
+      "channels": 1,
+      "samples": 25200000,
+      "subtype": "PCM_24"
+    }
+  },
+  "warnings": [],
+  "effects_relative_waveform_error": 8.672869517730602e-07,
+  "role_activity": [
+    {
+      "wav": "characters/celia.wav",
+      "active_samples": 728976,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/thom_young.wav",
+      "active_samples": 452803,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/thom_older.wav",
+      "active_samples": 938075,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/captain.wav",
+      "active_samples": 1571032,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/barley.wav",
+      "active_samples": 520518,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/operator.wav",
+      "active_samples": 767364,
+      "fraction_inside_planned_events": 1.0
+    },
+    {
+      "wav": "characters/assistant.wav",
+      "active_samples": 170997,
+      "fraction_inside_planned_events": 1.0
+    }
+  ],
+  "sum_relative_waveform_error": 0.0,
+  "mobile_reference_relative_error": 0.0,
+  "loudness": {
+    "mix.wav": {
+      "integrated_lufs": -15.2,
+      "true_peak_dbtp": -1.78,
+      "lra_lu": 20.8
+    },
+    "mobile_mix.wav": {
+      "integrated_lufs": -18.45,
+      "true_peak_dbtp": -2.28,
+      "lra_lu": 20.1
+    },
+    "dub_zh.mp4": {
+      "integrated_lufs": -15.22,
+      "true_peak_dbtp": -1.54,
+      "lra_lu": 20.7
+    }
+  },
+  "video": {
+    "width": 1280,
+    "height": 534,
+    "r_frame_rate": "24/1",
+    "duration": "525.000000",
+    "nb_frames": "12600"
+  },
+  "subtitle_issues": [],
+  "simultaneous_subtitle_line_violations": [],
+  "elapsed_seconds": 61.29386286599947,
+  "all_measured_checks_pass": true,
+  "subtitle_ass_srt_actual_file_check": "All actual SRT/ASS cue times and text matched via public media.read_cues; no violations.",
+  "rebuild_evidence_files": [
+    "rebuild_run.json",
+    "independent_rebuild_run.json",
+    "picture_and_rebuild_check.json"
+  ]
+}

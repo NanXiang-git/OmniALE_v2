@@ -1,0 +1,22 @@
+{
+  "dialogue_gain_db": 0,
+  "role_gain_db": {},
+  "event_gain_db": {},
+  "sample_rate": 48000,
+  "duration": 525,
+  "vocal_assets": "assets/takes",
+  "vocal_processing": "prepare_takes.py",
+  "picture_codec": "libx264 veryfast CRF18",
+  "sum_processing": "none",
+  "actor_peak_processing": "assets/vocal_peak_processing.json",
+  "raw_tts_profiles": {
+    "celia": "V03",
+    "thom_young": "V02",
+    "thom_older": "V05 / V02 with 0.88 profile",
+    "captain": "V04",
+    "barley": "V08",
+    "operator": "V07",
+    "assistant": "V06"
+  },
+  "final_vocal_stage": "finalize_vocals.py; +2 dB followed by actor-only stereo/mono peak envelope, frozen in assets/takes"
+}
