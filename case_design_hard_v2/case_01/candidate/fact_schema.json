@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "required": [
+    "checks"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "verdict",
+          "correction",
+          "evidence"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "enum": [
+              "Q1",
+              "Q2",
+              "Q3",
+              "Q4",
+              "Q5"
+            ]
+          },
+          "verdict": {
+            "enum": [
+              "support",
+              "refute",
+              "insufficient"
+            ]
+          },
+          "correction": {
+            "type": "string",
+            "minLength": 8
+          },
+          "evidence": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": [
+                "source",
+                "in_frame",
+                "out_frame"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "source": {
+                  "enum": [
+                    "q3.mp4",
+                    "q4.mp4"
+                  ]
+                },
+                "in_frame": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "out_frame": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

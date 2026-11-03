@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "tools": {
+    "ffmpeg": "8.0",
+    "python": "3.13+",
+    "opencv": "local installed",
+    "pillow": "local installed"
+  },
+  "allowed": "本地视频编辑/脚本/OCR/ASR；模型与工具版本由实验管理员开跑前冻结记录",
+  "network": "无互联网工具访问；模型推理由外部编排，文件操作在candidate-only隔离沙箱",
+  "budget": {
+    "wall_minutes": 120,
+    "gpu": "not guaranteed"
+  },
+  "solver_input": "candidate only; no v1 assets or authoring caches"
+}

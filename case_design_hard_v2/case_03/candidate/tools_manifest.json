@@ -1,0 +1,12 @@
+{
+  "version": "2.0",
+  "blender": "4.5.9 portable",
+  "python": "same local runtime as v1",
+  "ffmpeg": "8.0",
+  "allowed": "本地Blender脚本与编辑、音频分析、渲染；模型/工具预算由管理员开跑前记录",
+  "limits": {
+    "wall_minutes": 120,
+    "gpu": "not guaranteed"
+  },
+  "solver_access": "candidate-only isolated runtime; no internet tools or authoring/reference access"
+}

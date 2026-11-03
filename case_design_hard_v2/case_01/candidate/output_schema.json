@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "required": [
+    "version",
+    "case_id",
+    "files"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0"
+    },
+    "case_id": {
+      "const": "01"
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "master",
+        "vertical",
+        "edit",
+        "events",
+        "fact_check"
+      ],
+      "properties": {
+        "master": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vertical": {
+          "type": "string",
+          "minLength": 1
+        },
+        "edit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "events": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fact_check": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

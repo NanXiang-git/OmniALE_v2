@@ -1,0 +1,92 @@
+{
+  "version": "2.0",
+  "case_id": "01",
+  "pass_threshold": 80,
+  "automatic_weights": {
+    "delivery": 4,
+    "source_video": 12,
+    "source_audio": 8,
+    "event_coverage": 10,
+    "ledger": 10,
+    "fact_check": 8,
+    "reframe": 8
+  },
+  "judge_items": [
+    {
+      "id": "causality",
+      "weight": 12,
+      "criterion": "两版独立成立的逆转故事：追分、韩国回应、反超不等于锁胜、罚球收尾；所有新增事实字幕与事实核查一致，不能偷换20分的范围。",
+      "critical": true
+    },
+    {
+      "id": "replay",
+      "weight": 8,
+      "criterion": "两版至少一次清晰回放标签，同一得分回放不重复计分，重放紧邻正确事件或明确说明归属；终场反应不挪用暂停画面。",
+      "critical": true
+    },
+    {
+      "id": "vertical_edit",
+      "weight": 10,
+      "criterion": "竖版根据动作重构，能看清持球、关键传球/出手及入筐，重建比分/回放文字不依赖被裁掉的转播栏；不是只在入筐一帧找得到篮筐。",
+      "critical": true
+    },
+    {
+      "id": "sound_caption",
+      "weight": 10,
+      "criterion": "原声关键句与动作完整、跨切自然，字幕可读且语义不误导；音频匹配的数值通过不替代听审。",
+      "critical": false
+    }
+  ],
+  "formats": {
+    "master": {
+      "width": 960,
+      "height": 620,
+      "picture": [
+        0,
+        0,
+        960,
+        544
+      ],
+      "frames": [
+        2950,
+        3050
+      ]
+    },
+    "vertical": {
+      "width": 540,
+      "height": 960,
+      "picture": [
+        0,
+        0,
+        540,
+        820
+      ],
+      "frames": [
+        1225,
+        1275
+      ]
+    }
+  },
+  "fps": 25,
+  "audio": "48kHz stereo",
+  "forbidden_policy": "input/release_policy.json",
+  "numeric_anchors": {
+    "source_video_corr": [
+      0.65,
+      0.96
+    ],
+    "audio_corr": [
+      0.55,
+      0.95
+    ],
+    "focus_coverage": [
+      0.65,
+      0.95
+    ]
+  },
+  "hard_gates": [
+    "格式、连续时间线、公开禁用区间、源画面匹配低于0.65超过5%、原声匹配低于0.55超过10%、必保动作包络缺失、必需回放/终场/Q3处境缺失、重复计分或核心账本事实错误、竖版关键入筐区域覆盖不足65%"
+  ],
+  "truth_boundary": "事件动作包络为已采样核查的近似区间，容差0.2秒；不把播出计分栏的延迟当进球时刻。",
+  "unverified": "缺必要模态或评测环境故障：formal_total=null；已知硬失败仍accepted=false。"
+}

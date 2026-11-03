@@ -1,0 +1,86 @@
+{
+  "version": "2.0",
+  "case_id": "03",
+  "pass_threshold": 80,
+  "automatic_weights": {
+    "delivery": 5,
+    "scene_integrity": 10,
+    "contact_motion": 10,
+    "orbit_occlusion": 10,
+    "layout": 10,
+    "audio_sync": 5,
+    "rebuild_editability": 10
+  },
+  "judge_items": [
+    {
+      "id": "physical_story",
+      "weight": 15,
+      "criterion": "真实立体环绕、前后遮挡交换、落位/回弹与地面接触自然；光点沿环运行，连续动作不是模板贴图或不连贯跳变。",
+      "critical": true,
+      "rating_anchors": {
+        "0": "无落位/完整环绕或前后关系错误；明显跳变、穿模使核心叙事失效。",
+        "0.5": "核心环绕、遮挡和接触成立，但回弹、加减速或轨迹有可见生硬。",
+        "1": "完整环绕和遮挡交换清楚，落位/回弹可信，运动连续流畅。"
+      }
+    },
+    {
+      "id": "dual_layout",
+      "weight": 10,
+      "criterion": "两种画幅主动布局，产品与轨道有视觉主次、文案可读、预留UI区不被重要内容占据；同一动作在双版一致。",
+      "critical": true,
+      "rating_anchors": {
+        "0": "任一版核心内容不可读/被UI区遮蔽，或未形成可用双端布局。",
+        "0.5": "两版内容可辨且主要区域正确，但字号、留白、视觉主次之一明显弱。",
+        "1": "两版构图主动适配，产品、轨道、品牌清楚且层级合理，预留区可直接使用。"
+      }
+    },
+    {
+      "id": "sound_design",
+      "weight": 5,
+      "criterion": "主落位冲击对应实际接触，品牌双音对应文案出现；不把早期弱装饰音当落位，整体声音自然。",
+      "critical": true,
+      "rating_anchors": {
+        "0": "实际声音缺失/错位，或主接触、品牌关键对应关系错误。",
+        "0.5": "两个主要时刻对应成立，但冲击感、衔接或整体响度不自然。",
+        "1": "接触和品牌提示清晰同步，装饰音不喧宾夺主，声音完整无削波或突兀断裂。"
+      }
+    },
+    {
+      "id": "advert_quality",
+      "weight": 10,
+      "criterion": "真实扫描相机辨识度、材质与光影有广告完成度，运动曲线、收尾与字体层级清楚，无闪烁、穿模或明显采样损伤。",
+      "critical": false,
+      "rating_anchors": {
+        "0": "无法辨识产品或成片明显损坏，持续闪烁/采样故障/严重材质问题。",
+        "0.5": "产品可辨且可播放，材质/灯光/字体/采样至少一项有明显欠缺。",
+        "1": "产品材质、灯光、字体和收尾有一致完成度，未见影响观看的渲染或采样缺陷。"
+      }
+    }
+  ],
+  "hard_constraints": {
+    "frames": 240,
+    "fps": 30,
+    "audio": "48kHz stereo; supplied cue_track retained at original timing",
+    "body_geometry": "same protected mesh and local transform, no shape keys/deforming modifiers",
+    "contact": "first contact within 2 frames of main low-frequency cue; no penetration >0.003; settled within 12 frames after cue",
+    "turn": "PRODUCT_ROOT rotation_z total range >=0.40 radians before brand reveal, final 40 frames stable within0.01rad",
+    "orbit": "TRACER traces >=300deg before brand reveal, stays on HALO tube centerline within0.025; each camera sees >=30 visible and >=5 product-occluded frames before brand reveal",
+    "layout": "bbox projection inside public safe rectangles with tolerance0.01; body projected bbox area >=0.045; text same strings and visible at brand cue±2frames through end",
+    "rebuild": "six deterministic project-hash-selected full-resolution reconstruction frames, correlation>=0.94 and mean RGB absolute error<=0.08; accent color edit changes visible pixels",
+    "project": "packed, no movie/sequence textures, autoexec disabled, same object datablocks across scenes",
+    "accent_probe": "Change Principled Base Color to cyan (0.02,0.8,0.95); at least40 rendered pixels must change by >20/255 in any RGB channel.",
+    "engineering": "No object/scene/material drivers or external libraries; no animation directly on PRODUCT_BODY; no modifiers or shape keys on protected body, HALO or TRACER. Root/HALO/TRACER scale1. PLINTH top fixed at world z0±0.003. HALO/TRACER visible and actual mesh surfaces must match specified torus/sphere sizes within0.002.",
+    "contact_definition": "Contact gap uses transformed body bounding-box minimum z minus evaluated PLINTH top; gap<=0.003 counts as contact; post-settle absolute gap<=0.003. Tracer nearest-surface distance must be>=0.052.",
+    "ray_definition": "Visibility/occlusion uses first scene ray hit towards TRACER center. Body first = product-occluded; TRACER first = visible. Counts apply before true brand cue."
+  },
+  "anchors": {
+    "automatic": "Binary group gates; no interpolation. Exact tolerances appear in hard_constraints.",
+    "judge_ratings": [
+      0,
+      0.5,
+      1
+    ]
+  },
+  "unverified": "missing judge/API or environment failure => formal_total=null; known hard failure =>accepted=false",
+  "automatic_scoring": "Each automatic group receives its stated weight only if every implemented gate in that group passes; otherwise zero. Metrics are reported separately."
+}

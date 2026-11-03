@@ -1,0 +1,39 @@
+{
+  "fps": 30,
+  "frame_range": [
+    1,
+    240
+  ],
+  "scenes": {
+    "LANDSCAPE": {
+      "camera": "CAM_LANDSCAPE",
+      "brand_objects": [
+        "BRAND_MAIN_L",
+        "BRAND_TAG_L"
+      ]
+    },
+    "PORTRAIT": {
+      "camera": "CAM_PORTRAIT",
+      "brand_objects": [
+        "BRAND_MAIN_P",
+        "BRAND_TAG_P"
+      ]
+    }
+  },
+  "shared_objects": [
+    "PRODUCT_BODY",
+    "PRODUCT_ROOT",
+    "PLINTH",
+    "HALO",
+    "TRACER"
+  ],
+  "accent_material": "ACCENT",
+  "protected_body": "PRODUCT_BODY mesh data and local transform fixed; animate PRODUCT_ROOT; root scale [1,1,1]",
+  "halo": "torus major radius 1.12, minor radius 0.018 in local units; scaling [1,1,1]; parent PRODUCT_ROOT",
+  "tracer": "opaque UV sphere radius 0.055; its center stays within 0.025 of torus centerline; no interpenetration with product",
+  "scene_layout": "same PRODUCT_ROOT/PRODUCT_BODY/HALO/TRACER datablock objects shared between scenes; cameras and typography can differ",
+  "copy": {
+    "main": "ORBIT C1",
+    "tag": "STAY IN MOTION"
+  }
+}

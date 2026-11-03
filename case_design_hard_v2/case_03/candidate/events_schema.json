@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": [
+    "landing_frame",
+    "brand_frame",
+    "description"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "landing_frame": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 240
+    },
+    "brand_frame": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 240
+    },
+    "description": {
+      "type": "string",
+      "minLength": 12
+    }
+  }
+}

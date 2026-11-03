@@ -1,0 +1,126 @@
+{
+  "type": "object",
+  "required": [
+    "events",
+    "occurrences"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "events": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "uid",
+          "source",
+          "anchor_frame",
+          "team",
+          "points",
+          "before",
+          "after"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "uid": {
+            "type": "string"
+          },
+          "source": {
+            "const": "q4.mp4"
+          },
+          "anchor_frame": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "team": {
+            "enum": [
+              "CHN",
+              "KOR"
+            ]
+          },
+          "points": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "before": {
+            "type": "object",
+            "required": [
+              "CHN",
+              "KOR"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "CHN": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200
+              },
+              "KOR": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200
+              }
+            }
+          },
+          "after": {
+            "type": "object",
+            "required": [
+              "CHN",
+              "KOR"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "CHN": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200
+              },
+              "KOR": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200
+              }
+            }
+          }
+        }
+      }
+    },
+    "occurrences": {
+      "type": "array",
+      "maxItems": 80,
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "segment_id",
+          "event_uid",
+          "representation"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "enum": [
+              "master",
+              "vertical"
+            ]
+          },
+          "segment_id": {
+            "type": "string"
+          },
+          "event_uid": {
+            "type": "string"
+          },
+          "representation": {
+            "enum": [
+              "live",
+              "replay"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
