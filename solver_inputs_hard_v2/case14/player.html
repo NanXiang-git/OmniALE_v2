@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>OmniALE 描述轨播放器</title>
+<style>body{font:16px system-ui;background:#142034;color:#edf3fc;max-width:1100px;margin:28px auto;padding:0 20px}video{width:100%;background:black}button,select,input{margin:8px;padding:10px}#status{white-space:pre-wrap;color:#b8d7f8}</style>
+<h1>课程 / 口述影像播放器</h1><p>选择整个交付文件夹。播放器忽略成片内置音轨，分别播放 base_track.wav 和 ad_track.wav，以实现真实开关。</p>
+<input id="folder" type="file" webkitdirectory multiple><video id="v" controls muted></video><audio id="base"></audio><audio id="ad"></audio>
+<button id="toggle">描述：开启</button><select id="chapters"><option>阶段导航</option></select><pre id="status"></pre>
+<script>
+const v=document.querySelector('#v'),base=document.querySelector('#base'),ad=document.querySelector('#ad'),status=document.querySelector('#status');let enabled=true,urls=[];
+function sync(){for(const a of [base,ad]){if(Math.abs(a.currentTime-v.currentTime)>.1)a.currentTime=v.currentTime;a.playbackRate=v.playbackRate;}ad.muted=!enabled;}
+v.addEventListener('play',()=>{sync();base.play().catch(e=>status.textContent=e.message);ad.play().catch(e=>status.textContent=e.message)});
+v.addEventListener('pause',()=>{base.pause();ad.pause()});v.addEventListener('seeking',sync);v.addEventListener('ratechange',sync);v.addEventListener('timeupdate',sync);v.addEventListener('ended',()=>{base.pause();ad.pause()});
+document.querySelector('#toggle').onclick=()=>{enabled=!enabled;ad.muted=!enabled;document.querySelector('#toggle').textContent='描述：'+(enabled?'开启':'关闭');};
+document.querySelector('#folder').onchange=async e=>{try{v.pause();urls.forEach(URL.revokeObjectURL);urls=[];let files=[...e.target.files];const get=n=>files.find(f=>f.webkitRelativePath.split('/').slice(1).join('/')===n);let cfgFile=get('player_config.json');if(!cfgFile)throw Error('缺少 player_config.json');let cfg=JSON.parse(await cfgFile.text());for(let [element,name] of [[v,cfg.tracks.video],[base,cfg.tracks.base],[ad,cfg.tracks.description]]){let f=get(name);if(!f)throw Error('缺少 '+name);let url=URL.createObjectURL(f);urls.push(url);element.src=url;}let nav=document.querySelector('#chapters');nav.innerHTML='<option value="">阶段导航</option>';let ch=get('chapters.json');if(ch){let obj=JSON.parse(await ch.text());for(let c of obj.chapters){let opt=document.createElement('option');opt.value=c.output_time;opt.textContent=c.title||('源时间 '+c.source_time+' 秒');nav.append(opt)}}nav.onchange=()=>{if(nav.value!==''){v.currentTime=Number(nav.value);sync();}};status.textContent='已加载。描述开关不改变视频时间轴。';}catch(err){status.textContent=err.message}};
+</script>

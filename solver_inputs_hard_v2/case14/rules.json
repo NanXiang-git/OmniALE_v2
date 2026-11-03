@@ -1,0 +1,55 @@
+{
+  "main_output": "accessible.mp4",
+  "required_files": [
+    "accessible.mp4",
+    "mix.wav",
+    "base_track.wav",
+    "ad_track.wav",
+    "ad.vtt",
+    "ad_plan.json",
+    "player_config.json",
+    "rebuild.json",
+    "README.md",
+    "selection_audit.json"
+  ],
+  "auto_weights": {
+    "schedule": 15,
+    "consistency": 5,
+    "rebuild": 5,
+    "selection_audit": 10
+  },
+  "judge_weights": {
+    "selection": 10,
+    "sound_protection": 20,
+    "language": 10
+  },
+  "fact_weight": 25,
+  "minimum_fact_coverage": 0.85,
+  "judge_criteria": {
+    "selection": "Use source and context: distinguish similar subjects, preserve action cause and the temporal order of new visual evidence; assess selection_audit actual evidence and omissions, not writing quality alone.",
+    "sound_protection": "Listen to source and output; preserve dialogue, animal/action/transition sounds. Only single global base gain [-6,0] dB allowed; no local ducking. Risk regions are leads, not exact forbidden intervals.",
+    "language": "Actually listen: clear Mandarin, consistent referents, understandable pacing and no repetitive/unsupported statements."
+  },
+  "judge_gates": {
+    "critical_visual_facts": "No critical visual relationship/action wrong or omitted; no invented psychology/identity/future outcome.",
+    "source_sound": "No substantial masking or deletion of dialogue/important sound, no artificially created silence.",
+    "chronology": "No spoiler from whole-film knowledge. Respect the main scene evidence order, including identity and appearance revelations. Uncertain onset boundaries require actual-video arbitration. No time changes; never defer all key information to end.",
+    "actual_description": "Actual audio exists and corresponds to displayed VTT and mix, intelligible speed."
+  },
+  "case_number": 14,
+  "original_case_id": 46,
+  "version": "2.0-hard-source-grounded",
+  "task_summary": "264秒Sintel连续洞穴决斗与识别/离开片段，40秒独立前情；无暂停中文口述影像、信息释放、两龙身份追踪与真实声音保护。",
+  "passing_score": 80,
+  "scoring_status": "experimental_source_grounded",
+  "rebuild_timeout": 600,
+  "duration": 264,
+  "frame_count": 6336,
+  "source_audio_policy": {
+    "mode": "single_global_gain_only",
+    "base_gain_db_min": -6,
+    "base_gain_db_max": 0,
+    "local_ducking": false
+  },
+  "selection_audit_min_events": 10
+}
