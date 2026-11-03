@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "case_id": "26",
+  "binding": {
+    "master": "4f8478d9826c2d35b31d7b47e0ab5a85ab3704582ebd8edcc21ac54b738dd916",
+    "preview": "d126b7a81dac041ef892588151bc0f522733974a084a1d828375ce3bd8249f8a",
+    "repair": "8e017abde37cbe34acacbe164b06a732630fac10ef8d4311b70ac17030feb98c",
+    "project": "e895f46dd051d9982f107901b625292b7e372bec2cbeaa7d90a60f5936628da9",
+    "report": "a48573854b141814c0e748dc393877acd52ee601ed063e77fd6dec52c845a523"
+  },
+  "rubric_sha256": "085b1dc4e567f7492ab1848c7030bf7975ce1d1f887f4863edbd363bd6e02f04",
+  "automatic_scores": {
+    "delivery": 5.0,
+    "repair_replay": 5.0,
+    "restoration": 15.0,
+    "motion_detail": 15.0,
+    "temporal": 5.0,
+    "lighting": 8.565402335741304,
+    "protected": 5.0
+  },
+  "judge_scores": {},
+  "metrics": {
+    "master": {
+      "width": 640,
+      "height": 338,
+      "fps": 24.0,
+      "codec": "ffv1",
+      "audio": []
+    },
+    "repair": {
+      "maximum_sample_error": 0,
+      "strength0_max_error": 0,
+      "strength_half_max_midpoint_error": 0.5,
+      "changed_channel_samples": 285469073
+    },
+    "preview": {
+      "maximum_frame_mae": 0.015791069716215134,
+      "minimum_frame_correlation": 0.9950842988610824
+    },
+    "frames_checked": 624,
+    "block_psnr_gain_db": [
+      7.364716794213905,
+      7.172103597281664,
+      8.278283081455719,
+      8.510609931203966
+    ],
+    "motion_mae": 0.01163287680836369,
+    "gradient_relative_error": 0.07739189639694292,
+    "gradient_ratio": 0.9453850465721361,
+    "temporal_residual": 0.004830693058535004,
+    "maximum_frozen_run": 0,
+    "protected_maximum_frame_mae": 0.0,
+    "intent_projection_gains": [
+      0.9793997356355443,
+      1.0139917842556327
+    ],
+    "light_maximum_frame_tile_mae": 0.006156114861369133
+  },
+  "hard_failures": [],
+  "critical_failures": [],
+  "environment_errors": [],
+  "pending_automatic": [],
+  "pending_judge": [
+    "motion_evidence",
+    "restoration_quality",
+    "lighting_intent"
+  ],
+  "pending_points": 40,
+  "verified_subtotal": 58.5654,
+  "formal_total": null,
+  "accepted": null
+}

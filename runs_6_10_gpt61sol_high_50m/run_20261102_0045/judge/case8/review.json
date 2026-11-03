@@ -1,0 +1,93 @@
+{
+  "items": [
+    {
+      "id": "causal_evidence",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "audio_and_uncertainty",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "usable_report",
+      "status": "pass",
+      "rating": 1,
+      "finding": "就报告可用性而言，三份文本的主要问题记录一致，问题ID、对象和前后时间窗可用于定位复核；身体侧别及原片与监看窗的独立规则解释清楚，遮挡与未知状态的记录方式明确。该评分不代表已核实逐帧因果依据或声音内容；其余冻结标准和全部门槛仍为unverified，未予计分。",
+      "evidence": [
+        {
+          "media_id": "roughcut",
+          "start": 6.0,
+          "end": 6.04
+        },
+        {
+          "media_id": "roughcut",
+          "start": 12.0,
+          "end": 12.04
+        },
+        {
+          "media_id": "roughcut",
+          "start": 102.0,
+          "end": 102.04
+        },
+        {
+          "media_id": "roughcut",
+          "start": 130.0,
+          "end": 130.04
+        },
+        {
+          "media_id": "roughcut",
+          "start": 140.0,
+          "end": 140.04
+        }
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "no_false_legal_or_disappearance",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    },
+    {
+      "id": "evidence_integrity",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    }
+  ],
+  "submission_hashes": {
+    "issues.json": "4d8af1d090271aa9a4e9eb8976a308e48402ff5103caed00f74b0ca39d5c18c4",
+    "report.md": "ddf4e2a3e39c1ae4ef40e8a1df6592c138fe5e1bfa2a51b19761d95daf0d2361",
+    "states.csv": "ae835d894c93c55ca6b6fcd1573e78bef9bd820483c4e5e12bea7b14470497a3"
+  },
+  "evaluation_hashes": {
+    "shared/evaluate.py": "90fa60cdd22d7046adad1cafe5ff74137c19ffcd69d81ed52d568e58162b3327",
+    "shared/runtime.py": "049e56ec5dcc69362ec04d6f0950b9a4a7007e666417f79dc77f59868af70ff8",
+    "evaluator/deterministic.py": "1b6196b882d99a71acf0c6cd6a49992ef1de8cc3570edf60a91e79e85926b735",
+    "evaluator/judge_spec.json": "a33b4b08130e2e7d766ce5f4e847cc1577792dad5056b47052c5b9bb68181c40",
+    "evaluator/truth/ambiguity.json": "00ebab837b734dc4cc8cc28203207aa4c44e526fce78aa708daf82f8eca644c0",
+    "evaluator/truth/audio_context.json": "2b1e427d6c8d3112e75b46a989d5581af0f8a2f469fc036c56f00d8ed73c2c84",
+    "evaluator/truth/controls.json": "2eb93d8022b6d64edb436516b5607003601cb9775ca03cd859beb96f5107e0af",
+    "evaluator/truth/review_scope.json": "f0a43672002e60fe18a2140419fef670eb2e879e60f05b187d0398aae3a70913",
+    "evaluator/truth/states.json": "1184b17f0f353b74390ce08ecf4a7f8ade89ff91a200311171c60548c21d868f",
+    "evaluator/truth/violations.json": "d5bccb3bfeafbe99d925c8259549a5a132a2efcd4946a87551274c606258fcf8",
+    "candidate/FILE_MANIFEST.json": "e2ed8615a5bcfb68fb1ec1e8554cdb44e583c6d321b8f449c6920de74afe86c2",
+    "candidate/input/credits.mp4": "82456820b4123f1b6ac3716345a8f9893533d2280e93f9306ecc6b301446473b",
+    "candidate/input/objects.json": "50cd44b45f4b8d722a3f8f8cb24a4fcf425092c71ab9a1a1968c90e1dc0620a8",
+    "candidate/input/roughcut.mp4": "0972b09769c4c35b02e9f2c94c6cadb2650847d5eec9b37d9d1871050d13e9d4",
+    "candidate/input/shots.json": "5f1881d7205bd87aa89bccf6e47667186e0db175b2975e303d4d47b7f5ba8c65",
+    "candidate/OUTPUT_CONTRACT.md": "e40d1ea0951a074f966dc79b6c2ada0ca95c964bd083feb1d56562536c4858ad",
+    "candidate/SOURCES.md": "2c90348bc0cebea6ba531d6196306fca8642c11bc8e17c73503c7702add3a91b",
+    "candidate/TASK.md": "ead80966a269b966cd0ddb81e8cb976dea9cd5d36bd6e7619d3056549e5e6a12"
+  },
+  "input_hashes": {
+    "roughcut": "0972b09769c4c35b02e9f2c94c6cadb2650847d5eec9b37d9d1871050d13e9d4"
+  }
+}

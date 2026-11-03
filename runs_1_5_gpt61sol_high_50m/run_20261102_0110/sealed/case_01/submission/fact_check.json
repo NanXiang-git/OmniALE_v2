@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "id": "Q1",
+      "verdict": "refute",
+      "correction": "“第四节最多落后20分”错误。第三节结束及第四节开局为中国51比60；本节韩国将领先扩大至66比51，中国在第四节最大落后15分。之后中国追分，韩国三分后为69比61，末段中国反超。20分不能套用于第四节；本题缺少完整上半场，亦不能用这些文件另证全场最大分差。",
+      "evidence": [
+        {
+          "source": "q3.mp4",
+          "in_frame": 31200,
+          "out_frame": 31350
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 350,
+          "out_frame": 1000
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 5450,
+          "out_frame": 6000
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 16675,
+          "out_frame": 17350
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "verdict": "refute",
+      "correction": "郭艾伦关键得分是第四节末段的突破上篮，两分将中国72比71扩大为74比71，并非三分绝杀，也没有当场结束比赛。此后韩国两罚、中国周琦两罚，最终中国76比73获胜。",
+      "evidence": [
+        {
+          "source": "q4.mp4",
+          "in_frame": 30675,
+          "out_frame": 30995
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 32900,
+          "out_frame": 33075
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 37075,
+          "out_frame": 37700
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "verdict": "refute",
+      "correction": "中国由周琦补扣首次反超至72比71后，韩国仍在最后5.3秒获得两次罚球，依次罚中，从71分增至72分、73分，将比分追至中国74比73；故“再未得分”错误。两罚是两个真实得分，回放不另记分。",
+      "evidence": [
+        {
+          "source": "q4.mp4",
+          "in_frame": 26350,
+          "out_frame": 26650
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 32350,
+          "out_frame": 32575
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 32900,
+          "out_frame": 33075
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "verdict": "support",
+      "correction": "可以保留：第三节结束韩国60比51领先中国，第四节开局沿用此比分，中国落后9分。该9分是开节处境；第四节最大落后则为15分，两者不可混写。",
+      "evidence": [
+        {
+          "source": "q3.mp4",
+          "in_frame": 31200,
+          "out_frame": 31350
+        },
+        {
+          "source": "q4.mp4",
+          "in_frame": 350,
+          "out_frame": 1000
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "verdict": "insufficient",
+      "correction": "无法逐字还原。所给媒体仅为第三、第四节，没有上半场该次暂停的画面或原声，也没有战术部署文字记录。现有下半场暂停不能代替上半场；不能从比赛结果倒推或编造教练原话。需要该次暂停的可核查原始录音或录像。",
+      "evidence": []
+    }
+  ]
+}

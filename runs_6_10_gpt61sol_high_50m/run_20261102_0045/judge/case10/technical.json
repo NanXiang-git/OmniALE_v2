@@ -1,0 +1,681 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "fixed_deliverables",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "id": "no_extra_deliverables",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "pause_contract",
+      "passed": true,
+      "detail": [
+        {
+          "source_time": 150,
+          "duration": 5.0
+        }
+      ]
+    },
+    {
+      "id": "navigation_configuration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "teacher_samples_exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "description_clips_exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "actual_voice_intervals_and_rate_proxy",
+      "passed": true,
+      "detail": {
+        "overlap_per_clip": [
+          {
+            "id": "D01",
+            "seconds": 0.0
+          },
+          {
+            "id": "D02",
+            "seconds": 0.0
+          },
+          {
+            "id": "D03",
+            "seconds": 0.0
+          },
+          {
+            "id": "D04",
+            "seconds": 0.0
+          },
+          {
+            "id": "D05",
+            "seconds": 0.0
+          },
+          {
+            "id": "D06",
+            "seconds": 0.0
+          },
+          {
+            "id": "D07",
+            "seconds": 0.0
+          },
+          {
+            "id": "D08",
+            "seconds": 0.0
+          },
+          {
+            "id": "D09",
+            "seconds": 0.0
+          },
+          {
+            "id": "D10",
+            "seconds": 0.0
+          }
+        ],
+        "max_overlap_seconds": 0.0,
+        "rolling10_proxy_chars": 35.648936170212785,
+        "proxy_not_actual_asr": true
+      }
+    },
+    {
+      "id": "vtt_matches_clips",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "exact_media_streams",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "zero_stream_offset",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "video_geometry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "actual_frame_clock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "embedded_description_captions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "actual_mux_audio_matches_teacher_plus_descriptions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "every_frame_matches_source_or_legal_freeze",
+      "passed": true,
+      "detail": {
+        "frames": 4625,
+        "max_mae": 1.9677205504115227,
+        "max_fraction_error_gt32": 0.00032021604938271603
+      }
+    },
+    {
+      "id": "twelve_actual_player_checks",
+      "passed": true,
+      "detail": {
+        "passed": 12,
+        "total": 12,
+        "artifacts": "D:\\omniALE\\runs_6_10_gpt61sol_high_50m\\run_20261102_0045\\judge_runtimes\\case10\\audits\\case23_1793596258053204000"
+      }
+    }
+  ],
+  "components": {
+    "pause_contract": 5,
+    "teacher_preservation": 10,
+    "timing_rate": 5,
+    "media_consistency_and_rebuild": 10,
+    "player_navigation": 15.0
+  },
+  "details": {
+    "timing": {
+      "overlap_per_clip": [
+        {
+          "id": "D01",
+          "seconds": 0.0
+        },
+        {
+          "id": "D02",
+          "seconds": 0.0
+        },
+        {
+          "id": "D03",
+          "seconds": 0.0
+        },
+        {
+          "id": "D04",
+          "seconds": 0.0
+        },
+        {
+          "id": "D05",
+          "seconds": 0.0
+        },
+        {
+          "id": "D06",
+          "seconds": 0.0
+        },
+        {
+          "id": "D07",
+          "seconds": 0.0
+        },
+        {
+          "id": "D08",
+          "seconds": 0.0
+        },
+        {
+          "id": "D09",
+          "seconds": 0.0
+        },
+        {
+          "id": "D10",
+          "seconds": 0.0
+        }
+      ],
+      "max_overlap_seconds": 0.0,
+      "rolling10_proxy_chars": 35.648936170212785,
+      "proxy_not_actual_asr": true
+    },
+    "browser": {
+      "checks": [
+        {
+          "id": "chapter_P1",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 0,
+              "sourceTime": 0,
+              "renderedTime": 0,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 0,
+            "presented_frame_mae": 0.5681777263374486,
+            "decoded_audio_rms_max": 0.061568085313948744
+          }
+        },
+        {
+          "id": "chapter_P2",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 25,
+              "sourceTime": 25,
+              "renderedTime": 25,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 25,
+            "presented_frame_mae": 0.7439512602880658,
+            "decoded_audio_rms_max": 0.05204777878541388
+          }
+        },
+        {
+          "id": "chapter_P3",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 55,
+              "sourceTime": 55,
+              "renderedTime": 55,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 55,
+            "presented_frame_mae": 0.408008616255144,
+            "decoded_audio_rms_max": 0.05314878537022489
+          }
+        },
+        {
+          "id": "chapter_P4",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 85,
+              "sourceTime": 85,
+              "renderedTime": 85,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 85,
+            "presented_frame_mae": 0.5290888631687243,
+            "decoded_audio_rms_max": 0.1540565906613323
+          }
+        },
+        {
+          "id": "chapter_P5",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 115,
+              "sourceTime": 115,
+              "renderedTime": 115,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 115,
+            "presented_frame_mae": 0.5150282921810699,
+            "decoded_audio_rms_max": 0.1790394496531734
+          }
+        },
+        {
+          "id": "chapter_P6",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 155,
+              "sourceTime": 150,
+              "renderedTime": 155,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "expected_output": 155,
+            "presented_frame_mae": 0.525272633744856,
+            "decoded_audio_rms_max": 0.059287503378155866
+          }
+        },
+        {
+          "id": "normal_off",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "before": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 2.82615,
+              "sourceTime": 2.82615,
+              "renderedTime": 2.8,
+              "paused": false,
+              "rawPaused": true,
+              "extendedPaused": false,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0.03340170647811823,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "after": {
+              "enabled": false,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 2.838667,
+              "sourceTime": 2.838667,
+              "renderedTime": 2.8,
+              "paused": false,
+              "rawPaused": false,
+              "extendedPaused": true,
+              "rawHidden": false,
+              "extendedHidden": true,
+              "rawRms": 0.0425119529841565,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "audio_after_100ms": {
+              "enabled": false,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 2.948,
+              "sourceTime": 2.948,
+              "renderedTime": 2.92,
+              "paused": false,
+              "rawPaused": false,
+              "extendedPaused": true,
+              "rawHidden": false,
+              "extendedHidden": true,
+              "rawRms": 0.02258563626568763,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "response_seconds": 0.07329960004426539
+          }
+        },
+        {
+          "id": "normal_on",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "before": {
+              "enabled": false,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 2.948,
+              "sourceTime": 2.948,
+              "renderedTime": 2.92,
+              "paused": false,
+              "rawPaused": false,
+              "extendedPaused": true,
+              "rawHidden": false,
+              "extendedHidden": true,
+              "rawRms": 0.02258563626568763,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "after": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 2.968112,
+              "sourceTime": 2.968112,
+              "renderedTime": 2.92,
+              "paused": false,
+              "rawPaused": true,
+              "extendedPaused": false,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0.002756070211965853,
+              "extendedRms": 0.004407241950491377,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "audio_after_100ms": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 3.068,
+              "sourceTime": 3.068,
+              "renderedTime": 3.04,
+              "paused": false,
+              "rawPaused": true,
+              "extendedPaused": false,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0.11064959968051623,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            },
+            "response_seconds": 0.03297109995037317
+          }
+        },
+        {
+          "id": "pause_off",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "before": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 154.920667,
+              "sourceTime": 150,
+              "renderedTime": 154.88,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 1.272451761700244e-10,
+              "audioState": "running",
+              "ended": false,
+              "completed": [
+                "D09"
+              ],
+              "pauseResume": null
+            },
+            "after": {
+              "enabled": false,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 150,
+              "sourceTime": 150,
+              "renderedTime": 150,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": false,
+              "extendedHidden": true,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [
+                "D09"
+              ],
+              "pauseResume": {
+                "source": 150,
+                "start": 150,
+                "end": 155,
+                "cursor": 154.920667
+              }
+            }
+          }
+        },
+        {
+          "id": "pause_resume",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "before": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 154.920667,
+              "sourceTime": 150,
+              "renderedTime": 154.88,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 1.272451761700244e-10,
+              "audioState": "running",
+              "ended": false,
+              "completed": [
+                "D09"
+              ],
+              "pauseResume": null
+            },
+            "after": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 154.920667,
+              "sourceTime": 150,
+              "renderedTime": 154.88,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [
+                "D09"
+              ],
+              "pauseResume": {
+                "source": 150,
+                "start": 150,
+                "end": 155,
+                "cursor": 154.920667
+              }
+            },
+            "completed_clip_actually_crossed": "D09"
+          }
+        },
+        {
+          "id": "rapid_chapters",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 55,
+              "sourceTime": 55,
+              "renderedTime": 55,
+              "paused": true,
+              "rawPaused": true,
+              "extendedPaused": true,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [
+                "D09"
+              ],
+              "pauseResume": null
+            },
+            "presented_frame_mae": 0.408008616255144
+          }
+        },
+        {
+          "id": "ended_replay",
+          "passed": true,
+          "not_applicable": false,
+          "details": {
+            "snapshot": {
+              "enabled": true,
+              "ready": true,
+              "busy": false,
+              "mediaTime": 0,
+              "sourceTime": 0,
+              "renderedTime": 0,
+              "paused": false,
+              "rawPaused": true,
+              "extendedPaused": false,
+              "rawHidden": true,
+              "extendedHidden": false,
+              "rawRms": 0,
+              "extendedRms": 0,
+              "audioState": "running",
+              "ended": false,
+              "completed": [],
+              "pauseResume": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "browser_version": "156.0.4314.50",
+      "executable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+      "actual_browser": true,
+      "audio_evidence": "WebAudio analyser reads actual HTML media PCM; not a human listening or ASR transcript claim",
+      "screenshots": "D:\\omniALE\\runs_6_10_gpt61sol_high_50m\\run_20261102_0045\\judge_runtimes\\case10\\audits\\case23_1793596258053204000",
+      "page_errors": []
+    }
+  }
+}

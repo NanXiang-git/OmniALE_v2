@@ -1,0 +1,286 @@
+{
+  "model_returned": "gpt-6.1-sol",
+  "reasoning_returned": {
+    "effort": "high",
+    "context": "all_turns",
+    "summary": null,
+    "mode": "standard"
+  },
+  "id": "resp_052a287b40728a78016ae80a115494819685e49962275725a8",
+  "usage": {
+    "input_tokens": 107374,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 793,
+    "output_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "total_tokens": 108167,
+    "attribution": {
+      "items": {
+        "msg_052a287b40728a78016ae80a11557c819686a5f6378314bb64": {
+          "input_tokens": 107221,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 99633,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 614,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_052a287b40728a78016ae80a194c348196ad13a4251e43d1b2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 695,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 695
+            }
+          ]
+        },
+        "rs_052a287b40728a78016ae80a194c408196b3817e32269e0bb4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 98
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 151,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "result": {
+    "diagnostics": [
+      {
+        "finding": "所提供的12张独立图像均可见左上角“RELEASE REVIEW / FILM BED”标识；这些采样时刻未见报告所述的目标信息卡、LIVE/PREVIEW插播状态或闪烁矩形。",
+        "evidence": [
+          {
+            "media_id": "program",
+            "time": 0.0
+          },
+          {
+            "media_id": "program",
+            "time": 120.0
+          },
+          {
+            "media_id": "program",
+            "time": 240.0
+          },
+          {
+            "media_id": "program",
+            "time": 360.0
+          },
+          {
+            "media_id": "program",
+            "time": 480.0
+          },
+          {
+            "media_id": "program",
+            "time": 600.0
+          },
+          {
+            "media_id": "program",
+            "time": 720.0
+          },
+          {
+            "media_id": "program",
+            "time": 840.0
+          },
+          {
+            "media_id": "program",
+            "time": 960.0
+          },
+          {
+            "media_id": "program",
+            "time": 1080.0
+          },
+          {
+            "media_id": "program",
+            "time": 1200.0
+          },
+          {
+            "media_id": "program",
+            "time": 1320.0
+          }
+        ],
+        "limitation": "这些图像不覆盖所报事件区间，不能据此确认或否定事件，也不能证明其间全部帧无问题。连续可见、遮挡重置、逐帧定位及闪烁周期均为unverified。"
+      },
+      {
+        "finding": "文本中的部分时长换算内部一致：按报告声明的25 fps，50帧对应2.00秒、49帧对应1.96秒、25帧对应1.00秒、24帧对应0.96秒；两组52帧品牌事件之间所列0.24秒间隔也对应6帧。",
+        "evidence": [],
+        "limitation": "仅核对提交文本的算术关系；原始帧率、实际完整可见帧数和间隔内遮挡情况均为unverified，文本自洽不等于源画面已获验证。"
+      },
+      {
+        "finding": "报告及8条R3理由明确将词项标为“待复听候选”，并说明未直接听辨确认，没有将暂定identity写成已听到的逐字引语。",
+        "evidence": [],
+        "limitation": "这里只确认提交文本对不确定性的表述。本次未接收或听到音频，不能验证词项、音轨相关系数或声画对应关系；相关事实均为unverified。"
+      },
+      {
+        "finding": "eligible_scored_ids为空，本次不对任何冻结标准或门槛作通过、失败或数值评分；所附自动评分结果不作为独立声画观察证据。",
+        "evidence": [],
+        "limitation": "所有冻结标准及门槛均保持待评，状态为unverified；不能因证据不足默认通过或给0分。"
+      }
+    ],
+    "items": []
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "id": "exact_deliverables",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "unexpected": []
+      }
+    },
+    {
+      "id": "declarative_project",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_private_text_project.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_private_text_subtitles.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_private_text_edits.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_private_text_README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_private_text_zh.srt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "audit_manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "subtitle_meaning_contract",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "external_srt_exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "no_extra_media_tracks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "clean_container_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "media_stream_start_times",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "output_geometry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "mask_geometry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "mask_metadata_and_tracks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "cover_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "actual_frame_timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "embedded_subtitles",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "audio_preservation_and_target_removal",
+      "passed": true,
+      "detail": {
+        "rmse_pcm": 0.0,
+        "peak_error_pcm": 0.0,
+        "bad_samples_gt4": 0
+      }
+    },
+    {
+      "id": "actual_muxed_audio",
+      "passed": true,
+      "detail": {
+        "snr_db": 34.61396407437412
+      }
+    },
+    {
+      "id": "mux_matches_trusted_audio_encode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "all_frames_decoded",
+      "passed": true,
+      "detail": {
+        "frames": 7500
+      }
+    },
+    {
+      "id": "binary_mask",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "every_frame_privacy",
+      "passed": false,
+      "detail": {
+        "face_coverage": 0.9411764705882353,
+        "name_coverage": 1.0
+      }
+    },
+    {
+      "id": "other_people_and_minimal_area",
+      "passed": false,
+      "detail": {
+        "other_face_damage": 0.0,
+        "outside_allowed": 0.14454338372333816,
+        "frame_mae": 2.421152935606061,
+        "high_error_fraction": 9.543678977272728e-05,
+        "private_mean": 5.764481959616021,
+        "private_high_fraction": 0.048079505774912705,
+        "other_mean": 3.433663224325875,
+        "other_high_fraction": 0.0016629711751662971
+      }
+    },
+    {
+      "id": "actual_video_matches_project",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "anonymized_cover_matches_frame0",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "components": {
+    "audio": 20,
+    "face_privacy": 0,
+    "non_target_visual": 0,
+    "faithful_video": 15,
+    "subtitles_metadata": 5
+  },
+  "details": {
+    "audio": {
+      "rmse_pcm": 0.0,
+      "peak_error_pcm": 0.0,
+      "bad_samples_gt4": 0
+    },
+    "visual": {
+      "minimum": {
+        "face_coverage": 0.9411764705882353,
+        "name_coverage": 1.0
+      },
+      "maximum": {
+        "other_face_damage": 0.0,
+        "outside_allowed": 0.14454338372333816,
+        "frame_mae": 2.421152935606061,
+        "high_error_fraction": 9.543678977272728e-05,
+        "private_mean": 5.764481959616021,
+        "private_high_fraction": 0.048079505774912705,
+        "other_mean": 3.433663224325875,
+        "other_high_fraction": 0.0016629711751662971
+      },
+      "first_bad_frames": [
+        {
+          "frame": 0,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.02614349368009457,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 1,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.02614349368009457,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 2,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.020802243024465247,
+          "target_pixels": 7178
+        },
+        {
+          "frame": 3,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.02588224702916817,
+          "target_pixels": 7178
+        },
+        {
+          "frame": 4,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.02588224702916817,
+          "target_pixels": 7178
+        },
+        {
+          "frame": 5,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.02614349368009457,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 6,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.026228915117804008,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 7,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.026493696327425542,
+          "target_pixels": 6935
+        },
+        {
+          "frame": 8,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.020899591094956836,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 9,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.0367714233509958,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 10,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.03642671292281006,
+          "target_pixels": 7178
+        },
+        {
+          "frame": 11,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.03137039075399009,
+          "target_pixels": 7178
+        },
+        {
+          "frame": 12,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.036343408121639165,
+          "target_pixels": 7300
+        },
+        {
+          "frame": 13,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.03563495001851166,
+          "target_pixels": 7104
+        },
+        {
+          "frame": 14,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04075263882514915,
+          "target_pixels": 7373
+        },
+        {
+          "frame": 15,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.035787647783813395,
+          "target_pixels": 7474
+        },
+        {
+          "frame": 16,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04090016889578674,
+          "target_pixels": 7300
+        },
+        {
+          "frame": 17,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.030350932658868162,
+          "target_pixels": 7425
+        },
+        {
+          "frame": 18,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04066073697585769,
+          "target_pixels": 7425
+        },
+        {
+          "frame": 19,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04598540145985401,
+          "target_pixels": 7425
+        },
+        {
+          "frame": 20,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.040875912408759124,
+          "target_pixels": 7326
+        },
+        {
+          "frame": 21,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04030226700251889,
+          "target_pixels": 7800
+        },
+        {
+          "frame": 22,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.03476354525524585,
+          "target_pixels": 7725
+        },
+        {
+          "frame": 23,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.035076730347635456,
+          "target_pixels": 7725
+        },
+        {
+          "frame": 24,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.040396881644223954,
+          "target_pixels": 7980
+        },
+        {
+          "frame": 25,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.04077833429369265,
+          "target_pixels": 7875
+        },
+        {
+          "frame": 26,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.046274544568059926,
+          "target_pixels": 7875
+        },
+        {
+          "frame": 27,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.046274544568059926,
+          "target_pixels": 7800
+        },
+        {
+          "frame": 28,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.05833142857142857,
+          "target_pixels": 7056
+        },
+        {
+          "frame": 29,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.052987392654851084,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 30,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.05323542909591556,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 31,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06452809197107362,
+          "target_pixels": 6768
+        },
+        {
+          "frame": 32,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.05915075097348415,
+          "target_pixels": 6696
+        },
+        {
+          "frame": 33,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.07066541705716964,
+          "target_pixels": 6603
+        },
+        {
+          "frame": 34,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06935424011876044,
+          "target_pixels": 6768
+        },
+        {
+          "frame": 35,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06797308356824588,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 36,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06219878148585978,
+          "target_pixels": 7008
+        },
+        {
+          "frame": 37,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.0720531973036983,
+          "target_pixels": 7128
+        },
+        {
+          "frame": 38,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.07070069438181982,
+          "target_pixels": 7128
+        },
+        {
+          "frame": 39,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.0713319505816575,
+          "target_pixels": 7227
+        },
+        {
+          "frame": 40,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.07236126224156691,
+          "target_pixels": 6958
+        },
+        {
+          "frame": 41,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.07302342606149341,
+          "target_pixels": 6840
+        },
+        {
+          "frame": 42,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06727730707579574,
+          "target_pixels": 6745
+        },
+        {
+          "frame": 43,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06690654035343414,
+          "target_pixels": 6768
+        },
+        {
+          "frame": 44,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.05146656950264165,
+          "target_pixels": 6768
+        },
+        {
+          "frame": 45,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.05146656950264165,
+          "target_pixels": 6768
+        },
+        {
+          "frame": 46,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.060935799782372145,
+          "target_pixels": 6840
+        },
+        {
+          "frame": 47,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06803130644190247,
+          "target_pixels": 6580
+        },
+        {
+          "frame": 48,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.06841467958271237,
+          "target_pixels": 6392
+        },
+        {
+          "frame": 49,
+          "face_coverage": 1.0,
+          "name_coverage": 1.0,
+          "other_face_damage": 0.0,
+          "outside_allowed": 0.08078211777665581,
+          "target_pixels": 6650
+        }
+      ]
+    }
+  }
+}

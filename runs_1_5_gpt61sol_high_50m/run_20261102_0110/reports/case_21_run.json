@@ -1,0 +1,59 @@
+{
+  "case": "case_21",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1793589476.0325139,
+  "host_end_unix": 1793589897.779798,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "case_21",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1793589897.4771457,
+    "elapsed_seconds": 421.113561630249,
+    "monotonic_elapsed_seconds": 404.62896221999927,
+    "clock_discontinuity": true
+  },
+  "submission_manifest": [
+    {
+      "path": "ambience.wav",
+      "bytes": 4736044,
+      "sha256": "d41c861670d4117dcf62684a5dc4f072441ca5f8ec596f189ddf4659b311a4f2"
+    },
+    {
+      "path": "edit.json",
+      "bytes": 1324,
+      "sha256": "f218c6c0c7fb0d3b77a6128b5c9725badddec5edd416f41380ad97673a7e4d0d"
+    },
+    {
+      "path": "foley.wav",
+      "bytes": 4736044,
+      "sha256": "ac5dfefb26c925e499bf2fade6b51ab66d4fa3cb30540e2040c7b002be1c442b"
+    },
+    {
+      "path": "mix.wav",
+      "bytes": 4736044,
+      "sha256": "4b5b5ca768e1979a603a09d4a4ffe102ac6fde784cf9874460fb87674ef5e20a"
+    },
+    {
+      "path": "notes.json",
+      "bytes": 1746,
+      "sha256": "672764d276da64a5e87b6fd67518fc7c4dcdc95601028ef47a56f728d11cf1fc"
+    },
+    {
+      "path": "submission.json",
+      "bytes": 217,
+      "sha256": "97c84a5a959a4743abeaedd24014ddc475187d10420948f42c64ea23adc83606"
+    },
+    {
+      "path": "video.mp4",
+      "bytes": 9045718,
+      "sha256": "a514602ba8f9464e666190046b09578544e55af71f120e3f54acbc40f218da91"
+    }
+  ],
+  "submission_manifest_sha256": "bfc3d511f7eb9b6e00a16089efa4b3eaba4a7436854bb4c105d2ea1987117f6c",
+  "elapsed_solver_environment_seconds": 421.113561630249,
+  "timed_out": false
+}

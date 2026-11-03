@@ -1,0 +1,49 @@
+{
+  "case": "case_03",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1793593173.216956,
+  "host_end_unix": 1793596048.4247973,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "case_03",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1793596047.9648898,
+    "elapsed_seconds": 2873.684541940689,
+    "monotonic_elapsed_seconds": 2740.1682770019997,
+    "clock_discontinuity": true
+  },
+  "submission_manifest": [
+    {
+      "path": "events.json",
+      "bytes": 336,
+      "sha256": "64c5d14b0a0d387e62f5e1906b33ce99d4f200dc08a14cba08b4e18fda47d780"
+    },
+    {
+      "path": "horizontal.mp4",
+      "bytes": 1175681,
+      "sha256": "af7dabacd7dde83e8c406de5a58c373c767550541e5fdec20ee3d6d13e4811c4"
+    },
+    {
+      "path": "project.blend",
+      "bytes": 10155286,
+      "sha256": "b7788c59d317880cc3f1a71a20fdb376e3bba706dc0c049526d22dee8c3eb5f7"
+    },
+    {
+      "path": "submission.json",
+      "bytes": 187,
+      "sha256": "86b8c2449e4f3a43b8e36d0af571339dddb9338fdc8018f4fcc57b1b4b9bdca9"
+    },
+    {
+      "path": "vertical.mp4",
+      "bytes": 716787,
+      "sha256": "373bd190fe40c5f3b8d8f16bf003508e4151e76c70e16ecf418318fe549329ac"
+    }
+  ],
+  "submission_manifest_sha256": "d48f693f24ea5e8e87717e25d89f74d32d509d6b2c1a76df5109673df0f7e17f",
+  "elapsed_solver_environment_seconds": 2873.684541940689,
+  "timed_out": false
+}

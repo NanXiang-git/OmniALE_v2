@@ -1,0 +1,43 @@
+{
+  "verified_subtotal": 82.077,
+  "total": null,
+  "accepted": null,
+  "components": {
+    "visibility": 14.368215,
+    "visible_states": 23.541953,
+    "violations": 25.0,
+    "legal_and_uncertain_controls": 9.166667,
+    "event_boundaries": 5.0,
+    "usable_report": 5
+  },
+  "pending": [
+    "causal_evidence",
+    "audio_and_uncertainty",
+    "no_false_legal_or_disappearance",
+    "evidence_integrity"
+  ],
+  "hard_failures": [],
+  "difficulty_calibration": "single observed run, not a general difficulty calibration",
+  "experiment": "Actual solver run; visual/text-only gpt-6.1-sol high Judge, audio pending by user authorization",
+  "judge_protocol": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "native_audio_supported": false,
+    "authorized_by_user": true,
+    "scorable_visual_text_items": [
+      "usable_report"
+    ],
+    "audio_or_mixed_items_pending": [
+      "causal_evidence",
+      "audio_and_uncertainty"
+    ],
+    "all_semantic_gates_pending": [
+      "no_false_legal_or_disappearance",
+      "evidence_integrity"
+    ],
+    "diagnostic_images_are_sampled_not_exhaustive": true,
+    "two_independent_reviews": true,
+    "third_review_only_if_disputed": true,
+    "original_rubric_unchanged": true
+  }
+}

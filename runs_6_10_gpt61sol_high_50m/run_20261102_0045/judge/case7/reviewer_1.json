@@ -1,0 +1,286 @@
+{
+  "model_returned": "gpt-6.1-sol",
+  "reasoning_returned": {
+    "effort": "high",
+    "context": "all_turns",
+    "summary": null,
+    "mode": "standard"
+  },
+  "id": "resp_0089b5c8ac80b41c016ae809f230fc819090ad1c907f6f2d58",
+  "usage": {
+    "input_tokens": 107374,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 917,
+    "output_tokens_details": {
+      "reasoning_tokens": 156
+    },
+    "total_tokens": 108291,
+    "attribution": {
+      "items": {
+        "msg_0089b5c8ac80b41c016ae809f231e081909d93376c19efc7ca": {
+          "input_tokens": 107221,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 99633,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 19,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 613,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 20,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            },
+            {
+              "input_tokens": 614,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0089b5c8ac80b41c016ae809fc2b5081909812a391502c2aa1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 761,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 761
+            }
+          ]
+        },
+        "rs_0089b5c8ac80b41c016ae809fc2b548190a00e97e05370a3f0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 156
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 151,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "result": {
+    "diagnostics": [
+      {
+        "finding": "所提供的12张独立图像均显示电影场景及左上角“RELEASE REVIEW / FILM BED”标识；这些采样时刻未见报告所述品牌卡、电话号码卡、AUDIO INSERT面板或大面积闪烁矩形。相关事件的实际视觉依据仍为unverified。",
+        "evidence": [
+          {
+            "media_id": "program",
+            "time": 0.0
+          },
+          {
+            "media_id": "program",
+            "time": 120.0
+          },
+          {
+            "media_id": "program",
+            "time": 240.0
+          },
+          {
+            "media_id": "program",
+            "time": 360.0
+          },
+          {
+            "media_id": "program",
+            "time": 480.0
+          },
+          {
+            "media_id": "program",
+            "time": 600.0
+          },
+          {
+            "media_id": "program",
+            "time": 720.0
+          },
+          {
+            "media_id": "program",
+            "time": 840.0
+          },
+          {
+            "media_id": "program",
+            "time": 960.0
+          },
+          {
+            "media_id": "program",
+            "time": 1080.0
+          },
+          {
+            "media_id": "program",
+            "time": 1200.0
+          },
+          {
+            "media_id": "program",
+            "time": 1320.0
+          }
+        ],
+        "limitation": "这些图像不覆盖提交的事件区间，既不能反证区间内事件存在，也不能验证连续可见、遮挡重置、逐帧轨迹或闪烁周期；不能由抽帧推断全片无问题。"
+      },
+      {
+        "finding": "文本内部的记录数量一致：flags列出14条R1、10条R2、8条R3和6条R4，共38条；negatives共22条，与报告所述数量对应。",
+        "evidence": [],
+        "limitation": "仅核对所提供flags.json与report.md的文本计数，不代表这些实例已由独立源图像证实，也不采用technical中的匹配结果代替实际复核。"
+      },
+      {
+        "finding": "所列典型阈值计算在文本层面一致：按报告声明的25 fps，50帧为2.00秒、49帧为1.96秒、25帧为1.00秒、24帧为0.96秒；三组各4帧亮相与4帧暗相合计24帧。实际帧数、相位及连续性均为unverified。",
+        "evidence": [],
+        "limitation": "帧率及逐帧测量均来自待评报告；现有独立静态图像不足以验证这些时序断言。"
+      },
+      {
+        "finding": "R3的reason及报告明确将email、money标为未直接听辨的暂定候选，并声明声学相关性不能证明具体词项。这是可核对的文本不确定性披露，而非本次评审确认了任何语音内容。",
+        "evidence": [],
+        "limitation": "本API不支持音频，本次未听到任何声音；实际词项、人声存在性、音轨相关性以及原片底声与插播的声音对应关系均为unverified。所有冻结标准及门槛保持待评，不作通过或失败判定。"
+      }
+    ],
+    "items": []
+  }
+}

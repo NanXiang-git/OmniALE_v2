@@ -1,0 +1,72 @@
+{
+  "verified_subtotal": 35.0,
+  "total": null,
+  "accepted": null,
+  "components": {
+    "delivery": 5.0,
+    "mapping": 10.0,
+    "rebuild": 10.0,
+    "captions": 5.0,
+    "audio_technical": 5.0
+  },
+  "pending": [
+    "accuracy_opening",
+    "accuracy_search",
+    "accuracy_journey",
+    "accuracy_revelation_ending",
+    "coverage_setup",
+    "coverage_search",
+    "coverage_journey",
+    "coverage_revelation",
+    "coverage_ending",
+    "causal_1",
+    "causal_2",
+    "causal_3",
+    "original_audio_value",
+    "narration_listening",
+    "visual_claim_alignment",
+    "subtitle_listening_alignment",
+    "no_major_fabrication",
+    "three_true_causal_links",
+    "real_narration_and_original_quota",
+    "four_stage_story"
+  ],
+  "hard_failures": [],
+  "difficulty_calibration": "single observed run, not a general difficulty calibration",
+  "experiment": "Actual solver run; visual/text-only gpt-6.1-sol high Judge, audio pending by user authorization",
+  "judge_protocol": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "native_audio_supported": false,
+    "authorized_by_user": true,
+    "scorable_visual_text_items": [],
+    "audio_or_mixed_items_pending": [
+      "accuracy_opening",
+      "accuracy_search",
+      "accuracy_journey",
+      "accuracy_revelation_ending",
+      "coverage_setup",
+      "coverage_search",
+      "coverage_journey",
+      "coverage_revelation",
+      "coverage_ending",
+      "causal_1",
+      "causal_2",
+      "causal_3",
+      "original_audio_value",
+      "narration_listening",
+      "visual_claim_alignment",
+      "subtitle_listening_alignment"
+    ],
+    "all_semantic_gates_pending": [
+      "no_major_fabrication",
+      "three_true_causal_links",
+      "real_narration_and_original_quota",
+      "four_stage_story"
+    ],
+    "diagnostic_images_are_sampled_not_exhaustive": true,
+    "two_independent_reviews": true,
+    "third_review_only_if_disputed": true,
+    "original_rubric_unchanged": true
+  }
+}

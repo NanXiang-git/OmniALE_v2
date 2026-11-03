@@ -1,0 +1,394 @@
+{
+  "checks": {
+    "public_json_schemas": {
+      "pass": true,
+      "detail": [
+        "ad_plan.json",
+        "player_config.json",
+        "rebuild.json",
+        "selection_audit.json"
+      ]
+    },
+    "required_files": {
+      "pass": true,
+      "detail": [
+        "accessible.mp4",
+        "mix.wav",
+        "base_track.wav",
+        "ad_track.wav",
+        "ad.vtt",
+        "ad_plan.json",
+        "player_config.json",
+        "rebuild.json",
+        "README.md",
+        "selection_audit.json"
+      ]
+    },
+    "unique_cue_ids": {
+      "pass": true,
+      "detail": 28
+    },
+    "unique_audit_events": {
+      "pass": true,
+      "detail": 32
+    },
+    "audit_references_and_knowledge_times": {
+      "pass": true
+    },
+    "vtt_plan_one_to_one": {
+      "pass": true
+    },
+    "base_track.wav_pcm_format": {
+      "pass": true,
+      "detail": {
+        "samples": 12672000,
+        "channels": 2,
+        "sample_rate": 48000,
+        "subtype": "PCM_24"
+      }
+    },
+    "ad_track.wav_pcm_format": {
+      "pass": true,
+      "detail": {
+        "samples": 12672000,
+        "channels": 2,
+        "sample_rate": 48000,
+        "subtype": "PCM_24"
+      }
+    },
+    "mix.wav_pcm_format": {
+      "pass": true,
+      "detail": {
+        "samples": 12672000,
+        "channels": 2,
+        "sample_rate": 48000,
+        "subtype": "PCM_24"
+      }
+    },
+    "base_single_global_gain": {
+      "pass": true,
+      "detail": {
+        "gain_db": -4.0,
+        "relative_l2_error": 1.495862999825159e-06
+      }
+    },
+    "mix_equals_base_plus_ad": {
+      "pass": true,
+      "detail": {
+        "relative_l2_error": 0.0
+      }
+    },
+    "cues_non_silent_and_match_ad_waveform": {
+      "pass": true,
+      "detail": [
+        {
+          "id": "AD01",
+          "start": 4.7,
+          "end": 9.114354,
+          "wav_duration": 4.414354166666667,
+          "hanzi_per_second": 3.8510729674499387,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD02",
+          "start": 13.4,
+          "end": 16.083896,
+          "wav_duration": 2.683895833333333,
+          "hanzi_per_second": 3.3533343165640743,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD03",
+          "start": 26.5,
+          "end": 29.655229,
+          "wav_duration": 3.1552291666666665,
+          "hanzi_per_second": 3.803210279232227,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD04",
+          "start": 33.2,
+          "end": 35.646583,
+          "wav_duration": 2.4465833333333333,
+          "hanzi_per_second": 4.087332674818625,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD05",
+          "start": 47.7,
+          "end": 50.748792,
+          "wav_duration": 3.048791666666667,
+          "hanzi_per_second": 3.279987973377431,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD06",
+          "start": 53.8,
+          "end": 56.414646,
+          "wav_duration": 2.6146458333333333,
+          "hanzi_per_second": 3.4421487932559383,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD07",
+          "start": 65.8,
+          "end": 68.377354,
+          "wav_duration": 2.577354166666667,
+          "hanzi_per_second": 3.4919531496285754,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD08",
+          "start": 68.9,
+          "end": 70.060188,
+          "wav_duration": 1.1601875,
+          "hanzi_per_second": 4.309648224963637,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD09",
+          "start": 86.55,
+          "end": 89.755437,
+          "wav_duration": 3.2054375,
+          "hanzi_per_second": 3.431668843956558,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD10",
+          "start": 93.6,
+          "end": 96.352208,
+          "wav_duration": 2.7522083333333334,
+          "hanzi_per_second": 3.6334458692262275,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD11",
+          "start": 104.0,
+          "end": 105.838521,
+          "wav_duration": 1.8385208333333334,
+          "hanzi_per_second": 3.807408582533513,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD12",
+          "start": 106.6,
+          "end": 108.182562,
+          "wav_duration": 1.5825625,
+          "hanzi_per_second": 3.7913194581572607,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD13",
+          "start": 113.1,
+          "end": 114.356021,
+          "wav_duration": 1.2560208333333334,
+          "hanzi_per_second": 3.980825689595117,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD14",
+          "start": 118.25,
+          "end": 120.001917,
+          "wav_duration": 1.7519166666666666,
+          "hanzi_per_second": 3.995623840555582,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD15",
+          "start": 128.5,
+          "end": 132.352104,
+          "wav_duration": 3.852104166666667,
+          "hanzi_per_second": 3.893975695101703,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD16",
+          "start": 135.2,
+          "end": 138.853854,
+          "wav_duration": 3.6538541666666666,
+          "hanzi_per_second": 3.831570544801437,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD17",
+          "start": 150.25,
+          "end": 153.752896,
+          "wav_duration": 3.5028958333333335,
+          "hanzi_per_second": 3.7112151255806207,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD18",
+          "start": 155.1,
+          "end": 160.022396,
+          "wav_duration": 4.922395833333334,
+          "hanzi_per_second": 3.4536027933552003,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD19",
+          "start": 163.0,
+          "end": 164.893104,
+          "wav_duration": 1.8931041666666666,
+          "hanzi_per_second": 4.22586360585018,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD20",
+          "start": 180.95,
+          "end": 182.775437,
+          "wav_duration": 1.8254375,
+          "hanzi_per_second": 3.834697161639333,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD21",
+          "start": 187.7,
+          "end": 190.297958,
+          "wav_duration": 2.597958333333333,
+          "hanzi_per_second": 3.849176436624914,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD22",
+          "start": 192.0,
+          "end": 193.779375,
+          "wav_duration": 1.779375,
+          "hanzi_per_second": 3.9339655778011946,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD23",
+          "start": 201.0,
+          "end": 202.712896,
+          "wav_duration": 1.7128958333333333,
+          "hanzi_per_second": 4.086646638854766,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD24",
+          "start": 208.7,
+          "end": 212.554167,
+          "wav_duration": 3.8541666666666665,
+          "hanzi_per_second": 3.372972972972973,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD25",
+          "start": 231.4,
+          "end": 233.307458,
+          "wav_duration": 1.9074583333333333,
+          "hanzi_per_second": 4.194062779877236,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD26",
+          "start": 238.2,
+          "end": 241.347458,
+          "wav_duration": 3.1474583333333332,
+          "hanzi_per_second": 3.1771667615403962,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD29",
+          "start": 244.0,
+          "end": 246.660812,
+          "wav_duration": 2.6608125,
+          "hanzi_per_second": 3.382425480938623,
+          "max_waveform_error": 0.0
+        },
+        {
+          "id": "AD27",
+          "start": 256.3,
+          "end": 260.149542,
+          "wav_duration": 3.8495416666666666,
+          "hanzi_per_second": 3.6367965883384388,
+          "max_waveform_error": 0.0
+        }
+      ]
+    },
+    "ad_speech_inside_vtt": {
+      "pass": true,
+      "detail": {
+        "fraction": 1.0,
+        "nonzero_samples_outside_cues": 0
+      }
+    },
+    "no_time_stretch": {
+      "pass": true
+    },
+    "mix_pcm_true_peak": {
+      "pass": true,
+      "detail": {
+        "dbtp": -2.5,
+        "method": "FFmpeg ebur128=peak=true, whole stream"
+      }
+    },
+    "mp4_aac_decoded_true_peak": {
+      "pass": true,
+      "detail": {
+        "dbtp": -2.6,
+        "method": "FFmpeg ebur128=peak=true, whole stream"
+      }
+    },
+    "complete_video_frame_identity": {
+      "pass": true,
+      "detail": {
+        "source_frames": 6336,
+        "output_frames": 6336,
+        "comparison": "Every decoded frame MD5, size, PTS and duration exactly matches",
+        "frame_md5_list_sha256": "5913bf65765f37b068d6cc8492ded43cf9e826fa9021f19c5c70a45c8ac5f543"
+      }
+    },
+    "mp4_dimensions_duration_and_actual_audio": {
+      "pass": true,
+      "detail": {
+        "width": 1280,
+        "height": 546,
+        "fps": "24/1",
+        "frames": "6336",
+        "video_duration": "264.000000",
+        "audio_codec": "aac",
+        "audio_duration": "264.000000"
+      }
+    },
+    "offline_rebuild_bit_identical": {
+      "pass": true,
+      "detail": {
+        "base_track.wav": true,
+        "ad_track.wav": true,
+        "mix.wav": true,
+        "accessible.mp4": true
+      }
+    },
+    "player_uses_supplied_code_and_delivered_tracks": {
+      "pass": true,
+      "detail": {
+        "pause_policy": "fixed_timeline",
+        "video_muted": true,
+        "toggle_code": "ad.muted=!enabled",
+        "source_player_sha256": "e450ce990ab9c36761e53babfd537028cdf225f44b67f05c7412461cd423c6aa"
+      }
+    }
+  },
+  "limitations": {
+    "direct_auditory_review": "Not performed: no native audio input interface. Local ASR and waveform analysis are auxiliary checks only.",
+    "browser_player_review": "No browser runtime available. Supplied player retained verbatim; declared tracks, mute-toggle logic and sync event wiring inspected.",
+    "scores": "No grading or private reference used."
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "soundfile": "0.14.0",
+    "libsndfile": "1.2.2",
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers"
+  },
+  "summary": {
+    "all_objective_checks_passed": true,
+    "cues": 28,
+    "audit_events": 32,
+    "description_total_duration_seconds": 75.64716500000002,
+    "timeline_seconds": 264,
+    "direct_auditory_review_completed": false
+  }
+}

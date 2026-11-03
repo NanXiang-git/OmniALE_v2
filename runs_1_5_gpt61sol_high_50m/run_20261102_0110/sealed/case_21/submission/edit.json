@@ -1,0 +1,71 @@
+{
+  "version": "2.0",
+  "segments": [
+    {
+      "id": "intro_protected",
+      "source": "04_2a.mp4",
+      "in_frame": 0,
+      "out_frame": 48,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "turn_and_microphone",
+      "source": "04_4b.mp4",
+      "in_frame": 0,
+      "out_frame": 112,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "coverage_bridge",
+      "source": "04_2a.mp4",
+      "in_frame": 48,
+      "out_frame": 96,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "first_operation",
+      "source": "04_5a.mp4",
+      "in_frame": 148,
+      "out_frame": 388,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "frontal_response",
+      "source": "04_4b.mp4",
+      "in_frame": 128,
+      "out_frame": 224,
+      "rate_num": 24,
+      "rate_den": 24
+    },
+    {
+      "id": "outro_protected",
+      "source": "04_2a.mp4",
+      "in_frame": 96,
+      "out_frame": 144,
+      "rate_num": 24,
+      "rate_den": 24
+    }
+  ],
+  "audio_events": [
+    {
+      "id": "reach",
+      "source": "sleeve.wav",
+      "out_frame": 251,
+      "gain": 0.85
+    },
+    {
+      "id": "release",
+      "source": "release.wav",
+      "out_frame": 410,
+      "gain": 1.1
+    }
+  ],
+  "ambience": {
+    "source_start_sample": 0,
+    "gain": 1.0
+  }
+}

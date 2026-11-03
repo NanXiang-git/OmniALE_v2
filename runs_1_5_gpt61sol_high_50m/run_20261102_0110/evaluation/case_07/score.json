@@ -1,0 +1,72 @@
+{
+  "version": "2.0",
+  "case_id": "07",
+  "binding": {
+    "rgba_1": "497dfbf92e83c90dd9c49e5dac8d4bc2c96ea46f5f7dc598be26dcdce99e980b",
+    "rgba_2": "9c9a35b5da10ddae88fd6b6e16443158973fc6626fc79f3d6bcc6b64dbc721a4",
+    "dark_1": "398ff1ef3b02a7e4e47f0113a21123d7debc1bde25547c569f8bdb100d4a0e69",
+    "light_1": "61391f79ee71bfacaed9cee6ddeaceaa8c4dd1b652995de56b6af189d0144beb",
+    "dark_2": "a888f3a970f6b165163651d4975f050e9408f242c12107ed960dfb93fa25efcd",
+    "light_2": "3515b113a904c25704400acd58504ea303b592b6b358192f7722d62b81f54407",
+    "report": "a5be793f8661ea1157382a0509dcc4f0df38e4061ee32daae2847dce6b2ce2a0"
+  },
+  "rubric_sha256": "1d79b3dfbec003e036c42cfbc7674d885d03bfaee216d80c1e2b408ce90e903a",
+  "automatic_scores": {
+    "delivery": 5,
+    "preview": 5,
+    "interior": 6.5972,
+    "background": 5.0,
+    "occlusion": 9.9153,
+    "temporal": 4.2315,
+    "color": 3.1952,
+    "soft_edges": 1.7407
+  },
+  "judge_scores": {},
+  "metrics": {
+    "clips": [
+      {
+        "interior_mae": 0.02974047086201608,
+        "background_mae": 0.003491962777916342,
+        "soft_mae": 0.22245091810822487,
+        "gradient_mae": 0.0681485640630126,
+        "event_mae": 0.02762676331070091,
+        "temporal_mae": 0.012765313138846646,
+        "composite_mae": 0.013209743279730901,
+        "foreground_soft_mae": 0.1433489665389061,
+        "preview_mae": 0.010524685317650438,
+        "maximum_preview_mae": 0.0110005559399724,
+        "longest_subject_loss_frames": 0
+      },
+      {
+        "interior_mae": 0.05151045407168567,
+        "background_mae": 0.004992731884121895,
+        "soft_mae": 0.2581715939939022,
+        "gradient_mae": 0.09061834670603275,
+        "event_mae": 0.012189428390496793,
+        "temporal_mae": 0.03521320225689748,
+        "composite_mae": 0.03338015096494928,
+        "foreground_soft_mae": 0.15119257934391497,
+        "preview_mae": 0.010797776775434613,
+        "maximum_preview_mae": 0.011045598424971104,
+        "longest_subject_loss_frames": 3
+      }
+    ]
+  },
+  "hard_failures": [
+    "clip1_soft_mae_gate",
+    "clip2_foreground_soft_mae_gate",
+    "clip2_soft_mae_gate"
+  ],
+  "critical_failures": [],
+  "environment_errors": [],
+  "pending_automatic": [],
+  "pending_judge": [
+    "identity_visibility",
+    "edge_usability",
+    "temporal_quality"
+  ],
+  "pending_points": 40,
+  "verified_subtotal": 40.6799,
+  "formal_total": null,
+  "accepted": false
+}

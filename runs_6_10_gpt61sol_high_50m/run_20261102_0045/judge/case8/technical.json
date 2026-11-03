@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "format",
+      "passed": true,
+      "detail": "CSV and JSON parsed; bounded, finite and nonoverlapping"
+    },
+    {
+      "id": "report",
+      "passed": true,
+      "detail": "report needs at least150 characters"
+    },
+    {
+      "id": "coverage",
+      "passed": true,
+      "detail": 1.0
+    },
+    {
+      "id": "issue_precision",
+      "passed": true,
+      "detail": 1.0
+    },
+    {
+      "id": "issue_recall",
+      "passed": true,
+      "detail": 1.0
+    }
+  ],
+  "components": {
+    "visibility": 14.368215,
+    "visible_states": 23.541953,
+    "violations": 25.0,
+    "legal_and_uncertain_controls": 9.166667,
+    "event_boundaries": 5.0
+  },
+  "by_object": {
+    "space": {
+      "visibility_f1": 0.747285973726919,
+      "state_accuracy": 0.6500688389169343,
+      "coverage": 1.0
+    },
+    "arm": {
+      "visibility_f1": 1.0,
+      "state_accuracy": 1.0,
+      "coverage": 1.0
+    },
+    "jacket": {
+      "visibility_f1": 1.0,
+      "state_accuracy": 1.0,
+      "coverage": 1.0
+    },
+    "rifle": {
+      "visibility_f1": 1.0,
+      "state_accuracy": 1.0,
+      "coverage": 1.0
+    },
+    "capsule": {
+      "visibility_f1": 1.0,
+      "state_accuracy": 1.0,
+      "coverage": 1.0
+    },
+    "switch": {
+      "visibility_f1": 1.0,
+      "state_accuracy": 1.0,
+      "coverage": 1.0
+    }
+  },
+  "precision": 1.0,
+  "recall": 1.0,
+  "matches": [
+    {
+      "candidate": "issue_jacket_11",
+      "truth": "V1"
+    },
+    {
+      "candidate": "issue_jacket_15",
+      "truth": "V2"
+    },
+    {
+      "candidate": "issue_capsule_25_60",
+      "truth": "V3"
+    },
+    {
+      "candidate": "issue_switch_38_40",
+      "truth": "V4"
+    },
+    {
+      "candidate": "issue_capsule_83_40",
+      "truth": "V5"
+    },
+    {
+      "candidate": "issue_switch_121",
+      "truth": "V6"
+    }
+  ],
+  "control_matches": 11,
+  "coverage": 1.0
+}

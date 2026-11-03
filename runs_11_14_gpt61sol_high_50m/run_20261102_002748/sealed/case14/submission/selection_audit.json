@@ -1,0 +1,640 @@
+{
+  "evidence_basis": "Only provided context.mp4 and source.mp4; all times are main-film seconds. Context viewed separately, never inserted.",
+  "review_method": "Exact-frame image inspection, 0.25–1 second sampling around actions, supplied dialogue references, waveform measurements and local ASR. No direct auditory perception API was available.",
+  "events": [
+    {
+      "id": "E01",
+      "visual_interval": [
+        0,
+        17.6
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD01",
+        "AD02"
+      ],
+      "reason": "建立红发女子、长柄弯刃和蓝色晶体洞穴；不为入口形状附会龙的身份。",
+      "earliest_knowable": 4.0,
+      "sound_risk_intervals": [
+        [
+          0,
+          3.8
+        ],
+        [
+          8,
+          10.5
+        ]
+      ]
+    },
+    {
+      "id": "E02",
+      "visual_interval": [
+        18,
+        29.6
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD03"
+      ],
+      "reason": "先用大龙指称进食的主体；不把它预先称为旧日伙伴，也不猜所吃动物的种类。描述在撕肉特写之后。",
+      "earliest_knowable": 23.0,
+      "sound_risk_intervals": [
+        [
+          22.5,
+          25.8
+        ]
+      ]
+    },
+    {
+      "id": "E03",
+      "visual_interval": [
+        29,
+        51.6
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD04",
+        "AD05"
+      ],
+      "reason": "女子看向高台，随后离开藏身处跃下并向前挪；两句连接目光目标与空间位移，落地声音单独保留。",
+      "earliest_knowable": 31.0,
+      "sound_risk_intervals": [
+        [
+          41.5,
+          47.3
+        ]
+      ]
+    },
+    {
+      "id": "E04",
+      "visual_interval": [
+        52,
+        61.2
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD06"
+      ],
+      "reason": "巢中另有一只幼龙，必须与进食的大龙分开命名；只说体型和位置，不认定它就是前情中的龙。",
+      "earliest_knowable": 53.0,
+      "sound_risk_intervals": [
+        [
+          57.8,
+          61.3
+        ]
+      ]
+    },
+    {
+      "id": "E05",
+      "visual_interval": [
+        57.5,
+        61.7
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "幼龙醒来并发声：不再叠加一句口述。前句已经建立幼龙的空间位置，此处给醒转叫声和女子的反应留白。",
+      "earliest_knowable": 59.1,
+      "sound_risk_intervals": [
+        [
+          58,
+          61.7
+        ]
+      ]
+    },
+    {
+      "id": "E06",
+      "visual_interval": [
+        61.8,
+        68.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD07"
+      ],
+      "reason": "龙火袭来，女子借岩柱遮挡；先完整留出喷火起音，再用短句说明躲避因果。",
+      "earliest_knowable": 64.2,
+      "sound_risk_intervals": [
+        [
+          61.8,
+          65.7
+        ]
+      ]
+    },
+    {
+      "id": "E07",
+      "visual_interval": [
+        67.8,
+        69.8
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD08"
+      ],
+      "reason": "短句指出飞开的是幼龙，避免将下一镜接近女子的大龙与它混为一体。",
+      "earliest_knowable": 68.5,
+      "sound_risk_intervals": [
+        [
+          68,
+          69.5
+        ],
+        [
+          70.3,
+          72.2
+        ]
+      ]
+    },
+    {
+      "id": "E08",
+      "visual_interval": [
+        70.1,
+        77.3
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "大龙追逼、女子挥刃的快速往返不逐击报幕；保留追击、冲撞与吼声，下一条口述接到撑住龙口的动作。",
+      "earliest_knowable": 70.8,
+      "sound_risk_intervals": [
+        [
+          70.3,
+          77.3
+        ]
+      ]
+    },
+    {
+      "id": "E09",
+      "visual_interval": [
+        76.6,
+        80.8
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "女子首次喊出英文名字时不翻译、不替她判定眼前幼龙的身份；这时不能把大龙已是旧日小龙当作已知事实。",
+      "earliest_knowable": 77.0,
+      "sound_risk_intervals": [
+        [
+          76.6,
+          80.8
+        ]
+      ]
+    },
+    {
+      "id": "E10",
+      "visual_interval": [
+        84.5,
+        89.4
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD09"
+      ],
+      "reason": "女子跃上龙颈，把杆横在龙口；在两个动作实际发生后才说，说明女子骑在大龙上、武器卡住龙嘴的关系。",
+      "earliest_knowable": 86.5,
+      "sound_risk_intervals": [
+        [
+          84.5,
+          86.7
+        ],
+        [
+          89.5,
+          92.9
+        ]
+      ]
+    },
+    {
+      "id": "E11",
+      "visual_interval": [
+        89.5,
+        96.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD10"
+      ],
+      "reason": "长柄折断，女子被甩落；不以一句话掩住折断和落地起音，待她伏地时补结果。",
+      "earliest_knowable": 92.6,
+      "sound_risk_intervals": [
+        [
+          89.5,
+          93.1
+        ]
+      ]
+    },
+    {
+      "id": "E12",
+      "visual_interval": [
+        98,
+        105.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD11"
+      ],
+      "reason": "龙尾扫中女子并使其再度倒地；保留尾击本身，再给出动作因果。",
+      "earliest_knowable": 103.0,
+      "sound_risk_intervals": [
+        [
+          98.3,
+          103.5
+        ]
+      ]
+    },
+    {
+      "id": "E13",
+      "visual_interval": [
+        105.7,
+        108.8
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD12"
+      ],
+      "reason": "女子倒地后，腾空展开双翼的是同一条大龙，随后镜头接它逼近并停住。按弯曲长角、头形与接镜位置核对，不误报成已在68秒飞开的幼龙。",
+      "earliest_knowable": 106.3,
+      "sound_risk_intervals": [
+        [
+          105.7,
+          108.8
+        ]
+      ]
+    },
+    {
+      "id": "E14",
+      "visual_interval": [
+        110,
+        114.9
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD13"
+      ],
+      "reason": "大龙停下攻击；只讲停住的可见转折，不编造它的想法或已认出女子的心理。",
+      "earliest_knowable": 112.6,
+      "sound_risk_intervals": [
+        [
+          109,
+          112.9
+        ]
+      ]
+    },
+    {
+      "id": "E15",
+      "visual_interval": [
+        115.2,
+        120.1
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD14"
+      ],
+      "reason": "大龙低头轻拱女子后背，这是刺击前的重要动作变化；先让轻触和呼吸出现，再补一句。",
+      "earliest_knowable": 117.2,
+      "sound_risk_intervals": [
+        [
+          115.2,
+          117.6
+        ],
+        [
+          120.2,
+          122.8
+        ]
+      ]
+    },
+    {
+      "id": "E16",
+      "visual_interval": [
+        119.5,
+        128.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD15"
+      ],
+      "reason": "女子抓起折断的武器刺入大龙胸口；描述延后到冲击后，避免盖住刺入、喷血、倒地和喊声。未将这一刺误写为大龙主动攻击她。",
+      "earliest_knowable": 122.0,
+      "sound_risk_intervals": [
+        [
+          120.2,
+          128.3
+        ]
+      ]
+    },
+    {
+      "id": "E17",
+      "visual_interval": [
+        134,
+        136.8
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD16"
+      ],
+      "reason": "翅膜上的旧疤在特写中才清楚显露；此前任何句子都没有将两条龙之一与前情身份对应。措辞只说旧疤，不杜撰疤痕形状或缝线。",
+      "earliest_knowable": 135.0,
+      "sound_risk_intervals": [
+        [
+          134,
+          136.8
+        ],
+        [
+          140.0,
+          150.0
+        ]
+      ]
+    },
+    {
+      "id": "E18",
+      "visual_interval": [
+        134,
+        150.0
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD17"
+      ],
+      "reason": "旧伤特写结合女子随后带疑问的呼名，确认受伤大龙与前情中她照料的受伤小龙相对应；明说身份放到两次轻声呼名之后。前情约0–23秒用于核对伤翅与照料关系，不把主片识别事件记成knowledge_time=0。",
+      "earliest_knowable": 149.8,
+      "sound_risk_intervals": [
+        [
+          140.0,
+          150.0
+        ]
+      ]
+    },
+    {
+      "id": "E19",
+      "visual_interval": [
+        151,
+        160.8
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD18"
+      ],
+      "reason": "血泊中的倒影逐渐显露皱纹、灰白发色，之后实体近景也可核实；描述外貌变化，不编造具体年龄、旅行年数或魔法致老。",
+      "earliest_knowable": 155.0,
+      "sound_risk_intervals": [
+        [
+          151,
+          160.8
+        ]
+      ]
+    },
+    {
+      "id": "E20",
+      "visual_interval": [
+        154,
+        160.8
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "倒影上叠化荒漠、林地、雪地等画面；优先口述此时才出现的衰老线索，不逐一列举回闪背景，也不将其解释成确定的时间数字。",
+      "earliest_knowable": 154.8,
+      "sound_risk_intervals": [
+        [
+          154,
+          160.8
+        ]
+      ]
+    },
+    {
+      "id": "E21",
+      "visual_interval": [
+        156.5,
+        166.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD19"
+      ],
+      "reason": "她看自己的手；不把此前摸脸的动作错排在看手之后。短句后留出较长停顿。",
+      "earliest_knowable": 162.7,
+      "sound_risk_intervals": [
+        [
+          162,
+          166.5
+        ]
+      ]
+    },
+    {
+      "id": "E22",
+      "visual_interval": [
+        177.2,
+        182.7
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD20"
+      ],
+      "reason": "女子因洞顶动静抬头，视线连到晶体与岩顶；在大龙最后闭眼之前结束短句。",
+      "earliest_knowable": 180.0,
+      "sound_risk_intervals": [
+        [
+          177.2,
+          180.8
+        ],
+        [
+          182.8,
+          186.5
+        ]
+      ]
+    },
+    {
+      "id": "E23",
+      "visual_interval": [
+        182.8,
+        186.4
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD21"
+      ],
+      "reason": "大龙最后合眼；不在闭眼和呼吸的动作本身上口述，稍后补充可见结果，不另配死亡音效或虚构内心。",
+      "earliest_knowable": 186.0,
+      "sound_risk_intervals": [
+        [
+          182.8,
+          187.4
+        ]
+      ]
+    },
+    {
+      "id": "E24",
+      "visual_interval": [
+        186,
+        191.7
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "碎晶开始下落；保留碎裂及岩洞异响。口述眼睛合上与后续奔逃、封洞已经给出主线，不逐块报落石。",
+      "earliest_knowable": 186.5,
+      "sound_risk_intervals": [
+        [
+          186,
+          191.7
+        ]
+      ]
+    },
+    {
+      "id": "E25",
+      "visual_interval": [
+        191.2,
+        194.1
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD22"
+      ],
+      "reason": "女子转身冲向洞外。短句在巨石大面积落下之前结束，为后续外景中的女子建立离开路径。",
+      "earliest_knowable": 191.8,
+      "sound_risk_intervals": [
+        [
+          191.5,
+          194.0
+        ],
+        [
+          194.1,
+          200.9
+        ]
+      ]
+    },
+    {
+      "id": "E26",
+      "visual_interval": [
+        194.2,
+        204.7
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD23"
+      ],
+      "reason": "巨石坍落后，外侧镜头显示洞口被堵；保留崩塌和转场声音，再交代空间状态。没有增加黑场，源片自身的暗转照原样保留。",
+      "earliest_knowable": 201.0,
+      "sound_risk_intervals": [
+        [
+          194.2,
+          200.9
+        ]
+      ]
+    },
+    {
+      "id": "E27",
+      "visual_interval": [
+        204.8,
+        220.9
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD24"
+      ],
+      "reason": "女子已经在洞外崖边坐下；建立她未留在坍塌洞中的结果与新的明亮山景。只写低头姿态，不代写心理独白。",
+      "earliest_knowable": 208.0,
+      "sound_risk_intervals": [
+        [
+          214.5,
+          220.9
+        ]
+      ]
+    },
+    {
+      "id": "E28",
+      "visual_interval": [
+        221,
+        230.1
+      ],
+      "decision": "omit",
+      "cue_ids": [],
+      "reason": "肩部受伤、低头与抽泣近景，前面已建立姿态；把呼吸、抽泣和停顿留给原声，不把表情解释为自责或悔恨的确切想法。",
+      "earliest_knowable": 223.0,
+      "sound_risk_intervals": [
+        [
+          221,
+          230.1
+        ]
+      ]
+    },
+    {
+      "id": "E29",
+      "visual_interval": [
+        230.2,
+        233.7
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD25"
+      ],
+      "reason": "地面皮带与女子迈步同框，说明她留下的物品；不猜测这动作代表放弃什么使命。",
+      "earliest_knowable": 231.2,
+      "sound_risk_intervals": [
+        [
+          230.2,
+          231.3
+        ],
+        [
+          232,
+          234
+        ]
+      ]
+    },
+    {
+      "id": "E30",
+      "visual_interval": [
+        234,
+        249.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD26"
+      ],
+      "reason": "女子空手走向山谷，身影逐渐远去；不额外指定目的地或后来结局。",
+      "earliest_knowable": 237.5,
+      "sound_risk_intervals": [
+        [
+          234,
+          237.8
+        ],
+        [
+          242.0,
+          249.5
+        ]
+      ]
+    },
+    {
+      "id": "E31",
+      "visual_interval": [
+        234,
+        249.5
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD29"
+      ],
+      "reason": "白色花朵与此前幽暗洞穴形成可见环境变化；用一句短描述保留末段明亮外景的信息，不据此断言季节或年份。",
+      "earliest_knowable": 237.5,
+      "sound_risk_intervals": [
+        [
+          244,
+          247.5
+        ]
+      ]
+    },
+    {
+      "id": "E32",
+      "visual_interval": [
+        250,
+        263.9
+      ],
+      "decision": "describe",
+      "cue_ids": [
+        "AD27"
+      ],
+      "reason": "巢中的幼龙从后方跃出，随后朝女子离开的方向下坡；明确末尾跟随者是幼龙，不能将已倒下的大龙写成复生或把幼龙误叫为旧伙伴。",
+      "earliest_knowable": 256.0,
+      "sound_risk_intervals": [
+        [
+          250,
+          252.1
+        ]
+      ]
+    }
+  ]
+}

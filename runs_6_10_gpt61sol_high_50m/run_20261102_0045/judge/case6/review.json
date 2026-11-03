@@ -1,0 +1,180 @@
+{
+  "items": [
+    {
+      "id": "accuracy_opening",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "accuracy_search",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "accuracy_journey",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "accuracy_revelation_ending",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "coverage_setup",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "coverage_search",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "coverage_journey",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "coverage_revelation",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "coverage_ending",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "causal_1",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "causal_2",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "causal_3",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "original_audio_value",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "narration_listening",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "visual_claim_alignment",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "subtitle_listening_alignment",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    }
+  ],
+  "gates": [
+    {
+      "id": "no_major_fabrication",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    },
+    {
+      "id": "three_true_causal_links",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    },
+    {
+      "id": "real_narration_and_original_quota",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    },
+    {
+      "id": "four_stage_story",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    }
+  ],
+  "submission_hashes": {
+    "claims.json": "a56c8cd80df5feb18ea5de9cf44e22bfe0349eb6865846c4439b358d9970b8a7",
+    "commentary.mp4": "cca015775b2b8932c32cc1c714a4a4ae4f62014100816a738a9603e721b194a0",
+    "narration.wav": "1948935f473dd1db160c643afc04525fb3ff73c91e64d24e2368ce8dcb707ec6",
+    "original_audio.wav": "d3c0f1c84afddf1da0f976699a41ce6916c8258fab0e93e0c90374b6bfdf37a1",
+    "project.json": "812a3a053bacd2eca6433f25c7772347d282f11e3c26eb212af2280a543479af",
+    "README.md": "7261039b153f7b92e8fd9ed0dd7265d10c509b43e3a4fa387ef8b378dd895bae",
+    "script.md": "0a42db033e99d039924ecb607dcaaf6095d935780f2d3d622512e2f3fb65a0b1",
+    "source_map.json": "1e097250ba0a1b62de978978920349c4e4907058f62a81f11341d1420c193a54",
+    "timeline.json": "95f4ea24daacb502a12cf5406543948aeaa35991ce2e1cd104ddd4cba53d5a3c",
+    "zh.srt": "3cb1c78030147aaf2740e259ff1251b0406620ce37efea95e4007adb790d8e89"
+  },
+  "evaluation_hashes": {
+    "shared/evaluate.py": "bec027e9db9b444ad67cab7a428ba5eb2b7b3d9ae6ce31a979185cc67b65369b",
+    "shared/runtime.py": "049e56ec5dcc69362ec04d6f0950b9a4a7007e666417f79dc77f59868af70ff8",
+    "evaluator/contract.json": "8dd1c2573b90d0bd06f7b1d0b1e79ef5d587c3bd9d99d551fd13a8be7cb1fd3d",
+    "evaluator/deterministic.py": "0459337af2d2af7dfe3f9524f7c902c9ce2a75b8f1b491534e9b5a2e2fb01417",
+    "evaluator/EVALUATION.md": "8eb4e3e0dce48cf9c4559346c791cca3287e333a937e90a7e5032c1df261c075",
+    "evaluator/judge_spec.json": "13ecb6737fb5884f7337ce101c099c7853f5528448d50d3205b345662fbc6b49",
+    "evaluator/truth/ambiguity_and_differences.json": "c284f58d9dbe725fc4e18e9f2c58ad14b7f75c3fe63523b3ca0a4f5e561e7bd5",
+    "evaluator/truth/facts.json": "b646771aac33057c97dd8b22fe0e50ab3e0775918aa8711d8dfabf26c524610a",
+    "evaluator/truth/official_story.txt": "512b2113e48392a45105d58be09516bc0f071ba224f12cbedf203cf0ae058a4a",
+    "evaluator/truth/official_subtitles_en.srt": "20f0c2b6d894e560d8fcc16255a7c521ae805359ddd5b4937d5d256476fb2dd3",
+    "evaluator/truth/subtitles.json": "f437f48d254fc1f193d3055c61c76aa380d2dd0d37c9eb47749353ce8a97e9b8",
+    "candidate/FILE_MANIFEST.json": "6a0fb68d8e57d7215443e72806bc47a8f4e4227731ee9a5ac9ce51db8098e037",
+    "candidate/INPUT_MANIFEST.json": "4481770509cab32bc4b70d78fc2fe2918786e1f503e3e219764ee8981fbb3423",
+    "candidate/OUTPUT_CONTRACT.md": "be6bb54ffb8ca24784bdd37a46e2062febf3a22d4a7c7e412e0407624eb00256",
+    "candidate/SCORING.md": "207aa1217a1c1ea0663b17402eae6e32e91de1b91765bd92eaf65fa4a317b997",
+    "candidate/SOURCES.md": "e300cc73750220f801e42180130f0db6d1b77767a0bf833a992560398154d1f4",
+    "candidate/TASK.md": "9d632f5f80b2a8ff0c35a353658f24f22a93a00b30594243de04557d60dea0b7",
+    "candidate/tools/render.py": "145629386bd677200f1c88b84e56e2219a987f46e62c3a07acb3e57b3dcd09c9"
+  },
+  "input_hashes": {
+    "source": "71cc9c97fcad079e8c3b93d793e05bcb706910083d98a7549f30f4637ca41aa1",
+    "commentary": "cca015775b2b8932c32cc1c714a4a4ae4f62014100816a738a9603e721b194a0",
+    "narration": "1948935f473dd1db160c643afc04525fb3ff73c91e64d24e2368ce8dcb707ec6",
+    "original": "d3c0f1c84afddf1da0f976699a41ce6916c8258fab0e93e0c90374b6bfdf37a1"
+  }
+}

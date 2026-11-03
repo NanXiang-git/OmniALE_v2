@@ -1,0 +1,325 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "id": "schema",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "id": "report_present",
+      "passed": true,
+      "detail": "Chinese evidence report required, >=100 characters"
+    },
+    {
+      "id": "precision_gate",
+      "passed": false,
+      "detail": {
+        "actual": 0.7894736842105263,
+        "minimum": 0.8
+      }
+    },
+    {
+      "id": "recall_gate",
+      "passed": false,
+      "detail": {
+        "actual": 0.8571428571428571,
+        "minimum": 0.9
+      }
+    },
+    {
+      "id": "phone_no_misses",
+      "passed": true,
+      "detail": {
+        "missed": 0
+      }
+    }
+  ],
+  "components": {
+    "event_detection": 30.0,
+    "temporal_boundaries": 17.142857,
+    "moving_localization": 15.0
+  },
+  "per_rule": {
+    "R1": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "R2": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "R3": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    "R4": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "precision": 0.7894736842105263,
+  "recall": 0.8571428571428571,
+  "matches": [
+    {
+      "submitted_id": "R4-01",
+      "gold_id": "R4_07",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R2-01",
+      "gold_id": "R2_11_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-01",
+      "gold_id": "R1_18_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-02",
+      "gold_id": "R1_01_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-03",
+      "gold_id": "R1_17_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R4-02",
+      "gold_id": "R4_06",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R1-11",
+      "gold_id": "R1_19_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-12",
+      "gold_id": "R1_19_2",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R4-03",
+      "gold_id": "R4_01",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R4-04",
+      "gold_id": "R4_05",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R1-04",
+      "gold_id": "R1_10_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-13",
+      "gold_id": "R1_09_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-14",
+      "gold_id": "R1_09_2",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-05",
+      "gold_id": "R1_11_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-06",
+      "gold_id": "R1_07_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R4-05",
+      "gold_id": "R4_12",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R2-02",
+      "gold_id": "R2_02_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-07",
+      "gold_id": "R1_20_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R4-06",
+      "gold_id": "R4_11",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": null
+    },
+    {
+      "submitted_id": "R2-03",
+      "gold_id": "R2_17_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-04",
+      "gold_id": "R2_07_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-05",
+      "gold_id": "R2_18_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-08",
+      "gold_id": "R1_08_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-09",
+      "gold_id": "R1_02_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-06",
+      "gold_id": "R2_12_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-07",
+      "gold_id": "R2_20_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R1-10",
+      "gold_id": "R1_12_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-08",
+      "gold_id": "R2_08_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-09",
+      "gold_id": "R2_01_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    },
+    {
+      "submitted_id": "R2-10",
+      "gold_id": "R2_10_1",
+      "boundary_error_s": 0.0,
+      "boundary_credit": 1,
+      "track_credit": 1.0
+    }
+  ],
+  "matched_prediction_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    18,
+    19,
+    21,
+    22,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "status": "evaluated",
+  "difficulty_calibration": "not_run"
+}

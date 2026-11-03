@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": "positive_reasoning",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "scope_and_av_evidence",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    },
+    {
+      "id": "negative_reasoning",
+      "status": "unverified",
+      "rating": null,
+      "finding": "Pending: this frozen criterion requires actual native listening, unavailable in the requested Judge API.",
+      "evidence": []
+    }
+  ],
+  "gates": [
+    {
+      "id": "evidence_integrity",
+      "status": "unverified",
+      "finding": "Pending: complete gate verification requires actual native listening.",
+      "evidence": []
+    }
+  ],
+  "submission_hashes": {
+    "flags.json": "45a51a4fc3b9803bc75c9d573baf51a9c584090e4819ddb75a7a32969dcf10d9",
+    "report.md": "3b20ba9406fd0d6cad793a10eb5583ca6018428ae21167eb796b916754980fca"
+  },
+  "evaluation_hashes": {
+    "shared/evaluate.py": "bec027e9db9b444ad67cab7a428ba5eb2b7b3d9ae6ce31a979185cc67b65369b",
+    "shared/runtime.py": "049e56ec5dcc69362ec04d6f0950b9a4a7007e666417f79dc77f59868af70ff8",
+    "evaluator/deterministic.py": "048cbe92f0ff3be58136f41f04b3a5f7654a9a629c905caddc3ab6a1dbb897aa",
+    "evaluator/judge_spec.json": "e71292b7e24f5e4dbed9820261931a1a0c9ef175dd61d237b3b4865083d3c193",
+    "evaluator/truth/events.json": "d440c67e5263a50c2e081af19e67e14d61f19dcb8b29ced5d34ed005e1ec4b2d",
+    "evaluator/truth/fixtures.json": "03b2a8a43cdff1902f2682b8c2596b3e3c917363413c92a6db79a008aea8e756",
+    "evaluator/truth/judge_facts.json": "6837eeb42d8714c3eaeb7a738504e45588d94c1633b7fe14c8d128cc1492118a",
+    "evaluator/truth/voice_provenance.json": "c08c8d82cd8efeb39cb5db0b0bade1e412b46ae721b9a8f797bf5c5e5290b535",
+    "candidate/FILE_MANIFEST.json": "77607ee404cb5d52554b180b1b8dbcf758f87117a54bcd3e2d5974fb471f0800",
+    "candidate/output_schema.json": "040d51182e50be4cb656bb431aacc328b3f0704ba0bd445eef9a06212b07bf5a",
+    "candidate/SOURCES.md": "1e45650dcf4de9dd850030935cbe7cd01078f0aa552c89775ba4f8390280cae5",
+    "candidate/TASK.md": "ca1d3649f31bdb0c693f54c78f981988dea914d613f39b9351afd16b44b23bee"
+  },
+  "input_hashes": {
+    "program": "b8556f37b278f7608820cdbaabe2cef6da49498e51544c86fdac08068032a20b"
+  }
+}
