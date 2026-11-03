@@ -1,0 +1,1817 @@
+{
+  "target": "B",
+  "visual": [
+    {
+      "start": 0,
+      "end": 5,
+      "start_frame": 0,
+      "end_frame": 125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 5,
+      "end": 10,
+      "start_frame": 125,
+      "end_frame": 250,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 10,
+      "end": 15,
+      "start_frame": 250,
+      "end_frame": 375,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 15,
+      "end": 20,
+      "start_frame": 375,
+      "end_frame": 500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 20,
+      "end": 25,
+      "start_frame": 500,
+      "end_frame": 625,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 25,
+      "end": 30,
+      "start_frame": 625,
+      "end_frame": 750,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 30,
+      "end": 35,
+      "start_frame": 750,
+      "end_frame": 875,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 35,
+      "end": 40,
+      "start_frame": 875,
+      "end_frame": 1000,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 40,
+      "end": 45,
+      "start_frame": 1000,
+      "end_frame": 1125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 45,
+      "end": 50,
+      "start_frame": 1125,
+      "end_frame": 1250,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 50,
+      "end": 55,
+      "start_frame": 1250,
+      "end_frame": 1375,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 55,
+      "end": 60,
+      "start_frame": 1375,
+      "end_frame": 1500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 60,
+      "end": 65,
+      "start_frame": 1500,
+      "end_frame": 1625,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 65,
+      "end": 70,
+      "start_frame": 1625,
+      "end_frame": 1750,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 70,
+      "end": 75,
+      "start_frame": 1750,
+      "end_frame": 1875,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 75,
+      "end": 80,
+      "start_frame": 1875,
+      "end_frame": 2000,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 80,
+      "end": 85,
+      "start_frame": 2000,
+      "end_frame": 2125,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 85,
+      "end": 90,
+      "start_frame": 2125,
+      "end_frame": 2250,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 90,
+      "end": 95,
+      "start_frame": 2250,
+      "end_frame": 2375,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 95,
+      "end": 100,
+      "start_frame": 2375,
+      "end_frame": 2500,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 100,
+      "end": 105,
+      "start_frame": 2500,
+      "end_frame": 2625,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 105,
+      "end": 110,
+      "start_frame": 2625,
+      "end_frame": 2750,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 110,
+      "end": 115,
+      "start_frame": 2750,
+      "end_frame": 2875,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 115,
+      "end": 120,
+      "start_frame": 2875,
+      "end_frame": 3000,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 120,
+      "end": 125,
+      "start_frame": 3000,
+      "end_frame": 3125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 125,
+      "end": 130,
+      "start_frame": 3125,
+      "end_frame": 3250,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 130,
+      "end": 135,
+      "start_frame": 3250,
+      "end_frame": 3375,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 135,
+      "end": 140,
+      "start_frame": 3375,
+      "end_frame": 3500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 140,
+      "end": 145,
+      "start_frame": 3500,
+      "end_frame": 3625,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 145,
+      "end": 150,
+      "start_frame": 3625,
+      "end_frame": 3750,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 150,
+      "end": 155,
+      "start_frame": 3750,
+      "end_frame": 3875,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 155,
+      "end": 160,
+      "start_frame": 3875,
+      "end_frame": 4000,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 160,
+      "end": 165,
+      "start_frame": 4000,
+      "end_frame": 4125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 165,
+      "end": 170,
+      "start_frame": 4125,
+      "end_frame": 4250,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 170,
+      "end": 175,
+      "start_frame": 4250,
+      "end_frame": 4375,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 175,
+      "end": 180,
+      "start_frame": 4375,
+      "end_frame": 4500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 180,
+      "end": 185,
+      "start_frame": 4500,
+      "end_frame": 4625,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 185,
+      "end": 190,
+      "start_frame": 4625,
+      "end_frame": 4750,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 190,
+      "end": 195,
+      "start_frame": 4750,
+      "end_frame": 4875,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 195,
+      "end": 200,
+      "start_frame": 4875,
+      "end_frame": 5000,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 200,
+      "end": 205,
+      "start_frame": 5000,
+      "end_frame": 5125,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 205,
+      "end": 210,
+      "start_frame": 5125,
+      "end_frame": 5250,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 210,
+      "end": 215,
+      "start_frame": 5250,
+      "end_frame": 5375,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 215,
+      "end": 220,
+      "start_frame": 5375,
+      "end_frame": 5500,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 220,
+      "end": 225,
+      "start_frame": 5500,
+      "end_frame": 5625,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 225,
+      "end": 230,
+      "start_frame": 5625,
+      "end_frame": 5750,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 230,
+      "end": 235,
+      "start_frame": 5750,
+      "end_frame": 5875,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 235,
+      "end": 240,
+      "start_frame": 5875,
+      "end_frame": 6000,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 240,
+      "end": 245,
+      "start_frame": 6000,
+      "end_frame": 6125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 245,
+      "end": 250,
+      "start_frame": 6125,
+      "end_frame": 6250,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 250,
+      "end": 255,
+      "start_frame": 6250,
+      "end_frame": 6375,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 255,
+      "end": 260,
+      "start_frame": 6375,
+      "end_frame": 6500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 260,
+      "end": 265,
+      "start_frame": 6500,
+      "end_frame": 6625,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 265,
+      "end": 270,
+      "start_frame": 6625,
+      "end_frame": 6750,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 270,
+      "end": 275,
+      "start_frame": 6750,
+      "end_frame": 6875,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 275,
+      "end": 280,
+      "start_frame": 6875,
+      "end_frame": 7000,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true
+    },
+    {
+      "start": 280,
+      "end": 285,
+      "start_frame": 7000,
+      "end_frame": 7125,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        352,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        352,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": true,
+      "duplicate_inset": {
+        "image_rect_xywh": [
+          264,
+          216,
+          176,
+          130
+        ],
+        "name_band_rect_xywh": [
+          264,
+          346,
+          176,
+          14
+        ],
+        "decision": "同时遮挡中央重复实例；先扣除上层画中画占据的底层遮罩，再处理上层面部与姓名，避免遮住其余画面。"
+      }
+    },
+    {
+      "start": 285,
+      "end": 290,
+      "start_frame": 7125,
+      "end_frame": 7250,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        288,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        548,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 290,
+      "end": 295,
+      "start_frame": 7250,
+      "end_frame": 7375,
+      "target": "B",
+      "view": "右下角画中画",
+      "target_image_rect_xywh": [
+        512,
+        416,
+        176,
+        130
+      ],
+      "name_band_rect_xywh": [
+        512,
+        546,
+        176,
+        14
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    },
+    {
+      "start": 295,
+      "end": 300,
+      "start_frame": 7375,
+      "end_frame": 7500,
+      "target": "B",
+      "view": "轮换分屏",
+      "target_image_rect_xywh": [
+        0,
+        0,
+        352,
+        260
+      ],
+      "name_band_rect_xywh": [
+        0,
+        260,
+        352,
+        28
+      ],
+      "decision": "面部按逐帧轨迹覆盖不透明RGB(16,16,16)，姓名带覆盖；保留机位背景、身体及其他参与者。",
+      "tracking": "在352×260的目标图像坐标中逐帧检测辅助定位；对短暂侧脸漏检插值并复核，使用短时运动包络与少量面部边缘；完整逐帧结果为mask.mkv。",
+      "replay_slot": false
+    }
+  ],
+  "audio": [
+    {
+      "start": 0,
+      "end": 300,
+      "tracks": [
+        "A",
+        "C",
+        "D"
+      ],
+      "decision": "按原整数PCM逐样本求和，不改变增益、时间或重叠内容。"
+    },
+    {
+      "start": 0,
+      "end": 300,
+      "track": "B",
+      "decision": "整条分轨不进入最终混音，包括重播段；不对其他分轨施加静音。"
+    },
+    {
+      "start": 0,
+      "end": 300,
+      "track": "HOST",
+      "decision": "只对下列三段个人姓名实际发声样本置零；首尾位于零幅停顿，无需额外淡化。其余主持内容逐样本保留。"
+    },
+    {
+      "start": 27.647625,
+      "end": 28.2436875,
+      "start_sample": 442362,
+      "end_sample": 451899,
+      "track": "HOST",
+      "decision": "删除个人姓名，半开区间；通过前后独立停顿和三处相同姓名波形确认，保留两侧的非姓名语句。"
+    },
+    {
+      "start": 117.4235625,
+      "end": 118.019625,
+      "start_sample": 1878777,
+      "end_sample": 1888314,
+      "track": "HOST",
+      "decision": "删除个人姓名，半开区间；通过前后独立停顿和三处相同姓名波形确认，保留两侧的非姓名语句。"
+    },
+    {
+      "start": 207.17675,
+      "end": 207.7728125,
+      "start_sample": 3314828,
+      "end_sample": 3324365,
+      "track": "HOST",
+      "decision": "删除个人姓名，半开区间；通过前后独立停顿和三处相同姓名波形确认，保留两侧的非姓名语句。"
+    },
+    {
+      "start": 281,
+      "end": 286.6266875,
+      "track": "HOST",
+      "decision": "独立机构名称及其整段说明完整保留，不作静音。"
+    }
+  ],
+  "text": [
+    {
+      "ids": [
+        "U02",
+        "U20"
+      ],
+      "decision": "两处身份自述统一替换为“我是受访者B，负责用户界面。”，时间与B归属不变。"
+    },
+    {
+      "ids": [
+        "H1",
+        "H2",
+        "H3"
+      ],
+      "decision": "个人姓名统一替换为“受访者B”，其他主持文字不变。"
+    },
+    {
+      "ids": [
+        "H4"
+      ],
+      "decision": "机构名称及说明原样保留。"
+    },
+    {
+      "start": 0,
+      "end": 300,
+      "speakers": [
+        "A",
+        "C",
+        "D"
+      ],
+      "decision": "text逐字保留。B其余观点逐字保留；不补写省略号中的内容。全部34条记录的顺序、ID、start、end、speaker保持原值。"
+    },
+    {
+      "files": [
+        "zh.srt",
+        "anonymous.mp4"
+      ],
+      "decision": "采用公共渲染器按时间边界划分并合并重叠字幕为多行，嵌入一条zho字幕轨。"
+    },
+    {
+      "files": [
+        "cover.png",
+        "anonymous.mp4",
+        "README.md",
+        "edits.json"
+      ],
+      "decision": "封面应用首帧匿名遮罩；容器清除来源元数据，说明及编辑记录均使用匿名称谓。"
+    }
+  ],
+  "checks": [
+    {
+      "name": "源绑定与公开素材范围",
+      "result": "pass",
+      "source_sha256": "c3c169c7437e2b50ac117cf451394d7cdc3b6c7ce0580245c4984a8d7b92a2ac",
+      "basis": "工程固定结构与公共源文件SHA256一致；未访问题包以外答案或评测资料。"
+    },
+    {
+      "name": "视频、容器与元数据",
+      "result": "pass",
+      "measured": {
+        "stream_types": [
+          "video",
+          "audio",
+          "subtitle"
+        ],
+        "frames": 7500,
+        "width": 704,
+        "height": 640,
+        "duration": 300.0,
+        "frame_rate": "25/1",
+        "subtitle_language": "zho",
+        "identity_metadata_absent": true
+      }
+    },
+    {
+      "name": "全帧遮罩与重建一致性",
+      "result": "pass",
+      "measured": {
+        "frames_checked": 7500,
+        "mask_values": [
+          0,
+          255
+        ],
+        "maximum_frame_mae_8bit": 2.421152935606061,
+        "worst_mae_frame": 124,
+        "maximum_frame_fraction_any_channel_error_over_32": 9.543678977272728e-05,
+        "worst_fraction_frame": 2715,
+        "target_face_instances_checked": 8750,
+        "target_face_maximum_mae_to_16": 2.7516666666666665,
+        "target_face_maximum_fraction_error_over_24": 0,
+        "non_target_face_zones_checked": 17500,
+        "non_target_face_zones_maximum_mae": 3.107419871794872,
+        "non_target_face_zones_maximum_fraction_error_over_32": 0.0007211538461538462,
+        "cover_exact_reconstruction": true
+      },
+      "basis": "顺序解码源、遮罩和成片的全部7500帧；全画面逐帧比较。目标实例按检测辅助核心区核对，遮罩与非目标保守面部区域逐帧不相交；这些区域为本地自检区域，不代表隐藏标注。"
+    },
+    {
+      "name": "音频定向删除基线",
+      "result": "pass",
+      "measured": {
+        "samples": 4800000,
+        "rate": 16000,
+        "baseline_peak_error": 0,
+        "baseline_rmse": 0.0,
+        "host_mute_intervals": [
+          [
+            27.647625,
+            28.2436875
+          ],
+          [
+            117.4235625,
+            118.019625
+          ],
+          [
+            207.17675,
+            207.7728125
+          ]
+        ],
+        "institution_pcm_exact": true
+      },
+      "basis": "最终PCM与A+C+D+仅删除个人姓名的主持轨逐样本比较。"
+    },
+    {
+      "name": "成片AAC与所交PCM一致性",
+      "result": "pass",
+      "measured": {
+        "reference_decode_samples": 4800512,
+        "actual_decode_samples": 4800512,
+        "reference_peak_error": 0.0,
+        "reference_rmse": 0.0,
+        "pcm_decode_snr_db": 34.61396407664889,
+        "duration_error_samples": 512
+      },
+      "basis": "使用公共渲染器相同AAC编码参数建立参考并解码比较；成片对PCM的SNR和解码长度符合合同。"
+    },
+    {
+      "name": "字幕及机构名称",
+      "result": "pass",
+      "measured": {
+        "cue_count": 34,
+        "structure_times_speakers_preserved": true,
+        "overlap_srt_exact": true,
+        "institution_preserved": true
+      }
+    },
+    {
+      "name": "人工画面复核",
+      "result": "completed",
+      "basis": "核对全部布局变化、逐秒目标图像接触表、转头段及成片接触表；同时检查主画面旁的画中画和中央重复画中画。"
+    },
+    {
+      "name": "独立语义评判",
+      "result": "pending",
+      "basis": "未运行独立原生音视频裁判，不生成未测评分。"
+    },
+    {
+      "name": "姓名文字所在区域编码核对",
+      "result": "pass",
+      "measured": {
+        "face_mae": [
+          2.7516666666666665,
+          4625
+        ],
+        "name_mae": [
+          2.8302521008403363,
+          [
+            6354,
+            264,
+            346,
+            176,
+            14
+          ]
+        ],
+        "name_fraction": [
+          0,
+          null
+        ]
+      }
+    },
+    {
+      "name": "完整可见姓名带逐帧编码核对",
+      "result": "pass",
+      "measured": {
+        "face_mae": [
+          2.7516666666666665,
+          4625
+        ],
+        "name_mae": [
+          2.8555194805194803,
+          [
+            1830,
+            264,
+            346,
+            176,
+            14
+          ]
+        ],
+        "name_fraction": [
+          0.00010146103896103897,
+          [
+            2634,
+            0,
+            548,
+            352,
+            28
+          ]
+        ]
+      },
+      "basis": "逐帧检查整条可见姓名带相对于RGB(16,16,16)的误差，扣除上层画中画占据的底层区域。"
+    },
+    {
+      "name": "交付清单与摘要",
+      "result": "pass",
+      "expected_file_count": 9,
+      "other_artifact_sha256": {
+        "anonymous.mp4": "3d16c7b415dd1c697796cc83786f8fa62e5c37cdf66e96d0b3929c3abe993cbb",
+        "mask.mkv": "664b383c3cff3129d7f18f627315c1c436417cf4f6c73c0c48ee094a159f94c9",
+        "final_audio.wav": "12d9f99841c17e38df24b594fffe72cf9d0ede1d14db56011ef637cbaf9d60ea",
+        "subtitles.json": "896f36bd1ba17ef6115134e812fe8fc5a5e6cc6e687ab653d4d990b57bc8dcb2",
+        "zh.srt": "6bd3e2239a9485899293a44670ff380b2eee6a9c62276bca21a8f9489df2373a",
+        "cover.png": "88a1d7fc89cbf304297962406e3010a2425d649652f5b281b5e189fa360cad66",
+        "project.json": "b033470d9dc596aa94459f229d3150e37330c1bd208fc25520ce2e76c71da5a1",
+        "README.md": "ce9f737d0de19ec13ede9320a3d45a9bf4362ec565e02fbaaaed577eca4d9fea"
+      },
+      "basis": "提交目录仅包含合同要求的9个文件；脚本、提帧和临时文件位于scratch。"
+    }
+  ]
+}

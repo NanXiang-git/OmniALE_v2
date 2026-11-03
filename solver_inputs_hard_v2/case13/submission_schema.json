@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "file_schemas": {
+    "speakers.json": {
+      "type": "object",
+      "properties": {
+        "speakers": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "voice_id": {
+                "type": "string"
+              },
+              "wav": {
+                "type": "string"
+              },
+              "instance": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "speaker_id",
+              "name",
+              "voice_id",
+              "wav",
+              "instance"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "speakers"
+      ],
+      "additionalProperties": true
+    },
+    "translation_plan.json": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "source_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "speaker_id": {
+                "type": "string"
+              },
+              "source_text": {
+                "type": "string"
+              },
+              "zh_text": {
+                "type": "string"
+              },
+              "voice_id": {
+                "type": "string"
+              },
+              "start": {
+                "type": "number"
+              },
+              "end": {
+                "type": "number"
+              },
+              "visible_speech": {
+                "type": "boolean"
+              },
+              "type": {
+                "enum": [
+                  "speech",
+                  "screen_text",
+                  "non_speech"
+                ]
+              },
+              "event_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "speaker_instance": {
+                "type": "string"
+              },
+              "delivery_note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "source_ids",
+              "speaker_id",
+              "source_text",
+              "zh_text",
+              "voice_id",
+              "start",
+              "end",
+              "visible_speech",
+              "type",
+              "event_id",
+              "speaker_instance",
+              "delivery_note"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": true
+    },
+    "rebuild.json": {
+      "type": "object",
+      "properties": {
+        "argv": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "argv"
+      ],
+      "additionalProperties": true
+    },
+    "mix_config.json": {
+      "type": "object",
+      "required": [
+        "effects_gain_db",
+        "mobile"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "effects_gain_db": {
+          "type": "number",
+          "minimum": -12,
+          "maximum": 0
+        },
+        "mobile": {
+          "type": "object",
+          "required": [
+            "method",
+            "gain_db",
+            "limiter_ceiling_dbtp"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "const": "mono_downmix_gain_limiter"
+            },
+            "gain_db": {
+              "type": "number",
+              "minimum": -12,
+              "maximum": 6
+            },
+            "limiter_ceiling_dbtp": {
+              "const": -2
+            }
+          }
+        }
+      }
+    },
+    "continuity_ledger.json": {
+      "type": "object",
+      "required": [
+        "decisions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "decisions": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": [
+              "challenge_id",
+              "source_ids",
+              "event_indices",
+              "source_evidence",
+              "decision",
+              "alternative_rejected"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "challenge_id": {
+                "enum": [
+                  "C01",
+                  "C02",
+                  "C03",
+                  "C04",
+                  "C05",
+                  "C06",
+                  "C07",
+                  "C08"
+                ]
+              },
+              "source_ids": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^S0[0-7][0-9]$"
+                }
+              },
+              "event_indices": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "source_evidence": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "start",
+                    "end",
+                    "observation"
+                  ],
+                  "properties": {
+                    "start": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 525
+                    },
+                    "end": {
+                      "type": "number",
+                      "exclusiveMinimum": 0,
+                      "maximum": 525
+                    },
+                    "observation": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "decision": {
+                "type": "string",
+                "minLength": 1
+              },
+              "alternative_rejected": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

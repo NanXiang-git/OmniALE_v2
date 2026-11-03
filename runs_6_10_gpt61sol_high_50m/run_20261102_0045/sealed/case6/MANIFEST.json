@@ -1,0 +1,75 @@
+{
+  "frozen_utc": "2026-11-02T03:15:06.346848+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3389,
+      "sha256": "7261039b153f7b92e8fd9ed0dd7265d10c509b43e3a4fa387ef8b378dd895bae"
+    },
+    {
+      "path": "claims.json",
+      "bytes": 19941,
+      "sha256": "a56c8cd80df5feb18ea5de9cf44e22bfe0349eb6865846c4439b358d9970b8a7"
+    },
+    {
+      "path": "commentary.mp4",
+      "bytes": 179786844,
+      "sha256": "cca015775b2b8932c32cc1c714a4a4ae4f62014100816a738a9603e721b194a0"
+    },
+    {
+      "path": "narration.wav",
+      "bytes": 108925518,
+      "sha256": "1948935f473dd1db160c643afc04525fb3ff73c91e64d24e2368ce8dcb707ec6"
+    },
+    {
+      "path": "original_audio.wav",
+      "bytes": 108925484,
+      "sha256": "d3c0f1c84afddf1da0f976699a41ce6916c8258fab0e93e0c90374b6bfdf37a1"
+    },
+    {
+      "path": "project.json",
+      "bytes": 171,
+      "sha256": "812a3a053bacd2eca6433f25c7772347d282f11e3c26eb212af2280a543479af"
+    },
+    {
+      "path": "script.md",
+      "bytes": 6640,
+      "sha256": "0a42db033e99d039924ecb607dcaaf6095d935780f2d3d622512e2f3fb65a0b1"
+    },
+    {
+      "path": "source_map.json",
+      "bytes": 30175,
+      "sha256": "1e097250ba0a1b62de978978920349c4e4907058f62a81f11341d1420c193a54"
+    },
+    {
+      "path": "timeline.json",
+      "bytes": 8591,
+      "sha256": "95f4ea24daacb502a12cf5406543948aeaa35991ce2e1cd104ddd4cba53d5a3c"
+    },
+    {
+      "path": "zh.srt",
+      "bytes": 7381,
+      "sha256": "3cb1c78030147aaf2740e259ff1251b0406620ce37efea95e4007adb790d8e89"
+    }
+  ],
+  "solver_run": {
+    "task": 6,
+    "mode": "solver",
+    "start_utc": "2026-11-02T02:34:14.437027+00:00",
+    "deadline_utc": "2026-11-02T03:24:14.436417+00:00",
+    "limit_seconds": 3000,
+    "requested_model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "status": "finished",
+    "candidate": "/mnt/d/omniALE/cases_6_7_hard_v2/case_41/candidate",
+    "harness_version": "0.163.0",
+    "end_utc": "2026-11-02T03:15:00.475302+00:00",
+    "elapsed_seconds": 2446.039,
+    "active_clock_seconds": 2370.913,
+    "wall_clock_seconds": 2446.039,
+    "timing_valid": true,
+    "exit_code": 0,
+    "wall_minus_active_seconds": 75.126,
+    "timing_reconciliation": "reports/case6_timing_reconciliation.json"
+  }
+}

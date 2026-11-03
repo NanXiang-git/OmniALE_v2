@@ -1,0 +1,18 @@
+{
+  "main": {
+    "file": "source.mp4",
+    "source_start": 480,
+    "source_end": 744,
+    "duration": 264,
+    "frame_rate": 24,
+    "frame_count": 6336,
+    "audio_derivation": "stereo downmix with fixed -4dB pre-attenuation before AAC encode to avoid clipping"
+  },
+  "context": {
+    "file": "context.mp4",
+    "source_start": 195,
+    "source_end": 235,
+    "purpose": "Earlier visual/voice context only. Do not append this to output. Not the main timeline."
+  },
+  "reference_policy": "No prior whole-film knowledge. Context is already known to audience; main facts become knowable only as main unfolds."
+}

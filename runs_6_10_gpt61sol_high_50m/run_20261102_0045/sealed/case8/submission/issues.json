@@ -1,0 +1,330 @@
+{
+  "issues": [
+    {
+      "id": "issue_jacket_11",
+      "object_id": "jacket",
+      "time": 11,
+      "before": {
+        "start": 9.8,
+        "end": 11
+      },
+      "after": {
+        "start": 11,
+        "end": 12.5
+      },
+      "reason": "桥边同一个连续长镜头中，10.96秒男青年外套胸腹、衣襟和下摆仍为蓝色，11.00秒起变成酒红色。人物位置、手势和桥栏连续，没有换衣动作、地点转换或时间跳跃；这是可辨主色的镜内突变。"
+    },
+    {
+      "id": "issue_jacket_15",
+      "object_id": "jacket",
+      "time": 15,
+      "before": {
+        "start": 13.8,
+        "end": 15
+      },
+      "after": {
+        "start": 15,
+        "end": 16.5
+      },
+      "reason": "同一桥边长镜头内，14.96秒外套仍为酒红色，15.00秒又恢复蓝色。它是11秒那次突变之后的第二个明确状态边界；青年仍穿着同一件外套，未脱换，女性的说话动作也连续，不能用换衣或另一个时空解释恢复。"
+    },
+    {
+      "id": "issue_capsule_25_60",
+      "object_id": "capsule",
+      "time": 25.6,
+      "before": {
+        "start": 24.4,
+        "end": 25.6
+      },
+      "after": {
+        "start": 25.6,
+        "end": 26.8
+      },
+      "reason": "独立监看窗始终标为“当前”。25.56秒C7盖子仍贴合容器口，25.60秒立即悬在上方，露出黑色开口；没有盖子上移的连续过程，也没有遮挡。首次针对下一次容器开盖的场记在43秒以后，不能倒推授权25.60秒的变化；主画面切镜也不重置监看对象。"
+    },
+    {
+      "id": "issue_switch_38_40",
+      "object_id": "switch",
+      "time": 38.4,
+      "before": {
+        "start": 37,
+        "end": 38.4
+      },
+      "after": {
+        "start": 38.4,
+        "end": 39.8
+      },
+      "reason": "S3在38.36秒以前红色拨杆端位于固定O刻度一侧，38.40秒直接跳到I一侧；不是只看颜色，拨杆朝向也反转。监看窗连续可见，未显示中间拨动过程，仍处于当前层。89秒附近针对下一次开关打开的场记尚未发生，不能追认这次off到on的跳变。"
+    },
+    {
+      "id": "issue_capsule_83_40",
+      "object_id": "capsule",
+      "time": 83.4,
+      "before": {
+        "start": 82,
+        "end": 83.4
+      },
+      "after": {
+        "start": 83.4,
+        "end": 84.8
+      },
+      "reason": "C7在67.40–68.00秒已经通过完整可见下降动作合盖，此后持续sealed；83.36秒盖子仍贴合，83.40秒直接成为悬盖open，没有操作或遮挡。43秒附近的“下一次容器开盖”一次性批准已用于49秒开盖，不能重复用于83.40秒。此时无新的容器授权，电影画面的望远镜视角不构成监看层回放。"
+    },
+    {
+      "id": "issue_switch_121",
+      "object_id": "switch",
+      "time": 121,
+      "before": {
+        "start": 119.6,
+        "end": 121
+      },
+      "after": {
+        "start": 121,
+        "end": 122.4
+      },
+      "reason": "当前层S3在120.96秒仍指I，为on；121.00秒直接跳到O，为off，无连续拨动动作或遮挡。89秒附近场记仅批准下一次开关打开，已在97秒off到on时使用；它既不能再次使用，也不批准相反方向的关断。早期回放到130秒才开始，不能解释121秒的当前层变化。"
+    }
+  ],
+  "controls": [
+    {
+      "id": "review_capsule_cover_7",
+      "object_id": "capsule",
+      "time": 7,
+      "before": {
+        "start": 6,
+        "end": 7
+      },
+      "after": {
+        "start": 7,
+        "end": 9
+      },
+      "reason": "7–9秒C7区域被不透明条纹挡板完全盖住，9秒重新可见时仍为sealed。遮挡期间只能填not_visible、state留空；不能声称容器消失，也不能根据前后相同而断言遮挡下绝无操作。此处没有可证实的状态矛盾。",
+      "classification": "unresolved"
+    },
+    {
+      "id": "review_space_jump",
+      "object_id": "space",
+      "time": 20.24,
+      "before": {
+        "start": 19,
+        "end": 20.24
+      },
+      "after": {
+        "start": 22.08,
+        "end": 24.8
+      },
+      "reason": "20.24秒由桥边街道外景切入另一处室内实验场景，随后22.08秒起实景上叠“40 YEARS LATER”，支持明确时间跳跃及地点改变。outdoor到indoor有合法叙事解释；叠字背后仍是室内实景，不能把这一段记为纯title，也不能把时间跳跃用于重置道具窗。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_capsule_motion_35",
+      "object_id": "capsule",
+      "time": 35.2,
+      "before": {
+        "start": 33.6,
+        "end": 34.6
+      },
+      "after": {
+        "start": 34.6,
+        "end": 35.6
+      },
+      "reason": "34.60–35.20秒能连续看到C7盖子从悬空位置向容器口下降，最后贴合。中间运动阶段记visible_uncertain，35.20秒起为sealed。合盖动作完整可见，不能把运动结束处的open到sealed认作无故跳变。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_capsule_authorized_49",
+      "object_id": "capsule",
+      "time": 49,
+      "before": {
+        "start": 48,
+        "end": 49
+      },
+      "after": {
+        "start": 49,
+        "end": 50.5
+      },
+      "reason": "音轨43–47.5秒附近有独立中文场记，关键内容为“下一次容器开盖”的批准，并限定“只限一次”。49秒是这条授权之后的第一次sealed到open，监看窗虽没有画出上移过程，仍有合法的对象及方向授权。该授权在此核销；不能追认25.60秒，也不能再用于83.40秒。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_motion_57",
+      "object_id": "switch",
+      "time": 57,
+      "before": {
+        "start": 55.4,
+        "end": 56.4
+      },
+      "after": {
+        "start": 56.4,
+        "end": 57.4
+      },
+      "reason": "56.40–57.00秒可见S3红色端点及白色杆身连续转动，由I端移向O端，最后稳定在off。固定刻度位置不变，能够看见完整操作轨迹；中间阶段记visible_uncertain，57秒起记off，属于合法动作。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_cover_63",
+      "object_id": "switch",
+      "time": 63,
+      "before": {
+        "start": 62,
+        "end": 63
+      },
+      "after": {
+        "start": 63,
+        "end": 65
+      },
+      "reason": "63–96秒不透明条纹完全遮住S3拨杆，不能读出O/I方向。96秒恢复可见仍指O。遮挡期间填not_visible并留空状态；这段长遮挡本身不能证明开关消失、被操作或发生矛盾，也不能把先前状态当作当前可见事实。",
+      "classification": "unresolved"
+    },
+    {
+      "id": "review_capsule_motion_68",
+      "object_id": "capsule",
+      "time": 68,
+      "before": {
+        "start": 66.4,
+        "end": 67.4
+      },
+      "after": {
+        "start": 67.4,
+        "end": 68.4
+      },
+      "reason": "67.40–68.00秒C7盖子连续下降并合到容器口，操作全过程可见。S3虽然同时被遮住，但不影响判读C7；这次open到sealed是明确合法动作，中间运动状态留空，68秒起记录sealed。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_authorized_97",
+      "object_id": "switch",
+      "time": 97,
+      "before": {
+        "start": 96,
+        "end": 97
+      },
+      "after": {
+        "start": 97,
+        "end": 98.5
+      },
+      "reason": "音轨89–93.5秒附近的中文场记批准“下一次开关打开”，并说“只限一次”。63–96秒遮挡结束后，96–97秒能直接读到S3指O；97秒跳到I，是该授权之后第一次可核实的off到on。授权在97秒被消耗，不能给38.40秒倒签，也不能批准121秒反方向关断。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_capsule_blur_101",
+      "object_id": "capsule",
+      "time": 101,
+      "before": {
+        "start": 98,
+        "end": 99
+      },
+      "after": {
+        "start": 101,
+        "end": 103.8
+      },
+      "reason": "99–101秒C7先被完全挡住，101–104秒只出现模糊轮廓，盖子与开口关系无法可靠辨认，104秒又被挡住。101–104秒应为visible_uncertain、state空；不能把朦胧亮块当作封盖证据，也不能把其余遮挡段解释为容器消失。",
+      "classification": "unresolved"
+    },
+    {
+      "id": "review_rifle_drink",
+      "object_id": "rifle",
+      "time": 125.8,
+      "before": {
+        "start": 122.8,
+        "end": 125.8
+      },
+      "after": {
+        "start": 127.4,
+        "end": 130.2
+      },
+      "reason": "125.80秒近景中狙击手眼睛离开镜筒，随后举起饮料并用吸管喝；127.40–130.20秒枪身仍由支架托住并朝前，未见枪口放低或把枪收下。合同允许支架保持射击位置，故这些自然身体动作期间仍为aiming，不能仅凭喝饮料判成lowered。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_capsule_replay_130",
+      "object_id": "capsule",
+      "time": 130,
+      "before": {
+        "start": 127,
+        "end": 130
+      },
+      "after": {
+        "start": 130,
+        "end": 132.5
+      },
+      "reason": "130秒监看标题明确变为“早期回放”，C7显示旧快照sealed。此前124–128秒附近中文说明这是早期回放、不改变当前状态。当前层在99秒以前最后可辨为open，之后被遮挡或模糊；回放sealed不需要接成当前层的一次合盖，不消耗或产生授权。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_replay_130",
+      "object_id": "switch",
+      "time": 130,
+      "before": {
+        "start": 128,
+        "end": 130
+      },
+      "after": {
+        "start": 130,
+        "end": 132.5
+      },
+      "reason": "129秒当前层S3指O，130秒随监看标题“早期回放”显示旧快照指I。音轨已说明回放不改变当前状态，因此这里是off当前层与on旧快照之间的时间层切换，不是当前开关被无操作打开。状态表仍如实记录回放期间可见的on。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_capsule_current_140",
+      "object_id": "capsule",
+      "time": 140,
+      "before": {
+        "start": 137,
+        "end": 140
+      },
+      "after": {
+        "start": 140,
+        "end": 142.5
+      },
+      "reason": "136–139秒附近中文说明回放结束、恢复当前；140秒标题回到“当前”。C7在140–141秒被挡住，141秒重现为open。回放的sealed不能覆盖此前当前层的open记忆；这不是sealed到open的新矛盾。140–141秒只记录not_visible，不能提前补写open。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_current_140",
+      "object_id": "switch",
+      "time": 140,
+      "before": {
+        "start": 137,
+        "end": 140
+      },
+      "after": {
+        "start": 140,
+        "end": 142.5
+      },
+      "reason": "140秒监看由“早期回放”回到“当前”，S3从回放快照指I恢复为当前层指O。136–139秒附近“回放结束、恢复当前”的中文说明与标题一致。当前层121–130秒原本就是off，因此此处的on到off显示差异属于合法返回当前，不是一次新的无授权关断。",
+      "classification": "legal"
+    },
+    {
+      "id": "review_switch_blur_151",
+      "object_id": "switch",
+      "time": 151,
+      "before": {
+        "start": 149.5,
+        "end": 151
+      },
+      "after": {
+        "start": 151,
+        "end": 153.8
+      },
+      "reason": "151–154秒S3区域被模糊处理，仍能见到对象轮廓，但红端和杆身相对于固定O/I的关系不可辨，应填visible_uncertain并留空state。154秒清晰后仍为off；不能仅凭颜色或前后记忆补写模糊段的状态。",
+      "classification": "unresolved"
+    },
+    {
+      "id": "review_switch_cover_158",
+      "object_id": "switch",
+      "time": 158,
+      "before": {
+        "start": 157,
+        "end": 158
+      },
+      "after": {
+        "start": 158,
+        "end": 160.5
+      },
+      "reason": "158–162秒S3被不透明条纹完全盖住；162秒重新可见仍指O。遮挡期间记not_visible，未观察到拨动动作就不能声称发生允许的操作，也不能把未显示误报成开关消失或新的连续性矛盾。",
+      "classification": "unresolved"
+    }
+  ]
+}

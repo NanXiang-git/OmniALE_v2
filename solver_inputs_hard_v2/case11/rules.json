@@ -1,0 +1,71 @@
+{
+  "main_output": "accessible_course.mp4",
+  "required_files": [
+    "accessible_course.mp4",
+    "mix.wav",
+    "base_track.wav",
+    "ad_track.wav",
+    "description.vtt",
+    "description_plan.json",
+    "timeline.json",
+    "chapters.json",
+    "player_config.json",
+    "rebuild.json",
+    "README.md",
+    "revision_audit.json"
+  ],
+  "auto_weights": {
+    "schedule": 10,
+    "navigation": 15,
+    "consistency": 5,
+    "rebuild": 5,
+    "revision_audit": 5
+  },
+  "judge_weights": {
+    "dynamic_reference": 20,
+    "audibility": 10
+  },
+  "fact_weight": 30,
+  "judge_criteria": {
+    "dynamic_reference": "Precisely distinguish duplicate 她/T1 and 她/T3, token movement vs head-panel movement, H1 vs H2 changes, query identity vs source identity, local masking and weighted global output. Verify revision audit against actual spoken AD, not merely its claims.",
+    "audibility": "Actually understandable spoken Chinese, teacher clarity, economical wording, no extreme speed."
+  },
+  "judge_gates": {
+    "critical_semantics": "No critical omission or reversal of repeated-token ID, head identity, query, ranking, local mask, or unequal fusion. Judge source-grounded facts using real AD audio. Do not demand exact script or all decimals.",
+    "audio_protection": "Teacher words remain audible; no deletion/ducking to hide overlaps.",
+    "actual_delivery": "Actual AD is audible, corresponds to text and final mix; no fake silent tracks.",
+    "revision_fidelity": "Legacy erroneous statements have actually been removed or corrected in audible AD; revision audit reasons and cited new cues agree with source and delivered speech. Do not grade audit rationale alone."
+  },
+  "hold_anchors": [
+    62,
+    96,
+    154
+  ],
+  "chapter_starts": [
+    0,
+    30,
+    62,
+    96,
+    126,
+    154
+  ],
+  "case_number": 11,
+  "original_case_id": 23,
+  "version": "2.0-formal-hard",
+  "task_summary": "对双头注意力改版课程修订可听描述，处理重复词身份、双层换位、分头权重、局部mask及不等权融合；交付可重建的真实无障碍媒体。",
+  "passing_score": 80,
+  "scoring_status": "experimental_source_grounded",
+  "rebuild_timeout": 600,
+  "audit_contract": {
+    "old_cue_count": 8,
+    "allowed_actions": [
+      "keep",
+      "rewrite",
+      "delete",
+      "merge"
+    ],
+    "coverage": 1.0,
+    "non_delete_requires_new_cue": true,
+    "semantic_review": "Judge verifies audit reasons against source and actual speech; metadata alone earns no semantic points."
+  }
+}

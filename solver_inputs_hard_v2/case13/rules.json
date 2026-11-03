@@ -1,0 +1,56 @@
+{
+  "main_output": "dub_zh.mp4",
+  "required_files": [
+    "dub_zh.mp4",
+    "mix.wav",
+    "subtitles_zh.srt",
+    "subtitles_en.srt",
+    "bilingual.ass",
+    "speakers.json",
+    "translation_plan.json",
+    "rebuild.json",
+    "README.md",
+    "effects_track.wav",
+    "mobile_mix.wav",
+    "mix_config.json",
+    "continuity_ledger.json"
+  ],
+  "auto_weights": {
+    "timing": 8,
+    "subtitles": 6,
+    "consistency": 6,
+    "rebuild": 5
+  },
+  "judge_weights": {
+    "translation": 10,
+    "voices": 15,
+    "mix": 15,
+    "subtitle_meaning": 5,
+    "continuity": 10
+  },
+  "fact_weight": 20,
+  "minimum_fact_coverage": 0.95,
+  "judge_criteria": {
+    "translation": "Equivalent natural Mandarin and preserved intent/relationships; no unmotivated invention.",
+    "voices": "Actual speaker attribution, stable role voice instances, intelligibility and appropriate emotion, including offscreen speakers.",
+    "mix": "Final Chinese clear, essential music/effects preserved, no intelligible doubled English; compare source sound events. Assess the actual mobile_mix.wav too: Chinese digits, negation, clipped/interrupted speech and essential effects remain audible after mono downmix. Stereo-only success is insufficient.",
+    "subtitle_meaning": "Actual Chinese dub, English/Chinese subtitles and burned/soft display are semantically/time consistent.",
+    "continuity": "Audit C01-C08 against source AND actual cinema/mobile audio. Verify repeated occurrences independently, self-correction/qualifier scope, interrupted lines, state changes and real speaker instances. Ledger claims earn no credit unless actual outputs support them. No prescribed Chinese wording."
+  },
+  "judge_gates": {
+    "critical_translation": "No key negation/relationship/condition/status reversed, no key omitted spoken line.",
+    "speaker_assignment": "No key role swap or full line on wrong speaker track.",
+    "picture_and_voice_timing": "No altered picture timeline; visible speech and offscreen event windows usable.",
+    "sound_integrity": "No double English dialogue, erased essential effects, or inaudible Chinese.",
+    "hard_continuity": "No omitted/reused occurrence that destroys context; screen text never spoken as character dialogue; no completion/progress/negation/qualifier reversal. Evaluate C01-C08 in actual outputs.",
+    "mobile_intelligibility": "Actual mobile waveform contains the same complete Mandarin performance; no vanished role, canceling dialogue or erased story-critical effects. If not supplied to Judge, return null rather than assume.",
+    "burned_bilingual_subtitles": "Both Chinese and English subtitles are actually visible in dub_zh.mp4, consistent with delivered ASS/SRT and source dialogue, confined to bottom 32 percent without hiding essential action. Files alone or unrendered soft subtitles do not satisfy."
+  },
+  "case_number": 13,
+  "original_case_id": 40,
+  "version": "2.0-hard",
+  "task_summary": "将525秒真实连续电影片段制作成普通话译制成片及手机单声道版，解决8组跨场景语义/声源挑战，交付可逐样本审计的角色轨和音乐音效轨。",
+  "passing_score": 80,
+  "scoring_status": "experimental_source_grounded",
+  "rebuild_timeout": 600
+}

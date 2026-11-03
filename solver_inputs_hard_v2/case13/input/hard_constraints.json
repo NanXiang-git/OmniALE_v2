@@ -1,0 +1,157 @@
+{
+  "version": "2.0-hard",
+  "duration": 525,
+  "challenges": [
+    {
+      "id": "C01",
+      "source_ids": [
+        "S001",
+        "S002",
+        "S003",
+        "S035",
+        "S037",
+        "S038",
+        "S039",
+        "S040"
+      ],
+      "requirement": "重复台词跨场景：保留每次事件，比较角色声音实例、说话节奏和实际情绪；不得复制第一次音频后无视第二次表演。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C02",
+      "source_ids": [
+        "S009"
+      ],
+      "requirement": "参考稿可能把屏幕文字和人物声音合并；依据实际画面与声音拆分事件，分别确定字幕与是否发声。",
+      "minimum_evidence_intervals": 1
+    },
+    {
+      "id": "C03",
+      "source_ids": [
+        "S004",
+        "S005",
+        "S006",
+        "S007",
+        "S008",
+        "S044",
+        "S045",
+        "S046",
+        "S047"
+      ],
+      "requirement": "相同质问的两次不同回应：保留否认、转折、承认或辩解的方向；不要自动套用首次回答。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C04",
+      "source_ids": [
+        "S030",
+        "S031",
+        "S032"
+      ],
+      "requirement": "短句中的自我修正与现场指令：压缩译文仍须保留修正关系及对象，声源不能由当前镜头人物直接代替。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C05",
+      "source_ids": [
+        "S010",
+        "S034",
+        "S069",
+        "S073"
+      ],
+      "requirement": "状态播报链：逐次保留不同阶段、数字和完成性，声线稳定且区别于现场人物。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C06",
+      "source_ids": [
+        "S014",
+        "S063",
+        "S064"
+      ],
+      "requirement": "跨段免责表达和后置限定：保留作用范围，不能把后置短句当无意义填充或遗漏。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C07",
+      "source_ids": [
+        "S055",
+        "S056",
+        "S057",
+        "S058",
+        "S059",
+        "S060",
+        "S061",
+        "S062"
+      ],
+      "requirement": "短答、打断、停顿和随后反应：每次应答分别归属，保留事件间停顿，不擅自补全未完成语句。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C08",
+      "source_ids": [
+        "S018",
+        "S041",
+        "S042",
+        "S043",
+        "S065",
+        "S066",
+        "S069",
+        "S070"
+      ],
+      "requirement": "压力升级、剩余时间和中止指令：数字/命令对象不变，手机版本仍可辨识，勿以音效覆盖关键短句。",
+      "minimum_evidence_intervals": 2
+    }
+  ],
+  "audio_contract": {
+    "sample_rate": 48000,
+    "stereo_tracks": [
+      "mix.wav",
+      "effects_track.wav",
+      "all speaker wav files"
+    ],
+    "mono_tracks": [
+      "mobile_mix.wav"
+    ],
+    "duration_tolerance_seconds": 0.08,
+    "effects_gain_db_range": [
+      -12,
+      0
+    ],
+    "effects_formula": "effects_track = input/music_effects.wav * 10 ** (effects_gain_db / 20); no shifting, ducking, EQ, splicing, time stretching, or replacement",
+    "mix_formula": "mix.wav = effects_track.wav + sum(all final-gain speaker tracks); no post-sum processing",
+    "maximum_relative_waveform_error": 0.02,
+    "cinema_integrated_lufs": [
+      -17,
+      -15
+    ],
+    "cinema_true_peak_max_dbtp": -1,
+    "mobile_integrated_lufs": [
+      -19,
+      -17
+    ],
+    "mobile_true_peak_max_dbtp": -2,
+    "mobile_formula": "0.5*(mix.left+mix.right), followed only by declared global gain and peak limiter; no content edits",
+    "mobile_ffmpeg_filter": "pan=mono|c0=0.5*c0+0.5*c1,volume={gain_db}dB,alimiter=limit=0.7943282347:attack=5:release=50:level=0:latency=1"
+  },
+  "subtitle_contract": {
+    "max_lines_per_language": 2,
+    "zh_max_chars_per_line": 18,
+    "en_max_chars_per_line": 42,
+    "max_zh_chars_per_second": 10,
+    "regular_min_duration": 0.4,
+    "max_duration": 7,
+    "screen_text_may_overlap_speech": true,
+    "note": "Unicode non-whitespace code points; punctuation counts; speech cues must intersect corresponding plan event. Very short original interjections may last 0.2-0.4 s if source duration is similarly short and documented.",
+    "burn_in_required": true,
+    "burn_in_region": "bottom 32 percent of frame; both ZH and EN visible"
+  },
+  "reference_policy": "S001-S073 are occurrence identifiers, not normalized text keys. Every source ID must be accounted for; one ID may split into speech/screen_text/non_speech events. No narration of screen text. Native cries may be recreated, never drop an event silently.",
+  "delivery_budget": {
+    "suggested_minutes": 180,
+    "cpu_cores": 8,
+    "ram_gb": 32,
+    "optional_gpu_gb": 24,
+    "workspace_gb": 30
+  }
+}
