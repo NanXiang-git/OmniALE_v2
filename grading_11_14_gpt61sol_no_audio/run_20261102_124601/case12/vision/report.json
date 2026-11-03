@@ -1,0 +1,1200 @@
+{
+  "case": 12,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "gate": "actual_preview",
+  "scope": "visual_rendering_only_sampled; audio/source-dialogue-semantic portions pending",
+  "gate_pass": true,
+  "official_weighted_score": null,
+  "audio_sent": false,
+  "windows": [
+    {
+      "window": 0,
+      "interval": [
+        0,
+        30
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 0.0,
+              "observation": "Both expected lines render: \"C: Just what we have. Now, of\" and \"C: course the other thing to think\". Speaker prefixes are visible, with no clipping."
+            },
+            {
+              "time": 3.28,
+              "observation": "\"C: there is maybe the design\" matches the expected caption and is fully visible."
+            },
+            {
+              "time": 4.0,
+              "observation": "\"A: Yeah design should be yeah\" and \"A: it should be different\" render correctly as two readable lines."
+            },
+            {
+              "time": 7.52,
+              "observation": "All three expected caption blocks are visible: A's \"All the almost all the remotes\", B's \"does it look like\", and C's two-line caption beginning \"Like trendy no like f- for earlier we\". They occupy separate vertical positions without text collisions or clipping."
+            },
+            {
+              "time": 8.0,
+              "observation": "\"A: Are different shapes Yes\", \"B: does it look like\", and both expected C lines are present and readable. The simultaneous captions remain separated."
+            },
+            {
+              "time": 11.36,
+              "observation": "\"A: Yeah maybe ten I do yeah colours\", \"C: you know Maybe it should different\", and \"D: Yes exactly\" match the expected text. All three labels and caption blocks are unobscured."
+            },
+            {
+              "time": 17.04,
+              "observation": "\"A: and al shapes also Yeah\", \"B: Hmm\", and C's two lines \"colours or materials\" / \"or you know Um so yeah\" render with the expected speaker prefixes and no visible collision."
+            },
+            {
+              "time": 19.04,
+              "observation": "\"A: Yes\" and C's two-line caption beginning \"you know like kidney shape feels better\" match the expected text and remain fully visible."
+            },
+            {
+              "time": 21.52,
+              "observation": "B's \"Yeah okay friendly\" / \"shape that would help\" and C's two expected lines render simultaneously. The blocks are closely stacked but do not obscure one another."
+            },
+            {
+              "time": 22.96,
+              "observation": "B's two-line caption and \"D: Mm-hmm\" render correctly in separate positions without clipping."
+            },
+            {
+              "time": 25.44,
+              "observation": "\"B: I think another thing that would help\" is fully visible and matches the expected text."
+            },
+            {
+              "time": 29.52,
+              "observation": "\"B: is um if it beeps when you clap because\" and \"B: I think one of the big things that\" match the expected two-line caption, with no missing text or clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within the 0–30 second window; unsampled moments are not assessed.",
+            "No audio was assessed. Speaker identity, transcription accuracy against speech, and audio/text agreement are outside this visual-only verdict."
+          ],
+          "elapsed_seconds": 24.21369767189026
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 0.0,
+              "observation": "Both expected lines render fully: \"C: Just what we have. Now, of\" and \"C: course the other thing to think\". Speaker labels are visible; neither line is clipped."
+            },
+            {
+              "time": 3.28,
+              "observation": "Visible text matches \"C: there is maybe the design\"."
+            },
+            {
+              "time": 4.0,
+              "observation": "The two expected A-labelled lines render correctly: \"A: Yeah design should be yeah\" and \"A: it should be different\"."
+            },
+            {
+              "time": 7.52,
+              "observation": "All three simultaneous caption blocks are present: A's \"All the almost all the remotes\", B's \"does it look like\", and C's two-line \"Like trendy...\" caption. Blocks are vertically separated without text collisions or clipping."
+            },
+            {
+              "time": 8.0,
+              "observation": "\"A: Are different shapes Yes\", \"B: does it look like\", and both expected C-labelled lines are fully visible and match the supplied text."
+            },
+            {
+              "time": 11.36,
+              "observation": "\"A: Yeah maybe ten I do yeah colours\", \"C: you know Maybe it should different\", and \"D: Yes exactly\" render in separate readable rows."
+            },
+            {
+              "time": 17.04,
+              "observation": "\"A: and al shapes also Yeah\", \"B: Hmm\", and C's \"colours or materials / or you know Um so yeah\" are all present with their expected labels and no visible collisions."
+            },
+            {
+              "time": 17.68,
+              "observation": "The updated captions \"A: Yeah\" and \"C: shapes right\" both render correctly."
+            },
+            {
+              "time": 21.52,
+              "observation": "B's two-line \"Yeah okay friendly / shape that would help\" and C's two-line \"you know like kidney shape feels better / in your hand or something you know\" are fully visible. The stacked blocks remain readable without overlapping glyphs."
+            },
+            {
+              "time": 22.96,
+              "observation": "Both expected B-labelled lines and \"D: Mm-hmm\" render fully in separated blocks."
+            },
+            {
+              "time": 25.44,
+              "observation": "\"B: I think another thing that would help\" matches the expected caption and is not clipped."
+            },
+            {
+              "time": 29.52,
+              "observation": "Both final expected lines render fully: \"B: is um if it beeps when you clap because\" and \"B: I think one of the big things that\"."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied rendered samples, from full-file time 0.000 through 29.520 seconds; unseen intervals and the exact 30.000-second endpoint are not assessed.",
+            "Text was compared with the supplied ASS-derived expectations, not an independent transcript.",
+            "No audio, acoustic speaker identity, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 23.8224618434906
+        }
+      ]
+    },
+    {
+      "window": 1,
+      "interval": [
+        30,
+        60
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 30.0,
+              "observation": "Rendered text matches: 'B: is um if it beeps when you clap because' / 'B: I think one of the big things that'. Both lines and B labels are readable and unclipped."
+            },
+            {
+              "time": 34.6,
+              "observation": "Both expected captions, 'A: Okay' and 'D: Yeah', are visible in separate vertical positions without text collision."
+            },
+            {
+              "time": 35.0,
+              "observation": "No caption is visible, matching the empty expected caption set."
+            },
+            {
+              "time": 38.4,
+              "observation": "Both expected C lines are fully visible: 'C: because they put a newspaper or they' / 'C: put it behind a plant or we you know'."
+            },
+            {
+              "time": 42.2,
+              "observation": "'A: Yeah' is visible above the matching two-line C caption beginning 'C: whatever And and they'. All labels and text remain readable."
+            },
+            {
+              "time": 48.64,
+              "observation": "'D: Yeah' appears below the expected two-line C caption about the remote control, without obscuring its text or being clipped."
+            },
+            {
+              "time": 55.36,
+              "observation": "The expected A and C two-line captions and 'D: Or a b-' are all visible. The three caption blocks remain vertically separated and readable."
+            },
+            {
+              "time": 57.28,
+              "observation": "All five expected lines across A, B, and C are rendered, including 'B: Uh so so it's really the beep', 'B: or or a light should blink', and 'C: signal Yeah Mm-hmm So if lost'. The layout is dense but has no visible glyph overlap or clipping."
+            },
+            {
+              "time": 59.88,
+              "observation": "'A: Should ha-' and both C lines, 'C: If lost uh signal with' / 'C: b throw signal you know', match the expected text and are fully visible."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 30–60 seconds, not unseen frames or intervals.",
+            "No audio was supplied or assessed; speaker identity correctness and audio/text agreement were not evaluated."
+          ],
+          "elapsed_seconds": 20.24368953704834
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 30.0,
+              "observation": "Rendered text matches both expected lines: “B: is um if it beeps when you clap because” and “B: I think one of the big things that”. Both speaker labels and line endings are visible without clipping."
+            },
+            {
+              "time": 34.6,
+              "observation": "Both expected captions, “A: Okay” and “D: Yeah”, are visible in separate vertical positions with no text collision."
+            },
+            {
+              "time": 35.0,
+              "observation": "No caption is visible, matching the empty expected caption set."
+            },
+            {
+              "time": 38.4,
+              "observation": "Both expected C lines render completely: “C: because they put a newspaper or they” and “C: put it behind a plant or we you know”."
+            },
+            {
+              "time": 42.2,
+              "observation": "“A: Yeah” is visible above the complete two-line C caption, “C: whatever And and they” / “C: suddenly the phone rings”, without overlap."
+            },
+            {
+              "time": 55.36,
+              "observation": "All three expected caption blocks are present: A’s two lines beginning “A: Yeah some beep or something”, C’s two lines beginning “C: really if it's really in a dark spot”, and “D: Or a b-”. Text and labels remain readable and unclipped."
+            },
+            {
+              "time": 57.92,
+              "observation": "The expected A, B, and C blocks are stacked without obscuring one another. All five lines are visible, including “B: or or a light should blink” and “C: signal Yeah Mm-hmm So if lost”."
+            },
+            {
+              "time": 59.88,
+              "observation": "“A: Should ha-” and both expected C lines, “C: If lost uh signal with” / “C: b throw signal you know”, render fully in separated positions."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 30–60 seconds, not unseen frames or continuous playback.",
+            "No audio was supplied or assessed; acoustic speaker identity and audio/text agreement are outside this verdict."
+          ],
+          "elapsed_seconds": 18.90339970588684
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "interval": [
+        60,
+        90
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 60.0,
+              "observation": "Visible text matches expected: 'A: Should ha-' and 'C: If lost uh signal with\\nC: b throw signal you know'. The A and C blocks are separated and unclipped."
+            },
+            {
+              "time": 64.48,
+              "observation": "Both expected D lines render completely: 'D: Yeah maybe it should have a light\\nD: so that we can we can just recognise'. No visible edge clipping."
+            },
+            {
+              "time": 68.04,
+              "observation": "'A: Yes' and 'D: where it is Yeah yeah' are both visible in separate positions, matching the expected concurrent captions."
+            },
+            {
+              "time": 69.52,
+              "observation": "'A: May not be beep' appears above 'C: Exactly I mean just that's\\nC: what I'm saying I'm just'. All expected text and labels are readable without collision."
+            },
+            {
+              "time": 73.52,
+              "observation": "The expected two-line C caption and two-line D caption are simultaneously visible, vertically stacked without obscuring each other."
+            },
+            {
+              "time": 75.36,
+              "observation": "All four expected speakers render: 'A: A fluorescent signal yeah', 'B: And do you think a good c c\\nB: um clue for that is that it', 'C: whether a light or', and 'D: Beep or uh it's a light\\nD: maybe it's a light'. The dense layout preserves readable text with no visible clipping or text overlap."
+            },
+            {
+              "time": 76.48,
+              "observation": "The expected A, B, and D caption blocks remain complete and separated; the expired C caption is absent."
+            },
+            {
+              "time": 81.0,
+              "observation": "'B: would respond to a clap or it would\\nB: respond to your voice or it would' matches the expected text and is fully visible."
+            },
+            {
+              "time": 84.72,
+              "observation": "The expected B caption and 'D: Mm-hmm' are both visible, with clear vertical separation."
+            },
+            {
+              "time": 87.68,
+              "observation": "'B: respond what what should you have\\nB: to do to make it beep or blink' and 'D: Yes' match the expected captions and are unclipped."
+            },
+            {
+              "time": 89.52,
+              "observation": "'C: Okay my my idea is' renders completely with the expected speaker label. No missing or wrong visible caption text was identified in the supplied samples."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied timestamped images within 60–90 seconds, not unseen frames or continuous playback.",
+            "Most detailed views are lower-frame crops; full-frame thumbnails are supplied at selected times.",
+            "No audio was assessed, including speaker identity, intelligibility, or audio/text agreement."
+          ],
+          "elapsed_seconds": 27.65947699546814
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 60.0,
+              "observation": "Visible text matches 'A: Should ha-' and 'C: If lost uh signal with\\nC: b throw signal you know'. The A and C blocks are separated, with no visible clipping."
+            },
+            {
+              "time": 64.48,
+              "observation": "Both expected D lines render completely: 'D: Yeah maybe it should have a light\\nD: so that we can we can just recognise'."
+            },
+            {
+              "time": 68.04,
+              "observation": "'A: Yes' and 'D: where it is Yeah yeah' are both visible in separate positions, with their speaker labels intact."
+            },
+            {
+              "time": 69.52,
+              "observation": "'A: May not be beep' appears above 'C: Exactly I mean just that's\\nC: what I'm saying I'm just'. All expected text is readable without collision."
+            },
+            {
+              "time": 73.52,
+              "observation": "The expected two-line C caption and two-line D caption are stacked without obscuring one another. The bottom D line, 'D: maybe it's a light', remains fully visible."
+            },
+            {
+              "time": 75.36,
+              "observation": "All four expected speaker blocks render: 'A: A fluorescent signal yeah', 'B: And do you think a good c c\\nB: um clue for that is that it', 'C: whether a light or', and 'D: Beep or uh it's a light\\nD: maybe it's a light'. The blocks remain distinct and unclipped."
+            },
+            {
+              "time": 76.48,
+              "observation": "The expected A, B, and D captions remain fully visible in separate vertical positions; no missing text or text-on-text overlap is apparent."
+            },
+            {
+              "time": 84.72,
+              "observation": "'B: would respond to a clap or it would\\nB: respond to your voice or it would' and 'D: Mm-hmm' match the expected text and are visibly separated."
+            },
+            {
+              "time": 87.68,
+              "observation": "'B: respond what what should you have\\nB: to do to make it beep or blink' and 'D: Yes' render completely without collision or clipping."
+            },
+            {
+              "time": 89.52,
+              "observation": "'C: Okay my my idea is' matches the expected caption and is fully visible. No concrete missing or wrong visible text was found across the supplied samples."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied timestamped images within 60–90 seconds, not unsampled frames or transitions.",
+            "Most detailed views are lower-frame crops; full-frame thumbnails provide additional layout context.",
+            "No audio was heard or assessed. Speaker identity correctness and audio/text agreement are outside this verdict."
+          ],
+          "elapsed_seconds": 24.865525245666504
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "interval": [
+        90,
+        120
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 90.0,
+              "observation": "Visible text reads \"C: Okay my my idea is\", matching the expected caption and speaker label without clipping."
+            },
+            {
+              "time": 90.48,
+              "observation": "Both expected lines render fully: \"C: maybe that the minute it's really\" and \"C: hidden in in other words if\"."
+            },
+            {
+              "time": 93.52,
+              "observation": "No caption is visible, correctly matching the end-exclusive cue boundary."
+            },
+            {
+              "time": 93.8,
+              "observation": "\"A: Oops\" is visible and unobstructed."
+            },
+            {
+              "time": 94.88,
+              "observation": "\"C: Uh okay\" renders completely with the expected label."
+            },
+            {
+              "time": 98.24,
+              "observation": "\"C: I hope the kitty cat is hungry\" and \"C: 'cause I don't like snakes\" match the expected two-line caption and remain fully readable."
+            },
+            {
+              "time": 103.52,
+              "observation": "No caption is visible, as expected."
+            },
+            {
+              "time": 105.28,
+              "observation": "\"C: Here's the project finance,\" renders fully."
+            },
+            {
+              "time": 107.76,
+              "observation": "Both expected lines render: \"C: uh which of course we all have to\" and \"C: think about when we design this thing\". Neither line is clipped or colliding."
+            },
+            {
+              "time": 112.04,
+              "observation": "\"C: Um selling price is supposed\" and \"C: to be twenty five Euro\" are fully visible and match the expected text."
+            },
+            {
+              "time": 113.52,
+              "observation": "\"D: Mm-hmm\" is visible with the expected speaker label."
+            },
+            {
+              "time": 113.84,
+              "observation": "\"B: Okay\" is visible with the expected speaker label."
+            },
+            {
+              "time": 117.84,
+              "observation": "The simultaneous captions render as three distinct, readable lines: \"C: Uh profit aim for the\", \"C: company is fifty million Euro\", and \"D: Um is fifty mm\". There is no visible text collision or clipping."
+            },
+            {
+              "time": 119.52,
+              "observation": "\"A: Really? Okay.\" renders completely and matches the expected caption."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied rendered samples within full-file times 90–120 seconds, not unsampled intervals.",
+            "Audio, acoustic speaker identity, and audio/text agreement were not assessed."
+          ],
+          "elapsed_seconds": 25.548641204833984
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 90.0,
+              "observation": "Visible text reads \"C: Okay my my idea is\", matching the expected caption and speaker label; no clipping."
+            },
+            {
+              "time": 90.48,
+              "observation": "Both expected lines render clearly: \"C: maybe that the minute it's really\" and \"C: hidden in in other words if\"."
+            },
+            {
+              "time": 93.52,
+              "observation": "No caption is visible, matching the expected absence at the cue's exclusive end."
+            },
+            {
+              "time": 93.8,
+              "observation": "\"A: Oops\" is visible and unobstructed."
+            },
+            {
+              "time": 94.48,
+              "observation": "\"C: Uh okay\" renders as expected."
+            },
+            {
+              "time": 97.0,
+              "observation": "The two-line caption \"C: I hope the kitty cat is hungry\" / \"C: 'cause I don't like snakes\" matches the expected text, with both labels fully visible."
+            },
+            {
+              "time": 105.0,
+              "observation": "\"C: Here's the project finance,\" renders clearly and completely."
+            },
+            {
+              "time": 106.0,
+              "observation": "\"C: uh which of course we all have to\" / \"C: think about when we design this thing\" renders in two readable, unclipped lines."
+            },
+            {
+              "time": 111.0,
+              "observation": "\"C: Um selling price is supposed\" / \"C: to be twenty five Euro\" matches the expected caption."
+            },
+            {
+              "time": 113.52,
+              "observation": "\"D: Mm-hmm\" is visible with the expected speaker label."
+            },
+            {
+              "time": 113.84,
+              "observation": "\"B: Okay\" is visible with the expected speaker label."
+            },
+            {
+              "time": 115.0,
+              "observation": "\"C: Uh profit aim for the\" / \"C: company is fifty million Euro\" renders completely."
+            },
+            {
+              "time": 117.0,
+              "observation": "The two C lines and \"D: Um is fifty mm\" are simultaneously visible, stacked separately without text collision or clipping."
+            },
+            {
+              "time": 118.48,
+              "observation": "Both simultaneous captions remain complete and readable, with the D line below the two C lines."
+            },
+            {
+              "time": 119.52,
+              "observation": "\"A: Really? Okay.\" renders fully, matching the expected text."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied timestamped samples within 90–120 seconds, not unseen frames or intervals.",
+            "Most supplied views are subtitle-region crops; full-frame thumbnails provide limited additional detail.",
+            "No audio, acoustic speaker identity, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 21.753217220306396
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "interval": [
+        120,
+        150
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 120.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 120.48,
+              "observation": "Rendered text matches: \"C: the market range: unlimited,\\nC: meaning international\". Both lines and speaker labels are readable and unclipped."
+            },
+            {
+              "time": 124.0,
+              "observation": "Rendered \"C: Mm, 'kay,\" matches the expected caption."
+            },
+            {
+              "time": 125.0,
+              "observation": "Rendered \"C: and the production cost\\nC: should not exceed\" matches the expected text, with clean two-line separation."
+            },
+            {
+              "time": 127.52,
+              "observation": "Rendered \"C: hopefully should be less than\\nC: twelve fifty Euro\" matches the expected replacement caption. No residual preceding caption or text collision is visible."
+            },
+            {
+              "time": 131.44,
+              "observation": "Rendered \"D: Yes\" matches the expected text and speaker label, without clipping."
+            },
+            {
+              "time": 133.0,
+              "observation": "Rendered \"B: Mm, 'kay, that should keep everybody\\nB: on their toes and challenged\" matches the expected text. The longer first line remains fully visible."
+            },
+            {
+              "time": 136.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 136.48,
+              "observation": "Rendered \"A: Mm-hmm\" matches the expected text and speaker label."
+            },
+            {
+              "time": 137.52,
+              "observation": "Rendered \"D: Profit\" matches the expected text and speaker label."
+            },
+            {
+              "time": 140.48,
+              "observation": "Rendered \"C: So these are all things\" matches the expected caption."
+            },
+            {
+              "time": 143.52,
+              "observation": "Rendered \"C: of course to remember with\\nC: the budget and when you\" matches the expected text. Neither line overlaps the other or is clipped."
+            },
+            {
+              "time": 149.52,
+              "observation": "Rendered \"C: design to materials cost etcetera\" matches the expected caption and remains fully readable."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied timestamped image samples within 120–150 seconds, not unseen intervals.",
+            "No missing or wrong caption text, caption-to-caption overlap, or clipping was observed in the supplied samples.",
+            "Simultaneously active multi-speaker captions are not demonstrated by these samples, so their overlap layout is not tested.",
+            "Audio, acoustic speaker identity, translation accuracy, and audio/text agreement were not assessed."
+          ],
+          "elapsed_seconds": 23.088608026504517
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 120.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 120.48,
+              "observation": "Visible text matches: \"C: the market range: unlimited,\\nC: meaning international\". Both speaker labels and both lines are readable and unclipped."
+            },
+            {
+              "time": 124.0,
+              "observation": "Visible \"C: Mm, 'kay,\" matches the expected caption."
+            },
+            {
+              "time": 125.0,
+              "observation": "Visible \"C: and the production cost\\nC: should not exceed\" matches the expected text, with separated, readable lines."
+            },
+            {
+              "time": 127.52,
+              "observation": "Visible \"C: hopefully should be less than\\nC: twelve fifty Euro\" matches the expected replacement caption without visible collision or clipping."
+            },
+            {
+              "time": 131.44,
+              "observation": "Visible \"D: Yes\" matches the expected text and speaker label."
+            },
+            {
+              "time": 132.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 133.0,
+              "observation": "Visible \"B: Mm, 'kay, that should keep everybody\\nB: on their toes and challenged\" matches the expected text. Both lines fit within the image without overlap or clipping."
+            },
+            {
+              "time": 136.48,
+              "observation": "Visible \"A: Mm-hmm\" matches the expected text and speaker label."
+            },
+            {
+              "time": 137.52,
+              "observation": "Visible \"D: Profit\" matches the expected text and speaker label."
+            },
+            {
+              "time": 140.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 140.48,
+              "observation": "Visible \"C: So these are all things\" matches the expected text."
+            },
+            {
+              "time": 143.52,
+              "observation": "Visible \"C: of course to remember with\\nC: the budget and when you\" matches the expected text. Neither line is clipped or obscured."
+            },
+            {
+              "time": 149.52,
+              "observation": "Visible \"C: design to materials cost etcetera\" matches the expected text and remains fully readable. Across the supplied samples, no missing or wrong caption text, caption-to-caption collision, or text clipping is visible."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied timestamped images within 120–150 seconds, not unseen frames or intervals.",
+            "No simultaneous multi-speaker captions are shown in these samples, so concurrent-caption layout is not established.",
+            "Audio, acoustic speaker identity, translation correctness, and audio/text agreement were not assessed."
+          ],
+          "elapsed_seconds": 49.899760484695435
+        }
+      ]
+    },
+    {
+      "window": 5,
+      "interval": [
+        150,
+        180
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 150.0,
+              "observation": "No rendered captions are visible, matching the empty expected text. The other supplied samples through 156.0 likewise show no captions."
+            },
+            {
+              "time": 156.48,
+              "observation": "Both expected lines are visible: \"C: Now uh the discussion I guess\" and \"C: is um does anyone of you\". Speaker labels and words are intact, with no clipping."
+            },
+            {
+              "time": 162.48,
+              "observation": "\"C: have experience with remote control\" is fully visible and matches the expected text."
+            },
+            {
+              "time": 165.0,
+              "observation": "No caption is visible, matching the empty expected text at this timestamp."
+            },
+            {
+              "time": 166.08,
+              "observation": "The expected A caption, \"A: Yeah of course using / A: remote control Yeah\", and C caption, \"C: I exp- I s- 'cause we we use / C: 'em we use 'em right everyday\", are both fully rendered. The two blocks are vertically separated without collision or clipping."
+            },
+            {
+              "time": 168.16,
+              "observation": "The two-line C caption remains visible, with \"D: Yeah of course yeah\" below it. All expected text and labels are readable, and the simultaneous captions do not overlap."
+            },
+            {
+              "time": 170.32,
+              "observation": "\"A: Yeah of course\" appears above the expected two-line C caption. Both blocks are readable and unclipped."
+            },
+            {
+              "time": 173.44,
+              "observation": "\"C: course price That it that it / C: that the price is a good price\" matches the expected two-line caption and is fully visible."
+            },
+            {
+              "time": 175.92,
+              "observation": "The expected two-line C caption and \"D: Mm\" are both visible. D's line sits below C's block without obscuring it or touching the frame edge."
+            },
+            {
+              "time": 177.44,
+              "observation": "\"C: I mean the price is given but that was\" is fully rendered and matches the expected text."
+            },
+            {
+              "time": 179.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 179.68,
+              "observation": "\"B: We have to justify\" is fully visible, including the expected B label, with no clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied timestamped samples within 150–180 seconds, not intervening or unseen frames.",
+            "Most detailed evidence is from lower-frame caption crops; full-frame thumbnails provide additional context.",
+            "No audio, acoustic speaker identity, translation accuracy, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 22.39546298980713
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 150.0,
+              "observation": "No caption is visible, matching the empty expected text. The other supplied samples through 156.0 likewise show no captions."
+            },
+            {
+              "time": 156.48,
+              "observation": "The rendered caption reads \"C: Now uh the discussion I guess\\nC: is um does anyone of you\", matching the expected text and both speaker labels. Both lines are readable and unclipped."
+            },
+            {
+              "time": 162.48,
+              "observation": "The visible single line reads \"C: have experience with remote control\", matching the expected text with no clipping."
+            },
+            {
+              "time": 165.0,
+              "observation": "No caption is visible, matching the empty expected text at this timestamp."
+            },
+            {
+              "time": 166.08,
+              "observation": "Both expected blocks are visible: \"A: Yeah of course using\\nA: remote control Yeah\" above \"C: I exp- I s- 'cause we we use\\nC: 'em we use 'em right everyday\". The blocks are vertically separated, readable, and within the image boundaries."
+            },
+            {
+              "time": 168.16,
+              "observation": "The expected two-line C caption remains visible, with \"D: Yeah of course yeah\" beneath it. All three lines and their labels are readable without text collision or clipping."
+            },
+            {
+              "time": 170.32,
+              "observation": "\"A: Yeah of course\" appears above the expected two-line C caption. Both speaker blocks are fully visible and spatially separated."
+            },
+            {
+              "time": 171.52,
+              "observation": "The caption reads \"C: course price That it that it\\nC: that the price is a good price\", matching the expected wording and labels. Neither line is clipped."
+            },
+            {
+              "time": 175.92,
+              "observation": "The expected two-line C caption and \"D: Mm\" are all visible. The D line sits beneath C without obscuring its text and retains a visible bottom margin."
+            },
+            {
+              "time": 177.44,
+              "observation": "\"C: I mean the price is given but that was\" is fully rendered on one line, matching the expected text."
+            },
+            {
+              "time": 179.0,
+              "observation": "No caption is visible, matching the empty expected text."
+            },
+            {
+              "time": 179.68,
+              "observation": "\"B: We have to justify\" is clearly visible, matching the expected wording and speaker label without clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied timestamped image samples within the 150–180 second window, not to unseen frames or exact transitions between samples.",
+            "Assessment is limited to visible caption text, labels, overlap layout, and clipping. No audio, acoustic speaker identity, translation, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 23.52722954750061
+        }
+      ]
+    },
+    {
+      "window": 6,
+      "interval": [
+        180,
+        210
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 180.0,
+              "observation": "Visible text reads 'B: We have to justify', matching the expected caption and speaker label."
+            },
+            {
+              "time": 180.48,
+              "observation": "Both expected lines render completely: 'B: that price by having sufficient' and 'B: features to make it sell at that price'. No clipping is visible."
+            },
+            {
+              "time": 181.0,
+              "observation": "The two-line B caption and 'C: That's right.' are simultaneously visible, stacked separately without text collision or clipping."
+            },
+            {
+              "time": 183.52,
+              "observation": "The expected B caption and 'C: That's right.' are both present and readable, with distinct rows."
+            },
+            {
+              "time": 184.0,
+              "observation": "Only 'C: That's right.' remains visible; the B cue ending at 184.0 is correctly absent."
+            },
+            {
+              "time": 185.0,
+              "observation": "No caption is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 185.52,
+              "observation": "Visible text reads 'C: And you know specifi- you', matching the expected wording and label."
+            },
+            {
+              "time": 187.52,
+              "observation": "Visible lines read 'C: you will get specific um instructions' and 'C: for that I think that's the end', matching the expected text without clipping."
+            },
+            {
+              "time": 191.52,
+              "observation": "Visible text reads 'C: of the show Yeah', matching the expected caption."
+            },
+            {
+              "time": 194.48,
+              "observation": "Visible text reads 'A: Okay Okay', with the expected A label and complete text."
+            },
+            {
+              "time": 198.48,
+              "observation": "Visible text reads 'C: Yeah so let's see', correctly present at the cue's inclusive start."
+            },
+            {
+              "time": 202.8,
+              "observation": "The expected two lines render fully: 'C: So um we have well we have' and 'C: a twen- two two two three'."
+            },
+            {
+              "time": 206.6,
+              "observation": "Visible lines read 'C: minutes Um any questions' and 'C: at this point Or uh', matching the expected caption with no text overlap or clipping."
+            },
+            {
+              "time": 209.52,
+              "observation": "Visible text reads 'B: suggestions', matching the expected caption and speaker label."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within full-file times 180–210 seconds, not unseen intervals.",
+            "Assessment is limited to visible caption content, labels, layout, and clipping. No audio, acoustic speaker identity, translation accuracy, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 21.828946828842163
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 180.0,
+              "observation": "Visible caption reads \"B: We have to justify\", matching the expected text and speaker label."
+            },
+            {
+              "time": 181.2,
+              "observation": "Both expected B lines and \"C: That's right.\" are visible. The concurrent captions occupy separate stacked lines, with no text collision or clipping."
+            },
+            {
+              "time": 183.52,
+              "observation": "The two-line B caption and \"C: That's right.\" are fully visible and match the expected text."
+            },
+            {
+              "time": 184.0,
+              "observation": "Only \"C: That's right.\" remains visible; the B caption is correctly absent at its exclusive end time."
+            },
+            {
+              "time": 185.0,
+              "observation": "No caption is visible, matching the empty expected caption set."
+            },
+            {
+              "time": 186.24,
+              "observation": "\"C: And you know specifi- you\" is fully rendered with the expected speaker label."
+            },
+            {
+              "time": 189.52,
+              "observation": "Visible lines read \"C: you will get specific um instructions\" and \"C: for that I think that's the end\", matching the expected text without clipping."
+            },
+            {
+              "time": 192.48,
+              "observation": "\"C: of the show Yeah\" is visible and matches the expected caption."
+            },
+            {
+              "time": 194.68,
+              "observation": "\"A: Okay Okay\" is clearly visible with the expected A label."
+            },
+            {
+              "time": 198.48,
+              "observation": "\"C: Yeah so let's see\" is visible at the cue's inclusive start time."
+            },
+            {
+              "time": 202.8,
+              "observation": "Both expected lines, \"C: So um we have well we have\" and \"C: a twen- two two two three\", are visible and unobstructed."
+            },
+            {
+              "time": 206.6,
+              "observation": "\"C: minutes Um any questions\" and \"C: at this point Or uh\" are fully visible on separate lines."
+            },
+            {
+              "time": 209.52,
+              "observation": "\"B: suggestions\" matches the expected text and label. No clipping or overlapping caption text is visible."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within the requested 180–210 second window, not to unseen frames.",
+            "No audio was supplied or assessed. Speaker identity, source-audio semantics, and audio/text agreement were not evaluated."
+          ],
+          "elapsed_seconds": 18.23623490333557
+        }
+      ]
+    },
+    {
+      "window": 7,
+      "interval": [
+        210,
+        240
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 210.28,
+              "observation": "Visible text \"C: 'Kay\" matches the expected caption and speaker label; it is fully readable and unclipped."
+            },
+            {
+              "time": 210.48,
+              "observation": "No caption is visible, matching the cue's end-exclusive boundary."
+            },
+            {
+              "time": 212.0,
+              "observation": "Both expected lines render correctly: \"C: I think basically basically you will\" and \"C: get instructions to work with and if\". No text collision or clipping is visible."
+            },
+            {
+              "time": 218.0,
+              "observation": "Visible lines \"C: you have any questions\" and \"C: uh uh I guess you can uh\" match the expected text."
+            },
+            {
+              "time": 222.92,
+              "observation": "\"B: Okay I think I have enough to think\" renders completely with the expected B label."
+            },
+            {
+              "time": 225.28,
+              "observation": "Both simultaneous captions render: B's \"about 'til our next meeting / How about you people\" and D's \"Yeah even I have Yeah / even I have I think yeah\", with speaker prefixes on each line. The blocks are vertically separated and fully visible."
+            },
+            {
+              "time": 227.12,
+              "observation": "\"A: Yeah\" and both expected D lines are visible in separate positions without collision or clipping."
+            },
+            {
+              "time": 227.72,
+              "observation": "\"B: Mm-hmm\" appears above the complete two-line D caption; all expected text remains readable."
+            },
+            {
+              "time": 228.32,
+              "observation": "\"C: Yeah\" and the expected two-line D caption are both visible, with clear separation."
+            },
+            {
+              "time": 232.0,
+              "observation": "\"C: Then uh we see you in\" and \"C: about thirty minutes\" render as expected, fully within the image."
+            },
+            {
+              "time": 236.72,
+              "observation": "\"C: And see what we can come up with\" is complete and matches the expected text."
+            },
+            {
+              "time": 238.6,
+              "observation": "\"C: Okay, very good.\" renders correctly and is unclipped."
+            },
+            {
+              "time": 239.0,
+              "observation": "No caption is visible, correctly matching the preceding cue's end-exclusive boundary."
+            },
+            {
+              "time": 239.88,
+              "observation": "\"A: Yes\" renders correctly with the expected speaker prefix."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied rendered samples within 210–240 seconds, not unseen intervening frames.",
+            "No audio was supplied or assessed; acoustic speaker identity and audio/text agreement are outside this verdict."
+          ],
+          "elapsed_seconds": 23.258830547332764
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 210.28,
+              "observation": "Visible caption reads \"C: 'Kay\", matching the expected text and speaker label."
+            },
+            {
+              "time": 210.48,
+              "observation": "No caption is visible, correctly matching the end-exclusive cue boundary."
+            },
+            {
+              "time": 212.0,
+              "observation": "Both expected lines render completely: \"C: I think basically basically you will\" and \"C: get instructions to work with and if\". No text collision or clipping is visible."
+            },
+            {
+              "time": 218.0,
+              "observation": "Visible lines read \"C: you have any questions\" and \"C: uh uh I guess you can uh\", matching the expected caption."
+            },
+            {
+              "time": 222.92,
+              "observation": "Visible text reads \"B: Okay I think I have enough to think\", with the expected B label and no clipped characters."
+            },
+            {
+              "time": 225.28,
+              "observation": "Both simultaneous captions are fully visible: \"B: about 'til our next meeting / B: How about you people\" above \"D: Yeah even I have Yeah / D: even I have I think yeah\". The blocks are vertically separated without collision; the lower D block remains inside the image."
+            },
+            {
+              "time": 227.12,
+              "observation": "\"A: Yeah\" and both expected D lines render simultaneously in separate vertical positions, without overlap or clipping."
+            },
+            {
+              "time": 227.52,
+              "observation": "\"B: Mm-hmm\" renders above the complete two-line D caption. All expected text is readable and separated."
+            },
+            {
+              "time": 228.32,
+              "observation": "\"C: Yeah\" appears above the complete D caption, matching both expected active cues without text collision."
+            },
+            {
+              "time": 229.52,
+              "observation": "No caption is visible, matching the expected empty frame."
+            },
+            {
+              "time": 230.0,
+              "observation": "Visible caption reads \"C: Okay\", matching the expected text."
+            },
+            {
+              "time": 231.2,
+              "observation": "Visible caption reads \"C: Alright well uh\", matching the expected text."
+            },
+            {
+              "time": 233.56,
+              "observation": "Both expected lines are fully rendered: \"C: Then uh we see you in\" and \"C: about thirty minutes\"."
+            },
+            {
+              "time": 236.72,
+              "observation": "\"C: And see what we can come up with\" renders as a complete, readable line without clipping."
+            },
+            {
+              "time": 238.6,
+              "observation": "Visible caption reads \"C: Okay, very good.\", matching the expected text."
+            },
+            {
+              "time": 239.0,
+              "observation": "No caption is visible, correctly matching the end-exclusive boundary of the preceding cue."
+            },
+            {
+              "time": 239.52,
+              "observation": "Visible caption reads \"C: Okay\", matching the expected text."
+            },
+            {
+              "time": 239.88,
+              "observation": "Visible caption reads \"A: Yes\", matching the expected text and label, with no clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within full-file times 210–240 seconds, not unseen intervals.",
+            "Assessment is visual only. No audio, acoustic speaker identity, translation accuracy, or audio/text agreement was assessed."
+          ],
+          "elapsed_seconds": 35.222203731536865
+        }
+      ]
+    },
+    {
+      "window": 8,
+      "interval": [
+        240,
+        259.48
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 240.0,
+              "observation": "Expected \"A: Yes\" is visibly rendered in full, including the speaker label. Text is readable against its dark background, with no visible clipping or caption overlap."
+            },
+            {
+              "time": 240.08,
+              "observation": "Expected \"A: Yes\" remains fully visible and readable, without clipping or overlapping caption text."
+            },
+            {
+              "time": 240.48,
+              "observation": "No caption is visible, matching the empty expected caption list after the cue ends."
+            },
+            {
+              "time": 243.52,
+              "observation": "No caption is visible, matching the empty expected caption list."
+            },
+            {
+              "time": 247.52,
+              "observation": "No caption is visible, matching the empty expected caption list."
+            },
+            {
+              "time": 251.52,
+              "observation": "No caption is visible, matching the empty expected caption list."
+            },
+            {
+              "time": 255.52,
+              "observation": "No caption is visible, matching the empty expected caption list."
+            },
+            {
+              "time": 259.0,
+              "observation": "No caption is visible, matching the empty expected caption list. The other supplied caption-free samples likewise show no unexpected caption text."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied sampled images, not unseen intervals or the unsampled endpoint at 259.48 seconds.",
+            "Most samples show lower-frame crops rather than full frames.",
+            "Only one caption cue is present in these samples; simultaneous-caption layout is not demonstrated.",
+            "No audio, acoustic speaker identity, translation, or audio/text agreement was assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 12.40535593032837
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 240.0,
+              "observation": "Rendered caption reads \"A: Yes\", matching the expected text and speaker label. The text is legible, fully within the image, and not clipped or overlapped by another caption."
+            },
+            {
+              "time": 240.08,
+              "observation": "Rendered caption again reads \"A: Yes\", matching the expected active cue, with no visible clipping or caption collision."
+            },
+            {
+              "time": 240.48,
+              "observation": "No caption is visible, matching the empty expected cue list after the cue ends."
+            },
+            {
+              "time": 243.52,
+              "observation": "No caption is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 247.52,
+              "observation": "No caption is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 251.52,
+              "observation": "No caption is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 255.52,
+              "observation": "No caption is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 259.0,
+              "observation": "No caption is visible, matching the empty expected cue list. The other supplied caption-free samples likewise show no unexpected subtitle text."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples, not unseen frames or the unsampled remainder through 259.48 seconds.",
+            "Only one caption is active in the supplied samples; simultaneous-caption layout is not exercised.",
+            "Most samples show lower-frame crops rather than full frames.",
+            "No audio, acoustic speaker identity, translation quality, or audio/text agreement was assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 13.723292827606201
+        }
+      ]
+    }
+  ]
+}
