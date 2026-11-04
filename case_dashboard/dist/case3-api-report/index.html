@@ -3,8 +3,7 @@
 <a href="../index.html#task-03/results">← 返回 Case3 看板</a>
 <header><div class="eyebrow">CASE3 / RESOLVE FREE / NATIVE API PILOT</div><h1>原生 API 已跑通，画面质量单独计分</h1><p>2026-11-03 · gpt-6.1-sol · high · 独立作答 94.1 分钟（上限 120 分钟）</p>
 <div class="metrics"><article>正式质量分（参考 ALE）<strong>50.9294 / 100</strong></article><article>计分口径<strong>已正式采用</strong></article><article>工程重放<strong>逐像素一致</strong></article></div>
-<p class="notice">按用户2026-11-04决定，本轮现有ALE方式质量分正式计入OmniALE，公式与数值不变；不是ALE官方成绩，不宣称额外校准完成，不设自动及格线。正式质量分与交付、软件、语义合规分别报告。本轮部署验证期间修正了请求等待超时和重复执行保护，不作为严格冻结环境下的模型能力对比；正式分描述这次冻结成片，运行环境与重试事实仍完整保留。</p>
-<p>内部 Lua 桥接启动后，agent 通过文件队列直接调用 Resolve 原生 API。此次编辑、导出和渲染均未使用 GUI computer use。公开输入视频保持不变；隐藏参考只供评测端使用。</p></header>
+</header>
 <section><h2>运行轨迹与计分决定</h2><p><a class="button" href="trajectory.html">查看完整工具运行轨迹</a><a class="button" href="trajectory.json">下载轨迹 JSON</a><a class="button" href="score_adoption.json">正式计分决定</a></p><p>轨迹按真实完成事件排序，包含命令、输出、退出状态与原生 API 操作统计；不包含凭据、原始模型 API 请求或内部推理。旧试次因基础设施上传超时终止，本轮重新开始；运行中超时与重复执行保护修正保留在公开 JSON 的 experiment_environment 中。</p></section><section><h2>分怎么扣</h2><p>两段各抽取 5 个固定隐藏样本。每个样本先过“输入相似度”和三项视觉清单门槛，再计算 30% 全画面边缘 IoU + 70% 目标区域边缘 IoU；两段等权，总分 100。</p><p>本次正式质量失分 <b>49.0706</b>。下面三项互斥归因，不把同一失败同时按门槛和边缘重复扣分。全片语义审查用于协议合规，不额外改变这项质量分。</p><p>边缘分低表示轮廓与参考不一致，不能单凭此分数判断是缺胳膊、漏背景还是发丝质量；具体问题以输入/输出对比和逐帧复核证据为准。</p></section>
 <section><h2>关键错误 · 可直接回看</h2><ul><li>片段 1：0.20–0.36 秒，脸旁保留了灰色矩形残留；独立裁判将其列为竖状干扰残留。</li><li>片段 2：3.04–3.16 秒，孩子原本可见的小腿被误删，鞋部与腿部断开。这已超过普通发丝软边误差。</li></ul><p>两段的全部计分样本均通过基础门槛。本轮数值失分来自边缘 IoU；下列全片语义问题另行记录，不从正式质量分中重复扣分。</p><img style="width:100%;height:auto" src="judge_issue_examples.png" alt="灰色矩形残留和孩子小腿误删的输入输出对比"></section>
 <section><h2>片段 1 · 31.7242 / 50</h2>
