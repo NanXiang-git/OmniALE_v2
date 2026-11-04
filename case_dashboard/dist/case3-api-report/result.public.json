@@ -12,14 +12,25 @@
     }
   ],
   "raw_score": 50.929378463968455,
-  "formal_score": null,
+  "formal_score": 50.929378463968455,
   "accepted": null,
   "delivery_valid": true,
   "software_compliant": null,
   "semantic_compliant": false,
   "protocol_compliant": false,
-  "score_status": "provisional_uncalibrated",
+  "score_status": "official_ale_adopted",
   "release_ready": false,
+  "score_policy": "adopted_ale_quality_v1",
+  "score_adoption": {
+    "date": "2026-11-04",
+    "authority": "用户明确要求将现有分数作为本题正式分数，评分参考ALE方式",
+    "policy": "adopted_ale_quality_v1",
+    "formal_score": 50.929378463968455,
+    "formula_changed": false,
+    "rerun": false,
+    "calibration_claimed": false,
+    "scope": "OmniALE本题正式质量分，不是ALE官方成绩；合规独立报告，不新增通过线"
+  },
   "loss_breakdown": [
     {
       "clip_id": "clip_1",
@@ -1019,6 +1030,7 @@
       "scope": "Transport/exactly-once protection only; no answer edits, no operation allowlist, task, score or deadline changes. Empty guard folders will be cleaned after the run."
     },
     "quality_calibration": "not_run",
-    "formal_score": null
+    "formal_score": 50.929378463968455,
+    "score_policy": "adopted_ale_quality_v1"
   }
 }
