@@ -1,5 +1,9 @@
 # OmniALE V2：题面、答卷与评分看板
 
+## Case3 Luna 追加试次（2026-11-04）
+
+[查看同题模型结果](https://nanxiang-git.github.io/OmniALE_v2/case_dashboard/dist/index.html#task-03/results) · [Luna 成片、关键失分与边界](https://nanxiang-git.github.io/OmniALE_v2/case_dashboard/dist/case3-luna-report/index.html)。gpt-6-luna / high 不限时，实际作答25.98分钟，质量原始分9.5955/100（第一段6.0140/50，第二段3.5815/50），正式分待校准。10个评分样本基础门槛均通过，90.4045分损失来自边缘不匹配。报告包含实际错误帧、完整语义复核、工程及依赖素材下载。全片语义未通过；工程可导入，但独立重渲染未完成，线性光合成待核实。Sol 原有质量分及运行轨迹保留；两轮时间预算不同。
+
 **在线看板：https://nanxiang-git.github.io/OmniALE_v2/**
 
 **当前为轻量展示版。** 题面、答卷索引与评分记录完整保留，超过 5 分钟的输入视频仅预览前 5 分钟，部分大原件不上传。时间轴超出预览范围的事件可读记录，无法在截短预览中播放。详细范围见 `lightweight.html`，文件可用性以 `asset-manifest.json` 的 `availability` 为准。

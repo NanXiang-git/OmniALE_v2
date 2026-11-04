@@ -157,7 +157,7 @@
   function renderResults() {
     const c=state.current, panel=document.querySelector('#detail-panel'), result=resultData[c.resultKey];
     if (c.experimentReport && safeArtifactUrl(c.experimentReport)) {
-      panel.innerHTML = `<div class="result-empty"><h2>Resolve 原生 API 实验已完成</h2><p>正式质量分（参考 ALE）：${Number(c.formalScore).toFixed(4)} / 100。已正式采用；软件、交付和全片语义合规单独报告。</p><p>报告包含完整工具运行轨迹、两段输入/输出视频、扣分计算、灰色矩形残留与小腿误删分析、独立工程复验及完整冻结交付下载。</p><a class="button primary" href="${esc(c.experimentReport)}">查看本轮成片与评分明细 ↗</a><p>旧版 RGBA 题使用不同交付合同，成绩不与本轮混用。</p><button class="button" id="show-previous-result">查看旧版 v2 历史答卷与成绩</button></div><div id="previous-result"></div>`;
+      panel.innerHTML = `<div class="result-empty"><h2>Resolve 原生 API 实验已完成</h2><p>正式质量分（参考 ALE）：${Number(c.formalScore).toFixed(4)} / 100。已正式采用；软件、交付和全片语义合规单独报告。</p><p>报告包含完整工具运行轨迹、两段输入/输出视频、扣分计算、灰色矩形残留与小腿误删分析、独立工程复验及完整冻结交付下载。</p><a class="button primary" href="${esc(c.experimentReport)}">查看本轮成片与评分明细 ↗</a><section class="side-panel" data-luna-report><h2>Luna / high · 不限时试次</h2><p><b>质量原始分 9.5955 / 100</b> · 实际作答 25.98 分钟；正式分待校准。</p><p>第一段 6.0140/50，第二段 3.5815/50。主要失分：背景与路人残留、目标人物误删；10个样本基础门槛全部通过，90.4045分损失来自边缘不匹配。</p><p>全片语义未通过；工程能导入，但独立重渲染未完成、线性光合成未确证。两轮时间预算不同，不作为严格等预算对照。</p><a class="button primary" href="case3-luna-report/index.html">查看 Luna 成片、关键失分与边界 ↗</a></section><p>旧版 RGBA 题使用不同交付合同，成绩不与本轮混用。</p><button class="button" id="show-previous-result">查看旧版 v2 历史答卷与成绩</button></div><div id="previous-result"></div>`;
       panel.querySelector('#show-previous-result').addEventListener('click', () => {
         window.OmniResults.render(c,resultData[c.previousResultKey],panel.querySelector('#previous-result'));
         wireMediaErrors(panel);

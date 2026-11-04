@@ -1,0 +1,662 @@
+{
+  "version": "case3-resolve-green-v3.1-draft",
+  "packet_id": "b1ae50fb0d8c770ce8f0e228572ecfc3de3532264be6313f23982f7f7f6fbc3d",
+  "clips": [
+    {
+      "clip_id": "clip_1",
+      "score_0_1": 0.120280272328005
+    },
+    {
+      "clip_id": "clip_2",
+      "score_0_1": 0.0716292380131844
+    }
+  ],
+  "raw_score": 9.595475517059471,
+  "formal_score": null,
+  "accepted": null,
+  "delivery_valid": true,
+  "software_compliant": null,
+  "semantic_compliant": false,
+  "protocol_compliant": false,
+  "score_status": "provisional_uncalibrated",
+  "release_ready": false,
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "budget_minutes": null,
+  "elapsed_minutes": 25.9758682290713,
+  "loss_breakdown": [
+    {
+      "clip_id": "clip_1",
+      "points": 6.01401361640025,
+      "gate_loss": 0,
+      "full_edge_loss": 13.303717478497894,
+      "roi_edge_loss": 30.682268905101857
+    },
+    {
+      "clip_id": "clip_2",
+      "points": 3.5814619006592197,
+      "gate_loss": 0,
+      "full_edge_loss": 13.980447970918073,
+      "roi_edge_loss": 32.43809012842271
+    }
+  ],
+  "semantic_checks": [
+    {
+      "clip_id": "clip_1",
+      "checks": {
+        "target_identity": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐帧查看000–009：输出均保留身份图中的戴眼镜、深色长发、浅色上衣女性，面部、眼镜、发型及上半身与各帧输入对应，未见其他人物替代。005–008下巴下缘的局部缺失属于遮罩问题，不作为身份错误。\n[10,20): 逐行核对第10–19帧：输出均保留身份图中的同一位女性，黑框眼镜、长直棕发、面部特征及浅色上衣与各帧输入对应，未见其他人物或身份替换。第10–18帧下颌附近有绿色缺口，头发左侧有背景残留，属于抠像缺陷，不据此判为身份错误。本结论仅覆盖这十帧。\n[20,30): 逐行核对第20–29帧：输出中均仅有身份图所示的长棕发、深色眼镜、浅粉色上衣女性，其面部、眼镜、发型及上身与对应输入一致，未见其他人物或身份替换。头发及衣物轮廓的抠像缺损不作为身份错误。\n[30,40): 逐行检查第30–39帧的输入与输出，并与身份图对照：输出中的人物均为目标女性，深色长直发、深框眼镜、面部特征及浅色上衣一致，未见其他人物替代。此判断仅覆盖所供十帧，不把遮挡处理或轮廓误差直接判为身份错误。\n[40,50): 逐行检查帧40–49：输出中的女性均与身份图及对应输入中的目标一致，黑框眼镜、面部、棕色长发、浅粉色领口和上身得到保留。帧40–42竖条遮挡部分脸侧、头发及上身，但其余可见特征仍对应目标女性；帧43–49仍为同一目标，未见其他人物替代。此结论仅覆盖所给十帧。\n[50,60): 逐行核对第50–54、55–59帧：输出均保留身份图中的长棕发、深色眼镜、浅色上衣女性，其面部、发型、颈部、双肩及画内躯干与各帧输入对应；未见目标被其他人物替换或增加其他人物。头发和左肩外侧的背景残留不构成身份错误。结论仅适用于所供第50–59帧。\n[60,70): 逐行核对第60–64帧及第65–69帧：输出均保留身份图中的长直深发、戴眼镜、穿浅色上衣的女性；脸部、眼镜、发型及胸前衣领与对应输入一致。十帧均未见换人或加入另一人物。肩部遮挡处理问题另记于visible_only，不据此判为身份错误。\n[70,80): 逐行查看第70–79帧：输出保留身份图中的目标女性，眼镜、脸部五官、长棕发及浅色上衣均可辨认，未见另一人物替代目标。右侧头发、颈肩轮廓存在缺损，但这些缺损本身不作为身份错误。此结论仅覆盖所提供的十帧。\n[80,90): 逐行检查第80–89帧：输出中女性的脸型、眼镜、长直棕发和浅色上衣均与身份图及对应输入中的目标女性一致，未见换成另一名女性。身体区域存在明显抠除缺损，但不能仅据此认定目标身份错误。本结论仅覆盖这十帧。\n[90,100): 逐行检查第90—99帧：输出中的长发、眼镜和浅色上衣女性与身份图一致，但并非仅保留该女性。第90—94帧，女性颈部及胸前左侧仍有蓝衣男子的灰发、面部和胡须；第95帧男子面部虽出现绿色孔洞，仍有可辨认残留；第96—99帧仍保留男子头部和面部。因此不满足“仅目标女性”，此判断依据是非目标人物的明确残留，而非普通软边误差。"
+        },
+        "distractor_excluded": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐帧查看000–009的输入及输出：本段输入未见蓝衣男子或作为干扰物的竖条，输出亦未出现这两类干扰物或额外人物。此结论仅覆盖所给十帧。\n[10,20): 逐行检查第10–19帧，输出均未出现蓝衣男子。第16–19帧输入画面最左侧出现并逐渐加宽的深色竖条，在相应输出中被绿色背景替代；第10–15帧也未见输出保留该竖条。女性头发左侧残留的是原场景建筑、桥梁背景，并非该竖条。\n[20,30): 逐行核对第20–29帧：输入画面左侧向右移动的深色竖条，在各帧输出中均未保留；第29帧竖条已触及女性画面左下侧衣物，输出仍未出现该竖条。本范围未见蓝衣男子。输出保留的部分建筑、栏杆背景不属于该竖条。\n[30,40): 第30–39帧输出均保留了深色竖条。第30–32帧可见其残留在女性左侧头发、肩胸旁；第33–39帧竖条继续横跨头发、面部或胸前，尤其第35–39帧保留了大段完整条带，未将该干扰物排除。\n[40,50): 检查帧40–49：帧40–42输出仍保留明显深色竖条，穿过目标画面右侧的脸侧、头发和上身区域；帧43–45右肩及衣袖外侧仍有竖条残留。这些是具有明确面积的遮挡物残留，并非普通软边误差。帧46–49输出未见该竖条；输入帧45–49右边缘出现的蓝衣男子手部和蓝色衣袖在对应输出中未见保留。\n[50,60): 逐行核对第50–59帧：输入右侧蓝衣男子逐渐显露的抬起手掌、蓝色衣袖、头脸和躯干，在对应输出中均未保留。第50–56帧输入右上方可见的深色斜竖条也未出现在输出中；第57–59帧输出同样未见该竖条残留。\n[60,70): 逐行核对第60–69帧：输入中女性画面右侧的蓝衣男子持续举臂并改变位置；对应输出均未保留其灰发、脸部、举起的手掌、蓝色袖子或躯干。女性周围为绿色背景，十帧均未见该男子的可辨认部分。\n[70,80): 已查看第70–79帧。第70–71帧未见明确的蓝衣男子残留；第72帧起，输出中女性画面右侧头发边缘出现蓝色残片；第73–79帧该处还保留男子的肤色手部和蓝色袖口，第77–79帧尤其清楚。这些是干扰人物的手和衣袖，不能归为女性头发的普通软边误差。\n[80,90): 第80–89帧均未完全排除蓝衣男子：输出在女性下巴或面部左下方保留了男子的拳头，部分帧还保留蓝色袖口。第82帧开始，女性画面右侧的头发、颈肩附近出现男子头部残片；第83–89帧可明确看到男子的灰发、额头、眼睛或胡须。这些是可辨认的干扰人物部位，并非普通软边误差。\n[90,100): 第90—99帧均未完全排除蓝衣男子：每帧输出在女性左侧颈胸附近保留男子头部或面部。第90—94帧还可见输出左上侧残留的抬高手掌及蓝色袖口；第95帧男子脸部被局部挖空，但其余面部仍在；第96—99帧仍能辨认男子的灰发、额头、眼鼻及胡须区域。男子躯干大部分变绿并不足以证明其已被排除。"
+        },
+        "visible_only": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐帧对照000–009：女性头部、头发及上半身的位置变化总体随输入变化，未见整段静帧替代或另造人物，也未见补全被遮挡肢体。但005、006、007、008的输出在下巴下缘至上颈部出现明确的绿色缺口，对应输入处为连续可见的下巴及颈部，没有遮挡物；这些帧的身体显露范围与原片不对应。000–004及009未见同样的下巴缺口。\n[10,20): 逐行对照第10–19帧，输出保留的脸部、眼镜、头发、肩臂和上衣均可在对应输入帧中找到，人物细微位置及表情变化与输入相符，未见静帧或另造人物替代。第16–19帧竖条尚未遮到女性，输出未增加被其遮挡的身体部分；画面下缘外的身体也未被补出。第10–18帧下颌绿色缺口及各帧发侧背景残留是抠像缺陷，未显示遮挡补全。本结论仅覆盖第10–19帧。\n[20,30): 已逐行比较第20–29帧。第20–28帧未见明确补全遮挡部位的证据；第29帧输入中，深色竖条遮住女性画面左下侧、接近底边的一小段浅粉色上衣，输出对应位置却呈现连续的浅粉色衣物并恢复了左侧轮廓，保留了原帧中被竖条遮挡的部分。此处属于遮挡对应错误，而非普通软边误差。\n[30,40): 已逐行对照第30–39帧。第38–39帧可明确看到面部显露区域与当帧输入不对应：输入中画面左侧的眼镜镜片及左侧脸部露在竖条左边，画面右侧镜片和脸部受到竖条遮挡；输出却将左侧面部遮住，并在竖条右边露出右侧镜片及部分脸部。该差异涉及眼镜和面部内部的遮挡关系，不能用普通软边误差解释，未满足显露部分与原帧对应的要求。\n[40,50): 逐帧对照帧40–49的输入与输出：目标面部、眼镜、长发、领口及可见上身均能对应原帧。帧40–45的竖条遮挡区域未见被补成完整脸部、头发或衣袖；帧46–49竖条移开后，目标右侧肩部和衣袖的显露与输入对应。十帧之间目标随原片变化，未见静帧或另造人物替代。竖条残留另记于distractor_excluded。\n[50,60): 逐行对照第50–54、55–59帧：女性可见的脸部、眼镜、长发、领口、肩臂及躯干均与同帧输入对应，细微位置及轮廓变化也保持对应，未见用固定静帧或另造人物替代。此区间蓝衣男子及竖条未遮住女性主体，输出未见凭空补出的被遮挡肢体，也未将画面下缘之外的身体补入。头发左侧和左肩旁可见背景残留，但不属于遮挡补全。\n[60,70): 已逐行对照第60–69帧。第60–64帧，男子的蓝色手臂与女性画面右侧肩部交叠，输出在部分原本为蓝袖的交叠位置仍呈现浅色肩袖。第65–69帧更明显：蓝色前臂及肘部遮住女性右侧发梢邻近的肩头、上臂区域，输出却保留一段连续的浅色肩部斜面，未严格按输入中的可见部分截断。该问题涉及遮挡区域的衣物补出，超过普通软边误差。\n[70,80): 逐行对照第70–79帧输入与输出。第75–79帧，输入中男子弯曲的蓝袖前臂遮住女性部分颈部及上胸，输出却在相应位置保留连续的女性皮肤或浅色上衣。例如第76帧，输入中女性下颌下方偏画面左侧的颈部被蓝袖覆盖，输出对应位置仍显示颈部皮肤；第77–79帧亦有同类遮挡对应不一致。因输出显示了输入中被遮挡的目标部位，不满足仅保留当帧可见部分的要求。\n[80,90): 核对第80–89帧的输入与输出，显露及遮挡区域未保持对应。第80–84帧，输出残留的拳头比对应输入中的拳头更靠近女性下巴中央，周围绿色遮挡轮廓也与输入中的蓝色前臂位置不一致。第85–89帧，输入中男子的拳头及前臂向画面左侧抬起，输出却仍在女性脸颊或下巴左下方保留手部残片；同时，女性在输入中清楚可见的右肩、浅色衣袖及部分胸前区域被大片绿色切除。该问题涉及具体身体区域与逐帧遮挡对应关系，超出轻微软边误差。\n[90,100): 逐帧对照第90—99帧输入与输出：输出保留的女性眼镜、面部、长发、领口及浅色衣服均对应同帧输入中实际可见的部位；随帧变化的头部位置、发丝和衣领位置也与对应输入一致。男子遮挡女性的区域主要被置绿或残留男子原始像素，未见把遮挡后的女性身体补画出来；未见以静帧或另造人物替代。此结论仅覆盖第90—99帧，不表示人物提取完整或干扰者已排除。"
+        }
+      }
+    },
+    {
+      "clip_id": "clip_2",
+      "checks": {
+        "target_identity": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐行核对帧000–009及身份图。帧000–001中，白裙女孩和白衬衫深裙成年女性均保留，成年女性的头脸、举起的手及手机可见。帧002–009中，女孩持续保留，但成年女性原片中清楚可见的大部分头脸、举手机的手臂及手机被绿色区域截去；帧003–009的鞋脚也有明显缺失。成年女性的躯干和裙子仍可辨认，但目标人物的重要部位未持续保留，缺失范围明显超过普通软边误差。\n[10,20): 已逐行核对第10—19帧及身份图。输出中仍有女孩和成年女性的身体，但第10—19帧成年女性在原片中可见的头发及大部分头面部被大片绿色切除，只留下局部面部碎片；持手机一侧的前臂、手及手机所在区域也明显缺失。这是目标关键部位的大面积缺失，超出普通软边误差，不能判定两名目标均得到保留。\n[20,30): 逐行核对第20–29帧及身份图：输出仍可见成年女性的白上衣、深色裙子和女孩的白裙，但两名目标均有大面积可见身体缺失。第20–21帧成年女性在输入中完整可见的头脸，在输出中几乎全部被绿色挖空；第22–26帧头脸继续严重缺失，靠女孩一侧的肩臂和胸前还出现大块绿色缺口。第27–29帧仍仅保留成年女性少量脸部碎片。第20–29帧女孩的头脸、手臂及腿部也持续存在明显缺失。这些涉及身份部位和肢体的大面积删除，不是普通软边误差。\n[30,40): 已逐行核对第30—39帧的输入与实际输出，并对照身份图中的成年女性和女孩。第30—32帧，两名目标均未完整保留：女孩的头部、躯干及腿部大片区域呈现枝叶背景，成年女性的头部、白衣上身和腿部也有大面积缺失。第33—35帧，这种缺失持续，左侧女孩形区域逐渐被深色竖条占据，右侧成年女性形区域主要呈现背景。第36—39帧，女孩的脸、白裙和腿出现在右侧区域，而原片中成年女性清晰可见的脸、白衣及深色裙身未得到对应保留。上述是目标身体大面积丢失及内容错位，不是普通软边误差。\n[40,50): 逐行核对了第40—49帧及身份图。第40—42帧，输出仅保留女孩脸部、白裙和腿部的部分区域，目标成年女性在输入中可见的脸、白色上衣、深色裙及双腿未得到对应保留。第43—45帧，女孩的头部与上身进一步大面积缺失，成年女性仍基本缺失。第46—49帧，输入中竖条两侧可见的女孩白裙、腿脚和成年女性上衣、裙腿，在输出中仍严重缺失，仅有零散残片；第49帧右侧虽保留部分女性衣裙，也未同时保留两名目标。这些是主体部位的大面积遗漏，非普通软边误差。\n[50,60): 逐行核对第50–59帧，两名目标均未完整保留。第50–54帧，女孩原片可见的脸、白裙和腿部在输出中大面积缺失，身体轮廓内主要呈现植物纹理；成年女性只剩零散衣裙、腿脚片段，头脸和上身未得到对应保留。第55–59帧，原片中成年女性的脸、白色上衣及女孩的脸、白裙仍清晰可见，输出却持续缺失这些主要身份部位。第59帧虽出现较多白衣和深色裙片，仍没有对应保留两人的脸和完整可见身体。这是主体部位的大面积缺失，并非普通软边误差。\n[60,70): 逐行检查第60—69帧输入与输出，并与身份图中的成年女性和女孩核对。两名目标均未被完整保留：第60—62帧女孩的脸、白裙及身体大块区域被抠除，残留轮廓内可见树枝、草地；成年女性的面部和白色上衣也有大面积缺失。第63—69帧这些问题持续，成年女性头脸大部消失，女孩头脸、躯干及腿部残缺。属于目标主体部位丢失，不是普通软边误差。\n[70,80): 逐行核对了70—79帧及身份图。两名目标仍有可辨认的局部，但成年女性存在大面积主体缺失：70—72帧头面部、上衣被绿色区域切断，裙装仅剩局部；73—76帧原片可见的裙身、腿脚在输出中大面积消失；77—79帧仍只保留部分面部和上身，原片可见的下身未被保留。女孩在70—79帧保留部分头部、白裙和腿脚，但也有明显缺口。这些是身体主要区域缺失，超出普通软边误差，不能判定两名目标均完整保留。\n[80,90): 已逐行检查80–89帧。80–84帧中，原片成年女性可见的头脸、白色上衣和深色裙身在输出中大面积缺失，仅剩零散衣物碎片；女孩虽保留部分头脸和腿脚，白裙及身体也严重缺失。85–89帧仍未恢复两名目标：成年女性头脸持续被绿底抹除，女孩只剩部分脸、衣物等碎片，腿脚进一步消失。这是目标主体的大面积漏保留，并非普通软边误差。\n[90,100): 逐行检查90—94帧及95—99帧：输入中的成年女性和女孩均有清楚可见的头脸及身体部分，但输出未保留两人的可辨认形象。90—99帧中，成年女性的头脸、女孩的头脸和白裙主体大面积被绿色清除，仅留下部分白色衣袖、深色裙装等碎片；98—99帧仍只有局部裙装和腿部残片。这是目标主体的大面积缺失，不是普通软边误差。"
+        },
+        "distractor_excluded": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐行回看帧000–009的输入与输出。十帧输出均未见蓝衣男子或独立竖条状干扰物残留；两名目标人物周围的天空、草木和枝条背景均被绿色背景替换。此结论仅适用于所提供的帧000–009。\n[10,20): 已逐行检查第10—19帧输出的主体周围及左右边界，未见竖条或其他非目标人物残留。第16—19帧原片左边缘出现的棕灰色竖条，在对应输出中均未保留，该区域为绿色。所供第10—19帧原片未见蓝衣男子，此处结论仅适用于这十帧可见内容。\n[20,30): 逐行回看第20–29帧：输入画面左侧均有贯穿画面高度的深色斜竖条；对应输出中该竖条均未保留，相关区域为绿色。十帧输出中也均未见蓝衣男子。此结论仅覆盖所提供的第20–29帧。\n[30,40): 已检查第30—39帧。第33帧输出左侧人形的躯干和腿部可见深色竖条残留；第34—39帧，原片中的深色竖条大面积进入左侧人形区域，覆盖头部、躯干及腿部，其中第35—39帧尤其明显。因此竖条未被排除。本区间未见蓝衣男子，不能据此评价其他区间。\n[40,50): 逐行核对了第40—49帧。第40—44帧，输出上部保留明显的深褐色竖条碎片，其颜色及位置对应输入中的遮挡竖条；第45—49帧，上部仍持续保留该竖条的深褐色片段，未将竖条完整排除。第45—49帧输入右侧出现的蓝衣男子，其蓝色衣袖和抬起的手在输出中未见明显保留，但竖条残留已使本项不通过。\n[50,60): 已检查第50–59帧。第50–54帧输出右侧仍有明显深褐色竖条残留，其中第50–52帧为较长的连续竖向区域，第53–54帧上段仍清楚可见。第52–57帧，输出右侧衣裙残片附近还保留了蓝衣男子举起手掌的肤色片段，第53–56帧尤为明显。男子的蓝色躯干和脸大体被去除，但竖条及手掌残留已使排除要求不成立；第58–59帧未见同样明确的连续竖条，不据此推断这两帧存在相同问题。\n[60,70): 检查范围为第60—69帧。蓝衣男子的头部及大部分蓝色躯干已被去除，但第66—69帧成年女性深色裙子左侧、腰部附近仍残留男子抬起的肉色手掌，与对应输入中男子举手的位置和形状相符，说明干扰人物未被完全排除。\n[70,80): 已回看70—79帧。73帧输出右侧残片下缘开始出现前景男子的头部皮肤残留；74—76帧可见其灰发、额头及部分面部；77—79帧该残片中保留的男子眉眼、鼻部等面部区域更明显。对应原片中的蓝衣男子，属于非目标人物残留，不能因蓝色衣身大部分已被去除而判定排除成功。\n[80,90): 已逐行检查80–89帧。80–84帧输出中央偏右明确残留蓝衣男子的额头、眼睛或脸部；85–86帧仍有其脸部碎片。82–89帧女孩脸下方、目标女性裙身旁还残留男子举起的手部，87–89帧尤其可见粉色手掌或手指。因此蓝衣男子未被完全排除；此判断依据其具体身体部位，而非目标轮廓的软边。\n[90,100): 逐行检查90—99帧，输出均残留输入中蓝衣男子的头脸。90—94帧可见灰发、额头、眼鼻及部分胡须；95帧脸部虽被绿色进一步切断，仍有可辨认的面部残片；96—99帧继续保留额头、眼鼻或侧脸。蓝色上衣大部分已清除，但男子头脸未被排除。"
+        },
+        "visible_only": {
+          "pass": false,
+          "frame_ranges": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              20
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              40
+            ],
+            [
+              40,
+              50
+            ],
+            [
+              50,
+              60
+            ],
+            [
+              60,
+              70
+            ],
+            [
+              70,
+              80
+            ],
+            [
+              80,
+              90
+            ],
+            [
+              90,
+              100
+            ]
+          ],
+          "evidence": "[0,10): 逐行比较帧000–009的显露情况。帧000–001中，两人的可见身体部位与输入基本对应。帧002–009中，输入里的成年女性头脸和举手机的手臂仍清楚可见，输出相应位置却出现大块绿色缺口；帧003–009中，输入可见的白鞋和脚部也被明显截去。因此输出的显露范围与原片不对应。这些是原片可见部位被误删，并非原片遮挡造成；未据此推断存在遮挡补全或另造人物。\n[10,20): 已对照第10—19帧原片与输出，存在目标可见姿态不对应的问题。尤其第15—19帧，原片女孩的双臂向身体两侧伸展，画面右侧的手臂逐渐向成年女性方向抬起；输出中相应手臂却持续呈贴近身体、向下垂落的形态，未随原片姿态对应变化。第16—18帧输出女孩画面左侧腰部还出现明显绿色圆弧缺口。上述手臂姿态差异涉及整段肢体，不能仅解释为软边误差，不符合显露部分须与对应原片一致的要求。\n[20,30): 逐行对照第20–29帧，输出显露内容与同帧输入中的目标可见部位不对应：女孩画面左侧头部及腿部附近持续保留明显的枝叶、花穗背景纹理，而输入对应目标位置可见的是头脸或裸露腿部；成年女性靠女孩一侧的肩臂附近也残留植被。第22–26帧女孩画面左侧腰部和成年女性靠女孩一侧的胸臂区域出现大块绿色圆形缺口，输入同帧这些位置并无对应遮挡；第27–29帧头脸缺失及植被混入仍持续存在。未见足以认定另造人物或静帧替代的证据，但上述可见内容对应错误已不满足本项要求。\n[30,40): 已逐帧比较第30—39帧。第30—32帧，输出在人形内部保留大片原片背景枝叶，同时删除原片中实际可见的目标脸部、衣服和肢体，保留区域与当帧人物可见部位不对应。第33—35帧，左侧人形内部出现竖条，右侧成年女性的上身及腿部区域大量呈现背景。第36—39帧，女孩的脸和白裙进入右侧成年女性形区域，左侧区域则保留竖条与枝叶；原片中成年女性仍清晰可见，却未在输出中对应显露。可直接确认显露内容与原片当帧不对应；不据此额外推断遮挡补全或另造人物。\n[40,50): 逐行对照了第40—49帧的输入与实际输出。第40—44帧，输出在真实女孩左侧保留另一组头、躯干、手臂和双腿轮廓，其中可见的是花枝、草地等背景纹理；对应输入位置并无目标人物的这些身体部位。第45—49帧，这组背景纹理的人形区域仍持续存在，而真实女孩位于其右侧、竖条附近。输出的人物状保留区域因此未与原片当帧可见的人体对应；此判断依据大面积背景被保留成人形及真实人体缺失，不是依据轻微边缘误差，也不需要推断是否进行了遮挡补全。\n[50,60): 逐行对照第50–59帧，输出显露内容与各帧原片不对应。第50–54帧，女孩原本可见的白裙及身体位置在输出中成为含树枝、花苞的区域，右侧还显露原片中的遮挡竖条。第55–58帧，女孩躯干轮廓内部持续显示植物纹理，成年女性可见的头脸、上衣和腿部则被切成相互分离的片段。第59帧，女孩胸腹处出现大块绿色孔洞及植物纹理，成年女性头脸仍缺失，输出的白衣残片也未对应保留原片可见上身。上述为主体区域的内容对应错误，超出轻微边缘误差；本结论仅覆盖第50–59帧。\n[60,70): 逐行对照第60—69帧，输出显露内容与原片可见目标部位不对应。第60—64帧女孩原本清楚可见的脸、白裙和腿部，在输出相应人形区域内出现大片树枝、天空或草地纹理；第65—69帧仍可见类似错位，成年女性头脸和上衣区域也被大块切除，部分轮廓内保留了背景。这不是仅沿人物边缘的轻微误差。此结论依据显露内容不对应，不据此推断存在静帧或遮挡部分补全。\n[70,80): 逐帧对照70、71、72、73、74、75、76、77、78、79帧，输出中尚存的女性面部、白色上衣及女孩头部、白裙等影像片段均能对应到同帧原片。70—74帧到75—79帧，这些片段随原片人物的位置和姿态变化，未见用同一静帧替代。成年女性被前景男子遮挡的区域未出现补造的完整肢体，也未见另造人物。此项仅确认可见影像来源及未补全遮挡部分；大面积漏保留和男子残留分别记录于另外两项。\n[80,90): 逐行回看80–89帧，输出中残留的女孩头脸、女性衣袖和裙片，以及80–86帧的零散腿脚，均可在相应输入帧找到来源；这些碎片随输入逐帧变化。男子遮住目标的区域未见被补成完整目标身体，也未见以静帧或另造人物替代。上述结论仅适用于本次提供的80–89帧；目标大量缺失及男子残留已分别在另外两项记录。\n[90,100): 逐行对照90—94帧及95—99帧：输出残留的白色衣袖、深色裙装、局部腿部、男子脸部及树枝背景碎片，均能在同帧输入的相应位置找到。男子面部及背景纹理随各帧输入变化，98—99帧的裙装和腿部残片也对应当帧输入；未见补出被男子遮挡的目标身体、使用静帧或另造人物替代。此项仅确认90—99帧的显露内容来源对应；目标漏失和干扰人物残留已分别记录。"
+        }
+      }
+    }
+  ],
+  "software_observation": {
+    "reviewer": "Independent host audit through native API",
+    "output_sha256": {
+      "output_1.mp4": "5534b98fc7bda5a9306f593ae6bab93c950209b294776a7f9c8909765b2141e4",
+      "output_2.mp4": "af7d673bbf77f398c6fcc95c66a52da7cb9697454110b7735541321b5aa40e6d",
+      "submission.json": "61b7fc4840c16f6b11e070df8045da846a52d23f3cfb86b4c78f3f03a20d3de9",
+      "report.json": "b49fef5e38c922b92b2353cbd6821dea48a8b80f68ffbec5a5ca9297cc162cea",
+      "project.drp": "1ff934ec93915c3b6b45a58ad8a33efa36a23ea0eaf29237430da309db0991a5",
+      "README.md": "a2c6d083b685f2ff09a840217ee1ffb44d3a6945f258fd5f257b9506fcac46c9",
+      "assets/clip_1_rgba/0000.png": "511d3eb1dadc727255935b0490c5907b1229bed12f1b33bf543f9f70bfcd4864",
+      "assets/clip_1_rgba/0001.png": "49b7ce23752484b09cf81deed731f4a2baa9f48e601991ae98deaf8e0222519a",
+      "assets/clip_1_rgba/0002.png": "7297de68bf6b5e21baa429f10a0cb171821d9d592c20f3b3405ea0e76dceda6d",
+      "assets/clip_1_rgba/0003.png": "23f69019081e273555f5c715aee3dbb0eabfd316a35e8aa2f593801759caab7b",
+      "assets/clip_1_rgba/0004.png": "38121bec5dcb3681f7e00bfd5efa8530ec66dd6c1a3587d9babfd6cab6512d8a",
+      "assets/clip_1_rgba/0005.png": "b20064c31f775a2bab8c6087b4dd0c774efc493ffeb420eaa4d840d2aa92b60f",
+      "assets/clip_1_rgba/0006.png": "0e755328c5e17aab613914724e99b3b26d4fb4a83d501827c111ae3e87408720",
+      "assets/clip_1_rgba/0007.png": "322747ada130e3d6aa140c5b20e35f2b7b9ad9f06da4c76ae826bc4e3c9e73b1",
+      "assets/clip_1_rgba/0008.png": "2c960712f080fb1be3ce1eb97a1790eaf1e0713271fd669b0c0af53828cc105c",
+      "assets/clip_1_rgba/0009.png": "aba354570e84c5799bb7e883b2b3c59e8d5e5ec2d47a765ef62691883a0ceb92",
+      "assets/clip_1_rgba/0010.png": "1171b88e09347a7c270c573b2f8d44fa44af8d20ccf66bc4f70312d730485f3b",
+      "assets/clip_1_rgba/0011.png": "f14d214767dcc9b6d633af5f50e88cacb594375a96d3045f45c8d6085ee51052",
+      "assets/clip_1_rgba/0012.png": "7d332ae69383d766e9f5b2d2a596f5a58decee8f00462e11191dde7af7740359",
+      "assets/clip_1_rgba/0013.png": "be58ea79d2337dedab1a30fd29729b624f9551b33d900e7a4ed5b432b30e27b0",
+      "assets/clip_1_rgba/0014.png": "55cbf28692c3e520f2f05f65ea176cbb5cb84e05d840dfa51e9c881e1d80ae50",
+      "assets/clip_1_rgba/0015.png": "55d05c9bbbf687ee1ee9e612e5b1f91c1b948de8d958a68e0a12d7cb23ab44e7",
+      "assets/clip_1_rgba/0016.png": "55a074012bba536c2b7252cf0bb8553f199e599ee8a15db7c31fc6cd4be9a9b3",
+      "assets/clip_1_rgba/0017.png": "38f5451d479bcde87e8b6cdd23901bbdcfdbca932e40dad8c780698aaf896c3a",
+      "assets/clip_1_rgba/0018.png": "a5849fbed548c075df74e9dbba63dd6bc7b6cb53ede657c47c3293cb4183c7be",
+      "assets/clip_1_rgba/0019.png": "8701d90c4daac07fadd6b3a72fd38ae7cb2f4ce94006bf21f00a0159cc9443ac",
+      "assets/clip_1_rgba/0020.png": "f46b175b794df9db16bf9071731e25dd40cdda86297324c4faa648c7ff63af6b",
+      "assets/clip_1_rgba/0021.png": "25ff3a07c86de5c5b7d46e5e02aefb05d01a4c9472abb3646f23c7dcb2b344ee",
+      "assets/clip_1_rgba/0022.png": "fa5195456100b1c3a2a481aa32f9672171a5e3d5b191a8c66b1d971b71bd6a54",
+      "assets/clip_1_rgba/0023.png": "d7a62cd402b36c64c1f330984949b1c883c1c88ecdf5a5c5fad58e07ab63b31d",
+      "assets/clip_1_rgba/0024.png": "847b35b16b04449496486c84239aacfb0b728349c935a4e143b819e18a8fd7e9",
+      "assets/clip_1_rgba/0025.png": "fa40b7c1acf1479de3e85d216d12824b2eaebaf8129d4022f9b0465bd799332f",
+      "assets/clip_1_rgba/0026.png": "b785c5ae4c407860c6191e50b028594f4f453a9cad612a50ab932be7e48ad1b9",
+      "assets/clip_1_rgba/0027.png": "d7bb0f3e5a0999fbeb313a88306cda6c736bf2090495f6c906a5cb4d61ce9f0a",
+      "assets/clip_1_rgba/0028.png": "fe111711dc1f85327581d7f87c7fca2c1839b31aae8260e951be5cd83a54e16f",
+      "assets/clip_1_rgba/0029.png": "0ea767b8e789288a67f3b4b97bc057da6933f81847db5b34bd79b307d294e3df",
+      "assets/clip_1_rgba/0030.png": "36a79b47fc41c02e3c43f99896c550bd85c7e633b45173e5cf4e3e52140fb16a",
+      "assets/clip_1_rgba/0031.png": "0116bb6c6400a55175022867205507589bb3164d84fa790090506ed268176d4b",
+      "assets/clip_1_rgba/0032.png": "35ffd53b1c2541d5aa2b56f6be9c395ebddaff380dc6523ae95f9562f77e3831",
+      "assets/clip_1_rgba/0033.png": "101c722a585cd66be4f6a99a16fbda550a4cc0275f9610e9ef8145e1cfebc4df",
+      "assets/clip_1_rgba/0034.png": "5b8c8ea5c266ac1a7184994f1958a97bb6565907e5d31b87c4ad7a44679744df",
+      "assets/clip_1_rgba/0035.png": "e33e741ba78859652f6e412893f6ecbf424523655d6f3fe0b7de3791493feac3",
+      "assets/clip_1_rgba/0036.png": "7457c4f4d170b9d962169e63d735519d020dc3fe3e0317b8d96053642a1b8af5",
+      "assets/clip_1_rgba/0037.png": "8d7b316356a16b250c2e2f744f645ef8bf87a99a3357410c98dd3c5b583db7fb",
+      "assets/clip_1_rgba/0038.png": "a9d88d9b090e9f8d1af4e9c2fdf8a20ce1b93d60cef27121adf933f4d7df9a03",
+      "assets/clip_1_rgba/0039.png": "4161670f2767fdcf770beae16156ad158f68aca160da8178c90fba89217e6ab7",
+      "assets/clip_1_rgba/0040.png": "11eb01f1d5d45b44f1a9ca541b910e0a6e7b5e17a875e9e313e6a26cb5bb5fbe",
+      "assets/clip_1_rgba/0041.png": "b250edef444a3a58d81fb39c15a192e021bcaa82d14d50a1ada32e776b469eeb",
+      "assets/clip_1_rgba/0042.png": "4514db27f30730726acbd7f408c71391b0fc18a791ca580105c3867f0419a4cf",
+      "assets/clip_1_rgba/0043.png": "f94fab5bde1b13d8d336d1fc29cafe6ba72ee51eec53f8792dfe2cad9de128ae",
+      "assets/clip_1_rgba/0044.png": "df707cc3ad9763bdd514d84acac511c1d6029447bf03cb985961925f6ba4f5fe",
+      "assets/clip_1_rgba/0045.png": "62f6e2f8ff1f1ac9ad26c325f070d7d4c28e6174695713e945fb15623836027c",
+      "assets/clip_1_rgba/0046.png": "42cb91a23263dbe11e1ef9c733ac35aee920b168b8a9cce84a35bb9badd6247e",
+      "assets/clip_1_rgba/0047.png": "a9200aa0e894647f9c819f199f08bc78ac908f1f0857c210fb1ec70d1f1dbe0e",
+      "assets/clip_1_rgba/0048.png": "b396cabf2b77eb5108f0cdab0e37fd724885bb75f12e465749cf92eeb1011013",
+      "assets/clip_1_rgba/0049.png": "8a9411529bcb80bbb05adc06c2fa1d25d4208c0814f3240cc8855631737084d2",
+      "assets/clip_1_rgba/0050.png": "c06ec4d3594c35d3e706d304d3dfa03c0f7551889579d2705cc504821346c62a",
+      "assets/clip_1_rgba/0051.png": "088cfa7d7a571c88b25e6537b91960becc79af92f111592c2aa299f4e17a5c07",
+      "assets/clip_1_rgba/0052.png": "e5cc2600baec59a1729b2955e563f4c97aaf20498c5c23444535af2ad217e621",
+      "assets/clip_1_rgba/0053.png": "9590b38bb1a4eaa3b0ab7171dc7b0af83b4b62321a5383a1e76285b6f40ca31a",
+      "assets/clip_1_rgba/0054.png": "ec507eb4944d4d86491ca84f4f45fd2e4da9b2133dd2d195f785fa4b1a73d72e",
+      "assets/clip_1_rgba/0055.png": "37208d41aaec76e02a58769d386619815cd5997b63c47568494382ad057f351b",
+      "assets/clip_1_rgba/0056.png": "1a178a033c34b02fe41d6a17786c334783b704cd4fa3736c007199d01b9e8e6a",
+      "assets/clip_1_rgba/0057.png": "5f7fa9428d40150437e242799c0f87f9f3dd9e3eeb86e22c3e82dacb272083b2",
+      "assets/clip_1_rgba/0058.png": "21c44f9df006b97bb082e3998e06a37258271a8f0b58cec77649ff3e67253215",
+      "assets/clip_1_rgba/0059.png": "9cba3911a685a2f5e42745ae950fac6a5510ce618463d8031f40a8ef560e7a21",
+      "assets/clip_1_rgba/0060.png": "79609a85bb664590c5d0ce099c55cffdde4fc626b04b8d4eb20eea68660ea9d6",
+      "assets/clip_1_rgba/0061.png": "01c66a30a3f8dcf10c4a58802ca1858bcfd2f9b88469fcc43cd77290e9974f79",
+      "assets/clip_1_rgba/0062.png": "1ab7b037c1894378a890a6a28ea6194a8e142308080741eb395bccef9c3781c4",
+      "assets/clip_1_rgba/0063.png": "20849cbc6f621c5e7cf54f4792f499ddb6ae7964bb49b2227c17b8c79eeaa1ef",
+      "assets/clip_1_rgba/0064.png": "f03951ed01a1af766703a022581e13cfa52e6c526a727680aba792bccf0cb787",
+      "assets/clip_1_rgba/0065.png": "d9db743e3e7d48d9dd91d70f3e8bbc2144bbf1e756151784f92ae26c3e78aa25",
+      "assets/clip_1_rgba/0066.png": "b351bf3518603de090dbfc6978ed71c02d5aeb8ed7e4034f8e0197560205409f",
+      "assets/clip_1_rgba/0067.png": "895a6663faa7697a753f98ed7dad095beeeb05c0c4e2bf54654d8e19f324eb73",
+      "assets/clip_1_rgba/0068.png": "5811c866fa4a1da236398151cdf4f4058b34e2057007ef8fb2715d6720e423db",
+      "assets/clip_1_rgba/0069.png": "f8ef5c8a82b08cbefaf1e37122ae4827ceacbf9c0cba2959d1b04630a7d47b8a",
+      "assets/clip_1_rgba/0070.png": "223735529f8cafa0fe47e65c8f940be69dfc97e7b4c16612163a90fce3734d5d",
+      "assets/clip_1_rgba/0071.png": "731f722f81563944e1c74c7b82a5e422e523a0219176090261e7e6e36c53be5c",
+      "assets/clip_1_rgba/0072.png": "968a49ed0ed7cee9c9d6fccac7ef87e2dda3df98ad3dcfc1d33609d2bd3f1aec",
+      "assets/clip_1_rgba/0073.png": "28048010aff2da36ff3d00c207dd934fe2f522db9782434cd14d283d6c71cc5c",
+      "assets/clip_1_rgba/0074.png": "4a12f209d3e18c17c5c60f97e0dcf1f64b364554890cb62bcdc19d005d984a50",
+      "assets/clip_1_rgba/0075.png": "7ea916dfe93c103cf6377992e84453469ee84b749bf8a4f11681205fee111067",
+      "assets/clip_1_rgba/0076.png": "3b7ddf7890cb7874ea27fcf80e5e1451ef1509efe6aca6a2894750a97d3570ca",
+      "assets/clip_1_rgba/0077.png": "75740ebeb447b299459096257f1f8d0f2352d77175ef301873e5e42685dd4f97",
+      "assets/clip_1_rgba/0078.png": "6db7f142513af28e72f6e6bac16d5f3d74c4bcf32d7c71790acbd7de4d5d95de",
+      "assets/clip_1_rgba/0079.png": "0683d874bf28c8ed18b6b532958778e9ecce11a61f63cf73329e1f871cfa335b",
+      "assets/clip_1_rgba/0080.png": "51b2d738ab603e59cf0ff2b8371be9691fec77ee83cc0676053e404e8b8ce618",
+      "assets/clip_1_rgba/0081.png": "729418a64d5271982ac5915431f9e02af844dc8d161e81a4833f83e4d37e246c",
+      "assets/clip_1_rgba/0082.png": "3c6acf609ea6493ce4fd5e88789999342efd3e15c97a4aeec394be450437a41a",
+      "assets/clip_1_rgba/0083.png": "c12884e8cbe4e6cc2d490e624938aa1dbc97a93656391fbbd7caafec6bd6fc80",
+      "assets/clip_1_rgba/0084.png": "74cb9f8a7009193e850db060ce23a05f4ad5d944b9a20942cb401500c0877bc7",
+      "assets/clip_1_rgba/0085.png": "05877b77167d8ccf944c1febceb61552894c2f91c707a9fbf2f2614e296ce2bf",
+      "assets/clip_1_rgba/0086.png": "bafe9e3fab577dcdff09e734121811bb0b2a471a5aaec592932e7804f5f89def",
+      "assets/clip_1_rgba/0087.png": "b67809733f3803087e1fd5f07b2c2964f620290665c51627d2bf488ce6aa13b9",
+      "assets/clip_1_rgba/0088.png": "4abf67f614c93e0c42d0d6efb6308284386777d793ddcb56664fab4f8243b06c",
+      "assets/clip_1_rgba/0089.png": "02cc36befd24f7b5d43d88d319653ecb8aa1bf28e13885a989cf2b5da9520152",
+      "assets/clip_1_rgba/0090.png": "fa5e33ae71a5149de6846fac6a4fa6d9d3b05b7351def6b52da190468a122f09",
+      "assets/clip_1_rgba/0091.png": "81a48619e80882cf51f40f6aa0856a4e94f1717717017d73b2fd44c339ea0da2",
+      "assets/clip_1_rgba/0092.png": "7bc972a69a2fe56971dcbfb4aa8622fa35bfc751def314a8c30bbd63a39ae0e1",
+      "assets/clip_1_rgba/0093.png": "de31c81ebfaed5759eb0e6ebf8d7e6cbecfff6db30955f86b6c1a23dba37060d",
+      "assets/clip_1_rgba/0094.png": "c7b3395592d5f61f1972936f2bfbb8e662245465be36f1f6661b3e0398b018bb",
+      "assets/clip_1_rgba/0095.png": "3ed77b7c72eb025f27a6f850f3c41dccd1cbae80ec6c5ffb9c7099f6f222b8ba",
+      "assets/clip_1_rgba/0096.png": "430ab0d4f9184c33db79fb39b928152493cdf82dea8ad5faf63a569da96d0c0b",
+      "assets/clip_1_rgba/0097.png": "ea412150655c2d356e45832ee72f14e83ae2a1292d2ffd6e99a0e811c2e33a8a",
+      "assets/clip_1_rgba/0098.png": "e7e6568c41fefab234104911c161410880c9504a989b7eda9d144fba3a4c7364",
+      "assets/clip_1_rgba/0099.png": "bad2e68c6f4c3d40d6716a6fab2bb1258119dc19d5dd20a3e6a8b66bde2d8187",
+      "assets/clip_2_rgba/0000.png": "89942a22aae24cbb8b7bbf93d6059a3902e3ae3c4ce92d1388aa362502226110",
+      "assets/clip_2_rgba/0001.png": "fd6b39a81a122acd0a90e6eea40bc1fbee6c6e46c3f16ad745f8fe72a1182800",
+      "assets/clip_2_rgba/0002.png": "a40b2706a555e39884a40ae820702f0e7fb65a96fc75cd5454cc05cee703fbe8",
+      "assets/clip_2_rgba/0003.png": "48dae6dae672bd8b79e3b5cea9547170d8894e3765850a083254fd613b1f42d0",
+      "assets/clip_2_rgba/0004.png": "013cb2e470129725ff6a24ec8083ceb2fa59a35246be06404417f8a62f6bc4f1",
+      "assets/clip_2_rgba/0005.png": "1b5912207859fb0700a4ac37ab8dbe2a2203a2e51a8dbb2e3b338033f34fe3fb",
+      "assets/clip_2_rgba/0006.png": "701ba24a55a72ce7cd80ca0d403e04db8475f92266382a77143f4f496e5b274b",
+      "assets/clip_2_rgba/0007.png": "8ae30596dba64ff6d042663dbb072136fedbdb3ae567cb0e83fbbf28cdd3767f",
+      "assets/clip_2_rgba/0008.png": "398f7b8fd634393df6a92ce665fe7bc39dc7ba721ca3d21b0c5e3f5a14d42a5b",
+      "assets/clip_2_rgba/0009.png": "3fc47df611614b99d3828c3df9f07b791f1b016026c08ec6ed518194691420a6",
+      "assets/clip_2_rgba/0010.png": "b0ab09e5bfd55952fa456992e9f47a1b3726dd25bd7b0faf6c2b2d19e66b7f94",
+      "assets/clip_2_rgba/0011.png": "382842aa9abb98eabaf1b2c0cde30efae05bf67bd70a903614512589bff2ffeb",
+      "assets/clip_2_rgba/0012.png": "559f90825703f40c1fc9bc099cfc596580323fa41b4e0c5316e909c4d4df9927",
+      "assets/clip_2_rgba/0013.png": "ee3d31a052645a3e0c5b3f05832602b56ca5fe59ae82c64bb4769856a184df2d",
+      "assets/clip_2_rgba/0014.png": "0f6b305e6fb44f19897499468bbb784fcd41b7e03e35bd0d0c952f5a1077aa1c",
+      "assets/clip_2_rgba/0015.png": "68dda3797b0ce8f3dd5a3080958e82bbc051ec8e87946c3385d388308592380b",
+      "assets/clip_2_rgba/0016.png": "03aeb6f6623fa5f95393a6e11ee8f8f9adb6a4b9fcdf2653368363cbf19c1c46",
+      "assets/clip_2_rgba/0017.png": "adbe1cf93644b88c1362bd9429c9759261b08c99e17fc64507a356b24c15e250",
+      "assets/clip_2_rgba/0018.png": "d643930a2d42e92f4d178f2c2d63504225ee01b151dd6869870b7e8478fbd986",
+      "assets/clip_2_rgba/0019.png": "01f5fc0bdbcb93e78cfd591e6de6c257ef162f1b7118d2a58295612b831ccc43",
+      "assets/clip_2_rgba/0020.png": "f06309b1ba4d559e8b566556e0a283f04e53aadbdf472e98a28284a8413d80ac",
+      "assets/clip_2_rgba/0021.png": "29dba29b4841bc14f99e2b8db1f00392fcdc22282a8cb70752c8aa778a5cdbd6",
+      "assets/clip_2_rgba/0022.png": "66bfab5edb6d17b07e59232d319f8e57588dc94bf5359702c12edba2dcde9192",
+      "assets/clip_2_rgba/0023.png": "eb699bcde432c32d87ae8741a52afbe471c585a20d08c905b3d33a363f00e551",
+      "assets/clip_2_rgba/0024.png": "946ccd5477baab6695075fd7d58ee85f3e2350c1cc1b58aea6d89dd386222f66",
+      "assets/clip_2_rgba/0025.png": "7986a36e7c628d6cd549c13bd6b781116c7ff725d6cfb87ebb07381bdbaee5ad",
+      "assets/clip_2_rgba/0026.png": "2475b0273978f6a59168e1d139b4044f4086a8438114099a153114466c606d81",
+      "assets/clip_2_rgba/0027.png": "92ebd0af38786e75188e5458ccf03a454c6a1a315b8b149c66659fa622febff6",
+      "assets/clip_2_rgba/0028.png": "c1c047435ea0c52758b063725dc688ae3a4f367ea1c6f17be6d1fd24b2a06eb5",
+      "assets/clip_2_rgba/0029.png": "80024951623b91607876f51af1e62aeee2e60b842f01345c04c1bab2c5823955",
+      "assets/clip_2_rgba/0030.png": "01799b1cccb9c6b55540febe6f8d086859603d760c4d3db19d7398d2fa0a4a59",
+      "assets/clip_2_rgba/0031.png": "a494084672165397f6b3503a76fc479aafb0b00df918310f9b34746afa0beb5d",
+      "assets/clip_2_rgba/0032.png": "6781b362afc84e9341a9ac57f57fbcbcf3f5a493335376ad8031efb6bf2b8eb0",
+      "assets/clip_2_rgba/0033.png": "903c8493be360c7760a59be294c022cb5d1fe4f6f9e73df6aaf3485808ff02dc",
+      "assets/clip_2_rgba/0034.png": "15d814a8632e50c76e3964e76c860ceaaf380e771cf4d1b50e5923fb039909bb",
+      "assets/clip_2_rgba/0035.png": "3914bbcb1b1c55c5db6e8402b3ec68e48c9be1f39be8955f166033b934d63abf",
+      "assets/clip_2_rgba/0036.png": "50e7dfb563361ee8cf28ef841d6a33343e25b2560c55d825bce1e96b755709ef",
+      "assets/clip_2_rgba/0037.png": "3e9155018e7e4c669a05f31d68bb0a552776233f09f8851fdfa74b7e8ee950fc",
+      "assets/clip_2_rgba/0038.png": "10ba29938ee0463c8ff9194eecc60034d9b80385863d03c4e0e9724fb68fc77a",
+      "assets/clip_2_rgba/0039.png": "95ddbfe71a4d597579924a2c1832d988e707da474263eaf9572b5e6098e9969e",
+      "assets/clip_2_rgba/0040.png": "2e2110b81105cb5a40c659e507ccfa22965b63b31a01e264ef5f0b004e5fe878",
+      "assets/clip_2_rgba/0041.png": "b2e84941d9b1003bf06233b50ff5e1ce95985e9009a219eb4d0c43dace01973a",
+      "assets/clip_2_rgba/0042.png": "01e649b11cabc96be0a0c2e8afa1b4f96760e34c7fcb70e12b8bd4b8e7f459d3",
+      "assets/clip_2_rgba/0043.png": "c590decc557ff280eed14e82d8c9abb02d7f80ac8e4d005aaaecfa83b4bdce21",
+      "assets/clip_2_rgba/0044.png": "532c826ae3982e38f19e1c732d25cf3ddcca4c5c43d9f2143e8f02544f87ef2c",
+      "assets/clip_2_rgba/0045.png": "33aaa75f7a6b407ac4878d767b1984a548aa8060c149e67ed699aa1a0ca531e5",
+      "assets/clip_2_rgba/0046.png": "17b6a14e158eefb1d0e7b3b01e3ff0004d26e65dc6fd477897fa26b3cf2b6df5",
+      "assets/clip_2_rgba/0047.png": "00b4d07157d0a8ecad68763431792b11408f56c9986d5c6b3aa2b9a7f4b9d9f7",
+      "assets/clip_2_rgba/0048.png": "791e389e3d5909f9a35331f3ea65021b5138d9a2c127a216fda052b905f05aff",
+      "assets/clip_2_rgba/0049.png": "7ece2ee2cf2ab4055f04c5b7c67179cdf0ad3e201b5ec30a4d9e816fae0857fc",
+      "assets/clip_2_rgba/0050.png": "79e2415017a03dfca768c75eb961bde1c8129223b691c6264ae63016ae975777",
+      "assets/clip_2_rgba/0051.png": "ac0a30245575537862dc2c7a594883c77d942d2254b8f919c79c1b970c3078a0",
+      "assets/clip_2_rgba/0052.png": "f94a3e0d25e55e5ca01fc338c4f5848f55a1ae3448aa872cf1195001c0b60600",
+      "assets/clip_2_rgba/0053.png": "7e18d4bfe468c7a7bc406f7ec277d78b502a529baf73216f651a6c5878828384",
+      "assets/clip_2_rgba/0054.png": "652c2695e956fb79bf3ee397c65f270ec48f7cc217b07aedc52333230784cc15",
+      "assets/clip_2_rgba/0055.png": "4164b63ae5aa0285e43e7324499fbd51f22a6d97ba2b2a8307fdb3933e130c88",
+      "assets/clip_2_rgba/0056.png": "3609bb0facda593136e833656f064693273c930381b4f4d91d1dbeb2d5afa99d",
+      "assets/clip_2_rgba/0057.png": "bebe61f546f54e3ebe8f80fc12f35e8a8f794251d1d2655db24e9fe321aa1d8b",
+      "assets/clip_2_rgba/0058.png": "eba71f1421e337b68c2d7ad81c9cca75481ecefad087e4355c2e3c60ac159627",
+      "assets/clip_2_rgba/0059.png": "c67b51e1cc7c2c38aea85729c7aa3e3f345fd064290e6df1dbb6c7882cbf956d",
+      "assets/clip_2_rgba/0060.png": "dc40ec08c12f9f2b8baf6fcd717d14b69ff2123207568f8909a61838871ef6e1",
+      "assets/clip_2_rgba/0061.png": "3e06a7da5258b80ba88eed0da53b1a84fc5102eb265d49e0dee6255c80886d44",
+      "assets/clip_2_rgba/0062.png": "33ca86b6c8b87aea5693aa78b727d76165320b7ae47156dd05fda94d0b8a2223",
+      "assets/clip_2_rgba/0063.png": "1c42dc81a8505cc12d9516a7fefc9639d428b0fab20b7f6ca46fe81f32c76b7a",
+      "assets/clip_2_rgba/0064.png": "a9c9f431bd130b1a26bcc220020abbee9912d8ba9b9682357b41d4f597ea93dd",
+      "assets/clip_2_rgba/0065.png": "05203e21bd6b44454b7be284b5c07e29df1e35bcdae262a5c5ceae1b1da1dba5",
+      "assets/clip_2_rgba/0066.png": "fe9da18c66b6f272baa3ea4a67667b8f338224bec9026e8409bab6e1ca2b6d8a",
+      "assets/clip_2_rgba/0067.png": "9caddf6a34d8062064bf04e5f01241315381d779e05fccc66f50a8de558477f7",
+      "assets/clip_2_rgba/0068.png": "f2a1ce30c0dec66bde45eb19360562b6ce6152b527e93e3cc878022f0162f612",
+      "assets/clip_2_rgba/0069.png": "a8881bbda07b580a955c54c2b4d0fd6f4849d47d9d9e5fdfb1dc1d6a6d1be0c2",
+      "assets/clip_2_rgba/0070.png": "e9f0168393fc654adcc0cd46fc7a15445cb13d9c1218896d906f827bc1fb7615",
+      "assets/clip_2_rgba/0071.png": "6a0ee2977d3d713c5aa91bd9d5f97c757c9753273b1434add57663c062c50ac2",
+      "assets/clip_2_rgba/0072.png": "c25485bde0a1f9cbfcc84709512715f1bf239e4d304173e8ece94d56c34c7896",
+      "assets/clip_2_rgba/0073.png": "29bbe9f8d130dc16ab12db960c3fbccaa74b779968d5e58a05c102c9c599fb29",
+      "assets/clip_2_rgba/0074.png": "2ef4751cb39d00fb9f8d12555ef1914d4ad13b491b01342c488efde0cb9686a9",
+      "assets/clip_2_rgba/0075.png": "54f91bacc09366dbfff9c6e6b024ad11bf667df6985e156ea713b6c813fb937f",
+      "assets/clip_2_rgba/0076.png": "26c7e4c59bc34b61199051e4160d16049d9cb20040c33ed171a550ac981465db",
+      "assets/clip_2_rgba/0077.png": "6beff9f025dc0aeee23f591b9761a86a957c0a53216013d663fd6d83d373a614",
+      "assets/clip_2_rgba/0078.png": "388a0cd467345300b480027b68e38b5a33756e67bff4cdeca46af8750d0d49eb",
+      "assets/clip_2_rgba/0079.png": "3fc4da8814e15c6d031d70b2d6ee82cec3cd0a0b8056edd050a80a19a5a7f3fa",
+      "assets/clip_2_rgba/0080.png": "7899fde4b1fcc769be137ad26c0133cd3cb5a9fd5bb97ace3552236941672c7b",
+      "assets/clip_2_rgba/0081.png": "ea44faf1a6dbd370e32ccaf6b9eccfd4b3b772a1bb35e2a6d6fb45d0f21bb96b",
+      "assets/clip_2_rgba/0082.png": "285c230b454f93c453bcd593b617bcc617666e1b0d3173b8806d41fa762a6008",
+      "assets/clip_2_rgba/0083.png": "8c7a4b5e2f8c522711a455814603f17ea3bd1a915922602598aaffe5d86c7dcd",
+      "assets/clip_2_rgba/0084.png": "35d566ce9cb06db5b811c6098dcbb0f6f5f1e86f90bd558dd96d74ce923b932e",
+      "assets/clip_2_rgba/0085.png": "b2350457aff2af332749e7b13a24501bc34817810d448f19ce17bf2f64893db4",
+      "assets/clip_2_rgba/0086.png": "a79ccfdfe2c0fb464cb52723962ee08caf9b1444a506e150cc5b18cc38e6ef3b",
+      "assets/clip_2_rgba/0087.png": "da18afef13a6331c20ef12959f934770194a1789b52edf2b702def6a1a022277",
+      "assets/clip_2_rgba/0088.png": "e3ff97558c560df9e65ee96bfb7cfe19bed8fcdb94fc3b877e72fb204c79e60d",
+      "assets/clip_2_rgba/0089.png": "10828d462d43f1fcac6a21969f9c41707ee3430492abd2ce9ba6b31139d8476c",
+      "assets/clip_2_rgba/0090.png": "33ab09e40f5d1000d64332684716c992f962ac882a627c160bda660fb58b9d52",
+      "assets/clip_2_rgba/0091.png": "e5f9090c11b551a9520dc66012d850963156cb9e00b23559c9366b7e3251e956",
+      "assets/clip_2_rgba/0092.png": "4918daf7e9c4c7511f740873baad533605580178b9c6c80f8a65a6345f66434e",
+      "assets/clip_2_rgba/0093.png": "2e4d35c7e9ad60bf9b5ef7914ad60aa9b1f3e5e39aabd6b8573ad15a44a6ba06",
+      "assets/clip_2_rgba/0094.png": "6e80d9f196d775282748d66831bf9bb88e79735a94c4ea9bd5fe06cb4e498ee4",
+      "assets/clip_2_rgba/0095.png": "d3a8a44400b6588ce4b677e97e2ccba8175ee603652ad20ab7b62080732ccc1c",
+      "assets/clip_2_rgba/0096.png": "043633360716597111b71dabc4ab8fb66cca5ea1541a51694f2fda7521aa3b3e",
+      "assets/clip_2_rgba/0097.png": "0c2d4ebf5845153df5920cf8ea4daab4efcd60ef83f4e449d7729fffa6453f18",
+      "assets/clip_2_rgba/0098.png": "5bbbc9ff1c2b5d9a3817f101bc8c4470eedba6129a59ee49efc55454859056f7",
+      "assets/clip_2_rgba/0099.png": "3edc211eca197a06f9f85d4f192faf702fb53ec29f843f701aa0f6678a6500e6",
+      "assets/green_sequence/0000.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0001.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0002.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0003.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0004.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0005.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0006.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0007.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0008.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0009.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0010.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0011.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0012.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0013.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0014.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0015.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0016.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0017.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0018.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0019.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0020.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0021.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0022.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0023.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0024.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0025.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0026.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0027.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0028.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0029.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0030.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0031.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0032.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0033.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0034.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0035.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0036.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0037.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0038.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0039.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0040.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0041.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0042.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0043.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0044.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0045.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0046.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0047.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0048.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0049.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0050.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0051.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0052.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0053.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0054.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0055.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0056.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0057.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0058.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0059.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0060.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0061.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0062.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0063.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0064.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0065.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0066.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0067.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0068.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0069.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0070.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0071.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0072.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0073.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0074.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0075.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0076.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0077.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0078.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0079.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0080.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0081.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0082.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0083.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0084.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0085.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0086.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0087.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0088.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0089.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0090.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0091.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0092.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0093.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0094.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0095.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0096.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0097.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0098.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "assets/green_sequence/0099.png": "b860871b0e85069b5385c47eb923c84b53fff5443cc6d4312f5ed2552e6e5401",
+      "scripts/build_mattes.py": "e8d4727548d10e634ebfa69ca3196328c932ce42cab4e02bc96b522c88cc18bc"
+    },
+    "project_imported": true,
+    "project_name": "Case3_Luna_20261104_105511_IndependentAudit",
+    "relink_completed": false,
+    "rerender_completed": false,
+    "linear_light_verified": false,
+    "summary": "DRP 成功导入独立工程，含独立绿底与 RGBA 前景轨道。加载副本后桥接仍可查询，但写入方法未返回有效结果；重链接未生效，未完成独立重渲染。不将基础设施异常记为画面质量扣分，也不据此判定工程损坏。线性光合成未确证。",
+    "timing_observation": "导入的 PNG 序列为 24 fps，25 fps 时间线中的条目延伸至 104 帧，而最终只渲染 100 帧；存在输入输出帧序错配风险，未修正提交。",
+    "evidence": [
+      "snapshot_original.json",
+      "import.json",
+      "snapshot_clone.json",
+      "relink.json",
+      "page_recovery.json"
+    ]
+  },
+  "comparison": {
+    "sol_raw_score": 50.929378463968455,
+    "difference": -41.333902946908985,
+    "note": "Sol 上限120分钟；Luna不限时。环境修正时点不同，不是等预算严格对照。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "case3-resolve-green-v3.1-draft",
+  "method": "Generated straight-alpha PNG sequences from the public frame-zero green-screen previews. Clip 1 reuses its frame-zero silhouette with a coarse blue-color exclusion for the passing man. Clip 2 reuses the two-person frame-zero silhouette with manually estimated horizontal keyframe translations. Resolve composites each sequence over an RGB green PNG sequence and renders H.264.",
+  "target_strategy": "The frame-zero preview establishes target identity. The woman is retained in clip 1; the adult and child pair is retained in clip 2. A coarse blue hue mask removes some pixels of the blue-shirted passer. Clip 2's hand-estimated translation does not robustly track pose or occlusion. The vertical bar and foreground plant occlusions are not reliably identified or depth-resolved. No hidden references were used.",
+  "tools": [
+    {"name": "DaVinci Resolve Free", "version": "21.1.2.10"},
+    {"name": "Python", "version": "3.13 runtime"},
+    {"name": "OpenCV", "version": "system package"},
+    {"name": "Pillow", "version": "system package"},
+    {"name": "FFmpeg", "version": "system package"}
+  ],
+  "interface": "API",
+  "color_alpha": "RGBA intermediates use straight alpha. The background source is RGB(0,255,0). Resolve Free native timeline compositing and H.264 rendering were used. The configured timeline was not explicitly calibrated for linear-light alpha compositing; edge colors and green spill may differ from the contract reference.",
+  "limitations": "These are coarse preview-derived mattes, not frame-accurate segmentation. Clip 1 does not preserve the requested bar occlusion and may retain parts of the passing man. Clip 2's hand-estimated translations can include plants or omit moving subject areas. Fine hair, glasses, hands, soft edges, and the gap between subjects are not reliably represented. No pretrained segmentation model was available. Deliverables are complete but visual quality and semantic compliance are poor and unverified by an independent evaluator."
+}
