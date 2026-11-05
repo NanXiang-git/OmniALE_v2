@@ -1,0 +1,78 @@
+{
+  "case": "case12",
+  "source_case": "case12",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1793803466.7556918,
+  "host_end_unix": 1793806665.73501,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "case12",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1793806665.5066235,
+    "elapsed_seconds": 3194.9833467006683
+  },
+  "submission_manifest": [
+    {
+      "path": "alignment.json",
+      "bytes": 23569,
+      "sha256": "fd2fefedf22dd57edf109980f84e2413d90ba707497dbb69397fd3cfc93f8bfc"
+    },
+    {
+      "path": "interview.ass",
+      "bytes": 10482,
+      "sha256": "baca80d3663176b394716ca984f9a10e0753a07a2dcf371893e4385c3853bede"
+    },
+    {
+      "path": "interview.srt",
+      "bytes": 17544,
+      "sha256": "6f495d6fdef092b84ea12b5a88abb39c98edab1b8a6a845f56336e41136a4ebb"
+    },
+    {
+      "path": "preview.mp4",
+      "bytes": 27871270,
+      "sha256": "4726d93c550b850d78f333219d79626849f4bae46dc1ba331136cf86e7388333"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4877,
+      "sha256": "18b9e251521528f5d98d13586783cadff00b76efdacc446d66f1eba65c42e7b7"
+    },
+    {
+      "path": "rebuild.json",
+      "bytes": 460,
+      "sha256": "7d6666fef17fa5151aa5c7febabc2f68a8e9f1748c6d0d0ff17e7efdea2fc0a3"
+    },
+    {
+      "path": "rebuild.py",
+      "bytes": 1174,
+      "sha256": "7d32f8837cf14f44e709908c7d17292fef24d556e91237473a38793e6b39b6f5"
+    },
+    {
+      "path": "scripts\\final.py",
+      "bytes": 5394,
+      "sha256": "5c1f9750615ef463be8159721c9b083b497121fc53054d9b836d2692261d389c"
+    },
+    {
+      "path": "scripts\\gen.py",
+      "bytes": 5596,
+      "sha256": "a00cfc125555b0930bfcb9a86fde74f98717ad389b4b138ea8b8e8f1799a2d38"
+    },
+    {
+      "path": "scripts\\pipe.py",
+      "bytes": 6699,
+      "sha256": "1ec866dd6e8d3ea2df0cf235344168ecaf0cbde2d86da41e8cda88f3866bc3d4"
+    },
+    {
+      "path": "scripts\\write_out.py",
+      "bytes": 7964,
+      "sha256": "3c82570d3f527b69f5c41bc971b114fb60577c0cb755458793e3bcb4e73e1d03"
+    }
+  ],
+  "submission_manifest_sha256": "c031ec38d592c6d561754b209c24555bf1e35d5adff3a3aa1adc64327f86365b",
+  "elapsed_solver_environment_seconds": 3194.9833467006683,
+  "timed_out": false
+}

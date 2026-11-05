@@ -1,0 +1,30 @@
+{
+  "execution": {
+    "case": 12,
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_seconds": 10.6262366771698,
+    "argv": [
+      "/usr/bin/python3",
+      "/workspace/submission/rebuild.py",
+      "--input",
+      "/candidate/input",
+      "--submission",
+      "/workspace/submission",
+      "--output",
+      "/workspace/result"
+    ],
+    "input_layout": "{input} points to candidate/input (media directory); original packaged evaluator points to candidate root. Explicit harness correction, no submission changes.",
+    "target_exists": true,
+    "isolation": "bwrap mount/pid/user/network namespaces, no secrets, current public input and copied submission only",
+    "output_layout": "output directory"
+  },
+  "pass": true,
+  "score": 5,
+  "max_score": 5,
+  "frame_mae": 0.19820389978675299,
+  "audio_correlation": 1.0000000000000002,
+  "original_frames": 6487,
+  "rebuilt_frames": 6487,
+  "normalization": "Output placeholder is a directory as documented by frozen rebuild.py and recipe. Initial file-output invocation retained. No submission changed; identical comparison thresholds."
+}

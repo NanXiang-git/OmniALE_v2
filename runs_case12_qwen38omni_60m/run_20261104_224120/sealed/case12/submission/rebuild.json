@@ -1,0 +1,17 @@
+{
+ "argv": [
+  "{python}",
+  "{submission}/rebuild.py",
+  "--input",
+  "{input}",
+  "--submission",
+  "{submission}",
+  "--output",
+  "{output}"
+ ],
+ "dependencies": {
+  "python3": "stdlib only",
+  "ffmpeg": "libass + libx264, audio passthrough (-c:a copy)"
+ },
+ "notes": "Burns {submission}/interview.ass onto {input}/source.mp4; audio stream copied bit-for-bit (48 kHz); 704x576/25fps/259.48s unchanged. No network, no TTS, no model calls at rebuild time."
+}
