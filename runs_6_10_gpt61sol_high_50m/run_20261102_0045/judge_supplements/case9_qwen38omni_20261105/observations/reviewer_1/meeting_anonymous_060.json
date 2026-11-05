@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14182,
+    "total_tokens": 20148,
+    "completion_tokens": 5966,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 710
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4641,
+      "text_tokens": 1325
+    }
+  },
+  "elapsed_seconds": 122.102,
+  "completed_utc": "2026-11-05T07:43:50.758413+00:00",
+  "request_sha256": "8354895cd522f75d91b9653f0ea38e4d4b7d3810196a358158a109f309cbf02f",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 60,
+        "end": 65,
+        "audio": "可听到一句带犹豫/不完整尾音的话：‘All right, here is what the functional design is supposed to achieve, um.’ 说话人身份及与画面人物的对应关系不确定；未听到金额、否定词或机构名；无明显重叠、无明显爆音；句末后进入停顿。",
+        "visual": "采样帧 60、61、62、63、64 为四宫格布局：左上格标注 Participant A，人脸可见；左下格标注 Participant C，人脸可见；右下格标注 Participant D，人脸可见；右上格人脸被黑色矩形遮挡，姓名标签不可见或未显示。底部有中文实验说明与秒数叠加。该段采样帧中未见画中画或明确回放标识。",
+        "uncertainty": "音频精确起止、底噪电平及是否含极轻串音不能完全确认；右上被遮脸者的身份不可确认。"
+      },
+      {
+        "start": 65,
+        "end": 70,
+        "audio": "无可辨语音，表现为停顿/静默段；未听到重叠、未听到明显爆音；是否存在低电平房间底噪不确定。",
+        "visual": "采样帧 65、66、67、68、69 切为 Participant A 大画面，右下角叠加一个画中画小窗；小窗内可见另一格画面，其中人脸被黑色矩形遮挡。主画面 Participant A 人脸可见，背景有书架、投影幕/墙面。底部中文说明与秒数叠加持续。未见明确‘回放’字样。",
+        "uncertainty": "画中画小窗的来源、是否实时叠层或编辑插入不可仅凭采样帧确认；静默段内若有非语音底噪无法确定。"
+      },
+      {
+        "start": 70,
+        "end": 75,
+        "audio": "本段大部分无可辨语音，处于停顿/静默；未听到重叠、未听到明显爆音。接近 75 秒边界处可能有下一句起始，但该段内无完整可记语句。",
+        "visual": "采样帧 70、71、72、73、74 为合成多格布局：Participant C、Participant D、Participant A 分处不同格，另有一格人脸被黑色矩形遮挡；画面中央还叠加一个较小的画中画/叠层，同样显示被黑色矩形遮脸的格子。部分姓名标签被裁切或遮挡，例如可见 ‘: D’ 样式残片。底部中文说明与秒数叠加持续。未见明确回放标识。",
+        "uncertainty": "布局切换的精确时刻只能在整秒采样帧之间推断；中央叠层是画中画、编辑插入还是回放窗口不可确认；被遮脸格子的姓名不可读。"
+      },
+      {
+        "start": 75,
+        "end": 80,
+        "audio": "可听到：‘Here's a project finance, uh which of course we all have to think about when we design this thing.’ 含填充词/犹豫；说话人是否与前段为同一人不确定；未听到否定词、未听到机构名（‘project finance’为概念性表述）；无明显重叠、无明显爆音。",
+        "visual": "采样帧 75、76、77、78、79 为四宫格重排：左上格人脸被黑色矩形遮挡且姓名标签不可见/未显示；右上格标注 Participant C，人脸可见；左下格标注 Participant D，人脸可见；右下格标注 Participant A，人脸可见。底部中文说明与秒数叠加持续。该段采样帧中未见独立画中画。",
+        "uncertainty": "语音与画面说话人的对应关系不可确认；左上被遮脸者身份不可确认。"
+      },
+      {
+        "start": 80,
+        "end": 85,
+        "audio": "语音继续：‘Um, selling price is supposed to be 25 euro.’ 保留金额 ‘25 euro’；未听到否定词、未听到机构名；句尾后转为停顿；无明显重叠、无明显爆音。",
+        "visual": "采样帧 80、81、82、83、84 再次为 Participant A 大画面，右下角有画中画小窗；小窗内人脸被黑色矩形遮挡。主画面 Participant A 人脸可见，并可见抬手/手势等身体动作；底部中文说明与秒数叠加持续。未见明确回放标识。",
+        "uncertainty": "金额货币发音按可听内容为 euro，未见画面书面确认；画中画与其他分格的关系不可确认；手势/身体动作不作为隐私判断依据。"
+      },
+      {
+        "start": 85,
+        "end": 90,
+        "audio": "无可辨语音，保持停顿/静默至原媒体 90 秒前；未听到重叠、未听到明显爆音。其后 0.3 秒人为分隔静音不属于成品，本观察不纳入。",
+        "visual": "采样帧 85、86、87、88、89 为四宫格：左上格标注 Participant D，人脸可见；右上格标注 Participant A，人脸可见；左下格人脸被黑色矩形遮挡且姓名标签不可见/未显示；右下格标注 Participant C，人脸可见。底部中文说明与秒数叠加持续。该段采样帧中未见画中画或明确回放标识。",
+        "uncertainty": "未采样 90.000 秒帧，不声称已看到 90 秒画面；最后几秒若存在极低底噪无法确认；左下被遮脸者身份不可确认。"
+      }
+    ]
+  }
+}

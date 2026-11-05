@@ -1,0 +1,67 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 16543,
+    "completion_tokens": 2356,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1626,
+      "text_tokens": 730
+    }
+  },
+  "elapsed_seconds": 73.944,
+  "completed_utc": "2026-11-05T07:35:46.536410+00:00",
+  "request_sha256": "822218255f470eeb633c88f179fe96d39fb9c91dbf64721a5a5e04ff958fb176",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 180.0,
+        "end": 188.0,
+        "audio": "Participant C: 'Maybe it should have a light so that we can see...'; 林岚 / Francina: 'Yeah, my name is Francina and I'm a user interface, my role is, uh, the main responsibility is user...' (两人声音有轻微重叠，林岚语句似未完整结束)",
+        "visual": "180-184s为四宫格布局（左上Participant A，右上林岚 / Francina，左下Participant C，右下Participant D）；185-188s切换为Participant C全屏，右下角出现林岚 / Francina的画中画小窗。所有人脸清晰，姓名标签'林岚 / Francina'可见无遮挡。",
+        "uncertainty": "说话人重叠导致部分词语听辨困难；林岚的自我介绍似乎被截断或自然停顿。"
+      },
+      {
+        "start": 188.0,
+        "end": 194.0,
+        "audio": "静音/无有效语音内容",
+        "visual": "190-194s画面变为多窗口布局：左上Participant C，右上Participant D，中间悬浮林岚 / Francina小窗，左下Participant A，右下林岚 / Francina。",
+        "uncertainty": "无语音，仅视觉布局变化。"
+      },
+      {
+        "start": 194.0,
+        "end": 201.0,
+        "audio": "Participant A: 'My, my idea is maybe that the minute it's really hidden in, in other words, if it's like in a dark...' (说话有结巴/重复)",
+        "visual": "195-199s为四宫格布局（左上林岚 / Francina，右上Participant C，左下Participant D，右下Participant A）；200-201s切换为Participant A全屏，右下角出现林岚 / Francina的画中画小窗。",
+        "uncertainty": "Participant A 语句开头有重复'My, my'，且句子在'dark'处似乎未完结或被打断。"
+      },
+      {
+        "start": 201.0,
+        "end": 205.0,
+        "audio": "静音/无有效语音内容",
+        "visual": "201-204s保持Participant A全屏，右下角林岚 / Francina画中画。",
+        "uncertainty": "无语音。"
+      },
+      {
+        "start": 205.0,
+        "end": 209.0,
+        "audio": "合成语音(TTS): '请林岚补充设计观点'",
+        "visual": "205-209s为四宫格布局（左上Participant D，右上Participant A，左下林岚 / Francina，右下Participant C）。",
+        "uncertainty": "明确的机器合成语音指令，非真人说话。"
+      }
+    ]
+  }
+}

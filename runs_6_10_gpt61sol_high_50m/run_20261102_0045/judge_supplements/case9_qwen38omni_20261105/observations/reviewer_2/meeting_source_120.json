@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 17129,
+    "completion_tokens": 2942,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1701,
+      "text_tokens": 1241
+    }
+  },
+  "elapsed_seconds": 80.01,
+  "completed_utc": "2026-11-05T07:33:11.798123+00:00",
+  "request_sha256": "0dac3cfd73185f933c5f29a9959f9b27fb1a9944c1f82c43834c1899db3c0daa",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 120.0,
+        "end": 125.0,
+        "audio": "女声1说‘but um twelve fifty euros per…’，金额听辨为‘twelve fifty euros’；几乎同时女声2重叠插入‘and it should have multiple…’，两声短暂交叠；女声1随后轻笑一声。无爆音。",
+        "visual": "四宫格布局：左上Participant A（红衣、短发、戴眼镜），右上林岚／Francina（白衣），左下Participant C（深色衣），右下Participant D（白发、浅蓝衣）。四人面部均清晰可见，无遮挡；各格姓名标签完整可读，无遮挡。底部叠加说明文字‘AMI 真实录音重组实验／多轨剪辑；非原始连续会议’及‘120.00s 含早期发言回放｜音频保留原说话者，不合成其声音’。无画中画。",
+        "uncertainty": "此为重组片段，语音与画面说话口型未必对应，无法可靠将‘twelve fifty euros’一句绑定到某一具体画面人物；重叠处两女声性别可辨但身份不确定。"
+      },
+      {
+        "start": 125.0,
+        "end": 130.0,
+        "audio": "女声2继续说‘like the remote control which we use for TV, it should be used for some other purpose also like controlling…’，句尾未完。无重叠、无爆音，电平正常。",
+        "visual": "布局切换为Participant D单人主画面（白发、浅蓝衣、戴眼镜，面部清晰无遮挡），右下角出现画中画小窗为林岚／Francina（白衣，面部清晰无遮挡），小窗带‘林岚／Francina’标签。底部说明文字更新为‘125.00s…含早期发言回放｜音频保留原说话者，不合成其声音’。",
+        "uncertainty": "画中画与主画面同时存在，但音频为单一女声，无法确认该声源对应主画面D还是画中画Francina；说话人身份不确定。"
+      },
+      {
+        "start": 130.0,
+        "end": 135.0,
+        "audio": "约自本段中段起语音停止，进入静音／极低电平段，至段末无明显说话声。无爆音。",
+        "visual": "布局变为四宫格加中央画中画：左上Participant C，右上Participant D，左下Participant A，右下林岚／Francina，画面正中央另叠加一个小窗亦为林岚／Francina。各格及小窗面部均清晰、无遮挡，姓名标签可读。底部文字‘130.00s…含早期发言回放｜音频保留原说话者，不合成其声音’。",
+        "uncertainty": "右下格与中央小窗同时显示Francina，疑似回放／多轨拼接造成的重复窗口；该段静音，无语音可绑定说话人。"
+      },
+      {
+        "start": 135.0,
+        "end": 140.0,
+        "audio": "女声说‘We certainly can try to, I agree with her that to market something successfully it should do some more…’，句尾未完。无重叠、无爆音。",
+        "visual": "四宫格重排：左上林岚／Francina，右上Participant C，左下Participant D，右下Participant A。四人面部均清晰无遮挡，姓名标签完整可读。底部文字改为‘135.00s 组合片段｜音频保留原说话者，不合成其声音’。无画中画。",
+        "uncertainty": "‘I agree with her’中的her指代不明；因系组合片段，该女声无法可靠对应到当前四宫格中任一开口人物，说话人身份不确定。"
+      },
+      {
+        "start": 140.0,
+        "end": 145.0,
+        "audio": "静音／极低电平，无清晰语音，无重叠，无爆音。",
+        "visual": "布局切回Participant D单人主画面（面部清晰无遮挡），右下角画中画小窗为林岚／Francina（面部清晰无遮挡，带标签）。底部文字‘140.00s 组合片段｜音频保留原说话者，不合成其声音’。",
+        "uncertainty": "该段无语音，无法判断声源；画中画与主画面并存属回放／拼接布局。"
+      },
+      {
+        "start": 145.0,
+        "end": 150.0,
+        "audio": "静音／极低电平延续至段末，无清晰语音，无重叠，无爆音。",
+        "visual": "四宫格再重排：左上Participant D，右上Participant A，左下林岚／Francina，右下Participant C。四人面部均清晰无遮挡，姓名标签完整可读。底部文字‘145.00s 组合片段｜音频保留原说话者，不合成其声音’。无画中画。",
+        "uncertainty": "该段无语音；画面仅为多宫格静态／微动布局，无可绑定说话人。整段30秒内未观察到任何人脸或姓名的遮挡处理。"
+      }
+    ]
+  }
+}

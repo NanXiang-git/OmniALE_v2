@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 18154,
+    "completion_tokens": 3940,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3331,
+      "text_tokens": 609
+    }
+  },
+  "elapsed_seconds": 91.079,
+  "completed_utc": "2026-11-05T07:48:41.247101+00:00",
+  "request_sha256": "4491db54fb7dfd05c30e1ac0c13965f0c90a8ef34aa1d963c0abdb5192105edf",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 270.0,
+        "end": 279.0,
+        "audio": "女性声音说：'So, um, we have, well, we have a two, two, three minutes. Um, any questions at this point or suggestions?' 包含口吃和重复。",
+        "visual": "270-274s为四宫格布局：左上Participant C，右上Participant D，左下Participant A，右下角人脸被黑色矩形完全遮挡且无姓名标签。275-279s切换为Participant A全屏，右下角出现画中画显示被遮挡的人脸。Participant A口型在动。",
+        "uncertainty": "说话人推测为Participant A。"
+      },
+      {
+        "start": 279.0,
+        "end": 281.0,
+        "audio": "中文女声说：'资料来自林兰研究所。这是机构名称。'",
+        "visual": "279s仍为Participant A全屏。280s切换为新的四宫格布局：左上Participant A，右上被遮挡人脸，左下Participant C，右下Participant D。画面正中央叠加了一个小的画中画，显示的也是被遮挡的人脸。",
+        "uncertainty": "中文语音来源不明，疑似剪辑插入音轨。"
+      },
+      {
+        "start": 281.0,
+        "end": 285.0,
+        "audio": "女性声音（同第一段）说：'Basically, basically you will get instructions to work with.'",
+        "visual": "保持280s的四宫格加中央画中画布局。左上角的Participant A口型在动。",
+        "uncertainty": "说话人推测为Participant A。"
+      },
+      {
+        "start": 285.0,
+        "end": 300.0,
+        "audio": "静音（无声音）。",
+        "visual": "285-289s为四宫格：左上D，右上A，左下被遮挡，右下C。290-294s切换为Participant A全屏，右下角画中画显示被遮挡者，此时A有明显张嘴说话的口型但无声音。295-299s切换为四宫格：左上被遮挡，右上C，左下D，右下A。",
+        "uncertainty": "290-294s出现音画不同步（有口型无声音），符合多轨剪辑特征。"
+      }
+    ]
+  }
+}

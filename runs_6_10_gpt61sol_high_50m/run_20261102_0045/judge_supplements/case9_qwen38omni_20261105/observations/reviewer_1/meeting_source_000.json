@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14144,
+    "total_tokens": 16275,
+    "completion_tokens": 2131,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 672
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1305,
+      "text_tokens": 826
+    }
+  },
+  "elapsed_seconds": 76.212,
+  "completed_utc": "2026-11-05T07:27:02.458030+00:00",
+  "request_sha256": "d526f3319b92bc67e44b04a811fadeafa79c668b75380294028efe23a30f633a",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 0.0,
+        "end": 5.0,
+        "audio": "听到一位女性（Participant A）说话，内容为 'very good, and as you know I'm Betty...'，语调自然，无明显爆音。",
+        "visual": "四格视频会议画面。左上为 Participant A，右上为 林岚 / Francina，左下为 Participant C，右下为 Participant D。所有人物面部清晰可见，无任何物理或数字遮挡。画面底部有文字说明及时间戳。各窗口下方均有清晰的姓名标签。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 5.0,
+        "end": 10.0,
+        "audio": "听到另一位女性（林岚 / Francina）开始自我介绍，'Yeah, my name is Francina, and I am a user interface... my role is...'。",
+        "visual": "画面切换为 Participant A 的主视图（大图），右下角叠加了 林岚 / Francina 的小窗（画中画）。两人面部均清晰可见，无遮挡。主视图左下角和画中画右下角均有姓名标签。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 10.0,
+        "end": 15.0,
+        "audio": "听到 Participant A 继续说话，'...so when we look at the presentation... what we really are supposed to do.'，语速适中。",
+        "visual": "画面恢复为类似四格的布局，但在屏幕中央叠加了一个 林岚 / Francina 的矩形画中画。背景中的四个主要窗口（Participant C, D, A, 林岚/Francina）以及中央画中画里的人物面部均清晰可见，无遮挡。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 15.0,
+        "end": 20.0,
+        "audio": "听到 Participant C 说话，'And I'm a marketing person, I want to figure out how to sell them.'，声音清晰。",
+        "visual": "画面布局变为新的四格排列：左上 林岚 / Francina，右上 Participant C，左下 Participant D，右下 Participant A。所有人物面部清晰，无遮挡，姓名标签位于各窗口下方。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 20.0,
+        "end": 25.0,
+        "audio": "听到 Participant D 说话，声音相对较轻，似乎在回应或补充前面的观点，具体词汇因音量较小略显模糊。",
+        "visual": "画面切换为 Participant D 的主视图（大图），右下角叠加了 林岚 / Francina 的小窗。两人面部清晰可见，无遮挡。姓名标签分别位于主视图左下角和小窗右下角。",
+        "uncertainty": "Participant D 的具体发言内容因音量较小不易完全辨认"
+      },
+      {
+        "start": 25.0,
+        "end": 30.0,
+        "audio": "听到多人声音出现轻微重叠，林岚 / Francina 似乎准备继续发言或与他人互动，伴有短暂的停顿。",
+        "visual": "画面再次回到四格布局：左上 Participant D，右上 Participant A，左下 林岚 / Francina，右下 Participant C。所有人物面部清晰，无遮挡，姓名标签正常显示。",
+        "uncertainty": "由于语音重叠，无法精确区分每一句话的归属"
+      }
+    ]
+  }
+}

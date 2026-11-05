@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14155,
+    "total_tokens": 18019,
+    "completion_tokens": 3864,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 683
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2705,
+      "text_tokens": 1159
+    }
+  },
+  "elapsed_seconds": 97.018,
+  "completed_utc": "2026-11-05T07:28:48.805279+00:00",
+  "request_sha256": "d61affdadd9730090ecf60659a48aed434782a402a8f91cde1ec2984b400d78e",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 30,
+        "end": 35,
+        "audio": "女声A：'Uh I'm Jan B, uh my role is to design, uh industrial designer...' 含填充词uh，自称姓名Jan B及职业industrial designer。未见金额、机构名或否定词。",
+        "visual": "四宫格布局：左上Participant C（深发女性，书架+挂钟背景），右上Participant D（白发戴镜女性，墙画背景），左下Participant A（短灰发戴镜红衣女性，书架背景），右下林岚 / Francina（深发白衣女性，城市画背景）。各窗口姓名标签完整可见，人脸无遮挡。底部烧录叠加文字'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议'及时间戳30.00s。",
+        "uncertainty": "音频自称'Jan B'，但画面无任何'Jan B'标签，声画说话人对应关系无法确认；女声A的具体身份不确定。"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "audio": "女声A续：'...and my responsibilities are, uh, uh deal with technical functional designs and specifications of user...' 句尾在约39-40秒处收束，疑似与下一说话人接续处有极短重叠/换气，不明显。无爆音。",
+        "visual": "布局切换为Participant C单人大画面（深发女性低头看书桌方向，书架+挂钟背景），右下角叠加画中画小窗显示林岚 / Francina。主画面人脸清晰无遮挡；画中画覆盖右下角落，未遮挡C的脸。底部叠加文字与时间戳35-39s。",
+        "uncertainty": "画中画与主画面的声源归属不明；女声A是否即画面C无法判定。"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "audio": "女声B：'Here is what this thing should be, this thing we are gonna, uh, uh design is a new remote control...' 提及'remote control'，含填充词uh，无金额、无机构、无明确否定。",
+        "visual": "四宫格重排：左上Participant A，右上林岚 / Francina（其姓名标签被中央叠加小窗部分遮挡，仅露'icina'），左下Participant C，右下Participant D；画面中央另叠一个林岚 / Francina画中画小窗，遮盖四宫格中心交叉区，使右上窗口下缘与左下/右下窗口上缘局部被挡，但各人脸主体仍可见。底部叠加文字与时间戳40-44s。",
+        "uncertainty": "女声B身份与画面窗口对应不确定；右上姓名标签遭画中画遮挡，完整名为推断（Francina）。"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "audio": "女声B续并收尾：'...uh, should be.' 约49-50秒后语音停止，转入低电平/静音。无爆音，无明显重叠。",
+        "visual": "四宫格再次重排：左上Participant D，右上Participant A，左下林岚 / Francina，右下Participant C。四个姓名标签均完整可见，人脸无遮挡，无画中画。底部叠加文字与时间戳45-49s。",
+        "uncertainty": "女声B是否对应任一可见窗口无法确认；语音结束精确时刻有±1秒不确定。"
+      },
+      {
+        "start": 50,
+        "end": 55,
+        "audio": "未听到清晰语句，呈静音/仅底噪状态（承接前段语音结束）。无金额、否定、机构、姓名可记。",
+        "visual": "布局为Participant A单人大画面（短灰发戴镜红衣女性侧头，书架+投影幕'DIAP'字样背景），右下角叠加林岚 / Francina画中画小窗。主画面人脸清晰；画中画未遮A的脸。底部叠加文字与时间戳50-54s。",
+        "uncertainty": "静音判断基于未采样到语音，可能存在极低电平残留；声画对应不适用（无语音）。"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "audio": "持续无清晰语音，静音/底噪至本段结束。无可记说话人、金额、机构或姓名。",
+        "visual": "四宫格布局：左上林岚 / Francina，右上Participant C，左下Participant D，右下Participant A。四个姓名标签完整可见，人脸无遮挡，无画中画。底部叠加文字与时间戳55-59s。",
+        "uncertainty": "静音段边界与上一段连续，无法区分是真正静音还是极轻声；本段无语音故无说话人归属问题。"
+      }
+    ]
+  }
+}

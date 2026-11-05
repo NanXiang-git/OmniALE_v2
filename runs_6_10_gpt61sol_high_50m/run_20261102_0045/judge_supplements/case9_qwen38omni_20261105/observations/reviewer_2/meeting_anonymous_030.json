@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14182,
+    "total_tokens": 17790,
+    "completion_tokens": 3608,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 710
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2513,
+      "text_tokens": 1095
+    }
+  },
+  "elapsed_seconds": 91.971,
+  "completed_utc": "2026-11-05T07:43:20.661308+00:00",
+  "request_sha256": "1d5f99719cdb976cbf85037d638c6407e69fe4fb9e4eb1e1c578b9295e8f04ad",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 30.0,
+        "end": 35.0,
+        "audio": "单一女声（听感偏年轻）自报：'Uh I'm Janvi, um my role is industrial designer, and my responsibilities are uh deal with technical functional designs and specifications of user'，句尾不完整、被截断；无金额、无机构名、无否定词；未闻爆音，未闻两人重叠，仅有说话内停顿/填充词（uh/um）。",
+        "visual": "四宫格：左上 Participant C（深发年轻女性，书架背景）、右上 Participant D（白发戴眼镜）、左下 Participant A（灰发戴眼镜红衣）、右下一格人脸被实心黑色方块完全遮挡且该格无可见姓名标签。各格人物口型幅度小，C 似低头。画面底部叠加黑条说明文字（重组/多轨剪辑/非原始连续会议）。",
+        "uncertainty": "自报姓名'Janvi'与画面标签的对应无法确证；因系多轨剪辑，此段声音与所看口型未必同源同步。被遮格者身份与姓名均不可见。"
+      },
+      {
+        "start": 35.0,
+        "end": 40.0,
+        "audio": "延续上一句至'…specifications of user'后出现约1秒停顿/近静音，随后起新句头'here is what this thing should be…'；仍无金额/机构/否定，无爆音，无明显重叠。",
+        "visual": "切为单画面 Participant C（书架+挂钟背景），其唇部有明显开合，呈说话状；右下角叠加画中画小窗，窗内人脸同样被黑色方块遮挡。",
+        "uncertainty": "C 的口型活动与'Janvi'自报声可能对应，但剪辑下不可确证；画中画为遮挡脸的回放/副窗，非完整画面。"
+      },
+      {
+        "start": 40.0,
+        "end": 45.0,
+        "audio": "第二句展开：'here is what this thing should be, this thing we are gonna uh design is a new remote control'；该句声线听感较前句略沉/不同，是否同一说话人不确定；无金额/机构/否定，无爆音，未见重叠，含填充词 uh。",
+        "visual": "四宫格重排：左上 Participant A、右上为黑块遮脸格、中央另嵌一个画中画小窗亦为黑块遮脸、左下 Participant C、右下 Participant D；A 唇部开合较明显。",
+        "uncertainty": "第二句说话人归属不确定（声线差异+剪辑）；同屏出现两处黑块遮脸与一处画中画，遮挡者姓名不可见。"
+      },
+      {
+        "start": 45.0,
+        "end": 50.0,
+        "audio": "第二句续：'…is a new remote control, uh should be'，句尾再次不完整；无金额/机构/否定，无爆音，无重叠。",
+        "visual": "四宫格再排：左上 Participant D、右上 Participant A、左下黑块遮脸格、右下 Participant C；A 与 C 均有轻微口型。",
+        "uncertainty": "音画对应不可确证；左下格脸与姓名被遮。"
+      },
+      {
+        "start": 50.0,
+        "end": 55.0,
+        "audio": "第二句尾音'should be'收束后趋于静音，无后续清晰语音；无金额/机构/否定，无爆音，无重叠。",
+        "visual": "切为单画面 Participant A 侧脸（书架+投影幕'DIAP'字样背景），唇部开合呈说话状；右下角画中画小窗内人脸被黑块遮挡。",
+        "uncertainty": "A 的口型与第二句声线可能对应但不确证；画中画为遮挡脸副窗。"
+      },
+      {
+        "start": 55.0,
+        "end": 60.0,
+        "audio": "基本静音/无清晰可辨语音，仅极低底噪；无金额/机构/否定词，无爆音，无重叠。",
+        "visual": "四宫格：左上黑块遮脸格、右上 Participant C、左下 Participant D、右下 Participant A；各格口型不明显，多为聆听/低头状态。",
+        "uncertainty": "该段无可归属的说话内容；左上格脸与姓名被遮，无法识别。"
+      }
+    ]
+  }
+}

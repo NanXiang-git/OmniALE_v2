@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14155,
+    "total_tokens": 18247,
+    "completion_tokens": 4092,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 683
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2885,
+      "text_tokens": 1207
+    }
+  },
+  "elapsed_seconds": 98.786,
+  "completed_utc": "2026-11-05T07:30:28.229981+00:00",
+  "request_sha256": "a19d16abcf99de69f3a2d2f8b1901509c274197173b8b081fd4a7ae7910b9cdb",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 60,
+        "end": 65,
+        "audio": "Speaker A (older female voice) begins: 'All right. And here's what the function design is supposed to be.' Around 63s a second female voice (Speaker C) starts overlapping: 'And it should have multiple purpose, like the remote control which we use for TV…'. Overlap present from ~63s; no silence, no clipping/pop.",
+        "visual": "Four-panel grid. Top-left = Participant A (short grey hair, glasses, red top over cream turtleneck); top-right = panel labelled '林岚 / Francina'; bottom-left = Participant C (dark hair, maroon top); bottom-right = Participant D (white hair, glasses, light blue top). All four faces fully visible with no blur/mask; all name labels legible and unobstructed. No picture-in-picture, no replay indicator. Static bottom overlay banner present (experiment caption), not occluding any face.",
+        "uncertainty": "Overlap beginning makes the exact A/C word boundary uncertain; speaker IDs inferred from voice timbre and matching lip movement in A's panel only."
+      },
+      {
+        "start": 65,
+        "end": 70,
+        "audio": "Overlap continues, dominated by Speaker C: '…it should be used for some other purpose also, like controlling—' (trails off). Speaker A's prior phrase has ended. Continuous speech, no silence in this window, no pop/clipping.",
+        "visual": "Layout switches to single large view of Participant A (mouth moving, consistent with earlier A speech / listening) plus a small picture-in-picture in the bottom-right showing '林岚 / Francina' (face visible, label visible). A's own label 'Participant A' visible bottom-left, unoccluded. No face masking anywhere.",
+        "uncertainty": "Because two voices overlapped just before this window, attributing the tail of the 'controlling' phrase strictly to C is probable but not certain from audio alone; PiP confirms Francina is on screen but her lip movement is too small to verify speech."
+      },
+      {
+        "start": 70,
+        "end": 75,
+        "audio": "Speaker C's overlapping phrase finishes (~70-72s), followed by a clear silence/gap from roughly 72s to 75s. No music, no pop; just room-tone silence.",
+        "visual": "Four-panel grid rearranged: top-left = Participant C, top-right = Participant D, bottom-left = Participant A, bottom-right = '林岚 / Francina'; a central picture-in-picture of Francina overlays the panel intersection. The PiP partially occludes the top-row name labels (Participant D's label reads only ': D'); no faces are occluded. Bottom overlay banner present.",
+        "uncertainty": "Silence boundary (~72-75s) estimated from the merged track; exact onset of the gap uncertain by ±1s. PiP-induced label occlusion noted but faces remain identifiable."
+      },
+      {
+        "start": 75,
+        "end": 80,
+        "audio": "Speaker A resumes (no overlap): 'Here's a project finance, uh, which of course we all have to think about when we design this thing.' Filler 'uh' preserved; no institution name spoken; no amount yet. No clipping.",
+        "visual": "Four-panel grid: top-left = '林岚 / Francina', top-right = Participant C, bottom-left = Participant D, bottom-right = Participant A. All faces visible, no masking; all four name labels fully legible (no PiP in this window). Bottom overlay banner present.",
+        "uncertainty": "Speaker A attribution based on voice and on A's panel lip movement; the other three participants appear to be listening."
+      },
+      {
+        "start": 80,
+        "end": 85,
+        "audio": "Speaker A continues: 'Um, selling price is supposed to be 25 euro.' Amount '25 euro' clearly stated; filler 'Um' preserved; no negation, no institution. Speech ends ~84s, after which silence begins.",
+        "visual": "Single large view of Participant A (gesturing with hand near face, mouth moving) plus bottom-right picture-in-picture of '林岚 / Francina' (face and label visible). A's label 'Participant A' visible and unoccluded. No face masking.",
+        "uncertainty": "Transition from speech to silence around 84s is approximate; PiP Francina's lips not resolvable, so she is assumed non-speaking here."
+      },
+      {
+        "start": 85,
+        "end": 90,
+        "audio": "Silence / room tone only for the remainder of the segment (no speech, no overlap, no pop/clipping).",
+        "visual": "Four-panel grid: top-left = Participant D, top-right = Participant A, bottom-left = '林岚 / Francina', bottom-right = Participant C. All faces visible with no blur or mask; all name labels legible; no PiP, no replay indicator. Bottom overlay banner present.",
+        "uncertainty": "None significant; segment is silent and all four participants are visibly idle/listening."
+      }
+    ]
+  }
+}

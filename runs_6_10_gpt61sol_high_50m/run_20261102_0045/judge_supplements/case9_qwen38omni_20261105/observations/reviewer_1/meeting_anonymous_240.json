@@ -1,0 +1,53 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 24564,
+    "completion_tokens": 10350,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9632,
+      "text_tokens": 718
+    }
+  },
+  "elapsed_seconds": 187.615,
+  "completed_utc": "2026-11-05T07:48:50.727351+00:00",
+  "request_sha256": "c561e596648f85735c466273e9cc5730d84ad48c37412fcf8d27a83947ec106d",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 240,
+        "end": 249,
+        "audio": "可听到一段英语发言：Okay, the next meeting will be in thirty minutes. I think you all did you get notices on your... 句尾不完整。未闻明显重叠、爆音或削波；说话人归属不确定。",
+        "visual": "240-244为四宫格：Participant A、C、D面部和姓名标签可见；右上角Participant B面部被实心黑块遮挡，B姓名标签不可见。245-249切为Participant A主画面，右下角画中画显示B所在画面且面部仍被黑块遮挡。画面底部有烧录中文说明，称该段为早期发言回放/多轨剪辑等，仅作为画面文字记录。",
+        "uncertainty": "无法仅凭声音确认说话人是A、C、D或被遮挡的B；画中画是否为实时或回放不能由画面单独确认；B身份因遮挡不可核实。"
+      },
+      {
+        "start": 249,
+        "end": 255,
+        "audio": "无明显语音，疑似停顿/静音或低电平房间声；未闻重叠、爆音或削波。",
+        "visual": "250-254为多窗口布局：Participant C、D、A面部和标签可见；中间小窗及右下较大窗均显示B相关画面，B面部被黑块遮挡，B标签不可见。底部烧录中文说明仍称早期发言回放。",
+        "uncertainty": "静音/停顿边界为按音轨段落估计，未做波形级确认；249-250与254-255附近无逐帧采样，具体画面切换时刻不确定。"
+      },
+      {
+        "start": 255,
+        "end": 270,
+        "audio": "可听到另一段英语发言：And you know, you you will get specific um instructions for that. I think that's the end of the show. Yeah. 含重复you you和填充词um，句末Yeah。未闻明显重叠、爆音或削波；说话人归属不确定。",
+        "visual": "255-259四宫格重排：左上B面部被黑块遮挡且无可见B标签，右上C、左下D、右下A面部和标签可见。260-264为Participant A主画面，右下角画中画显示B画面且B面部被黑块遮挡。265-269四宫格：左上D、右上A、右下C面部和标签可见，左下B面部被黑块遮挡且无可见B标签。底部烧录中文说明称组合片段。269-270无采样帧。",
+        "uncertainty": "无法确认两段语音是否同一说话人，也无法确认Yeah是否不同人插话；269-270画面未采样，不能声称已看到；音轨末尾与30秒边界的精确对齐不确定。"
+      }
+    ]
+  }
+}

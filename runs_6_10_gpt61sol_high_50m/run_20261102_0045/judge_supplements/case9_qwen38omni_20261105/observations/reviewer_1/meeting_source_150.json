@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 17224,
+    "completion_tokens": 3037,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1654,
+      "text_tokens": 1383
+    }
+  },
+  "elapsed_seconds": 80.455,
+  "completed_utc": "2026-11-05T07:34:25.241841+00:00",
+  "request_sha256": "2b739752f303be8a04e7492d1544d61bd2a5719ed69fe3024ec6a429cba7c34f",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 150.0,
+        "end": 155.0,
+        "audio": "一名女性声音说：'I have more buttons on it or maybe clearly better marked buttons, yeah.' 语速正常，句尾有轻微附和感；背景有极低的房间底噪，无明显重叠、无爆音。说话人身份无法仅凭声音确定。",
+        "visual": "四分屏布局：左上 Participant C（深红上衣，书架背景），右上 Participant D（白发、浅蓝开衫，石墙画背景），左下 Participant A（灰短发、红衣米色高领），右下 林岚 / Francina（白衬衫，城市风景画背景）。四张脸均完整可见，无遮挡；四个姓名标签均清晰显示。底部字幕条写有 'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议' 及 '150.00s 含早期发言回放 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "该段音频与四分屏中任一人的口型无法可靠对应（多人同框且未见明显同步说话），说话人归属不确定。"
+      },
+      {
+        "start": 155.0,
+        "end": 160.0,
+        "audio": "基本静音，仅有轻微房间底噪/呼吸级噪声，无可辨语句，无重叠、无爆音。",
+        "visual": "切换为单一大画面 Participant A（灰短发、红衣、米色高领、戴眼镜，书架与 'DIAP' 海报背景），右下角叠加一个小画中画（PiP）显示 林岚 / Francina。主画面标签 'Participant A' 与 PiP 标签 '林岚 / Francina' 均可见，两张脸均无遮挡。底部字幕 '155.00s–159.00s 含早期发言回放'。Participant A 在此区间口型有开合动作，但与静音音轨不同步。",
+        "uncertainty": "画面中 Participant A 似乎在说话，但音轨此处静音，属编辑/回放造成的视听不同步，不能据此判定其为前一句或后一句的说话者。"
+      },
+      {
+        "start": 160.0,
+        "end": 165.0,
+        "audio": "仍为静音/极低底噪，无可辨语句，无重叠、无爆音。",
+        "visual": "布局变为带中心画中画的多窗格：左上 Participant A，右上 林岚 / Francina（标签右侧被裁切，仅见 '…rcina'），左下 Participant C，右下 Participant D，正中心另有一个小 PiP 显示 林岚 / Francina。所有可见脸均无遮挡；除右上标签被部分裁切外，其余姓名标签可读。底部字幕 '160.00s–164.00s 含早期发言回放'。",
+        "uncertainty": "右上窗格姓名标签被裁切，但结合中心 PiP 与既往帧可推断为 林岚 / Francina；音画仍不同步。"
+      },
+      {
+        "start": 165.0,
+        "end": 170.0,
+        "audio": "另一名/同一名女性声音开始说：'If it beeps when you clap because I think one of the big things that happens is people lose them, they can't find it.' 该句跨此段延续到下一段；发音清晰，无重叠、无爆音，背景底噪低。说话人身份仅凭声音不确定。",
+        "visual": "四分屏重排：左上 Participant D，右上 Participant A，左下 林岚 / Francina，右下 Participant C。四张脸均完整可见，四个姓名标签均清晰。底部字幕自 165.00s 起改为 '组合片段 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "多窗格下难以精确锁定发声者口型；声音性别/音色与 Participant A 或 Participant D 均可能相符，归属不确定。"
+      },
+      {
+        "start": 170.0,
+        "end": 175.0,
+        "audio": "上一句继续并完成：'…they can't find it.' 约在 172s 前后结束，之后转为静音/底噪；无重叠、无爆音。",
+        "visual": "切换为单一大画面 Participant D（白发、浅蓝开衫、黑高领，石墙画背景），右下角叠加小 PiP 显示 林岚 / Francina。主标签 'Participant D' 与 PiP 标签 '林岚 / Francina' 均可见，两张脸无遮挡。底部字幕 '170.00s–174.00s 组合片段'。Participant D 口型在此段有开合，与正在播放的语句大致方向一致但非严格连续会议同步。",
+        "uncertainty": "虽为单人主画面且口型动，但因属'组合片段'剪辑，仍不能排除音轨来自其他时刻的回放；说话人归属保留不确定。"
+      },
+      {
+        "start": 175.0,
+        "end": 180.0,
+        "audio": "静音/极低房间底噪，无可辨语句，无重叠、无爆音。",
+        "visual": "四分屏再次重排：左上 林岚 / Francina，右上 Participant C，左下 Participant D，右下 Participant A。四张脸均完整可见，四个姓名标签均清晰可读。底部字幕 '175.00s–179.00s 组合片段'。各人多为倾听/低头或侧视状态，无明显同步说话口型。",
+        "uncertainty": "此段无语音，无法做说话人对应；仅记录静态布局与无遮挡事实。"
+      }
+    ]
+  }
+}

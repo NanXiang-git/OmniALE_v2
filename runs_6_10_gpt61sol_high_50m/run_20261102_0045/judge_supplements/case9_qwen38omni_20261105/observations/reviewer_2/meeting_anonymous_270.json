@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 18706,
+    "completion_tokens": 4492,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3801,
+      "text_tokens": 691
+    }
+  },
+  "elapsed_seconds": 102.678,
+  "completed_utc": "2026-11-05T07:48:34.125648+00:00",
+  "request_sha256": "fc72d18fe27e5ff1fb4a884017d7c205763d687f899ede3832373dd772069e41",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 270.0,
+        "end": 279.0,
+        "audio": "英文女声（疑似Participant A）：'So, um, we have, well, we have a time, two, two, two, three minutes. Um, any questions at this point or suggestions?' 语速正常，有停顿和重复（two, two...）。",
+        "visual": "270-274s为四宫格布局：左上Participant C，右上Participant D，左下Participant A，右下为黑色方块遮挡的脸（无可见姓名标签）。275-279s切换为Participant A全屏画面，右下角有画中画显示被黑色方块遮挡的脸。Participant A嘴型与音频同步。",
+        "uncertainty": "说话人身份基于口型推测为Participant A。"
+      },
+      {
+        "start": 279.0,
+        "end": 281.0,
+        "audio": "中文女声（清晰，音质与前后英文不同，疑似合成或独立插入）：'资料来自林兰研究所。这是机构名称。'",
+        "visual": "279s仍为Participant A全屏。280s切换为新的四宫格布局：左上Participant A，右上黑色遮挡脸，左下Participant C，右下Participant D。画面中央叠加了一个小的画中画，显示的也是黑色遮挡脸。",
+        "uncertainty": "“林兰研究所”为听录内容，可能是特定测试机构名。"
+      },
+      {
+        "start": 281.0,
+        "end": 285.0,
+        "audio": "英文女声（疑似Participant A）：'Basically, basically you will get instructions to work with.'",
+        "visual": "281-284s保持280s的四宫格布局（A在左上说话）。285s切换为另一四宫格布局：左上Participant D，右上Participant A，左下黑色遮挡脸，右下Participant C。",
+        "uncertainty": "无。"
+      },
+      {
+        "start": 285.0,
+        "end": 300.0,
+        "audio": "静音（无声音）。",
+        "visual": "285-289s四宫格中，右上Participant A嘴部持续做说话动作。290-294s切换为Participant A全屏（右下画中画为黑块脸），A嘴部持续说话。295-299s切换为四宫格（左上黑块脸，右上C，左下D，右下A），A（右下）嘴部持续说话。画面显示有人在说话，但音频轨为静音，符合“多轨剪辑/重组”特征。",
+        "uncertainty": "音画不同步（画面有声口型，音频静音）。"
+      }
+    ]
+  }
+}

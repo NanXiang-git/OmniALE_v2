@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14171,
+    "total_tokens": 20291,
+    "completion_tokens": 6120,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 699
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4921,
+      "text_tokens": 1199
+    }
+  },
+  "elapsed_seconds": 128.758,
+  "completed_utc": "2026-11-05T07:43:57.477666+00:00",
+  "request_sha256": "905493c25d98cf5e7f40baae6f02341080d5edc629f41a45e61cd2300a69d858",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 0,
+        "end": 5,
+        "audio": "女声开场：'Very good. And as you already know, I'm Betsy. I'm the project manager for today.' 自称Betsy、角色project manager；无金额、无机构专名；未闻爆音或双人重叠。",
+        "visual": "四宫格。左上Participant A（红衣、短发、眼镜）口型活动；右上Participant B脸部被黑色矩形完全遮挡，背景为墙上风景画框；左下Participant C（深发）；右下Participant D（白发、眼镜）。底部黑条显示通用标签'Participant A/C/D'及中文声明'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议'与时间戳'000.00s 组合片段｜音频保留原说话者，不合成其声音'。无真实姓名可见。",
+        "uncertainty": "视觉基于0–4s整数秒采样帧。说话人自称Betsy/project manager，与画面A口型大致吻合，但因声明为多轨重组，声画归属未确认。仅B脸被遮挡，姓名均以Participant字母匿名化。"
+      },
+      {
+        "start": 5,
+        "end": 10,
+        "audio": "同一女声续：'So why don't we look at the presentation to see what we really are supposed to do.' 含否定形式don't；无金额、无机构专名；段末疑有短暂静音间隙，未闻爆音/重叠。",
+        "visual": "切为主画面Participant A近景（口型活动，背景书架），右下角画中画为Participant B（脸仍被黑块遮挡）。底部标签'Participant A'及相同中文声明/时间戳。",
+        "uncertainty": "视觉基于5–9s采样帧。出现主画面+右下画中画结构。否定词don't保留。说话人归属仍不确定，声画同步不可靠。"
+      },
+      {
+        "start": 10,
+        "end": 15,
+        "audio": "该窗口内主要为停顿/低电平过渡，无可辨识完整语句；未闻爆音或重叠。",
+        "visual": "多窗口叠加布局：上排左Participant C、右Participant D；中央悬浮一小画中画显示Participant B（黑块遮挡）；下排左Participant A、右为一较大黑色遮挡块（疑B的另一视图）。整体呈拼接/回放观感。底部声明/时间戳持续。",
+        "uncertainty": "视觉基于10–14s采样帧。叠加+画中画布局符合'多轨剪辑/非原始连续会议'的回放拼接特征。音频此处近似静音，但与画面口型活动不同源，同步不可信。"
+      },
+      {
+        "start": 15,
+        "end": 20,
+        "audio": "另一女声：'And I'm a marketing person. I want to figure out how to sell them.' 自称marketing person；无金额、无机构专名；未闻爆音/重叠。",
+        "visual": "四宫格重排：左上Participant B（黑块遮挡），右上Participant C，左下Participant D，右下Participant A（口型活动）。底部声明/时间戳持续。",
+        "uncertainty": "视觉基于15–19s采样帧。marketing说话人身份未确认——可能与画面C/D或遮挡的B对应，音画明显不同步，故不归因到具体格子。仅B脸遮挡。"
+      },
+      {
+        "start": 20,
+        "end": 25,
+        "audio": "该窗口内主要为停顿/过渡，无可辨识原声语句；未闻爆音或重叠。",
+        "visual": "主画面Participant D近景，口型基本静止/微笑；右下角画中画为Participant B（黑块遮挡）。底部标签'Participant D'及相同声明/时间戳。",
+        "uncertainty": "视觉基于20–24s采样帧。主画面+画中画结构再现。D口型静止而音频为过渡/静音，进一步印证重组错位；说话人归属不适用。"
+      },
+      {
+        "start": 25,
+        "end": 30,
+        "audio": "合成中文语音（TTS）：'现在请继续介绍。' 非原与会者声音，与底部'不合成其声音'所指原声不同源；无金额、无否定、无机构专名；未闻爆音/重叠。",
+        "visual": "四宫格：左上Participant D，右上Participant A（口型活动），左下Participant B（黑块遮挡），右下Participant C（口型活动）。底部声明/时间戳持续至29s采样帧。",
+        "uncertainty": "视觉基于25–29s采样帧。该窗口画面显示A、C口型活动，但音频为合成中文提示，二者不同源，证实多轨回放/拼接；中文TTS说话人性别与身份均不确定，且不属于原会议声轨。仅B脸持续被黑块遮挡，全员姓名以Participant字母匿名化，无真实姓名可见。"
+      }
+    ]
+  }
+}

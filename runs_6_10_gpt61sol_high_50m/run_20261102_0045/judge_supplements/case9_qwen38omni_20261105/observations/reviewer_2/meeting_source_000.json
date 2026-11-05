@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14144,
+    "total_tokens": 17001,
+    "completion_tokens": 2857,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 672
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1657,
+      "text_tokens": 1200
+    }
+  },
+  "elapsed_seconds": 84.867,
+  "completed_utc": "2026-11-05T07:27:11.145902+00:00",
+  "request_sha256": "bf1f289fb021e785c0ab614f9d93ada950da7388f4b29a2c3798e0ad974f1405",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 0.0,
+        "end": 5.0,
+        "audio": "重叠女声串音：一名说话者说“Very good. And…”，同时另一名说话者自我介绍“My name is Francina and I'm a … user interface …”，并提及“Betsy”“project manager”等角色词；语句不完整、互相覆盖，无明显爆音，仅有轻微底噪。",
+        "visual": "2×2 网格四路画面：左上 Participant A（灰发年长女性、红色上衣、戴耳麦），右上 林岚 / Francina（深色头发、白色上衣、头戴麦克风），左下 Participant C（深色头发、酒红上衣），右下 Participant D（白发年长女性、浅蓝上衣）。四张脸均清晰可见、无遮挡；姓名/标签文字直接显示在画格下方。底部有固定脚注“AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议”及时间码“000.00s 组合片段”。",
+        "uncertainty": "因开头为多人串音，无法可靠地把每句话对应到具体画格中的说话者；姓名标签为界面叠加文字，非口播确认。"
+      },
+      {
+        "start": 5.0,
+        "end": 10.0,
+        "audio": "串音减弱，一名女声较清晰地说“So why don't we look at the presentation to see what we really are supposed to do.”；句间有自然停顿，无爆音。",
+        "visual": "布局切换为单路主画面 Participant A（灰发红衣女性， mouth 在动），右下角出现画中画小窗为 林岚 / Francina，小窗带“林岚 / Francina”标签。主画面与 PiP 的脸均可见、无遮挡。脚注时间码更新为 005.00s–009.00s。",
+        "uncertainty": "主画面人物口型与所听句子大致同步，但 PiP 中人也似在动，说话者归属仍不能百分百确定。"
+      },
+      {
+        "start": 10.0,
+        "end": 15.0,
+        "audio": "另一名女声说“And I'm a marketing person, I want to figure out how to sell them.”；语速正常，无重叠、无爆音。",
+        "visual": "2×2 网格重排：左上 Participant C，右上 Participant D，左下 Participant A，右下 林岚 / Francina；画面中央另叠加一个 林岚 / Francina 的画中画小窗（带标签）。所有脸可见、无遮挡。脚注时间码 010.00s–014.00s。",
+        "uncertainty": "中央 PiP 与右下格为同一人重复显示；“marketing person”一句的说话者在四格中无法仅凭静态帧锁定。"
+      },
+      {
+        "start": 15.0,
+        "end": 20.0,
+        "audio": "前句尾音延续后转为短暂静音/低底噪，无新清晰语义内容，无爆音。",
+        "visual": "2×2 网格再次重排：左上 林岚 / Francina，右上 Participant C，左下 Participant D，右下 Participant A。四脸均清晰、无遮挡，姓名标签照常显示。脚注时间码 015.00s–019.00s。",
+        "uncertainty": "此段音频信息稀少，难以判断谁在沉默或准备发言。"
+      },
+      {
+        "start": 20.0,
+        "end": 25.0,
+        "audio": "基本为静音/底噪，随后接近段尾出现一段语调平直、合成感明显的女声中文 TTS：“现在请林岚继续介绍。”（非自然会议口语，含姓名“林岚”）。",
+        "visual": "布局切为单路主画面 Participant D（白发浅蓝上衣女性），右下角画中画小窗为 林岚 / Francina（带标签）。两脸均可见、无遮挡。脚注时间码 020.00s–024.00s。",
+        "uncertainty": "中文 TTS 音色与前面英语真人声明显不同，疑似后期插入/合成轨；其指向的“林岚”与画面标签同名，但无法据此确认现场说话人。"
+      },
+      {
+        "start": 25.0,
+        "end": 30.0,
+        "audio": "TTS 句尾结束后转为静音/低底噪直至本段结束，无重叠、无爆音。",
+        "visual": "2×2 网格：左上 Participant D，右上 Participant A，左下 林岚 / Francina，右下 Participant C。四脸均清晰、无遮挡，姓名标签显示。脚注时间码 025.00s–029.00s。",
+        "uncertainty": "末段无清晰口播语义，无法核实各画格人物是否实际发声。"
+      }
+    ]
+  }
+}

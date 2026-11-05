@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14155,
+    "total_tokens": 19263,
+    "completion_tokens": 5108,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 683
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3969,
+      "text_tokens": 1139
+    }
+  },
+  "elapsed_seconds": 112.465,
+  "completed_utc": "2026-11-05T07:28:55.604099+00:00",
+  "request_sha256": "af62d3edc682cbe9b280951096cbb052a2cafa643e55d47e73a3c1ecdb852ed4",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 30,
+        "end": 35,
+        "audio": "单一女声，带大量填充词，自报姓名（听感近似“Jan B / JAN B”，拼写不确定），随后称“my role is to design … television remote control”，并述职责“deal with technical functional designs and specifications of user …”，句尾中断；无重叠、无爆音。",
+        "visual": "四格布局：左上 Participant C（深发、额有红点、酒红上衣）、右上 Participant D（白发戴镜、浅蓝上衣）、左下 Participant A（灰白短发戴镜、红衣米高领）、右下标签“林岚 / Francina”（深发白衣戴耳麦）。四张脸均清晰、无任何遮挡；四个姓名标签均清晰、无遮挡。多人嘴部有轻微张合，无法确指发声者。",
+        "uncertainty": "自报姓名的拼写不确定；音频说话人与画面嘴动者对应关系不确定，符合多轨重组/串音特征。画面与音频中出现的姓名均属原片固有内容。"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "audio": "同一女声续前句“… responsibilities are … deal with technical functional designs and specifications of user”，句未完即止；无重叠、无爆音。",
+        "visual": "切为单格大图 Participant C，右下角叠加小画中画“林岚 / Francina”。Participant C 低头、约37秒明显张口；画中画内 Francina 亦低头。主图与画中画的脸均清晰无遮挡，姓名标签清晰无遮挡。",
+        "uncertainty": "自报姓名与画面标签不一致，声源归属不确定；画中画为同步小窗而非独立回放，性质不确定。"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "audio": "前句收尾后，约44秒起女声另起一句“Here is what this thing should be. This thing we are gonna, uh, uh, design …”，带重复填充词；无重叠、无爆音。",
+        "visual": "四格重排并在中央叠加小画中画“林岚 / Francina”：左上 Participant A（侧头、张嘴似说话）、右上为 Francina（标签被裁切仅见“…icina”）、中央小窗 Francina、左下 Participant C（低头）、右下 Participant D（静听）。各脸清晰无遮挡；右上标签部分被裁切但非人为隐私遮挡。",
+        "uncertainty": "是否更换说话人不确定；布局切换频繁，声源与画面嘴动者未必一致。"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "audio": "女声续“… is a new remote control, uh, should be …”，句未完；无重叠、无爆音。",
+        "visual": "四格：左上 Participant D、右上 Participant A（侧头）、左下“林岚 / Francina”、右下 Participant C（低头）。Francina 与 Participant C 嘴部有动作，Participant A 呈侧向倾听/说话状。四脸清晰无遮挡，姓名标签清晰无遮挡。",
+        "uncertainty": "声源与画面嘴动者对应不确定；可能为同一人连续发言，亦可能为剪辑拼接，无法确证。"
+      },
+      {
+        "start": 50,
+        "end": 55,
+        "audio": "约53秒语音结束，此后转静音；结束前仍为同一女声尾句，无重叠、无爆音。",
+        "visual": "单格大图 Participant A 侧脸，右下角叠加小画中画“林岚 / Francina”。Participant A 嘴部在50–51秒微动后闭合，呈倾听状；画中画内 Francina 低头。两脸清晰无遮挡，标签清晰无遮挡。",
+        "uncertainty": "语音结束点估计有约±1秒误差；画中画性质同前。"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "audio": "全程静音，无语音、无重叠、无爆音（仅原媒体流内的静音，不含人为分隔段）。",
+        "visual": "四格：左上“林岚 / Francina”、右上 Participant C、左下 Participant D、右下 Participant A。Francina 与 Participant C 嘴部似有微动，但无对应声音；Participant D、A 静听。四脸清晰无遮挡，姓名标签清晰无遮挡。本段视觉仅基于55–59秒采样帧，未声称查看60秒帧。",
+        "uncertainty": "画面嘴部微动与静音不符，符合重组/串音残留特征，不据此推断说话人。"
+      }
+    ]
+  }
+}

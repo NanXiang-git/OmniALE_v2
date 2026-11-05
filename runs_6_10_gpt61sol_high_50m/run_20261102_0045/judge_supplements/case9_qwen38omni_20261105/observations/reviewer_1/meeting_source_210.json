@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 15390,
+    "completion_tokens": 1203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 508,
+      "text_tokens": 695
+    }
+  },
+  "elapsed_seconds": 59.425,
+  "completed_utc": "2026-11-05T07:36:44.223180+00:00",
+  "request_sha256": "27069a861e206f377a6f264365857a3a346f555c9e370ac3313530b1f6474116",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 210.0,
+        "end": 215.0,
+        "audio": "女声A说：'certain darkness and it has a sensor and it gives out a signal whether that be a light signal or...'，期间有另一女声B插话重叠：'and my remote control uh television remote control'。",
+        "visual": "四宫格布局。左上Participant C，右上Participant D，左下Participant A，右下林岚 / Francina。Participant A正在说话并伴有手势。无面部或姓名遮挡。",
+        "uncertainty": "插话的女声B无法仅凭声音确定是C还是Francina。"
+      },
+      {
+        "start": 215.0,
+        "end": 220.0,
+        "audio": "静音或极微弱的背景音，无明显语音。",
+        "visual": "切换为Participant A的大画面，右下角有林岚 / Francina的小画中画。Participant A在说话。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 220.0,
+        "end": 225.0,
+        "audio": "女声A继续说：'you know there would be right you have to have some kind of sensor and I I think voice or clapping that's not specific enough uh I know there are the lamps and stuff you know'。",
+        "visual": "非标准四宫格布局。左上Participant A，右上林岚 / Francina，左下Participant C，右下Participant D。画面中央偏下还有一个林岚 / Francina的小画中画。Participant A在说话。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 225.0,
+        "end": 230.0,
+        "audio": "女声A的语音继续，但逐渐减弱或停顿。",
+        "visual": "四宫格布局。左上Participant D，右上Participant A，左下林岚 / Francina，右下Participant C。Participant A在做手势（类似OK手势）。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 230.0,
+        "end": 235.0,
+        "audio": "无明显语音，可能有轻微环境音。",
+        "visual": "切换为Participant A的大画面，右下角有林岚 / Francina的小画中画。Participant A在说话并做手势。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 235.0,
+        "end": 240.0,
+        "audio": "无明显语音。",
+        "visual": "四宫格布局。左上林岚 / Francina，右上Participant C，左下Participant D，右下Participant A。Participant A在说话。",
+        "uncertainty": "无"
+      }
+    ]
+  }
+}

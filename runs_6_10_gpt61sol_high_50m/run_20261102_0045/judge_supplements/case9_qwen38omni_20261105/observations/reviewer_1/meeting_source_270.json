@@ -1,0 +1,67 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 18242,
+    "completion_tokens": 4055,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3144,
+      "text_tokens": 911
+    }
+  },
+  "elapsed_seconds": 92.971,
+  "completed_utc": "2026-11-05T07:39:52.053842+00:00",
+  "request_sha256": "98f8004c50fcbdc124734a1a68a56323a73dfa117131e0d8fbe7be92bb72f3ce",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 270,
+        "end": 273,
+        "audio": "一名女声起头“So, um…”，随即另一女声插入“Design should be, yeah, it should be different. All the, all most…”，两声重叠；无明显爆音。",
+        "visual": "四宫格：左上 Participant C、右上 Participant D、左下 Participant A、右下“林岚 / Francina”。四人面部均清晰、无遮挡，姓名标签完整。底部黑条字幕“AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议”及“270.00s 含早期发言回放｜音频保留原说话者，不合成其声音”。",
+        "uncertainty": "开头两声重叠，插入声的说话人无法确指；画面带“重组/回放”标注，声画对应关系不可靠。"
+      },
+      {
+        "start": 273,
+        "end": 277,
+        "audio": "主女声续“…we have probably twenty to two to two three minutes. Um, any questions at this point or suggestions?”，含口吃式重复“two to two to two three”。",
+        "visual": "约275s起切为 Participant A 大画面，右下角小画中画“林岚 / Francina”；Participant A 嘴部在动。底部仍为“含早期发言回放”。",
+        "uncertainty": "主声推测为 Participant A，但无确证；右下小窗属回放层。"
+      },
+      {
+        "start": 277,
+        "end": 280,
+        "audio": "出现中文合成/TTS 音播报“资料来自林岚研究所。这是机构名称。”，紧随/叠于英文底声之后。",
+        "visual": "仍为 Participant A 大画面＋右下画中画“林岚 / Francina”。",
+        "uncertainty": "该中文播报疑为后期叠加的元数据音，非会议原声；其与“不合成其声音”标注的关系不明；所闻机构名为“林岚研究所”，而画面标签仅为“林岚 / Francina”，二者不完全一致。"
+      },
+      {
+        "start": 280,
+        "end": 283,
+        "audio": "英文主女声“I think basically, basically you will get instructions to work with.”，含重复“basically, basically”。",
+        "visual": "约280s起为混合布局：左上 Participant A、右上“林岚 / Francina”、中央一小画中画“林岚 / Francina”、左下 Participant C、右下 Participant D。右上姓名标签被中央小窗遮挡，仅余“cina”可见。底部“含早期发言回放”。",
+        "uncertainty": "右上标签系布局重叠导致的局部截断，并非人脸遮挡；该句说话人归属不确定。"
+      },
+      {
+        "start": 283,
+        "end": 300,
+        "audio": "约283–285s后进入静音，无人声、无爆音，持续至300s。",
+        "visual": "285–289s 四宫格（D／A／林岚／C），底部字幕切换为“组合片段｜音频保留原说话者，不合成其声音”；290–294s Participant A 大画面＋右下画中画林岚/Francina；295–299s 四宫格（林岚／C／D／A）。各采样帧人脸均无遮挡。",
+        "uncertainty": "此段画面持续切换重组布局而音轨静音，声画不同步，进一步印证为多轨剪辑的回放/组合片段；仅依据整数秒采样帧描述，未声称查看未采样帧。"
+      }
+    ]
+  }
+}

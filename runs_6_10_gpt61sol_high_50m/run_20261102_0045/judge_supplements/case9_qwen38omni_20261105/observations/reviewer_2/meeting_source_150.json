@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 16904,
+    "completion_tokens": 2717,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1714,
+      "text_tokens": 1003
+    }
+  },
+  "elapsed_seconds": 79.635,
+  "completed_utc": "2026-11-05T07:34:32.016677+00:00",
+  "request_sha256": "7df8d39f2e49c28228ac8a3ae7b4e990304837fc56f204806601ff93591937da",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 150.0,
+        "end": 155.0,
+        "audio": "一名女声说：‘…have more buttons on it, or maybe clearly better marked buttons…’，句尾词听感接近 ‘yet’ 但不确定；开头处似有极轻的另一起音/重叠（听感像 ‘get…clearly’），无法确认是否为第二说话人。无爆音。",
+        "visual": "四宫格布局：左上 Participant C、右上 Participant D、左下 Participant A、右下标注 ‘林岚 / Francina’。Participant A 嘴部在动，C 低头/侧视，D 静听。底部叠加文字 ‘AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议’ 及 ‘150.00s 含早期发言回放｜音频保留原说话者，不合成其声音’。各脸无遮挡，姓名以标签形式可见。",
+        "uncertainty": "说话人身份未由画面口型唯一确认（A 在动但音频可能来自回放轨）；句尾词与是否存在第二人重叠均不确定。"
+      },
+      {
+        "start": 155.0,
+        "end": 164.0,
+        "audio": "静音，无语音、无重叠、无爆音（约 155–164s 区间为空白）。",
+        "visual": "155–159s 切为 Participant A 大画面 + 右下画中画 ‘林岚 / Francina’；160–164s 切为多窗布局：左上 A、右上 Francina 大窗、中央小画中画 Francina、左下 C、右下 D，Francina 嘴部在动。底部叠加文字随时间更新为 155–164s 段说明。脸无遮挡，姓名标签可见，存在画中画/回放式排版。",
+        "uncertainty": "画面中 A 与 Francina 均有口型活动但该时段音轨静音，符合‘早期发言回放/多轨剪辑’造成的音画不同步，不能据此判定当前发声者。"
+      },
+      {
+        "start": 164.0,
+        "end": 171.0,
+        "audio": "一名女声说：‘if it beeps when you clap, because I think one of the big things that happens is people lose them, they can’t find it.’ 语速平稳，无明显重叠或爆音。",
+        "visual": "165–169s 四宫格重排：左上 D、右上 A、左下 ‘林岚 / Francina’、右下 C，Francina 与 A 口型有变化；170–171s 切为 Participant D 大画面 + 右下画中画 Francina，D 面带微笑/口型微动。底部叠加文字 ‘165.00s 组合片段｜音频保留原说话者，不合成其声音’ 等。脸无遮挡，姓名标签可见。",
+        "uncertainty": "该句发声者与画面口型对应关系不确定（D 大窗时音频仍在继续，可能为回放轨）；是否同一说话人延续前段无法确认。"
+      },
+      {
+        "start": 171.0,
+        "end": 180.0,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "171–174s 维持 Participant D 大画面 + 画中画 Francina，D 微笑；175–179s 切回四宫格：左上 Francina、右上 C、左下 D、右下 A，多人口型/头部转动。底部叠加文字 ‘170–179s 组合片段｜音频保留原说话者，不合成其声音’。脸无遮挡，姓名标签 ‘林岚 / Francina’ 与 Participant A/C/D 持续可见，含画中画与回放排版。",
+        "uncertainty": "画面有多人口型活动但音轨静音，属剪辑/回放导致的不同步，无法指认发声者；本段未听到任何被念出的姓名，姓名仅以屏幕标签形式出现。"
+      }
+    ]
+  }
+}

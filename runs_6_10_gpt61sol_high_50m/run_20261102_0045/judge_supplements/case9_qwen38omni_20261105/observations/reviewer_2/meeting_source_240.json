@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 18263,
+    "completion_tokens": 4076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3176,
+      "text_tokens": 900
+    }
+  },
+  "elapsed_seconds": 101.021,
+  "completed_utc": "2026-11-05T07:38:56.769439+00:00",
+  "request_sha256": "61698adad7f45d0d4275e97e52d8c8bf6d516a967569038547b76f1b4cc2786b",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 240,
+        "end": 250,
+        "audio": "女声1(音色倾向Participant A): 'Okay, the next meeting will be in thirty minutes. I think you'll... did you get the notice on your...' 与女声2(口音不确定，可能为Participant C或林岚/Francina)明显重叠(crosstalk): 'And it should have multiple purpose like a remote control which we use for TV, it should... it should be used for some other purpose also like controlling'。两轨交叠，无爆音/clipping。",
+        "visual": "240-244s为四宫格(Participant A左上／林岚·Francina右上／Participant C左下／Participant D右下)；245-249s切为Participant A大画面并在右下角叠加画中画(林岚·Francina)。各格人脸均清晰、无遮挡或打码，姓名标签完整可读。画面底部叠加文字'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议'及时戳行'24x.00s 含早期发言回放｜音频保留原说话者，不合成其声音'。",
+        "uncertainty": "重叠段两位女声的归属未做声纹确认；视觉呈现A张口/手势姿态而音频同时含第二说话轨，存在音画轨错位的可能(符合'多轨剪辑/早期发言回放'标注)。"
+      },
+      {
+        "start": 250,
+        "end": 253,
+        "audio": "女声2尾词'...controlling'结束后进入约2-3秒低电平/近静音，无清晰语音，无爆音。",
+        "visual": "250-254s为变形四宫格(Participant C左上／Participant D右上／Participant A左下／林岚·Francina右下)，并在画面中央额外叠加一幅画中画(林岚·Francina)。人脸无遮挡，姓名完整。底部仍为'含早期发言回放'标注。",
+        "uncertainty": "静音起止边界为近似估计；中央画中画与右下格为同一人(林岚·Francina)的重复显示。"
+      },
+      {
+        "start": 253,
+        "end": 259,
+        "audio": "女声1(音色倾向Participant A)单轨: 'And you know, you will get specific instructions for that. I think that's the end of the show. Yeah.' 无明显重叠，无爆音。",
+        "visual": "255-259s四宫格重排(林岚·Francina左上／Participant C右上／Participant D左下／Participant A右下)。人脸无遮挡，姓名完整可读。底部文字切换为'组合片段｜音频保留原说话者，不合成其声音'。",
+        "uncertainty": "说话人归属仅基于音色倾向，未经声纹核实。"
+      },
+      {
+        "start": 259,
+        "end": 270,
+        "audio": "自约原媒体259s起至段末为静音/极低电平，无语音内容，无爆音。",
+        "visual": "260-264s为Participant A大画面+右下画中画(林岚·Francina)；265-269s为四宫格(Participant D左上／Participant A右上／林岚·Francina左下／Participant C右下)。所有可见人脸均无遮挡或打码，全部姓名标签(Participant A/C/D 及 林岚·Francina)完整显示。底部维持'组合片段'标注。",
+        "uncertainty": "末尾静音时长依合并音轨估计；本段采样帧内未观察到任何人脸遮挡、姓名遮挡或马赛克处理。"
+      }
+    ]
+  }
+}

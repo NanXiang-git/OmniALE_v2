@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 21882,
+    "completion_tokens": 7668,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6513,
+      "text_tokens": 1155
+    }
+  },
+  "elapsed_seconds": 131.696,
+  "completed_utc": "2026-11-05T07:46:56.366905+00:00",
+  "request_sha256": "103a6f1baa6639e8ecd9a336d76554495265b465c4af863ebafcdb05c2959b4c",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 210,
+        "end": 215,
+        "audio": "certain darkness it has a sensor and it gives out a signal whether that be a light signal or",
+        "visual": "四宫格布局：左上Participant C（面部及姓名标签清晰可见），右上Participant D（面部及姓名标签清晰可见），左下Participant A（面部及姓名标签清晰可见），右下角区域面部被纯黑色矩形完全遮挡且无姓名标签；画面底部叠加文字标注“210.00s 含早期发言回放 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "该段语音说话人无法确定为Participant C或D（两人均处于画面中且无明确口型同步证据）；无语音重叠、无长时静音、无爆音；遮挡区域仅确认面部不可见，未验证遮挡下是否存在其他身份信息"
+      },
+      {
+        "start": 215,
+        "end": 220,
+        "audio": "you know there would be right you have to have some kind of sensor",
+        "visual": "主画面为Participant A（面部及姓名标签清晰可见，佩戴耳麦），右下角嵌入小型画中画窗口，窗口内面部被纯黑色矩形遮挡且无姓名标签；画面底部叠加文字标注“215.00s 含早期发言回放 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "语音内容与主画面Participant A的口型运动趋势一致，但无法100%排除串音可能；画中画窗口来源及内容性质未验证；无重叠/静音/爆音"
+      },
+      {
+        "start": 220,
+        "end": 225,
+        "audio": "and I I think voice or clapping that's not specific enough",
+        "visual": "四宫格布局：左上Participant A（面部及姓名标签可见），右上角区域面部被纯黑色矩形遮挡且无姓名标签，左下Participant C（面部及姓名标签可见），右下Participant D（面部及姓名标签可见）；画面中央额外叠加一个独立画中画窗口，其内部面部被纯黑色矩形遮挡且无姓名标签；底部文字标注“220.00s 含早期发言回放 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "语音延续前段特征，倾向归属Participant A，但中央画中画与右上角遮挡窗口的原始说话人身份无法确认；无重叠/静音/爆音；遮挡区域未验证是否含姓名文本"
+      },
+      {
+        "start": 225,
+        "end": 230,
+        "audio": "uh I know there are the lamps and stuff",
+        "visual": "四宫格布局：左上Participant D（面部及姓名标签可见），右上Participant A（面部及姓名标签可见），左下角区域面部被纯黑色矩形遮挡且无姓名标签，右下Participant C（面部及姓名标签可见）；底部文字标注由“含早期发言回放”变更为“225.00s 组合片段 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "“组合片段”标注表明该段画面非连续原始会议流，语音与画面时序对应关系存疑；说话人仍倾向Participant A但无法排除剪辑引入的错位；无重叠/静音/爆音"
+      },
+      {
+        "start": 230,
+        "end": 235,
+        "audio": "you know",
+        "visual": "主画面为Participant A（面部及姓名标签清晰可见），右下角嵌入画中画窗口，窗口内面部被纯黑色矩形遮挡且无姓名标签；底部文字标注“230.00s 组合片段 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "“you know”为短语尾音，持续时间短，与主画面口型匹配度中等；画中画遮挡区域身份未验证；无重叠/静音/爆音；组合片段属性导致音画同步性不可靠"
+      },
+      {
+        "start": 235,
+        "end": 240,
+        "audio": "（无新增可辨识语音内容，仅存环境底噪）",
+        "visual": "四宫格布局：左上角区域面部被纯黑色矩形遮挡且无姓名标签，右上Participant C（面部及姓名标签可见），左下Participant D（面部及姓名标签可见），右下Participant A（面部及姓名标签可见）；底部文字标注“235.00s 组合片段 | 音频保留原说话者，不合成其声音”",
+        "uncertainty": "该5秒区间内未捕捉到有效语句，仅确认无爆音/重叠；左上遮挡窗口原始身份完全不可考；“组合片段”标注持续生效，音画关联性弱；未采样240.000s及之后帧，故不声称已查看"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 18060,
+    "completion_tokens": 3873,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2785,
+      "text_tokens": 1088
+    }
+  },
+  "elapsed_seconds": 93.563,
+  "completed_utc": "2026-11-05T07:38:18.440342+00:00",
+  "request_sha256": "9570f05a23e90fac6f55a6c179915387bfdb772534b60df8e916d2855d0b3725",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 240,
+        "end": 242,
+        "audio": "女声1（成熟音色）：'Okay, the next meeting will be in thirty minutes.'；约242秒处女声2起头重叠 'And it should have multiple…'。无爆音。",
+        "visual": "四宫格布局：左上 Participant A（灰发、眼镜、红衣），右上 林岚 / Francina（深发、白衣），左下 Participant C（深发、暗红衣），右下 Participant D（白发、眼镜、浅蓝衣）。四人面部均清晰、无模糊或遮挡；各姓名标签完整可见。底部叠加文字 'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议' 及 '240.00s 含早期发言回放 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "两路声线在242秒附近短暂重叠；女声1身份仅凭音色推测，未与画面口型确证对应。"
+      },
+      {
+        "start": 242,
+        "end": 252,
+        "audio": "女声2（较年轻音色）：'…purpose like a remote control which we use for TV, it should it should be used for some other purpose also like controlling'，含词语重复与中途停顿；无金额、无机构名、无否定词；无爆音。",
+        "visual": "242–244 仍为上述四宫格；245–249 切为 Participant A 大画面，右下角叠加 林岚 / Francina 画中画小窗；250–254 为混合布局（上排 Participant C、Participant D，中央叠加 Francina 小窗，下排 Participant A 与 Francina）。所有帧中人脸均无遮挡/模糊，姓名标签完整可读。底部仍标 '含早期发言回放'。",
+        "uncertainty": "主画面人物（A）口型与当前女声2音频不一致，符合'重组/回放'标注，故不能据画面断定说话人；女声2在 Francina 与 Participant C 之间难以仅凭音色区分。"
+      },
+      {
+        "start": 252,
+        "end": 256,
+        "audio": "静音/极低背景噪，无清晰语音，无重叠、无爆音。",
+        "visual": "250–254 混合布局延续；255–256 切为四宫格重排（左上 林岚 / Francina，右上 Participant C，左下 Participant D，右下 Participant A）。人脸与姓名标签均无遮挡。底部文字于255秒变为 '255.00s 组合片段 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "无显著不确定；仅记录布局切换与标注由'回放'转为'组合片段'。"
+      },
+      {
+        "start": 256,
+        "end": 261,
+        "audio": "女声1（与开头音色一致）：'And you know, you you will get specific instructions for that. I think that's the end of the show. Yeah.'，含 'you you' 重复；无金额、无机构名；无爆音。",
+        "visual": "256–259 为四宫格重排（Francina、C、D、A）；260–261 切为 Participant A 大画面 + 右下 Francina 画中画。各帧人脸无遮挡，姓名标签完整。底部标 '组合片段'。",
+        "uncertainty": "说话人含口吃式重复；音色与开头女声1相符，但无法仅凭音频确证即画面中的 Participant A。"
+      },
+      {
+        "start": 261,
+        "end": 270,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "260–264 Participant A 大画面 + 右下 Francina 画中画；265–269 四宫格（左上 Participant D，右上 Participant A，左下 林岚 / Francina，右下 Participant C）。全部采样帧中四人面部均清晰、无模糊或遮挡，姓名标签均完整可见；未见额外回放窗口，仅布局轮换。底部持续标 '组合片段 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "无；本段无语音可供说话人归属判断。"
+      }
+    ]
+  }
+}

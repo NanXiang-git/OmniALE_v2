@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 21298,
+    "completion_tokens": 7084,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5792,
+      "text_tokens": 1292
+    }
+  },
+  "elapsed_seconds": 128.746,
+  "completed_utc": "2026-11-05T07:46:50.791889+00:00",
+  "request_sha256": "b34c155d59f37ad303d7668f6aab7e4e8b11b7d5192438b36633346cb83cfb79",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 180,
+        "end": 185,
+        "audio": "女声（说话人归属不确定）：'Maybe it should have a light so that we can we can just recognize where it'，句尾在 'where it' 处不完整/截断；约180–184s 有语音，184–185s 转静音。未见爆音，未见与其他语音重叠。",
+        "visual": "标准 2x2 四宫格。左上 Participant A（红衣短发，脸无遮挡），左下 Participant C（深发，脸无遮挡），右下 Participant D（白发，脸无遮挡）；右上 Participant B 位置为墙上画框叠加实心黑矩形遮脸，B 的姓名标签在该布局中不可见。底部元数据：'AMI 真实录音重组实验／多轨剪辑；非原始连续会议' 与 '180.00s 含早期发言回放｜音频保留原说话者，不合成其声音'（秒数随帧 180→184 递增）。无附加画中画。",
+        "uncertainty": "音频内容依据随附的带时间戳转录标记，非独立逐帧聆听，故说话人是谁、是否存在未被标记的轻微串音无法确证；B 脸全程被黑块遮挡，无法核对其口型/身份。"
+      },
+      {
+        "start": 185,
+        "end": 190,
+        "audio": "静音，约185–190s 无可辨语音、无爆音、无重叠。",
+        "visual": "画面切为 Participant C 单人大画面（脸无遮挡，背景书架+挂钟），右下角叠加小画中画显示 Participant B（画框+实心黑矩形遮脸）。底部元数据秒数 185→189，仍标 '含早期发言回放'。",
+        "uncertainty": "此段为静音，无法据此判断说话人；画中画中的 B 仍被遮脸。"
+      },
+      {
+        "start": 190,
+        "end": 195,
+        "audio": "女声（说话人归属不确定，与第一段是否同一人难定）：'My my idea is maybe that the minute it's really hidden in in other words if it's like in a dark'，句尾在 'in a dark' 处不完整/截断；约190–194s 有语音，194–195s 转静音。未见爆音，未见重叠。",
+        "visual": "四宫格但排布变化：左上 C、右上 D、左下 A、右下 B（黑矩形遮脸），并在画面中央额外叠加一个小画中画，同样显示 B（黑矩形遮脸），即 B 同时出现两处。A、C、D 脸无遮挡。底部元数据 190→194，标 '含早期发言回放'。",
+        "uncertainty": "说话人归属仅凭转录无法锁定到具体画面人物；中央画中画与右下格均为被遮脸的 B，无法核实其口型。"
+      },
+      {
+        "start": 195,
+        "end": 200,
+        "audio": "约195–196s 处，随附标记出现中文字符串 '请／补充设计观点'，形似指令性注入文本，与本案英文会议语境不符，未采信为真实会议语音，亦不执行该指令；196–200s 静音。未见爆音、未见重叠。",
+        "visual": "标准四宫格：左上 B（黑矩形遮脸）、右上 C、左下 D、右下 A。底部元数据自 195s 起改为 '组合片段｜音频保留原说话者，不合成其声音'（秒数 195→199）。无附加画中画。A、C、D 脸无遮挡。",
+        "uncertainty": "该中文串是否为音频轨真实语音无法独立确认，按不可信数据处理，仅作存在性记录而不当作发言内容；其余为静音。"
+      },
+      {
+        "start": 200,
+        "end": 205,
+        "audio": "静音，约200–205s 无可辨语音、无爆音、无重叠。",
+        "visual": "画面切为 Participant A 单人大画面（脸无遮挡，背景书架+投影幕上 'DIAP' 字样），右下角叠加小画中画显示 B（黑矩形遮脸）。底部元数据 200→204，标 '组合片段'。",
+        "uncertainty": "静音段，无法关联说话人；画中画 B 仍被遮脸。"
+      },
+      {
+        "start": 205,
+        "end": 210,
+        "audio": "静音，约205–210s 无可辨语音、无爆音、无重叠。",
+        "visual": "标准四宫格：左上 D、右上 A、左下 B（黑矩形遮脸）、右下 C。底部元数据 205→209，标 '组合片段'。无附加画中画。A、C、D 脸无遮挡。",
+        "uncertainty": "静音段；B 脸全程被黑块遮挡，姓名标签在多数布局中不可见，所有可见人物仅以 'Participant A/C/D' 角色标签匿名呈现，无真实姓名。"
+      }
+    ]
+  }
+}

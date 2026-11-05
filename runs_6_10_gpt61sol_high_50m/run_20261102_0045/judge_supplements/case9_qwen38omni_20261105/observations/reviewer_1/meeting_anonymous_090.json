@@ -1,0 +1,81 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14203,
+    "total_tokens": 20471,
+    "completion_tokens": 6268,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 731
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5322,
+      "text_tokens": 946
+    }
+  },
+  "elapsed_seconds": 130.671,
+  "completed_utc": "2026-11-05T07:45:42.453450+00:00",
+  "request_sha256": "2bc9648ed76ec3230f1d3be3a210e0a10505ff1d277605f468399145b9a7fd7f",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 90,
+        "end": 93,
+        "audio": "Female voice states: 'Aim for the company is fifty million euro.' Clear articulation; no overlap or distortion detected.",
+        "visual": "Four-panel layout. Top-left: Participant C (face visible, label present). Top-right: Participant D (face visible, label present). Bottom-left: Participant A (face visible, label present). Bottom-right: face fully obscured by solid black rectangle (no label visible). No picture-in-picture.",
+        "uncertainty": "Speaker identity not confirmed; obscured participant presumed to be B based on layout consistency but not visually verified."
+      },
+      {
+        "start": 93,
+        "end": 96,
+        "audio": "Same female voice continues: 'The market range unlimited, meaning international,' with slight pause after 'unlimited'. No competing audio.",
+        "visual": "93-94s: same four-panel as above. 95s: switches to single-speaker view of Participant A (label visible) with small picture-in-picture window in bottom-right corner showing obscured face (black rectangle).",
+        "uncertainty": "Visual transition occurs mid-interval; PiP content remains obscured."
+      },
+      {
+        "start": 96,
+        "end": 100,
+        "audio": "Voice states: 'and production cost should not exceed, hopefully should be less than twelve fifty euro.' Emphasis on 'not exceed' and 'less than'; 'twelve fifty euro' spoken distinctly. No clipping.",
+        "visual": "96-99s: single-speaker view of Participant A with PiP of obscured face (bottom-right). 100s: reverts to four-panel layout: top-left Participant A, top-right obscured face (black rectangle), bottom-left Participant C, bottom-right Participant D.",
+        "uncertainty": "Numeric value 'twelve fifty' could denote 12.50 or 1250; context insufficient to resolve. Layout change at 100s."
+      },
+      {
+        "start": 100,
+        "end": 105,
+        "audio": "Silence (no speech, only faint room tone). No overlap or artifacts.",
+        "visual": "Four-panel layout stable: top-left Participant A, top-right obscured face (black rectangle), bottom-left Participant C, bottom-right Participant D. All labels visible except obscured panel.",
+        "uncertainty": "None; silence confirmed across interval."
+      },
+      {
+        "start": 105,
+        "end": 110,
+        "audio": "Mandarin Chinese utterance: '刚才提到了多用途' (Just mentioned multi-purpose). Speaker gender/identity uncertain; possibly different from prior English speaker. No overlap.",
+        "visual": "Four-panel layout rearranged: top-left Participant D, top-right Participant A, bottom-left obscured face (black rectangle), bottom-right Participant C. Stable through 109s.",
+        "uncertainty": "Language switch suggests possible different speaker or edited segment; obscured participant in bottom-left presumed B."
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "audio": "Silence (no discernible speech). Background noise minimal.",
+        "visual": "110-114s: single-speaker view of Participant A with PiP of obscured face (bottom-right corner). Label 'Participant A' visible.",
+        "uncertainty": "None; visual consistent with earlier single-speaker segments."
+      },
+      {
+        "start": 115,
+        "end": 119,
+        "audio": "Silence continues; no speech or notable audio events before clip end.",
+        "visual": "Four-panel layout: top-left obscured face (black rectangle), top-right Participant C, bottom-left Participant D, bottom-right Participant A. All visible participants labeled; obscured panel unlabeled.",
+        "uncertainty": "Obscured participant in top-left presumed B; no visual confirmation of identity."
+      }
+    ]
+  }
+}

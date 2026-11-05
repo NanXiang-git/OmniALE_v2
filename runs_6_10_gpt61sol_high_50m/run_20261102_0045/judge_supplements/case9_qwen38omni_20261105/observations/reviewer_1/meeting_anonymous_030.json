@@ -1,0 +1,53 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14182,
+    "total_tokens": 18706,
+    "completion_tokens": 4524,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 710
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3424,
+      "text_tokens": 1100
+    }
+  },
+  "elapsed_seconds": 112.963,
+  "completed_utc": "2026-11-05T07:43:41.637442+00:00",
+  "request_sha256": "ae6386b8503fcae058b211f738802d3b51d85951005b13872d5055bab9af4646",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 30,
+        "end": 43,
+        "audio": "单一女声自我介绍，含多次犹豫填充词：'Yeah, uh, I'm Janavi, um, um, my role is industrial designer, and my responsibilities are, uh, uh, deal with technical functional designs and specifications of user'——句尾在 'user' 处中断、未说完。保留专有名词/姓名 'Janavi' 与角色 'industrial designer'。本段无金额、无机构名。未检测到与其他声源重叠或串音，无爆音/削波。",
+        "visual": "30–34s 为 2×2 四宫格：左上 Participant C（深色头发、额点、书架背景，脸未遮）、右上 Participant D（白发、眼镜、浅蓝上衣、墙画背景，脸未遮）、左下 Participant A（灰短发、红衣高领、书架背景，脸未遮）、右下一格人脸被黑色矩形完全遮挡且该格无可读姓名字幕。35–39s 切为 Participant C 大画面＋右下角小画中画（画中画内同一张被黑块遮脸、墙画/红色警铃背景）。40–43s 切为多格布局，含 Participant A、C、D 三个未遮脸画面与两个被黑块遮脸的小窗。全程仅一个参会者面孔被遮，其余三人面孔清晰可见；屏幕字幕均为化名 'Participant A/C/D'，未出现 'Janavi' 字样。底部有实验性叠加文字条（'AMI 真实录音重组实验 / 多轨剪辑…' 及时间码），属元数据非场景内容。",
+        "uncertainty": "无法从画面确认发声者对应哪一个视频窗（C、A 或被遮者皆有可能）；口播真名 'Janavi' 与屏幕化名不一致，存在音频对视觉匿名的潜在反向识别风险，但具体映射不确定。被遮格始终无姓名字幕，其化名（如是否为 'Participant B'）不可见、无法核实。句尾 'specifications of user' 后内容缺失，属原片不完整句，不视为缺陷。"
+      },
+      {
+        "start": 44,
+        "end": 53,
+        "audio": "换为另一说话人（性别/身份不确定，音色与前段不同），同样带犹豫填充词：'Here is what this thing should be, this thing we are gonna, uh, uh, design is a new remote control, uh, should be'——句尾在 'should be' 处中断、未说完。保留物件词 'remote control'。本段无金额、无机构名。与前段为顺序衔接，未检测到两声重叠或串音，无爆音/削波。",
+        "visual": "44–49s 为重新排列的 2×2 四宫格：左上 Participant D、右上 Participant A、右下 Participant C 三者脸未遮，左下一格人脸被黑块遮挡且无姓名字幕。50–53s 切为 Participant A 大画面（侧/四分之三视角，朝左）＋右下角小画中画（同一被黑块遮脸、墙画背景）。被遮面孔位置随布局移动但遮挡持续；其余三人面孔仍清晰。底部叠加文字条持续。",
+        "uncertainty": "第二说话人身份与画面窗的对应无法确认；'remote control' 为口头提及的设计对象，未见对应实物入画。句尾不完整属原片特性。被遮格化名仍不可读。"
+      },
+      {
+        "start": 53,
+        "end": 60,
+        "audio": "无可辨识语音内容（合并轨约 23–30s 区间为空/仅极低电平底噪，未转录到任何词）。注意：合并轨 30.0–30.3s 的人为分隔静音不在本段 [30,60) 内，不计入。无重叠、无爆音。",
+        "visual": "53–54s 仍为 Participant A 大画面＋被遮脸画中画；55–59s 切回 2×2 四宫格：右上 Participant C、左下 Participant D、右下 Participant A 脸未遮，左上一格人脸被黑块遮挡且无姓名字幕。遮挡模式与前两段一致（一人遮、三人未遮，化名标签 A/C/D 可见）。底部叠加文字条持续。",
+        "uncertainty": "该区间是否含极轻房间底噪而非绝对数字静音，无法精确判定，仅能确认无 intelligible 语音。无画面动作/口型可佐证说话人。被遮者身份与化名仍不可核实。"
+      }
+    ]
+  }
+}

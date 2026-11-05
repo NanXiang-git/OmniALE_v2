@@ -1,0 +1,37 @@
+{
+  "model": "qwen3.8-omni-flash",
+  "endpoint": "https://llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "solver": "unchanged gpt-6.1-sol high frozen trial",
+  "automatic_score_preserved": 40,
+  "automatic_max": 80,
+  "judge_max": 20,
+  "independent_reviews": 2,
+  "third_review_on_disagreement": true,
+  "audio_coverage_per_review": {
+    "meeting_source": [
+      0,
+      300
+    ],
+    "meeting_anonymous": [
+      0,
+      300
+    ]
+  },
+  "visual_sampling_fps": 1,
+  "all_frame_machine_checks": "existing 7500-frame check retained, sampling cannot replace it",
+  "submission_hashes": {
+    "README.md": "ce9f737d0de19ec13ede9320a3d45a9bf4362ec565e02fbaaaed577eca4d9fea",
+    "anonymous.mp4": "3d16c7b415dd1c697796cc83786f8fa62e5c37cdf66e96d0b3929c3abe993cbb",
+    "cover.png": "88a1d7fc89cbf304297962406e3010a2425d649652f5b281b5e189fa360cad66",
+    "edits.json": "226da936782b3c443be052a2fea6ead7dba7961412cd57e34e06922b55250a85",
+    "final_audio.wav": "12d9f99841c17e38df24b594fffe72cf9d0ede1d14db56011ef637cbaf9d60ea",
+    "mask.mkv": "664b383c3cff3129d7f18f627315c1c436417cf4f6c73c0c48ee094a159f94c9",
+    "project.json": "b033470d9dc596aa94459f229d3150e37330c1bd208fc25520ce2e76c71da5a1",
+    "subtitles.json": "896f36bd1ba17ef6115134e812fe8fc5a5e6cc6e687ab653d4d990b57bc8dcb2",
+    "zh.srt": "6bd3e2239a9485899293a44670ff380b2eee6a9c62276bca21a8f9489df2373a"
+  },
+  "source_hashes": {
+    "meeting_source": "c3c169c7437e2b50ac117cf451394d7cdc3b6c7ce0580245c4984a8d7b92a2ac",
+    "meeting_anonymous": "3d16c7b415dd1c697796cc83786f8fa62e5c37cdf66e96d0b3929c3abe993cbb"
+  }
+}

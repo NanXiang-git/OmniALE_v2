@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 15318,
+    "completion_tokens": 1104,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 553,
+      "text_tokens": 551
+    }
+  },
+  "elapsed_seconds": 58.775,
+  "completed_utc": "2026-11-05T07:44:41.381897+00:00",
+  "request_sha256": "9896244e5f7e7ae57a1c4a797309ff251f5600063368ce171a81fde6216fc613",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 120,
+        "end": 125,
+        "audio": "听到一位女性说 'at um twelve fifty euros per'，随后有笑声。",
+        "visual": "四宫格画面。左上Participant A，右上Participant B（脸部被黑色方块遮挡），左下Participant C，右下Participant D。",
+        "uncertainty": "说话人身份无法仅凭声音确定，但结合画面可能是Participant A或C。"
+      },
+      {
+        "start": 125,
+        "end": 130,
+        "audio": "静音。",
+        "visual": "切换为Participant D的大画面，右下角有画中画显示Participant B（脸部被黑色方块遮挡）。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 130,
+        "end": 135,
+        "audio": "静音。",
+        "visual": "切换为多宫格画面（包含五个窗口）。左上C，右上D，左下A，右下B（遮挡），中间小窗也是B（遮挡）。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 135,
+        "end": 140,
+        "audio": "听到另一位女性说 'We certainly can try to. I agree with her that to market something successfully it should do some more...'。",
+        "visual": "切换回四宫格。左上B（遮挡），右上C，左下D，右下A。",
+        "uncertainty": "说话人身份无法仅凭声音确定，但结合画面可能是Participant C或A。"
+      },
+      {
+        "start": 140,
+        "end": 145,
+        "audio": "静音。",
+        "visual": "切换为Participant D的大画面，右下角画中画B（遮挡）。",
+        "uncertainty": "无"
+      },
+      {
+        "start": 145,
+        "end": 150,
+        "audio": "静音。",
+        "visual": "切换回四宫格。左上D，右上A，左下B（遮挡），右下C。",
+        "uncertainty": "无"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 18111,
+    "completion_tokens": 3924,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3405,
+      "text_tokens": 519
+    }
+  },
+  "elapsed_seconds": 87.894,
+  "completed_utc": "2026-11-05T07:37:15.065079+00:00",
+  "request_sha256": "a500b7c9b9ed2f98bc98e6802a91c6d8d928cefcb74f94ffa76d69fa050cefbe",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 210,
+        "end": 214,
+        "audio": "certain darkness... has a sensor... gives out a signal... whether that be a light signal",
+        "visual": "四格会议布局：左上Participant C、右上Participant D、左下Participant A、右下林岚 / Francina；所有人人脸清晰无遮挡，姓名标签完整显示于各格底部",
+        "uncertainty": "音频连续无重叠/爆音；未检测到金额、机构名称或显式否定词"
+      },
+      {
+        "start": 215,
+        "end": 219,
+        "audio": "you know there would be... right, you have to have some kind of sensor",
+        "visual": "主画面为Participant A（占大部分区域），右下角小窗显示林岚 / Francina；其他参与者不可见；姓名标签'Participant A'和'林岚 / Francina'清晰可见",
+        "uncertainty": "说话人使用填充词'you know'和'right'体现犹豫；无其他说话人重叠；画中画结构明确"
+      },
+      {
+        "start": 220,
+        "end": 224,
+        "audio": "voice or clapping that's not specific enough",
+        "visual": "四格布局调整：上排左Participant A、右林岚 / Francina；下排左Participant C、右Participant D；所有人人脸可见无遮挡，姓名标签完整",
+        "uncertainty": "含否定词'not'；无机构/金额提及；音频流畅无静音段"
+      },
+      {
+        "start": 225,
+        "end": 239,
+        "audio": "I know there are the lamps and stuff",
+        "visual": "四格布局再调整：上排左Participant D、右Participant A；下排左林岚 / Francina、右Participant C；所有人人脸清晰无遮挡，姓名标签完整显示",
+        "uncertainty": "语句以'and stuff'结尾体现非正式表达；无重叠/爆音；未检测到隐私遮挡或回放痕迹"
+      }
+    ]
+  }
+}

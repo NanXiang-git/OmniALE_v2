@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14171,
+    "total_tokens": 18625,
+    "completion_tokens": 4454,
+    "prompt_tokens_details": {
+      "cached_tokens": 12544,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 699
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3214,
+      "text_tokens": 1240
+    }
+  },
+  "elapsed_seconds": 102.527,
+  "completed_utc": "2026-11-05T07:43:31.166899+00:00",
+  "request_sha256": "1dbe8bbdbc96ae75b94b1424122f02570df346de9f6ba48d2e5a0c91b986cbd2",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 0,
+        "end": 9,
+        "audio": "单一女声，清晰，无重叠、无爆音：'Very good. And as you already know, I'm Betsy. I'm the project manager for today. So why don't we look at the presentation to see what we really are supposed to do.' 自报姓名为 Betsy，角色为 project manager。",
+        "visual": "0–4s 为四宫格：左上 Participant A（短灰发、红衣、戴耳麦眼镜的女性，嘴部随该女声开合，疑似说话者），左下 Participant C（深色头发、额点、栗色上衣），右下 Participant D（白发、眼镜、浅蓝上衣），右上为一个房间画面，其人物区域被一块纯黑矩形完全遮挡，且该格下方未见任何姓名字幕标签。5–9s 切为 Participant A 单一大画面，右下角出现画中画(PiP)，PiP 内仍是带黑块的同一房间画面。全程仅见匿名标签 'Participant A/C/D'，无真实姓名文字；黑块持续遮脸。",
+        "uncertainty": "说话女声与画面 Participant A 口型大致吻合，但本段为多轨剪辑，音画未必严格同步；右上被遮格子的身份（脸与名均不可见）无法确认。"
+      },
+      {
+        "start": 9,
+        "end": 14,
+        "audio": "静音/无语音（约 9–14s 为停顿间隔），无重叠、无爆音。",
+        "visual": "10–14s 切为多画面布局：左上 Participant C，右上 Participant D，左下 Participant A，中央叠加一个小 PiP 显示带黑块的房间，右下另有一格也显示带黑块的房间。可见三人嘴部基本闭合或微动，无明显主讲口型。黑块遮挡持续。",
+        "uncertainty": "此段无语音，无法判定潜在说话人；中央与右下两处黑块为同一被匿名化参与者的不同视图。"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "audio": "单一男声，清晰，无重叠、无爆音：'And I'm a marketing person. I want to figure out how to sell them.' 自报角色为 marketing person。",
+        "visual": "15–17s 为四宫格：左上为带黑块的房间（人物被遮），右上 Participant C，左下 Participant D，右下 Participant A。画面中三位可见女性口型均与该男声不相符；唯一可能对应此男声的是左上被黑块遮挡、无姓名字幕的那一格。",
+        "uncertainty": "男声说话人高度不确定，极可能即被匿名化（遮脸+无名）的参与者，但因脸被黑块遮住无法核实；亦不排除多轨剪辑造成的音画错位。"
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "audio": "静音/无语音（约 17–25s 为停顿间隔），无重叠、无爆音。",
+        "visual": "18–19s 维持四宫格（黑块左上、C 右上、D 左下、A 右下）；20–24s 切为 Participant D 单一大画面，右下角 PiP 显示带黑块的房间。D 多呈微笑/闭口状态，无明显长段说话口型。黑块遮挡持续。",
+        "uncertainty": "无语音段，说话人无从判断；PiP 为实时被遮画面而非回放片段。"
+      },
+      {
+        "start": 25,
+        "end": 29,
+        "audio": "另一女声/提示音，中文，清晰，无重叠、无爆音：'现在请继续介绍'。语气像引导/插播提示，与前段英文会议语流不连贯。",
+        "visual": "25–29s 为四宫格：左上 Participant D，右上 Participant A，左下带黑块的房间，右下 Participant C。26–29s 右上 Participant A 嘴部开合、头部转动，似在说话，但口型与中文提示音不匹配；其余可见者口型闭合。黑块遮挡持续，被遮格仍无姓名字幕。",
+        "uncertainty": "中文语音与任何可见说话人口型均不符，疑为多轨剪辑中插入/拼接的提示音，真实发声者无法从画面确认；不能据此判定为某 Participant 原声。"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "audio": "语音在 29s 后结束，至 30s 为尾端静音（合并轨 30.0s 后另有 0.3s 人为分隔静音，不计入成品）。",
+        "visual": "29s 帧仍为上述四宫格，黑块遮挡与匿名标签状态不变；30s 边界未单独采样，不声称已看。",
+        "uncertainty": "末秒画面以 29s 采样帧外推，未对 29–30s 间逐帧核验。"
+      }
+    ]
+  }
+}

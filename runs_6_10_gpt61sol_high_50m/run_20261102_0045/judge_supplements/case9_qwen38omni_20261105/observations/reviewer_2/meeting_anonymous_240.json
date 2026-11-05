@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 18861,
+    "completion_tokens": 4647,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3496,
+      "text_tokens": 1151
+    }
+  },
+  "elapsed_seconds": 100.973,
+  "completed_utc": "2026-11-05T07:47:03.434027+00:00",
+  "request_sha256": "2691e8ea57922b6e6999d1a212f92836f29b14ae55456ded9ddabacc67a0ac9a",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 240,
+        "end": 245,
+        "audio": "一名女声说：'Okay, the next meeting will be in thirty minutes. I think you all, did you get uh notices on your'，句子在 'your' 处中断/未说完。无说话重叠，无爆音，无金额、机构名或明确否定词。",
+        "visual": "四宫格布局。左上 Participant A（红衣、灰短发、戴耳麦）脸可见；右上 Participant B 的脸被黑色矩形完全遮挡；左下 Participant C（深色头发）脸可见；右下 Participant D（白发、戴眼镜）脸可见。所有标签均为匿名 'Participant X'，无真实姓名。图像底部叠加视觉文字：'AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议' 及 '240.00s–244.00s 含早期发言回放 | 音频保留原说话者，不合成其声音'（此为画面叠加文本，非听觉证据）。",
+        "uncertainty": "说话人身份无法确证；静音/语音边界为估计值。"
+      },
+      {
+        "start": 245,
+        "end": 250,
+        "audio": "静音（约 5 秒），无语音、无重叠、无爆音。",
+        "visual": "切为 Participant A 单人大画面（红衣灰发，脸可见，戴耳麦，做手势/摸颈），右下角叠加画中画小窗，小窗内为被黑色矩形遮挡的脸（对应 B 机位）。底部叠加视觉文字仍标 '含早期发言回放'。无真实姓名标签。",
+        "uncertainty": "画中画小窗内被遮挡者身份不可见，仅能据布局推断为 B 机位；静音区间边界为估计。"
+      },
+      {
+        "start": 250,
+        "end": 255,
+        "audio": "一名女声说：'And you know, you you will get specific um instructions for that. I think that's the end of the show. Yeah.'，含重复 'you you' 与填充词 'um'。无说话重叠，无爆音，无金额、机构名或明确否定词。",
+        "visual": "四宫格变体加中央画中画：左上 Participant C 脸可见，右上 Participant D 脸可见，左下 Participant A 脸可见，右下 Participant B 脸被黑块遮挡；画面正中央另有一个画中画小窗，窗内脸亦被黑块遮挡。所有标签匿名。底部叠加视觉文字标 '含早期发言回放'。",
+        "uncertainty": "此段女声与 240–245 段女声是否同一人无法确证（重组实验，可能为不同说话人）；中央画中画被遮挡者身份不可见。"
+      },
+      {
+        "start": 255,
+        "end": 260,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "四宫格重排：左上 Participant B 脸被黑块遮挡，右上 Participant C 脸可见，左下 Participant D 脸可见，右下 Participant A 脸可见。标签均匿名。底部叠加视觉文字由 '回放' 改为 '组合片段'（'255.00s–259.00s 组合片段 | 音频保留原说话者，不合成其声音'）。",
+        "uncertainty": "静音边界为估计；叠加文字为视觉元素，不作听觉依据。"
+      },
+      {
+        "start": 260,
+        "end": 265,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "Participant A 单人大画面（脸可见，侧头），右下角画中画小窗内为被黑块遮挡的脸。底部叠加视觉文字标 '组合片段'。无真实姓名。",
+        "uncertainty": "画中画被遮挡者身份不可见；静音区间为估计。"
+      },
+      {
+        "start": 265,
+        "end": 270,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "四宫格：左上 Participant D 脸可见，右上 Participant A 脸可见，左下 Participant B 脸被黑块遮挡，右下 Participant C 脸可见。标签均匿名。底部叠加视觉文字标 '组合片段'。",
+        "uncertainty": "本段直至 270s 结束均为静音；静音边界为估计。整段 240–270s 内仅 240–245 与 250–255 两处有语音，其余为静音，未见/未闻金额、机构名或明确否定表述。"
+      }
+    ]
+  }
+}

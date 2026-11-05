@@ -1,0 +1,81 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 17890,
+    "completion_tokens": 3703,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2239,
+      "text_tokens": 1464
+    }
+  },
+  "elapsed_seconds": 93.598,
+  "completed_utc": "2026-11-05T07:40:30.999164+00:00",
+  "request_sha256": "0accfbc38a1c4e986c39e193dbba48927ebe5be8296e2072ad597b3b81de1512",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 270.0,
+        "end": 272.0,
+        "audio": "开场两名女性声音重叠：一人（较年长女声，疑Participant A）说“So, um…”，同时另一人（较年轻女声，疑林岚/Francina）说“Design should be, yeah, it should be different, all the almost…”。两人语句交叠，无法精确切分归属。无明显爆音。",
+        "visual": "四宫格布局：左上Participant C（深红衣、书架背景），右上Participant D（白发、浅蓝衣），左下Participant A（灰发戴眼镜、红衣米色高领），右下“林岚 / Francina”（白衣、城市风景画背景）。四张人脸均清晰、无马赛克或遮挡；姓名标签全部可见，其中林岚的中英文真名直接烧录在标签上、未被遮蔽，其余三人仅以Participant代号标识。底部有屏幕说明文字条“AMI 真实录音音重组实验 / 多轨剪辑；非原始连续会议”及“270.00s 含早期发言回放 | 音频保留原说话者，不合成其声音”（此为画面内文字，非我听得的语音）。",
+        "uncertainty": "重叠段说话人归属为推测；A与林岚的声音特征区分不够确定。"
+      },
+      {
+        "start": 272.0,
+        "end": 275.0,
+        "audio": "年长女声（疑Participant A）接续：“…two, two, two, three minutes.” 随后停顿并说“Um, any questions at this point or suggestions?”。语速含犹豫与重复。",
+        "visual": "仍为同一四宫格（C/D/A/林岚），各人脸无遮挡，标签同上；274s 帧中 Participant A 与林岚口型似在动。底部说明条时间戳更新至274.00s，仍标“含早期发言回放”。",
+        "uncertainty": "“two three minutes”前的数字重复，确切时长表述不确定。"
+      },
+      {
+        "start": 275.0,
+        "end": 280.0,
+        "audio": "Participant A 声音延续问句后的短暂停顿与呼吸/底噪，无新清晰语义；未闻他人插话。",
+        "visual": "布局切换为 Participant A 单人主画面，右下角叠加“林岚 / Francina”画中画小窗（PIP）。A 与画中画内林岚的脸均无遮挡；A 标签为代号，林岚标签显示真名。底部说明条“275.00s–279.00s 含早期发言回放”。",
+        "uncertainty": "此段是否完全静音或仅有极轻语音尾音，难以确断。"
+      },
+      {
+        "start": 280.0,
+        "end": 283.0,
+        "audio": "Participant A 收尾其问句“…or suggestions?”的余音及停顿。",
+        "visual": "布局变为非标准四宫格：左上Participant A、右上林岚/Francina、中央再嵌一个林岚/Francina小窗（双重呈现）、左下Participant C、右下Participant D。所有可见脸无遮挡；林岚真名标签在右上及中央小窗均显示。底部说明条“280.00s–283.00s 含早期发言回放”。",
+        "uncertainty": "中央小窗与右上格是否为同一源的回放叠加，无法从单帧确证。"
+      },
+      {
+        "start": 283.0,
+        "end": 285.0,
+        "audio": "插入一段机械/合成女声，清晰念出：“资料来自 林岚研究所，这是机构名称。” 该音色与原会议真人声明显不同，属TTS式合成播报，含机构名“林岚研究所”。与底部屏幕文字“不合成其声音”的声明相矛盾。",
+        "visual": "283–284s 仍为带中央小窗的四宫格；285s 切换为新四宫格布局：左上Participant D、右上Participant A、左下林岚/Francina、右下Participant C。脸均无遮挡；林岚真名标签可见。底部说明条在285s 改为“组合片段 | 音频保留原说话者，不合成其声音”。",
+        "uncertainty": "合成声的精确起止与是否完全覆盖原声，因交叠不易界定；机构名“林岚研究所”为所闻，非推断。"
+      },
+      {
+        "start": 285.0,
+        "end": 288.0,
+        "audio": "Participant A 真声恢复：“You see, basically, basically you will get instructions to work with…” 含重复词“basically”。",
+        "visual": "四宫格 D/A/林岚/C 布局持续，脸无遮挡，标签同上；底部说明条“285.00s–288.00s 组合片段”。",
+        "uncertainty": "句尾“work with…”后是否还有被截断的词，不确定。"
+      },
+      {
+        "start": 288.0,
+        "end": 300.0,
+        "audio": "约288s 后语音停止，剩余为静音/低底噪，无重叠、无爆音，直至30s 段末（人为分隔静音不计）。",
+        "visual": "288–289s 四宫格 D/A/林岚/C；290–294s 切回 Participant A 主画面+右下林岚画中画；295–299s 切为四宫格 林岚/C/D/A。全程各脸无遮挡；林岚真名标签始终可见，其余为代号。底部说明条由“组合片段”延续，时间戳递增至299.00s。",
+        "uncertainty": "静音段内是否含极轻呼吸或线路噪声，无法确证；画面在静音期仍多次切换布局，属回放/剪辑重组的视觉表现。"
+      }
+    ]
+  }
+}

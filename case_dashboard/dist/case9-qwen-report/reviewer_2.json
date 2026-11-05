@@ -1,0 +1,185 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 78276,
+    "total_tokens": 88412,
+    "completion_tokens": 10136,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 443,
+      "image_tokens": 22100,
+      "text_tokens": 55733
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8057,
+      "text_tokens": 2079
+    }
+  },
+  "elapsed_seconds": 160.591,
+  "completed_utc": "2026-11-05T07:51:15.674566+00:00",
+  "request_sha256": "8f3012d806440e3e370a195fb6827e09f80e68f5ec2a724299789fef1b8fd49d",
+  "image_count": 50,
+  "audio_count": 1,
+  "result": {
+    "items": [
+      {
+        "id": "remaining_identity",
+        "status": "pass",
+        "rating": "1",
+        "finding": "逐帧对照源与成片：源[1,10)s右上格及右下PiP、[26,31)s左下格、[116,121)s左上格、[206,211)s左下格、[281,287)s右上格+中央重复PiP中B脸与'林岚 / Francina'姓名条均清晰可读；成片中上述全部实例的脸部核心（眼鼻口）被不透明深色矩形覆盖，姓名条同步遮除，未露出可读真名，其余仅以Participant A/C/D代号呈现。额外复核帧869/5947/3189/6189/6904/5130/4288/7288的anonymous画面黑块均盖住面部中心，机器face_coverage=0.941的缺口位于脸框边缘（额/颊/下巴轮廓），不含可识别五官，故肉眼不可辨B脸。音频侧：源[0,5)s重叠的'My name is Francina…'自我介绍、[90,92)s'[120,125)s'[180,188)s'[240,250)s'[270,272)s的B多用途/插入声在成片中均不可闻，仅余A/C/D主声；主持TTS三处个人姓名'林岚'在成片[26,31)/[116,121)/[206,211)对应段被置零（'现在请…继续介绍''刚才…提到了多用途''请…补充设计观点'），而[281,287)机构段'林岚研究所'整段保留为负对照。字幕U02/U20统一为'我是受访者B'，无个人姓名。综合未见可读姓名、未遮目标脸或可辨B原声。",
+        "evidence": [
+          {
+            "media_id": "meeting_source",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_source",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 26,
+            "end": 31
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 116,
+            "end": 121
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 206,
+            "end": 211
+          }
+        ]
+      },
+      {
+        "id": "semantic_and_overlap_preservation",
+        "status": "pass",
+        "rating": "1",
+        "finding": "重叠段复核：源[90,92)s B插入'I feel that all the…'覆盖下A的'fifty million euro'、源[120,125)s B'multi-purpose'覆盖下D的'twelve fifty euros per'+笑、源[180,188)s B自我介绍覆盖下C的'should have a light'、源[240,250)s B覆盖下A的'next meeting…thirty minutes'、源[270,272)s B'design should be different'覆盖下A的'two three minutes'，成片中A/C/D主声均清晰保留，未随B一并静音。主持非人名内容与机构段完整：成片[281,287)'资料来自林岚研究所，这是机构名称'整段在。字幕锚点核对subtitles.json：U09'25欧元'、U10'5000万欧元'、U12'不能超过12.50欧元，最好低于'、U13'12.50欧元'、U24'声音或拍手还不够有针对性'、U25'30分钟后'均在；B观点U05/U08/U11/U14/U17/U23/U26/U29逐字保留并以省略号忠实反映原截断（如'controlling''should be very'），未把断句补成新决定；说话人归属34条与参考agent逐项一致，无错归。源固有停顿/结巴（'two, two, two'、'my my'、'you you'）保留，未扣交付。",
+        "evidence": [
+          {
+            "media_id": "meeting_source",
+            "start": 90,
+            "end": 95
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 90,
+            "end": 95
+          },
+          {
+            "media_id": "meeting_source",
+            "start": 240,
+            "end": 250
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 240,
+            "end": 250
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_source",
+            "start": 180,
+            "end": 188
+          }
+        ]
+      },
+      {
+        "id": "usable_delivery",
+        "status": "pass",
+        "rating": "1",
+        "finding": "成片布局切换（2×2轮换、单主画面+右下PiP、带中央重复PiP的混合视图）中B遮罩均跟随对应实例，含中央重复窗口与右上被PiP压住的姓名条实例同步遮除；抽帧未见遮罩闪烁或露出眼鼻口。other_face_damage=0且复核帧中A/C/D脸完整可见，遮罩超界(outside_allowed)仅落在B自身机位背景/身体，未侵占他人脸。音频剪接各段观察均记'无爆音'，定向置零位于停顿处无新增咔哒。字幕为嵌入可选zho轨（stream_types含subtitle，README称播放器可选），帧图无烧录对白不扣分；subtitles.json/zh.srt/edits.json/README结构一致，edits记录的遮罩矩形、三处HOST姓名静音区间、机构段保留与实测复核相符；封面经机器核验匹配首帧遮罩。程序门槛every_frame_privacy/other_people_and_minimal_area的几何失败属独立程序项，肉眼复核不构成可识别泄漏或误伤，不扣本项。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 270,
+            "end": 280
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 125,
+            "end": 135
+          }
+        ]
+      }
+    ],
+    "gates": [
+      {
+        "id": "no_direct_identity_leak",
+        "status": "pass",
+        "finding": "原生声画复核确认无剩余目标面部、无可读个人姓名、无可辨B原声：成片所有B实例脸核心被不透明遮罩覆盖、姓名条遮除，Francina自我介绍与B多用途声轨不可闻，主持三处'林岚'人名置零；机构名'林岚研究所'为应保留负对照，不计泄漏。机器face_coverage=0.941为脸框边缘缺口，抽帧未见可识别五官，故几何门槛失败不升级为身份泄漏。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 116,
+            "end": 121
+          }
+        ]
+      },
+      {
+        "id": "no_collateral_deletion",
+        "status": "pass",
+        "finding": "未发现重大误伤：重叠段A/C/D主声均保留，未随B静音；A/C/D脸未被遮；时间轴300s、7500帧未删帧变速；机构名整段保留；金额/否定/30分钟/拍手意见语义未反转或错归；源固有停顿结巴按原样保留，未计交付错误。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 90,
+            "end": 95
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 240,
+            "end": 255
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          }
+        ]
+      }
+    ]
+  }
+}

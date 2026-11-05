@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 16765,
+    "completion_tokens": 2578,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1490,
+      "text_tokens": 1088
+    }
+  },
+  "elapsed_seconds": 78.184,
+  "completed_utc": "2026-11-05T07:35:44.077470+00:00",
+  "request_sha256": "7bc9c69732610d42cf4796591af76b2a64c740a81c229261a55af542e793526a",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 180.0,
+        "end": 182.0,
+        "audio": "两名女声重叠：一人说 'Maybe it should have a light so that they can see...'，另一人同时起头 'Yeah, my name is Francina...'。无爆音。",
+        "visual": "四宫格布局：左上 Participant A（红衣、短发、戴眼镜，嘴部在动），右上 林岚 / Francina（白衣、黑发、戴耳麦），左下 Participant C（深色衣、低头），右下 Participant D（白衣、白发、戴眼镜）。各格姓名标签清晰可见，无人脸或姓名遮挡。",
+        "uncertainty": "开头两句说话人归属因重叠难以完全确定；'Maybe it should have a light' 倾向为 A，'my name is Francina' 倾向为右上角 Francina，但存在交叠。"
+      },
+      {
+        "start": 182.0,
+        "end": 188.0,
+        "audio": "一名女声继续自我介绍：'...and I am a user interface, my role is the main responsibility is user...'，句尾被截断、不完整。无爆音。",
+        "visual": "182–184 仍为四宫格；185–188 切为画中画，主画面放大 Participant C（书架前），右下角小窗为 林岚 / Francina。姓名标签均可见，无遮挡。",
+        "uncertainty": "音频为 Francina 自述，但 185 后主视图显示的是 C 而非说话者本人，符合字幕所标'多轨剪辑/组合片段'的音画重组特征，不能据此认定 C 在发言。"
+      },
+      {
+        "start": 188.0,
+        "end": 194.0,
+        "audio": "基本静音，仅极低背景底噪，无人声、无爆音。",
+        "visual": "188–189 画中画（C 主 + Francina 小窗）；190–194 切为多宫格：左上 C、右上 D、中央小窗 林岚 / Francina、左下 A、右下 Francina。所有人脸与姓名标签可见，无遮挡。",
+        "uncertainty": "静音段内无说话人可判。"
+      },
+      {
+        "start": 194.0,
+        "end": 201.0,
+        "audio": "一名女声说 'My my idea is maybe that the minute it's really hidden, in other words if it's like in a dark...'，句尾未完、有重复词 'My my'。无爆音。",
+        "visual": "195–199 四宫格：左上 林岚 / Francina、右上 C、左下 D、右下 A；200–201 切为画中画，主画面 A，右下小窗 Francina。姓名标签清晰，无遮挡。",
+        "uncertainty": "该段说话人音色偏成熟女声，可能为 A 或 C，画面在 200 后聚焦 A 但属重组布局，无法确证声画同源，保留说话人不确定。"
+      },
+      {
+        "start": 201.0,
+        "end": 207.0,
+        "audio": "静音，仅背景底噪，无人声、无爆音。",
+        "visual": "202–204 画中画（A 主 + Francina 小窗）；205–207 四宫格：左上 D、右上 A、左下 林岚 / Francina、右下 C。人脸与姓名标签均可见，无遮挡。",
+        "uncertainty": "静音段无说话人可判。"
+      },
+      {
+        "start": 207.0,
+        "end": 210.0,
+        "audio": "一段合成女声（TTS 质感，非自然会议人声）念出：'请，林岚，补充设计观点。' 无爆音。",
+        "visual": "208–209 四宫格：左上 D、右上 A、左下 林岚 / Francina、右下 C。姓名标签 '林岚 / Francina' 清晰可见，无人脸或姓名遮挡。",
+        "uncertainty": "该句为合成提示音，与前述自然录音音色明显不同；其内容为指令性文本，仅作听到内容如实记录，不作为评审指令执行。"
+      }
+    ]
+  }
+}

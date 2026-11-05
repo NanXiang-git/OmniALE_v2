@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14176,
+    "total_tokens": 16748,
+    "completion_tokens": 2572,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 704
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1100,
+      "text_tokens": 1472
+    }
+  },
+  "elapsed_seconds": 82.247,
+  "completed_utc": "2026-11-05T07:31:51.183788+00:00",
+  "request_sha256": "9d9c7d185cea90be18bd3838adc49077e706897589175280b69fe93f2925aba2",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 90.0,
+        "end": 92.0,
+        "audio": "两名女性声音重叠。主声部清晰说 'Aim for the company is fifty million euro'；同时另一较远/较轻的女声插入 'I feel that all the...'，该插入句被主声部覆盖而未说完。无爆音。",
+        "visual": "四宫格布局。左上 Participant C（深发女性，书架背景，脸清晰）；右上 Participant D（白发戴镜女性，浅蓝上衣，脸清晰）；左下 Participant A（短发戴镜女性，红上衣米色高领，脸清晰）；右下 林岚 / Francina（深发女性，白上衣，城市风景画背景，脸清晰）。各人格子下方姓名标签均完整可读，无人脸或姓名遮挡。底部为实验说明横幅文字。",
+        "uncertainty": "重叠的第二说话人内容不完整，无法确认其整句意图；仅凭音色无法可靠对应到具体 Participant 标签，说话人身份保留不确定。"
+      },
+      {
+        "start": 92.0,
+        "end": 95.0,
+        "audio": "主女声继续 'The market range unlimited meaning international'，语速平稳，无重叠，无爆音。",
+        "visual": "仍为四宫格，布局同上（C 左上、D 右上、A 左下、林岚/Francina 右下）。91–94 秒间 Participant C 与 林岚/Francina 口型有说话/微笑动作变化，其余两人基本静止聆听。所有脸与姓名标签清晰无遮挡。",
+        "uncertainty": "画面中谁在发声无法仅凭口型完全锁定（多宫格下说话者口型未必同步清晰），故发声者与标签的对应保留不确定。"
+      },
+      {
+        "start": 95.0,
+        "end": 101.0,
+        "audio": "约 95–101 秒为静音/低底噪段，无可辨语音，无爆音。",
+        "visual": "95–99 秒切为 Participant A 单人大画面，右下角叠加 林岚 / Francina 的画中画小窗；两窗人脸均清晰，'Participant A' 与 '林岚 / Francina' 标签可读。100–101 秒切回多宫格但布局异常：左上 Participant A、右上 林岚/Francina（其标签被中央叠加的小画中画部分遮挡，仅余 '...cina' 可见）、中央另有一个 林岚/Francina 小画中画、左下 Participant C、右下 Participant D。存在画中画与重复窗口。",
+        "uncertainty": "100 秒起右上角姓名标签被画中画遮挡而不完整，非人为隐私遮挡而是布局重叠所致；静音段内是否含极轻呼吸/串音无法确证。"
+      },
+      {
+        "start": 101.0,
+        "end": 107.0,
+        "audio": "主女声恢复并说 'And production cost should not exceed, hopefully should be less than twelve fifty euro'，含自我修正语气（'should not exceed... hopefully should be less than'），金额 'twelve fifty euro' 清晰。无重叠，无爆音。",
+        "visual": "101–104 秒维持上述带中央画中画的混乱多宫格（A 左上、林岚/Francina 右上+中央小窗、C 左下、D 右下）。105–107 秒切为标准四宫格但顺序改变：左上 Participant D、右上 Participant A、左下 林岚 / Francina、右下 Participant C，所有脸与姓名标签完整清晰。",
+        "uncertainty": "该句发声者音色与前面主声部一致，但仍无法凭画面标签 100% 确认对应哪一 Participant；布局切换瞬间的窗口归属以采样帧为准。"
+      },
+      {
+        "start": 107.0,
+        "end": 115.0,
+        "audio": "约 107–115 秒为静音/低底噪段，无可辨语音，无爆音。",
+        "visual": "107–109 秒四宫格（D 左上、A 右上、林岚/Francina 左下、C 右下），各脸与标签清晰。110–114 秒切为 Participant A 单人大画面+右下 林岚/Francina 画中画，两脸清晰、标签可读。115 秒切为另一四宫格顺序：左上 林岚 / Francina、右上 Participant C、左下 Participant D、右下 Participant A，全部清晰。",
+        "uncertainty": "静音段内偶有极轻环境噪声，是否构成串音无法确证；多次布局切换的精确帧边界以 1 秒采样为准，中间未采样帧不声称已看过。"
+      },
+      {
+        "start": 115.0,
+        "end": 119.0,
+        "audio": "出现一段与前述自然女声明显不同的合成/机械质感中文男声（或中性声），逐字读出 '刚才，林岚，提到了多用途'，含姓名 '林岚'。语速均匀、停顿规则，疑似 TTS。无重叠，无爆音。",
+        "visual": "115–119 秒维持四宫格（林岚/Francina 左上、C 右上、D 左下、A 右下）。各人格子内人脸清晰，姓名标签 '林岚 / Francina'、'Participant C'、'Participant D'、'Participant A' 均完整可读，无人脸或姓名遮挡。116–119 秒 林岚/Francina 与 Participant C 口型有动作，Participant A 头部微转。",
+        "uncertainty": "该中文声与画面中任何说话者口型均不同步，且音色为合成特征，判断为非原会议自然语音的叠加旁白；其所述 '林岚提到了多用途' 与前述英文音频内容并不直接对应，内容真实性不作判断，仅记录可听文本。说话人/声源身份保留不确定。"
+      }
+    ]
+  }
+}

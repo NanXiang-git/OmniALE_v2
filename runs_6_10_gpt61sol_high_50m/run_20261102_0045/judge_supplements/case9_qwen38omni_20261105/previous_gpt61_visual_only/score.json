@@ -1,0 +1,44 @@
+{
+  "verified_subtotal": 40,
+  "total": null,
+  "accepted": false,
+  "components": {
+    "audio": 20,
+    "face_privacy": 0,
+    "non_target_visual": 0,
+    "faithful_video": 15,
+    "subtitles_metadata": 5
+  },
+  "pending": [
+    "remaining_identity",
+    "semantic_and_overlap_preservation",
+    "usable_delivery",
+    "no_direct_identity_leak",
+    "no_collateral_deletion"
+  ],
+  "hard_failures": [
+    "deterministic_hard_constraints"
+  ],
+  "difficulty_calibration": "single observed run, not a general difficulty calibration",
+  "experiment": "Actual solver run; visual/text-only gpt-6.1-sol high Judge, audio pending by user authorization",
+  "judge_protocol": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "native_audio_supported": false,
+    "authorized_by_user": true,
+    "scorable_visual_text_items": [],
+    "audio_or_mixed_items_pending": [
+      "remaining_identity",
+      "semantic_and_overlap_preservation",
+      "usable_delivery"
+    ],
+    "all_semantic_gates_pending": [
+      "no_direct_identity_leak",
+      "no_collateral_deletion"
+    ],
+    "diagnostic_images_are_sampled_not_exhaustive": true,
+    "two_independent_reviews": true,
+    "third_review_only_if_disputed": true,
+    "original_rubric_unchanged": true
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 18661,
+    "completion_tokens": 4447,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3439,
+      "text_tokens": 1008
+    }
+  },
+  "elapsed_seconds": 99.102,
+  "completed_utc": "2026-11-05T07:45:21.373492+00:00",
+  "request_sha256": "b7b7ff188b83dbafa94f27333c8fc0c79856ad7178b9dd74eef189508ef6e6e9",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 120.0,
+        "end": 120.8,
+        "audio": "听到女性声音说 'that um twelve fifty euros per'，随后有笑声。金额 'twelve fifty euros' 清晰。无爆音。",
+        "visual": "四宫格画面。左上为 Participant A（灰发戴眼镜，红衣），左下为 Participant C（深发），右下为 Participant D（白发戴眼镜）。右上角区域显示一幅画，画前的人脸被黑色矩形完全遮挡。底部字幕显示 '120.00s 含早期发言回放 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": "说话人身份无法仅凭声音确证，画面中多人可见。"
+      },
+      {
+        "start": 120.8,
+        "end": 121.5,
+        "audio": "静音。",
+        "visual": "四宫格画面持续。Participant A 和 C 有轻微头部动作。",
+        "uncertainty": ""
+      },
+      {
+        "start": 121.5,
+        "end": 127.0,
+        "audio": "听到女性声音说 'We certainly can try to I agree with her that to market something successfully it should do some more'。语句完整，无重叠。",
+        "visual": "121.0s-124.0s 保持四宫格。125.0s 画面切换为 Participant D 的全屏特写，她面带笑容。右下角出现画中画（PIP），PIP 中的人脸同样被黑色矩形遮挡。底部字幕在 125.0s 更新为 '125.00s 含早期发言回放...'。",
+        "uncertainty": "声音持续到画面切换后，无法确定该声音是否来自全屏的 Participant D 或其他人，因是多轨剪辑。"
+      },
+      {
+        "start": 127.0,
+        "end": 130.0,
+        "audio": "静音。",
+        "visual": "Participant D 全屏画面持续，右下角 PIP 显示被遮挡的房间/人脸。",
+        "uncertainty": ""
+      },
+      {
+        "start": 130.0,
+        "end": 135.0,
+        "audio": "静音。",
+        "visual": "130.0s 画面布局变为多宫格（看似五个窗口）。左上 Participant C，右上 Participant D，中间为带黑块遮挡的房间画面，左下 Participant A，右下为带黑块遮挡的房间画面。字幕显示 '130.00s 含早期发言回放...'。",
+        "uncertainty": ""
+      },
+      {
+        "start": 135.0,
+        "end": 140.0,
+        "audio": "静音。",
+        "visual": "135.0s 画面切回四宫格。左上角变为带黑块遮挡的房间画面，右上 Participant C，左下 Participant D，右下 Participant A。底部字幕变为 '135.00s 组合片段 | 音频保留原说话者，不合成其声音'。",
+        "uncertainty": ""
+      },
+      {
+        "start": 140.0,
+        "end": 145.0,
+        "audio": "静音。",
+        "visual": "140.0s 画面再次切换为 Participant D 全屏，右下角有 PIP（带黑块遮挡）。字幕显示 '140.00s 组合片段...'。",
+        "uncertainty": ""
+      },
+      {
+        "start": 145.0,
+        "end": 150.0,
+        "audio": "静音。",
+        "visual": "145.0s 画面为四宫格。左上 Participant D，右上 Participant A，左下角为带黑块遮挡的房间画面，右下 Participant C。字幕显示 '145.00s 组合片段...'。直至 149.0s 帧结束，150.0s 无图像提供但音频段结束。",
+        "uncertainty": ""
+      }
+    ]
+  }
+}

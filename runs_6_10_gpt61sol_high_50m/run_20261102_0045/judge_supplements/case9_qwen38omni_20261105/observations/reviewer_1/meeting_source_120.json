@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14187,
+    "total_tokens": 15409,
+    "completion_tokens": 1222,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 318,
+      "text_tokens": 904
+    }
+  },
+  "elapsed_seconds": 61.371,
+  "completed_utc": "2026-11-05T07:33:04.107379+00:00",
+  "request_sha256": "fd5dec1f38b1f6c7a897b929da8d34739b8fff6300c269ff6a8cba45c7401960",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 120.0,
+        "end": 124.0,
+        "audio": "听到一名女性说“...um twelve fifty euros per...”，随后有短暂笑声重叠；另一名女性接着说“and it should have multiple like the remote control which we use for TV, it should be used for some other purpose also like controlling”。金额“twelve fifty euros”清晰，说话人身份不确定，存在轻微重叠。",
+        "visual": "四宫格画面：左上Participant A（灰发戴眼镜女性，红色上衣），右上林岚 / Francina（深色头发女性，白色上衣），左下Participant C（深色头发女性，暗红上衣），右下Participant D（白发戴眼镜女性，浅蓝上衣）。所有人脸和姓名标签均可见，无遮挡、无画中画、无回放。",
+        "uncertainty": "说话人与画面中具体哪一位对应无法仅凭声音确定；“twelve fifty euros per”后语句被笑声打断，不完整。"
+      },
+      {
+        "start": 125.0,
+        "end": 129.0,
+        "audio": "前一段“controlling”语句结束，随后有约1秒静音/低底噪，无明显语音重叠或爆音。",
+        "visual": "画面切换为Participant D单人大图（白发戴眼镜女性，浅蓝上衣），右下角叠加小窗显示林岚 / Francina。姓名标签“Participant D”和“林岚 / Francina”均可见，无遮挡。",
+        "uncertainty": "无。"
+      },
+      {
+        "start": 130.0,
+        "end": 134.0,
+        "audio": "一名女性说“We certainly can try to, I agree with her that to market something successfully it should do some more...”，语句在末尾被截断；“her”指代对象不确定。无重叠、无爆音。",
+        "visual": "五格布局：左上Participant C，右上Participant D，中间小窗林岚 / Francina，左下Participant A，右下林岚 / Francina（重复？实际右下为林岚 / Francina大图，中间小窗亦为Francina，疑似布局重叠显示）。所有人脸和姓名标签可见，无遮挡。",
+        "uncertainty": "中间小窗与右下面板均显示Francina，布局异常但非遮挡；说话人对应画面人物不确定。"
+      },
+      {
+        "start": 135.0,
+        "end": 139.0,
+        "audio": "前一句“should do some more”延续后结束，随后有短暂静音，无语音重叠或爆音。",
+        "visual": "四宫格重排：左上林岚 / Francina，右上Participant C，左下Participant D，右下Participant A。所有人脸和姓名标签可见，无遮挡、无画中画。",
+        "uncertainty": "无。"
+      },
+      {
+        "start": 140.0,
+        "end": 144.0,
+        "audio": "静音/低底噪，无语音内容，无重叠或爆音。",
+        "visual": "画面再次切换为Participant D单人大图，右下角叠加小窗林岚 / Francina。姓名标签可见，无遮挡。",
+        "uncertainty": "无。"
+      },
+      {
+        "start": 145.0,
+        "end": 149.0,
+        "audio": "静音/低底噪持续至片段结束，无语音、无重叠、无爆音。",
+        "visual": "四宫格：左上Participant D，右上Participant A，左下林岚 / Francina，右下Participant C。所有人脸和姓名标签可见，无遮挡、无回放。",
+        "uncertainty": "无。"
+      }
+    ]
+  }
+}

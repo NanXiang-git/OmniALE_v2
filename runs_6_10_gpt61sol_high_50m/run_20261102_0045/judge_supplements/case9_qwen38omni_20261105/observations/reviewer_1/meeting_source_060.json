@@ -1,0 +1,53 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14155,
+    "total_tokens": 18753,
+    "completion_tokens": 4598,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 683
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3727,
+      "text_tokens": 871
+    }
+  },
+  "elapsed_seconds": 103.235,
+  "completed_utc": "2026-11-05T07:30:39.594736+00:00",
+  "request_sha256": "f480c7a71523bed03d29b55f281ea24d98270a0816302ae507aa4a65d8f36e75",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 60,
+        "end": 72,
+        "audio": "开头约2秒两名女声重叠：一名较沉稳女声说 'Alright, here's what the functional design'，同时另一名带口音、语速较快女声说 'and it should have multiple purpose, like the remote control which we use for TV, it should be used for some other purpose also, like controlling'；随后第二女声独白延续至约71秒末，期间有重复与停顿（'it should it should be used'），'controlling' 后接约1秒短停顿。无爆音，无明显静音段（除末尾短停）。音频中未念出任何姓名。",
+        "visual": "60-64秒为四宫格：左上 Participant A（灰发戴眼镜红衣）、右上 林岚 / Francina（深发白衣）、左下 Participant C（深发暗红衣）、右下 Participant D（白发戴眼镜浅蓝衣），四张脸均清晰可见，各格下方姓名/代号标签完整显示、无遮挡。65-69秒切为 Participant A 大画面，右下角叠加 林岚 / Francina 画中画小窗。70-71秒切为四宫格（左上 Participant C、右上 Participant D、左下 Participant A、右下 林岚 / Francina）并在画面中央叠加 林岚 / Francina 画中画。全程无姓名遮挡、无脸部遮挡、无回放迹象；画中画在65-71秒出现。",
+        "uncertainty": "本段为多轨重组片段，音画说话人对应不可靠：65-69秒画面特写 Participant A，但此时发声的是第二女声，二者未必一致；开头重叠段两声归属亦不确定。"
+      },
+      {
+        "start": 72,
+        "end": 78,
+        "audio": "较沉稳女声独白：'Here's a project finance, which of course we all have to think about when we design this thing. Selling price is supposed to be 25 euro.' 金额 '25 euro' 清晰可辨，无重叠、无爆音。未提及具体机构名称，未念出姓名。",
+        "visual": "72-74秒延续四宫格加中央 林岚 / Francina 画中画；75-77秒切为新四宫格布局（左上 林岚 / Francina、右上 Participant C、左下 Participant D、右下 Participant A）。所有脸可见，标签完整无遮挡；画中画仅见于72-74秒；无回放。",
+        "uncertainty": "该女声声纹与60秒起始 'Alright' 者相近，但画面未同步给出发言者特写，说话人身份归属不确定。"
+      },
+      {
+        "start": 78,
+        "end": 90,
+        "audio": "无语音，仅低电平房间底噪/近静音，无重叠、无爆音、无姓名或金额出现。",
+        "visual": "78-79秒为四宫格（左上 林岚 / Francina、右上 Participant C、左下 Participant D、右下 Participant A）；80-84秒切为 Participant A 大画面加右下 林岚 / Francina 画中画；85-89秒切为四宫格（左上 Participant D、右上 Participant A、左下 林岚 / Francina、右下 Participant C）。全程脸与姓名标签均完整可见、无遮挡；画中画见于80-84秒；无回放。",
+        "uncertainty": "无语音内容，故无说话人归属问题；画面布局切换系重组所致，不代表原始会议连续镜头。"
+      }
+    ]
+  }
+}

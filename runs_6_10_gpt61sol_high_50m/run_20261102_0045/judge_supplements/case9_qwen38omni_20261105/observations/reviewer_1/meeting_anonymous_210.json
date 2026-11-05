@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 18828,
+    "completion_tokens": 4614,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3618,
+      "text_tokens": 996
+    }
+  },
+  "elapsed_seconds": 107.521,
+  "completed_utc": "2026-11-05T07:47:09.511025+00:00",
+  "request_sha256": "e16be036af8088a756308ac9d7c17a5c630e2d46411765ee002aa8e6bb4e5b0e",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 210,
+        "end": 215,
+        "audio": "女声：‘certain darkness it has a sensor and it gives out a signal whether that be a light signal or’；句末在‘or’处被截断、无后续；无重叠、无爆音；该段前无静音。",
+        "visual": "四宫格布局：左上 Participant C（脸清晰、姓名标签可见），右上 Participant D（脸清晰、标签可见），左下 Participant A（脸清晰、标签可见、抬手做手势），右下格人脸被黑色矩形完全遮挡且该格无可见姓名标签；背景可见书架、墙钟、桌上‘DIAP’纸牌与‘InfoCenter’盒。",
+        "uncertainty": "音频以转写文本形式呈现、未在音频层绑定说话人；画面中 210–213s Participant A 口型/手势活跃、214s Participant C 张口，二者皆可能为该句来源，右下被遮挡者口型不可见，故说话人归属不确定。"
+      },
+      {
+        "start": 215,
+        "end": 224,
+        "audio": "静音（约 9 秒无语音）；无重叠、无爆音。",
+        "visual": "215–219s 切为 Participant A 大窗（脸/标签可见、戴耳麦、口型在动但无对应语音）＋右下角画中画小窗（墙上的画框＋一个被黑块遮挡的人影，无标签）；220–224s 切为多格布局：左上 Participant A、右上黑块遮挡格、中央叠加一个画中画小窗（内为黑块遮挡人影）、左下 Participant C、右下 Participant D。",
+        "uncertainty": "该时段音轨为静音而画面显示 Participant A 口型活动，疑为多轨剪辑/早期发言回放造成的音画错位；画中画及黑块格内人物身份均不可辨。"
+      },
+      {
+        "start": 224,
+        "end": 232,
+        "audio": "女声：‘you know there would be right you have to have some kind of sensor and I I think voice or clapping that's not specific enough uh I know there are the lamps and stuff you know’；含否定‘not specific enough’；含自我重复‘I I’；无机构名、无金额；无重叠、无爆音；句末‘you know’后转入静音。",
+        "visual": "224s 四宫格（左上 Participant A、右上黑块遮挡格、左下 Participant C、右下 Participant D，中央另叠一个画中画小窗）；225–229s 四宫格重排：左上 Participant D、右上 Participant A（抬手指做捏指/OK 手势、口型动）、左下黑块遮挡格、右下 Participant C；230–232s Participant A 大窗＋右下画中画黑块遮挡窗。",
+        "uncertainty": "该句最可能由 Participant A 说出（227–232s 其口型与手势节奏与语音吻合），但因布局频繁切换且存在被遮挡格，不能完全排除他人；说话人归属保留不确定。"
+      },
+      {
+        "start": 232,
+        "end": 240,
+        "audio": "静音（约 8 秒无语音，直至本段结束）；无重叠、无爆音。",
+        "visual": "232–234s Participant A 大窗＋右下画中画黑块遮挡窗（A 口型渐止）；235–239s 四宫格重排：左上黑块遮挡格、右上 Participant C（低头、口型微动）、左下 Participant D、右下 Participant A。",
+        "uncertainty": "静音期内画面仍有人物口型微动（如 235–239s 的 Participant C/A），无对应语音，疑剪辑残留；左上被遮挡格身份不可辨；239–240s 无独立采样帧，沿用 235–239s 布局推断。"
+      }
+    ]
+  }
+}

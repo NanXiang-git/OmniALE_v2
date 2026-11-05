@@ -1,0 +1,67 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14203,
+    "total_tokens": 16975,
+    "completion_tokens": 2772,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 731
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1682,
+      "text_tokens": 1090
+    }
+  },
+  "elapsed_seconds": 82.752,
+  "completed_utc": "2026-11-05T07:44:44.024294+00:00",
+  "request_sha256": "5ef802f0c0ef67febd604483eebd53e2ef8743e237dcd367fec82566363d33a6",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 90,
+        "end": 93,
+        "audio": "女声英文：“Aim for the company is fifty million euro.”（金额“fifty million euro”清晰）。无明显爆音；与后续语句间有短暂停顿。说话人身份无法从画面确证。",
+        "visual": "四宫格布局。左上 Participant C（深色头发女性，面部可见，91s 低头、94s 张口）；右上 Participant D（白发戴眼镜女性，面部可见）；左下 Participant A（灰发戴眼镜女性，侧脸可见）；右下格为挂城市风景画的房间，其中一人面部被黑色矩形完全遮挡，该格未见可读姓名标签。姓名均以 Participant 代号显示，无真实姓名泄露。",
+        "uncertainty": "英文句的发声者不能与某一格口型可靠对应，记为说话人不确定；视觉仅基于 90/91/92s 整秒采样帧。"
+      },
+      {
+        "start": 93,
+        "end": 99,
+        "audio": "女声英文续：“The market range unlimited meaning international”。句末后接约数秒停顿/近静音，再进入下一句。无爆音、无重叠。",
+        "visual": "93–94s 仍为上述四宫格（右下黑块遮挡脸）。95–99s 切换为 Participant A 单人主画面（灰发戴眼镜、侧脸朝左，面部可见），右下角出现画中画小窗，小窗内同一被黑块遮挡的脸。属布局切换/PIP，非回放。",
+        "uncertainty": "停顿时长为近似；PIP 内被遮者身份不可辨；视觉基于 93–99s 整秒采样帧。"
+      },
+      {
+        "start": 99,
+        "end": 115,
+        "audio": "女声英文：“And production cost should not exceed, hopefully should be less than twelve fifty euro.”（否定“should not exceed”与金额“twelve fifty euro”清晰）。句前有停顿，句后到中文前亦有停顿/近静音。无爆音、无重叠。",
+        "visual": "100–104s 为多宫格：左上 Participant A（侧脸可见）、右上为黑块遮挡脸、中央另有一更小 PIP 亦为黑块遮挡脸、左下 Participant C（面部可见）、右下 Participant D（面部可见）。105–109s 切换四宫格：左上 Participant D、右上 Participant A、左下黑块遮挡脸、右下 Participant C。110–114s 再切 Participant A 单人主画面＋右下 PIP 黑块遮挡脸。全程被遮格无 readable 姓名标签，其余以 Participant 代号标注。",
+        "uncertainty": "该长句内是否含微小停顿不可精确定位；多次布局切换与 PIP 嵌套使“谁在说话”更难对应，记为说话人不确定；视觉基于 99–114s 整秒采样帧。"
+      },
+      {
+        "start": 115,
+        "end": 118,
+        "audio": "出现中文女声片段：“刚才”。与前面英文之间为停顿/近静音过渡；该中文疑似非主轨串音或剪辑残留，画面无对应中文口型。无爆音。",
+        "visual": "四宫格：左上为黑块遮挡脸、右上 Participant C（面部可见，低头）、左下 Participant D（面部可见）、右下 Participant A（面部可见）。被遮格无 readable 姓名标签。",
+        "uncertainty": "中文发声者完全无法与任一画面格对应，记为说话人高度不确定；视觉基于 115–117s 整秒采样帧。"
+      },
+      {
+        "start": 118,
+        "end": 120,
+        "audio": "中文女声续：“提到了多用途”。与“刚才”连贯，构成一句被截断的中文短语；其后即接近本段尾。无爆音、无与英文重叠。",
+        "visual": "四宫格延续：左上黑块遮挡脸、右上 Participant C（面部可见）、左下 Participant D（面部可见）、右下 Participant A（侧脸/正脸可见）。被遮格仍无 readable 姓名标签。",
+        "uncertainty": "中文句在段尾被截断，完整性未知；发声者不可对应画面，记为说话人高度不确定；视觉基于 118–119s 整秒采样帧，120s 未采样。"
+      }
+    ]
+  }
+}

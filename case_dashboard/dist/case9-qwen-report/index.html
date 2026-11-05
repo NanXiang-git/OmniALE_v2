@@ -1,0 +1,315 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第9题 Case18 · Qwen补评</title><style>body{font:17px/1.7 system-ui;max-width:1100px;margin:40px auto;padding:0 24px;color:#172337;background:#f5f7fb}table{border-collapse:collapse;background:white;width:100%}td,th{border:1px solid #d6dfeb;padding:16px;text-align:left}a{color:#1252a0}small{color:#526079}th:first-child{width:180px}th:nth-child(2){width:110px}table{table-layout:fixed;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{margin-top:8px}</style><a href="../index.html#task-09/results">← 返回第9题答卷与评分</a><h1>第9题 / Case18：Qwen原生音视频补评</h1><p><b>程序40/80 + 裁判20.0/20；总分60.0/100。硬门槛未通过。</b></p><p>Solver：gpt-6.1-sol / high，原冻结答卷未修改。补评Judge：qwen3.8-omni-flash，供应商默认推理配置。此次仅补剩余20分，原程序评分及标准未修改。</p><table><tr><th>项目</th><th>得分</th><th>判定依据</th></tr><tr><td>剩余可识别身份</td><td>8.0 / 8</td><td>Qwen判定：pass<details><summary>展开判定依据与时间点</summary>对照源片姓名条标记的B（林岚 / Francina，戴耳麦白衣深发），成片在主画面、右下画中画、中央重复画中画及回放段均以实心深灰矩形覆盖其面部并移除姓名条：原媒体1–10s右上格与5s画中画、26–31s左下格、116–121s左上格、206–211s左下格、281–287s右上格加中央实例均无未遮脸、无可读姓名条；逐帧复核frame=869(34.76s)、5947(237.88s)、5130(205.2s)、6904(276.16s)黑块盖住眼鼻口，仅露肩/背景，肉眼不可识别。声音上B的Francina自述、television remote control自述、multi-purpose、nowadays、design should be different等全部不进入混音（原媒体1.5–9.41s、31.5–35.72s、61.5–72.33s、121.5–132.33s、151.5–153.42s、181.5–189.41s、211.5–215.72s、241.5–252.33s、271.5–274.34s区间只余A/C/D声）。主持三处人名&#x27;林岚&#x27;发声已置零（27.6–28.2s、117.4–118.0s、207.2–207.8s），字幕以&#x27;受访者B&#x27;替代，无Francina、无人名化&#x27;林岚&#x27;；281–286s&#x27;林岚研究所&#x27;为机构同名负对照，按规则保留。程序every_frame_privacy(face_coverage 0.9411)与other_people几何失败经原生逐帧复核不构成肉眼可识别人脸，不据此扣分。未发现B的脸、声、个人姓名。</details></td></tr><tr><td>重叠语音与语义保留</td><td>8.0 / 8</td><td>Qwen判定：pass<details><summary>展开判定依据与时间点</summary>重叠段A/C/D均可听清、未随B静音：原媒体0–10s保留A&#x27;Betsy/project manager&#x27;而删B&#x27;Francina&#x27;；30–44s保留C&#x27;industrial designer/technical functional designs&#x27;而删B&#x27;television remote control&#x27;；60–72s保留A&#x27;functional design&#x27;而删B&#x27;multi-purpose&#x27;；90–98s保留A&#x27;fifty million euro/market range international&#x27;而删B&#x27;I feel all remote&#x27;；120–132s保留D&#x27;twelve fifty euros/We certainly can try&#x27;而删B replay；150–155s保留A&#x27;more buttons&#x27;而删B&#x27;nowadays&#x27;；180–189s保留C&#x27;should have a light&#x27;而删B replay；210–215s保留A&#x27;darkness sensor&#x27;而删B replay；240–252s保留A&#x27;next meeting thirty minutes&#x27;而删B replay；270–281s保留A&#x27;two three minutes/questions&#x27;而删B&#x27;design should be different&#x27;。主持非人名内容保留（&#x27;现在请继续介绍&#x27;&#x27;刚才提到了多用途&#x27;&#x27;请补充设计观点&#x27;），281–286s&#x27;林岚研究所，这是机构名称&#x27;整段保留。字幕锚点核对：U09&#x27;25欧元&#x27;、U10&#x27;5000万欧元&#x27;、U12&#x27;不能超过12.50欧元，最好低于&#x27;、U24&#x27;声音或拍手还不够有针对性&#x27;、U25&#x27;30分钟后&#x27;均在；B观点以文字保留且省略号未补成新决定，speaker归属与参考一致无错归人。原始停顿/不完整句属源缺陷，未扣。</details></td></tr><tr><td>观看可用性</td><td>4.0 / 4</td><td>Qwen判定：pass<details><summary>展开判定依据与时间点</summary>观看成片布局切换与遮罩跟随：四宫格轮换、右下画中画、中央重复画中画及回放段中B的黑块均稳定贴合，无闪烁、无露眼鼻口（逐帧frame=869/5947/5130/6904/3189/6189/4288/7288复核），且未侵占他人——A/C/D面部与&#x27;Participant A/C/D&#x27;标签全程清晰、other_face_damage=0.0，遮罩超出区仅落在B自身窗口的肩/背景（身体保留允许）。声音剪接各段无新增爆音/削波，主持姓名置零位于零幅停顿。交付含可选zho mov_text字幕轨（technical embedded_subtitles/external_srt_exact通过），subtitles.json 34条结构/ID/时间/speaker保留，README与edits.json所述决策（遮脸遮名条、B整轨不入混音、主持三处人名删除、机构名保留、字幕&#x27;受访者B&#x27;替换）与实际声画观察一致，无工程描述与媒体矛盾。程序几何门槛失败按规则不自动等同于肉眼缺陷，原生复核支持可发布。</details></td></tr></table><h2>验收门槛</h2><ul><li>no_direct_identity_leak：pass；原生声画复核确认无剩余目标面部、无可读B个人姓名、无可辨B原人声：1–10s、26–31s、116–121s、206–211s、281–287s及逐帧869/5947/5130/6904黑块实心盖住眼鼻口、姓名条移除；B的Francina/television remote control/multi-purpose/nowadays/design should be different自述与replay均不在混音；主持人名&#x27;林岚&#x27;三处发声删除，字幕无Francina、无人名化林岚。281–286s&#x27;林岚研究所&#x27;为应保留机构同名负对照，不构成泄漏。机器face_coverage 0.9411几何失败经具体看不能推出肉眼可识别，门槛成立。</li><li>no_collateral_deletion：pass；未为去B而误伤他人：重叠段A(0–10s Betsy、60–72s functional design、90–98s 50 million/12.50、240–252s 30 minutes、270–281s questions)、C(30–44s industrial designer、180–189s light)、D(14–17s marketing、120–132s twelve fifty/We certainly can try、165–171s beeps when you clap)声音均保留，A/C/D人脸与化名标签全程未遮、未删帧改速；机构名&#x27;林岚研究所&#x27;(281–286s)完整保留；语义无反转或错归人。原始结巴/停顿/串音属源特征，未扣。无重大误伤。</li></ul><p>程序仍确认：部分帧目标脸覆盖率不足，遮罩超出允许区域。因此即使主观评审未发现直接可辨身份，也不能宣称题目通过。</p><h2>评审覆盖与边界</h2><ul><li>音轨全时长分段输入；视觉1fps独立图片和8个异常帧，不是逐帧人工审查。</li><li>程序全7500帧检测失败仍保留；LLM听看不能豁免硬约束。</li><li>Qwen使用供应商默认推理配置，不声称high。</li><li>两轮独立会话是同一模型，不等于独立人类评审。</li></ul><p>2轮独立完整评审；每轮原片300秒、成片300秒原生音轨，600张独立采样图片；关键姓名/机构/重叠片段额外复听，并复看8个程序定位异常帧。若前两轮分歧，增加第三轮按项目多数决；无多数项仍待评。</p><h2>可追溯记录</h2><p>以下仅公开评分结论、调用回执及完整性核验；不公开API密钥或私有题库真值。</p><ul><li><a href="score.json">score.json</a></li><li><a href="review.json">review.json</a></li><li><a href="protocol.json">protocol.json</a></li><li><a href="integrity_audit.json">integrity_audit.json</a></li><li><a href="capability_probe.json">capability_probe.json</a></li><li><a href="reviewer_1.json">reviewer_1.json</a></li><li><a href="reviewer_2.json">reviewer_2.json</a></li></ul><details><summary>两轮/三轮原始判定对比</summary><pre>[
+  {
+    &quot;items&quot;: [
+      {
+        &quot;id&quot;: &quot;remaining_identity&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;对照源片姓名条标记的B（林岚 / Francina，戴耳麦白衣深发），成片在主画面、右下画中画、中央重复画中画及回放段均以实心深灰矩形覆盖其面部并移除姓名条：原媒体1–10s右上格与5s画中画、26–31s左下格、116–121s左上格、206–211s左下格、281–287s右上格加中央实例均无未遮脸、无可读姓名条；逐帧复核frame=869(34.76s)、5947(237.88s)、5130(205.2s)、6904(276.16s)黑块盖住眼鼻口，仅露肩/背景，肉眼不可识别。声音上B的Francina自述、television remote control自述、multi-purpose、nowadays、design should be different等全部不进入混音（原媒体1.5–9.41s、31.5–35.72s、61.5–72.33s、121.5–132.33s、151.5–153.42s、181.5–189.41s、211.5–215.72s、241.5–252.33s、271.5–274.34s区间只余A/C/D声）。主持三处人名&#x27;林岚&#x27;发声已置零（27.6–28.2s、117.4–118.0s、207.2–207.8s），字幕以&#x27;受访者B&#x27;替代，无Francina、无人名化&#x27;林岚&#x27;；281–286s&#x27;林岚研究所&#x27;为机构同名负对照，按规则保留。程序every_frame_privacy(face_coverage 0.9411)与other_people几何失败经原生逐帧复核不构成肉眼可识别人脸，不据此扣分。未发现B的脸、声、个人姓名。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 60
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 116,
+            &quot;end&quot;: 121
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 34.76,
+            &quot;end&quot;: 34.76
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;semantic_and_overlap_preservation&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;重叠段A/C/D均可听清、未随B静音：原媒体0–10s保留A&#x27;Betsy/project manager&#x27;而删B&#x27;Francina&#x27;；30–44s保留C&#x27;industrial designer/technical functional designs&#x27;而删B&#x27;television remote control&#x27;；60–72s保留A&#x27;functional design&#x27;而删B&#x27;multi-purpose&#x27;；90–98s保留A&#x27;fifty million euro/market range international&#x27;而删B&#x27;I feel all remote&#x27;；120–132s保留D&#x27;twelve fifty euros/We certainly can try&#x27;而删B replay；150–155s保留A&#x27;more buttons&#x27;而删B&#x27;nowadays&#x27;；180–189s保留C&#x27;should have a light&#x27;而删B replay；210–215s保留A&#x27;darkness sensor&#x27;而删B replay；240–252s保留A&#x27;next meeting thirty minutes&#x27;而删B replay；270–281s保留A&#x27;two three minutes/questions&#x27;而删B&#x27;design should be different&#x27;。主持非人名内容保留（&#x27;现在请继续介绍&#x27;&#x27;刚才提到了多用途&#x27;&#x27;请补充设计观点&#x27;），281–286s&#x27;林岚研究所，这是机构名称&#x27;整段保留。字幕锚点核对：U09&#x27;25欧元&#x27;、U10&#x27;5000万欧元&#x27;、U12&#x27;不能超过12.50欧元，最好低于&#x27;、U24&#x27;声音或拍手还不够有针对性&#x27;、U25&#x27;30分钟后&#x27;均在；B观点以文字保留且省略号未补成新决定，speaker归属与参考一致无错归人。原始停顿/不完整句属源缺陷，未扣。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 30
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 60,
+            &quot;end&quot;: 90
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 90,
+            &quot;end&quot;: 120
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 240,
+            &quot;end&quot;: 270
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 270,
+            &quot;end&quot;: 300
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;usable_delivery&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;观看成片布局切换与遮罩跟随：四宫格轮换、右下画中画、中央重复画中画及回放段中B的黑块均稳定贴合，无闪烁、无露眼鼻口（逐帧frame=869/5947/5130/6904/3189/6189/4288/7288复核），且未侵占他人——A/C/D面部与&#x27;Participant A/C/D&#x27;标签全程清晰、other_face_damage=0.0，遮罩超出区仅落在B自身窗口的肩/背景（身体保留允许）。声音剪接各段无新增爆音/削波，主持姓名置零位于零幅停顿。交付含可选zho mov_text字幕轨（technical embedded_subtitles/external_srt_exact通过），subtitles.json 34条结构/ID/时间/speaker保留，README与edits.json所述决策（遮脸遮名条、B整轨不入混音、主持三处人名删除、机构名保留、字幕&#x27;受访者B&#x27;替换）与实际声画观察一致，无工程描述与媒体矛盾。程序几何门槛失败按规则不自动等同于肉眼缺陷，原生复核支持可发布。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 60
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 205.2,
+            &quot;end&quot;: 205.2
+          }
+        ]
+      }
+    ],
+    &quot;gates&quot;: [
+      {
+        &quot;id&quot;: &quot;no_direct_identity_leak&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;finding&quot;: &quot;原生声画复核确认无剩余目标面部、无可读B个人姓名、无可辨B原人声：1–10s、26–31s、116–121s、206–211s、281–287s及逐帧869/5947/5130/6904黑块实心盖住眼鼻口、姓名条移除；B的Francina/television remote control/multi-purpose/nowadays/design should be different自述与replay均不在混音；主持人名&#x27;林岚&#x27;三处发声删除，字幕无Francina、无人名化林岚。281–286s&#x27;林岚研究所&#x27;为应保留机构同名负对照，不构成泄漏。机器face_coverage 0.9411几何失败经具体看不能推出肉眼可识别，门槛成立。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 116,
+            &quot;end&quot;: 121
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 34.76,
+            &quot;end&quot;: 34.76
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;no_collateral_deletion&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;finding&quot;: &quot;未为去B而误伤他人：重叠段A(0–10s Betsy、60–72s functional design、90–98s 50 million/12.50、240–252s 30 minutes、270–281s questions)、C(30–44s industrial designer、180–189s light)、D(14–17s marketing、120–132s twelve fifty/We certainly can try、165–171s beeps when you clap)声音均保留，A/C/D人脸与化名标签全程未遮、未删帧改速；机构名&#x27;林岚研究所&#x27;(281–286s)完整保留；语义无反转或错归人。原始结巴/停顿/串音属源特征，未扣。无重大误伤。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 0,
+            &quot;end&quot;: 30
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 30,
+            &quot;end&quot;: 60
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 60,
+            &quot;end&quot;: 90
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 270,
+            &quot;end&quot;: 300
+          }
+        ]
+      }
+    ]
+  },
+  {
+    &quot;items&quot;: [
+      {
+        &quot;id&quot;: &quot;remaining_identity&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;逐帧对照源与成片：源[1,10)s右上格及右下PiP、[26,31)s左下格、[116,121)s左上格、[206,211)s左下格、[281,287)s右上格+中央重复PiP中B脸与&#x27;林岚 / Francina&#x27;姓名条均清晰可读；成片中上述全部实例的脸部核心（眼鼻口）被不透明深色矩形覆盖，姓名条同步遮除，未露出可读真名，其余仅以Participant A/C/D代号呈现。额外复核帧869/5947/3189/6189/6904/5130/4288/7288的anonymous画面黑块均盖住面部中心，机器face_coverage=0.941的缺口位于脸框边缘（额/颊/下巴轮廓），不含可识别五官，故肉眼不可辨B脸。音频侧：源[0,5)s重叠的&#x27;My name is Francina…&#x27;自我介绍、[90,92)s&#x27;[120,125)s&#x27;[180,188)s&#x27;[240,250)s&#x27;[270,272)s的B多用途/插入声在成片中均不可闻，仅余A/C/D主声；主持TTS三处个人姓名&#x27;林岚&#x27;在成片[26,31)/[116,121)/[206,211)对应段被置零（&#x27;现在请…继续介绍&#x27;&#x27;刚才…提到了多用途&#x27;&#x27;请…补充设计观点&#x27;），而[281,287)机构段&#x27;林岚研究所&#x27;整段保留为负对照。字幕U02/U20统一为&#x27;我是受访者B&#x27;，无个人姓名。综合未见可读姓名、未遮目标脸或可辨B原声。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_source&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_source&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 26,
+            &quot;end&quot;: 31
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 116,
+            &quot;end&quot;: 121
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 206,
+            &quot;end&quot;: 211
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;semantic_and_overlap_preservation&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;重叠段复核：源[90,92)s B插入&#x27;I feel that all the…&#x27;覆盖下A的&#x27;fifty million euro&#x27;、源[120,125)s B&#x27;multi-purpose&#x27;覆盖下D的&#x27;twelve fifty euros per&#x27;+笑、源[180,188)s B自我介绍覆盖下C的&#x27;should have a light&#x27;、源[240,250)s B覆盖下A的&#x27;next meeting…thirty minutes&#x27;、源[270,272)s B&#x27;design should be different&#x27;覆盖下A的&#x27;two three minutes&#x27;，成片中A/C/D主声均清晰保留，未随B一并静音。主持非人名内容与机构段完整：成片[281,287)&#x27;资料来自林岚研究所，这是机构名称&#x27;整段在。字幕锚点核对subtitles.json：U09&#x27;25欧元&#x27;、U10&#x27;5000万欧元&#x27;、U12&#x27;不能超过12.50欧元，最好低于&#x27;、U13&#x27;12.50欧元&#x27;、U24&#x27;声音或拍手还不够有针对性&#x27;、U25&#x27;30分钟后&#x27;均在；B观点U05/U08/U11/U14/U17/U23/U26/U29逐字保留并以省略号忠实反映原截断（如&#x27;controlling&#x27;&#x27;should be very&#x27;），未把断句补成新决定；说话人归属34条与参考agent逐项一致，无错归。源固有停顿/结巴（&#x27;two, two, two&#x27;、&#x27;my my&#x27;、&#x27;you you&#x27;）保留，未扣交付。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_source&quot;,
+            &quot;start&quot;: 90,
+            &quot;end&quot;: 95
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 90,
+            &quot;end&quot;: 95
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_source&quot;,
+            &quot;start&quot;: 240,
+            &quot;end&quot;: 250
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 240,
+            &quot;end&quot;: 250
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_source&quot;,
+            &quot;start&quot;: 180,
+            &quot;end&quot;: 188
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;usable_delivery&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;rating&quot;: &quot;1&quot;,
+        &quot;finding&quot;: &quot;成片布局切换（2×2轮换、单主画面+右下PiP、带中央重复PiP的混合视图）中B遮罩均跟随对应实例，含中央重复窗口与右上被PiP压住的姓名条实例同步遮除；抽帧未见遮罩闪烁或露出眼鼻口。other_face_damage=0且复核帧中A/C/D脸完整可见，遮罩超界(outside_allowed)仅落在B自身机位背景/身体，未侵占他人脸。音频剪接各段观察均记&#x27;无爆音&#x27;，定向置零位于停顿处无新增咔哒。字幕为嵌入可选zho轨（stream_types含subtitle，README称播放器可选），帧图无烧录对白不扣分；subtitles.json/zh.srt/edits.json/README结构一致，edits记录的遮罩矩形、三处HOST姓名静音区间、机构段保留与实测复核相符；封面经机器核验匹配首帧遮罩。程序门槛every_frame_privacy/other_people_and_minimal_area的几何失败属独立程序项，肉眼复核不构成可识别泄漏或误伤，不扣本项。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 270,
+            &quot;end&quot;: 280
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 125,
+            &quot;end&quot;: 135
+          }
+        ]
+      }
+    ],
+    &quot;gates&quot;: [
+      {
+        &quot;id&quot;: &quot;no_direct_identity_leak&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;finding&quot;: &quot;原生声画复核确认无剩余目标面部、无可读个人姓名、无可辨B原声：成片所有B实例脸核心被不透明遮罩覆盖、姓名条遮除，Francina自我介绍与B多用途声轨不可闻，主持三处&#x27;林岚&#x27;人名置零；机构名&#x27;林岚研究所&#x27;为应保留负对照，不计泄漏。机器face_coverage=0.941为脸框边缘缺口，抽帧未见可识别五官，故几何门槛失败不升级为身份泄漏。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 1,
+            &quot;end&quot;: 10
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 116,
+            &quot;end&quot;: 121
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;no_collateral_deletion&quot;,
+        &quot;status&quot;: &quot;pass&quot;,
+        &quot;finding&quot;: &quot;未发现重大误伤：重叠段A/C/D主声均保留，未随B静音；A/C/D脸未被遮；时间轴300s、7500帧未删帧变速；机构名整段保留；金额/否定/30分钟/拍手意见语义未反转或错归；源固有停顿结巴按原样保留，未计交付错误。&quot;,
+        &quot;evidence&quot;: [
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 90,
+            &quot;end&quot;: 95
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 240,
+            &quot;end&quot;: 255
+          },
+          {
+            &quot;media_id&quot;: &quot;meeting_anonymous&quot;,
+            &quot;start&quot;: 281,
+            &quot;end&quot;: 287
+          }
+        ]
+      }
+    ]
+  }
+]</pre></details><h2>程序定位异常帧：成片实际画面</h2><p>下列图片用于复核，不代表所有未采样帧均已人工检查。</p><figure><img loading="lazy" style="max-width:100%" src="output-frame-869.jpg" alt="成片第869帧"><figcaption>34.76秒；脸覆盖率0.9412；超出允许遮挡区域0.0000</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-5947.jpg" alt="成片第5947帧"><figcaption>237.88秒；脸覆盖率0.9412；超出允许遮挡区域0.0000</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-3189.jpg" alt="成片第3189帧"><figcaption>127.56秒；脸覆盖率0.9423；超出允许遮挡区域0.0091</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-6189.jpg" alt="成片第6189帧"><figcaption>247.56秒；脸覆盖率0.9423；超出允许遮挡区域0.0091</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-6904.jpg" alt="成片第6904帧"><figcaption>276.16秒；脸覆盖率1.0000；超出允许遮挡区域0.1445</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-5130.jpg" alt="成片第5130帧"><figcaption>205.20秒；脸覆盖率1.0000；超出允许遮挡区域0.0974</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-4288.jpg" alt="成片第4288帧"><figcaption>171.52秒；脸覆盖率1.0000；超出允许遮挡区域0.0969</figcaption></figure><figure><img loading="lazy" style="max-width:100%" src="output-frame-7288.jpg" alt="成片第7288帧"><figcaption>291.52秒；脸覆盖率1.0000；超出允许遮挡区域0.0969</figcaption></figure></html>

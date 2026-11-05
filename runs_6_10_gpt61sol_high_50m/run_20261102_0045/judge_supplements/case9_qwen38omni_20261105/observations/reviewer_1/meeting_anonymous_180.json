@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 20479,
+    "completion_tokens": 6265,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5043,
+      "text_tokens": 1222
+    }
+  },
+  "elapsed_seconds": 116.405,
+  "completed_utc": "2026-11-05T07:47:10.395094+00:00",
+  "request_sha256": "dcd717c92863196b97c23d0803a7e7561c2d4b60cc524ff5c3fdd77b4f487f18",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 180.0,
+        "end": 185.0,
+        "audio": "一位女性说话（说话人身份不确定）：\"Maybe it should have a light so that we can we can just recognize where it\"，句尾被截断，含重复\"we can\"；本段无重叠语音、无爆音，仅轻微房间底噪。未见金额、机构名或明确否定词。",
+        "visual": "180–184s 为四宫格布局：左上 Participant A（红衣、短发、戴眼镜，面部可见），右上为一面部被黑色矩形完全遮挡的参与者（背景为画框与红色警报灯），左下 Participant C（深色头发，低头，面部可见），右下 Participant D（白发、戴眼镜，面部可见）。各格姓名均以\"Participant X\"匿名标签显示，无真实姓名；右上格面部被黑块遮盖，肉眼可确认遮挡。",
+        "uncertainty": "说话人对应不确定；本段标注为多轨重组/早期发言回放，口型与音轨未必同步，故不以口型反推说话人。184–185s 之间无单独采样帧。"
+      },
+      {
+        "start": 185.0,
+        "end": 193.0,
+        "audio": "基本静音/极低背景噪声，无清晰语音；无重叠、无爆音。",
+        "visual": "185–189s 为 Participant C 单格全屏，右下角出现画中画小窗，窗内为面部被黑块遮挡者；C 在画面中张口似在说话，但音轨此处无对应语音。190–192s 切换为叠加/混乱多窗布局：中央有一画中画小窗显示黑块遮脸者，左下为 Participant A，右上为 Participant D，左上为 Participant C 等，呈现剪辑重组痕迹。",
+        "uncertainty": "画面有人口型动作而音轨静音，印证音画不同步/回放；192–193s 间无单独采样帧。"
+      },
+      {
+        "start": 193.0,
+        "end": 200.0,
+        "audio": "另一位女性说话（说话人身份不确定，声线较成熟）：\"My my idea is maybe that the minute it's really hidden in in other words if it's like in a dark.\"，含重复\"my my\"与\"in in\"，句意松散、未完整收束；无重叠、无爆音。未见金额、机构名或明确否定词。",
+        "visual": "193–194s 延续叠加/混乱多窗布局，中央画中画窗内为黑块遮脸者；195–199s 为四宫格：左上为黑块遮脸者，右上 Participant C，左下 Participant D，右下 Participant A。姓名仍均为 Participant 匿名标签，遮脸者格无可见真名。",
+        "uncertainty": "说话人对应不确定；音画重组，口型不可作为说话人证据。"
+      },
+      {
+        "start": 200.0,
+        "end": 201.0,
+        "audio": "短静音/过渡，无语音；无重叠、无爆音。",
+        "visual": "200s 为 Participant A 单格全屏，右下角画中画小窗显示黑块遮脸者。",
+        "uncertainty": "无显著不确定项。"
+      },
+      {
+        "start": 201.0,
+        "end": 203.0,
+        "audio": "一段中文合成/系统式女声：\"请补充设计观点。\"，语气为指令式，与会议英文语境不符，疑似 TTS 或人为插入提示；无重叠、无爆音。",
+        "visual": "201–202s 为 Participant A 单格全屏，右下角画中画为黑块遮脸者；A 在画面中张口呈说英文状，与所闻中文合成声不对应。",
+        "uncertainty": "该中文声来源不确定（合成/插入），且与画面口型明显不符，进一步说明音轨与画面为重组关系。"
+      },
+      {
+        "start": 203.0,
+        "end": 210.0,
+        "audio": "自约 203s 起至合并音轨 30s 末（原 210s）为静音，无语音；无重叠、无爆音。",
+        "visual": "203–204s 仍为 Participant A 单格全屏+右下画中画黑块遮脸者；205–209s 为四宫格：左上 Participant D，右上 Participant A，左下为黑块遮脸者，右下 Participant C。姓名均为 Participant 匿名标签。画面中 A 等有人口型动作但音轨静音。",
+        "uncertainty": "音画不同步（画面口型对应静音）；209–210s 无采样帧，故该 1 秒视觉未声称已看过。"
+      }
+    ]
+  }
+}

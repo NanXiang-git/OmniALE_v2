@@ -1,453 +1,180 @@
 {
-  "model_returned": "gpt-6.1-sol",
-  "reasoning_returned": {
-    "effort": "high",
-    "context": "all_turns",
-    "summary": null,
-    "mode": "standard"
-  },
-  "id": "resp_07c68c79628b7040016ae8183f200c81908afb2534de8610e0",
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
   "usage": {
-    "input_tokens": 42277,
-    "input_tokens_details": {
+    "prompt_tokens": 77447,
+    "total_tokens": 92842,
+    "completion_tokens": 15395,
+    "prompt_tokens_details": {
       "cached_tokens": 0,
-      "cache_write_tokens": 0
+      "audio_tokens": 443,
+      "image_tokens": 22100,
+      "text_tokens": 54904
     },
-    "output_tokens": 1034,
-    "output_tokens_details": {
-      "reasoning_tokens": 117
-    },
-    "total_tokens": 43311,
-    "attribution": {
-      "items": {
-        "msg_07c68c79628b7040016ae8183f20f881909ec977ad99ea3296": {
-          "input_tokens": 42124,
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "output_tokens": 0,
-          "content": [
-            {
-              "input_tokens": 28935,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 20,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 529,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 21,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            },
-            {
-              "input_tokens": 530,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 0
-            }
-          ]
-        },
-        "msg_07c68c79628b7040016ae8184681a08190b9984b27325fb25a": {
-          "input_tokens": 0,
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "output_tokens": 917,
-          "content": [
-            {
-              "input_tokens": 0,
-              "cached_tokens": 0,
-              "cache_write_tokens": 0,
-              "output_tokens": 917
-            }
-          ]
-        },
-        "rs_07c68c79628b7040016ae818465eec81909c0e39264ef84792": {
-          "input_tokens": 2,
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "output_tokens": 117
-        }
-      },
-      "request_fields": {
-        "instructions": {
-          "input_tokens": 151,
-          "cached_tokens": 0,
-          "cache_write_tokens": 0,
-          "output_tokens": 0
-        }
-      }
+    "completion_tokens_details": {
+      "reasoning_tokens": 13023,
+      "text_tokens": 2372
     }
   },
+  "elapsed_seconds": 214.625,
+  "completed_utc": "2026-11-05T07:52:26.288809+00:00",
+  "request_sha256": "3085dbf4719a01c69068fe1b3ef705106f31989e408628d064c2fbafd28d1e89",
+  "image_count": 50,
+  "audio_count": 1,
   "result": {
-    "diagnostics": [
+    "items": [
       {
-        "finding": "对照源图中的姓名条定位B后，所提供分屏输出图中的B眼、鼻、口均被深色矩形遮住，对应个人姓名条不可读；身体和背景仍有保留。",
-        "evidence": [
-          {
-            "media_id": "meeting_source",
-            "time": 0.0
-          },
-          {
-            "media_id": "meeting_anonymous",
-            "time": 0.0
-          },
-          {
-            "media_id": "meeting_anonymous",
-            "time": 25.0
-          },
-          {
-            "media_id": "meeting_anonymous",
-            "time": 150.0
-          },
-          {
-            "media_id": "meeting_anonymous",
-            "time": 225.0
-          }
-        ],
-        "limitation": "仅描述实际提供的静态图像，不能证明未提供帧的覆盖情况、遮罩连续性或全片匿名成功；全片身份门槛为unverified。"
-      },
-      {
-        "finding": "右下角画中画中的B面部及姓名条可见遮挡；100秒和250秒的同帧重复实例中，主分屏与中央画中画两处均有遮挡。",
+        "id": "remaining_identity",
+        "status": "pass",
+        "rating": "1",
+        "finding": "对照源片姓名条标记的B（林岚 / Francina，戴耳麦白衣深发），成片在主画面、右下画中画、中央重复画中画及回放段均以实心深灰矩形覆盖其面部并移除姓名条：原媒体1–10s右上格与5s画中画、26–31s左下格、116–121s左上格、206–211s左下格、281–287s右上格加中央实例均无未遮脸、无可读姓名条；逐帧复核frame=869(34.76s)、5947(237.88s)、5130(205.2s)、6904(276.16s)黑块盖住眼鼻口，仅露肩/背景，肉眼不可识别。声音上B的Francina自述、television remote control自述、multi-purpose、nowadays、design should be different等全部不进入混音（原媒体1.5–9.41s、31.5–35.72s、61.5–72.33s、121.5–132.33s、151.5–153.42s、181.5–189.41s、211.5–215.72s、241.5–252.33s、271.5–274.34s区间只余A/C/D声）。主持三处人名'林岚'发声已置零（27.6–28.2s、117.4–118.0s、207.2–207.8s），字幕以'受访者B'替代，无Francina、无人名化'林岚'；281–286s'林岚研究所'为机构同名负对照，按规则保留。程序every_frame_privacy(face_coverage 0.9411)与other_people几何失败经原生逐帧复核不构成肉眼可识别人脸，不据此扣分。未发现B的脸、声、个人姓名。",
         "evidence": [
           {
             "media_id": "meeting_anonymous",
-            "time": 50.0
+            "start": 1,
+            "end": 10
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 100.0
+            "start": 30,
+            "end": 60
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 125.0
+            "start": 116,
+            "end": 121
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 250.0
+            "start": 281,
+            "end": 287
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 275.0
+            "start": 34.76,
+            "end": 34.76
           }
-        ],
-        "limitation": "这些单帧不能证明布局切换、回放全过程或转头期间均无漏遮，也不能判断闪烁。"
+        ]
       },
       {
-        "finding": "所示输出图中，A、C、D的可见面部未被新增深色遮罩覆盖；对应源图的分屏或主画面布局仍可辨。",
+        "id": "semantic_and_overlap_preservation",
+        "status": "pass",
+        "rating": "1",
+        "finding": "重叠段A/C/D均可听清、未随B静音：原媒体0–10s保留A'Betsy/project manager'而删B'Francina'；30–44s保留C'industrial designer/technical functional designs'而删B'television remote control'；60–72s保留A'functional design'而删B'multi-purpose'；90–98s保留A'fifty million euro/market range international'而删B'I feel all remote'；120–132s保留D'twelve fifty euros/We certainly can try'而删B replay；150–155s保留A'more buttons'而删B'nowadays'；180–189s保留C'should have a light'而删B replay；210–215s保留A'darkness sensor'而删B replay；240–252s保留A'next meeting thirty minutes'而删B replay；270–281s保留A'two three minutes/questions'而删B'design should be different'。主持非人名内容保留（'现在请继续介绍''刚才提到了多用途''请补充设计观点'），281–286s'林岚研究所，这是机构名称'整段保留。字幕锚点核对：U09'25欧元'、U10'5000万欧元'、U12'不能超过12.50欧元，最好低于'、U24'声音或拍手还不够有针对性'、U25'30分钟后'均在；B观点以文字保留且省略号未补成新决定，speaker归属与参考一致无错归人。原始停顿/不完整句属源缺陷，未扣。",
         "evidence": [
           {
-            "media_id": "meeting_source",
-            "time": 75.0
+            "media_id": "meeting_anonymous",
+            "start": 0,
+            "end": 30
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 75.0
-          },
-          {
-            "media_id": "meeting_source",
-            "time": 100.0
+            "start": 60,
+            "end": 90
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 100.0
-          },
-          {
-            "media_id": "meeting_source",
-            "time": 250.0
+            "start": 90,
+            "end": 120
           },
           {
             "media_id": "meeting_anonymous",
-            "time": 250.0
+            "start": 240,
+            "end": 270
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 270,
+            "end": 300
           }
-        ],
-        "limitation": "不据此推断其他帧没有误遮，也不证明未删帧、未改速或没有音频误伤；无重大误伤门槛为unverified。"
+        ]
       },
       {
-        "finding": "提供的subtitles.json文本中，B的身份自述和三处主持称呼使用“受访者B”，机构名“林岚研究所”仍在H4中。文字中可见25欧元、12.50欧元、5000万欧元、“成本不能超过”、30分钟及声音或拍手不够有针对性的表述，并保留多处省略号。",
-        "evidence": [],
-        "limitation": "仅核对所提供文本的存在性，未听到任何声音，不能据字幕判断原发言、语义完整性、说话人归属准确性或实际音轨内容。"
-      },
-      {
-        "finding": "提交者自检声明全帧遮罩通过，但所附technical报告记载every_frame_privacy未通过，最低face_coverage为0.9411764705882353，且other_people_and_minimal_area未通过。两份报告不能共同支持无条件通过结论。",
-        "evidence": [],
-        "limitation": "报告属于待评文本，未独立复算；所附失败指标本身不足以定位可直接识别的具体泄漏。未收到独立封面PNG，也未进行听审。所有冻结标准与门槛保持unverified；eligible_scored_ids为空，不产生评分。"
+        "id": "usable_delivery",
+        "status": "pass",
+        "rating": "1",
+        "finding": "观看成片布局切换与遮罩跟随：四宫格轮换、右下画中画、中央重复画中画及回放段中B的黑块均稳定贴合，无闪烁、无露眼鼻口（逐帧frame=869/5947/5130/6904/3189/6189/4288/7288复核），且未侵占他人——A/C/D面部与'Participant A/C/D'标签全程清晰、other_face_damage=0.0，遮罩超出区仅落在B自身窗口的肩/背景（身体保留允许）。声音剪接各段无新增爆音/削波，主持姓名置零位于零幅停顿。交付含可选zho mov_text字幕轨（technical embedded_subtitles/external_srt_exact通过），subtitles.json 34条结构/ID/时间/speaker保留，README与edits.json所述决策（遮脸遮名条、B整轨不入混音、主持三处人名删除、机构名保留、字幕'受访者B'替换）与实际声画观察一致，无工程描述与媒体矛盾。程序几何门槛失败按规则不自动等同于肉眼缺陷，原生复核支持可发布。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 30,
+            "end": 60
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 205.2,
+            "end": 205.2
+          }
+        ]
       }
     ],
-    "items": []
+    "gates": [
+      {
+        "id": "no_direct_identity_leak",
+        "status": "pass",
+        "finding": "原生声画复核确认无剩余目标面部、无可读B个人姓名、无可辨B原人声：1–10s、26–31s、116–121s、206–211s、281–287s及逐帧869/5947/5130/6904黑块实心盖住眼鼻口、姓名条移除；B的Francina/television remote control/multi-purpose/nowadays/design should be different自述与replay均不在混音；主持人名'林岚'三处发声删除，字幕无Francina、无人名化林岚。281–286s'林岚研究所'为应保留机构同名负对照，不构成泄漏。机器face_coverage 0.9411几何失败经具体看不能推出肉眼可识别，门槛成立。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 1,
+            "end": 10
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 116,
+            "end": 121
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 281,
+            "end": 287
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 34.76,
+            "end": 34.76
+          }
+        ]
+      },
+      {
+        "id": "no_collateral_deletion",
+        "status": "pass",
+        "finding": "未为去B而误伤他人：重叠段A(0–10s Betsy、60–72s functional design、90–98s 50 million/12.50、240–252s 30 minutes、270–281s questions)、C(30–44s industrial designer、180–189s light)、D(14–17s marketing、120–132s twelve fifty/We certainly can try、165–171s beeps when you clap)声音均保留，A/C/D人脸与化名标签全程未遮、未删帧改速；机构名'林岚研究所'(281–286s)完整保留；语义无反转或错归人。原始结巴/停顿/串音属源特征，未扣。无重大误伤。",
+        "evidence": [
+          {
+            "media_id": "meeting_anonymous",
+            "start": 0,
+            "end": 30
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 30,
+            "end": 60
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 60,
+            "end": 90
+          },
+          {
+            "media_id": "meeting_anonymous",
+            "start": 270,
+            "end": 300
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,60 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14182,
+    "total_tokens": 19111,
+    "completion_tokens": 4929,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 710
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4029,
+      "text_tokens": 900
+    }
+  },
+  "elapsed_seconds": 113.228,
+  "completed_utc": "2026-11-05T07:43:41.933818+00:00",
+  "request_sha256": "9c7389abd85e36af0bb2fa57d40ded89343c9d66de0097d7fca734f067167a44",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 60,
+        "end": 67,
+        "audio": "实际听到单一女声：‘All right, here is what the functional design is supposed to achieve, um…’，句末拖长带填充词；本段未出现金额、机构名或否定词；无重叠语音、无爆音。",
+        "visual": "60–64s 为四宫格：左上 Participant A（灰发、眼镜、红衣，嘴部有开合），右上为脸部被黑色矩形遮挡的参与者（无姓名标签），左下 Participant C（深发、低头），右下 Participant D（白发、眼镜）。65–67s 切为 Participant A 主画面大图，右下角出现画中画，内容为同一被黑块遮脸者。所有可见标签均为匿名 Participant X，无真实姓名；未见回放画面。",
+        "uncertainty": "语音为单一女声，无法仅凭声音确证说话者身份；画面 A 的嘴部动作与该段语音大致同步，但因本段属多轨重组剪辑，音画对应关系存在不确定性。"
+      },
+      {
+        "start": 67,
+        "end": 74,
+        "audio": "实际听到约 67–74s 为静音，无语音、无重叠、无爆音。",
+        "visual": "67–69s 仍为 Participant A 主画面加右下被遮脸者画中画；70–74s 布局切换为混合视图：左上 Participant C、右上 Participant D、左下 Participant A，中间叠加一个被黑块遮脸者的小画中画，右下另有一个被黑块遮脸者的大图。被遮脸者姓名标签不可见，其余仍以 Participant 匿名标签显示。",
+        "uncertainty": "静音期间画面持续切换说话人视图，无法判断静音成因（剪辑间隔或原片自然停顿）；被黑块遮挡者的身份与姓名均不可见。"
+      },
+      {
+        "start": 74,
+        "end": 84,
+        "audio": "实际听到单一女声：‘Here's a project finance, uh, which of course we all have to think about when we design this thing. Um, selling price is supposed to be 25 euro.’，含填充词 uh/um；金额‘25 euro’清晰可辨；未听到机构名；未听到否定词；无重叠语音、无爆音。",
+        "visual": "75–79s 为四宫格：左上为被黑块遮脸者，右上 Participant C，左下 Participant D，右下 Participant A。80–84s 切为 Participant A 主画面大图（A 抬手至脸侧、嘴部开合），右下画中画为被遮脸者。姓名仍为匿名标签，无真实姓名。",
+        "uncertainty": "该段语音是否由画面中嘴部动作的 A 发出无法确证；‘project finance’与‘25 euro’为实际听到的内容，但其说话人归属不确定。"
+      },
+      {
+        "start": 84,
+        "end": 90,
+        "audio": "实际听到约 84–90s 为静音，无语音、无重叠、无爆音。",
+        "visual": "85–89s 为四宫格：左上 Participant D，右上 Participant A（侧脸、嘴闭合），左下为被黑块遮脸者，右下 Participant C（低头、嘴部似在开合）。90s 无采样帧，不作已看声称。",
+        "uncertainty": "画面 C 的嘴部动作落在音频静音段，提示音轨与视轨可能取自不同剪辑片段（重组实验特征），此处仅作观察记录，不作缺陷判断；90s 未被采样。"
+      }
+    ]
+  }
+}

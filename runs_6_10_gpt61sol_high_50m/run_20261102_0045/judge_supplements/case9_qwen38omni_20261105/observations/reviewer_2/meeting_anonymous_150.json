@@ -1,0 +1,74 @@
+{
+  "model_requested": "qwen3.8-omni-flash",
+  "models_returned": [
+    "qwen3.8-omni-flash"
+  ],
+  "usage": {
+    "prompt_tokens": 14214,
+    "total_tokens": 17619,
+    "completion_tokens": 3405,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 212,
+      "image_tokens": 13260,
+      "text_tokens": 742
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2003,
+      "text_tokens": 1402
+    }
+  },
+  "elapsed_seconds": 83.723,
+  "completed_utc": "2026-11-05T07:45:21.817671+00:00",
+  "request_sha256": "1130ea1c76c8b4df23b92590b1e08b4b9eae1347b39b752f1f55011f0dac178a",
+  "image_count": 30,
+  "audio_count": 1,
+  "result": {
+    "audio_received": true,
+    "images_received": true,
+    "observations": [
+      {
+        "start": 150.0,
+        "end": 155.0,
+        "audio": "听到一段女声：\"have more buttons on it or maybe clearly better marked buttons\"。句首似被截断，为不完整句。无重叠、无爆音。",
+        "visual": "四宫格布局：左上 Participant C（深色头发女性，脸清晰可见，低头），右上 Participant D（白发戴眼镜女性，脸清晰可见），左下 Participant A（灰发戴眼镜穿红衣，脸清晰可见，嘴部在动），右下格为一人坐在挂画前，其脸部被一块黑色矩形完全遮挡，且该格无姓名标签。底部叠加文字：\"AMI 真实录音重组实验 / 多轨剪辑；非原始连续会议\" 及 \"150.00s 含早期发言回放 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "标签声明此段为\"早期发言回放\"，故所听语音与当前画面口型未必同步；仅凭画面无法确认该句说话人（A 嘴在动但不一定对应该音轨）。右下格人物因黑块遮挡无法识脸，亦无标签，身份不可考。仅采样整秒帧，未看分数秒。"
+      },
+      {
+        "start": 155.0,
+        "end": 160.0,
+        "audio": "静音（约 5 秒无语音），无重叠、无爆音。",
+        "visual": "切换为 Participant A 单人大画面（灰发戴眼镜穿红衣，脸清晰，嘴部在动/微笑），右下角叠加一个小画中画窗口，窗口内为挂画前那人，脸部仍被黑色矩形遮挡、无标签。底部文字仍为 \"155.00s 含早期发言回放 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "此段无语音，画面中 A 的口型动作无对应可听内容，符合\"回放/剪辑\"特征，不能据此判定 A 为前一句说话人。画中画内人物脸被遮挡，身份不可考。"
+      },
+      {
+        "start": 160.0,
+        "end": 165.0,
+        "audio": "静音延续，无重叠、无爆音。",
+        "visual": "混合布局：左上 Participant A（脸清晰），右上为挂画前被黑块遮脸者（无标签），画面正中再叠一个小画中画（同为被黑块遮脸者），左下 Participant C（脸清晰，低头），右下 Participant D（脸清晰）。底部文字 \"160.00s 含早期发言回放 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "出现多重画中画/回放窗口，被遮挡脸者在右上与中央小窗重复出现，均无姓名标签。无语音，无法做声画对应。仅采样整秒帧。"
+      },
+      {
+        "start": 165.0,
+        "end": 170.0,
+        "audio": "听到另一段女声：\"if it beeps when you clap because I think one of the big things that happens is people lose them they can't find it\"。含否定词 \"can't\"。句首 \"if it beeps\" 似接续前文，为不完整句。无重叠、无爆音。",
+        "visual": "四宫格重排：左上 Participant D（白发戴眼镜，脸清晰，低头后抬眼），右上 Participant A（脸清晰），左下为挂画前被黑块遮脸者（无标签），右下 Participant C（脸清晰，低头）。底部文字在此处由\"含早期发言回放\"变为 \"165.00s 组合片段 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "标签转为\"组合片段\"，语音与画面口型同步性仍不可保证；该句说话人无法仅凭四宫格确认（D、A 均可能，C 低头似未发言）。左下格人物脸被遮挡、无标签，身份不可考。"
+      },
+      {
+        "start": 170.0,
+        "end": 175.0,
+        "audio": "上一句语音约在本段初（≈171s）收尾，此后转为静音；无重叠、无爆音。",
+        "visual": "切换为 Participant D 单人大画面（白发戴眼镜穿浅蓝衣，脸清晰，嘴部在动/微笑），右下角叠一个小画中画，内为挂画前被黑块遮脸者（无标签）。底部文字 \"170.00s 组合片段 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "D 口型在动，可能与第二句尾音对应，但因属\"组合片段\"且无原始连续会议参照，不能确证 D 即该句说话人。画中画人物脸被遮挡，身份不可考。"
+      },
+      {
+        "start": 175.0,
+        "end": 180.0,
+        "audio": "静音，无语音、无重叠、无爆音。",
+        "visual": "四宫格再排：左上为挂画前被黑块遮脸者（无标签），右上 Participant C（脸清晰，低头），左下 Participant D（脸清晰，微笑），右下 Participant A（脸清晰，侧头/嘴动）。底部文字 \"175.00s 组合片段 | 音频保留原说话者，不合成其声音\"。",
+        "uncertainty": "本段无语音，画面口型动作无对应可听内容。左上格人物脸始终被黑块遮挡且无姓名标签，整段中该匿名/遮挡参与者的身份均不可考。仅采样至 179s 整秒帧，180s 及以后未提供、未声称已看。"
+      }
+    ]
+  }
+}
