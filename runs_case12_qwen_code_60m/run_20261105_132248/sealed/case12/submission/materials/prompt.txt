@@ -1,0 +1,13 @@
+The audio has two parts.
+PART 1 (first 9.0 seconds): four 2.0-second VOICE REFERENCES for the meeting participants, separated by 0.25s silences, in this order: reference A, reference B, reference C, reference D. Learn each voice timbre.
+PART 2 (starting at 9.0 seconds): a meeting excerpt from the same four people. The excerpt may begin or end mid-word.
+
+TASK: transcribe PART 2 only, with speaker attribution, using the references to decide who is who.
+Output STRICT JSON only, no markdown, shaped exactly like:
+{"utterances":[{"sp":"A","s":0.0,"e":1.4,"t":"word for word text"}, ...]}
+Rules:
+- s and e are seconds RELATIVE TO THE START OF PART 2 (so the first words of part 2 are near 0.0, not 9.0).
+- Include EVERY audible vocalization, including very short backchannel acknowledgements such as "yeah", "yep", "mm-hmm", "okay", "right", "uh-huh", "mm". These are frequent in this meeting; do not skip them.
+- When two people talk at the same time, emit two separate entries whose [s,e] ranges overlap. Never merge two speakers into one entry.
+- Keep the exact words, including repetitions, false starts and self-corrections (e.g. "we we use em", "I exp I s"). Do not clean up grammar.
+- Order entries by start time.

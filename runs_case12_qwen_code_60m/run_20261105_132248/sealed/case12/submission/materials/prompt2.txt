@@ -1,0 +1,13 @@
+The audio has two parts.
+PART 1 (first 9.0 seconds): four 2.0-second VOICE REFERENCES, in this order: reference A, reference B, reference C, reference D, separated by 0.25s silences. Memorise each voice timbre.
+PART 2 (starting at 9.0 seconds): a ~23 second excerpt of a four-person meeting. It may begin or end mid-word.
+
+TASK: transcribe PART 2 exhaustively with speaker attribution, matching voices to the references.
+Output STRICT JSON only (no markdown fences, no commentary):
+{"utterances":[{"sp":"A","s":0.0,"e":1.4,"t":"word for word text"}, ...]}
+Rules:
+- s/e are seconds RELATIVE TO THE START OF PART 2. The excerpt lasts about 23 seconds, so all values must be between 0 and 24.
+- Emit a separate entry for EVERY audible vocalisation. This meeting is full of short listener acknowledgements ("yeah", "yep", "yes", "okay", "'kay", "mm", "mm-hmm", "uh-huh", "right", "that's right"). Report each one you can hear, even if it is only 0.2 s long and even if it is buried under another person's sentence.
+- When two people talk at once, emit two entries whose [s,e] overlap. Never merge different speakers into one entry.
+- Keep exact words including repetitions, false starts and fragments (e.g. "we we use em", "I exp I s", "should ha"). Do not tidy grammar.
+- Sort entries by s. Be precise about start times; they are used for subtitle alignment.
