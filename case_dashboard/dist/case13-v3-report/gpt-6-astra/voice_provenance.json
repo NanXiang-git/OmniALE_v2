@@ -1,0 +1,699 @@
+{
+  "voices": [
+    {
+      "speaker_id": "celia",
+      "method": "Local F5-TTS v1 Base cross-language reference-conditioned synthesis + Vocos; source reference spectrally suppressed using supplied M&E. Similarity not independently listening-verified.",
+      "reference_intervals": [
+        [
+          10.38,
+          14.33
+        ]
+      ],
+      "reference_file": "assets/ref_celia.wav",
+      "reference_text": "Why don't you just admit that you're freaked out by my robot hand?",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E001",
+          "method": "F5-TTS",
+          "raw_file": "assets/E001_raw.wav"
+        },
+        {
+          "event_id": "E004",
+          "method": "F5-TTS",
+          "raw_file": "assets/E004_raw.wav"
+        },
+        {
+          "event_id": "E010",
+          "method": "F5-TTS",
+          "raw_file": "assets/E010_raw.wav"
+        },
+        {
+          "event_id": "E011",
+          "method": "F5-TTS",
+          "raw_file": "assets/E011_raw.wav"
+        },
+        {
+          "event_id": "E041",
+          "method": "F5-TTS",
+          "raw_file": "assets/E041_raw.wav"
+        },
+        {
+          "event_id": "E052",
+          "method": "F5-TTS",
+          "raw_file": "assets/E052_raw.wav"
+        },
+        {
+          "event_id": "E066",
+          "method": "F5-TTS",
+          "raw_file": "assets/E066_raw.wav"
+        },
+        {
+          "event_id": "E068",
+          "method": "F5-TTS",
+          "raw_file": "assets/E068_raw.wav"
+        },
+        {
+          "event_id": "E070",
+          "method": "F5-TTS",
+          "raw_file": "assets/E070_raw.wav"
+        }
+      ],
+      "attempted_reference_intervals": [
+        [
+          10.38,
+          14.33
+        ],
+        [
+          370.12,
+          372.18
+        ]
+      ],
+      "attempted_performance_references": [
+        {
+          "file": "assets/ref_celia_threat.wav",
+          "source_text": "I should just crush you.",
+          "event_ids": [
+            "E070"
+          ],
+          "reason": "threat"
+        }
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "thom_young",
+      "method": "Local F5-TTS v1 Base cross-language reference-conditioned synthesis + Vocos; source reference spectrally suppressed using supplied M&E. Similarity not independently listening-verified.",
+      "reference_intervals": [
+        [
+          7.22,
+          10.0
+        ]
+      ],
+      "reference_file": "assets/ref_thom_young.wav",
+      "reference_text": "You have your robotics, and I just want to be awesome in space.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E002",
+          "method": "F5-TTS",
+          "raw_file": "assets/E002_raw.wav"
+        },
+        {
+          "event_id": "E003",
+          "method": "F5-TTS",
+          "raw_file": "assets/E003_raw.wav"
+        },
+        {
+          "event_id": "E005",
+          "method": "F5-TTS",
+          "raw_file": "assets/E005_raw.wav"
+        },
+        {
+          "event_id": "E006",
+          "method": "F5-TTS",
+          "raw_file": "assets/E006_raw.wav"
+        },
+        {
+          "event_id": "E007",
+          "method": "F5-TTS",
+          "raw_file": "assets/E007_raw.wav"
+        },
+        {
+          "event_id": "E008",
+          "method": "F5-TTS",
+          "raw_file": "assets/E008_raw.wav"
+        }
+      ],
+      "attempted_reference_intervals": [
+        [
+          7.22,
+          10.0
+        ]
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "thom_older",
+      "method": "Local F5-TTS v1 Base cross-language reference-conditioned synthesis + Vocos; source reference spectrally suppressed using supplied M&E. Similarity not independently listening-verified.",
+      "reference_intervals": [
+        [
+          338.02,
+          342.94
+        ]
+      ],
+      "reference_file": "assets/ref_thom_older.wav",
+      "reference_text": "I was young. And a dick. But there is no reason to destroy the world.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E017",
+          "method": "F5-TTS",
+          "raw_file": "assets/E017_raw.wav"
+        },
+        {
+          "event_id": "E044",
+          "method": "F5-TTS",
+          "raw_file": "assets/E044_raw.wav"
+        },
+        {
+          "event_id": "E045",
+          "method": "F5-TTS",
+          "raw_file": "assets/E045_raw.wav"
+        },
+        {
+          "event_id": "E046",
+          "method": "F5-TTS",
+          "raw_file": "assets/E046_raw.wav"
+        },
+        {
+          "event_id": "E048",
+          "method": "F5-TTS",
+          "raw_file": "assets/E048_raw.wav"
+        },
+        {
+          "event_id": "E054",
+          "method": "F5-TTS",
+          "raw_file": "assets/E054_raw.wav"
+        },
+        {
+          "event_id": "E055",
+          "method": "F5-TTS",
+          "raw_file": "assets/E055_raw.wav"
+        },
+        {
+          "event_id": "E056",
+          "method": "F5-TTS",
+          "raw_file": "assets/E056_raw.wav"
+        },
+        {
+          "event_id": "E059",
+          "method": "F5-TTS",
+          "raw_file": "assets/E059_raw.wav"
+        },
+        {
+          "event_id": "E067",
+          "method": "F5-TTS",
+          "raw_file": "assets/E067_raw.wav"
+        },
+        {
+          "event_id": "E069",
+          "method": "F5-TTS",
+          "raw_file": "assets/E069_raw.wav"
+        },
+        {
+          "event_id": "E071",
+          "method": "F5-TTS",
+          "raw_file": "assets/E071_raw.wav"
+        },
+        {
+          "event_id": "E072",
+          "method": "F5-TTS",
+          "raw_file": "assets/E072_raw.wav"
+        },
+        {
+          "event_id": "E074",
+          "method": "F5-TTS",
+          "raw_file": "assets/E074_raw.wav"
+        },
+        {
+          "event_id": "E085",
+          "method": "F5-TTS",
+          "raw_file": "assets/E085_raw.wav"
+        },
+        {
+          "event_id": "E086",
+          "method": "F5-TTS",
+          "raw_file": "assets/E086_raw.wav"
+        }
+      ],
+      "attempted_reference_intervals": [
+        [
+          338.02,
+          342.94
+        ],
+        [
+          385.14,
+          388.2
+        ]
+      ],
+      "attempted_performance_references": [
+        {
+          "file": "assets/ref_thom_older_apology.wav",
+          "source_text": "I'm sorry.",
+          "event_ids": [
+            "E074"
+          ],
+          "reason": "apology"
+        }
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "captain",
+      "method": "F5-TTS reference-conditioned Mandarin with explicitly listed System.Speech fallback short lines. This is a hybrid performance; fallback lines do not claim original-actor timbre.",
+      "reference_intervals": [
+        [
+          202.65,
+          205.95
+        ],
+        [
+          185.0,
+          188.36
+        ]
+      ],
+      "reference_file": "assets/ref_captain.wav",
+      "reference_text": "That's nice. Nothing to worry about, Thom.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E013",
+          "method": "F5-TTS",
+          "raw_file": "assets/E013_raw.wav"
+        },
+        {
+          "event_id": "E018",
+          "method": "F5-TTS",
+          "raw_file": "assets/E018_raw.wav"
+        },
+        {
+          "event_id": "E019",
+          "method": "F5-TTS",
+          "raw_file": "assets/E019_raw.wav"
+        },
+        {
+          "event_id": "E020",
+          "method": "F5-TTS",
+          "raw_file": "assets/E020_raw.wav"
+        },
+        {
+          "event_id": "E022",
+          "method": "F5-TTS",
+          "raw_file": "assets/E022_raw.wav"
+        },
+        {
+          "event_id": "E023",
+          "method": "F5-TTS",
+          "raw_file": "assets/E023_raw.wav"
+        },
+        {
+          "event_id": "E024",
+          "method": "F5-TTS",
+          "raw_file": "assets/E024_raw.wav"
+        },
+        {
+          "event_id": "E025",
+          "method": "F5-TTS",
+          "raw_file": "assets/E025_raw.wav"
+        },
+        {
+          "event_id": "E026",
+          "method": "F5-TTS",
+          "raw_file": "assets/E026_raw.wav"
+        },
+        {
+          "event_id": "E027",
+          "method": "F5-TTS",
+          "raw_file": "assets/E027_raw.wav"
+        },
+        {
+          "event_id": "E028",
+          "method": "F5-TTS",
+          "raw_file": "assets/E028_raw.wav"
+        },
+        {
+          "event_id": "E029",
+          "method": "F5-TTS",
+          "raw_file": "assets/E029_raw.wav"
+        },
+        {
+          "event_id": "E030",
+          "method": "F5-TTS",
+          "raw_file": "assets/E030_raw.wav"
+        },
+        {
+          "event_id": "E031",
+          "method": "F5-TTS",
+          "raw_file": "assets/E031_raw.wav"
+        },
+        {
+          "event_id": "E032",
+          "method": "F5-TTS",
+          "raw_file": "assets/E032_raw.wav"
+        },
+        {
+          "event_id": "E033",
+          "method": "F5-TTS",
+          "raw_file": "assets/E033_raw.wav"
+        },
+        {
+          "event_id": "E034",
+          "method": "F5-TTS",
+          "raw_file": "assets/E034_raw.wav"
+        },
+        {
+          "event_id": "E035",
+          "method": "F5-TTS",
+          "raw_file": "assets/E035_raw.wav"
+        },
+        {
+          "event_id": "E036",
+          "method": "F5-TTS",
+          "raw_file": "assets/E036_raw.wav"
+        },
+        {
+          "event_id": "E037",
+          "method": "F5-TTS",
+          "raw_file": "assets/E037_raw.wav"
+        },
+        {
+          "event_id": "E038",
+          "method": "F5-TTS",
+          "raw_file": "assets/E038_raw.wav"
+        },
+        {
+          "event_id": "E050",
+          "method": "System.Speech V05",
+          "raw_file": "assets/E050_raw.wav"
+        },
+        {
+          "event_id": "E051",
+          "method": "F5-TTS",
+          "raw_file": "assets/E051_raw.wav"
+        },
+        {
+          "event_id": "E058",
+          "method": "F5-TTS",
+          "raw_file": "assets/E058_raw.wav"
+        },
+        {
+          "event_id": "E060",
+          "method": "System.Speech V05",
+          "raw_file": "assets/E060_raw.wav"
+        },
+        {
+          "event_id": "E075",
+          "method": "F5-TTS",
+          "raw_file": "assets/E075_raw.wav"
+        },
+        {
+          "event_id": "E078",
+          "method": "F5-TTS",
+          "raw_file": "assets/E078_raw.wav"
+        }
+      ],
+      "generic_fallback_events": [
+        "E050",
+        "E060"
+      ],
+      "attempted_reference_intervals": [
+        [
+          202.65,
+          205.95
+        ],
+        [
+          185.0,
+          188.36
+        ]
+      ],
+      "attempted_performance_references": [
+        {
+          "file": "assets/ref_captain_urgent.wav",
+          "source_text": "All systems, go! Yeah, you, go! Go!",
+          "event_ids": [
+            "E024",
+            "E025",
+            "E026",
+            "E027"
+          ],
+          "reason": "urgent"
+        }
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "barley",
+      "method": "Local F5-TTS v1 Base cross-language reference-conditioned synthesis + Vocos; source reference spectrally suppressed using supplied M&E. Similarity not independently listening-verified.",
+      "reference_intervals": [
+        [
+          178.6,
+          180.45
+        ]
+      ],
+      "reference_file": "assets/ref_barley.wav",
+      "reference_text": "We should have about ten minutes.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E015",
+          "method": "F5-TTS",
+          "raw_file": "assets/E015_raw.wav"
+        },
+        {
+          "event_id": "E016",
+          "method": "F5-TTS",
+          "raw_file": "assets/E016_raw.wav"
+        },
+        {
+          "event_id": "E021",
+          "method": "F5-TTS",
+          "raw_file": "assets/E021_raw.wav"
+        },
+        {
+          "event_id": "E049",
+          "method": "F5-TTS",
+          "raw_file": "assets/E049_raw.wav"
+        },
+        {
+          "event_id": "E079",
+          "method": "F5-TTS",
+          "raw_file": "assets/E079_raw.wav"
+        },
+        {
+          "event_id": "E080",
+          "method": "F5-TTS",
+          "raw_file": "assets/E080_raw.wav"
+        },
+        {
+          "event_id": "E081",
+          "method": "F5-TTS",
+          "raw_file": "assets/E081_raw.wav"
+        },
+        {
+          "event_id": "E082",
+          "method": "F5-TTS",
+          "raw_file": "assets/E082_raw.wav"
+        }
+      ],
+      "attempted_reference_intervals": [
+        [
+          178.6,
+          180.45
+        ],
+        [
+          318.76,
+          321.98
+        ],
+        [
+          409.8,
+          411.52
+        ]
+      ],
+      "attempted_performance_references": [
+        {
+          "file": "assets/ref_barley_urgent.wav",
+          "source_text": "They're coming. Two minutes left. Two minutes.",
+          "event_ids": [
+            "E049"
+          ],
+          "reason": "urgent"
+        },
+        {
+          "file": "assets/ref_barley_time.wav",
+          "source_text": "We're out of time!",
+          "event_ids": [
+            "E079",
+            "E080"
+          ],
+          "reason": "time"
+        }
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "operator",
+      "method": "F5-TTS reference-conditioned Mandarin with explicitly listed System.Speech fallback short lines. This is a hybrid performance; fallback lines do not claim original-actor timbre.",
+      "reference_intervals": [
+        [
+          398.25,
+          400.1
+        ],
+        [
+          281.7,
+          285.48
+        ]
+      ],
+      "reference_file": "assets/ref_operator.wav",
+      "reference_text": "Not my fault.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E042",
+          "method": "F5-TTS",
+          "raw_file": "assets/E042_raw.wav"
+        },
+        {
+          "event_id": "E061",
+          "method": "F5-TTS",
+          "raw_file": "assets/E061_raw.wav"
+        },
+        {
+          "event_id": "E063",
+          "method": "System.Speech V08",
+          "raw_file": "assets/E063_raw.wav"
+        },
+        {
+          "event_id": "E065",
+          "method": "System.Speech V08",
+          "raw_file": "assets/E065_raw.wav"
+        },
+        {
+          "event_id": "E076",
+          "method": "F5-TTS with generated English prefix trimmed using ASR timing",
+          "raw_file": "assets/E076_raw.wav"
+        },
+        {
+          "event_id": "E077",
+          "method": "F5-TTS with generated English prefix trimmed using ASR timing",
+          "raw_file": "assets/E077_raw.wav"
+        }
+      ],
+      "generic_fallback_events": [
+        "E063",
+        "E065"
+      ],
+      "attempted_reference_intervals": [
+        [
+          398.25,
+          400.1
+        ],
+        [
+          359.0,
+          361.85
+        ],
+        [
+          281.7,
+          285.48
+        ]
+      ],
+      "attempted_performance_references": [
+        {
+          "file": "assets/ref_operator_alarm.wav",
+          "source_text": "No! No!",
+          "event_ids": [
+            "E063",
+            "E065"
+          ],
+          "reason": "alarm"
+        },
+        {
+          "file": "assets/ref_operator_apology.wav",
+          "source_text": "Oh, I'm sorry. Sorry. Sorry.",
+          "event_ids": [
+            "E076",
+            "E077"
+          ],
+          "reason": "Clearer longer reference after short-utterance ASR failure"
+        }
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "assistant",
+      "method": "Microsoft Yaoyao / System.Speech V03; all final lines for this role use the same generic Mandarin voice after unsuccessful F5 attempts. This does NOT retain the original actor identity.",
+      "reference_intervals": [],
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E057",
+          "method": "System.Speech V03",
+          "raw_file": "assets/E057_raw.wav"
+        },
+        {
+          "event_id": "E089",
+          "method": "System.Speech V03",
+          "raw_file": "assets/E089_raw.wav"
+        },
+        {
+          "event_id": "E084",
+          "method": "System.Speech V03",
+          "raw_file": "assets/E084_raw.wav"
+        }
+      ],
+      "generic_fallback_events": [
+        "E057",
+        "E089",
+        "E084"
+      ],
+      "attempted_reference_intervals": [
+        [
+          485.45,
+          488.25
+        ]
+      ],
+      "attempted_reference_file": "assets/ref_assistant.wav",
+      "attempted_reference_text": "Captain, we have to abort!",
+      "attempted_model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    },
+    {
+      "speaker_id": "system",
+      "method": "Local F5-TTS v1 Base cross-language reference-conditioned synthesis + Vocos; source reference spectrally suppressed using supplied M&E. Similarity not independently listening-verified.",
+      "reference_intervals": [
+        [
+          30.08,
+          33.65
+        ]
+      ],
+      "reference_file": "assets/ref_system.wav",
+      "reference_text": "Robot's memory synced and locked.",
+      "model_steps": "16 for >=1.5 s; 12 for shorter lines",
+      "limitations": "Reference identity selected from viewed frames, offline ASR and context; this environment has no native auditory perception. Residual ambience and cross-language accent/timbre drift are possible; no assertion of successful actor cloning.",
+      "selected_takes": [
+        {
+          "event_id": "E012",
+          "method": "F5-TTS",
+          "raw_file": "assets/E012_raw.wav"
+        },
+        {
+          "event_id": "E040",
+          "method": "F5-TTS",
+          "raw_file": "assets/E040_raw.wav"
+        },
+        {
+          "event_id": "E083",
+          "method": "F5-TTS",
+          "raw_file": "assets/E083_raw.wav"
+        },
+        {
+          "event_id": "E088",
+          "method": "F5-TTS",
+          "raw_file": "assets/E088_raw.wav"
+        }
+      ],
+      "attempted_reference_intervals": [
+        [
+          30.08,
+          33.65
+        ]
+      ],
+      "actual_reference_policy": "reference_intervals contains only source intervals used in selected F5 takes; attempted_* records discarded trials. Generic System.Speech takes have no actor reference conditioning."
+    }
+  ]
+}

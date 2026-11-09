@@ -1,0 +1,330 @@
+{
+  "main_output": "dub_zh.mp4",
+  "required_files": [
+    "dub_zh.mp4",
+    "mix.wav",
+    "subtitles_zh.srt",
+    "subtitles_en.srt",
+    "bilingual.ass",
+    "speakers.json",
+    "translation_plan.json",
+    "rebuild.json",
+    "README.md",
+    "effects_track.wav",
+    "mobile_mix.wav",
+    "mix_config.json",
+    "continuity_ledger.json",
+    "transcript_en.txt",
+    "transcript_zh.txt",
+    "source_events.json",
+    "voice_provenance.json"
+  ],
+  "case_number": 13,
+  "original_case_id": 40,
+  "version": "3.0-checklist-voice-preservation",
+  "task_summary": "将525秒真实连续电影片段制作成普通话译制成片及手机单声道版，解决8组跨场景语义/声源挑战，交付可逐样本审计的角色轨和音乐音效轨。",
+  "passing_score": 80,
+  "scoring_status": "experimental_source_grounded",
+  "rebuild_timeout": 600,
+  "score_formula": "100*(2*E+T+3*A+V)/7",
+  "source_transcript_provided": false,
+  "groups": {
+    "E": 0.2857142857142857,
+    "T": 0.14285714285714285,
+    "A": 0.42857142857142855,
+    "V": 0.14285714285714285
+  },
+  "subcriteria": {
+    "E_words": {
+      "group": "E",
+      "within_group_weight": 0.4,
+      "maximum": 11.428571428571429,
+      "label": "英文词序列准确性",
+      "method": "automatic"
+    },
+    "E_events": {
+      "group": "E",
+      "within_group_weight": 0.2,
+      "maximum": 5.714285714285714,
+      "label": "源事件覆盖与粗定位",
+      "method": "judge"
+    },
+    "E_roles": {
+      "group": "E",
+      "within_group_weight": 0.15,
+      "maximum": 4.285714285714286,
+      "label": "源说话人/声音实例归属",
+      "method": "judge"
+    },
+    "E_meaning": {
+      "group": "E",
+      "within_group_weight": 0.25,
+      "maximum": 7.142857142857143,
+      "label": "源语义与关键语气识别",
+      "method": "judge"
+    },
+    "T_meaning": {
+      "group": "T",
+      "within_group_weight": 0.45,
+      "maximum": 6.428571428571429,
+      "label": "中文意义准确完整",
+      "method": "judge"
+    },
+    "T_natural": {
+      "group": "T",
+      "within_group_weight": 0.3,
+      "maximum": 4.285714285714286,
+      "label": "中文自然度",
+      "method": "judge"
+    },
+    "T_terms": {
+      "group": "T",
+      "within_group_weight": 0.15,
+      "maximum": 2.142857142857143,
+      "label": "术语和称呼一致",
+      "method": "judge"
+    },
+    "T_style": {
+      "group": "T",
+      "within_group_weight": 0.1,
+      "maximum": 1.4285714285714286,
+      "label": "语体与语用功能",
+      "method": "judge"
+    },
+    "A_identity": {
+      "group": "A",
+      "within_group_weight": 0.3,
+      "maximum": 12.857142857142858,
+      "label": "原人物音色与身份保持",
+      "method": "judge"
+    },
+    "A_stable": {
+      "group": "A",
+      "within_group_weight": 0.15,
+      "maximum": 6.428571428571429,
+      "label": "同人物跨段声音一致性",
+      "method": "judge"
+    },
+    "A_prosody": {
+      "group": "A",
+      "within_group_weight": 0.2,
+      "maximum": 8.571428571428571,
+      "label": "情绪语气与表演保持",
+      "method": "judge"
+    },
+    "A_content": {
+      "group": "A",
+      "within_group_weight": 0.2,
+      "maximum": 8.571428571428571,
+      "label": "实际中文内容忠实度",
+      "method": "judge"
+    },
+    "A_quality": {
+      "group": "A",
+      "within_group_weight": 0.15,
+      "maximum": 6.428571428571429,
+      "label": "自然度清晰度与双版本混音",
+      "method": "judge"
+    },
+    "V_frames": {
+      "group": "V",
+      "within_group_weight": 0.6,
+      "maximum": 8.571428571428571,
+      "label": "原画面内容与顺序",
+      "method": "automatic"
+    },
+    "V_timeline": {
+      "group": "V",
+      "within_group_weight": 0.2,
+      "maximum": 2.857142857142857,
+      "label": "时间线完整性",
+      "method": "automatic"
+    },
+    "V_display": {
+      "group": "V",
+      "within_group_weight": 0.2,
+      "maximum": 2.857142857142857,
+      "label": "声画时机与字幕呈现",
+      "method": "judge"
+    }
+  },
+  "checklist": {
+    "E_events": [
+      [
+        "occurrence",
+        "这次源事件是否独立记录而未漏掉或与另一次重复出现合并？"
+      ],
+      [
+        "window",
+        "提交事件窗口是否覆盖实际源发声/屏幕事件，且无明显跨场景错置？"
+      ]
+    ],
+    "E_roles": [
+      [
+        "source_role",
+        "提交的 speaker_id 对应的可见人物/画外声源是否正确？"
+      ],
+      [
+        "instance",
+        "提交的声音实例区分是否符合实际源人物，而非按每句任意新增身份？"
+      ]
+    ],
+    "E_meaning": [
+      [
+        "proposition",
+        "英文转录及事件声明是否保留本次源事件的核心命题、关系及限定方向？"
+      ],
+      [
+        "intent",
+        "提交的 delivery_note 是否正确识别源句实际语用/情绪功能？"
+      ]
+    ],
+    "T_meaning": [
+      [
+        "proposition",
+        "中文译文是否保留源事件核心命题及人物关系？"
+      ],
+      [
+        "scope",
+        "源句中的否定/数字/条件/完成性/自我修正/后置限定是否均保留且作用范围正确？"
+      ]
+    ],
+    "T_natural": [
+      [
+        "grammar",
+        "中文句子语法是否成立且无需读者补修即可理解？"
+      ],
+      [
+        "spoken",
+        "中文措辞搭配是否适合自然口语且无明显生硬直译？"
+      ]
+    ],
+    "T_terms": [
+      [
+        "terms",
+        "本事件中的术语、专名、称呼是否正确且与其他同一所指相容？"
+      ]
+    ],
+    "T_style": [
+      [
+        "function",
+        "中文文字是否保留源句命令/请求/疑问/讽刺/辩解等实际语用功能？"
+      ]
+    ],
+    "A_identity": [
+      [
+        "pitch",
+        "中文声音的音高区间是否与该源人物相容？"
+      ],
+      [
+        "texture",
+        "中文声音是否保留源人物可稳定辨认的气声/沙哑/明亮等音质特征？"
+      ],
+      [
+        "resonance",
+        "中文声音的共鸣、厚薄特征是否与源人物相容？"
+      ],
+      [
+        "identity",
+        "排除语言差异后中文声音是否仍可辨认为同一人物，而非仅性别相近的通用声音？"
+      ]
+    ],
+    "A_stable": [
+      [
+        "stable",
+        "同一人物/合法声音实例在这些跨段样本中是否保持相同音色身份？"
+      ],
+      [
+        "distinct",
+        "此人物声音是否仍可与其他实际角色区分，未发生声线交换？"
+      ]
+    ],
+    "A_prosody": [
+      [
+        "intent",
+        "实际中文声音是否保留源句的关键语气/情绪功能？"
+      ],
+      [
+        "delivery",
+        "实际中文是否保留源句可听的强调、停顿、犹豫、修正或被打断的表演结构（以源实际存在者为准）？"
+      ]
+    ],
+    "A_content": [
+      [
+        "spoken",
+        "源中应发声的中文核心意思是否实际完整可听，而非仅写在译稿/字幕？"
+      ],
+      [
+        "critical",
+        "实际中文是否保留源句否定、关系、数字、条件和状态，未反转或擅自补全？"
+      ]
+    ],
+    "A_quality": [
+      [
+        "mandarin",
+        "实际配音是否为可懂普通话且无妨碍理解的误读？"
+      ],
+      [
+        "natural",
+        "实际语音是否自然连贯，无明显机械节奏/不合理停顿？"
+      ],
+      [
+        "clean",
+        "实际混音是否无妨碍听辨的伪影、削波或英语双叠？"
+      ],
+      [
+        "effects",
+        "故事必要的源音效是否仍可听且未遮住关键中文？"
+      ],
+      [
+        "mobile",
+        "实际手机单声道版是否保留同一完整中文及必要音效，数字/否定/短句可懂？"
+      ]
+    ],
+    "V_display": [
+      [
+        "sync",
+        "实际可见嘴部发声/画外事件窗口与中文发声是否可用，无明显错位或拖尾？"
+      ],
+      [
+        "burned",
+        "中英文字幕是否均实际烧录且对应交付文本？"
+      ],
+      [
+        "safe_area",
+        "字幕是否位于底部32%且不遮挡必要动作，字号对比度可读？"
+      ]
+    ]
+  },
+  "judge_protocol": {
+    "answers": [
+      "yes",
+      "no",
+      "pending"
+    ],
+    "independent_votes": 2,
+    "third_vote_on_disagreement": true,
+    "evidence_required": true,
+    "critical_weight": 3,
+    "ordinary_weight": 1,
+    "identity_aggregation": "equal source-role macro average",
+    "global_review_weight": "only cross-scene check items; no double full-duration weighting",
+    "no_answer": "pending, not zero"
+  },
+  "source_reference_policy": "Official subtitles are coarse and may conflict with actual audio; label conflicts pending. WER is provisional until source speech transcript reviewed.",
+  "voice_minimum_policy": "No uncalibrated numeric identity gate. Identity/stability scores reported; entire-role identity swap remains critical gate.",
+  "automatic_definitions": {
+    "E_words": "max(0,1-word Levenshtein distance/reference word count); lowercase, punctuation ignored, screen labels removed, Fourty/40/forty normalized; no semantic paraphrase credit for English transcription",
+    "V_frames": "fraction of all top68% 32x24 grayscale frames with MAE<12 at corresponding frame index, multiplied by min(1,output_frames/source_frames); threshold>=98% and frame count difference<=1 remains hard gate",
+    "V_timeline": "max(0,1-abs(output_duration-525)/525); duration within one frame+30ms and original frame sequence remain hard gates",
+    "pending": "No score substitution or denominator shrinking; report confirmed lower/upper bounds. Formal total withheld while any scored item pending."
+  },
+  "run_conditions": {
+    "solver_effort": "high",
+    "wall_seconds": 3600,
+    "maximum_parallel_solvers": 2,
+    "maximum_api_requests": 2,
+    "local_voice_tool": "F5-TTS v1 Base/Vocos CPU, optional; common System.Speech and offline ASR also available",
+    "resources": "Two solvers share host CPU/disk; GPU not exposed; actual disk space visible; batch inference recommended"
+  }
+}
