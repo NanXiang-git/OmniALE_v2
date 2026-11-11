@@ -35,13 +35,32 @@
     const all=[base,...r.comparisons];
     return `<section class="result-comparison"><h3 class="result-section-title">同题模型对比</h3><div class="score-table-wrap"><table class="result-table"><thead><tr><th>模型 / 推理</th><th>限时 / 实际用时</th><th>自动分 / 90</th><th>视听 / 10</th><th>总分 / 100</th></tr></thead><tbody>${all.map(x=>`<tr><td>${E(x.model)} / ${E(x.effort)}</td><td>${x.limitMinutes} / ${N(x.seconds/60)} 分钟</td><td>${N(x.automatic)}</td><td>${x.judge==null?'待专家标注':N(x.judge)+'（专家标注）'}</td><td>${x.total==null?'待评':N(x.total)}</td></tr>`).join('')}</tbody></table></div>${r.comparisons.map((x,index)=>`<p class="result-note">${E(x.note)} 视觉抽样：${x.visualPassed===true?'通过':x.visualPassed===false?'发现问题':'待评'}；已测硬门槛：${x.failedGates.length?'未通过':'未发现失败'}；冻结哈希：${x.integrity.passed?'一致':'异常'}。</p>${comparisonReview(x,index)}<details class="result-details"><summary>${E(x.model)}：分项、答卷与评测报告</summary><table class="result-table"><tbody>${x.rows.map(y=>`<tr><td>${E(y.label)}</td><td>${y.points==null?'待评':N(y.points)} / ${y.maximum}</td></tr>`).join('')}</tbody></table><p>失败门槛：${E(x.failedGates.join(', ')||'无已测失败')}</p><p>${x.reports.map(f=>`<a href="${U(f.url)}" target="_blank" rel="noopener">${E(f.role)} ↗</a>`).join(' · ')}</p><p>${x.artifacts.map(f=>`<a href="${U(f.url)}" target="_blank" rel="noopener">${E(f.name)} ↗</a>`).join(' · ')}</p></details>`).join('')}</section>`;
   }
+
+  // Case13 current report is embedded directly; historical records are opt-in.
+  window.addEventListener('message', event => {
+    const frame=document.querySelector('#case13-current-report');
+    if(!frame || event.source!==frame.contentWindow || event.data?.type!=='case13-report-height')return;
+    const height=Number(event.data.height);
+    if(Number.isFinite(height)&&height>=500&&height<=50000)frame.style.height=Math.ceil(height)+'px';
+  });
+  function renderCase13Current(c,r,target) {
+    target.innerHTML=`<section class="case13-current-results" aria-label="Case13 最新裁决结果"><div class="result-heading"><div><span class="eyebrow">CASE13 / CHECKLIST V3.1</span><h2>三模型译制结果与评分</h2></div><span class="grade-pill">Qwen 裁决版</span></div><p class="result-note">三组总分已确定，待核验 QA 均为 0。可直接播放视频、切换模型，查看逐项扣分与投票记录；总分与硬门槛分别展示。</p><p><a class="button" href="case13-v31-report/index.html" target="_blank" rel="noopener">单独打开完整看板 ↗</a> · <a href="case13-v3-report/index.html" target="_blank" rel="noopener">查看原 v3 区间评分</a></p><iframe id="case13-current-report" title="Case13 Checklist v3.1：三模型视频、评分明细与投票记录" src="case13-v31-report/index.html?embedded=1" style="display:block;width:100%;height:2200px;border:0;background:#f4f6f5;border-radius:12px" allow="fullscreen"></iframe></section><details class="result-details" id="case13-history"><summary>查看历史 v2 答卷与旧评分</summary><p class="result-note">以下是历史v2答卷及旧评分；未换算为新版成绩。</p><div id="case13-history-content"></div></details>`;
+    const history=target.querySelector('#case13-history');
+    history.addEventListener('toggle',()=>{
+      if(history.open&&!history.dataset.loaded){
+        history.dataset.loaded='true';
+        render({...c,showHistoricalResults:true},r,target.querySelector('#case13-history-content'));
+      }
+    });
+  }
+
   function render(c,r,target) {
+    if(c.key==='task-13'&&!c.showHistoricalResults){renderCase13Current(c,r,target);return;}
     if(current?.key!==c.key){tab='visual';filePage=50;fileKind='all';fileQuery='';mediaPath=r?.main||'';}
     current=c;result=r;panel=target;
     if(!r){target.innerHTML='<div class="result-empty"><h3>暂无接入的答卷</h3></div>';return;}
     if(!r.rows){target.innerHTML=`<h2>${E(r.title)}</h2><p>${E(r.summary)}</p>`;return;}
     target.innerHTML=`<div class="result-heading"><div><span class="eyebrow">FROZEN SUBMISSION / ${E(r.attempt)}</span><h2>答卷与评测</h2></div>${pill(r)}</div><div class="result-kpis"><div><span>正式总分</span><strong>${r.total==null?'待评':N(r.total)}</strong></div><div><span>已核实小计</span><strong>${r.verified==null?'未评分':N(r.verified)}</strong><small>已评权重 ${N(known(r))} / 100</small></div><div><span>答题用时</span><strong>${(r.seconds/60).toFixed(2)}<em> 分钟</em></strong><small>${r.timedOut?'达到时间上限后冻结':'正常结束后冻结'}</small></div><div><span>冻结文件</span><strong>${r.artifacts.length}<em> 个</em></strong><small>${r.integrity.passed?'冻结哈希一致':'完整性存在异常'}</small></div></div>${scoreBar(r)}<p class="result-note">${E(r.gradeNote)}</p>${comparisonPanel(r)}<div class="result-subnav" aria-label="答卷内容">${[['visual','结果可视化'],['scores','评分明细'],['files','交付文件'],['provenance','运行与来源']].map(([id,name])=>`<button data-result-tab="${id}" class="${tab===id?'active':''}" aria-pressed="${tab===id}">${name}</button>`).join('')}</div><div id="result-content"></div>`;
-    if(c.key==='task-13') target.insertAdjacentHTML('afterbegin', `<section class="result-notice"><h2>Case13 Checklist v3.1 · Qwen裁决后分数</h2><p>同一组冻结答卷；high / 60分钟。原待核验QA三轮多数票裁决，不合规范返回计零。统一Qwen源稿计算WER；评分权重不变。</p><table><thead><tr><th>模型</th><th>本版本总分 / 100</th><th>待核验QA</th></tr></thead><tbody>${(window.CASE13_SUMMARY||[]).map(x=>`<tr><td>${E(x.model)}</td><td>${N(x.total_score)}</td><td>${x.pending_count}</td></tr>`).join('')}</tbody></table><a class="button" href="case13-v31-report/index.html">查看最终视频、投票与扣分明细 ↗</a> · <a href="case13-v3-report/index.html">原v3区间评分</a><p><b>以下是历史v2答卷及旧评分；未换算为新版成绩。</b></p></section>`);
     renderContent();
     (r.comparisons||[]).forEach((x,index)=>{
       const video=panel.querySelector('#review-video-'+index);

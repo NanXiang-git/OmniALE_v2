@@ -16,4 +16,15 @@ document.querySelector('#rows').innerHTML=rows.map(x=>`<tr><td>${E(x.id)}</td><t
 document.querySelector('#gates').innerHTML=Object.entries(r.gates).map(([k,v])=>`<details><summary class="${v.pass===true?'yes':v.pass===false?'no':'pending'}">${E(gateLabel(k))}：${v.pass===true?'通过':v.pass===false?'失败':'待评'}</summary><pre style="white-space:pre-wrap">${E(JSON.stringify(v.evidence,null,2))}</pre></details>`).join('');document.querySelector('#limits').innerHTML='<ul>'+r.limitations.map(x=>'<li>'+E(x)+'</li>').join('')+'</ul>';document.querySelector('#json').href=r.model+'/result.json';
 document.querySelectorAll('[data-source-seek]').forEach(b=>b.onclick=()=>{let v=document.querySelector('#source-video');if(v){v.closest('details').open=true;v.currentTime=Number(b.dataset.sourceSeek);v.scrollIntoView({behavior:'smooth',block:'center'});}});document.querySelectorAll('[data-seek]').forEach(b=>b.onclick=()=>{let v=document.querySelector('#video-'+i);if(v){v.currentTime=Number(b.dataset.seek);v.scrollIntoView({behavior:'smooth',block:'center'});}});}
 ['model','status','search'].forEach(id=>document.querySelector('#'+id).addEventListener(id==='search'?'input':'change',render));render();
+</script><script>
+if(new URLSearchParams(location.search).get('embedded')==='1'){
+ document.documentElement.classList.add('embedded-report');
+ document.querySelectorAll('header>a').forEach(a=>a.hidden=true);
+ document.querySelectorAll('a').forEach(a=>{a.target='_blank';a.rel='noopener';});
+ const style=document.createElement('style');style.textContent='html.embedded-report body{max-width:none;margin:0;padding:16px}html.embedded-report header{padding:8px 0}';document.head.appendChild(style);
+ let previous=0;
+ const resize=()=>{const height=Math.ceil(document.body.getBoundingClientRect().height+40);if(height!==previous){previous=height;parent.postMessage({type:'case13-report-height',height},'*');}};
+ if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(document.body);
+ window.addEventListener('load',resize);window.addEventListener('resize',resize);document.addEventListener('toggle',resize,true);document.addEventListener('change',()=>setTimeout(resize,0));resize();
+}
 </script></body></html>
