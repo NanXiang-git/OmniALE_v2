@@ -1,6 +1,7 @@
 """Task-05 versioned overlay; preserves every other task and historical v2 result."""
 from pathlib import Path
 import json,shutil,os,hashlib,datetime,html
+from case26_deductions import render as render_deductions, STYLE as DEDUCTION_STYLE
 ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'case_dashboard/dist';OUT=DIST/'case26-v3-report'
 C=ROOT/'case26_v3/case_26';RUN=ROOT/'runs_case26_v3_gpt61sol_high_60m/run_20261111'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
@@ -44,7 +45,7 @@ def build():
     for group,weights in [('automatic',rules['automatic_weights']),('judge',{x['id']:x['weight'] for x in rules['judge_items']})]:
         for key,maximum in weights.items():rows.append({'id':key,'maximum':maximum,'points':score.get(group+'_scores',{}).get(key) if score else None,'group':group})
     summary={'key':'task-05-v3','title':'弱光修复 · 加重损伤v3','attempt':'case26-v3-sol-high-60m','model':'gpt-6.1-sol','effort':'high','harness':'Codex CLI 0.163.0','packageVersion':'3.0','artifacts':[],'rows':rows,'automaticMax':60,'judgeMax':40,'automatic':sum(score.get('automatic_scores',{}).values()) if score else None,'judge':sum(score.get('judge_scores',{}).values()) if score else None,'verified':score['verified_subtotal'] if score else None,'total':score['formal_total'] if score else None,'accepted':score['accepted'] if score else None,'gradeStatus':'complete' if score and score['formal_total'] is not None else 'partial' if score else 'not_started','seconds':seconds,'timedOut':result.get('timed_out') if result else None,'integrity':{'passed':bool(result)},'pendingPoints':score.get('pending_points',100) if score else 100,'gradeNote':explanation,'summary':explanation,'main':'preview.mp4'}
-    score_html=''
+    score_html='';deduction_html='';deduction_embedded=''
     if score:
         status='评分完成' if score['formal_total'] is not None else '已有部分评分 · 待评项保留'
         explanation='正式总分与硬门槛分别展示；本轮输入为v3，历史v2分数不作同条件比较。'
@@ -67,6 +68,9 @@ def build():
         if not judgment.exists():judgment=RUN/'evaluation/primary/judge.json'
         if judgment.exists():
             decisions=read(judgment).get('items',{})
+            if score['formal_total'] is not None:
+                deduction_html=render_deductions(score,read(judgment))
+                deduction_embedded=render_deductions(score,read(judgment),'case26-v3-report/')
             score_html+='<details><summary>查看视觉评分理由</summary>'+''.join('<p><strong>'+labels.get(k,k)+'</strong>：'+html.escape(str(v.get('reason','待完成')))+'（'+('已核实' if v.get('verified') else '待核实')+'）</p>' for k,v in decisions.items())+'</details>'
         (OUT/'score.json').write_text(js(score),encoding='utf-8')
     submission=RUN/'sealed/case_26/submission'
@@ -97,11 +101,17 @@ def build():
     if (OUT/'result-media/clean-damaged-sol.mp4').exists():
         stills=''.join(f'<a href="result-media/frame_{n:03}.png" target="_blank"><img src="result-media/frame_{n:03}.png" style="width:100%;height:auto" loading="lazy" alt="{n/24:.2f}秒：左无损参考、中受损输入、右Sol修复"><span>{n/24:.2f} 秒 · 打开原尺寸 PNG ↗</span></a>' for n in [96,192,336,456,552,612])
         output_html='<section class="note-card" style="margin-bottom:24px"><h2>无损参考 / 受损输入 / Sol 修复</h2><p>左、中、右三栏顺序固定；同一视频逐帧同步，可全屏观察。</p><video controls playsinline preload="metadata" src="result-media/clean-damaged-sol.mp4" style="width:100%"></video><details><summary>查看 6 个关键时刻的无损 PNG</summary>'+stills+'</details><p>修复画面来自封存母版；网页视频为浏览副本。</p></section>'+output_html
-    banner=f'<section class="note-card" style="margin-bottom:24px"><span class="card-kicker mint">GPT-6.1 SOL / HIGH + CODEX · 60 MIN</span><h2>{status}</h2><p>{explanation}</p>{score_html}</section>{output_html}'
+    output_html=output_html.replace('<h2>无损参考 / 受损输入 / Sol 修复</h2>','<h2 id="answer-comparison">无损参考 / 受损输入 / Sol 修复</h2>')
+    output_html=output_html.replace('src="result-media/clean-damaged-sol.mp4"','id="answer-video" src="result-media/clean-damaged-sol.mp4"')
+    banner=f'<section class="note-card" style="margin-bottom:24px"><span class="card-kicker mint">GPT-6.1 SOL / HIGH + CODEX · 60 MIN</span><h2>{status}</h2><p>{explanation}</p>{score_html}</section>{deduction_html}{output_html}'
     if result:banner= banner.replace('</section>','<p><a href="run_protocol.json">运行条件与验收记录 ↗</a> · <a href="freeze.public.json">答卷哈希清单 ↗</a></p></section>',1)
     page=(preview/'index.html').read_text(encoding='utf-8').replace('<section class="lab"',banner+'\n<section class="lab"',1)
     page=page.replace('CASE 26 · V3 试制','CASE 26 · V3 正式题包').replace('此页用于审阅新损伤强度，尚未证明修复难度或更新正式评分规则。','本轮使用冻结的 v3 题包与评分规则。对照工具已通过正反例检查；常规修复基线未通过门槛，任务可修复性仍需结合实际答题结果判断。')
     page=page.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><style>.score-summary{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0}.grade-table{width:100%;border-collapse:collapse}.grade-table td,.grade-table th{padding:9px;border-bottom:1px solid #34434e;text-align:left}</style>')
+    page=page.replace('</head>','<style>'+DEDUCTION_STYLE+'</style></head>')
+    page=page.replace('</body>','''<script>
+(()=>{const raw=new URLSearchParams(location.search).get('review'),v=document.getElementById('answer-video');if(raw===null||!v)return;const t=Number(raw);if(!Number.isFinite(t)||t<0||t>=26)return;const seek=()=>{v.currentTime=t;v.pause();document.getElementById('answer-comparison').scrollIntoView({block:'start'});};if(v.readyState>=1)seek();else v.addEventListener('loadedmetadata',seek,{once:true});})();
+</script></body>''')
     (OUT/'index.html').write_text(page,encoding='utf-8')
     generation=read(preview/'generation_report.json')
     public_generation={k:v for k,v in generation.items() if k not in ['per_frame','source','seed']}
@@ -110,7 +120,7 @@ def build():
     (OUT/'generation_report.json').write_text(js(public_generation),encoding='utf-8')
     case={'title':'弱光修复 · 加重损伤与动作保护','summary':'26秒控制台操作实拍；v3加重暗部噪声、色斑、闪动与运动残影。保留设计光变和正常片段；Sol/high + Codex限时60分钟。','versionLabel':'V3 加重损伤 · 60分钟','packageVersion':'3.0','directory':'case26_v3/case_26/candidate','resultKey':'task-05-v3','previousResultKey':'task-05','experimentStatus':'running' if active.exists() else 'prepared_not_experimented','main':'input/damaged.mkv','files':files,'task':(C/'candidate/TASK.md').read_text(encoding='utf-8'),'outputs':[{'title':'v3公开交付合同','text':(C/'candidate/TASK.md').read_text(encoding='utf-8')}],'status':'packaged'}
     case['experimentStatus']='completed' if score and score['formal_total'] is not None else 'grading' if result else 'running' if active.exists() else 'prepared_not_experimented'
-    payload={'case':case,'result':summary,'status':status,'explanation':explanation}
+    payload={'case':case,'result':summary,'status':status,'explanation':explanation,'deductionsHtml':deduction_embedded,'deductionsStyle':DEDUCTION_STYLE}
     (OUT/'summary.json').write_text(js(payload),encoding='utf-8')
     overlay='''(()=>{const x=PAYLOAD,d=window.OMNIALE_DATA,r=window.OMNIALE_RESULTS,o=window.OmniResults;if(!d||!r||!o)return;
 const c=d.cases.find(c=>c.key==='task-05');window.CASE26_PREVIOUS={case:JSON.parse(JSON.stringify(c)),result:r['task-05']};
@@ -118,6 +128,7 @@ Object.assign(c,x.case);r['task-05-v3']=x.result;
 window.OmniResults=Object.freeze({...o,render(c,r,target){if(c.key!=='task-05'||c.showHistoricalResults)return o.render(c,r,target);
 target.innerHTML='<section><h2>Case26 v3 · 损伤对比与60分钟答题</h2><p id="case26-status"></p><p><a class="button" href="case26-v3-report/index.html" target="_blank">单独打开损伤对比与评测 ↗</a></p><iframe title="Case26 v3 无损参考与受损输入同步对比" src="case26-v3-report/index.html" style="display:block;width:100%;height:2100px;border:0;border-radius:12px" allow="fullscreen"></iframe></section><details class="result-details" id="case26-history"><summary>查看历史 v2 题面、答卷与旧评分</summary><p>旧版输入损伤较轻，时间预算不同，成绩未换算为v3。</p><pre id="case26-old-task" style="white-space:pre-wrap"></pre><div id="case26-old-result"></div></details>';
 target.querySelector('#case26-status').textContent=x.status+'。'+x.explanation;
+if(x.deductionsHtml){const block=document.createElement('div');block.innerHTML='<style>'+x.deductionsStyle+'</style>'+x.deductionsHtml;target.prepend(block);}
 const h=target.querySelector('#case26-history');h.addEventListener('toggle',()=>{if(h.open&&!h.dataset.loaded){h.dataset.loaded='1';target.querySelector('#case26-old-task').textContent=window.CASE26_PREVIOUS.case.task;o.render({...window.CASE26_PREVIOUS.case,showHistoricalResults:true},window.CASE26_PREVIOUS.result,target.querySelector('#case26-old-result'));}});
 }});})();'''.replace('PAYLOAD',js(payload))
     (OUT/'integration.js').write_text(overlay,encoding='utf-8')
