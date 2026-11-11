@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T20:22:06.511606+08:00",
+  "updated_at": "2026-11-12T01:24:20.253298+08:00",
   "task": 5,
   "case": 26,
   "version": "3.0",
@@ -119,24 +119,24 @@
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/generation_report.json",
-      "bytes": 1334,
-      "sha256": "7f9a300d4c6df6f5e8c44f0741167559085863eba38457c230da70309c7b05fa",
+      "bytes": 1369,
+      "sha256": "ac05c19dda2b881eea762efd86bd6f341ff53fb99ea2bdb6772e14bb8b8c0e44",
       "storage": "repository",
       "url": "case26-v3-report/generation_report.json",
       "availability": "uploaded"
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/index.html",
-      "bytes": 24460,
-      "sha256": "825cf3d0a26db361f3a0df587698aafb7c8e1ecd2495c05250eaf2e80e6cebe8",
+      "bytes": 25446,
+      "sha256": "4b0913e972a2a8289f9838fe858e67463946af9f43c77f7ca18c4d90302a33f4",
       "storage": "repository",
       "url": "case26-v3-report/index.html",
       "availability": "uploaded"
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/integration.js",
-      "bytes": 41178,
-      "sha256": "f65a5179d9e141cf9a39bdd0b1643ad9b980b41031c5c0f2ee89f2c000379c35",
+      "bytes": 38615,
+      "sha256": "0b9e2d9a4c39f1e60da69137457ce72b4a3e31a7a09190b3e33e9d24e9ba8251",
       "storage": "repository",
       "url": "case26-v3-report/integration.js",
       "availability": "uploaded"
@@ -407,16 +407,16 @@
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/run_protocol.json",
-      "bytes": 953,
-      "sha256": "78ce4a27173c91d679a829b9847e16d959c4d4b23f0d1adf81757944af8f4836",
+      "bytes": 1029,
+      "sha256": "72bc0f75413175df242b582102adef1981884d736604bc84f8bad366771bf1dc",
       "storage": "repository",
       "url": "case26-v3-report/run_protocol.json",
       "availability": "uploaded"
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/score.json",
-      "bytes": 1834,
-      "sha256": "da97d363122d393db39a97d164593cfa10dd299544bbc5d174772fc861238074",
+      "bytes": 2494,
+      "sha256": "b9ec4022fc9ab110fe6a96466973cc86bc0410ec4bef291bcea93f7bb0b95f7b",
       "storage": "repository",
       "url": "case26-v3-report/score.json",
       "availability": "uploaded"
@@ -479,15 +479,33 @@
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/summary.json",
-      "bytes": 39409,
-      "sha256": "1ffaa143ff93cc57472544021f5b60d64bdf0f7692fca40babe6d75dfea75265",
+      "bytes": 37566,
+      "sha256": "25926a012b373b685c03f857364e1491192a260f4ca303bfeb40fe5cf1a84d5a",
       "storage": "repository",
       "url": "case26-v3-report/summary.json",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/scoring_rules.json",
+      "bytes": 5548,
+      "sha256": "68541a822e99efccf5df5307a88df521bb6d71289b586eafc82084279140de58",
+      "storage": "repository",
+      "url": "case26-v3-report/scoring_rules.json",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/task_display.md",
+      "bytes": 3041,
+      "sha256": "9b84f582179d21eec240b740b822587d1487e5ccfb021b1fd89e989d7bc5e6fc",
+      "storage": "repository",
+      "url": "case26-v3-report/task_display.md",
       "availability": "uploaded"
     }
   ],
   "files": [
+    "case_dashboard/case26-final-scoring-qa.json",
     "case_dashboard/case26_deductions.py",
+    "case_dashboard/case26_final_scoring.py",
     "case_dashboard/case26_report.py",
     "case_dashboard/case26_result_media.py",
     "case_dashboard/dist/case26-v3-report/app.js",
@@ -539,14 +557,20 @@
     "case_dashboard/dist/case26-v3-report/result-media/provenance.json",
     "case_dashboard/dist/case26-v3-report/run_protocol.json",
     "case_dashboard/dist/case26-v3-report/score.json",
+    "case_dashboard/dist/case26-v3-report/scoring_rules.json",
     "case_dashboard/dist/case26-v3-report/style.css",
     "case_dashboard/dist/case26-v3-report/submission/preview.mp4",
     "case_dashboard/dist/case26-v3-report/submission/project.json",
     "case_dashboard/dist/case26-v3-report/submission/report.json",
     "case_dashboard/dist/case26-v3-report/submission/submission.json",
     "case_dashboard/dist/case26-v3-report/summary.json",
-    "case_dashboard/dist/index.html"
+    "case_dashboard/dist/case26-v3-report/task_display.md",
+    "case_dashboard/dist/index.html",
+    "case_dashboard/qa/verify_case26.cjs",
+    "case_dashboard/qa/verify_case26_final_scoring.py"
   ],
   "no_other_case_data_replaced": true,
-  "solver_status": "评分完成"
+  "solver_status": "评分完成",
+  "scoring_version": "final-quality-coefficient-1",
+  "formal_total": 64.5244
 }

@@ -6,11 +6,11 @@ def render(score, judge, prefix=''):
     esc=html.escape
     metrics=score['metrics']
     descriptions=[
-        ('judge','motion_evidence','真实动作保留',15,'主要动作正确，但手指边界融合、袖口拖散，快速移动时有局部滞后。'),
-        ('judge','restoration_quality','实际修复质量',15,'噪声显著减少，但暗袖色斑仍在，纹理与小器件细节变软，部分残影未消除。'),
-        ('automatic','lighting','设计光变（自动）',10,f'局部灯光误差 {metrics["light_maximum_frame_tile_mae"]:.6f}；满分锚点 ≤0.003，硬门槛 ≤0.025。通过门槛但未达到满分。'),
-        ('judge','lighting_intent','灯光意图（视觉）',10,'暖扫光与冷暗节奏保留，但暖高光偏淡、局部对比变平，冷暗段部分区域偏沉。'),
-        ('automatic','motion_detail','运动细节（自动）',15,f'运动区平均绝对误差 {metrics["motion_mae"]:.6f}（满分 ≤0.012）；边缘相对误差 {metrics["gradient_relative_error"]:.6f}（满分 ≤0.10）。两项均通过硬门槛，但离参考细节仍有差距。'),
+        ('judge','motion_evidence','真实动作保留',22.5,'主要动作正确，但手指边界融合、袖口拖散，快速移动时有局部滞后。'),
+        ('judge','restoration_quality','实际修复质量',22.5,'噪声显著减少，但暗袖色斑仍在，纹理与小器件细节变软，部分残影未消除。'),
+        ('automatic','lighting','设计光变（自动）',8,f'局部灯光误差 {metrics["light_maximum_frame_tile_mae"]:.6f}；满分锚点 ≤0.003，硬门槛 ≤0.025。通过门槛但未达到满分。'),
+        ('judge','lighting_intent','灯光意图（视觉）',15,'暖扫光与冷暗节奏保留，但暖高光偏淡、局部对比变平，冷暗段部分区域偏沉。'),
+        ('automatic','motion_detail','运动细节（自动）',12,f'运动区平均绝对误差 {metrics["motion_mae"]:.6f}（满分 ≤0.012）；边缘相对误差 {metrics["gradient_relative_error"]:.6f}（满分 ≤0.10）。两项均通过硬门槛，但离参考细节仍有差距。'),
     ]
     rows=[];loss=0
     for group,key,label,maximum,reason in descriptions:
@@ -41,7 +41,7 @@ def render(score, judge, prefix=''):
 <h2>模型答卷：具体哪里做得不好？</h2>
 <p><strong>共扣 {100-score['formal_total']:.4f} 分，最终 {score['formal_total']:.4f} / 100。</strong>主要问题是残留拖影、衣袖色斑、细节软化和局部灯光偏差。硬门槛全部通过，但总分未到 80 分。</p>
 <div style="overflow-x:auto"><table class="grade-table"><thead><tr><th>扣分项</th><th>得分 / 满分</th><th>扣分</th><th>为什么扣分</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
-<p>未扣分：交付格式、修订层重放、分段修复改善、时间连续性、正常保护段。96 个保护帧逐像素未改。</p>
+<p>交付合规系数为1，不直接加分。质量项中，分段修复改善、时间连续性、正常保护段达到满分；96个保护帧逐像素未改。</p>
 <p>下面的时间段用于定位问题，<strong>不是按片段额外扣分</strong>；同一缺陷可能支撑不同评分项，分数只按上表汇总。左：无损参考；中：受损输入；右：Sol 修复。建议先正常播放，再暂停或慢放检查。</p>
 <div class="deduction-grid">{''.join(cards)}</div>
 <p><a href="{prefix}score.json" target="_blank">完整评分指标 ↗</a> · <a href="{prefix}judge-evidence/visual-final.json" target="_blank">已核实视觉评分原文 ↗</a></p>

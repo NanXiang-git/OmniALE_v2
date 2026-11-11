@@ -2,6 +2,7 @@
 from pathlib import Path
 import json,shutil,os,hashlib,datetime,html
 from case26_deductions import render as render_deductions, STYLE as DEDUCTION_STYLE
+from case26_final_scoring import rules as final_rules, score as final_score, formula_html
 ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'case_dashboard/dist';OUT=DIST/'case26-v3-report'
 C=ROOT/'case26_v3/case_26';RUN=ROOT/'runs_case26_v3_gpt61sol_high_60m/run_20261111'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
@@ -41,14 +42,31 @@ def build():
     if freeze.exists():
         result=read(freeze);seconds=result.get('elapsed_solver_environment_seconds');status='答卷已封存 · 评分进行中';explanation='60分钟独立答题已结束，正在检查交付、计算自动分并完成独立视听评审。'
     elif active.exists():status='Sol/high 正式答题进行中';explanation='独立环境限时60分钟，过程中不提供评分或参考答案。结束后封存并评分。'
-    rules=read(C/'candidate/public_rules.json');rows=[]
+    original_rules=read(C/'candidate/public_rules.json')
+    rules=final_rules(original_rules)
+    if score and score.get('formal_total') is not None:score=final_score(score,original_rules)
+    (OUT/'scoring_rules.json').write_text(js(rules),encoding='utf-8')
+    # The frozen solver package is retained unchanged; presentation uses only the final scoring policy.
+    task_text=(C/'candidate/TASK.md').read_text(encoding='utf-8')
+    import re
+    task_text=re.sub(r'自动60分：.*?精确门槛、锚点和公式见public_rules.json。','最终计分：交付合规系数 × 修复质量分。质量分由自动指标40分和视觉评审60分组成；总分≥80且无硬失败或核心失败才通过。完整公式、权重与锚点见最终评分规则。',task_text)
+    task_text=task_text.replace('公开数值评分规则与v2相同；跨版本分数不可直接视为同题条件下的能力提升或下降。','任务内容与冻结答卷保持不变；本页按最终评分规则汇总。')
+    files=[f for f in files if f['name'] not in ['public_rules.json','input_manifest.json']]
+    for f in files:
+        if f['name']=='TASK.md':
+            f['text']=task_text;f['url']='case26-v3-report/task_display.md';f['bytes']=len(task_text.encode('utf-8'))
+    (OUT/'task_display.md').write_text(task_text,encoding='utf-8')
+    files.append({'name':'scoring_rules.json','path':'scoring_rules.json','url':'case26-v3-report/scoring_rules.json','bytes':(OUT/'scoring_rules.json').stat().st_size,'kind':'document','text':json.dumps(rules,ensure_ascii=False,indent=2)})
+    rows=[]
     for group,weights in [('automatic',rules['automatic_weights']),('judge',{x['id']:x['weight'] for x in rules['judge_items']})]:
         for key,maximum in weights.items():rows.append({'id':key,'maximum':maximum,'points':score.get(group+'_scores',{}).get(key) if score else None,'group':group})
-    summary={'key':'task-05-v3','title':'弱光修复 · 加重损伤v3','attempt':'case26-v3-sol-high-60m','model':'gpt-6.1-sol','effort':'high','harness':'Codex CLI 0.163.0','packageVersion':'3.0','artifacts':[],'rows':rows,'automaticMax':60,'judgeMax':40,'automatic':sum(score.get('automatic_scores',{}).values()) if score else None,'judge':sum(score.get('judge_scores',{}).values()) if score else None,'verified':score['verified_subtotal'] if score else None,'total':score['formal_total'] if score else None,'accepted':score['accepted'] if score else None,'gradeStatus':'complete' if score and score['formal_total'] is not None else 'partial' if score else 'not_started','seconds':seconds,'timedOut':result.get('timed_out') if result else None,'integrity':{'passed':bool(result)},'pendingPoints':score.get('pending_points',100) if score else 100,'gradeNote':explanation,'summary':explanation,'main':'preview.mp4'}
+    summary={'key':'task-05-v3','title':'弱光修复 · 加重损伤v3','attempt':'case26-v3-sol-high-60m','model':'gpt-6.1-sol','effort':'high','harness':'Codex CLI 0.163.0','packageVersion':'3.0','artifacts':[],'rows':rows,'automaticMax':40,'judgeMax':60,'automatic':sum(score.get('automatic_scores',{}).values()) if score else None,'judge':sum(score.get('judge_scores',{}).values()) if score else None,'verified':score['verified_subtotal'] if score else None,'total':score['formal_total'] if score else None,'accepted':score['accepted'] if score else None,'gradeStatus':'complete' if score and score['formal_total'] is not None else 'partial' if score else 'not_started','seconds':seconds,'timedOut':result.get('timed_out') if result else None,'integrity':{'passed':bool(result)},'pendingPoints':score.get('pending_points',100) if score else 100,'gradeNote':explanation,'summary':explanation,'main':'preview.mp4'}
+    summary['compliance']=score.get('compliance') if score else None
+    summary['scoringVersion']='final-quality-coefficient-1'
     score_html='';deduction_html='';deduction_embedded=''
     if score:
         status='评分完成' if score['formal_total'] is not None else '已有部分评分 · 待评项保留'
-        explanation='正式总分与硬门槛分别展示；本轮输入为v3，历史v2分数不作同条件比较。'
+        explanation='最终分 = 交付合规系数 × 修复质量分。自动质量40分、视觉质量60分；硬门槛与核心失败独立验收。'
         summary['gradeNote']=explanation;summary['summary']=explanation
         labels={'delivery':'交付格式','repair_replay':'修订层重放','restoration':'分段修复改善','motion_detail':'运动细节','temporal':'时间连续性','lighting':'设计光变','protected':'正常保护段','motion_evidence':'真实动作保留','restoration_quality':'实际修复质量','lighting_intent':'灯光意图'}
         table=''.join('<tr><td>'+labels.get(x['id'],x['id'])+'</td><td>'+('待评' if x['points'] is None else f"{x['points']:.4f}")+'</td><td>'+str(x['maximum'])+'</td></tr>' for x in rows)
@@ -58,7 +76,7 @@ def build():
         readable_failures='；'.join(failure_labels.get(f,f) for f in fails) or '无'
         score_html=f'<div class="score-summary"><strong>总分：{total if total is not None else "待评"} / 100</strong><span>已核实：{score["verified_subtotal"]} · 待评权重：{score["pending_points"]}</span><span>硬门槛：{"未通过" if fails else "已通过" if total is not None else "待确认"} · 实际用时：{(seconds or 0)/60:.2f} 分钟</span></div><table class="grade-table"><thead><tr><th>评分项</th><th>得分</th><th>满分</th></tr></thead><tbody>{table}</tbody></table><p>失败项：{html.escape(", ".join(fails) or "无")}</p>'
         score_html=score_html.replace(html.escape(', '.join(fails) or '无'),html.escape(readable_failures))
-        if total is not None:score_html='<p><strong>整体结论：'+('通过' if score['accepted'] else '未通过（总分须≥80，且无硬失败或核心失败）')+'</strong></p>'+score_html
+        if total is not None:score_html='<p><strong>整体结论：'+('通过' if score['accepted'] else '未通过（总分须≥80，且无硬失败或核心失败）')+'</strong></p>'+score_html+formula_html(score)
         if score.get('metrics',{}).get('block_psnr_gain_db'):
             improvements=' / '.join(f'{n:.2f}' for n in score['metrics']['block_psnr_gain_db'])
             score_html+=f'<p>四个受损区段的 PSNR 改善：{improvements} dB。保护段最大逐帧平均误差：{score["metrics"]["protected_maximum_frame_mae"]:.6f}。</p>'
@@ -85,7 +103,7 @@ def build():
         api=RUN/'orchestrator/case_26/api.jsonl'
         calls=[json.loads(line) for line in api.read_text(encoding='utf-8').splitlines()] if api.exists() else []
         protocol={k:settings[k] for k in ['model','reasoning_effort','harness','wall_clock_seconds','truth_access','external_network','grading']}
-        protocol.update({'task_version':'3.0','status':'scored' if score and score['formal_total'] is not None else 'sealed','actual_elapsed_seconds':seconds,'timed_out':result.get('timed_out'),'formal_attempts':1,'api_requests':len(calls),'returned_models':sorted({x['model'] for x in calls if x.get('model')}),'returned_efforts':sorted({x['reasoning']['effort'] for x in calls if x.get('reasoning',{}).get('effort')}),'environment_acceptance':read(RUN/'environment/acceptance.json')['checks'],'preflight_note':'Earlier credential smoke checks failed before the formal attempt; they are infrastructure checks, not solver scores.'})
+        protocol.update({'grading':'min(delivery,replay) * (automatic quality40 + independent visual quality60)','scoring_version':'final-quality-coefficient-1','task_version':'3.0','status':'scored' if score and score['formal_total'] is not None else 'sealed','actual_elapsed_seconds':seconds,'timed_out':result.get('timed_out'),'formal_attempts':1,'api_requests':len(calls),'returned_models':sorted({x['model'] for x in calls if x.get('model')}),'returned_efforts':sorted({x['reasoning']['effort'] for x in calls if x.get('reasoning',{}).get('effort')}),'environment_acceptance':read(RUN/'environment/acceptance.json')['checks'],'preflight_note':'Earlier credential smoke checks failed before the formal attempt; they are infrastructure checks, not solver scores.'})
         (OUT/'run_protocol.json').write_text(js(protocol),encoding='utf-8')
         if score:
             (OUT/'judge-evidence').mkdir(exist_ok=True)
@@ -106,7 +124,7 @@ def build():
     banner=f'<section class="note-card" style="margin-bottom:24px"><span class="card-kicker mint">GPT-6.1 SOL / HIGH + CODEX · 60 MIN</span><h2>{status}</h2><p>{explanation}</p>{score_html}</section>{deduction_html}{output_html}'
     if result:banner= banner.replace('</section>','<p><a href="run_protocol.json">运行条件与验收记录 ↗</a> · <a href="freeze.public.json">答卷哈希清单 ↗</a></p></section>',1)
     page=(preview/'index.html').read_text(encoding='utf-8').replace('<section class="lab"',banner+'\n<section class="lab"',1)
-    page=page.replace('CASE 26 · V3 试制','CASE 26 · V3 正式题包').replace('此页用于审阅新损伤强度，尚未证明修复难度或更新正式评分规则。','本轮使用冻结的 v3 题包与评分规则。对照工具已通过正反例检查；常规修复基线未通过门槛，任务可修复性仍需结合实际答题结果判断。')
+    page=page.replace('CASE 26 · V3 试制','CASE 26 · V3 正式题包').replace('此页用于审阅新损伤强度，尚未证明修复难度或更新正式评分规则。','本轮使用冻结的 v3 题包，按最终计分算法汇总。对照工具已通过正反例检查；常规修复基线未通过门槛，任务可修复性仍需结合实际答题结果判断。')
     page=page.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><style>.score-summary{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0}.grade-table{width:100%;border-collapse:collapse}.grade-table td,.grade-table th{padding:9px;border-bottom:1px solid #34434e;text-align:left}</style>')
     page=page.replace('</head>','<style>'+DEDUCTION_STYLE+'</style></head>')
     page=page.replace('</body>','''<script>
@@ -115,21 +133,20 @@ def build():
     (OUT/'index.html').write_text(page,encoding='utf-8')
     generation=read(preview/'generation_report.json')
     public_generation={k:v for k,v in generation.items() if k not in ['per_frame','source','seed']}
-    public_generation['status']='Integrated into frozen Case26 v3. Numeric rules preserved; this report alone does not certify recoverability.'
+    public_generation['status']='Integrated into frozen Case26 v3. Final quality-coefficient scoring is documented separately; this report alone does not certify recoverability.'
     public_generation['note']='Public review comparison. Clean reference is excluded from isolated solver input. Exact damage-generation parameters remain private.'
     (OUT/'generation_report.json').write_text(js(public_generation),encoding='utf-8')
-    case={'title':'弱光修复 · 加重损伤与动作保护','summary':'26秒控制台操作实拍；v3加重暗部噪声、色斑、闪动与运动残影。保留设计光变和正常片段；Sol/high + Codex限时60分钟。','versionLabel':'V3 加重损伤 · 60分钟','packageVersion':'3.0','directory':'case26_v3/case_26/candidate','resultKey':'task-05-v3','previousResultKey':'task-05','experimentStatus':'running' if active.exists() else 'prepared_not_experimented','main':'input/damaged.mkv','files':files,'task':(C/'candidate/TASK.md').read_text(encoding='utf-8'),'outputs':[{'title':'v3公开交付合同','text':(C/'candidate/TASK.md').read_text(encoding='utf-8')}],'status':'packaged'}
+    case={'title':'弱光修复 · 加重损伤与动作保护','summary':'26秒控制台操作实拍；v3加重暗部噪声、色斑、闪动与运动残影。保留设计光变和正常片段；Sol/high + Codex限时60分钟。','versionLabel':'V3 加重损伤 · 60分钟','packageVersion':'3.0','directory':'case26_v3/case_26/candidate','resultKey':'task-05-v3','experimentStatus':'running' if active.exists() else 'prepared_not_experimented','main':'input/damaged.mkv','files':files,'task':task_text,'outputs':[{'title':'公开交付合同与最终计分','text':task_text}],'status':'packaged'}
     case['experimentStatus']='completed' if score and score['formal_total'] is not None else 'grading' if result else 'running' if active.exists() else 'prepared_not_experimented'
     payload={'case':case,'result':summary,'status':status,'explanation':explanation,'deductionsHtml':deduction_embedded,'deductionsStyle':DEDUCTION_STYLE}
     (OUT/'summary.json').write_text(js(payload),encoding='utf-8')
     overlay='''(()=>{const x=PAYLOAD,d=window.OMNIALE_DATA,r=window.OMNIALE_RESULTS,o=window.OmniResults;if(!d||!r||!o)return;
-const c=d.cases.find(c=>c.key==='task-05');window.CASE26_PREVIOUS={case:JSON.parse(JSON.stringify(c)),result:r['task-05']};
-Object.assign(c,x.case);r['task-05-v3']=x.result;
-window.OmniResults=Object.freeze({...o,render(c,r,target){if(c.key!=='task-05'||c.showHistoricalResults)return o.render(c,r,target);
-target.innerHTML='<section><h2>Case26 v3 · 损伤对比与60分钟答题</h2><p id="case26-status"></p><p><a class="button" href="case26-v3-report/index.html" target="_blank">单独打开损伤对比与评测 ↗</a></p><iframe title="Case26 v3 无损参考与受损输入同步对比" src="case26-v3-report/index.html" style="display:block;width:100%;height:2100px;border:0;border-radius:12px" allow="fullscreen"></iframe></section><details class="result-details" id="case26-history"><summary>查看历史 v2 题面、答卷与旧评分</summary><p>旧版输入损伤较轻，时间预算不同，成绩未换算为v3。</p><pre id="case26-old-task" style="white-space:pre-wrap"></pre><div id="case26-old-result"></div></details>';
+const c=d.cases.find(c=>c.key==='task-05');
+Object.assign(c,x.case);delete c.previousResultKey;r['task-05-v3']=x.result;r['task-05']=x.result;
+window.OmniResults=Object.freeze({...o,render(c,r,target){if(c.key!=='task-05')return o.render(c,r,target);
+target.innerHTML='<section><h2>Case26 v3 · 损伤对比与60分钟答题</h2><p id="case26-status"></p><p><a class="button" href="case26-v3-report/index.html" target="_blank">单独打开损伤对比与评测 ↗</a></p><iframe title="Case26 v3 无损参考与受损输入同步对比" src="case26-v3-report/index.html" style="display:block;width:100%;height:2100px;border:0;border-radius:12px" allow="fullscreen"></iframe></section>';
 target.querySelector('#case26-status').textContent=x.status+'。'+x.explanation;
 if(x.deductionsHtml){const block=document.createElement('div');block.innerHTML='<style>'+x.deductionsStyle+'</style>'+x.deductionsHtml;target.prepend(block);}
-const h=target.querySelector('#case26-history');h.addEventListener('toggle',()=>{if(h.open&&!h.dataset.loaded){h.dataset.loaded='1';target.querySelector('#case26-old-task').textContent=window.CASE26_PREVIOUS.case.task;o.render({...window.CASE26_PREVIOUS.case,showHistoricalResults:true},window.CASE26_PREVIOUS.result,target.querySelector('#case26-old-result'));}});
 }});})();'''.replace('PAYLOAD',js(payload))
     (OUT/'integration.js').write_text(overlay,encoding='utf-8')
     index=DIST/'index.html';s=index.read_text(encoding='utf-8')
