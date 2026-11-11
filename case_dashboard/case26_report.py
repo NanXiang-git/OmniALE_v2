@@ -57,6 +57,14 @@ def build():
         readable_failures='；'.join(failure_labels.get(f,f) for f in fails) or '无'
         score_html=f'<div class="score-summary"><strong>总分：{total if total is not None else "待评"} / 100</strong><span>已核实：{score["verified_subtotal"]} · 待评权重：{score["pending_points"]}</span><span>硬门槛：{"未通过" if fails else "已通过" if total is not None else "待确认"} · 实际用时：{(seconds or 0)/60:.2f} 分钟</span></div><table class="grade-table"><thead><tr><th>评分项</th><th>得分</th><th>满分</th></tr></thead><tbody>{table}</tbody></table><p>失败项：{html.escape(", ".join(fails) or "无")}</p>'
         score_html=score_html.replace(html.escape(', '.join(fails) or '无'),html.escape(readable_failures))
+        if score.get('metrics',{}).get('block_psnr_gain_db'):
+            improvements=' / '.join(f'{n:.2f}' for n in score['metrics']['block_psnr_gain_db'])
+            score_html+=f'<p>四个受损区段的 PSNR 改善：{improvements} dB。保护段最大逐帧平均误差：{score["metrics"]["protected_maximum_frame_mae"]:.6f}。</p>'
+        judgment=RUN/'evaluation/resolved_judge.json'
+        if not judgment.exists():judgment=RUN/'evaluation/primary/judge.json'
+        if judgment.exists():
+            decisions=read(judgment).get('items',{})
+            score_html+='<details><summary>查看视觉评分理由</summary>'+''.join('<p><strong>'+labels.get(k,k)+'</strong>：'+html.escape(str(v.get('reason','待完成')))+'（'+('已核实' if v.get('verified') else '待核实')+'）</p>' for k,v in decisions.items())+'</details>'
         (OUT/'score.json').write_text(js(score),encoding='utf-8')
     submission=RUN/'sealed/case_26/submission'
     if result:
