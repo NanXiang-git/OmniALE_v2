@@ -1,0 +1,32 @@
+{
+  "score": 92.2727,
+  "maximum": 100,
+  "counts": {
+    "truth_errors": 22,
+    "reported": 23,
+    "tp": 21,
+    "fp": 2,
+    "fn": 1
+  },
+  "breakdown": {
+    "detection": 28.0,
+    "factual_correction": 32.77272727272727,
+    "audio_localization": 4.7727272727272725,
+    "timing_precision": 10.0,
+    "video_evidence": 7.7272727272727275,
+    "score_reconstruction": 4,
+    "delivery": 5
+  },
+  "delivery_checks": {
+    "flags_structure": 2,
+    "csv": 1,
+    "report": 1,
+    "evidence_files": 1
+  },
+  "scoring_type": "frozen_constructed_truth_experimental",
+  "limitations": [
+    "Author-reviewed visual truth; no independent human basketball expert certification.",
+    "Specific issue type plus audio location used for matching; natural-language contradictions require post-run semantic review.",
+    "Evidence verifies relevant original frames at multiple moments; it does not prove every natural-language assertion automatically."
+  ]
+}

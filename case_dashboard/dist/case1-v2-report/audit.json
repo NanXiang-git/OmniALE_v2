@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-11-11T08:36:11.924182+00:00",
+  "passed": true,
+  "checks": {
+    "inputs_and_evaluator_unchanged": true,
+    "sealed_submission_hashes_match": true,
+    "isolation_passed": true,
+    "requested_model_and_budget": true,
+    "returned_model_and_effort": true,
+    "elapsed_within_budget_tolerance": true,
+    "score_sum_matches": true,
+    "component_bounds": true,
+    "count_arithmetic": true,
+    "summary_matches": true,
+    "report_local_links_exist": true
+  },
+  "input_errors": {
+    "candidate": [],
+    "evaluator": []
+  },
+  "submission_errors": [],
+  "broken_report_links": [],
+  "api_requests_logged": 41,
+  "api_completed": 41,
+  "api_errors": [],
+  "score": 92.2727,
+  "counts": {
+    "truth_errors": 22,
+    "reported": 23,
+    "tp": 21,
+    "fp": 2,
+    "fn": 1
+  },
+  "limitations": [
+    "Read-only integrity and arithmetic audit; not independent basketball expert review.",
+    "Report links checked on disk; actual browser video playback not tested.",
+    "Returned model identity verified against API records; provider internals not independently verifiable."
+  ]
+}

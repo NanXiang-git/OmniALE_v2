@@ -1,0 +1,1010 @@
+{
+  "flags": [
+    {
+      "id": "F01",
+      "category": "timing",
+      "issue_type": "timing",
+      "quote": "进了，中国队在篮下拿到两分。",
+      "audio_span": [
+        19.35,
+        22.01
+      ],
+      "video_spans": [
+        [
+          18.6,
+          22.4
+        ]
+      ],
+      "reason": "决定性词“进”的起点约19.35秒；此时进攻尚未终结，进球须到约20.48秒才可确认，提前超过0.25秒。",
+      "correction": "将整句后移约1.33秒，使“进”落在进球后约0.20秒。",
+      "corrected_facts": {
+        "team": "CHN",
+        "points": 2
+      },
+      "timing": {
+        "assertion_time": 19.35,
+        "event_time": 20.48,
+        "offset_seconds": -1.13,
+        "shift_seconds": 1.33
+      },
+      "evidence": [
+        {
+          "time": 19.36,
+          "path": "evidence/F01_1_19.36.png"
+        },
+        {
+          "time": 20.56,
+          "path": "evidence/F01_2_20.56.png"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "category": "fact",
+      "issue_type": "actor_relation",
+      "quote": "刚才是易建联给刘炜做球，刘炜在篮下终结，中国队再添两分。",
+      "audio_span": [
+        24.94,
+        30.82
+      ],
+      "video_spans": [
+        [
+          16,
+          22.8
+        ],
+        [
+          23.6,
+          25.4
+        ]
+      ],
+      "reason": "16–19秒红衣4号持球推进并把球送到篮下11号，随后11号完成得分；10号在外线。把传球者说成11号、终结者说成10号均与该回合不符。",
+      "correction": "改为赵继伟（4号）传给易建联（11号），易建联在篮下得到两分。",
+      "corrected_facts": {
+        "passer": 4,
+        "scorer": 11,
+        "terminal_pass": true
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 18.24,
+          "path": "evidence/F02_1_18.24.png"
+        },
+        {
+          "time": 19.76,
+          "path": "evidence/F02_2_19.76.png"
+        },
+        {
+          "time": 24.8,
+          "path": "evidence/F02_3_24.80.png"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "category": "fact",
+      "issue_type": "points",
+      "quote": "回头看韩国队刚才这次外线命中，是一记两分球。",
+      "audio_span": [
+        39.9,
+        44.54
+      ],
+      "video_spans": [
+        [
+          34.8,
+          38.8
+        ]
+      ],
+      "reason": "韩国队在三分线外起跳出手并命中，不能计作两分；该球使韩国由66增至69分。",
+      "correction": "改为韩国队命中三分。",
+      "corrected_facts": {
+        "team": "KOR",
+        "points": 3
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 35.76,
+          "path": "evidence/F03_1_35.76.png"
+        },
+        {
+          "time": 37.28,
+          "path": "evidence/F03_2_37.28.png"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "category": "fact",
+      "issue_type": "actor_relation",
+      "quote": "刚才周琦传给易建联，由易建联在篮下完成两分终结。",
+      "audio_span": [
+        57.93,
+        62.75
+      ],
+      "video_spans": [
+        [
+          51.6,
+          56.8
+        ],
+        [
+          63.6,
+          69.6
+        ]
+      ],
+      "reason": "高位11号出球给沿底线移动的15号，15号持球攻筐得分并随后罚球；11号留在篮下接应。解说把传、接与终结角色倒置。",
+      "correction": "改为易建联（11号）传给周琦（15号），周琦在篮下完成两分。",
+      "corrected_facts": {
+        "passer": 11,
+        "scorer": 15,
+        "terminal_pass": true
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 52.28,
+          "path": "evidence/F04_1_52.28.png"
+        },
+        {
+          "time": 55.36,
+          "path": "evidence/F04_2_55.36.png"
+        },
+        {
+          "time": 68.8,
+          "path": "evidence/F04_3_68.80.png"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "category": "fact",
+      "issue_type": "event_identity",
+      "quote": "这个慢镜头重放的是片段开头易建联的那次两分得分。",
+      "audio_span": [
+        66.95,
+        71.41
+      ],
+      "video_spans": [
+        [
+          18.8,
+          22.4
+        ],
+        [
+          53.6,
+          56.8
+        ],
+        [
+          63.6,
+          71.6
+        ]
+      ],
+      "reason": "慢镜头中15号沿底线攻篮，11号在旁；对应的是约55秒周琦的得分及随后加罚回合，与开头约20.5秒11号得分不是同一事件。",
+      "correction": "改为这是刚才周琦（15号）篮下得分的慢镜头。",
+      "corrected_facts": {
+        "scorer": 15,
+        "original_event_time": 55.36
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 21.36,
+          "path": "evidence/F05_1_21.36.png"
+        },
+        {
+          "time": 55.36,
+          "path": "evidence/F05_2_55.36.png"
+        },
+        {
+          "time": 65.28,
+          "path": "evidence/F05_3_65.28.png"
+        },
+        {
+          "time": 68.8,
+          "path": "evidence/F05_4_68.80.png"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "category": "timing",
+      "issue_type": "timing",
+      "quote": "进了，这次罚球拿到一分。",
+      "audio_span": [
+        94.56,
+        96.76
+      ],
+      "video_spans": [
+        [
+          93.6,
+          96.6
+        ]
+      ],
+      "reason": "“进”约94.56秒发声，此时周琦还在完成罚球出手；约95.52秒球才穿过篮圈，确定性结果提前。",
+      "correction": "将整句后移约1.16秒，使“进”在进球后约0.20秒发声。",
+      "corrected_facts": {
+        "team": "CHN",
+        "points": 1
+      },
+      "timing": {
+        "assertion_time": 94.56,
+        "event_time": 95.52,
+        "offset_seconds": -0.96,
+        "shift_seconds": 1.16
+      },
+      "evidence": [
+        {
+          "time": 94.56,
+          "path": "evidence/F06_1_94.56.png"
+        },
+        {
+          "time": 95.6,
+          "path": "evidence/F06_2_95.60.png"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "category": "fact",
+      "issue_type": "actor_relation",
+      "quote": "回看这次反击，是周琦送出传球，郭艾伦接球上篮拿到两分。",
+      "audio_span": [
+        157.98,
+        163.78
+      ],
+      "video_spans": [
+        [
+          151.2,
+          157.6
+        ],
+        [
+          158,
+          160.8
+        ]
+      ],
+      "reason": "转换进攻中6号持球突破后向篮下送球，15号接球上篮得分；随后近景可见15号。解说把6号与15号角色倒置。",
+      "correction": "改为郭艾伦（6号）传球，周琦（15号）接球上篮拿到两分。",
+      "corrected_facts": {
+        "passer": 6,
+        "scorer": 15,
+        "terminal_pass": true
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 153.76,
+          "path": "evidence/F07_1_153.76.png"
+        },
+        {
+          "time": 155.28,
+          "path": "evidence/F07_2_155.28.png"
+        },
+        {
+          "time": 160.24,
+          "path": "evidence/F07_3_160.24.png"
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "category": "fact",
+      "issue_type": "shot_sequence",
+      "quote": "刚才中国队这次两分，第一下投篮就直接命中，没有二次进攻。",
+      "audio_span": [
+        208.9,
+        214.76
+      ],
+      "video_spans": [
+        [
+          202.8,
+          208.4
+        ]
+      ],
+      "reason": "约204秒的出手弹出，11号继续争抢前场篮板并连续补篮，随后才进球。不能描述成首投直接命中、没有二次进攻。",
+      "correction": "改为首投未中，易建联（11号）通过前场篮板后的补篮得到两分。",
+      "corrected_facts": {
+        "first_shot_made": false,
+        "putback": true,
+        "scorer": 11,
+        "rebounder": 11,
+        "play_origin": "offensive_rebound"
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 204.24,
+          "path": "evidence/F08_1_204.24.png"
+        },
+        {
+          "time": 205.28,
+          "path": "evidence/F08_2_205.28.png"
+        },
+        {
+          "time": 206.24,
+          "path": "evidence/F08_3_206.24.png"
+        },
+        {
+          "time": 207.2,
+          "path": "evidence/F08_4_207.20.png"
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "category": "fact",
+      "issue_type": "play_origin",
+      "quote": "回想上一记中国队两分，也就是周琦那球，靠的是抢前场篮板补进。",
+      "audio_span": [
+        217.92,
+        224.4
+      ],
+      "video_spans": [
+        [
+          150.8,
+          157.2
+        ]
+      ],
+      "reason": "这里“上一记、周琦那球”指约155秒的两分。连续画面是6号快速推进、15号跟进接传球直接终结，该次得分前没有中国队投篮不中及前场篮板。",
+      "correction": "改为上一记周琦的两分来自转换快攻，由郭艾伦传球给周琦终结。",
+      "corrected_facts": {
+        "play_origin": "transition",
+        "scorer": 15,
+        "team": "CHN",
+        "first_shot_made": true,
+        "putback": false
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 151.76,
+          "path": "evidence/F09_1_151.76.png"
+        },
+        {
+          "time": 153.76,
+          "path": "evidence/F09_2_153.76.png"
+        },
+        {
+          "time": 155.28,
+          "path": "evidence/F09_3_155.28.png"
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "category": "fact",
+      "issue_type": "play_origin",
+      "quote": "而最新这记中国队两分，易建联是在快攻中接球直接终结的。",
+      "audio_span": [
+        228.95,
+        234.41
+      ],
+      "video_spans": [
+        [
+          195.6,
+          203.6
+        ],
+        [
+          203.6,
+          208.4
+        ]
+      ],
+      "reason": "最新一记为约207秒11号补篮。此前中国队已在前场组织，出手未中后争抢篮板连续补篮，进攻来源是前场篮板二次进攻。",
+      "correction": "改为最新这两分来自前场篮板后的易建联补篮。",
+      "corrected_facts": {
+        "play_origin": "offensive_rebound",
+        "scorer": 11,
+        "team": "CHN"
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 199.28,
+          "path": "evidence/F10_1_199.28.png"
+        },
+        {
+          "time": 204.24,
+          "path": "evidence/F10_2_204.24.png"
+        },
+        {
+          "time": 206.24,
+          "path": "evidence/F10_3_206.24.png"
+        },
+        {
+          "time": 207.2,
+          "path": "evidence/F10_4_207.20.png"
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "category": "fact",
+      "issue_type": "score",
+      "quote": "现在中国队已经反超一分，接下来要守住领先。",
+      "audio_span": [
+        239.83,
+        244.37
+      ],
+      "video_spans": [
+        [
+          0,
+          4.8
+        ],
+        [
+          203.6,
+          208.4
+        ],
+        [
+          235.2,
+          241.2
+        ]
+      ],
+      "reason": "从起始59:66累计，中国此时两分得分四次及加罚一次，共68分；韩国三分一次，共69分。此时中国落后一分，尚未反超。",
+      "correction": "改为中国队68比69，仍落后一分。",
+      "corrected_facts": {
+        "subject": "CHN",
+        "relation": "trailing",
+        "margin": 1,
+        "chn_score": 68,
+        "kor_score": 69
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 2.0,
+          "path": "evidence/F11_1_2.00.png"
+        },
+        {
+          "time": 207.2,
+          "path": "evidence/F11_2_207.20.png"
+        },
+        {
+          "time": 239.6,
+          "path": "evidence/F11_3_239.60.png"
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "category": "fact",
+      "issue_type": "play_origin",
+      "quote": "回看韩国队这次两分，是抢断之后一路带球快攻得手。",
+      "audio_span": [
+        271.32,
+        276.96
+      ],
+      "video_spans": [
+        [
+          264.8,
+          271.6
+        ]
+      ],
+      "reason": "约265秒韩国白衣球员在前场底线界外持球发球，队友接球后在同一前场进攻并得分；没有抢断后全场推进的过程。",
+      "correction": "改为韩国队前场底线发球组织，随后篮下得到两分。",
+      "corrected_facts": {
+        "play_origin": "baseline_inbound",
+        "team": "KOR"
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 265.2,
+          "path": "evidence/F12_1_265.20.png"
+        },
+        {
+          "time": 266.24,
+          "path": "evidence/F12_2_266.24.png"
+        },
+        {
+          "time": 268.28,
+          "path": "evidence/F12_3_268.28.png"
+        },
+        {
+          "time": 269.6,
+          "path": "evidence/F12_4_269.60.png"
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "category": "fact",
+      "issue_type": "free_throw_order",
+      "quote": "刚才中国队这组第二次罚球命中，两个罚球都已完成。",
+      "audio_span": [
+        335.7,
+        340.66
+      ],
+      "video_spans": [
+        [
+          327.6,
+          338.8
+        ],
+        [
+          348.8,
+          357.2
+        ]
+      ],
+      "reason": "约334.2秒的命中是本组第一罚；裁判随后交球，11号在约354秒再次出手、约355秒第二罚命中，故335–340秒尚未完成两罚。",
+      "correction": "改为中国队第一罚命中，接下来还有第二罚。",
+      "corrected_facts": {
+        "team": "CHN",
+        "free_throw_index": 1
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 334.64,
+          "path": "evidence/F13_1_334.64.png"
+        },
+        {
+          "time": 338.24,
+          "path": "evidence/F13_2_338.24.png"
+        },
+        {
+          "time": 354.24,
+          "path": "evidence/F13_3_354.24.png"
+        },
+        {
+          "time": 355.6,
+          "path": "evidence/F13_4_355.60.png"
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "category": "fact",
+      "issue_type": "score",
+      "quote": "现在中国队已经追平，双方比分相同。",
+      "audio_span": [
+        369.87,
+        373.49
+      ],
+      "video_spans": [
+        [
+          0,
+          4.8
+        ],
+        [
+          333.6,
+          337.6
+        ],
+        [
+          353.6,
+          358.4
+        ],
+        [
+          369.6,
+          373.6
+        ]
+      ],
+      "reason": "中国此前68分，韩国约269秒得两分增至71；中国11号两罚都进后为70:71，仍差一分。",
+      "correction": "改为中国队70比71，仍落后一分。",
+      "corrected_facts": {
+        "subject": "CHN",
+        "relation": "trailing",
+        "margin": 1,
+        "chn_score": 70,
+        "kor_score": 71
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 334.64,
+          "path": "evidence/F14_1_334.64.png"
+        },
+        {
+          "time": 355.6,
+          "path": "evidence/F14_2_355.60.png"
+        },
+        {
+          "time": 370.24,
+          "path": "evidence/F14_3_370.24.png"
+        }
+      ]
+    },
+    {
+      "id": "F15",
+      "category": "timing",
+      "issue_type": "timing",
+      "quote": "进了，中国队这次两分完成反超。",
+      "audio_span": [
+        407.26,
+        410.17
+      ],
+      "video_spans": [
+        [
+          406.4,
+          410.6
+        ]
+      ],
+      "reason": "“进”约407.26秒发声，此时持球队员仍在突破组织；随后首投未中，周琦补扣到约409.12秒才形成有效两分，宣告提前。",
+      "correction": "将整句后移约2.06秒，使“进”在补扣确认后约0.20秒发声。",
+      "corrected_facts": {
+        "team": "CHN",
+        "points": 2
+      },
+      "timing": {
+        "assertion_time": 407.26,
+        "event_time": 409.12,
+        "offset_seconds": -1.86,
+        "shift_seconds": 2.06
+      },
+      "evidence": [
+        {
+          "time": 407.28,
+          "path": "evidence/F15_1_407.28.png"
+        },
+        {
+          "time": 408.72,
+          "path": "evidence/F15_2_408.72.png"
+        },
+        {
+          "time": 409.2,
+          "path": "evidence/F15_3_409.20.png"
+        }
+      ]
+    },
+    {
+      "id": "F16",
+      "category": "fact",
+      "issue_type": "shot_sequence",
+      "quote": "回看反超这球，郭艾伦的第一下上篮已经进了，后面没有补篮得分。",
+      "audio_span": [
+        413.96,
+        420.08
+      ],
+      "video_spans": [
+        [
+          407.6,
+          410.6
+        ],
+        [
+          471.6,
+          479.6
+        ]
+      ],
+      "reason": "实时画面及慢镜头显示6号先上篮未中，15号跟进取得篮板并双手补扣得分。两分来自15号补篮，非6号首投。",
+      "correction": "改为郭艾伦（6号）上篮未中，周琦（15号）跟进补扣得分。",
+      "corrected_facts": {
+        "first_shot_made": false,
+        "putback": true,
+        "first_shooter": 6,
+        "scorer": 15,
+        "rebounder": 15,
+        "play_origin": "offensive_rebound"
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 408.24,
+          "path": "evidence/F16_1_408.24.png"
+        },
+        {
+          "time": 409.24,
+          "path": "evidence/F16_2_409.24.png"
+        },
+        {
+          "time": 473.76,
+          "path": "evidence/F16_3_473.76.png"
+        },
+        {
+          "time": 477.28,
+          "path": "evidence/F16_4_477.28.png"
+        }
+      ]
+    },
+    {
+      "id": "F17",
+      "category": "fact",
+      "issue_type": "shot_type",
+      "quote": "慢镜头里周琦最后用的是普通挑篮，把球轻轻托进篮筐。",
+      "audio_span": [
+        468.88,
+        474.08
+      ],
+      "video_spans": [
+        [
+          474.8,
+          479.8
+        ],
+        [
+          408.8,
+          410.2
+        ]
+      ],
+      "reason": "该慢镜头后续可见15号双手持球在篮圈上方向下扣入，双手抓住篮圈；终结动作是补扣。",
+      "correction": "改为周琦双手补扣。",
+      "corrected_facts": {
+        "shot_type": "dunk",
+        "scorer": 15
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 476.24,
+          "path": "evidence/F17_1_476.24.png"
+        },
+        {
+          "time": 477.28,
+          "path": "evidence/F17_2_477.28.png"
+        },
+        {
+          "time": 478.24,
+          "path": "evidence/F17_3_478.24.png"
+        }
+      ]
+    },
+    {
+      "id": "F18",
+      "category": "fact",
+      "issue_type": "replay",
+      "quote": "从刚才的回放看，中国队应该再加两分，现在领先三分。",
+      "audio_span": [
+        480.77,
+        486.53
+      ],
+      "video_spans": [
+        [
+          408.6,
+          410.6
+        ],
+        [
+          471.6,
+          479.8
+        ]
+      ],
+      "reason": "回放展示的是约409.12秒已计入的周琦补扣，没有新的实时得分；中国由70:71变72:71后仍只领先一分。把回放再加两分会重复计分。",
+      "correction": "回放不加分，此时中国队72比71领先一分。",
+      "corrected_facts": {
+        "is_replay": true,
+        "added_points": 0,
+        "chn_score": 72,
+        "kor_score": 71
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 409.44,
+          "path": "evidence/F18_1_409.44.png"
+        },
+        {
+          "time": 477.28,
+          "path": "evidence/F18_2_477.28.png"
+        }
+      ]
+    },
+    {
+      "id": "F19",
+      "category": "fact",
+      "issue_type": "actor_relation",
+      "quote": "刚才郭艾伦突破后把球交给周琦，是周琦接球完成两分上篮。",
+      "audio_span": [
+        586.98,
+        592.48
+      ],
+      "video_spans": [
+        [
+          579.2,
+          585.2
+        ],
+        [
+          591.6,
+          600.4
+        ]
+      ],
+      "reason": "6号持球突破，连续画面显示球一直由6号控制并由其直接上篮；15号在旁接应，没有接到终结传球。近景慢镜头可见6号出手。",
+      "correction": "改为郭艾伦（6号）自己突破上篮得到两分，没有传给周琦终结。",
+      "corrected_facts": {
+        "scorer": 6,
+        "terminal_pass": false
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 580.76,
+          "path": "evidence/F19_1_580.76.png"
+        },
+        {
+          "time": 582.24,
+          "path": "evidence/F19_2_582.24.png"
+        },
+        {
+          "time": 592.72,
+          "path": "evidence/F19_3_592.72.png"
+        },
+        {
+          "time": 598.8,
+          "path": "evidence/F19_4_598.80.png"
+        }
+      ]
+    },
+    {
+      "id": "F20",
+      "category": "fact",
+      "issue_type": "shot_type",
+      "quote": "再看慢镜头，郭艾伦这次选择的是双手扣篮终结。",
+      "audio_span": [
+        597.7,
+        602.34
+      ],
+      "video_spans": [
+        [
+          591.6,
+          600.8
+        ],
+        [
+          581.6,
+          584.8
+        ]
+      ],
+      "reason": "慢镜头中6号在篮圈下方伸手将球挑向篮板/篮圈，球在篮圈上弹跳后落入；没有把球从圈上向下扣入或抓圈的扣篮动作。",
+      "correction": "改为郭艾伦突破挑篮（上篮）得分。",
+      "corrected_facts": {
+        "shot_type": "layup",
+        "scorer": 6
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 592.72,
+          "path": "evidence/F20_1_592.72.png"
+        },
+        {
+          "time": 593.36,
+          "path": "evidence/F20_2_593.36.png"
+        },
+        {
+          "time": 595.68,
+          "path": "evidence/F20_3_595.68.png"
+        },
+        {
+          "time": 599.32,
+          "path": "evidence/F20_4_599.32.png"
+        }
+      ]
+    },
+    {
+      "id": "F21",
+      "category": "fact",
+      "issue_type": "game_state",
+      "quote": "刚才这球就是终场绝杀，比赛已经结束，中国队拿下胜利。",
+      "audio_span": [
+        608.94,
+        614.44
+      ],
+      "video_spans": [
+        [
+          601.6,
+          609.6
+        ],
+        [
+          621.2,
+          628.8
+        ]
+      ],
+      "reason": "郭艾伦得分后比赛继续，画面出现韩国队进攻、持球对抗，随后比赛时钟停在5.3秒并进行罚球。当前片段没有比赛结束的画面依据。",
+      "correction": "改为中国队得到关键两分，但比赛尚未结束，仍需完成剩余时间。",
+      "corrected_facts": {
+        "game_over": false
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 603.24,
+          "path": "evidence/F21_1_603.24.png"
+        },
+        {
+          "time": 607.24,
+          "path": "evidence/F21_2_607.24.png"
+        },
+        {
+          "time": 624.24,
+          "path": "evidence/F21_3_624.24.png"
+        }
+      ]
+    },
+    {
+      "id": "F22",
+      "category": "fact",
+      "issue_type": "free_throw_order",
+      "quote": "刚才韩国队第一罚命中，追近了一分。",
+      "audio_span": [
+        649.69,
+        653.27
+      ],
+      "video_spans": [
+        [
+          622.4,
+          628.8
+        ],
+        [
+          645.6,
+          649.2
+        ],
+        [
+          668.4,
+          671.2
+        ]
+      ],
+      "reason": "韩国6号此前已经完成一罚；约647秒这一罚是随后第二次出手并命中，同一组罚球在之后仍有第三次出手。",
+      "correction": "改为韩国队第二罚命中。",
+      "corrected_facts": {
+        "team": "KOR",
+        "free_throw_index": 2
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 624.24,
+          "path": "evidence/F22_1_624.24.png"
+        },
+        {
+          "time": 646.24,
+          "path": "evidence/F22_2_646.24.png"
+        },
+        {
+          "time": 647.28,
+          "path": "evidence/F22_3_647.28.png"
+        },
+        {
+          "time": 668.96,
+          "path": "evidence/F22_4_668.96.png"
+        }
+      ]
+    },
+    {
+      "id": "F23",
+      "category": "fact",
+      "issue_type": "score",
+      "quote": "在刚才第一罚之后，中国队仍领先三分。",
+      "audio_span": [
+        659.94,
+        663.56
+      ],
+      "video_spans": [
+        [
+          582,
+          585.6
+        ],
+        [
+          622.4,
+          628.8
+        ],
+        [
+          645.6,
+          649.2
+        ],
+        [
+          659.2,
+          663.6
+        ]
+      ],
+      "reason": "郭艾伦上篮后中国74、韩国71。韩国前两罚各进一球，约647秒第二罚后为中国74、韩国73，中国只领先一分；“刚才”也已是第二罚。",
+      "correction": "改为韩国队第二罚后，中国队74比73领先一分。",
+      "corrected_facts": {
+        "subject": "CHN",
+        "relation": "leading",
+        "margin": 1,
+        "chn_score": 74,
+        "kor_score": 73
+      },
+      "timing": null,
+      "evidence": [
+        {
+          "time": 583.6,
+          "path": "evidence/F23_1_583.60.png"
+        },
+        {
+          "time": 624.24,
+          "path": "evidence/F23_2_624.24.png"
+        },
+        {
+          "time": 647.28,
+          "path": "evidence/F23_3_647.28.png"
+        },
+        {
+          "time": 660.24,
+          "path": "evidence/F23_4_660.24.png"
+        }
+      ]
+    }
+  ]
+}
