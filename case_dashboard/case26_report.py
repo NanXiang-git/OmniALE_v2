@@ -57,10 +57,13 @@ def build():
         readable_failures='；'.join(failure_labels.get(f,f) for f in fails) or '无'
         score_html=f'<div class="score-summary"><strong>总分：{total if total is not None else "待评"} / 100</strong><span>已核实：{score["verified_subtotal"]} · 待评权重：{score["pending_points"]}</span><span>硬门槛：{"未通过" if fails else "已通过" if total is not None else "待确认"} · 实际用时：{(seconds or 0)/60:.2f} 分钟</span></div><table class="grade-table"><thead><tr><th>评分项</th><th>得分</th><th>满分</th></tr></thead><tbody>{table}</tbody></table><p>失败项：{html.escape(", ".join(fails) or "无")}</p>'
         score_html=score_html.replace(html.escape(', '.join(fails) or '无'),html.escape(readable_failures))
+        if total is not None:score_html='<p><strong>整体结论：'+('通过' if score['accepted'] else '未通过（总分须≥80，且无硬失败或核心失败）')+'</strong></p>'+score_html
         if score.get('metrics',{}).get('block_psnr_gain_db'):
             improvements=' / '.join(f'{n:.2f}' for n in score['metrics']['block_psnr_gain_db'])
             score_html+=f'<p>四个受损区段的 PSNR 改善：{improvements} dB。保护段最大逐帧平均误差：{score["metrics"]["protected_maximum_frame_mae"]:.6f}。</p>'
         judgment=RUN/'evaluation/resolved_judge.json'
+        if not judgment.exists():judgment=RUN/'evaluation/visual_final/judge.json'
+        if not judgment.exists():judgment=RUN/'evaluation/complete_context/judge.json'
         if not judgment.exists():judgment=RUN/'evaluation/primary/judge.json'
         if judgment.exists():
             decisions=read(judgment).get('items',{})
@@ -82,10 +85,12 @@ def build():
         (OUT/'run_protocol.json').write_text(js(protocol),encoding='utf-8')
         if score:
             (OUT/'judge-evidence').mkdir(exist_ok=True)
-            for source,name in [(RUN/'evaluation/primary/judge.json','primary.json'),(RUN/'evaluation/independent/judge.json','independent.json'),(RUN/'evaluation/resolved_judge.json','resolved.json')]:
+            for source,name in [(RUN/'evaluation/primary/judge.json','primary.json'),(RUN/'evaluation/complete_context/judge.json','complete-context.json'),(RUN/'evaluation/visual_final/judge.json','visual-final.json'),(RUN/'evaluation/independent/judge.json','independent.json'),(RUN/'evaluation/resolved_judge.json','resolved.json')]:
                 if source.exists():
                     evidence=read(source);evidence.pop('base_url',None);evidence.pop('usage',None)
                     (OUT/'judge-evidence'/name).write_text(js(evidence),encoding='utf-8')
+            correction=RUN/'evaluation/evidence_protocol_correction.json'
+            if correction.exists():shutil.copy2(correction,OUT/'judge-evidence/protocol-correction.json')
     output_html=''
     if (OUT/'submission/preview.mp4').exists():
         output_html='<section class="note-card" style="margin-bottom:24px"><h2>Sol / high · 实际修复成片</h2><video controls playsinline preload="metadata" src="submission/preview.mp4" style="width:100%;max-width:960px"></video><p>该视频来自冻结答卷，未代改。<a href="submission/preview.mp4" download>下载成片 ↗</a> · <a href="freeze.public.json">冻结文件清单 ↗</a></p></section>'

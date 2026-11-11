@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T19:10:22.831688+08:00",
+  "updated_at": "2026-11-11T20:02:45.057940+08:00",
   "task": 5,
   "case": 26,
   "version": "3.0",
@@ -127,18 +127,50 @@
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/index.html",
-      "bytes": 11264,
-      "sha256": "6f3bbff53199333667202c575e0af63407503cfe78db6a7c37bd120287ac7452",
+      "bytes": 13598,
+      "sha256": "501beb8530e0330bb99971b2419514d21aba14f886407804a2a21d8fe9badd67",
       "storage": "repository",
       "url": "case26-v3-report/index.html",
       "availability": "uploaded"
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/integration.js",
-      "bytes": 30151,
-      "sha256": "a022ed4b5f6924dabd115346d16fb71e63da5d579c3b2d08563850aedc058e94",
+      "bytes": 30132,
+      "sha256": "9260558c82704e2bc02bda8c5ab459142bc517fce0840f3ab24583ca5fc8a7f1",
       "storage": "repository",
       "url": "case26-v3-report/integration.js",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/judge-evidence/complete-context.json",
+      "bytes": 3950,
+      "sha256": "dca920a5e261e58295508aab33d390d2aa00d83bee40dca9df0feb01667a1efc",
+      "storage": "repository",
+      "url": "case26-v3-report/judge-evidence/complete-context.json",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/judge-evidence/primary.json",
+      "bytes": 644,
+      "sha256": "f426ac3efc7f61ffc73dd3f938c1e26b26bd40360b185df2f3513124f55f59ed",
+      "storage": "repository",
+      "url": "case26-v3-report/judge-evidence/primary.json",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/judge-evidence/protocol-correction.json",
+      "bytes": 1174,
+      "sha256": "427967830a956944b2464bbb2ca9276e8df8c272184a43d9ab5946dc909ace35",
+      "storage": "repository",
+      "url": "case26-v3-report/judge-evidence/protocol-correction.json",
+      "availability": "uploaded"
+    },
+    {
+      "path": "case_dashboard/dist/case26-v3-report/judge-evidence/visual-final.json",
+      "bytes": 10141,
+      "sha256": "083d92bd91e7e45ba030ede578bbfb5b50c99eecac9a84f79fd6b8a09eb60110",
+      "storage": "repository",
+      "url": "case26-v3-report/judge-evidence/visual-final.json",
       "availability": "uploaded"
     },
     {
@@ -376,15 +408,15 @@
     {
       "path": "case_dashboard/dist/case26-v3-report/run_protocol.json",
       "bytes": 953,
-      "sha256": "2fa3aca61b99692b3eb7ea11732a087581b738d8a2f19c6cbdc47bbffa13e750",
+      "sha256": "78ce4a27173c91d679a829b9847e16d959c4d4b23f0d1adf81757944af8f4836",
       "storage": "repository",
       "url": "case26-v3-report/run_protocol.json",
       "availability": "uploaded"
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/score.json",
-      "bytes": 1816,
-      "sha256": "c86f99375d2410533e8a6f09c92226d393fb3377b6e1e2c36110009d4344b3af",
+      "bytes": 1834,
+      "sha256": "da97d363122d393db39a97d164593cfa10dd299544bbc5d174772fc861238074",
       "storage": "repository",
       "url": "case26-v3-report/score.json",
       "availability": "uploaded"
@@ -447,8 +479,8 @@
     },
     {
       "path": "case_dashboard/dist/case26-v3-report/summary.json",
-      "bytes": 28542,
-      "sha256": "d734aa4a0ae74358b1057b5f631ce8a0c5b319c1e5dd4957e41462f94240f407",
+      "bytes": 28523,
+      "sha256": "48937d4b270642d23a18f78071011ac740b069085966943600a07c7e96f71290",
       "storage": "repository",
       "url": "case26-v3-report/summary.json",
       "availability": "uploaded"
@@ -456,6 +488,7 @@
   ],
   "files": [
     "case_dashboard/case26_report.py",
+    "case_dashboard/case26_result_media.py",
     "case_dashboard/dist/case26-v3-report/app.js",
     "case_dashboard/dist/case26-v3-report/candidate/TASK.md",
     "case_dashboard/dist/case26-v3-report/candidate/input/SOURCES.md",
@@ -472,6 +505,10 @@
     "case_dashboard/dist/case26-v3-report/generation_report.json",
     "case_dashboard/dist/case26-v3-report/index.html",
     "case_dashboard/dist/case26-v3-report/integration.js",
+    "case_dashboard/dist/case26-v3-report/judge-evidence/complete-context.json",
+    "case_dashboard/dist/case26-v3-report/judge-evidence/primary.json",
+    "case_dashboard/dist/case26-v3-report/judge-evidence/protocol-correction.json",
+    "case_dashboard/dist/case26-v3-report/judge-evidence/visual-final.json",
     "case_dashboard/dist/case26-v3-report/media/comparison_v2.mp4",
     "case_dashboard/dist/case26-v3-report/media/comparison_v3.mp4",
     "case_dashboard/dist/case26-v3-report/media/damaged_v3.mp4",
@@ -510,5 +547,5 @@
     "case_dashboard/dist/index.html"
   ],
   "no_other_case_data_replaced": true,
-  "solver_status": "已有部分评分 · 待评项保留"
+  "solver_status": "评分完成"
 }
