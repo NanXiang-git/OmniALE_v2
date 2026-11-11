@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Case 26 · 损伤对比实验室</title>
+  <link rel="stylesheet" href="style.css"><style>.score-summary{display:flex;gap:20px;flex-wrap:wrap;margin:16px 0}.grade-table{width:100%;border-collapse:collapse}.grade-table td,.grade-table th{padding:9px;border-bottom:1px solid #34434e;text-align:left}</style>
+</head>
+<body>
+<main>
+  <header><a class="brand" href="index.html"><span class="mark">O<span>／</span>A</span> OmniALE <span class="divider">/</span> 视觉实验室</a><span class="pill">CASE 26 · V3 正式题包</span></header>
+  <section class="intro"><div><p class="eyebrow">LOW-LIGHT RESTORATION / DAMAGE STUDY</p><h1>这次，损伤看得清吗？</h1><p class="subtitle">同一段真实动作，对比无损参考与加重损伤。观察颗粒、闪动和残影，也留意必须保住的光线与手部细节。</p></div><div class="spec"><strong>26<span>秒</span></strong><p>640 × 338 · 24 fps<br>624 帧 · 无音频</p></div></section>
+
+  <section class="note-card" style="margin-bottom:24px"><span class="card-kicker mint">GPT-6.1 SOL / HIGH + CODEX · 60 MIN</span><h2>Sol/high 正式答题进行中</h2><p>独立环境限时60分钟，过程中不提供评分或参考答案。结束后封存并评分。</p></section>
+<section class="lab" aria-label="视频对比看板">
+    <div class="toolbar"><div class="tabs" role="group" aria-label="损伤版本"><button class="active" data-version="v3" aria-pressed="true">V3 加重损伤</button><button data-version="v2" aria-pressed="false">V2 原有损伤</button></div><div class="viewtools"><label>查看范围 <select id="crop"><option value="full">完整画面</option><option value="hand">手部与控制台 · 2×</option><option value="cloth">深色衣袖 · 2×</option></select></label><button id="fullscreen" class="small">放大看板 ↗</button></div></div>
+    <div class="panels"><article><div class="panel-label"><span><i class="dot clean"></i>无损参考</span><small>保留设计光变</small></div><canvas id="left" width="640" height="338" aria-label="无损参考画面"></canvas></article><article><div class="panel-label"><span><i class="dot damage"></i><b id="versionLabel">V3 加重损伤</b></span><small id="defectTag">噪声 · 闪动 · 拖影</small></div><canvas id="right" width="640" height="338" aria-label="受损视频画面"></canvas></article></div>
+    <video id="source" src="media/comparison_v3.mp4" preload="auto" muted playsinline aria-label="同步对比视频"></video>
+    <div class="playback"><button id="play" class="primary" disabled>▶ 同步播放</button><button id="prev" title="上一帧" aria-label="上一帧">−1 帧</button><button id="next" title="下一帧" aria-label="下一帧">+1 帧</button><div class="clock"><strong id="time">08.00</strong><span> / 26.00 秒</span><small id="frame">第 192 帧 / 623</small></div><label class="rate-label">速度 <select id="rate"><option value="1">1× 正常</option><option value="0.5">0.5× 慢放</option><option value="0.25">0.25× 慢放</option></select></label><label class="loop-label"><input id="loop" type="checkbox" checked>循环当前片段</label></div>
+    <div class="scrub"><input type="range" id="seek" min="0" max="623" step="1" value="192" aria-label="逐帧定位"><div class="ticks"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span><span>00:20</span><span>00:26</span></div></div>
+    <div class="status"><span id="status" role="status">正在载入视频…</span><span>同一视频承载左右画面 · 逐帧同步</span></div>
+  </section>
+
+  <section class="chapters"><div class="section-line"><h2>从这些片段开始看</h2><span>点击定位，播放时循环所选范围</span></div><div class="chapter-grid">
+    <button class="chapter" data-start="0" data-end="26"><span class="chapter-time">00—26 s</span><strong>完整播放</strong><small>看整体损伤与前后衔接</small></button>
+    <button class="chapter" data-start="2" data-end="6"><span class="chapter-time">02—06 s</span><strong>暗部颗粒 / 横纹</strong><small>看衣袖、阴影和台面</small></button>
+    <button class="chapter active" data-start="6" data-end="10.5"><span class="chapter-time">06—10.5 s</span><strong>手部拖影</strong><small>移动残影与暖色扫光叠加</small></button>
+    <button class="chapter" data-start="12" data-end="17"><span class="chapter-time">12—17 s</span><strong>彩色斑噪 / 闪动</strong><small>先正常播放，再暂停看杂色</small></button>
+    <button class="chapter" data-start="18" data-end="23"><span class="chapter-time">18—23 s</span><strong>冷暗环境 / 残影</strong><small>灯光变暗属于应保留的效果</small></button>
+    <button class="chapter" data-start="25" data-end="26"><span class="chapter-time">25—26 s</span><strong>正常保护段</strong><small>无损母版像素保持不变</small></button>
+  </div></section>
+
+  <section class="lower-grid"><article class="note-card"><span class="card-kicker amber">需要修复</span><h2>更脏、更闪，运动边缘有残影。</h2><p>新版加重暗部颗粒，局部加入成团色噪和横向纹理；闪动更明显，运动区域混入前两帧。动作、画幅和帧序保持原样。</p><div class="tags"><span>暗部噪声</span><span>局部色斑</span><span>快速闪动</span><span>运动拖尾</span></div></article><article class="note-card"><span class="card-kicker mint">必须保护</span><h2>有意的光变，不是故障。</h2><p><b>4—10 秒</b>移动暖光，<b>17—21 秒</b>缓慢偏冷变暗。<b>0—2、11—12、25—26 秒</b>为正常保护段。左侧参考已包含这些设计效果。</p><p class="muted">参考来自当前题包的干净目标，并非未调色 EXR。本轮使用冻结的 v3 题包与评分规则。对照工具已通过正反例检查；常规修复基线未通过门槛，任务可修复性仍需结合实际答题结果判断。</p></article></section>
+
+  <section class="stills"><div class="section-line"><h2>无损静帧对照</h2><span>PNG 直接取自母版，排除网页视频压缩影响</span></div><div id="stillButtons" class="still-buttons"><button data-still="96">04.00 s</button><button class="active" data-still="192">08.00 s</button><button data-still="336">14.00 s</button><button data-still="456">19.00 s</button><button data-still="552">23.00 s</button><button data-still="612">25.50 s</button></div><a id="stillLink" href="media/frame_192.png" target="_blank"><img id="still" src="media/frame_192.png" width="1280" height="338" alt="左侧无损参考，右侧受损画面，8秒PNG对照"></a><p>左：无损参考　/　右：<span id="stillVersion">V3 加重损伤</span>。点击图片查看原始尺寸。</p></section>
+
+  <footer><div><strong>下载与复核</strong><p>网页使用高码率 H.264 浏览副本；精确像素以 FFV1 无损文件为准。</p></div><nav><a href="media/damaged_v3.mp4" download>新版受损 MP4 ↗</a><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/case26-v3-20261111/8602b0e4eed47b98-1794392637-damaged.mkv" download>受损无损编码母版 ↗</a><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/case26-v3-20261111/f821e5d2bc437ddd-clean_reference.mkv" download>无损参考母版 ↗</a><a href="media/comparison_v3.mp4" download>并排对比视频 ↗</a><a href="generation_report.json" target="_blank">生成与核验记录 ↗</a></nav></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

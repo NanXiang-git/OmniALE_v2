@@ -1,0 +1,96 @@
+{
+  "version": "3.0",
+  "case_id": "26",
+  "pass_threshold": 80,
+  "automatic_weights": {
+    "delivery": 5,
+    "repair_replay": 5,
+    "restoration": 15,
+    "motion_detail": 15,
+    "temporal": 5,
+    "lighting": 10,
+    "protected": 5
+  },
+  "automatic_rule": "Continuous metrics use linear clipped quality anchors; hard gates apply independently. Master/repair are measured losslessly; preview is only checked for reconstruction and viewing.",
+  "anchors": {
+    "restoration_gain_db": [
+      0,
+      5
+    ],
+    "motion_mae": [
+      0.012,
+      0.06
+    ],
+    "gradient_relative_error": [
+      0.1,
+      0.7
+    ],
+    "temporal_residual": [
+      0.006,
+      0.035
+    ],
+    "light_tile_error": [
+      0.003,
+      0.025
+    ],
+    "protected_mae": [
+      0.001,
+      0.006
+    ]
+  },
+  "hard_constraints": {
+    "format": "master and repair:FFV1 MKV,624frames,24fps,640x338,RGB8(no subsampling),no audio; preview:MP4,H264,624frames,24fps,640x338,no audio",
+    "protected": "[0,48),[264,288),[600,624) are normal reference windows; per-frame mean absolute RGB error to input<=0.006; repair neutral is encouraged, no forced changes",
+    "restoration": "at least1.0dB PSNR improvement over damaged input in EACH degraded assessment block [48,144),[144,264),[288,432),[432,600); no averaging easy windows to hide an unprocessed block",
+    "motion_detail": "on truth-defined moving regions mean RGB error<=0.060; true-edge Sobel magnitude relative absolute error<=0.70 and magnitude ratio between0.55 and1.55; pixel-space frame alignment remains1:1",
+    "temporal": "truth-flow-compensated grayscale residual error<=0.035 on valid correspondences; no>=6 consecutive frames frozen while truth has measurable movement",
+    "lighting": "authored warm moving sweep and slow cool darkening must remain, no new flicker; each intentional event gain0.70–1.30 relative to clean-minus-base light field, tile linear-RGB MAE<=0.025; event timing/appearance additionally judged",
+    "repair_replay": "repair represents signed delta2*(channel-128). Reconstruction=clip(round_even(input+delta*strength),0,255),strength1.0. Max absolute difference from submitted master<=1 integer level per RGB sample, all624frames. Neutral128. Full image correction range covered with1level quantization tolerance.",
+    "preview_replay": "each frame RGB MAE to master<=0.025 and grayscale correlation>=0.97; no overlays or different restored content",
+    "frame_map": "exact0..623; no crop/mirror/reorder/invented actions or missing frames",
+    "editing_intervention": "replay strength0 returns original input; strength0.5 must yield the arithmetic midpoint to within1 integer level; actual changed-pixel count reported. This verifies editable correction delivery, NOT restoration-algorithm reproducibility."
+  },
+  "metric_definitions": {
+    "restoration": "mean per-assessment-block PSNR gain; target includes authored light changes, not rawEXR",
+    "motion_detail": "50% motionRGBquality +50% truth-edge relative-gradient-error quality; moving mask comes from clean base frame changes, not candidate",
+    "gradient": "Sobel magnitude divided by4 on grayscale; truth edges magnitude>0.08; compare candidates on same fixed mask",
+    "temporal": "compare candidate-vs-truth warp residual at320x169 with fixed truth backwardFarneback and trusted validity mask",
+    "lighting": "linearize displayRGB with fixed sRGB transfer for tile metric; intended gain estimated by projection onto target-minus-base field across each event; no posthoc color fitting",
+    "protected": "all normal frames separately, includes middle and end rather than just initial prefix"
+  },
+  "judge_items": [
+    {
+      "id": "motion_evidence",
+      "weight": 15,
+      "critical": true,
+      "criterion": "相对真实目标，手指、握持、松手、器件关系和镜头运动均保留，无新增/丢失动作、冻结或合成假细节；有真实运动模糊时不误判为缺陷。",
+      "rating_anchors": {
+        "0": "动作/物件关系变化或明显冻结、伪造。",
+        "0.5": "主要动作正确，局部手部边缘/纹理有修复瑕疵。",
+        "1": "动作、轮廓、接触/松开与细节均可信且连续。"
+      }
+    },
+    {
+      "id": "restoration_quality",
+      "weight": 15,
+      "critical": true,
+      "criterion": "实际降低暗部/色度噪声与运动后拖影，未用整幅模糊、蜡化、过锐和游动纹理换取数值；看全长与运动/细节窗口。",
+      "rating_anchors": {
+        "0": "未改善或以严重模糊/拖尾/伪纹理替代原损伤。",
+        "0.5": "明显改善但仍有少量残噪、细边软化或短暂残影。",
+        "1": "噪声和拖影受控，纹理自然，未见影响复用的修复伪影。"
+      }
+    },
+    {
+      "id": "lighting_intent",
+      "weight": 10,
+      "critical": true,
+      "criterion": "保留移动暖扫光和缓慢冷暗变化的空间形状、节奏与颜色，去除额外高频闪动；正常保护窗与修复段之间自然衔接。",
+      "rating_anchors": {
+        "0": "光变被抹除/错位、颜色意图反转或新明显闪烁。",
+        "0.5": "两种意图保持，但局部亮度/色彩或接缝尚需修整。",
+        "1": "意图光变完整自然，时点与形态一致，无新增异常闪动。"
+      }
+    }
+  ]
+}
