@@ -21,131 +21,146 @@
   ],
   "case_number": 13,
   "original_case_id": 40,
-  "version": "3.0-checklist-voice-preservation",
+  "version": "final-listening-weighted",
   "task_summary": "将525秒真实连续电影片段制作成普通话译制成片及手机单声道版，解决8组跨场景语义/声源挑战，交付可逐样本审计的角色轨和音乐音效轨。",
   "passing_score": 80,
   "scoring_status": "experimental_source_grounded",
   "rebuild_timeout": 600,
-  "score_formula": "100*(2*E+T+3*A+V)/7",
+  "score_formula": "(E20 + T10 + A70) * (0.6*V_frames_rate + 0.2*V_timeline_rate + 0.2*V_display_rate)",
   "source_transcript_provided": false,
   "groups": {
-    "E": 0.2857142857142857,
-    "T": 0.14285714285714285,
-    "A": 0.42857142857142855,
-    "V": 0.14285714285714285
+    "E": 20,
+    "T": 10,
+    "A": 70
   },
   "subcriteria": {
     "E_words": {
       "group": "E",
       "within_group_weight": 0.4,
-      "maximum": 11.428571428571429,
+      "maximum": 8.0,
       "label": "英文词序列准确性",
-      "method": "automatic"
+      "method": "automatic",
+      "unit": "points"
     },
     "E_events": {
       "group": "E",
       "within_group_weight": 0.2,
-      "maximum": 5.714285714285714,
+      "maximum": 4.0,
       "label": "源事件覆盖与粗定位",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "E_roles": {
       "group": "E",
       "within_group_weight": 0.15,
-      "maximum": 4.285714285714286,
+      "maximum": 3.0,
       "label": "源说话人/声音实例归属",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "E_meaning": {
       "group": "E",
       "within_group_weight": 0.25,
-      "maximum": 7.142857142857143,
+      "maximum": 5.0,
       "label": "源语义与关键语气识别",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "T_meaning": {
       "group": "T",
       "within_group_weight": 0.45,
-      "maximum": 6.428571428571429,
+      "maximum": 4.5,
       "label": "中文意义准确完整",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "T_natural": {
       "group": "T",
       "within_group_weight": 0.3,
-      "maximum": 4.285714285714286,
+      "maximum": 3.0,
       "label": "中文自然度",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "T_terms": {
       "group": "T",
       "within_group_weight": 0.15,
-      "maximum": 2.142857142857143,
+      "maximum": 1.5,
       "label": "术语和称呼一致",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "T_style": {
       "group": "T",
       "within_group_weight": 0.1,
-      "maximum": 1.4285714285714286,
+      "maximum": 1.0,
       "label": "语体与语用功能",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "A_identity": {
       "group": "A",
-      "within_group_weight": 0.3,
-      "maximum": 12.857142857142858,
+      "within_group_weight": 0.35714285714285715,
+      "maximum": 25,
       "label": "原人物音色与身份保持",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "A_stable": {
       "group": "A",
-      "within_group_weight": 0.15,
-      "maximum": 6.428571428571429,
+      "within_group_weight": 0.21428571428571427,
+      "maximum": 15,
       "label": "同人物跨段声音一致性",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "A_prosody": {
       "group": "A",
-      "within_group_weight": 0.2,
-      "maximum": 8.571428571428571,
+      "within_group_weight": 0.21428571428571427,
+      "maximum": 15,
       "label": "情绪语气与表演保持",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "A_content": {
       "group": "A",
-      "within_group_weight": 0.2,
-      "maximum": 8.571428571428571,
+      "within_group_weight": 0.14285714285714285,
+      "maximum": 10,
       "label": "实际中文内容忠实度",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "A_quality": {
       "group": "A",
-      "within_group_weight": 0.15,
-      "maximum": 6.428571428571429,
+      "within_group_weight": 0.07142857142857142,
+      "maximum": 5,
       "label": "自然度清晰度与双版本混音",
-      "method": "judge"
+      "method": "judge",
+      "unit": "points"
     },
     "V_frames": {
       "group": "V",
       "within_group_weight": 0.6,
-      "maximum": 8.571428571428571,
+      "maximum": 0.6,
       "label": "原画面内容与顺序",
-      "method": "automatic"
+      "method": "automatic",
+      "unit": "coefficient"
     },
     "V_timeline": {
       "group": "V",
       "within_group_weight": 0.2,
-      "maximum": 2.857142857142857,
+      "maximum": 0.2,
       "label": "时间线完整性",
-      "method": "automatic"
+      "method": "automatic",
+      "unit": "coefficient"
     },
     "V_display": {
       "group": "V",
       "within_group_weight": 0.2,
-      "maximum": 2.857142857142857,
+      "maximum": 0.2,
       "label": "声画时机与字幕呈现",
-      "method": "judge"
+      "method": "judge",
+      "unit": "coefficient"
     }
   },
   "checklist": {
@@ -326,5 +341,29 @@
     "maximum_api_requests": 2,
     "local_voice_tool": "F5-TTS v1 Base/Vocos CPU, optional; common System.Speech and offline ASR also available",
     "resources": "Two solvers share host CPU/disk; GPU not exposed; actual disk space visible; batch inference recommended"
+  },
+  "visual_coefficient": {
+    "V_frames": 0.6,
+    "V_timeline": 0.2,
+    "V_display": 0.2
+  },
+  "reweighting_policy": {
+    "E": 20,
+    "T": 10,
+    "A": {
+      "A_identity": 25,
+      "A_stable": 15,
+      "A_prosody": 15,
+      "A_content": 10,
+      "A_quality": 5
+    },
+    "V": {
+      "V_frames": 0.6,
+      "V_timeline": 0.2,
+      "V_display": 0.2
+    },
+    "pass_score": 80,
+    "gate_policy": "All existing gates retained. Failed or pending gates do not pass.",
+    "scope": "Frozen submissions, QA answers, reasons and votes unchanged. Only aggregation weights change."
   }
 }

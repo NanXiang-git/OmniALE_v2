@@ -1,0 +1,13 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),{JSDOM,VirtualConsole}=require('jsdom');
+(async()=>{
+const base=process.argv[2]||path.resolve(__dirname,'../dist'),folder=path.join(base,'case13-v31-report');
+const expected={'gpt-6.1-sol':76.7241,'gpt-6-astra':62.3967,'gpt-6-luna':26.9728};
+for(const [m,score] of Object.entries(expected)){const d=JSON.parse(fs.readFileSync(path.join(folder,m,'result.json')));assert.equal(d.total_score,score);assert(Math.abs(d.core_score*d.visual_coefficient-score)<.00005);assert.equal(d.checklist.length,2059);for(const [k,s] of Object.entries(d.subcriteria)){const rows=d.checklist.filter(x=>x.subcriterion===k);if(rows.length){assert(Math.abs(rows.reduce((a,x)=>a+x.earned,0)-s.score)<1e-8);assert(Math.abs(rows.reduce((a,x)=>a+x.maximum,0)-s.maximum)<1e-8);}}}
+const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(!/HTMLMediaElement|HTMLCanvasElement|case46-report/.test(e.message))errors.push(e.message)});
+const opts={runScripts:'dangerously',resources:'usable',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.scrollTo=()=>{};w.HTMLMediaElement.prototype.pause=()=>{};w.HTMLMediaElement.prototype.load=()=>{};}};
+const report=await JSDOM.fromFile(path.join(folder,'index.html'),opts);await new Promise(r=>report.window.addEventListener('load',r,{once:true}));
+const doc=report.window.document;assert.equal(doc.querySelectorAll('#cards .card').length,3);for(const [i,m] of ['gpt-6.1-sol','gpt-6-luna','gpt-6-astra'].entries()){doc.querySelector('#model').value=String(i);doc.querySelector('#model').dispatchEvent(new report.window.Event('change'));assert(doc.querySelector('#calculation').textContent.includes(expected[m].toFixed(4)));assert.equal(doc.querySelectorAll('#subject tbody tr').length,13);assert.equal(doc.querySelectorAll('#visual tbody tr').length,3);}
+assert(!/2E|查看原v3|85\.441|77\.490|46\.859/.test(doc.body.textContent));report.window.close();
+const main=await JSDOM.fromFile(path.join(base,'index.html'),opts);await new Promise(r=>main.window.addEventListener('load',r,{once:true}));main.window.location.hash='task-13/results';await new Promise(r=>setTimeout(r,250));assert(main.window.document.querySelector('#case13-current-report'));assert(!main.window.document.querySelector('#case13-history'));assert.equal(main.window.OMNIALE_RESULTS['task-13'].total,76.7241);assert.equal(errors.length,0,errors.join('\n'));main.window.close();
+console.log(JSON.stringify({passed:true,totals:expected,qa_verdicts:2059,old_scheme_hidden:true,method:'Data reconciliation and JSDOM rendering; no media regrading'}));
+})().catch(e=>{console.error(e);process.exit(1)});
