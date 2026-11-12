@@ -2,7 +2,7 @@
   "version": "3.1-user-authorized-qwen-adjudication",
   "date": "2026-11-09",
   "judge_model": "qwen3.8-omni-flash",
-  "scope": "QA verdicts and solver submissions retained. Scoring uses final listening-weighted rules.json.",
+  "scope": "QA verdicts and solver submissions retained. Scoring uses final multiplicative rules.json.",
   "qa_votes": "Three new separate-context yes/no assessments using expanded audiovisual evidence. Majority of these three; historical votes retained, excluded from the new vote because source evidence and abstention policy changed.",
   "invalid": "Previously pending QA involving exhausted format/evidence failures receive zero. Any malformed/missing/nonbinary/out-of-window row in the three new assessments makes that QA zero. No format-repair resampling. Service/network failures stop work and are not treated as candidate faults.",
   "reference": "Source-only Qwen corrected English transcript, shared across all models. Three independent transcriptions per core window; if different, three evidence-grounded selection votes, fourth tie-break if necessary. No solver text is supplied. Deterministic WER formula retained.",

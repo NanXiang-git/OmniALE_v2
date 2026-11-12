@@ -44,14 +44,7 @@
     if(Number.isFinite(height)&&height>=500&&height<=50000)frame.style.height=Math.ceil(height)+'px';
   });
   function renderCase13Current(c,r,target) {
-    target.innerHTML=`<section class="case13-current-results" aria-label="Case13 最新裁决结果"><div class="result-heading"><div><span class="eyebrow">CASE13 / CHECKLIST V3.1</span><h2>三模型译制结果与评分</h2></div><span class="grade-pill">Qwen 裁决版</span></div><p class="result-note">三组总分已确定，待核验 QA 均为 0。可直接播放视频、切换模型，查看逐项扣分与投票记录；总分与硬门槛分别展示。</p><p><a class="button" href="case13-v31-report/index.html" target="_blank" rel="noopener">单独打开完整看板 ↗</a> · <a href="case13-v3-report/index.html" target="_blank" rel="noopener">查看原 v3 区间评分</a></p><iframe id="case13-current-report" title="Case13 Checklist v3.1：三模型视频、评分明细与投票记录" src="case13-v31-report/index.html?embedded=1" style="display:block;width:100%;height:2200px;border:0;background:#f4f6f5;border-radius:12px" allow="fullscreen"></iframe></section><details class="result-details" id="case13-history"><summary>查看历史 v2 答卷与旧评分</summary><p class="result-note">以下是历史v2答卷及旧评分；未换算为新版成绩。</p><div id="case13-history-content"></div></details>`;
-    const history=target.querySelector('#case13-history');
-    history.addEventListener('toggle',()=>{
-      if(history.open&&!history.dataset.loaded){
-        history.dataset.loaded='true';
-        render({...c,showHistoricalResults:true},r,target.querySelector('#case13-history-content'));
-      }
-    });
+    target.innerHTML=`<section class="case13-current-results"><h2>CASE 40 · 最终评分与模型答卷</h2><p>最终分 = (E + T) × (A ÷ 70) × C × (100 ÷ 30)。</p><a href="case13-v31-report/index.html?v=content-audio-20261112" target="_blank">打开完整评分</a><iframe id="case13-current-report" title="CASE 40 最终评分算法与三模型答卷" src="case13-v31-report/index.html?embedded=1&v=content-audio-20261112" style="width:100%;height:2400px;border:0" allow="fullscreen"></iframe></section>`;
   }
 
   function render(c,r,target) {

@@ -21,12 +21,12 @@
   ],
   "case_number": 13,
   "original_case_id": 40,
-  "version": "final-listening-weighted",
+  "version": "final-content-times-audio",
   "task_summary": "将525秒真实连续电影片段制作成普通话译制成片及手机单声道版，解决8组跨场景语义/声源挑战，交付可逐样本审计的角色轨和音乐音效轨。",
   "passing_score": 80,
   "scoring_status": "experimental_source_grounded",
   "rebuild_timeout": 600,
-  "score_formula": "(E20 + T10 + A70) * (0.6*V_frames_rate + 0.2*V_timeline_rate + 0.2*V_display_rate)",
+  "score_formula": "(E20 + T10) * (A70 / 70) * (0.6*V_frames_rate + 0.2*V_timeline_rate + 0.2*V_display_rate) * (100 / 30)",
   "source_transcript_provided": false,
   "groups": {
     "E": 20,
@@ -364,6 +364,7 @@
     },
     "pass_score": 80,
     "gate_policy": "All existing gates retained. Failed or pending gates do not pass.",
-    "scope": "Frozen submissions, QA answers, reasons and votes unchanged. Only aggregation weights change."
+    "formula": "(E20 + T10) * (A70 / 70) * V_coefficient * (100 / 30)",
+    "scope": "Frozen submissions, subcriterion scores, QA answers, reasons and votes unchanged. Content is multiplied by audio and visual coefficients, normalized to 100."
   }
 }
