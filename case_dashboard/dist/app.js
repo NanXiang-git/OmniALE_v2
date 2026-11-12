@@ -106,7 +106,6 @@
     updateCards();
   }
   function videoHtml(f) {
-    if(f.originalUnavailable && !f.url && !f.preview) return `<div class="proxy-note">媒体大文件暂未上传。题面、评分和文字报告可正常查看。</div>`;
     return `<video controls playsinline preload="metadata" ${f.poster ? `poster="${url(f.poster)}"` : ''} src="${previewUrl(f)}" data-media-error="${esc(fileUrl(f))}">浏览器不支持视频播放，请打开原文件。</video>`;
   }
   function renderDetail(c) {
