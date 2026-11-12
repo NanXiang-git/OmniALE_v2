@@ -1,0 +1,265 @@
+{
+  "case": 11,
+  "attempt": "case11",
+  "automatic_score": 40.0,
+  "automatic_maximum": 40,
+  "auto_scores": {
+    "schedule": 10,
+    "navigation": 15.0,
+    "revision_audit": 5,
+    "consistency": 5,
+    "rebuild": 5
+  },
+  "audio_judge_skipped_points": 60,
+  "total_score": null,
+  "possible_total_interval": [
+    40.0,
+    100.0
+  ],
+  "status": "pending_audio_judge",
+  "passed": null,
+  "failed_gates": [],
+  "auto_gates": {
+    "required_files": {
+      "pass": true,
+      "evidence": {
+        "missing": []
+      }
+    },
+    "decodable_files": {
+      "pass": true,
+      "evidence": []
+    },
+    "real_av_output": {
+      "pass": true,
+      "evidence": {
+        "duration": 198.0,
+        "streams": [
+          "video",
+          "audio"
+        ]
+      }
+    },
+    "video_format": {
+      "pass": true,
+      "evidence": {
+        "source": [
+          1280,
+          720,
+          25.0
+        ],
+        "output": [
+          1280,
+          720,
+          25.0
+        ]
+      }
+    },
+    "legal_timeline": {
+      "pass": true,
+      "evidence": {
+        "hold_total": 18,
+        "source_end": 180.0,
+        "output_end": 198.0
+      }
+    },
+    "cue_bounds_description.vtt": {
+      "pass": true,
+      "evidence": {
+        "cues": 14
+      }
+    },
+    "source_frame_sequence": {
+      "pass": true,
+      "evidence": {
+        "frame_count_source": 4500,
+        "frame_count_output": 4950,
+        "mapped_count": 4950,
+        "fraction_mae_below_12": 1.0,
+        "mean_mae": 0.015644728535353536,
+        "note": "all frames, full image 32x24 grayscale; not a full perceptual equivalence proof"
+      }
+    },
+    "nonempty_description_audio": {
+      "pass": true,
+      "evidence": {
+        "effective_speech_seconds": 61.10999999999928
+      }
+    },
+    "description_track_length": {
+      "pass": true,
+      "evidence": {
+        "audio": 198.0,
+        "video": 198.0
+      }
+    },
+    "description_matches_vtt_windows": {
+      "pass": true,
+      "evidence": {
+        "voice_inside_vtt_ratio": 1.0
+      }
+    },
+    "teacher_protection": {
+      "pass": true,
+      "evidence": {
+        "overlap_seconds": 0.0,
+        "threshold": 0.2,
+        "activity_detector": "10ms RMS > -42dBFS, >=30ms run; acoustic edge disputes go to judge"
+      }
+    },
+    "navigation": {
+      "pass": true,
+      "evidence": {
+        "chapter_ratio": 0.9999999999999999,
+        "fixed_timeline_player_config": true
+      }
+    },
+    "revision_audit_contract": {
+      "pass": true,
+      "evidence": {
+        "passed": true,
+        "valid_records": 8,
+        "expected_records": 8,
+        "unique_description_ids": true
+      }
+    },
+    "description_plan_vtt_coverage": {
+      "pass": true,
+      "evidence": {
+        "plan_cues": 14,
+        "vtt_cues": 14,
+        "boundary_tolerance_seconds": 0.08
+      }
+    },
+    "real_segment_audio": {
+      "pass": true,
+      "evidence": {
+        "checked": 14,
+        "matched": 14
+      }
+    },
+    "mix_matches_video": {
+      "pass": true,
+      "evidence": {
+        "correlation": 0.9999839889200094
+      }
+    },
+    "switchable_player_config": {
+      "pass": true,
+      "evidence": {
+        "pause_policy": "fixed_timeline",
+        "tracks": {
+          "video": "accessible_course.mp4",
+          "base": "base_track.wav",
+          "description": "ad_track.wav"
+        },
+        "chapters": "chapters.json",
+        "description_subtitles": "description.vtt",
+        "video_audio_muted": true,
+        "default_description_enabled": true
+      }
+    },
+    "base_audio_for_switch": {
+      "pass": true,
+      "evidence": {
+        "correlation": 0.9999999963824455,
+        "description_must_not_be_baked_into_base": true
+      }
+    },
+    "mix_equals_base_plus_description": {
+      "pass": true,
+      "evidence": {
+        "relative_waveform_error": 0.0,
+        "maximum": 0.02
+      }
+    },
+    "rebuild": {
+      "pass": true,
+      "evidence": {
+        "execution": {
+          "case": 11,
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 17.934833526611328,
+          "argv": [
+            "/usr/bin/python3",
+            "/workspace/submission/rebuild.py",
+            "--input",
+            "/candidate/input",
+            "--assets",
+            "/workspace/submission",
+            "--output",
+            "/workspace/result"
+          ],
+          "input_layout": "{input} points to candidate/input (media directory); original packaged evaluator points to candidate root. Explicit harness correction, no submission changes.",
+          "target_exists": true,
+          "isolation": "bwrap mount/pid/user/network namespaces, no secrets, current public input and copied submission only"
+        },
+        "pass": true,
+        "score": 5,
+        "max_score": 5,
+        "comparison": "original evaluator thresholds: frame count equal, grayscale MAE<3, decoded audio correlation>.98",
+        "original_frames": 4950,
+        "rebuilt_frames": 4950,
+        "frame_mae": 0.0,
+        "audio_correlation": 1.0
+      }
+    }
+  },
+  "visual_judge": null,
+  "audio_judge": {
+    "case": 11,
+    "automatic_maximum": 40,
+    "skipped_audio_judge_points": 60,
+    "weighted_criteria_skipped": [
+      {
+        "id": "dynamic_reference",
+        "weight": 20,
+        "definition": "Precisely distinguish duplicate 她/T1 and 她/T3, token movement vs head-panel movement, H1 vs H2 changes, query identity vs source identity, local masking and weighted global output. Verify revision audit against actual spoken AD, not merely its claims.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "audibility",
+        "weight": 10,
+        "definition": "Actually understandable spoken Chinese, teacher clarity, economical wording, no extreme speed.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "facts",
+        "weight": 30,
+        "status": "skipped_requires_actual_audio",
+        "reason": "Verify facts in actual performed audio, not submitted plan text."
+      }
+    ],
+    "audio_gates_skipped": [
+      {
+        "id": "critical_semantics",
+        "definition": "No critical omission or reversal of repeated-token ID, head identity, query, ranking, local mask, or unequal fusion. Judge source-grounded facts using real AD audio. Do not demand exact script or all decimals.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "audio_protection",
+        "definition": "Teacher words remain audible; no deletion/ducking to hide overlaps.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "actual_delivery",
+        "definition": "Actual AD is audible, corresponds to text and final mix; no fake silent tracks.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "revision_fidelity",
+        "definition": "Legacy erroneous statements have actually been removed or corrected in audible AD; revision audit reasons and cited new cues agree with source and delivered speech. Do not grade audit rationale alone.",
+        "status": "skipped_requires_actual_audio"
+      }
+    ],
+    "visual_only_gate_review": [],
+    "visual_review_scope": "2 fps plus cue midpoints; actual images; two independent gpt-6.1-sol high reviews, third for conflicts; audio/semantic portions remain pending",
+    "total_score": null,
+    "rules_sha256": "f5e8440b8431c59397ad924fba2ceae08312992aa519dd6ae27909d7de5dd3fb"
+  },
+  "original_automatic_score_without_rebuild": 35.0,
+  "scorer_corrected": false,
+  "rebuild_path_normalization": "{input} points to candidate/input (media directory); original packaged evaluator points to candidate root. Explicit harness correction, no submission changes.",
+  "output_file_placeholder_used": false
+}

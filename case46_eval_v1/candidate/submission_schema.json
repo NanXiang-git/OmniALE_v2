@@ -1,0 +1,70 @@
+{
+  "version": "case46-trial-v1-unscored",
+  "required_files": [
+    "accessible.mp4",
+    "ad.vtt",
+    "base_track.wav",
+    "ducked_base_track.wav",
+    "ad_track.wav",
+    "mix.wav",
+    "ad_plan.json",
+    "self_check.json",
+    "player_config.json",
+    "player.html",
+    "rebuild.json",
+    "README.md"
+  ],
+  "ad_plan.json": {
+    "cues": [
+      {
+        "id": "AD01",
+        "start": "number seconds",
+        "end": "number seconds",
+        "text": "actual Chinese narration",
+        "wav": "cues/AD01.wav",
+        "visual_source_interval": [
+          "start",
+          "end"
+        ],
+        "knowledge_time": "earliest evidence time"
+      }
+    ]
+  },
+  "player_config.json": {
+    "tracks": {
+      "video": "accessible.mp4",
+      "base": "base_track.wav",
+      "ducked_base": "ducked_base_track.wav",
+      "description": "ad_track.wav"
+    },
+    "subtitles": "ad.vtt",
+    "pause_policy": "fixed_timeline",
+    "duration": 148.064583333,
+    "sample_rate": 48000,
+    "duck_db": -6,
+    "global_gain_db": 0
+  },
+  "rebuild.json": {
+    "argv": [
+      "{python}",
+      "{submission}/rebuild.py",
+      "--input",
+      "{input}",
+      "--submission",
+      "{submission}",
+      "--output",
+      "{output}"
+    ]
+  },
+  "placeholders": {
+    "{input}": "directory containing source.mp4 and original.wav",
+    "{submission}": "submission directory",
+    "{output}": "output directory; put rebuilt accessible.mp4 inside",
+    "{python}": "python3 interpreter"
+  },
+  "self_check.json": {
+    "cues": "array of cue id, actual_audio_duration, dialogue_overlap_risk, redundant_audio_risk, notes",
+    "unfinished": "array of limitations"
+  },
+  "scoring": "SCORING.md"
+}

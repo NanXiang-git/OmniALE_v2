@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>消失的纸牌 · 中文口述影像</title>
+<style>
+:root{color-scheme:dark;font:17px/1.6 system-ui,"Microsoft YaHei",sans-serif;background:#10151c;color:#f1f3f5}*{box-sizing:border-box}body{max-width:1120px;margin:28px auto;padding:0 22px}h1{font-size:1.7rem;letter-spacing:.03em;margin:0}p{color:#bcc7d3;margin:8px 0 18px}.panel{background:#19232e;border:1px solid #344354;border-radius:10px;padding:16px;margin:16px 0}video{display:block;width:100%;background:#000;border:1px solid #344354;border-radius:5px}button,.choose{background:#b6e2ed;color:#10242b;border:0;border-radius:6px;padding:11px 18px;font:inherit;font-weight:600;cursor:pointer}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #ffd36c;outline-offset:4px}input[type=file]{display:block;margin-top:10px;width:100%;font:inherit}input[type=range]{vertical-align:middle;max-width:160px}input[type=checkbox]{width:18px;height:18px;vertical-align:middle}.controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:18px 0}.muted{font-size:.88rem;color:#aab8c7}#status{margin:10px 0;color:#b6e2ed;min-height:1.6em}#caption{min-height:2.5em;padding:12px 16px;color:#f7edcc;border-left:3px solid #b6e2ed;font-size:1.15rem}#caption[hidden]{display:none}details{margin:20px 0}summary{cursor:pointer}.cue{display:block;width:100%;text-align:left;color:#d9e5ef;background:transparent;font-weight:400;padding:10px;border-bottom:1px solid #344354;border-radius:0}.cue:hover{background:#243443}.cue time{color:#a3dce9;font-size:.9rem;margin-right:18px}footer{font-size:.85rem;color:#899aaa;margin:22px 0}@media(max-width:600px){body{padding:0 12px;margin:18px auto}h1{font-size:1.35rem}.controls{gap:10px}}
+</style>
+</head>
+<body>
+<h1>消失的纸牌</h1>
+<p>中文口述影像 · 2分28秒</p>
+<section class="panel" aria-label="打开影片">
+<label for="folder">选择完整的 <strong>submission</strong> 交付文件夹，即可离线播放。</label>
+<input id="folder" type="file" webkitdirectory multiple accept=".json,.mp4,.wav,.vtt,.html,.md,.py">
+<div id="status" role="status">等待选择文件夹。</div>
+</section>
+<video id="video" controls muted playsinline preload="metadata" aria-label="消失的纸牌，原画面完整保留"></video>
+<div class="controls" aria-label="播放设置">
+<button id="play" disabled>播放</button>
+<button id="toggle" aria-pressed="true" disabled>旁白：开启</button>
+<label>音量 <input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="音量"></label>
+<label><input id="showText" type="checkbox"> 显示旁白文字</label>
+</div>
+<p class="muted">关闭旁白会恢复完整原声音量，画面与进度保持不变。旁白文字显示在画面下方。</p>
+<div id="caption" hidden aria-live="off"></div>
+<details><summary>旁白稿与时间导航</summary><div id="transcript"></div></details>
+<footer>也可直接打开 accessible.mp4，播放内置旁白的成片。</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),v=$('video');
+let ctx,master,gains,buffers,nodes=[],urls=[],cues=[],enabled=true,loaded=false,anchor=null,epoch=0,loadEpoch=0;
+const status=s=>$('status').textContent=s;
+function stopAudio(){epoch++;for(const n of nodes){try{n.stop()}catch(e){}n.disconnect()}nodes=[];anchor=null}
+function setMode(){if(!gains)return;const t=ctx.currentTime;for(const [key,value] of Object.entries({base:enabled?0:1,duck:enabled?1:0,ad:enabled?1:0})){const g=gains[key].gain;g.cancelScheduledValues(t);g.setValueAtTime(g.value,t);g.linearRampToValueAtTime(value,t+.015)}$('toggle').textContent='旁白：'+(enabled?'开启':'关闭');$('toggle').setAttribute('aria-pressed',String(enabled))}
+async function startAudio(){if(!loaded||v.paused||v.seeking||v.ended)return;const token=++epoch;await ctx.resume();if(token!==epoch||v.paused||v.seeking)return;for(const n of nodes){try{n.stop()}catch(e){}n.disconnect()}nodes=[];const rate=v.playbackRate;const when=ctx.currentTime+.015,offset=v.currentTime+.015*rate;anchor={when,offset,rate};for(const key of ['base','duck','ad']){if(offset>=buffers[key].duration)continue;const n=ctx.createBufferSource();n.buffer=buffers[key];n.playbackRate.value=rate;n.connect(gains[key]);n.start(when,offset);nodes.push(n)}}
+function textUpdate(){const c=cues.find(c=>v.currentTime>=c.start&&v.currentTime<c.end);$('caption').textContent=c?c.text:' ';}
+function stamp(t){return String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0')}
+v.addEventListener('play',()=>{if(ctx)ctx.resume();$('play').textContent='暂停'});
+v.addEventListener('playing',()=>startAudio().catch(e=>status(e.message)));
+v.addEventListener('pause',()=>{stopAudio();$('play').textContent='播放'});
+v.addEventListener('waiting',stopAudio);
+v.addEventListener('seeking',stopAudio);
+v.addEventListener('seeked',()=>{textUpdate();if(!v.paused)startAudio().catch(e=>status(e.message))});
+v.addEventListener('ratechange',()=>{if(!v.paused)startAudio().catch(e=>status(e.message))});
+v.addEventListener('ended',()=>{stopAudio();$('play').textContent='重新播放'});
+v.addEventListener('volumechange',()=>{if(!v.muted)v.muted=true});
+v.addEventListener('timeupdate',textUpdate);
+setInterval(()=>{if(!loaded||v.paused||v.seeking||v.readyState<3||ctx.state!=='running')return;if(!anchor){startAudio().catch(e=>status(e.message));return}const at=anchor.offset+(ctx.currentTime-anchor.when)*anchor.rate;if(Math.abs(at-v.currentTime)>.09)startAudio().catch(e=>status(e.message))},250);
+$('play').onclick=async()=>{if(v.paused){await ctx.resume();if(v.ended)v.currentTime=0;await v.play()}else v.pause()};
+$('toggle').onclick=()=>{enabled=!enabled;setMode();status(enabled?'旁白已开启。':'旁白已关闭，正在播放完整原声。')};
+$('volume').oninput=()=>{if(master)master.gain.setTargetAtTime(Number($('volume').value),ctx.currentTime,.015)};
+$('showText').onchange=()=>{$('caption').hidden=!$('showText').checked;textUpdate()};
+$('folder').onchange=async event=>{const thisLoad=++loadEpoch;try{v.pause();stopAudio();loaded=false;$('play').disabled=true;$('toggle').disabled=true;status('正在载入影片与声音，请稍候…');for(const u of urls)URL.revokeObjectURL(u);urls=[];if(ctx)await ctx.close();const files=[...event.target.files];const find=name=>files.find(f=>f.webkitRelativePath.split('/').slice(1).join('/')===name);const read=async name=>{const f=find(name);if(!f)throw Error('交付文件夹缺少 '+name);return f};const cfg=JSON.parse(await(await read('player_config.json')).text());const AudioContext=window.AudioContext||window.webkitAudioContext;if(!AudioContext)throw Error('此浏览器不支持本地多轨播放，请直接打开 accessible.mp4。');ctx=new AudioContext({sampleRate:48000});master=ctx.createGain();master.gain.value=Number($('volume').value);master.connect(ctx.destination);gains={};buffers={};for(const [key,name] of [['base',cfg.tracks.base],['duck',cfg.tracks.ducked_base],['ad',cfg.tracks.description]]){const f=await read(name);buffers[key]=await ctx.decodeAudioData(await f.arrayBuffer());gains[key]=ctx.createGain();gains[key].connect(master)}if(thisLoad!==loadEpoch)return;const plan=JSON.parse(await(await read('ad_plan.json')).text());cues=plan.cues;const f=await read(cfg.tracks.video);const u=URL.createObjectURL(f);urls.push(u);v.src=u;v.muted=true;v.load();$('transcript').replaceChildren();for(const c of cues){const b=document.createElement('button');b.className='cue';const t=document.createElement('time');t.textContent=stamp(c.start);b.append(t,document.createTextNode(c.text));b.onclick=()=>{v.currentTime=c.start};$('transcript').append(b)}loaded=true;setMode();$('play').disabled=false;$('toggle').disabled=false;status('已载入。点击“播放”开始。')}catch(e){loaded=false;status('载入失败：'+e.message)}};
+window.addEventListener('pagehide',()=>{stopAudio();if(ctx)ctx.close();for(const u of urls)URL.revokeObjectURL(u)});
+</script>
+</body>
+</html>

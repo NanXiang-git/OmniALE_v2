@@ -1,0 +1,37 @@
+{
+  "cues": [
+    {
+      "id": "AD01",
+      "actual_audio_duration": 4.806208333,
+      "dialogue_overlap_risk": "低；按ASR及字幕，最近对白约39.46秒，配音于39.206秒结束。",
+      "redundant_audio_risk": "保安搜身动作是视觉信息；未重复‘伸手’等对白命令。",
+      "notes": "画面约34秒开始出现眼镜男子举手，随后保安靠近。"
+    },
+    {
+      "id": "AD02",
+      "actual_audio_duration": 2.557354167,
+      "dialogue_overlap_risk": "低；该段早于约53.8秒的下一组对白。",
+      "redundant_audio_risk": "低；说明倒地动作，未复述对白。",
+      "notes": "画面先显示男子倒地，旁白稍后说明。"
+    },
+    {
+      "id": "AD03",
+      "actual_audio_duration": 3.337041667,
+      "dialogue_overlap_risk": "低；前一组识别对白约93.86秒结束，旁白从94.7秒开始；下一句约99.42秒开始。",
+      "redundant_audio_risk": "低；以视觉说明新人物入场。",
+      "notes": "仅称戴帽男子，不猜身份。"
+    },
+    {
+      "id": "AD04",
+      "actual_audio_duration": 3.4018125,
+      "dialogue_overlap_risk": "低；前一组对白约111秒结束，下一组约124.1秒开始。",
+      "redundant_audio_risk": "低；扑克牌及牌面是画面信息。",
+      "notes": "牌面在约116秒特写中可见；没有描述后续手部交接，避免推断转移关系。"
+    }
+  ],
+  "unfinished": [
+    "无法原生听取音频；对白避让参考了离线ASR、字幕草稿及时间轴，不把ASR或字幕当作精确语音真值。",
+    "未对原声做人工听审，无法确认配音区间内是否有需要保留的细小关键音效。",
+    "AD04牌面依据抽帧辨认作黑桃A；小尺寸帧观察仍有轻微不确定性。"
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "case": 14,
+  "attempt": "case14",
+  "automatic_score": 35,
+  "automatic_maximum": 35,
+  "auto_scores": {
+    "schedule": 15,
+    "selection_audit": 10,
+    "consistency": 5,
+    "rebuild": 5
+  },
+  "audio_judge_skipped_points": 65,
+  "total_score": null,
+  "possible_total_interval": [
+    35,
+    100
+  ],
+  "status": "pending_audio_judge",
+  "passed": null,
+  "failed_gates": [],
+  "auto_gates": {
+    "required_files": {
+      "pass": true,
+      "evidence": {
+        "missing": []
+      }
+    },
+    "decodable_files": {
+      "pass": true,
+      "evidence": []
+    },
+    "real_av_output": {
+      "pass": true,
+      "evidence": {
+        "duration": 264.0,
+        "streams": [
+          "video",
+          "audio"
+        ]
+      }
+    },
+    "video_format": {
+      "pass": true,
+      "evidence": {
+        "source": [
+          1280,
+          546,
+          24.0
+        ],
+        "output": [
+          1280,
+          546,
+          24.0
+        ]
+      }
+    },
+    "duration": {
+      "pass": true,
+      "evidence": {
+        "source": 264.0,
+        "output": 264.0
+      }
+    },
+    "cue_bounds_ad.vtt": {
+      "pass": true,
+      "evidence": {
+        "cues": 28
+      }
+    },
+    "source_frame_sequence": {
+      "pass": true,
+      "evidence": {
+        "frame_count_source": 6336,
+        "frame_count_output": 6336,
+        "mapped_count": 6336,
+        "fraction_mae_below_12": 1.0,
+        "mean_mae": 0.0,
+        "note": "all frames, full image 32x24 grayscale; not a full perceptual equivalence proof"
+      }
+    },
+    "nonempty_description_audio": {
+      "pass": true,
+      "evidence": {
+        "effective_speech_seconds": 51.149999999999515
+      }
+    },
+    "description_track_length": {
+      "pass": true,
+      "evidence": {
+        "audio": 264.0,
+        "video": 264.0
+      }
+    },
+    "description_matches_vtt_windows": {
+      "pass": true,
+      "evidence": {
+        "voice_inside_vtt_ratio": 1.0
+      }
+    },
+    "selection_audit": {
+      "pass": true,
+      "evidence": {
+        "passed": true,
+        "valid_records": 32,
+        "records": 32,
+        "covered_cues": 28,
+        "total_cues": 28,
+        "issues": []
+      }
+    },
+    "description_source_evidence": {
+      "pass": true,
+      "evidence": {
+        "passed": true,
+        "valid": 28,
+        "total": 28
+      }
+    },
+    "base_constant_gain": {
+      "pass": true,
+      "evidence": {
+        "declared_gain_db": -4.0,
+        "relative_waveform_error": 1.3660294371220516e-06,
+        "maximum": 0.02
+      }
+    },
+    "stereo_description_mix": {
+      "pass": true,
+      "evidence": {
+        "relative_waveform_error": 4.241330842091884e-08,
+        "maximum": 0.02
+      }
+    },
+    "description_pcm_format": {
+      "pass": true,
+      "evidence": {
+        "invalid_files": [],
+        "required": "48kHz stereo PCM"
+      }
+    },
+    "description_plan_vtt_coverage": {
+      "pass": true,
+      "evidence": {
+        "plan_cues": 28,
+        "vtt_cues": 28,
+        "boundary_tolerance_seconds": 0.08
+      }
+    },
+    "real_segment_audio": {
+      "pass": true,
+      "evidence": {
+        "checked": 28,
+        "matched": 28
+      }
+    },
+    "mix_matches_video": {
+      "pass": true,
+      "evidence": {
+        "correlation": 0.9997758488111284
+      }
+    },
+    "cinema_stereo_mix_matches_video": {
+      "pass": true,
+      "evidence": {
+        "relative_waveform_error": 0.025680337101221085,
+        "maximum": 0.08,
+        "note": "encoding tolerance; stereo polarity and gain must be preserved"
+      }
+    },
+    "switchable_player_config": {
+      "pass": true,
+      "evidence": {
+        "tracks": {
+          "video": "accessible.mp4",
+          "base": "base_track.wav",
+          "description": "ad_track.wav"
+        },
+        "pause_policy": "fixed_timeline",
+        "base_gain_db": -4.0,
+        "subtitles": "ad.vtt",
+        "duration": 264,
+        "sample_rate": 48000,
+        "description_default_enabled": true
+      }
+    },
+    "base_audio_for_switch": {
+      "pass": true,
+      "evidence": {
+        "correlation": 0.999999999999019,
+        "description_must_not_be_baked_into_base": true
+      }
+    },
+    "mix_equals_base_plus_description": {
+      "pass": true,
+      "evidence": {
+        "relative_waveform_error": 4.4547203259526214e-08,
+        "maximum": 0.02
+      }
+    },
+    "cinema_true_peak": {
+      "pass": true,
+      "evidence": {
+        "input_i": "-21.33",
+        "input_tp": "-2.56",
+        "input_lra": "18.90",
+        "input_thresh": "-33.85",
+        "output_i": "-18.42",
+        "output_tp": "-2.00",
+        "output_lra": "18.00",
+        "output_thresh": "-30.57",
+        "normalization_type": "dynamic",
+        "target_offset": "0.42"
+      }
+    },
+    "mix_true_peak": {
+      "pass": true,
+      "evidence": {
+        "input_i": "-21.28",
+        "input_tp": "-2.55",
+        "input_lra": "18.90",
+        "input_thresh": "-33.82",
+        "output_i": "-18.42",
+        "output_tp": "-2.00",
+        "output_lra": "18.00",
+        "output_thresh": "-30.57",
+        "normalization_type": "dynamic",
+        "target_offset": "0.42"
+      }
+    },
+    "rebuild": {
+      "pass": true,
+      "evidence": {
+        "execution": {
+          "case": 14,
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 32.847151041030884,
+          "argv": [
+            "/usr/bin/python3",
+            "/workspace/submission/rebuild.py",
+            "--input",
+            "/candidate/input",
+            "--submission",
+            "/workspace/submission",
+            "--output",
+            "/workspace/result"
+          ],
+          "input_layout": "{input} points to candidate/input (media directory); original packaged evaluator points to candidate root. Explicit harness correction, no submission changes.",
+          "target_exists": true,
+          "isolation": "bwrap mount/pid/user/network namespaces, no secrets, current public input and copied submission only"
+        },
+        "pass": true,
+        "score": 5,
+        "max_score": 5,
+        "comparison": "original evaluator thresholds: frame count equal, grayscale MAE<3, decoded audio correlation>.98",
+        "original_frames": 6336,
+        "rebuilt_frames": 6336,
+        "frame_mae": 0.0,
+        "audio_correlation": 1.0000000000000002
+      }
+    }
+  },
+  "visual_judge": null,
+  "audio_judge": {
+    "case": 14,
+    "automatic_maximum": 35,
+    "skipped_audio_judge_points": 65,
+    "weighted_criteria_skipped": [
+      {
+        "id": "selection",
+        "weight": 10,
+        "definition": "Use source and context: distinguish similar subjects, preserve action cause and the temporal order of new visual evidence; assess selection_audit actual evidence and omissions, not writing quality alone.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "sound_protection",
+        "weight": 20,
+        "definition": "Listen to source and output; preserve dialogue, animal/action/transition sounds. Only single global base gain [-6,0] dB allowed; no local ducking. Risk regions are leads, not exact forbidden intervals.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "language",
+        "weight": 10,
+        "definition": "Actually listen: clear Mandarin, consistent referents, understandable pacing and no repetitive/unsupported statements.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "facts",
+        "weight": 25,
+        "status": "skipped_requires_actual_audio",
+        "reason": "Verify facts in actual performed audio, not submitted plan text."
+      }
+    ],
+    "audio_gates_skipped": [
+      {
+        "id": "critical_visual_facts",
+        "definition": "No critical visual relationship/action wrong or omitted; no invented psychology/identity/future outcome.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "source_sound",
+        "definition": "No substantial masking or deletion of dialogue/important sound, no artificially created silence.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "chronology",
+        "definition": "No spoiler from whole-film knowledge. Respect the main scene evidence order, including identity and appearance revelations. Uncertain onset boundaries require actual-video arbitration. No time changes; never defer all key information to end.",
+        "status": "skipped_requires_actual_audio"
+      },
+      {
+        "id": "actual_description",
+        "definition": "Actual audio exists and corresponds to displayed VTT and mix, intelligible speed.",
+        "status": "skipped_requires_actual_audio"
+      }
+    ],
+    "visual_only_gate_review": [],
+    "visual_review_scope": "2 fps plus cue midpoints; actual images; two independent gpt-6.1-sol high reviews, third for conflicts; audio/semantic portions remain pending",
+    "total_score": null,
+    "rules_sha256": "8f7d0f8f1a706eb1f5a84148ad54759b16ce33f874df43a6a35ef82195d1c413"
+  },
+  "original_automatic_score_without_rebuild": 30,
+  "scorer_corrected": false,
+  "rebuild_path_normalization": "{input} points to candidate/input (media directory); original packaged evaluator points to candidate root. Explicit harness correction, no submission changes.",
+  "output_file_placeholder_used": false
+}

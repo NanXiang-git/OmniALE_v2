@@ -1,0 +1,126 @@
+{
+  "version": "case46-final-20261112",
+  "status": "final_user_approved_weights",
+  "pass_threshold": 85,
+  "formula": "V = sum(core_weight * earned_ratio); Q = sum(delivery_weight * earned_ratio); C = Q / 65; S = min(V * C, confirmed_gate_cap)",
+  "core_max": 100,
+  "delivery_max": 65,
+  "dimensions": [
+    {
+      "id": "facts",
+      "label": "关键视觉事实",
+      "max": 45,
+      "method": "judge",
+      "group": "core"
+    },
+    {
+      "id": "tracking",
+      "label": "纸牌状态与转移关系",
+      "max": 35,
+      "method": "judge",
+      "group": "core"
+    },
+    {
+      "id": "reveal",
+      "label": "信息揭示时机",
+      "max": 5,
+      "method": "judge",
+      "group": "core"
+    },
+    {
+      "id": "useful",
+      "label": "描述及时性",
+      "max": 15,
+      "method": "judge",
+      "group": "core"
+    },
+    {
+      "id": "dialogue",
+      "label": "对白避让",
+      "max": 5,
+      "method": "judge_audio",
+      "group": "delivery"
+    },
+    {
+      "id": "intelligibility",
+      "label": "对白可懂度",
+      "max": 10,
+      "method": "judge_audio",
+      "group": "delivery"
+    },
+    {
+      "id": "effects",
+      "label": "关键音效保护",
+      "max": 10,
+      "method": "judge_audio",
+      "group": "delivery"
+    },
+    {
+      "id": "mix",
+      "label": "混音数值规格",
+      "max": 5,
+      "method": "automatic",
+      "group": "delivery"
+    },
+    {
+      "id": "wording",
+      "label": "指代与信息效率",
+      "max": 5,
+      "method": "judge",
+      "group": "delivery"
+    },
+    {
+      "id": "speech",
+      "label": "实际语音自然度与可懂度",
+      "max": 5,
+      "method": "judge_audio",
+      "group": "delivery"
+    },
+    {
+      "id": "delivery",
+      "label": "交付一致性与可重建性",
+      "max": 15,
+      "method": "automatic",
+      "group": "delivery"
+    },
+    {
+      "id": "switch",
+      "label": "原声保留与旁白开关",
+      "max": 10,
+      "method": "automatic_browser",
+      "group": "delivery"
+    }
+  ],
+  "gates": [
+    {
+      "id": "invalid_media",
+      "cap": 20,
+      "rule": "无有效成片或无真实旁白；实际可听语音证据不足时不得仅据波形判定已有真实语音"
+    },
+    {
+      "id": "timeline_bypass",
+      "cap": 20,
+      "rule": "确认暂停、变速、删镜头或补黑场绕过固定时间轴"
+    },
+    {
+      "id": "critical_fact",
+      "cap": 59,
+      "rule": "确认关键持有人/转移关系说反并导致错误理解，或提前泄露关键视觉揭示；必须附具体时间和证据"
+    },
+    {
+      "id": "critical_masking",
+      "cap": 59,
+      "rule": "实际声音证明关键对白/音效被严重掩蔽并影响理解；没有听觉证据时不得判fail"
+    }
+  ],
+  "rules": [
+    "逐项判定与实际答卷不变；每项得分率乘本版权重。",
+    "视觉理解四项共100分；有效交付八项共65分，只形成一个0至1系数，不直接加分。",
+    "先乘系数，再执行已确认失败门槛的最低封顶值；没有失败门槛时上限100。",
+    "达到85分、所有项目已评且所有门槛pass才通过；unknown不等于pass或fail。",
+    "中间计算不舍入，报告保留四位小数，页面显示两位；通过判定使用未舍入结果。",
+    "待评项目使用固定分母计算上下界，不记零分，不按已评权重重新归一化。",
+    "同一事实错误不得重复施加无依据陈述扣分；状态关系的独立影响须有单独证据。",
+    "判定参考仍是模型辅助参考，非人工金标准；两次答题预算和披露条件不同。"
+  ]
+}

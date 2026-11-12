@@ -1,0 +1,22 @@
+{
+  "version": "case46-trial-v1-unscored",
+  "argv": ["{python}", "{submission}/rebuild.py", "--input", "{input}", "--submission", "{submission}", "--output", "{output}"],
+  "render": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "pcm_format": "PCM_24",
+    "samples": 7107100,
+    "video_duration": 148.06458333333333,
+    "video_frames": 3550,
+    "video_mode": "H.264 stream copy; no picture filters or retiming",
+    "duck_db": -6,
+    "ramp_seconds": 0.08,
+    "global_gain_db": 0,
+    "cue_gain_db": 0,
+    "mix_method": "sample-aligned stereo PCM24 integer sum",
+    "audio_alignment": "Keep exactly the video timeline. original.wav has 484 extra decoded samples (10.083 ms) beyond its end; omit only those samples. No audible content inside the video is removed."
+  },
+  "dependencies": ["Python 3", "numpy", "soundfile/libsndfile", "FFmpeg with AAC encoder"],
+  "offline": true,
+  "requires_tts": false
+}

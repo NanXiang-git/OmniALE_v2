@@ -1,0 +1,38 @@
+{
+  "javascript_syntax": "pass",
+  "test_environment": "V8 with mocked DOM and Web Audio API, not a browser audio audition",
+  "loaded": true,
+  "simultaneous_start": true,
+  "toggle_off_correct_gains": true,
+  "toggle_on_correct_gains": true,
+  "toggle_does_not_seek": true,
+  "toggle_does_not_restart_sources": true,
+  "seek_starts_three_tracks": true,
+  "pause_stops_all_sources": true,
+  "details": {
+    "firstStarts": [
+      [
+        2.015,
+        12.415000000000001
+      ],
+      [
+        2.015,
+        12.415000000000001
+      ],
+      [
+        2.015,
+        12.415000000000001
+      ]
+    ],
+    "off": {
+      "base": 1,
+      "duck": 0,
+      "ad": 0
+    },
+    "on": {
+      "base": 0,
+      "duck": 1,
+      "ad": 1
+    }
+  }
+}

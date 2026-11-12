@@ -1,0 +1,17 @@
+{
+  "tracks": {
+    "video": "accessible.mp4",
+    "base": "base_track.wav",
+    "ducked_base": "ducked_base_track.wav",
+    "description": "ad_track.wav"
+  },
+  "subtitles": "ad.vtt",
+  "pause_policy": "fixed_timeline",
+  "duration": 148.06458333333333,
+  "sample_rate": 48000,
+  "duck_db": -6,
+  "global_gain_db": 0,
+  "audio_engine": "Web Audio API; three buffers start on one clock; toggle by gains without seeking",
+  "embedded_video_audio": "muted; prevents double playback",
+  "caption_display": "optional outside picture, using ad_plan.json with the same timings as ad.vtt"
+}

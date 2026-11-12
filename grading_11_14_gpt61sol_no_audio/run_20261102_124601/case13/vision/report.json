@@ -1,0 +1,1957 @@
+{
+  "case": 13,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "gate": "burned_bilingual_subtitles",
+  "scope": "visual_rendering_only_sampled; audio/source-dialogue-semantic portions pending",
+  "gate_pass": null,
+  "official_weighted_score": null,
+  "audio_sent": false,
+  "windows": [
+    {
+      "window": 0,
+      "interval": [
+        0,
+        30
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 3.75,
+              "observation": "Chinese “汤姆，你真混蛋。” and English “You're a jerk, Thom.” are visibly rendered in the output, matching the expected text. Both are inside the bottom 32% and fully visible."
+            },
+            {
+              "time": 5.708333,
+              "observation": "“西莉亚，我们得追随热爱。” appears above the two-line English “Look Celia, we have to follow our / passions;”. The expected wrapping is visible, with no clipping or subtitle collision."
+            },
+            {
+              "time": 8.625,
+              "observation": "The expected Chinese robotics/space cue and English “…you have your robotics, and I just want / to be awesome in space.” are visible in the lower subtitle region and remain readable over the scene."
+            },
+            {
+              "time": 12.375,
+              "observation": "“你就承认吧，你怕我的机械手。” and “Why don't you just admit that you're / freaked out by my robot hand?” match the expected content. Neither language is obscured or clipped."
+            },
+            {
+              "time": 15.458333,
+              "observation": "The expected “我才没怕，我是……” and “I'm not freaked out by- it's...” are visibly present, separated vertically and contained within the bottom 32%."
+            },
+            {
+              "time": 19.708333,
+              "observation": "The Chinese nightmare cue and the two-line English “I'm freaked out! I have nightmares that / I'm being chased...” are visible and match the expected content without clipping."
+            },
+            {
+              "time": 22.958333,
+              "observation": "All four expected lines are visible: “四十年后”, “Forty years later”, “随你吧，汤姆。” and “Whatever, Thom.” The title pair sits above the dialogue pair, within the bottom 32%, without overlap."
+            },
+            {
+              "time": 24.541667,
+              "observation": "“四十年后” / “Forty years later” and “我们完了。” / “We're done.” are simultaneously visible as expected, with adequate separation and no clipping."
+            },
+            {
+              "time": 26.0,
+              "observation": "The submitted subtitle cues are absent as expected after their end times."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 0–30 seconds, not unseen frames or exact cue transitions.",
+            "The supplied output images visibly contain both subtitle languages; still images do not independently establish the file's subtitle-stream configuration.",
+            "Limited full-frame context cannot prove that all action remains unobscured throughout the interval.",
+            "No audio was assessed. Source-dialogue semantics, performed translation, and audio/text consistency remain pending."
+          ],
+          "elapsed_seconds": 31.34325861930847
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 3.75,
+              "observation": "Chinese “汤姆，你真混蛋。” and English “You're a jerk, Thom.” are visibly rendered over the movie, matching the submitted text. Both are within the bottom 32%, with no visible clipping."
+            },
+            {
+              "time": 5.708333,
+              "observation": "“西莉亚，我们得追随热爱。” appears above the two-line English “Look Celia, we have to follow our / passions;”. Both languages are readable and fully inside the subtitle region."
+            },
+            {
+              "time": 8.625,
+              "observation": "“你爱机器人，我想在太空大展身手。” and the expected two-line English robotics/space cue are visible, matching the submitted text without visible obstruction or clipping."
+            },
+            {
+              "time": 12.375,
+              "observation": "“你就承认吧，你怕我的机械手。” and “Why don't you just admit that you're / freaked out by my robot hand?” are readable within the bottom 32%. The background railing does not obscure the outlined text."
+            },
+            {
+              "time": 15.458333,
+              "observation": "“我才没怕，我是……” and “I'm not freaked out by- it's...” are visibly present and match the submitted cue."
+            },
+            {
+              "time": 17.75,
+              "observation": "“好吧！行！” and “...alright! Fine!” are fully visible in the lower subtitle region."
+            },
+            {
+              "time": 19.708333,
+              "observation": "The expected Chinese nightmare cue and two-line English “I'm freaked out! I have nightmares that / I'm being chased...” are visible and unclipped."
+            },
+            {
+              "time": 21.625,
+              "observation": "“追我的是巨大的夺命机械爪！” and “by these giant robotic claws of death…” are visible over the movie, matching the submitted text."
+            },
+            {
+              "time": 22.958333,
+              "observation": "Both bilingual pairs—“四十年后” / “Forty years later” and “随你吧，汤姆。” / “Whatever, Thom.”—are visible simultaneously, separated without overlap and contained within the bottom 32%."
+            },
+            {
+              "time": 24.541667,
+              "observation": "“四十年后” / “Forty years later” remains visible above “我们完了。” / “We're done.” All four lines are readable, separated, and unclipped."
+            },
+            {
+              "time": 26.0,
+              "observation": "The submitted subtitles are absent, consistent with the expected empty cue list."
+            }
+          ],
+          "visible_readability": 3,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples, not unseen frames or exact cue transitions between samples.",
+            "Contact-sheet resolution limits fine punctuation and rasterization inspection; no concrete text mismatch is visible.",
+            "No subtitle clipping or obscuration is visible in the samples, but limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, voices, intelligibility, and audio/text agreement remain pending and outside this visual verdict."
+          ],
+          "elapsed_seconds": 26.44602680206299
+        }
+      ]
+    },
+    {
+      "window": 1,
+      "interval": [
+        30,
+        60
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 30.5,
+              "observation": "Both Chinese “机器人记忆已同步，已锁定！” and English “Robot's memory synced and locked!” are visibly rendered over the movie, matching the supplied ASS text. Both lines are within the bottom 32%, readable, and not visibly clipped or obscured."
+            },
+            {
+              "time": 33.5,
+              "observation": "The same bilingual cue remains visible and complete, matching the expected active cue. The full-frame context shows bottom placement without covering faces."
+            },
+            {
+              "time": 41.541667,
+              "observation": "Chinese “这可真够吓人的。” and English “This is pretty freaky.” are visibly rendered and match the supplied text. Both lines remain within the bottom 32%, with legible outlines and no visible clipping."
+            },
+            {
+              "time": 42.5,
+              "observation": "The preceding bilingual cue is absent, matching the supplied ASS expectation at this sample."
+            },
+            {
+              "time": 46.916667,
+              "observation": "Chinese “钢铁之泪” and English “Tears of Steel” are visibly rendered on the title shot, matching the supplied text. Both lines lie within the bottom 32% and are unobscured."
+            },
+            {
+              "time": 48.5,
+              "observation": "Full-frame context shows the bilingual subtitle below the separate central movie title. Both subtitle lines are complete, inside the bottom 32%, and do not overlap the central title."
+            },
+            {
+              "time": 49.0,
+              "observation": "The bilingual title subtitle is absent, matching the supplied ASS expectation."
+            }
+          ],
+          "visible_readability": 3,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within full-file times 30–60 seconds, not unseen frames or exact cue transitions.",
+            "Contact-sheet scaling limits fine typography and punctuation inspection; no concrete text mismatch is visible.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "Audio was not supplied or assessed. Source-dialogue semantics, translation accuracy, voices, audio intelligibility, and audio/text agreement remain pending."
+          ],
+          "elapsed_seconds": 20.872405767440796
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 30.0,
+              "observation": "No bilingual subtitle is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 30.5,
+              "observation": "The rendered image contains Chinese “机器人记忆已同步，已锁定！” above English “Robot's memory synced and locked!”, visually matching the submitted ASS text. Both lines are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 31.833333,
+              "observation": "Both expected lines remain visible over the colorful console imagery. Outlined lettering remains distinguishable; neither line is visibly obscured or clipped."
+            },
+            {
+              "time": 33.5,
+              "observation": "Both expected lines are still present. The full-frame context confirms bottom placement, with no overlap over the central character's face."
+            },
+            {
+              "time": 34.0,
+              "observation": "The previous bilingual cue is absent, matching the empty expected cue list."
+            },
+            {
+              "time": 41.541667,
+              "observation": "Chinese “这可真够吓人的。” and English “This is pretty freaky.” are visibly rendered and match the submitted text. Both lines are inside the bottom 32%, with intact characters and no visible clipping."
+            },
+            {
+              "time": 42.5,
+              "observation": "The bilingual cue is absent as expected."
+            },
+            {
+              "time": 46.916667,
+              "observation": "Chinese “钢铁之泪” appears above English “Tears of Steel”, matching the submitted ASS. Both lines are readable against the dark background and remain within the bottom 32%."
+            },
+            {
+              "time": 48.5,
+              "observation": "The full-frame image shows the bilingual subtitle below the separate central movie-title graphic. The subtitle remains inside the bottom 32%, unobscured and unclipped."
+            },
+            {
+              "time": 49.0,
+              "observation": "The bilingual title subtitle is absent, matching the empty expected cue list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within full-file times 30–60 seconds, not unseen frames or exact unsampled cue boundaries.",
+            "No visible subtitle obstruction or clipping was found in the supplied samples; limited sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility and audio/text agreement were not assessed and remain pending."
+          ],
+          "elapsed_seconds": 24.77006196975708
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "interval": [
+        60,
+        90
+      ],
+      "gate_pass": null,
+      "votes": [
+        {
+          "case": 13,
+          "gate": "burned_bilingual_subtitles",
+          "scope": "visual_rendering_only_sampled",
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 60.0,
+              "observation": "No Chinese or English subtitle overlay is visible in the output full frame or lower crop. The expected ASS text list is empty. Printed newspaper text is part of the scene, not a bilingual subtitle overlay."
+            },
+            {
+              "time": 64.0,
+              "observation": "No subtitle overlay is visible in the output full frame or lower crop, consistent with the empty expected ASS text list."
+            },
+            {
+              "time": 72.5,
+              "observation": "The lower output crop contains no visible subtitle text; the expected ASS text list is empty."
+            },
+            {
+              "time": 80.0,
+              "observation": "No Chinese or English subtitle overlay is visible in the output full frame or lower crop, consistent with the empty expected ASS text list."
+            },
+            {
+              "time": 89.5,
+              "observation": "No subtitle overlay is visible in the lower output crop; the expected ASS text list is empty."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied expected-text lists are empty, and no bilingual subtitle overlays are visible in the supplied samples from 60.0 through 89.5 seconds. Their absence does not establish a rendering failure when no cue is expected.",
+            "Without a visible active bilingual cue, burn-in presence, text fidelity, bottom-32% placement, readability, and freedom from clipping or obstruction cannot be verified.",
+            "This verdict covers supplied samples only; it does not establish conditions between samples or throughout the full interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics and audio/text consistency remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 15.65529751777649
+        },
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 60.0,
+              "observation": "No Chinese or English subtitle overlay is visible in the output full frame or lower-area crop. The submitted expected-text list is empty."
+            },
+            {
+              "time": 64.0,
+              "observation": "No subtitle overlay is visible over the person holding the rifle. This is consistent with the empty expected-text list."
+            },
+            {
+              "time": 72.0,
+              "observation": "No subtitle overlay is visible in the full frame or lower-area crop of the city view. No subtitle text is expected at this timestamp."
+            },
+            {
+              "time": 80.0,
+              "observation": "No Chinese or English subtitle overlay is visible in the output full frame or lower-area crop. The expected-text list is empty."
+            },
+            {
+              "time": 89.5,
+              "observation": "The lower-area crop shows no subtitle overlay, consistent with the empty expected-text list."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied expected-text lists are empty, and no bilingual subtitle overlays are visible in the supplied samples from 60.0 through 89.5 seconds. Their absence does not establish a rendering failure where no cue is expected.",
+            "Without a visible subtitle cue, bilingual burn-in, text fidelity, bottom-32% placement, readability, and freedom from clipping or obstruction cannot be verified; the visual gate remains pending.",
+            "The verdict covers supplied samples only. Limited full-frame context cannot establish that all action is unobscured throughout the interval.",
+            "Source-dialogue semantics and all audio-related consistency remain pending and were not evaluated."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 15.486474990844727
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "interval": [
+        90,
+        120
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 97.5,
+              "observation": "Chinese “你不该下去吗？” and English “Shouldn't you be down there?” are visibly rendered over the movie and match the submitted ASS text. Both lines are inside the bottom 32%, readable, and unclipped."
+            },
+            {
+              "time": 97.916667,
+              "observation": "The full-frame view and subtitle crop show both expected subtitle lines within the bottom 32%, with clear separation and no visible obstruction of the text."
+            },
+            {
+              "time": 99.0,
+              "observation": "The preceding bilingual cue is absent, matching the empty expected-text list."
+            },
+            {
+              "time": 111.5,
+              "observation": "Visible Chinese “昨晚我听见你们谈话了。” and English “I heard you guys talking last night.” match the submitted ASS. Both lines are within the bottom 32%, with no visible clipping or obscuration."
+            },
+            {
+              "time": 112.5,
+              "observation": "Both expected lines remain visible, legible, and fully contained within the subtitle region."
+            },
+            {
+              "time": 116.0,
+              "observation": "Chinese “这可不是我的错。” and English “It's not my fault, you know.” are already visible at the cue's inclusive start, matching the submitted ASS. Neither line is clipped or obscured."
+            },
+            {
+              "time": 117.0,
+              "observation": "The full-frame view and crop confirm that both expected lines remain within the bottom 32%, clear of the frame edges and without covering visible faces."
+            },
+            {
+              "time": 118.0,
+              "observation": "The bilingual cue is absent after its end, matching the empty expected-text list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied image samples within 90–120 seconds, not unsampled frames or other intervals.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "Still images establish visible subtitle rendering, not the underlying encoding or subtitle-track implementation.",
+            "Source-dialogue semantics, translation accuracy, and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 17.865388870239258
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 97.916667,
+              "observation": "Chinese “你不该下去吗？” and English “Shouldn't you be down there?” are visibly rendered over the movie and match the submitted ASS text. Both lines are within the bottom 32%, readable, and unclipped. The full-frame view shows no face obstruction."
+            },
+            {
+              "time": 99.0,
+              "observation": "Neither subtitle line is visible, matching the absence of an active submitted ASS cue."
+            },
+            {
+              "time": 111.5,
+              "observation": "Chinese “昨晚我听见你们谈话了。” and English “I heard you guys talking last night.” are visibly rendered and match the submitted ASS text. Both lines remain within the bottom 32%, with clear separation and no visible clipping or obscuration."
+            },
+            {
+              "time": 113.0,
+              "observation": "Subtitles are absent, matching the submitted ASS timing."
+            },
+            {
+              "time": 116.875,
+              "observation": "Chinese “这可不是我的错。” and English “It's not my fault, you know.” are visibly rendered and match the submitted ASS text. Both lines are readable within the bottom 32%, with margins below and no visible clipping."
+            },
+            {
+              "time": 117.0,
+              "observation": "The full-frame view confirms both subtitle lines occupy the lower image area without covering faces; neither line is visibly obscured."
+            },
+            {
+              "time": 118.0,
+              "observation": "Subtitles are absent after the final submitted cue, as expected."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied image samples within 90–120 seconds, not unseen frames or exact cue transitions between samples.",
+            "Limited full-frame sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, audio intelligibility, and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 20.135920524597168
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "interval": [
+        120,
+        150
+      ],
+      "gate_pass": null,
+      "votes": [
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 120.0,
+              "observation": "No Chinese or English subtitle text is visible in the output full frame or lower-frame crop. The supplied ASS expectation is empty ([])."
+            },
+            {
+              "time": 128.0,
+              "observation": "No bilingual subtitle overlay is visible; the supplied ASS expectation is empty ([])."
+            },
+            {
+              "time": 135.0,
+              "observation": "The lower-frame crop contains scenery without visible subtitle text, consistent with the empty supplied ASS expectation ([])."
+            },
+            {
+              "time": 144.0,
+              "observation": "No subtitle text is visible in the output full frame or lower-frame crop. The supplied ASS expectation is empty ([])."
+            },
+            {
+              "time": 149.5,
+              "observation": "No Chinese or English subtitle text is visible in the lower-frame crop; the supplied ASS expectation is empty ([])."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied ASS expectations at the 60 sampled timestamps from 120.0 through 149.5 seconds are empty, and no subtitle overlays are visible in those samples. This is not evidence of missing required text.",
+            "Without an active bilingual subtitle sample, burned-in presence, text matching, bottom-32% placement, readability, clipping, and subtitle obstruction cannot be verified.",
+            "The verdict covers supplied samples only; unsampled intervals and continuous action visibility are not established.",
+            "Source-dialogue semantics, translation correctness, and audio/text consistency remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 13.019739866256714
+        },
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 120.0,
+              "observation": "No Chinese or English subtitles are visible in the output full frame or lower-area crop. The submitted ASS expectation is empty at this timestamp."
+            },
+            {
+              "time": 124.0,
+              "observation": "No subtitles are visible; this matches the empty submitted ASS expectation."
+            },
+            {
+              "time": 132.0,
+              "observation": "The output full frame and lower-area crop contain no visible subtitles, matching the empty submitted ASS expectation."
+            },
+            {
+              "time": 140.0,
+              "observation": "No subtitle text is visible in the sampled output, consistent with the empty submitted ASS expectation."
+            },
+            {
+              "time": 149.5,
+              "observation": "No subtitles are visible in the lower-area crop; the submitted ASS expectation is empty."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied ASS expectations from 120.0 through 149.5 seconds are empty, and no bilingual subtitles are visible in the supplied samples. Their absence is not a demonstrated ASS mismatch.",
+            "Without a sample containing active Chinese and English subtitle cues, bilingual burn-in, text fidelity, bottom-32% placement, readability, and freedom from clipping or obstruction cannot be verified.",
+            "This verdict covers supplied samples only; it does not establish subtitle behavior or unobscured action between samples.",
+            "Source-dialogue semantics, performed translation, and audio/text consistency remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 16.127117395401
+        }
+      ]
+    },
+    {
+      "window": 5,
+      "interval": [
+        150,
+        180
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 150.0,
+              "observation": "No subtitles are visible, consistent with the empty expected cue list."
+            },
+            {
+              "time": 171.75,
+              "observation": "Chinese “准备好了吗？” and English “Are you ready?” are visibly rendered over the movie and match the submitted ASS text. Both lines are within the bottom 32%, readable, and neither obscured nor clipped."
+            },
+            {
+              "time": 172.5,
+              "observation": "No subtitles are visible between cues, matching the empty expected cue list."
+            },
+            {
+              "time": 173.5,
+              "observation": "Chinese “当然好了，你可是大明星。” and English “Of course you're ready, you're a rockstar.” match the submitted ASS text. The full-frame view and subtitle crop show both lines confined to the bottom 32%, without clipping or obstruction; faces remain clear."
+            },
+            {
+              "time": 177.458333,
+              "observation": "Chinese “巴利，情况如何？” and English “How's it looking, Barley?” are visibly present and match the submitted ASS text. Both lines remain within the bottom 32% and are readable without clipping or obstruction."
+            },
+            {
+              "time": 179.291667,
+              "observation": "Chinese “大概还有十分钟。” and English “We should have about ten minutes...” match the submitted ASS text. Both lines are rendered within the bottom 32% and remain legible and unclipped against the scene."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples in the 150–180 second window, not unseen frames or exact cue transitions between samples.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 18.56162190437317
+        },
+        {
+          "case": 13,
+          "gate": "burned_bilingual_subtitles",
+          "scope": "visual_rendering_only_sampled",
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 150.0,
+              "observation": "No subtitles are visible, matching the empty expected cue list."
+            },
+            {
+              "time": 171.5,
+              "observation": "Chinese “准备好了吗？” and English “Are you ready?” are visibly rendered over the movie image, matching the submitted text. Both lines are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 172.5,
+              "observation": "No subtitles are visible between cues, matching the empty expected cue list."
+            },
+            {
+              "time": 173.5,
+              "observation": "Chinese “当然好了，你可是大明星。” and English “Of course you're ready, you're a rockstar.” match the expected text. The full-frame view and lower crop show both lines within the bottom 32%, without visible clipping or obscuration."
+            },
+            {
+              "time": 177.458333,
+              "observation": "Chinese “巴利，情况如何？” and English “How's it looking, Barley?” match the expected text. Both lines are clearly separated, contained in the bottom 32% and not visibly obscured."
+            },
+            {
+              "time": 178.5,
+              "observation": "No subtitles are visible, matching the expected gap between cues."
+            },
+            {
+              "time": 179.291667,
+              "observation": "Chinese “大概还有十分钟。” and English “We should have about ten minutes...” match the expected text. Both lines remain readable within the bottom 32%, with visible margins and no clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples in the 150–180 second window, not unseen frames or exact cue transitions.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, translation accuracy, voices and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 19.883809804916382
+        }
+      ]
+    },
+    {
+      "window": 6,
+      "interval": [
+        180,
+        210
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 180.0,
+              "observation": "Chinese “大概还有十分钟。” and English “We should have about ten minutes...” are visibly rendered over the movie, matching the submitted text. Both are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 180.5,
+              "observation": "No subtitles are visible, matching the expected cue gap."
+            },
+            {
+              "time": 181.5,
+              "observation": "“那就太好了。” and “Well that's perfect.” are both visible and match the submitted text, with clear separation and no visible obstruction."
+            },
+            {
+              "time": 183.5,
+              "observation": "The two Chinese lines “一分钟后开场！ / 各系统就位！对，你，快去！” and two English lines “We're on in one! All systems go! Yeah you, / go!” match the submitted text and line breaks. All four lines fit within the bottom 32% without clipping or overlap."
+            },
+            {
+              "time": 187.0,
+              "observation": "The same four-line bilingual cue remains readable over the equipment shot, with no visible clipping or obscured characters."
+            },
+            {
+              "time": 188.0,
+              "observation": "“快！都动起来！快快快！” and “Go! Move your asses! Go go go!” match the submitted text and are fully visible in the lower subtitle area."
+            },
+            {
+              "time": 193.0,
+              "observation": "“太棒了！来，快！” and “I love it! Come on, go!” match the submitted text. Both lines are readable and contained within the bottom 32%."
+            },
+            {
+              "time": 196.0,
+              "observation": "Both lines of “太棒了！来，快！” / “I love it! Come on, go!” remain legible against the bright background because of their dark outlines; neither line is clipped."
+            },
+            {
+              "time": 203.125,
+              "observation": "“真不错。” and “That's nice.” are visibly rendered, matching the submitted text, with intact glyphs and clear margins."
+            },
+            {
+              "time": 204.916667,
+              "observation": "“没什么好担心的。” and “Nothing to worry about.” match the submitted text and remain readable, unobscured and within the bottom 32%."
+            },
+            {
+              "time": 205.5,
+              "observation": "The final bilingual cue is also fully visible over the interior shot, without clipping or text overlap."
+            },
+            {
+              "time": 209.5,
+              "observation": "No subtitles are visible, matching the expected absence of an active cue."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within 180–210 seconds, not unseen frames or exact cue transitions between samples.",
+            "No visible subtitle clipping or obscuration was found in the supplied samples. Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 25.514014959335327
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 180.0,
+              "observation": "Chinese “大概还有十分钟。” and English “We should have about ten minutes...” are visibly rendered over the movie, matching the submitted text. Both are inside the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 180.5,
+              "observation": "No subtitles are visible, matching the expected cue gap."
+            },
+            {
+              "time": 181.5,
+              "observation": "“那就太好了。” and “Well that's perfect.” are both visible, matching the submitted text, with clear separation and no clipping."
+            },
+            {
+              "time": 183.5,
+              "observation": "The two Chinese lines “一分钟后开场！” / “各系统就位！对，你，快去！” and two English lines “We're on in one! All systems go! Yeah you,” / “go!” match the submitted text. All four lines fit within the bottom 32% without overlap or clipping."
+            },
+            {
+              "time": 187.0,
+              "observation": "The same four-line bilingual cue remains readable over the changed movie background; no subtitle characters are visibly obscured."
+            },
+            {
+              "time": 187.5,
+              "observation": "The previous bilingual cue is absent, matching the expected gap."
+            },
+            {
+              "time": 188.0,
+              "observation": "“快！都动起来！快快快！” and “Go! Move your asses! Go go go!” visibly match the submitted text and remain within the bottom subtitle region."
+            },
+            {
+              "time": 191.0,
+              "observation": "Both lines of the active bilingual cue remain readable against the busy orange-lined background, without visible clipping or occlusion."
+            },
+            {
+              "time": 194.708333,
+              "observation": "“太棒了！来，快！” and “I love it! Come on, go!” match the submitted text. The full-frame sample shows the subtitles below the faces, within the bottom 32%."
+            },
+            {
+              "time": 196.0,
+              "observation": "The same bilingual cue remains legible against the bright background, with visible outlines and no clipped characters."
+            },
+            {
+              "time": 203.125,
+              "observation": "“真不错。” and “That's nice.” are visibly rendered, matching the submitted text, with adequate margins from the frame edges."
+            },
+            {
+              "time": 204.916667,
+              "observation": "“没什么好担心的。” and “Nothing to worry about.” match the submitted text; both lines are readable, unobscured and inside the bottom 32%."
+            },
+            {
+              "time": 205.5,
+              "observation": "Both expected subtitle lines remain visible after the scene change, without overlap or clipping."
+            },
+            {
+              "time": 209.5,
+              "observation": "No subtitles are visible, matching the expected absence."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 180–210 seconds, not unseen frames or exact cue transitions between samples.",
+            "Contact-sheet resolution limits fine punctuation and rasterization inspection; no concrete content mismatch is visible.",
+            "The supplied full frames show no clear obstruction of faces by subtitles, but limited sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, translation accuracy, voices, audio intelligibility and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 25.77906560897827
+        }
+      ]
+    },
+    {
+      "window": 7,
+      "interval": [
+        210,
+        240
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 210.5,
+              "observation": "Chinese “汤姆。” and English “Thom.” are visibly rendered over the movie, matching the submitted cue text. Both lines are inside the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 211.0,
+              "observation": "Both subtitle lines are absent, consistent with the cue's end-exclusive end time."
+            },
+            {
+              "time": 212.0,
+              "observation": "“她就在那儿。” / “There she is.” match the expected text. Both lines remain inside the bottom 32%, with no visible obstruction or clipping."
+            },
+            {
+              "time": 213.875,
+              "observation": "“现在。” / “Now.” match the expected text and are fully visible in the bottom subtitle region."
+            },
+            {
+              "time": 216.0,
+              "observation": "“你爱她。” / “You love her.” match the expected text. The full-frame view and crop show both lines near the bottom, clear of faces and without clipping."
+            },
+            {
+              "time": 217.5,
+              "observation": "“她就是你的热爱！” / “She is your passion!” match the expected text. Both lines are readable, separated and contained within the bottom 32%."
+            },
+            {
+              "time": 219.5,
+              "observation": "“对她温柔点。” / “Be tender to her.” match the expected text. Both lines are visibly composited over the image without being obscured or clipped."
+            },
+            {
+              "time": 221.5,
+              "observation": "“要诚恳！” / “Be honest!” match the expected text and remain fully visible in the bottom subtitle region."
+            },
+            {
+              "time": 223.5,
+              "observation": "“呃，要温柔。” / “Eh—be tender.” visually match the expected cue, allowing for small punctuation rasterization differences. Neither line is visibly obscured or clipped."
+            },
+            {
+              "time": 226.0,
+              "observation": "“让她想起，什么是爱。” / “Remind her what love is.” match the expected text. Both lines are inside the bottom 32% and readable against the movie image."
+            },
+            {
+              "time": 228.0,
+              "observation": "The expected “让她想起，什么是爱。” / “Remind her what love is.” cue is still visible before its 228.03-second end, with both lines complete."
+            },
+            {
+              "time": 228.5,
+              "observation": "No subtitle text is visible, matching the expected empty frame."
+            },
+            {
+              "time": 239.5,
+              "observation": "No subtitle text is visible, matching the expected empty frame."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within 210–240 seconds, not unseen frames or exact cue transitions between samples.",
+            "The contact-sheet resolution limits inspection of tiny punctuation and fine glyph details; no concrete text mismatch is visible.",
+            "No subtitle obstruction or clipping is evident in the supplied samples. Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility and audio/text agreement were not assessed and remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 22.440422773361206
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 210.5,
+              "observation": "Chinese “汤姆。” and English “Thom.” are visibly rendered over the movie image, matching the submitted text. Both lines are within the bottom 32% and fully visible."
+            },
+            {
+              "time": 211.0,
+              "observation": "The preceding bilingual cue is absent at its end-exclusive boundary, as expected."
+            },
+            {
+              "time": 212.166667,
+              "observation": "“她就在那儿。” and “There she is.” are visible and match the expected cue, with neither line obscured or clipped."
+            },
+            {
+              "time": 213.875,
+              "observation": "“现在。” and “Now.” appear as two readable, bottom-centered lines matching the submitted text."
+            },
+            {
+              "time": 216.0,
+              "observation": "“你爱她。” and “You love her.” are visibly burned into the image. The full-frame context confirms placement within the bottom 32%, below the characters’ faces."
+            },
+            {
+              "time": 217.916667,
+              "observation": "“她就是你的热爱！” and “She is your passion!” match the expected text. Both lines remain readable and clear of the frame edges."
+            },
+            {
+              "time": 219.833333,
+              "observation": "“对她温柔点。” and “Be tender to her.” are visible over the characters’ lower torsos, with intact glyphs and no clipping."
+            },
+            {
+              "time": 221.708333,
+              "observation": "“要诚恳！” and “Be honest!” match the expected cue and remain readable within the bottom subtitle region."
+            },
+            {
+              "time": 223.458333,
+              "observation": "“呃，要温柔。” and “Eh—be tender.” are visibly rendered, matching the submitted content without apparent obstruction."
+            },
+            {
+              "time": 226.708333,
+              "observation": "“让她想起，什么是爱。” and “Remind her what love is.” are fully visible within the bottom 32%, with no overlapping subtitle lines or clipped text."
+            },
+            {
+              "time": 228.5,
+              "observation": "The final bilingual cue is absent after its expected end."
+            },
+            {
+              "time": 239.5,
+              "observation": "No subtitles are visible, consistent with the empty expected cue list."
+            }
+          ],
+          "visible_readability": 3,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within 210–240 seconds, not unseen frames or exact cue transitions between samples.",
+            "Contact-sheet resolution limits fine punctuation and rasterization inspection; no concrete content mismatch is visible.",
+            "Limited full-frame context cannot prove that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, and audio/text consistency remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 23.95167589187622
+        }
+      ]
+    },
+    {
+      "window": 8,
+      "interval": [
+        240,
+        270
+      ],
+      "gate_pass": null,
+      "votes": [
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 240.0,
+              "observation": "No Chinese or English subtitles are visible in the output full frame or lower-frame crop. The supplied ASS expectation is empty, so this is not a text mismatch."
+            },
+            {
+              "time": 248.0,
+              "observation": "No subtitles are visible in the output full frame or lower-frame crop, consistent with the empty supplied ASS expectation."
+            },
+            {
+              "time": 256.0,
+              "observation": "No subtitles are visible in the output full frame or lower-frame crop. There is no bilingual rendering to evaluate for placement, clipping, or obstruction."
+            },
+            {
+              "time": 264.0,
+              "observation": "No subtitles are visible in the output full frame or lower-frame crop, consistent with the empty supplied ASS expectation."
+            },
+            {
+              "time": 269.5,
+              "observation": "The final supplied lower-frame sample contains no visible subtitles; the supplied ASS expectation is also empty."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied half-second samples from 240.0 through 269.5 seconds show no visible subtitles and have empty expected-text lists. Their absence does not demonstrate a rendering failure, but cannot establish that both languages are burned into the movie.",
+            "Subtitle readability, bottom-32% placement, and freedom from clipping or obstruction remain pending because no rendered subtitle cue is available to inspect.",
+            "This verdict covers only supplied samples, not intervening frames or unseen intervals. Limited full-frame context cannot prove that all action remains unobscured.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, and audio/text consistency remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 15.32692837715149
+        },
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 240.0,
+              "observation": "No Chinese or English subtitles are visible in the output full frame or lower-region crop. The submitted ASS expectation is empty at this timestamp."
+            },
+            {
+              "time": 252.0,
+              "observation": "No subtitles are visible in the output full frame or lower-region crop, consistent with the empty submitted ASS expectation."
+            },
+            {
+              "time": 264.0,
+              "observation": "No subtitles are visible in the output full frame or lower-region crop. No text is expected from the submitted ASS."
+            },
+            {
+              "time": 269.5,
+              "observation": "The output lower-region crop contains no visible subtitles, consistent with the empty submitted ASS expectation."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied half-second samples from 240.0 through 269.5 seconds have empty submitted ASS expectations, and no bilingual subtitles are visible. Their absence is not a demonstrated mismatch.",
+            "Without an active subtitle sample, bilingual burn-in, text fidelity, bottom-32% placement, readability, and freedom from clipping or obstruction cannot be verified.",
+            "The verdict covers supplied samples only; unsampled intervals and continuous action visibility remain unverified.",
+            "Source-dialogue semantics, audio consistency, and performed translation remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 17.276172637939453
+        }
+      ]
+    },
+    {
+      "window": 9,
+      "interval": [
+        270,
+        300
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 273.875,
+              "observation": "Rendered Chinese “预备，开拍！” and English “...and, action!” visually match the submitted ASS. Both lines are inside the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 275.0,
+              "observation": "The preceding bilingual cue is absent, matching the empty expected-text entry."
+            },
+            {
+              "time": 277.5,
+              "observation": "Rendered “记忆覆写进行中！” and “Memory overwrite in progress!” match the submitted ASS. Both remain legible over the scene, within the bottom 32%, without visible obstruction or clipping."
+            },
+            {
+              "time": 279.833333,
+              "observation": "Rendered “汤姆，你真混蛋！” and “You're a jerk, Thom!” match the submitted ASS; both lines are fully visible in the bottom subtitle region."
+            },
+            {
+              "time": 282.916667,
+              "observation": "Rendered “哦，对不起！对不起。” and “Ohp- Sorry! Sorry.” match the submitted ASS. Outlined text remains readable against the colorful background, with no visible clipping."
+            },
+            {
+              "time": 284.5,
+              "observation": "No bilingual subtitle is visible, matching the empty expected-text entry."
+            },
+            {
+              "time": 296.333333,
+              "observation": "Rendered “西莉亚。” and “Look Celia.” match the submitted ASS. The full-frame context and crop show both lines contained within the bottom 32% and unobscured."
+            },
+            {
+              "time": 297.0,
+              "observation": "The preceding cue is absent as expected."
+            },
+            {
+              "time": 299.5,
+              "observation": "Rendered “我们得追随热爱。” and “We have to follow our passions.” match the submitted ASS. Both lines are readable, fully inside the bottom 32%, and not visibly obscured or clipped."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied rendered samples in the 270–300 second window, not unseen frames or exact cue transitions between samples.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, and audio/text agreement remain pending and are excluded from this visual verdict."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 22.29327917098999
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 273.0,
+              "observation": "Both Chinese “预备，开拍！” and English “...and, action!” are visibly rendered over the movie and match the submitted ASS text. Both lines are within the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 273.875,
+              "observation": "The full-frame view and subtitle crop show the bilingual cue composited over the desk area. Both lines remain legible and separated, with margins inside the image boundaries."
+            },
+            {
+              "time": 275.0,
+              "observation": "The preceding bilingual cue is absent, matching the empty expected subtitle state."
+            },
+            {
+              "time": 277.5,
+              "observation": "Chinese “记忆覆写进行中！” and English “Memory overwrite in progress!” are visible and match the submitted ASS. Both lines remain within the bottom 32% and readable against the scene, without visible clipping."
+            },
+            {
+              "time": 279.833333,
+              "observation": "Chinese “汤姆，你真混蛋！” and English “You're a jerk, Thom!” are both visibly rendered and match the submitted ASS. Neither line is obscured or clipped."
+            },
+            {
+              "time": 282.916667,
+              "observation": "Chinese “哦，对不起！对不起。” and English “Ohp- Sorry! Sorry.” match the submitted ASS. The outlined text remains readable over the colorful scene and stays within the bottom subtitle region."
+            },
+            {
+              "time": 296.333333,
+              "observation": "Chinese “西莉亚。” and English “Look Celia.” are visible in the full frame and crop, matching the submitted ASS. Both lines are inside the bottom 32%, clear of the mouth, and not clipped."
+            },
+            {
+              "time": 297.0,
+              "observation": "No subtitle is visible, matching the empty expected state between cues."
+            },
+            {
+              "time": 299.5,
+              "observation": "Chinese “我们得追随热爱。” and English “We have to follow our passions.” match the submitted ASS. Both lines are fully visible within the bottom 32%, with no visible obstruction or clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "The verdict applies only to the supplied rendered samples within 270–300 seconds, not to unseen frames or exact unsampled cue boundaries.",
+            "Contact-sheet resolution limits inspection of very fine rasterization and punctuation; no concrete text mismatch is visible.",
+            "The available full frames provide obstruction context, but limited sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility, and audio/text agreement remain pending and were not evaluated."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 27.96479821205139
+        }
+      ]
+    },
+    {
+      "window": 10,
+      "interval": [
+        300,
+        330
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 300.0,
+              "observation": "Chinese “我们得追随热爱。” and English “We have to follow our passions.” are visibly rendered over the movie, matching the submitted text. Both are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 300.5,
+              "observation": "No bottom subtitle is visible, matching the expected cue gap."
+            },
+            {
+              "time": 301.708333,
+              "observation": "“你爱机器人……” and “You have your robotics...” are both visible and match the submitted text, with clear separation and no visible clipping."
+            },
+            {
+              "time": 306.625,
+              "observation": "“我想在太空大展身手。” and “...and I just want to be awesome in space.” are visibly rendered within the bottom 32%, matching the submitted text."
+            },
+            {
+              "time": 308.0,
+              "observation": "The preceding bilingual cue is absent, matching the expected gap."
+            },
+            {
+              "time": 320.041667,
+              "observation": "“他们来了，只剩两分钟！” and “Okay, they're coming. Two minutes left!” match the submitted text. Both lines remain readable over the scene and are not obscured or clipped."
+            },
+            {
+              "time": 323.25,
+              "observation": "“汤姆，快点！” and “Speed it up, Thom!” are visible within the bottom 32%, matching the submitted text."
+            },
+            {
+              "time": 325.333333,
+              "observation": "“再快一点！” and “Vivacissimo!” are visible, readable and unclipped, matching the submitted text."
+            },
+            {
+              "time": 328.25,
+              "observation": "“你就承认吧，你怕我的机械手。” appears above the two English lines “Why don't you just admit that you're” and “freaked out by my robot hand?”, matching the submitted text and line break. All three lines fit within the bottom 32%."
+            },
+            {
+              "time": 329.5,
+              "observation": "The same bilingual cue remains fully visible in the wider shot, with no visible obstruction or edge clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "The verdict covers only the supplied rendered samples within 300–330 seconds, not unseen frames or continuous cue timing.",
+            "Limited full-frame context cannot establish that all movie action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 24.81251549720764
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 300.0,
+              "observation": "Chinese “我们得追随热爱。” and English “We have to follow our passions.” are visibly rendered over the movie and match the submitted cue. Both are within the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 300.5,
+              "observation": "No bilingual subtitle is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 301.708333,
+              "observation": "“你爱机器人……” and “You have your robotics...” are visible and match the submitted text. The two language rows are separated, readable, and fully inside the lower subtitle region."
+            },
+            {
+              "time": 306.625,
+              "observation": "“我想在太空大展身手。” and “...and I just want to be awesome in space.” match the submitted cue. The full-frame view and crop show both rows near the bottom, without clipping or obstruction."
+            },
+            {
+              "time": 315.0,
+              "observation": "No bilingual subtitle is visible in the rendered output sample, matching the empty expected cue list."
+            },
+            {
+              "time": 320.041667,
+              "observation": "“他们来了，只剩两分钟！” and “Okay, they're coming. Two minutes left!” match the submitted cue. Both rows remain legible over the scene and inside the bottom 32%."
+            },
+            {
+              "time": 323.25,
+              "observation": "“汤姆，快点！” and “Speed it up, Thom!” are visibly rendered, matching the submitted cue, with no visible clipping or overlapping subtitle rows."
+            },
+            {
+              "time": 325.333333,
+              "observation": "“再快一点！” and “Vivacissimo!” match the submitted cue. Both rows are fully visible in the bottom subtitle region."
+            },
+            {
+              "time": 328.25,
+              "observation": "“你就承认吧，你怕我的机械手。” and the two-line English text “Why don't you just admit that you're / freaked out by my robot hand?” match the submitted cue and line break. All three rows are readable and unclipped."
+            },
+            {
+              "time": 329.5,
+              "observation": "The same Chinese and two-line English cue remains fully visible over the wider bridge shot. The subtitles remain inside the bottom 32%, without visible obstruction or clipping."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within 300–330 seconds, not unseen frames or continuous cue timing.",
+            "The supplied full-frame context is limited; sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, audio intelligibility, and audio/text agreement are pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 30.926538467407227
+        }
+      ]
+    },
+    {
+      "window": 11,
+      "interval": [
+        330,
+        360
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 330.0,
+              "observation": "Chinese “你就承认吧，你怕我的机械手。” and the two-line English “Why don't you just admit that you're / freaked out by my robot hand?” are visibly rendered over the movie, matching the submitted text. Both are inside the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 330.041667,
+              "observation": "The same Chinese and English cue remains visible, as expected before its 330.08 end."
+            },
+            {
+              "time": 330.5,
+              "observation": "No bilingual subtitle is visible, matching the expected empty subtitle state."
+            },
+            {
+              "time": 337.708333,
+              "observation": "“听我说，西莉亚。我那时年轻……” and “Listen Celia, I was young...” are visible and match the submitted cue. Neither language is obscured or clipped."
+            },
+            {
+              "time": 339.75,
+              "observation": "“又混蛋。” and “...and a dick.” are visibly rendered within the bottom subtitle region and match the expected text."
+            },
+            {
+              "time": 340.5,
+              "observation": "The preceding bilingual cue is absent at its end-exclusive boundary, matching the expected empty state."
+            },
+            {
+              "time": 341.958333,
+              "observation": "“可这不是毁灭世界的理由。” and “But that's no reason to destroy the world.” are readable, match the submitted text and remain within the bottom 32%."
+            },
+            {
+              "time": 345.208333,
+              "observation": "“他干嘛这样？” and “Why does he do this?” are visible over the movie without clipping or visible obstruction."
+            },
+            {
+              "time": 347.541667,
+              "observation": "“这招我们已经试过了！” and “We already tried that one!” match the submitted cue and are readable within the bottom region."
+            },
+            {
+              "time": 351.791667,
+              "observation": "“中止！” and “Abort!” are both visibly rendered, matching the submitted text."
+            },
+            {
+              "time": 353.416667,
+              "observation": "“停拍！” and “Cut!” are readable and unclipped within the bottom subtitle region."
+            },
+            {
+              "time": 355.125,
+              "observation": "“哇——！” and “Whoaaa!” match the submitted cue. Both remain readable against the bright movie background."
+            },
+            {
+              "time": 356.833333,
+              "observation": "The added bilingual text “回放” and “PLAYBACK” is visible separately from the larger lettering on the movie prop. It lies within the bottom 32% and is unclipped."
+            },
+            {
+              "time": 357.833333,
+              "observation": "Both simultaneous bilingual cues are visible: “错误！” / “ERROR!” above “哇——！” / “Whoaaa!”. The four lines are separated, readable and contained within the bottom 32%."
+            },
+            {
+              "time": 358.583333,
+              "observation": "Only “错误！” / “ERROR!” remains, matching the expected cue state after the “Whoaaa!” cue ends."
+            },
+            {
+              "time": 359.5,
+              "observation": "“错误！” / “ERROR!” and “不要——！” / “Nooooo!” are simultaneously visible, matching the expected overlapping cues. No subtitle-to-subtitle collision or edge clipping is visible."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within 330–360 seconds, not unseen frames or continuous timing between samples.",
+            "No visible placement, clipping, text-obstruction or substantive text-match violation was found in the supplied samples.",
+            "Sparse full-frame context cannot establish that all movie action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 28.474095344543457
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 330.0,
+              "observation": "Rendered Chinese “你就承认吧，你怕我的机械手。” and two-line English “Why don't you just admit that you're / freaked out by my robot hand?” visually match the submitted text. Both are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 330.041667,
+              "observation": "The same expected Chinese and English remain visibly rendered without clipping or obstruction."
+            },
+            {
+              "time": 337.708333,
+              "observation": "Chinese “听我说，西莉亚。我那时年轻……” and English “Listen Celia, I was young...” are visible and match the submitted cue, with clear separation in the bottom subtitle region."
+            },
+            {
+              "time": 339.75,
+              "observation": "Chinese “又混蛋。” and English “...and a dick.” are visibly rendered, matching the expected text and remaining within the bottom 32%."
+            },
+            {
+              "time": 340.5,
+              "observation": "The preceding bilingual cue is absent at its end-exclusive endpoint, as expected."
+            },
+            {
+              "time": 341.958333,
+              "observation": "Chinese “可这不是毁灭世界的理由。” and English “But that's no reason to destroy the world.” match the expected cue. Neither line is visibly obscured or clipped."
+            },
+            {
+              "time": 345.208333,
+              "observation": "Chinese “他干嘛这样？” and English “Why does he do this?” are visibly rendered in the bottom 32%, matching the submitted text."
+            },
+            {
+              "time": 347.541667,
+              "observation": "Chinese “这招我们已经试过了！” and English “We already tried that one!” match the expected cue and are readable without visible clipping."
+            },
+            {
+              "time": 351.791667,
+              "observation": "Chinese “中止！” and English “Abort!” are both present, separated and unobscured in the bottom subtitle region."
+            },
+            {
+              "time": 353.416667,
+              "observation": "Chinese “停拍！” and English “Cut!” visibly match the expected cue."
+            },
+            {
+              "time": 355.125,
+              "observation": "Chinese “哇——！” and English “Whoaaa!” are both visibly rendered and readable within the bottom 32%."
+            },
+            {
+              "time": 356.833333,
+              "observation": "The subtitle pair “回放” / “PLAYBACK” is visibly rendered over the movie image, distinct from the larger lettering on the depicted device. Both subtitle lines remain within the bottom 32%."
+            },
+            {
+              "time": 357.833333,
+              "observation": "Both expected concurrent pairs, “错误！” / “ERROR!” and “哇——！” / “Whoaaa!”, are visible. The stacked text remains within the bottom 32%, with no visible text collision or clipping."
+            },
+            {
+              "time": 358.583333,
+              "observation": "Only the expected “错误！” / “ERROR!” subtitle pair remains visible; the preceding “Whoaaa!” pair is absent."
+            },
+            {
+              "time": 359.5,
+              "observation": "The concurrent pairs “错误！” / “ERROR!” and “不要——！” / “Nooooo!” are visibly rendered, matching the expected text. All four lines remain readable and within the bottom 32%."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within the requested interval, not unseen frames or continuous timing between samples.",
+            "Sampled subtitle text shows no visible obstruction or clipping, but limited full-frame coverage cannot establish that all action remains unobscured throughout the interval.",
+            "Contact-sheet resolution limits assessment of tiny punctuation and rasterization details.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation and audio/text consistency remain pending and are excluded from this visual verdict."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 35.2840313911438
+        }
+      ]
+    },
+    {
+      "window": 12,
+      "interval": [
+        360,
+        390
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 360.0,
+              "observation": "Chinese “不要——！” and English “Nooooo!” are visibly rendered over the movie, matching the expected text. Both lines are within the bottom 32%, separated, readable and unclipped."
+            },
+            {
+              "time": 362.0,
+              "observation": "The expected “不要——！” / “Nooooo!” pair remains visible and unobscured."
+            },
+            {
+              "time": 362.5,
+              "observation": "No subtitle text is visible, matching the expected absence."
+            },
+            {
+              "time": 363.5,
+              "observation": "Visible “你伤透了我的心。” / “You broke my heart.” matches the expected pair. Both lines remain inside the bottom subtitle region without clipping or overlap."
+            },
+            {
+              "time": 366.208333,
+              "observation": "Visible “我知道。” / “I know.” matches the expected pair. The outlined text remains readable over the mechanical-arm background."
+            },
+            {
+              "time": 367.708333,
+              "observation": "Visible “你把我忘在了地球。” / “You forgot me on earth.” matches the expected pair, with both lines fully visible in the bottom 32%."
+            },
+            {
+              "time": 369.583333,
+              "observation": "Visible “我知道。” / “I know.” matches the expected pair and is not obscured or clipped."
+            },
+            {
+              "time": 371.166667,
+              "observation": "Visible “我真该捏碎你。” / “I should just crush you.” matches the expected pair. Both lines are readable, separated and contained within the bottom 32%."
+            },
+            {
+              "time": 375.0,
+              "observation": "No subtitles are visible, matching the expected absence."
+            },
+            {
+              "time": 377.208333,
+              "observation": "Visible “我……” / “I'm-” matches the expected pair. Neither line is clipped or obscured."
+            },
+            {
+              "time": 387.0,
+              "observation": "Visible “对不起。” / “I'm sorry.” matches the expected pair, remaining readable over the mechanical-arm background within the bottom 32%."
+            },
+            {
+              "time": 388.0,
+              "observation": "The expected “对不起。” / “I'm sorry.” pair remains fully visible and unclipped."
+            },
+            {
+              "time": 388.5,
+              "observation": "The subtitle pair is absent after its expected end, matching the submitted timing."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied rendered samples within 360–390 seconds; it does not establish correctness in unsampled intervals.",
+            "The supplied images show both languages rendered into the movie image. They do not independently establish the underlying media encoding or subtitle-track structure.",
+            "Text matching is against the supplied ASS-derived expectations, not independently verified dialogue truth. Tiny punctuation and rasterization differences are not treated as violations.",
+            "Limited full-frame context cannot prove that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 23.385111570358276
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 360.0,
+              "observation": "Chinese “不要——！” and English “Nooooo!” are visibly rendered over the movie, matching the submitted cue. Both lines are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 362.5,
+              "observation": "No subtitle is visible, matching the expected gap."
+            },
+            {
+              "time": 364.125,
+              "observation": "Visible “你伤透了我的心。” / “You broke my heart.” matches the submitted text. Both lines remain within the bottom subtitle region without clipping or obscured characters."
+            },
+            {
+              "time": 366.208333,
+              "observation": "Visible “我知道。” / “I know.” matches the submitted cue. Both outlined lines remain readable over the picture."
+            },
+            {
+              "time": 367.708333,
+              "observation": "Visible “你把我忘在了地球。” / “You forgot me on earth.” matches the submitted cue; both lines are inside the bottom 32% and fully visible."
+            },
+            {
+              "time": 369.583333,
+              "observation": "The repeated “我知道。” / “I know.” cue is visibly present as expected, without clipping or text obstruction."
+            },
+            {
+              "time": 371.166667,
+              "observation": "Visible “我真该捏碎你。” / “I should just crush you.” matches the submitted cue. Both lines are readable, separated and contained in the bottom 32%."
+            },
+            {
+              "time": 377.208333,
+              "observation": "Visible “我……” / “I'm-” matches the submitted cue, allowing for small punctuation rasterization. Neither line is clipped or obscured."
+            },
+            {
+              "time": 387.5,
+              "observation": "Visible “对不起。” / “I'm sorry.” matches the submitted cue. Both lines remain readable over the mechanical hand and background, inside the bottom 32%."
+            },
+            {
+              "time": 388.5,
+              "observation": "Both subtitle lines are absent after the cue ends, matching the expected gap."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 360–390 seconds, not unseen frames or exact cue transitions between samples.",
+            "Contact-sheet resolution limits fine punctuation and rasterization inspection.",
+            "No concrete obstruction violation is visible in the supplied samples; limited full-frame coverage cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, audio intelligibility and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 23.025623083114624
+        }
+      ]
+    },
+    {
+      "window": 13,
+      "interval": [
+        390,
+        420
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 390.5,
+              "observation": "Chinese “临场发挥得好。” and English “Good ad-lib.” are visibly rendered over the movie image, matching the submitted ASS text. Both lines are within the bottom 32%, readable and unclipped."
+            },
+            {
+              "time": 391.5,
+              "observation": "No subtitles are visible, matching the empty expected cue list."
+            },
+            {
+              "time": 399.625,
+              "observation": "Chinese “不是我的错！” and English “Not my fault!” match the submitted ASS. Both lines remain legible over the colorful foreground display, within the bottom 32%, without visible obstruction or clipping."
+            },
+            {
+              "time": 402.458333,
+              "observation": "Chinese “这回不是。” and English “This time.” are both visible and match the submitted ASS. The lines are separated, readable and fully contained in the bottom subtitle region."
+            },
+            {
+              "time": 408.958333,
+              "observation": "Chinese “片场肃静！” and English “Quiet on set!” match the submitted ASS. Neither line is obscured or clipped, and both are within the bottom 32%."
+            },
+            {
+              "time": 409.5,
+              "observation": "The preceding bilingual cue is absent, matching the empty expected cue list."
+            },
+            {
+              "time": 410.0,
+              "observation": "Chinese “没时间了！” and English “We're out of time!” are visible at the cue's inclusive start, matching the submitted ASS."
+            },
+            {
+              "time": 410.708333,
+              "observation": "Both “没时间了！” and “We're out of time!” remain readable, fully inside the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 411.5,
+              "observation": "No subtitles are visible after the cue ends, matching the empty expected cue list."
+            },
+            {
+              "time": 419.5,
+              "observation": "No subtitles are visible, matching the empty expected cue list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied rendered samples within 390–420 seconds, not unseen frames or exact transitions between samples.",
+            "The supplied images demonstrate bilingual text rendered over movie imagery; they do not independently establish the underlying video encoding or subtitle-track configuration.",
+            "Limited full-frame context and sampling cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, translation accuracy and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 23.12518334388733
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 390.5,
+              "observation": "Rendered Chinese “临场发挥得好。” and English “Good ad-lib.” match the submitted ASS text. Both lines are fully inside the bottom 32%, legible and unclipped."
+            },
+            {
+              "time": 399.625,
+              "observation": "Rendered Chinese “不是我的错！” and English “Not my fault!” match the submitted ASS text. Both lines remain readable over the colored console imagery, within the bottom 32%, without visible clipping or occlusion."
+            },
+            {
+              "time": 402.458333,
+              "observation": "Rendered Chinese “这回不是。” and English “This time.” match the submitted ASS text. Both lines are visible within the bottom 32%, with clear outlines and no visible clipping."
+            },
+            {
+              "time": 408.958333,
+              "observation": "Rendered Chinese “片场肃静！” and English “Quiet on set!” match the submitted ASS text. Both lines are fully visible within the bottom 32%, without visible occlusion or clipping."
+            },
+            {
+              "time": 410.0,
+              "observation": "At the inclusive cue start, Chinese “没时间了！” and English “We're out of time!” are visibly rendered as expected, within the bottom 32% and unclipped."
+            },
+            {
+              "time": 411.0,
+              "observation": "Chinese “没时间了！” and English “We're out of time!” remain fully readable and unobscured in the sampled image."
+            },
+            {
+              "time": 411.5,
+              "observation": "No subtitle is visible, consistent with the submitted ASS having no active cue."
+            },
+            {
+              "time": 419.5,
+              "observation": "No subtitle is visible, consistent with the submitted ASS having no active cue."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within 390–420 seconds, not unseen frames or continuous cue timing.",
+            "The subtitles are visibly composited into the supplied output imagery; the underlying media file was not independently inspected.",
+            "Limited full-frame context and lower-frame crops cannot prove that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, performed translation, voices, audio intelligibility and audio/text agreement were not assessed and remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 19.32108235359192
+        }
+      ]
+    },
+    {
+      "window": 14,
+      "interval": [
+        420,
+        450
+      ],
+      "gate_pass": null,
+      "votes": [
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 420.0,
+              "observation": "No Chinese or English subtitles are visible in the output full frame or lower-region crop. The supplied expected-text list is empty."
+            },
+            {
+              "time": 428.0,
+              "observation": "No subtitle text is visible in the output full frame or lower-region crop; expected text is empty."
+            },
+            {
+              "time": 436.0,
+              "observation": "No subtitle text is visible in the output full frame or lower-region crop; expected text is empty."
+            },
+            {
+              "time": 444.0,
+              "observation": "No subtitle text is visible in the output full frame or lower-region crop; expected text is empty."
+            },
+            {
+              "time": 449.5,
+              "observation": "The output lower-region crop contains no visible subtitles; expected text is empty."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied expected-text lists are empty, and no Chinese or English subtitles are visible in the supplied samples from 420.0 through 449.5 seconds. This is consistent with the empty expectations but does not demonstrate bilingual burn-in.",
+            "Without visible subtitle cues, text matching, bottom-32% placement, readability, clipping, and subtitle obstruction cannot be assessed.",
+            "The verdict covers supplied samples only; unsampled intervals and unobscured action throughout the interval are not established.",
+            "Source-dialogue semantics and all audio-related consistency checks remain pending and are outside this visual verdict."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 14.795438051223755
+        },
+        {
+          "assessable": false,
+          "gate_pass": null,
+          "evidence": [
+            {
+              "time": 420.0,
+              "observation": "No Chinese or English subtitles are visible in the output full frame or bottom-region crop. The supplied ASS expectation is empty ([]), so this is not a missing-cue violation."
+            },
+            {
+              "time": 428.0,
+              "observation": "No subtitle text is visible in the output full frame or bottom-region crop; the supplied ASS expectation is empty ([])."
+            },
+            {
+              "time": 435.0,
+              "observation": "The output bottom-region crop contains no visible Chinese or English subtitle text, consistent with the empty supplied ASS expectation ([])."
+            },
+            {
+              "time": 444.0,
+              "observation": "No subtitle text is visible in the output full frame or bottom-region crop; the supplied ASS expectation is empty ([])."
+            },
+            {
+              "time": 449.5,
+              "observation": "No subtitle text is visible in the output bottom-region crop, consistent with the empty supplied ASS expectation ([])."
+            }
+          ],
+          "visible_readability": null,
+          "limitations": [
+            "All supplied half-second samples from 420.0 through 449.5 seconds have empty ASS expectations and show no visible subtitle text. Their absence is consistent with those expectations but cannot demonstrate that both languages are burned in.",
+            "Without subtitle-bearing samples, text matching, bottom-32% placement, readability, clipping, and subtitle obstruction cannot be assessed.",
+            "The verdict covers supplied samples only; limited sampling cannot establish that all action remains unobscured.",
+            "Source-dialogue semantics, translation accuracy, audio intelligibility, and audio/text agreement remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 13.928565502166748
+        }
+      ]
+    },
+    {
+      "window": 15,
+      "interval": [
+        450,
+        480
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 464.5,
+              "observation": "No subtitles are visible, matching the empty expected cue list before the submitted cue begins."
+            },
+            {
+              "time": 464.958333,
+              "observation": "Chinese “快呀！” and English “Come on!” are visibly rendered over the movie image, matching the submitted ASS text. Both lines are within the bottom 32%, readable, separated, and neither obscured nor clipped."
+            },
+            {
+              "time": 465.0,
+              "observation": "Both expected lines, “快呀！” above “Come on!”, remain visible within the bottom 32%. All characters are readable with no visible clipping or obstruction."
+            },
+            {
+              "time": 465.5,
+              "observation": "The bilingual cue is absent after its submitted end time of 465.4, matching the empty expected cue list."
+            },
+            {
+              "time": 479.5,
+              "observation": "No subtitles are visible, matching the empty expected cue list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 450–480 seconds, not unsampled frames or continuous cue timing.",
+            "Limited full-frame context and sampling cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, translation accuracy, and audio/text agreement remain pending and are outside this visual verdict."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 16.130151510238647
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 464.5,
+              "observation": "No subtitles are visible, matching the empty expected-text list."
+            },
+            {
+              "time": 464.958333,
+              "observation": "Chinese “快呀！” and English “Come on!” are visibly rendered over the movie image, matching the submitted ASS text. Both lines are centered within the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 465.0,
+              "observation": "Both “快呀！” and “Come on!” remain visible and readable, matching the expected cue. The lines are separated, fully inside the bottom 32%, and unobscured."
+            },
+            {
+              "time": 465.5,
+              "observation": "Neither subtitle line remains visible, matching the empty expected-text list after the cue ends."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within 450–480 seconds, not unseen frames or exact cue transitions.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "ASS comparison is limited to the supplied expected text and timing; complete ASS styling was not provided.",
+            "Source-dialogue semantics, translation accuracy, and audio/text consistency remain pending and were not assessed."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 16.91214108467102
+        }
+      ]
+    },
+    {
+      "window": 16,
+      "interval": [
+        480,
+        510
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 481.0,
+              "observation": "Chinese “啊——！” and English “RAAAAAAAAH!” are visibly rendered over the movie, matching the submitted cue. Both lines are within the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 481.5,
+              "observation": "Both subtitle lines remain readable over the bright explosion; their dark outlines preserve contrast."
+            },
+            {
+              "time": 484.708333,
+              "observation": "Visible text reads “记忆覆写，百分之九十！” and “Memory overwrite, 90%.”, matching the submitted cue. Both lines are fully visible in the bottom 32% despite the colorful background graphics."
+            },
+            {
+              "time": 487.0,
+              "observation": "Visible text reads “队长！必须中止！” and “Captain! We have to abort!”, matching the submitted cue. The crop and full-frame view show the subtitles below the faces, within the bottom 32%, without clipping."
+            },
+            {
+              "time": 488.5,
+              "observation": "No subtitles are visible, consistent with the empty expected cue list."
+            },
+            {
+              "time": 499.583333,
+              "observation": "Visible text reads “世界变了，西莉亚……” and “The world's changed, Celia...”, matching the submitted cue. Both lines are readable, contained within the bottom 32%, and unobscured."
+            },
+            {
+              "time": 501.0,
+              "observation": "No subtitles are visible after the final submitted cue, consistent with the empty expected cue list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict covers only the supplied sampled images within 480–510 seconds, not unseen frames or continuous cue timing.",
+            "The rendered samples visibly contain both subtitle languages; image inspection does not independently verify the underlying file's encoding or subtitle-track structure.",
+            "Limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was assessed. Source-dialogue semantics, performed translation, voices, intelligibility, and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 20.342251777648926
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 481.0,
+              "observation": "Chinese “啊——！” and English “RAAAAAAAAH!” are visibly rendered over the movie, matching the submitted cue. Both lines lie within the bottom 32%, with no visible clipping or obstruction."
+            },
+            {
+              "time": 484.708333,
+              "observation": "Visible lines read “记忆覆写，百分之九十！” and “Memory overwrite, 90%.”, matching the submitted cue. Both remain legible against the bright graphics, inside the bottom 32%, and fully within the image edges."
+            },
+            {
+              "time": 487.0,
+              "observation": "The full-frame view and subtitle crop show “队长！必须中止！” above “Captain! We have to abort!”, matching the submitted cue. Neither line is obscured or clipped; both are in the bottom 32% and below the characters’ faces."
+            },
+            {
+              "time": 488.5,
+              "observation": "No subtitles are visible, consistent with the submitted cue having ended at 488.25 seconds."
+            },
+            {
+              "time": 499.583333,
+              "observation": "Chinese “世界变了，西莉亚……” and English “The world's changed, Celia...” are visibly rendered, matching the submitted cue. Both lines are legible, unclipped, unobscured, and contained within the bottom 32%."
+            },
+            {
+              "time": 501.0,
+              "observation": "No subtitles are visible, consistent with the submitted cue having ended at 500.62 seconds."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied rendered samples within 480–510 seconds, not unseen frames or exact cue boundaries between samples.",
+            "Contact-sheet resolution limits fine punctuation and rasterization inspection; no concrete content mismatch is visible.",
+            "Limited full-frame sampling cannot establish that all action remains unobscured throughout the interval.",
+            "Source-dialogue semantics, translation accuracy, voices, audio intelligibility, and audio/text agreement remain pending and were not evaluated."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 19.601153135299683
+        }
+      ]
+    },
+    {
+      "window": 17,
+      "interval": [
+        510,
+        525.0
+      ],
+      "gate_pass": true,
+      "votes": [
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 515.0,
+              "observation": "Rendered Chinese “也许我们也能改变。” and English “...maybe we can too.” match the submitted expected text. Both lines are within the bottom 32%, legible, and neither obscured nor clipped."
+            },
+            {
+              "time": 515.333333,
+              "observation": "Both expected subtitle lines remain visibly rendered, matching the submitted text, with clear separation and intact edges."
+            },
+            {
+              "time": 515.5,
+              "observation": "Chinese “也许我们也能改变。” appears above English “...maybe we can too.” Both remain inside the bottom 32% without visible clipping or obstruction."
+            },
+            {
+              "time": 516.0,
+              "observation": "Both expected lines are still visible and readable, matching the submitted text and remaining within the designated bottom region."
+            },
+            {
+              "time": 518.0,
+              "observation": "Rendered Chinese “记忆覆写完成！” and English “Memory overwrite complete!” match the submitted expected text. Both are within the bottom 32%, with outlines maintaining readability over the scene."
+            },
+            {
+              "time": 518.5,
+              "observation": "Both expected lines remain legible and fully visible, without overlap, clipping, or obstruction."
+            },
+            {
+              "time": 519.0,
+              "observation": "Chinese “记忆覆写完成！” and English “Memory overwrite complete!” remain visibly rendered in the bottom 32%, matching the submitted text."
+            },
+            {
+              "time": 516.5,
+              "observation": "No subtitle is visible, consistent with the empty expected-text entry."
+            },
+            {
+              "time": 519.5,
+              "observation": "The preceding bilingual subtitle is absent, consistent with the empty expected-text entry."
+            },
+            {
+              "time": 524.5,
+              "observation": "No subtitle is visible, consistent with the empty expected-text entry. Other supplied samples with empty expected entries likewise show no unexpected subtitles."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "Verdict applies only to the supplied sampled images within 510–525 seconds; unsampled frames and exact cue transitions are not established.",
+            "Limited full-frame context cannot prove that all action remains unobscured throughout the interval.",
+            "Text matching is against the supplied ASS-derived expectations, not source-dialogue truth; complete ASS styling was not independently verified.",
+            "No audio was supplied or assessed. Source-dialogue semantics, translation correctness, and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 19.730902671813965
+        },
+        {
+          "assessable": true,
+          "gate_pass": true,
+          "evidence": [
+            {
+              "time": 514.5,
+              "observation": "No bilingual subtitle is visible, matching the empty expected cue list."
+            },
+            {
+              "time": 515.0,
+              "observation": "Both lines are visibly rendered over the movie: Chinese “也许我们也能改变。” above English “...maybe we can too.” They match the submitted ASS text, lie within the bottom 32%, and are readable without clipping or obstruction."
+            },
+            {
+              "time": 515.333333,
+              "observation": "The same expected Chinese and English lines remain visible, separated and unclipped within the bottom subtitle region."
+            },
+            {
+              "time": 515.5,
+              "observation": "Chinese “也许我们也能改变。” and English “...maybe we can too.” remain readable and match the expected text."
+            },
+            {
+              "time": 516.0,
+              "observation": "Both expected subtitle lines remain visible within the bottom 32%, with clear outlines and no visible clipping or obstruction."
+            },
+            {
+              "time": 516.5,
+              "observation": "The preceding bilingual subtitle is absent, matching the empty expected cue list."
+            },
+            {
+              "time": 518.0,
+              "observation": "Chinese “记忆覆写完成！” and English “Memory overwrite complete!” are visibly rendered over the movie and match the submitted ASS. Both lines are within the bottom 32% and are readable without clipping."
+            },
+            {
+              "time": 518.5,
+              "observation": "Both expected lines remain readable against the colorful scene, with no visible overlap between lines or obstruction of the text."
+            },
+            {
+              "time": 519.0,
+              "observation": "Chinese “记忆覆写完成！” and English “Memory overwrite complete!” remain visible, matching the expected cue and staying within the bottom 32%."
+            },
+            {
+              "time": 519.5,
+              "observation": "The preceding bilingual subtitle is absent, matching the empty expected cue list."
+            },
+            {
+              "time": 524.5,
+              "observation": "No bilingual subtitle is visible, matching the empty expected cue list."
+            }
+          ],
+          "visible_readability": 4,
+          "limitations": [
+            "This verdict covers only the supplied sampled images, not unseen frames or exact cue transitions.",
+            "The supplied lower-frame crops support subtitle readability and placement assessment; limited full-frame context cannot establish that all action remains unobscured throughout the interval.",
+            "No audio was supplied or assessed. Source-dialogue semantics, performed translation, and audio/text agreement remain pending."
+          ],
+          "evidence_time_arrays_expanded": false,
+          "elapsed_seconds": 17.926761865615845
+        }
+      ]
+    }
+  ]
+}
