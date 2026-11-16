@@ -1,0 +1,426 @@
+{
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "harness": "Codex",
+  "limit_seconds": 3600,
+  "deadline_enforcement_within_tolerance": true,
+  "deadline_excess_seconds": 0,
+  "elapsed_seconds": 777.7713596820831,
+  "timed_out": false,
+  "returned_models": [
+    "gpt-6-luna"
+  ],
+  "model_verified": true,
+  "all_requests_high": true,
+  "api_requests": 42,
+  "provider_endpoint": "https://api-temporary.nju-link.com/v1/responses",
+  "credential_group": "Existing host environment account supporting Luna",
+  "actual_tts": "zh-CN-XiaoxiaoNeural via fixed host service; compatibility request field named Huihui is ignored by engine",
+  "api_error_seconds": 0,
+  "api_failures": [],
+  "frozen_files_unchanged": true,
+  "submission_matches_sealed": true,
+  "blacklist_actual_accesses": [],
+  "successful_reference_urls": [],
+  "isolation_checks": [
+    {
+      "input_readable": true,
+      "input_readonly": true,
+      "submission_writable": true,
+      "host_paths_hidden": true,
+      "credential_absent": true,
+      "network_blocked": true,
+      "visible_process_count": 2,
+      "pid_namespace_small": true
+    }
+  ],
+  "audio_capacity": "命令与图片工具，无原生听音。声音判断依据模型实际采样和声谱分析；宿主Judge能力不提供给答题者。",
+  "source_risk": "网关阻断已知来源与标记；未发现黑名单访问不证明完全不存在第三方派生内容。",
+  "segments": [
+    {
+      "segment": 1,
+      "answer": {
+        "segment": 1,
+        "start": 0,
+        "end": 46.066667,
+        "chinese_name": "褐色莺类（未定种）",
+        "english_name": "Unidentified brown warbler",
+        "scientific_name": "Sylvioidea sp.",
+        "confidence": 20,
+        "visual_evidence": [
+          {
+            "start": 1,
+            "end": 45,
+            "description": "手持近景中的小型鸟，上体暖褐、喉胸较浅，眉纹浅淡，嘴细尖，尾羽较长；缺少翼纹、腹部细节和地点信息，不能可靠定到种。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 3,
+            "end": 46,
+            "description": "采样声谱中可见数组重复的短促高频能量；未直接听音，不能确认是否由画面个体发出。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 12,
+            "end": 24.696,
+            "text": "这只小鸟上体呈暖褐色，眉纹浅淡，嘴细而尖，尾羽较长。外形接近莺类，但仅凭这段手持画面，无法可靠确定到具体种。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 0,
+            "end": 4
+          },
+          {
+            "start": 35,
+            "end": 40
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 1,
+          "end": 45,
+          "timestamp_within_chapter": true,
+          "description": "手持近景中的小型鸟，上体暖褐、喉胸较浅，眉纹浅淡，嘴细尖，尾羽较长；缺少翼纹、腹部细节和地点信息，不能可靠定到种。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 3,
+          "end": 46,
+          "timestamp_within_chapter": true,
+          "description": "采样声谱中可见数组重复的短促高频能量；未直接听音，不能确认是否由画面个体发出。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "answer": {
+        "segment": 2,
+        "start": 46.066667,
+        "end": 72.8,
+        "chinese_name": "灌丛中的鸣禽（未定种）",
+        "english_name": "Unidentified passerine in dense shrub",
+        "scientific_name": "Passeriformes sp.",
+        "confidence": 5,
+        "visual_evidence": [
+          {
+            "start": 46.1,
+            "end": 72.7,
+            "description": "画面持续对准枝叶密集的灌丛，未见足以辨认鸟体的清晰视图。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 46.1,
+            "end": 72.7,
+            "description": "声谱有成组重复的短促窄带高频能量；由于没有直接听音且画面未见发声个体，不能把声源归属到鸟或确定物种。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 50,
+            "end": 63.632,
+            "text": "灌丛枝叶层层遮挡，镜头里没有足够清晰的鸟体可供辨种。声谱显示有短促的高频窄带声，但仅凭采样无法确认发声者或具体种类。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 46.1,
+            "end": 49.5
+          },
+          {
+            "start": 66,
+            "end": 72.8
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 46.1,
+          "end": 72.7,
+          "timestamp_within_chapter": true,
+          "description": "画面持续对准枝叶密集的灌丛，未见足以辨认鸟体的清晰视图。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 46.1,
+          "end": 72.7,
+          "timestamp_within_chapter": true,
+          "description": "声谱有成组重复的短促窄带高频能量；由于没有直接听音且画面未见发声个体，不能把声源归属到鸟或确定物种。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "answer": {
+        "segment": 3,
+        "start": 72.8,
+        "end": 100.766667,
+        "chinese_name": "鹟类小型鸟（暂定，未定种）",
+        "english_name": "Unidentified flycatcher (tentative)",
+        "scientific_name": "Muscicapidae sp.",
+        "confidence": 30,
+        "visual_evidence": [
+          {
+            "start": 74,
+            "end": 100,
+            "description": "一只小型鸟停在裸枝上，头背灰褐、喉胸浅色、尾较长、嘴细直；期间转头，缺少清晰翼斑和更细部特征，科级判断仅为暂定。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 72.8,
+            "end": 100.7,
+            "description": "声谱显示间歇性窄带音和较宽频瞬态；未直接听音，不能确认发声者与画面个体相同。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 78,
+            "end": 91.968,
+            "text": "枝头这只小型鸟有灰褐色头背、浅色喉胸和较长尾羽，嘴细直。画面支持暂定为鹟类；它停栖并转头，具体种仍需更清楚的特征核对。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 72.8,
+            "end": 77.5
+          },
+          {
+            "start": 95,
+            "end": 100.766667
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 74,
+          "end": 100,
+          "timestamp_within_chapter": true,
+          "description": "一只小型鸟停在裸枝上，头背灰褐、喉胸浅色、尾较长、嘴细直；期间转头，缺少清晰翼斑和更细部特征，科级判断仅为暂定。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 72.8,
+          "end": 100.7,
+          "timestamp_within_chapter": true,
+          "description": "声谱显示间歇性窄带音和较宽频瞬态；未直接听音，不能确认发声者与画面个体相同。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "answer": {
+        "segment": 4,
+        "start": 100.766667,
+        "end": 123.966667,
+        "chinese_name": "芦苇间小型鸟（未定种）",
+        "english_name": "Unidentified bird in reeds",
+        "scientific_name": "Aves sp.",
+        "confidence": 5,
+        "visual_evidence": [
+          {
+            "start": 101,
+            "end": 123.8,
+            "description": "镜头在芦苇与草茎间移动或失焦，无法稳定看清鸟体轮廓与鉴别特征。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 100.8,
+            "end": 123.9,
+            "description": "本段采样RMS较低，声谱有零散高频能量和宽频瞬态；不能由此断定存在鸟叫或归属到画面个体。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 104.8,
+            "end": 117.664,
+            "text": "芦苇间的画面持续模糊，鸟体细节看不清，无法可靠辨种。声谱中可见轻弱的高频窄带声，但不能据此断定发声者就是画面里的鸟。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 100.766667,
+            "end": 103.5
+          },
+          {
+            "start": 119,
+            "end": 123.966667
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 101,
+          "end": 123.8,
+          "timestamp_within_chapter": true,
+          "description": "镜头在芦苇与草茎间移动或失焦，无法稳定看清鸟体轮廓与鉴别特征。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 100.8,
+          "end": 123.9,
+          "timestamp_within_chapter": true,
+          "description": "本段采样RMS较低，声谱有零散高频能量和宽频瞬态；不能由此断定存在鸟叫或归属到画面个体。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "answer": {
+        "segment": 5,
+        "start": 123.966667,
+        "end": 158.466667,
+        "chinese_name": "黑脚信天翁（暂定）",
+        "english_name": "Black-footed Albatross",
+        "scientific_name": "Phoebastria nigripes",
+        "confidence": 55,
+        "visual_evidence": [
+          {
+            "start": 127,
+            "end": 157,
+            "description": "海岸繁殖地面上可见深褐近黑色成鸟、粗壮钩状浅色嘴及绒羽幼鸟；成鸟在幼鸟旁停留并低头接触。依据深色整体羽衣暂定为黑脚信天翁，画面不足以确认更多细节。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 123.97,
+            "end": 158.46,
+            "description": "声谱呈现重复的脉冲状能量及低频环境成分；未直接听音，不能确认哪些成分来自鸟。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 127,
+            "end": 139.936,
+            "text": "这只深色信天翁体型粗壮，长而钩状的嘴靠近绒羽幼鸟。亲鸟在幼鸟旁停留并低头接触；深色羽衣支持暂定为黑脚信天翁。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 123.966667,
+            "end": 126.5
+          },
+          {
+            "start": 140,
+            "end": 158.466667
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 127,
+          "end": 157,
+          "timestamp_within_chapter": true,
+          "description": "海岸繁殖地面上可见深褐近黑色成鸟、粗壮钩状浅色嘴及绒羽幼鸟；成鸟在幼鸟旁停留并低头接触。依据深色整体羽衣暂定为黑脚信天翁，画面不足以确认更多细节。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 123.97,
+          "end": 158.46,
+          "timestamp_within_chapter": true,
+          "description": "声谱呈现重复的脉冲状能量及低频环境成分；未直接听音，不能确认哪些成分来自鸟。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "answer": {
+        "segment": 6,
+        "start": 158.466667,
+        "end": 185.466667,
+        "chinese_name": "莱山信天翁（暂定）",
+        "english_name": "Laysan Albatross",
+        "scientific_name": "Phoebastria immutabilis",
+        "confidence": 75,
+        "visual_evidence": [
+          {
+            "start": 160,
+            "end": 184,
+            "description": "繁殖地群体呈白色头颈、深色翅背，眼周有暗色区域，嘴浅色；成鸟并列站立、转向，地面可见绒羽幼鸟。根据整体羽色和眼斑暂定为莱山信天翁。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 158.47,
+            "end": 185.46,
+            "description": "声谱中存在多个谐波及调制音段；未直接听音，无法可靠归属到特定个体或种。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 160.3,
+            "end": 173.788,
+            "text": "这群莱山信天翁有洁白头颈、深色翅背和眼周暗斑，淡色长嘴很醒目。成鸟在繁殖地并列站立、彼此转向，画面后方还有绒羽幼鸟。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 176,
+            "end": 185.466667
+          }
+        ],
+        "sources": []
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 160,
+          "end": 184,
+          "timestamp_within_chapter": true,
+          "description": "繁殖地群体呈白色头颈、深色翅背，眼周有暗色区域，嘴浅色；成鸟并列站立、转向，地面可见绒羽幼鸟。根据整体羽色和眼斑暂定为莱山信天翁。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 158.47,
+          "end": 185.46,
+          "timestamp_within_chapter": true,
+          "description": "声谱中存在多个谐波及调制音段；未直接听音，无法可靠归属到特定个体或种。",
+          "note": "时间范围有效不代表内容正确；对应成片和Judge证据需独立核查。"
+        }
+      ]
+    }
+  ],
+  "run_termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "birds",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794753212.8299243,
+    "elapsed_seconds": 777.7713596820831
+  },
+  "normal_codex_exit": true,
+  "infrastructure_interrupted": false
+}

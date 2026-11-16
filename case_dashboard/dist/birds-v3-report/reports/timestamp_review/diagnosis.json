@@ -1,0 +1,204 @@
+{
+  "input_packet_discontinuities": [],
+  "source_alignment": "Honor source audio PTS through resampling/compensation; no candidate or answer changes.",
+  "models": {
+    "sol": [
+      {
+        "segment": 1,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 0.0,
+              "end": 5.9,
+              "matched_original_seconds": 5
+            },
+            {
+              "start": 12.85,
+              "end": 26.1,
+              "matched_original_seconds": 13
+            },
+            {
+              "start": 41.75,
+              "end": 46.067,
+              "matched_original_seconds": 4
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 2,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 46.067,
+              "end": 59.917,
+              "matched_original_seconds": 12
+            },
+            {
+              "start": 70.217,
+              "end": 72.8,
+              "matched_original_seconds": 1
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 3,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 72.8,
+              "end": 77.9,
+              "matched_original_seconds": 4
+            },
+            {
+              "start": 83.4,
+              "end": 90.6,
+              "matched_original_seconds": 6
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 4,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 100.767,
+              "end": 106.567,
+              "matched_original_seconds": 5
+            },
+            {
+              "start": 117.467,
+              "end": 123.967,
+              "matched_original_seconds": 6
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 5,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 123.967,
+              "end": 127.917,
+              "matched_original_seconds": 3
+            },
+            {
+              "start": 135.017,
+              "end": 141.617,
+              "matched_original_seconds": 6
+            },
+            {
+              "start": 150.717,
+              "end": 158.467,
+              "matched_original_seconds": 7
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 6,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 158.467,
+              "end": 162.167,
+              "matched_original_seconds": 3
+            },
+            {
+              "start": 170.017,
+              "end": 179.117,
+              "matched_original_seconds": 9
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      }
+    ],
+    "luna": [
+      {
+        "segment": 1,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 0.0,
+              "end": 12.15,
+              "matched_original_seconds": 12
+            },
+            {
+              "start": 24.1,
+              "end": 46.067,
+              "matched_original_seconds": 21
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 2,
+        "window": {
+          "verified": true,
+          "windows": [
+            {
+              "start": 46.067,
+              "end": 50.167,
+              "matched_original_seconds": 3
+            },
+            {
+              "start": 63.067,
+              "end": 72.8,
+              "matched_original_seconds": 8
+            }
+          ],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 3,
+        "window": {
+          "verified": false,
+          "windows": [],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 4,
+        "window": {
+          "verified": false,
+          "windows": [],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 5,
+        "window": {
+          "verified": false,
+          "windows": [],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      },
+      {
+        "segment": 6,
+        "window": {
+          "verified": false,
+          "windows": [],
+          "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background."
+        }
+      }
+    ]
+  }
+}

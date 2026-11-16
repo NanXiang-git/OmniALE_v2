@@ -1,0 +1,10 @@
+{
+  "policy": "联网仅通过 /research.py；查询候选外形与鸟类名，黑名单遵守 /candidate/TASK.md。",
+  "queries": [
+    {"query": "small brown bird held in hand long narrow bill pale eyebrow brown upperparts identification", "result": "Google ConnectTimeout；仅返回Animal Diversity Web的Animalia泛页摘要，与识别无关，未引用。"},
+    {"query": "black browed albatross black eyebrow yellow bill nesting colony chicks identification", "result": "Google ConnectTimeout；仅返回Animalia泛页摘要，与识别无关，未引用。"},
+    {"query": "large dark brown seabird adult with chick coastal colony identification giant petrel skua", "result": "Google ConnectTimeout；仅返回Animalia泛页摘要，与识别无关，未引用。"},
+    {"query": "small gray brown bird pale underparts perched bare branch long tail flycatcher identification", "result": "Google ConnectTimeout；仅返回Animalia泛页摘要，与识别无关，未引用。"}
+  ],
+  "sources_used": []
+}

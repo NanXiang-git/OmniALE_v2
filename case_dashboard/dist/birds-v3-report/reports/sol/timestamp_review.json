@@ -1,0 +1,154 @@
+{
+  "version": "post-freeze-source-PTS-review-1",
+  "baseline_result_sha256": "dcce35b955f25cd3adcfa2593b078d35756d07daabaee6cf5eadcd1e4cf72d9d",
+  "frozen_result_sha256": "f42c9555fb3d003f629937b9dbd66f6b8346231c7593892ea0eaa8b8f171be64",
+  "old_score": 22.9854,
+  "new_score": 23.6521,
+  "changes": [
+    {
+      "segment": 4,
+      "before": {
+        "verified": false,
+        "windows": [],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 0.0,
+            "end": 6.48,
+            "reason": "纯背景鸟鸣声，无人声"
+          }
+        ],
+        "passed": false
+      },
+      "after": {
+        "verified": true,
+        "windows": [
+          {
+            "start": 100.767,
+            "end": 106.567,
+            "matched_original_seconds": 5
+          },
+          {
+            "start": 117.467,
+            "end": 123.967,
+            "matched_original_seconds": 6
+          }
+        ],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 0.0,
+            "end": 6.48,
+            "reason": "纯背景鸟鸣声，无人声"
+          }
+        ],
+        "passed": true,
+        "verification_source": "Source waveform decoded honoring original PTS; same thresholds as frozen evaluator."
+      }
+    },
+    {
+      "segment": 5,
+      "before": {
+        "verified": false,
+        "windows": [],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 0.0,
+            "end": 3.96,
+            "reason": "纯背景音窗口，只有清晰的幼鸟叫声，无人声"
+          },
+          {
+            "start": 11.0,
+            "end": 18.2,
+            "reason": "纯背景音窗口，包含幼鸟叫声和类似翅膀扑腾的声音，无人声"
+          }
+        ],
+        "passed": false
+      },
+      "after": {
+        "verified": true,
+        "windows": [
+          {
+            "start": 123.967,
+            "end": 127.917,
+            "matched_original_seconds": 3
+          },
+          {
+            "start": 135.017,
+            "end": 141.617,
+            "matched_original_seconds": 6
+          },
+          {
+            "start": 150.717,
+            "end": 158.467,
+            "matched_original_seconds": 7
+          }
+        ],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 0.0,
+            "end": 3.96,
+            "reason": "纯背景音窗口，只有清晰的幼鸟叫声，无人声"
+          },
+          {
+            "start": 11.0,
+            "end": 18.2,
+            "reason": "纯背景音窗口，包含幼鸟叫声和类似翅膀扑腾的声音，无人声"
+          }
+        ],
+        "passed": true,
+        "verification_source": "Source waveform decoded honoring original PTS; same thresholds as frozen evaluator."
+      }
+    },
+    {
+      "segment": 6,
+      "before": {
+        "verified": false,
+        "windows": [],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 10.44,
+            "end": 20.72,
+            "reason": "此时间段内无人声，只有清晰的真实鸟类鸣叫和扑翼等环境音"
+          }
+        ],
+        "passed": false
+      },
+      "after": {
+        "verified": true,
+        "windows": [
+          {
+            "start": 158.467,
+            "end": 162.167,
+            "matched_original_seconds": 3
+          },
+          {
+            "start": 170.017,
+            "end": 179.117,
+            "matched_original_seconds": 9
+          }
+        ],
+        "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+        "judge_windows": [
+          {
+            "start": 10.44,
+            "end": 20.72,
+            "reason": "此时间段内无人声，只有清晰的真实鸟类鸣叫和扑翼等环境音"
+          }
+        ],
+        "passed": true,
+        "verification_source": "Source waveform decoded honoring original PTS; same thresholds as frozen evaluator."
+      }
+    }
+  ],
+  "policy": "Apply identically to both submissions. Original input admits contiguous-sample decoding and timestamp-respecting decoding; accept provenance verified against either actual decode. Same correlation, RMS, silence-duration thresholds and existing independent listening evidence. No arbitrary lag search, no synthetic replacement, no candidate/answer/rubric edits; identification/F/E/H remain unchanged.",
+  "reason": "AAC boundary frame timestamps differ from contiguous 1024-sample accumulation by 91–131 ms in chapters 4–6. Frozen evaluator stripped PTS and allowed only 80 ms lag, rejecting Sol source preservation.",
+  "evidence": [
+    "../timestamp_review/frame_drift.json",
+    "../timestamp_review/diagnosis.json"
+  ],
+  "limitations": "This is an explicitly disclosed post-freeze implementation correction, not the untouched frozen score. Input concatenation artifact is retained; v2 and v3 comparisons remain different tasks."
+}

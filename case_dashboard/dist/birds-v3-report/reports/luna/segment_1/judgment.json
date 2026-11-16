@@ -1,0 +1,178 @@
+{
+  "segment": 1,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "这只小鸟上体呈暖褐色，眉纹浅淡，嘴细而尖，尾羽较长。外形接近莺类，但仅凭这段手持画面，无法可靠确定到具体种。",
+    "speech_spans": [
+      {
+        "start": 12.08,
+        "end": 17.6,
+        "text": "这只小鸟上体呈暖褐色，眉纹浅淡，嘴细而尖，尾羽较长。"
+      },
+      {
+        "start": 18.32,
+        "end": 24.0,
+        "text": "外形接近莺类，但仅凭这段手持画面，无法可靠确定到具体种。"
+      }
+    ],
+    "background": "贯穿始终的鸟鸣声（包括短促尖锐的叫声和连续的啁啾声），以及轻柔的背景音乐。",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "声音带有明显的AI合成特征，语调平淡机械，缺乏真人解说的自然起伏和情感。",
+      "times": [
+        12.4,
+        23.6
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色略显单薄和干瘪，高频部分有轻微的电子毛刺感，不够圆润舒适。",
+      "times": [
+        12.4,
+        23.6
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音非常清晰标准，字正腔圆，没有任何含糊不清的地方，易于理解。",
+      "times": [
+        12.4,
+        23.6
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但显得生硬，句子之间的停顿过于刻板，没有自然的呼吸感和节奏变化。",
+      "times": [
+        12.4,
+        23.6
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声的比例基本合适，但在某些时刻鸟叫声略大，稍微干扰了人声的听感。",
+      "times": [
+        12.4,
+        23.6
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中保留了非常清晰且真实的鸟类鸣叫声，环境音细节丰富。",
+      "times": [
+        0.0,
+        12.4,
+        23.6,
+        45.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 12.4,
+        "reason": "纯背景鸟鸣声，无人声"
+      },
+      {
+        "start": 23.6,
+        "end": 45.0,
+        "reason": "纯背景鸟鸣声及轻微环境音，无人声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "在18.32-24.0秒的旁白中，讲述者明确表示“无法可靠确定到具体种”，全程未说出任何具体的物种名称。",
+    "F": {
+      "score": 1.0,
+      "reason": "旁白对鸟类外观特征的描述（上体暖褐色、眉纹浅淡、嘴细而尖、尾羽较长）与画面完全一致；同时客观指出仅凭当前手持画面无法准确鉴定到具体物种，表述严谨且符合事实。",
+      "times": [
+        "12.08-17.6",
+        "18.32-24.0"
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "视听证据高度对应。旁白描述的形态特征在视频画面中清晰可见；背景音中的鸟鸣声与轻柔音乐也与实际听到的音频环境相符。",
+      "times": [
+        "12.08-17.6",
+        "18.32-24.0"
+      ]
+    },
+    "claims": [
+      {
+        "claim": "这只小鸟上体呈暖褐色，眉纹浅淡，嘴细而尖，尾羽较长。",
+        "supported": true,
+        "reason": "视频画面中被人手托持的小鸟确实展现出上述所有形态特征，解说与视觉证据完美契合。"
+      },
+      {
+        "claim": "外形接近莺类，但仅凭这段手持画面，无法可靠确定到具体种。",
+        "supported": true,
+        "reason": "基于画面提供的有限静态视角，缺乏更丰富的生境或行为动态信息，该保守且科学的鉴定结论是准确的。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "基于提供的实际成片拼图，字幕已正常烧录。在包含字幕的帧（如movie 15.10s和19.19s）中，白色文字清晰可读，且准确位于画面上方的黑色留边区域内，完全没有遮挡作为主要视觉焦点的鸟体。结合独立转写文本与SRT时间轴，画面中出现的字幕内容（“这只小鸟上体呈暖褐色...”及“外形接近莺类...”）与旁白文字完全一致，对应关系正确。",
+      "times": [
+        "movie 15.10s",
+        "movie 19.19s"
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "根据独立转写的语音区间（12.08-17.6s，18.32-24.0s）与SRT时间轴比对，抽样的成片帧显示：在movie 15.10s时出现了第一段解说对应的字幕，在movie 19.19s时出现了第二段解说对应的字幕。而在超出语音结束时间的后续抽样帧（如movie 26.87s, 34.55s, 42.23s）中，字幕均已消失。字幕的出现与消失时机与实际旁白的发声段落高度吻合，且画面始终是手持展示该鸟类的外观，音画同步逻辑合理。",
+      "times": [
+        "movie 15.10s",
+        "movie 19.19s",
+        "movie 26.87s",
+        "movie 34.55s",
+        "movie 42.23s"
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 0.0,
+        "end": 12.15,
+        "matched_original_seconds": 12
+      },
+      {
+        "start": 24.1,
+        "end": 46.067,
+        "matched_original_seconds": 21
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 12.4,
+        "reason": "纯背景鸟鸣声，无人声"
+      },
+      {
+        "start": 23.6,
+        "end": 45.0,
+        "reason": "纯背景鸟鸣声及轻微环境音，无人声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 43,
+    "compared_seconds": 46
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "completed_at": "2026-11-16T01:27:52.706828+00:00",
+  "task_version": 3,
+  "chapters": 6,
+  "experiments_completed": 2,
+  "all_required_deliverables_valid": true,
+  "all_reviewed_delivery_gates_passed": true,
+  "models_verified": true,
+  "effort_verified": "high",
+  "both_under_3600_seconds": true,
+  "frozen_task_truth_rubric_runtimes_unchanged": true,
+  "submission_seals_match": true,
+  "blacklist_actual_accesses": 0,
+  "reference_checks": {
+    "sol_claim_entries": 9,
+    "sol_body_fetches_verified": 9,
+    "sol_claim_support_judged": 9,
+    "luna_claim_entries": 0,
+    "note": "支持引用中的一般事实，不等于支持模型对本题视频的物种识别。"
+  },
+  "source_timestamp_correction": "Sol 22.9854 to 23.6521; Luna unchanged. Original frozen outputs retained. Same post-freeze implementation review applied to both.",
+  "scores": {
+    "sol": {
+      "score": 23.6521,
+      "body": 33.333333333333336,
+      "quality": 0.7095634057971014,
+      "correct": 2,
+      "minutes": 35.76421344280243
+    },
+    "luna": {
+      "score": 25.2222,
+      "body": 33.333333333333336,
+      "quality": 0.7566666666666666,
+      "correct": 2,
+      "minutes": 12.962855994701385
+    }
+  },
+  "verification_limits": [
+    "Real-browser overview visually observed; playback not verified due repeated window-state timeout.",
+    "Added source03/04 labels and local hashes verified against v1; exact public original URLs unresolved after network failures.",
+    "Unknown third-party derivative sources cannot be excluded."
+  ],
+  "dashboard_url": "http://127.0.0.1:8779/reports/index.html"
+}

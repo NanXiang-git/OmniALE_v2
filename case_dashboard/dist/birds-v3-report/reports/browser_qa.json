@@ -1,0 +1,11 @@
+{
+  "overview_render_observed": true,
+  "observed_scores": {
+    "sol": 23.65,
+    "luna": 25.22
+  },
+  "layout_observation": "Actual native Edge screenshot: six navigation tabs and both final score cards visible, no obvious overlap in visible viewport.",
+  "real_browser_playback_verified": false,
+  "scope": "Overview screenshot only; other sections covered by DOM tests.",
+  "limitation": "Subsequent get_window_state timed out twice, including refreshed-window recovery. Stopped UI attempts; audio/video playback not verified by real browser. ffmpeg decode and HTTP Range checks passed."
+}

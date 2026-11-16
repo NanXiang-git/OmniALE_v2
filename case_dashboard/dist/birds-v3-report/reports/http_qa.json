@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "path": "/reports/index.html",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/candidate/TASK.md",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/private/judge_credential.xml",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/private_truth/truth.json",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/runs/sol/orchestrator/credential.dpapi",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "path": "/candidate/birds_source.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "passed": true
+    },
+    {
+      "path": "/results/sol/final.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "passed": true
+    },
+    {
+      "path": "/results/luna/final.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "passed": true
+    }
+  ]
+}

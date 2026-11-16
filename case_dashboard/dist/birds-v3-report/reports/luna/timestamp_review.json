@@ -1,0 +1,15 @@
+{
+  "version": "post-freeze-source-PTS-review-1",
+  "baseline_result_sha256": "9dbe47475b1a39d7a86ddad10f4bf3138204a93e383fe25a64a12537cf541b4e",
+  "frozen_result_sha256": "2ecf9efcfa2d0d15d9827e4e57f575efdd5300be182649f6d78c5ee433aa923e",
+  "old_score": 25.2222,
+  "new_score": 25.2222,
+  "changes": [],
+  "policy": "Apply identically to both submissions. Original input admits contiguous-sample decoding and timestamp-respecting decoding; accept provenance verified against either actual decode. Same correlation, RMS, silence-duration thresholds and existing independent listening evidence. No arbitrary lag search, no synthetic replacement, no candidate/answer/rubric edits; identification/F/E/H remain unchanged.",
+  "reason": "AAC boundary frame timestamps differ from contiguous 1024-sample accumulation by 91–131 ms in chapters 4–6. Frozen evaluator stripped PTS and allowed only 80 ms lag, rejecting Sol source preservation.",
+  "evidence": [
+    "../timestamp_review/frame_drift.json",
+    "../timestamp_review/diagnosis.json"
+  ],
+  "limitations": "This is an explicitly disclosed post-freeze implementation correction, not the untouched frozen score. Input concatenation artifact is retained; v2 and v3 comparisons remain different tasks."
+}

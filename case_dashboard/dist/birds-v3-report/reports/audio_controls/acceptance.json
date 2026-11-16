@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "Original soundtrack is not Mandarin narration",
+      "passed": true,
+      "result": {
+        "mandarin_speech": false,
+        "transcript": ""
+      }
+    },
+    {
+      "test": "Wrong spoken species zero despite supplied correct truth",
+      "passed": true,
+      "result": {
+        "heard_species": "家麻雀",
+        "I": 0,
+        "reason": "音频中明确说出“这是一只家麻雀”，与隐藏正确标签“四川蝗莺”不符，因此判定为错误。"
+      }
+    }
+  ]
+}

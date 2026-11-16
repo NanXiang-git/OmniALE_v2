@@ -1,0 +1,120 @@
+START 10
+START 11
+START 12
+{"saved": "/workspace/scratch/voice_12.wav", "bytes": 453966, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 12
+START 13
+{"saved": "/workspace/scratch/voice_10.wav", "bytes": 414798, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 10
+START 14
+{"saved": "/workspace/scratch/voice_11.wav", "bytes": 412494, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 11
+START 15
+{"saved": "/workspace/scratch/voice_13.wav", "bytes": 228174, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 13
+START 16
+{"saved": "/workspace/scratch/voice_14.wav", "bytes": 350286, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 14
+START 17
+{"saved": "/workspace/scratch/voice_15.wav", "bytes": 541518, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 15
+START 18
+{"saved": "/workspace/scratch/voice_16.wav", "bytes": 251214, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 16
+START 19
+Traceback (most recent call last):
+  File "/tts.py", line 6, in <module>
+    with urllib.request.urlopen(request,timeout=150) as response:data=json.load(response)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+START 20
+Traceback (most recent call last):
+  File "/tts.py", line 6, in <module>
+    with urllib.request.urlopen(request,timeout=150) as response:data=json.load(response)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+{"saved": "/workspace/scratch/voice_19.wav", "bytes": 269646, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 19
+{"saved": "/workspace/scratch/voice_20.wav", "bytes": 414798, "voice": "zh-CN-XiaoxiaoNeural"}
+DONE 20
+Traceback (most recent call last):
+  File "/workspace/scratch/synth_parallel.py", line 13, in <module>
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:list(ex.map(work,items))
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/synth_parallel.py", line 11, in work
+    subprocess.run(['python3','/tts.py','--text-file',str(src),'--output',str(dst),'--rate','0'],check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '/tts.py', '--text-file', '/workspace/scratch/text_17.txt', '--output', '/workspace/scratch/voice_17.wav', '--rate', '0']' returned non-zero exit status 1.

@@ -1,0 +1,169 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "灌丛枝叶层层遮挡，镜头里没有足够清晰的鸟体可供辨种。声谱显示有短促的高频窄带声，但仅凭采样无法确认发声者或具体种类。",
+    "speech_spans": [
+      {
+        "start": 4.08,
+        "end": 9.36,
+        "text": "灌丛枝叶层层遮挡，镜头里没有足够清晰的鸟体可供辨种。"
+      },
+      {
+        "start": 10.0,
+        "end": 16.72,
+        "text": "声谱显示有短促的高频窄带声，但仅凭采样无法确认发声者或具体种类。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫和啁啾声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械感和合成痕迹。",
+      "times": [
+        4.32,
+        16.8
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色略显干瘪单薄，不够饱满圆润，听感上有一定的不自然感。",
+      "times": [
+        4.32,
+        16.8
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音清晰准确，字正腔圆，没有含糊不清的地方，易于理解。",
+      "times": [
+        4.32,
+        16.8
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但略显生硬，句间停顿过于规律，缺乏真人说话时的自然节奏感。",
+      "times": [
+        4.32,
+        16.8
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声的比例基本协调，但在某些时刻背景音略微偏大，对语音有轻微干扰。",
+      "times": [
+        0.0,
+        26.9
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声作为背景音，环境氛围保留完整。",
+      "times": [
+        0.0,
+        26.9
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 4.32,
+        "reason": "纯背景鸟鸣声"
+      },
+      {
+        "start": 16.8,
+        "end": 26.9,
+        "reason": "纯背景鸟鸣声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": null,
+    "I_reason": "音频中未说出任何物种名称，旁白明确表示“无法确认发声者或具体种类”。",
+    "F": {
+      "score": 1.0,
+      "reason": "解说内容准确描述了视觉和听觉上的局限性：画面被灌丛遮挡导致无法辨种，声谱特征不足以独立确认物种。这与提供的真值（抽样无法可靠辨认、无法确定发声动物具体物种）完全一致，没有包含错误的事实断言。",
+      "times": [
+        "04:08-09:36",
+        "10:00-16:72"
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "视听证据高度对应。背景音确实是持续的鸟鸣声，且正如旁白所述，仅凭此声音和模糊的画面确实无法在科学上确证为“四川蝗莺”。旁白诚实地反映了当前素材的证据强度不足，而非强行匹配真值。",
+      "times": [
+        "00:00-25:00"
+      ]
+    },
+    "claims": [
+      {
+        "claim": "灌丛枝叶层层遮挡，镜头里没有足够清晰的鸟体可供辨种。",
+        "supported": true,
+        "reason": "符合真值中的 verified_visual 描述及 uncertain_claims 关于个体归属不确定的说明。"
+      },
+      {
+        "claim": "声谱显示有短促的高频窄带声，但仅凭采样无法确认发声者或具体种类。",
+        "supported": true,
+        "reason": "符合真值中的 verified_audio 描述及 uncertain_claims 关于无法确定物种的说明。虽然真值给出了物种名，但在缺乏清晰视觉和唯一性声学指纹的情况下，盲听判断“无法确认”是严谨且正确的。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 0.9,
+      "reason": "字幕已实际烧录进画面，文字内容与提供的独立转写完全一致。字幕位于画面上方区域，未遮挡任何主要鸟体（尽管画面本身为茂密枝叶无明显主体），且字体清晰可读。",
+      "times": [
+        "movie 52.75s (chapter 6.68s): '灌丛枝叶层层遮挡...' 对应 SRT 50.0-56.2s",
+        "movie 53.10s (chapter 7.03s): '灌丛枝叶层层遮挡...' 对应 SRT 50.0-56.2s",
+        "movie 57.21s (chapter 11.14s): '声谱显示有短促的...' 对应 SRT 56.2-63.6s",
+        "movie 59.92s (chapter 13.85s): '声谱显示有短促的...' 对应 SRT 56.2-63.6s"
+      ]
+    },
+    "timing": {
+      "score": 0.9,
+      "reason": "解说时机与当前章节画面高度对应。当旁白提到“灌丛枝叶层层遮挡”时，画面确实展示了密集的树叶和枝条；随后提到的“声谱显示...”虽然无法在视觉上看到频谱图，但作为对听觉信息的补充说明出现在同一场景下是合理的。时间轴上，SRT的时间点（约50秒开始）与抽样的帧时间点（如52.75s, 57.21s）吻合，逻辑连贯。",
+      "times": [
+        "movie 52.75s: 旁白描述遮挡 -> 画面展示茂密枝叶",
+        "movie 57.21s: 旁白转入声谱分析 -> 画面保持环境镜头"
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 50.167,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 63.067,
+        "end": 72.8,
+        "matched_original_seconds": 8
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 4.32,
+        "reason": "纯背景鸟鸣声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 11,
+    "compared_seconds": 25
+  }
+}

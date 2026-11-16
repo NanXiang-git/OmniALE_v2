@@ -1,0 +1,23 @@
+{
+  "rubric_changed_fields": {
+    "body_per_segment": {
+      "v2": 25,
+      "v3": 16.666666666666668
+    },
+    "version": {
+      "v2": "2.0",
+      "v3": "3.0"
+    },
+    "segments": {
+      "v2": 4,
+      "v3": 6
+    },
+    "formula": {
+      "v2": "B=sum(I*(10+8F+7E)); Q=.70H+.20A+.10D; S=B*Q",
+      "v3": "B=(100/6)*sum(I*(.40+.32F+.28E)); Q=mean(.70H+.20A+.10D); S=B*Q"
+    }
+  },
+  "new_input_only_plus_required_six_chapter_normalization": true,
+  "shared_weights_equal": true,
+  "no_formal_answer_started": true
+}

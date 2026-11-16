@@ -1,0 +1,182 @@
+{
+  "segment": 4,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "芦苇间的画面持续模糊，鸟体细节看不清，无法可靠辨种。声谱中可见轻弱的高频窄带声，但不能据此断定发声者就是画面里的鸟。",
+    "speech_spans": [
+      {
+        "start": 4.16,
+        "end": 9.04,
+        "text": "芦苇间的画面持续模糊，鸟体细节看不清，无法可靠辨种。"
+      },
+      {
+        "start": 9.76,
+        "end": 15.84,
+        "text": "声谱中可见轻弱的高频窄带声，但不能据此断定发声者就是画面里的鸟。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫声和虫鸣声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械朗读感。",
+      "times": [
+        4.3,
+        16.8
+      ]
+    },
+    "timbre": {
+      "score": 0.75,
+      "reason": "音色清晰稳定，但略显单薄，带有一定的合成质感。",
+      "times": [
+        4.3,
+        16.8
+      ]
+    },
+    "clarity": {
+      "score": 0.9,
+      "reason": "发音非常清晰，字正腔圆，没有含糊不清的地方。",
+      "times": [
+        4.3,
+        16.8
+      ]
+    },
+    "pacing": {
+      "score": 0.75,
+      "reason": "语速均匀，停顿位置符合句法结构，但整体节奏略显生硬。",
+      "times": [
+        4.3,
+        16.8
+      ]
+    },
+    "balance": {
+      "score": 0.9,
+      "reason": "人声突出且清晰，背景鸟鸣声作为环境音音量适中，两者分离度好，互不干扰。",
+      "times": [
+        4.3,
+        16.8
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰听到真实的鸟类鸣叫声，且贯穿整个音频片段。",
+      "times": [
+        0.0,
+        23.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 4.3,
+        "reason": "纯背景音，可清晰听到多种鸟鸣声"
+      },
+      {
+        "start": 16.8,
+        "end": 23.0,
+        "reason": "人声结束后的纯背景音，持续有鸟鸣声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中旁白仅描述了画面模糊、无法可靠辨种以及声谱特征，并未说出任何具体的物种名称（如“弗吉尼亚秧鸡”）。",
+    "F": {
+      "score": 1.0,
+      "reason": "旁白陈述了画面模糊导致无法辨种的事实，并指出不能仅凭声谱断定发声者身份，这些描述与提供的真值（视觉失焦、听觉证据局限）完全一致，没有事实错误。",
+      "times": [
+        [
+          4.16,
+          9.04
+        ],
+        [
+          9.76,
+          15.84
+        ]
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "旁白内容准确反映了当前视听证据的状态：视觉上确实模糊不清，听觉上虽有高频窄带声但缺乏唯一性指向。解说词严格基于可观察到的证据局限性进行陈述，未做过度推断。",
+      "times": [
+        [
+          4.16,
+          15.84
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "芦苇间的画面持续模糊，鸟体细节看不清，无法可靠辨种。",
+        "supported": true,
+        "reason": "符合真值中的verified_visual描述（失焦湿地茎叶，鸟体无法可靠辨认）。"
+      },
+      {
+        "claim": "声谱中可见轻弱的高频窄带声，但不能据此断定发声者就是画面里的鸟。",
+        "supported": true,
+        "reason": "符合真值中的verified_audio（存在高频鸟鸣）及uncertain_claims（声音与个体归属关系无法确认）。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已正确烧录于画面顶部，白色字体在背景上清晰可读。经核对，字幕文本内容与提供的独立转写完全一致（如“芦苇间的画面持续模糊...”），且未遮挡任何主要鸟体或关键视觉信息。",
+      "times": [
+        "movie 106.57s: '芦苇间的画面持续模糊...'",
+        "movie 107.85s: '芦苇间的画面持续模糊...'",
+        "movie 114.28s: '声谱中可见轻弱的高频窄带声...'"
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面高度对应。SRT时间轴显示的字幕出现时段（约104.8s-117.6s）覆盖了抽样的视频帧（106.57s, 107.85s, 114.30s等）。在这些时间点，画面确实呈现为失焦的湿地茎叶，与旁白描述的“画面持续模糊”、“无法可靠辨种”的事实相符，音画同步逻辑准确。",
+      "times": [
+        "movie 106.57s (Subtitle active & matches visual)",
+        "movie 114.30s (Subtitle active & matches visual)"
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 100.767,
+        "end": 104.967,
+        "matched_original_seconds": 4
+      },
+      {
+        "start": 117.067,
+        "end": 123.967,
+        "matched_original_seconds": 6
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 4.3,
+        "reason": "纯背景音，可清晰听到多种鸟鸣声"
+      },
+      {
+        "start": 16.8,
+        "end": 23.0,
+        "reason": "人声结束后的纯背景音，持续有鸟鸣声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 10,
+    "compared_seconds": 22
+  }
+}
