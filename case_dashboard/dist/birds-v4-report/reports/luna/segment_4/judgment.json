@@ -1,0 +1,172 @@
+{
+  "segment": 4,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "镜头对着芦苇，鸟没有进入清晰焦点。这里暂认作芦苇莺。原声电平很低，无法据频谱确认鸣声类型或来源。",
+    "speech_spans": [
+      {
+        "start": 3.28,
+        "end": 6.72,
+        "text": "镜头对着芦苇，鸟没有进入清晰焦点。"
+      },
+      {
+        "start": 7.12,
+        "end": 8.56,
+        "text": "这里暂认作芦苇莺。"
+      },
+      {
+        "start": 9.2,
+        "end": 14.0,
+        "text": "原声电平很低，无法据频谱确认鸣声类型或来源。"
+      }
+    ],
+    "background": "持续的鸟类鸣叫和虫鸣声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声具有明显的AI合成特征，语调平直缺乏起伏，句尾处理生硬，没有真人解说的自然呼吸感和情感变化。",
+      "times": [
+        3.48,
+        14.6
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色听起来像标准的电子女声，虽然清晰但缺乏真实人类嗓音的质感和共鸣，略显单薄和机械。",
+      "times": [
+        3.48,
+        14.6
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音非常标准且字正腔圆，每个字的咬字都很清晰，完全没有含糊不清的地方，易于理解。",
+      "times": [
+        3.48,
+        14.6
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀得有些刻意，停顿位置过于规整（通常在标点处），缺乏人类说话时自然的节奏变化和犹豫感。",
+      "times": [
+        3.48,
+        14.6
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声处于前景，背景鸟鸣声作为环境音存在，两者分离度尚可，但在某些时刻鸟叫声略大，稍微干扰了听感，不过整体不影响理解。",
+      "times": [
+        0.0,
+        23.92
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声和环境底噪，这些声音贯穿始终，保留了原始录音的自然氛围。",
+      "times": [
+        0.0,
+        23.92
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 14.6,
+        "end": 23.92,
+        "reason": "此时间段内无人声，只有清晰的鸟鸣声和自然环境音。"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "芦苇莺",
+    "I_reason": "在00:07-00:08处，旁白明确说出“这里暂认作芦苇莺”，与真值“弗吉尼亚秧鸡”不符。",
+    "F": {
+      "score": 0.2,
+      "reason": "物种识别错误（将弗吉尼亚秧鸡误认为芦苇莺）。但关于画面失焦、原声电平低且无法通过频谱确认鸣声来源的描述符合客观事实。",
+      "times": [
+        3.28,
+        14.0
+      ]
+    },
+    "E": {
+      "score": 0.5,
+      "reason": "旁白准确描述了视觉上的失焦状态和听觉上难以溯源的困境，视听证据对应度尚可；但由于最终给出的物种结论完全错误，导致整体证据链断裂。",
+      "times": [
+        3.28,
+        8.56
+      ]
+    },
+    "claims": [
+      {
+        "claim": "镜头对着芦苇，鸟没有进入清晰焦点。",
+        "supported": true,
+        "reason": "符合视频画面中主体模糊、背景为植物的实际情况。"
+      },
+      {
+        "claim": "这里暂认作芦苇莺。",
+        "supported": false,
+        "reason": "与真值“弗吉尼亚秧鸡”冲突，属于错误的物种鉴定。"
+      },
+      {
+        "claim": "原声电平很低，无法据频谱确认鸣声类型或来源。",
+        "supported": null,
+        "reason": "虽然音频确实存在底噪和电平问题，但作为科普内容，以此为由放弃准确的物种辨识是不合格的。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已正确烧录，白色字体在画面下方清晰可读。字幕内容完整且准确对应了独立转写的旁白文本。虽然部分帧中字幕位于底部黑边区域，但符合“在黑色遮挡/留边中正常显示可接受”的标准，且未遮挡主要画面主体（芦苇）。",
+      "times": [
+        "movie 106.57s",
+        "movie 109.47s",
+        "movie 110.43s",
+        "movie 114.30s",
+        "movie 118.17s"
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面完美对应。SRT时间范围(104-114.9s)覆盖了抽样的关键帧时间点。画面内容为失焦的湿地茎叶，无法辨认鸟体，这与字幕及转写中提到的“镜头对着芦苇，鸟没有进入清晰焦点”的描述完全一致，实现了音画同步。",
+      "times": [
+        "movie 106.57s",
+        "movie 109.47s",
+        "movie 110.43s",
+        "movie 114.30s"
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 100.767,
+        "end": 104.017,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 114.917,
+        "end": 123.967,
+        "matched_original_seconds": 9
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [],
+    "passed": false
+  },
+  "provenance": {
+    "matched_seconds": 12,
+    "compared_seconds": 22
+  }
+}

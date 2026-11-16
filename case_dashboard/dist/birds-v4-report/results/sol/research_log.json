@@ -1,0 +1,645 @@
+{
+  "author": "single independent answering model; no agents or other recognition models",
+  "network_policy": "All HTTP requests used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY environment settings; edge-tts proxy was passed explicitly. No direct public connections. Python requests/curl did not fetch webpage-linked assets except the explicitly selected allowed species photos and sonograms. No blocklisted domain was requested. No input media or source audio was uploaded.",
+  "research_scope": "Candidates were chosen from visible plumage, bill, posture, habitat and locally computed sonograms. Candidate audio references were used only to inspect general species note structure; no fingerprints, embeddings, cross-correlations, source searches, reverse image search, filenames or file metadata used for identification. Technical ffprobe metadata was used only for output format/timing validation.",
+  "third_party_source_answer_encountered": false,
+  "limitations": "No native audio listening tool. Audio observations are numerical/visual sonogram observations; subjective voice naturalness and sound timbre have not been directly auditioned. Search snippets were not treated as read source bodies. Some independent guide pages contain pre-existing translated text; no AI endpoint or identification feature on those sites was invoked.",
+  "accesses": [
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+      "status": 200,
+      "purpose": "Read independent candidate identification account; compare stocky rounded-tail Cetti versus reedbed warblers",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/savis-warbler",
+      "status": 200,
+      "purpose": "Read independent candidate identification account; compare stocky rounded-tail Cetti versus reedbed warblers",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+      "status": 200,
+      "purpose": "Read independent candidate identification account; compare stocky rounded-tail Cetti versus reedbed warblers",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/acadian-flycatcher",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/least-flycatcher",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "status": 200,
+      "purpose": "Read independent guide identification, voice and behavior sections; candidates selected by visible morphology",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Brownish-flanked_Bush_Warbler",
+      "status": 403,
+      "purpose": "Access failed, body not read or used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Russet_Bush_Warbler",
+      "status": 403,
+      "purpose": "Access failed, body not read or used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.birdfinding.info/brownish-flanked-bush-warbler/",
+      "status": 406,
+      "purpose": "Access rejected; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.birdfinding.info/russet-bush-warbler/",
+      "status": 406,
+      "purpose": "Access rejected; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.birdfinding.info/cettis-warbler/",
+      "status": 406,
+      "purpose": "Access rejected; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-cettis-warbler.html",
+      "status": 404,
+      "purpose": "Candidate account path did not exist; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-brownish-flanked-bush-warbler.html",
+      "status": 404,
+      "purpose": "Candidate account path did not exist; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-russet-bush-warbler.html",
+      "status": 404,
+      "purpose": "Candidate account path did not exist; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/brownish-flanked.bush.warbler.html",
+      "status": 404,
+      "purpose": "Candidate account path did not exist; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/eurasian.reed.warbler.html",
+      "status": 404,
+      "purpose": "Candidate account path did not exist; not used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/russet.bush.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/brown-flanked.bush.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/cetti.s.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/willow.flycatcher.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/alder.flycatcher.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/brown.bush.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/savi.s.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/great.reed.warbler.html",
+      "status": 200,
+      "purpose": "Read candidate guide and view candidate photos; no external AI identification used",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/chinese.bush.warbler.html",
+      "status": "initial proxy connection interrupted; later successful",
+      "purpose": "Initial request failed after redirection within same allowed site, then a later normal request succeeded; no blocked domain accessed",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Savi%27s%20warbler%20identification%20Cetti%20brown%20tail",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Cettis%20Warbler%20identification",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Brownish%20flanked%20bush%20warbler%20identification",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Russet%20bush%20warbler%20identification",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Willow%20flycatcher%20song%20spectrogram",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=Eurasian%20reed%20warbler%20identification",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%E5%BC%BA%E8%84%9A%E6%A0%91%E8%8E%BA%20%E8%AF%86%E5%88%AB",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Horornis%20fortipes%22",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Locustella%20mandelli%22",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Cettia%20cetti%22",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Cettia%20major%22",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Cettia%20brunnescens%22",
+      "status": 200,
+      "purpose": "Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.google.com/search?q=%22Brownish-flanked%20Bush%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22Brownish-flanked%20Bush%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.google.com/search?q=%22Russet%20Bush%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22Russet%20Bush%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.google.com/search?q=%22Cettis%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22Cettis%20Warbler%22%20identification",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.google.com/search?q=%22Willow%20Flycatcher%22%20song%20spectrogram",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22Willow%20Flycatcher%22%20song%20spectrogram",
+      "status": "proxy CONNECT 403 Egress denied or unavailable",
+      "purpose": "Search unavailable, no body read; abandoned",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://base-prod.rspb-prod.magnolia-platform.com/.imaging/focalpoint/landscape16to9/1200x675/dam/jcr:55ede384-dc72-4998-9ac1-72f04b37783d/cetti_s-warbler_1200x675.jpg",
+      "status": 200,
+      "purpose": "Independent Cetti candidate illustration comparison, rejected; no reverse image search",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/raphael.jordan/images/id/locustelle.de.mandelli.rajo.1p.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/paul.van.giersbergen/images/id/locustelle.de.mandelli.pava.1p.97.c.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/pascal.misiek/images/id/bouscarle.de.montagne.pami.1p.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/raphael.jordan/images/bouscarle.de.montagne.rajo.1p.97.c.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/aurelien.audevard/images/id/bouscarle.de.cetti.auau.1p.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/geoffroy.chabot/images/id/bouscarle.de.cetti.gech.2p.97.c.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/hans.spiecker/images/id/moucherolle.des.saules.hasp.3p.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/didier.buysse/images/id/moucherolle.des.saules.dibu.1p.97.c.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/rene.lortie/images/id/moucherolle.des.aulnes.relo.1p.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/ricketdi/images/id/moucherolle.des.aulnes.fori.1p.97.c.jpg",
+      "status": 200,
+      "purpose": "Independent candidate morphology photo selected by species guide; never used to locate input source",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/raphael.jordan/images/id/locustelle.russule.rajo.1p.jpg",
+      "status": 200,
+      "purpose": "Independent brown bush/Savi candidate morphology comparison",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/herve.michel/images/id/locustelle.luscinioide.hemi.3p.jpg",
+      "status": 200,
+      "purpose": "Independent brown bush/Savi candidate morphology comparison",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/13881",
+      "status": 200,
+      "purpose": "Independent candidate species recording page selected from guide, only generic song structure; not a search for the input media",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/sounds/spectrograms/CDTGHVBGZP/13881/grey-medium.png",
+      "status": 200,
+      "purpose": "View independent candidate song sonogram, not source matching",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/13755",
+      "status": 200,
+      "purpose": "Independent candidate species recording page selected from guide, only generic song structure; not a search for the input media",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://xeno-canto.org/sounds/spectrograms/CDTGHVBGZP/13755/grey-medium.png",
+      "status": 200,
+      "purpose": "View independent candidate song sonogram, not source matching",
+      "used_in_identification": true
+    },
+    {
+      "url": "https://xeno-canto.org/457122",
+      "status": 200,
+      "purpose": "Independent candidate species recording page selected from guide, only generic song structure; not a search for the input media",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/sounds/spectrograms/YPDXKAZUZN/457122/grey-medium.png",
+      "status": 200,
+      "purpose": "View independent candidate song sonogram, not source matching",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/81233",
+      "status": 200,
+      "purpose": "Independent candidate species recording page selected from guide, only generic song structure; not a search for the input media",
+      "used_in_identification": false
+    },
+    {
+      "url": "https://xeno-canto.org/sounds/spectrograms/JZARYPSBFA/81233/grey-medium.png",
+      "status": 200,
+      "purpose": "View independent candidate song sonogram, not source matching",
+      "used_in_identification": false
+    },
+    {
+      "time_unix": 1794796993.5687532,
+      "url": "https://xeno-canto.org/81233/download",
+      "purpose": "Independent species song reference for visual sonogram structure only; no source matching; excluded from film",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/81233/download",
+      "bytes": 401991
+    },
+    {
+      "time_unix": 1794796994.6193326,
+      "url": "https://xeno-canto.org/681363/download",
+      "purpose": "Independent candidate sound reference for general call pattern; no source matching; never mixed into output",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/681363/download",
+      "bytes": 600871
+    },
+    {
+      "time_unix": 1794796993.5667148,
+      "url": "https://xeno-canto.org/13881/download",
+      "purpose": "Independent species song reference for visual sonogram structure only; no source matching; excluded from film",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/13881/download",
+      "bytes": 461516
+    },
+    {
+      "time_unix": 1794796995.7632039,
+      "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+      "purpose": "Assess reedbed bird candidate morphology and general song description",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/common.reed.warbler.html",
+      "bytes": 93588
+    },
+    {
+      "time_unix": 1794796993.5678134,
+      "url": "https://xeno-canto.org/13755/download",
+      "purpose": "Independent species song reference for visual sonogram structure only; no source matching; excluded from film",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/13755/download",
+      "bytes": 966874
+    },
+    {
+      "time_unix": 1794796997.3671749,
+      "url": "https://www.oiseaux.net/chant/didier.collin/bouscarle.de.cetti.1.mp3",
+      "purpose": "Independent candidate sound reference for general call pattern; no source matching; never mixed into output",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/chant/didier.collin/bouscarle.de.cetti.1.mp3",
+      "bytes": 286720
+    },
+    {
+      "time_unix": 1794796999.1379116,
+      "url": "https://www.oiseaux.net/birds/marsh.warbler.html",
+      "purpose": "Assess reedbed bird candidate morphology and general song description",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/marsh.warbler.html",
+      "bytes": 94895
+    },
+    {
+      "time_unix": 1794797002.890308,
+      "url": "https://www.oiseaux.net/birds/blyth.s.reed.warbler.html",
+      "purpose": "Assess reedbed bird candidate morphology and general song description",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/blyth.s.reed.warbler.html",
+      "bytes": 93554
+    },
+    {
+      "time_unix": 1794797156.0319107,
+      "url": "https://xeno-canto.org/161967/download",
+      "purpose": "Independent call-type reference for candidate species, selected from guide; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/161967/download",
+      "bytes": 634303
+    },
+    {
+      "time_unix": 1794797156.0307238,
+      "url": "https://xeno-canto.org/759042/download",
+      "purpose": "Independent call-type reference for candidate species, selected from guide; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/759042/download",
+      "bytes": 1712072
+    },
+    {
+      "time_unix": 1794797209.1537492,
+      "url": "https://www.oiseaux.net/birds/chinese.bush.warbler.html",
+      "purpose": "Additional plain brown bush warbler candidates, selected by visible black bill and long tail",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/chinese.bush.warbler.html",
+      "bytes": 60093
+    },
+    {
+      "time_unix": 1794797209.1549377,
+      "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+      "purpose": "Additional plain brown bush warbler candidates, selected by visible black bill and long tail",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/sichuan.bush.warbler.html",
+      "bytes": 57000
+    },
+    {
+      "time_unix": 1794797213.2604194,
+      "url": "https://www.oiseaux.net/photos/frederic.pelsy/images/id/locustelle.de.cheng.frpe.1p.jpg",
+      "purpose": "Candidate plumage reference only",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/photos/frederic.pelsy/images/id/locustelle.de.cheng.frpe.1p.jpg",
+      "bytes": 35579
+    },
+    {
+      "time_unix": 1794797213.0195029,
+      "url": "https://www.oiseaux.net/photos/mengshuai.ge/images/id/locustelle.de.taczanowski.mege.1p.jpg",
+      "purpose": "Candidate plumage reference only",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/photos/mengshuai.ge/images/id/locustelle.de.taczanowski.mege.1p.jpg",
+      "bytes": 22487
+    },
+    {
+      "time_unix": 1794797209.1555736,
+      "url": "https://www.oiseaux.net/birds/baikal.bush.warbler.html",
+      "purpose": "Additional plain brown bush warbler candidates, selected by visible black bill and long tail",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/baikal.bush.warbler.html",
+      "bytes": 59254
+    },
+    {
+      "time_unix": 1794797218.424321,
+      "url": "https://www.oiseaux.net/photos/catherine.et.bernard.lanneluc/images/id/locustelle.de.david.cala.1p.jpg",
+      "purpose": "Candidate plumage reference only",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/photos/catherine.et.bernard.lanneluc/images/id/locustelle.de.david.cala.1p.jpg",
+      "bytes": 22490
+    },
+    {
+      "time_unix": 1794797156.0314114,
+      "url": "https://xeno-canto.org/323202/download",
+      "purpose": "Independent call-type reference for candidate species, selected from guide; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/323202/download",
+      "bytes": 2441434
+    },
+    {
+      "time_unix": 1794797320.6515577,
+      "url": "https://xeno-canto.org/323550/download",
+      "purpose": "Independent candidate species song reference, general note cadence and frequency; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/323550/download",
+      "bytes": 58197
+    },
+    {
+      "time_unix": 1794797320.66373,
+      "url": "https://xeno-canto.org/238544/download",
+      "purpose": "Independent candidate species song reference, general note cadence and frequency; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/238544/download",
+      "bytes": 267345
+    },
+    {
+      "time_unix": 1794797320.6917999,
+      "url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+      "purpose": "Independent candidate species song reference, general note cadence and frequency; no source matching",
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+      "bytes": 955904
+    },
+    {
+      "time_unix": 1794797320.6368601,
+      "url": "https://xeno-canto.org/485820/download",
+      "purpose": "Independent candidate species song reference, general note cadence and frequency; no source matching",
+      "status": 200,
+      "final_url": "https://xeno-canto.org/485820/download",
+      "bytes": 3081505
+    },
+    {
+      "time_unix": 1794797371.669431,
+      "url": "https://www.bing.com/search?q=%22Locustella+chengi%22+song+frequency",
+      "purpose": "Independent species vocal diagnostic characteristics, no original media source search",
+      "status": 200,
+      "final_url": "https://cn.bing.com/search?q=%22Locustella+chengi%22+song+frequency",
+      "bytes": 101868
+    }
+  ],
+  "software_acquisition": [
+    {
+      "tool": "pip",
+      "request": "edge-tts matplotlib",
+      "result": "Failed because matplotlib distribution was unavailable; no matplotlib installed."
+    },
+    {
+      "tool": "pip",
+      "request": "edge-tts",
+      "result": "Installed edge-tts 7.3.1 and dependencies in /workspace/site-packages through configured package/proxy environment."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "result": "Failed after max-time with no font obtained; abandoned."
+    },
+    {
+      "url": "https://deb.debian.org/debian/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20220127+repack1-1_all.deb",
+      "result": "HTTP200 but 54MB download timed out after50s with partial2.1MB; never installed."
+    },
+    {
+      "url": "https://deb.debian.org/debian/pool/main/f/fonts-wqy-microhei/",
+      "result": "HTTP200 directory listing read to obtain actual small font package filename."
+    },
+    {
+      "url": "https://deb.debian.org/debian/pool/main/f/fonts-wqy-microhei/fonts-wqy-microhei_0.2.0-beta-4_all.deb",
+      "result": "HTTP200 downloaded and extracted locally; WenQuanYi Micro Hei used for burned captions; license included."
+    }
+  ],
+  "speech_synthesis": {
+    "package": "edge-tts",
+    "version": "7.3.1",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "proxy_env": "HTTPS_PROXY / HTTP_PROXY",
+    "sent_data": "Only self-authored narration text in narration_plan.json; no source media uploaded",
+    "time_unix": 1794797588.5704873
+  },
+  "speech_test": "Successful initial 5.784-second test with zh-CN-XiaoxiaoNeural, then17 final text chunks. Only self-authored text sent to Microsoft Edge speech service; audio responses were decoded locally.",
+  "saved_at_unix": 1794798402.7073581
+}

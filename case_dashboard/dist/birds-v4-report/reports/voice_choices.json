@@ -1,0 +1,395 @@
+{
+  "sol": {
+    "summary": "模型自行选择并安装 edge-tts，在 Python 中调用网络语音服务，编写制作脚本完成配音与混音。",
+    "package": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存提交文件中的明确音色字符串；选型过程另见调用证据。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 7,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts matplotlib'",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Collecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nERROR: Could not find a version that satisfies the requirement matplotlib (from versions: none)\nERROR: No matching distribution found for matplotlib\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 21,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Collecting edge-tts\n  Using cached edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)\nCollecting tabulate<1.0.0,>=0.4.4 (from edge-tts)\n  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)\nCollecting typing-extensions<5.0.0,>=4.1.0 (from edge-tts)\n  Downloading typing_extensions-4.16.0-py3-none-an\n…\nx86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)\nDownloading tabulate-0.10.0-py3-none-any.whl (39 kB)\nDownloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nDownloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)\nDownloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)\nDownloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)\nDownloading attrs-26.1.0-py3-none-any.whl (67 kB)\nDownloading certifi-2026.10.23-py3-none-any.whl (135 kB)\nDownloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)\nDownloading idna-3.20-py3-none-any.whl (69 kB)\nDownloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)\nInstalling collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts\n\nSuccessfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 26,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport asyncio,os,edge_tts\nasync def main():\n c=edge_tts.Communicate('先静静观察。这只鸟的尾巴很长，背部呈暖褐色。',voice='zh-CN-XiaoxiaoNeural',rate='-5%',proxy=os.environ['HTTPS_PROXY'])\n await c.save('/workspace/scratch/voice_test.mp3')\nasyncio.run(main())\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 29,
+        "purpose": "核实测试语音文件",
+        "command": "/usr/bin/bash -lc \"ffprobe -v error -show_entries format=duration -of default=nw=1 /workspace/scratch/voice_test.mp3 && python3 - <<'PY'\nimport edge_tts, inspect\nprint(inspect.signature(edge_tts.Communicate))\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "duration=5.784000\n(text: str, voice: str = 'en-US-EmmaMultilingualNeural', *, rate: str = '+0%', volume: str = '+0%', pitch: str = '+0Hz', boundary: Literal['WordBoundary', 'SentenceBoundary'] = 'SentenceBoundary', connector: Optional[aiohttp.connector.BaseConnector] = None, proxy: Optional[str] = None, connect_timeout: Optional[int] = 10, receive_timeout: Optional[int] = 60)\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 65,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/narration_plan.json <<'JSON'\n[\n {\\\"id\\\":\\\"s1a\\\",\\\"segment\\\":1,\\\"start\\\":6.2,\\\"text\\\":\\\"这只小鸟，我判断是四川短翅莺。\\\"},\n {\\\"id\\\":\\\"s1b\\\",\\\"segment\\\":1,\\\"start\\\":12.5,\\\"text\\\":\\\"看它暖褐色的背部、深色细嘴，还有向后伸出的长尾。\\\"},\n {\\\"id\\\":\\\"s1c\\\",\\\"segment\\\":1,\\\"start\\\":28.0,\\\"text\\\":\\\"原声里的短音有节奏地重复，像一串简短的鸣唱。\\\"},\n {\\\"id\\\":\\\"s1d\\\",\\\"segment\\\":1,\\\"start\\\":35.2,\\\"text\\\":\\\"不过，画面没有同步的张嘴动作，声音归属仍需谨慎。\\\"},\n {\\\"id\\\":\\\"s2a\\\",\\\"segment\\\":2,\\\"start\\\":50.0,\\\"text\\\":\\\"枝叶把鸟遮住了。根据成串重复的鸣唱，我暂按四川短翅莺识别。\\\"},\n {\\\"id\\\":\\\"s2b\\\",\\\"segment\\\":2,\\\"start\\\":62.0,\\\"text\\\":\\\"声音一阵接着一阵，鸟却藏在浓密的枝叶后。\\\"},\n {\\\"id\\\":\\\"s3a\\\",\\\"segment\\\":3,\\\"start\\\":79.0,\\\"text\\\":\\\"这只鸟，我判断是桤木纹霸鹟。\\\"},\n {\\\"id\\\":\\\"s3b\\\",\\\"segment\\\":3,\\\"start\\\":84.0,\\\"text\\\":\\\"浅色喉部、淡眼圈和两道翼斑，是主要线索。\\\"},\n {\\\"id\\\":\\\"s3c\\\",\\\"segment\\\":3,\\\"start\\\":92.0,\\\"text\\\":\\\"它在枝头抬头鸣唱，短句之间留着停顿。\\\"},\n {\\\"id\\\":\\\"s4a\\\",\\\"segment\\\":4,\\\"start\\\":107.0,\\\"text\\\":\\\"芦苇后的这只小鸟，暂按芦苇莺识别。\\\"},\n {\\\"id\\\":\\\"s4b\\\",\\\"segment\\\":4,\\\"start\\\":113.0,\\\"text\\\":\\\"画面失焦，细节看不清。\\\"},\n {\\\"id\\\":\\\"s4c\\\",\\\"segment\\\":4,\\\"start\\\":118.0,\\\"text\\\":\\\"原声中，短小多变的鸣唱接连出现。\\\"},\n {\\\"id\\\":\\\"s5a\\\",\\\"segment\\\":5,\\\"start\\\":130.0,\\\"text\\\":\\\"这是黑脚信天翁。深褐色的成鸟，正靠近全身绒羽的雏鸟。\\\"},\n {\\\"id\\\":\\\"s5b\\\",\\\"segment\\\":5,\\\"start\\\":140.0,\\\"text\\\":\\\"成鸟俯身，和雏鸟嘴对嘴地接触。信天翁会把食物反刍出来，喂给幼鸟。\\\"},\n {\\\"id\\\":\\\"s5c\\\",\\\"segment\\\":5,\\\"start\\\":153.0,\\\"text\\\":\\\"原声里，还夹着尖细的叫声。\\\"},\n {\\\"id\\\":\\\"s6a\\\",\\\"segment\\\":6,\\\"start\\\":163.0,\\\"text\\\":\\\"这是黑背信天翁。白头白腹，背翼深黑。\\\"},\n {\\\"id\\\":\\\"s6b\\\",\\\"segment\\\":6,\\\"start\\\":173.0,\\\"text\\\":\\\"仰头长鸣、相互碰嘴，配合点头，这是它们的求偶展示。\\\"}\n]\nJSON\ncat > /workspace/submission/synthesize_narration.py <<'PY'\n#\"'!/usr/bin/env python3\n\"\"\"Synthesize only self-authored Mandarin narration through configured HTTP proxy.\nNo source video or source audio is transmitted. No recognition model is used.\n\"\"\"\nimport asyncio,json,os,subprocess,pathlib,time\nimport edge_tts\nBASE=pathlib.Path('\"'/workspace/submission');CACHE=pathlib.Path('/workspace/scratch/tts');CACHE.mkdir(exist_ok=True)\nVOICE='zh-CN-XiaoxiaoNeural';RATE='-5%'\nasync def synth(item,sem):\n async with sem:\n  p=CACHE/(item['id']+'.mp3');meta=CACHE/(item['id']+'_boundary.json')\n  if not p.exists() or p.stat().st_size==0:\n   for attempt in range(3):\n    boundaries=[]\n    try:\n     c=edge_tts.Communicate(item['text'],voice=VOICE,rate=RATE,pitch='+0Hz',volume='+0%',boundary='WordBoundary',proxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY'))\n     with p.open('wb') as f:\n      async for chunk in c.stream():\n       if chunk['type']=='audio':f.write(chunk['data'])\n       elif chunk['type'] in ('WordBoundary','SentenceBoundary'):boundaries.append(chunk)\n     meta.write_text(json.dumps(boundaries,ensure_ascii=False,indent=2));break\n    except Exception:\n     p.unlink(missing_ok=True)\n     if attempt==2:raise\n     await asyncio.sleep(1)\n  wav=CACHE/(item['id']+'.wav')\n  subprocess.run(['ffmpeg','-v','error','-y','-i',str(p),'-ac','1','-ar','48000','-c:a','pcm_s16le',str(wav)],check=True)\n  print('SYNTHESIZED',item['id'],flush=True)\nasync def main():\n plan=json.loads((BASE/'narration_plan.json').read_text());sem=asyncio.Semaphore(3)\n await asyncio.gather(*(synth(i,sem) for i in plan))\n (BASE/'tts_implementation.json').write_text(json.dumps({'package':'edge-tts','version':edge_tts.__version__,'voice':VOICE,'rate':RATE,'pitch':'+0Hz','proxy_env':'HTTPS_PROXY / HTTP_PROXY','sent_data':'Only self-authored narration text in narration_plan.json; no source media uploaded','time_unix':time.time()},ensure_ascii=False,indent=2))\nif __name__=='__main__':asyncio.run(main())\nPY\npython3 /workspace/submission/synthesize_narration.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "SYNTHESIZED s1b\nSYNTHESIZED s1c\nSYNTHESIZED s1a\nSYNTHESIZED s2b\nSYNTHESIZED s1d\nSYNTHESIZED s2a\nSYNTHESIZED s3a\nSYNTHESIZED s3b\nSYNTHESIZED s3c\nSYNTHESIZED s4b\nSYNTHESIZED s4c\nSYNTHESIZED s4a\nSYNTHESIZED s5a\nSYNTHESIZED s5b\nSYNTHESIZED s5c\nSYNTHESIZED s6b\nSYNTHESIZED s6a\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 79,
+        "purpose": "记录选型、依赖与复现说明（含命令示例）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/write_research_log.py <<'PY'\nimport json,pathlib,urllib.parse,time\nB=pathlib.Path('/workspace/submission');W=pathlib.Path('/workspace/scratch');entries=[]\ndef add(url,status,purpose,used=False):entries.append(dict(url=url,status=status,purpose=purpose,used_in_identification=used))\nfor slug in ['cettis-warbler','savis-warbler','reed-warbler']:\n add('https://www.rspb.org.uk/birds-and-wildlife/'+slug,200,'Read independent candidate identification account; compare stocky rounded-tail Cetti versus reedbed warblers',False)\nfor slug in ['willow-flycatcher','eastern-wood-pewee','alder-flycatcher','acadian-flycatcher','least-flycatcher','black-footed-albatross','laysan-albatross']:\n add('https://www.audubon.org/field-guide/bird/'+slug,200,'Read independent guide identification, voice and behavior sections; candidates selected by visible morphology',slug in ['alder-flycatcher','willow-flycatcher','black-footed-albatross','laysan-albatross'])\nfor slug in ['Brownish-flanked_Bush_Warbler','Russet_Bush_Warbler']:\n add('https://www.birdforum.net/opus/'+slug,403,'Access failed, body not read or used')\nfor slug in ['brownish-flanked-bush-warbler','russet-bush-warbler','cettis-warbler']:\n add('https://www.birdfinding.info/'+slug+'/',406,'Access rejected; not used')\nfor slug in ['cettis-warbler','brownish-flanked-bush-warbler','russet-bush-warbler']:\n add('https://www.oiseaux-birds.com/card-'+slug+'.html',404,'Candidate account path did not exist; not used')\nfor slug in ['brownish-flanked.bush.warbler','eurasian.reed.warbler']:\n add('https://www.oiseaux.net/birds/'+slug+'.html',404,'Candidate account path did not exist; not used')\nfiles=[('russet.bush.warbler','idref4'),('brown-flanked.bush.warbler','idsecond1'),('cetti.s.warbler','idsecond2'),('willow.flycatcher','idsecond3'),('alder.flycatcher','idsecond4'),('brown.bush.warbler','thirdref0'),('savi.s.warbler','thirdref2'),('great.reed.warbler','thirdref4')]\nfor slug,f in files:add('https://www.oiseaux.net/birds/'+slug+'.html',200,'Read candidate guide and view candidate photos; no external AI identification used',slug in ['alder.flycatcher','willow.flycatcher'])\nadd('https://www.oiseaux.net/birds/chinese.bush.warbler.html','initial proxy connection interrupted; later successful','Initial request failed after redirection within same allowed site, then a later normal request succeeded; no blocked domain accessed')\nqueries=[\\\"Savi's warbler identification Cetti brown tail\\\",'Cettis Warbler identification','Brownish flanked bush warbler identification','Russet bush warbler identification','Willow flycatcher song spectrogram','Eurasian reed warbler identification','强脚树莺 识别','\\\"Horornis fortipes\\\"','\\\"Locustella mandelli\\\"','\\\"Cettia cetti\\\"','\\\"Cettia major\\\"','\\\"Cettia brunnescens\\\"']\nfor q in queries:add('https://www.bing.com/search?q='+urllib.parse.quote(q),200,'Text search for independent candidate species facts. Several queries returned irrelevant word-dictionary results; snippets did not count as body reading. Blocklisted search results were never opened.',False)\nfor q in ['\\\"Brownish-flanked Bush Warbler\\\" identification','\\\"Russet Bush Warbler\\\" identification','\\\"Cettis Warbler\\\" identification','\\\"Willow Flycatcher\\\" song spectrogram']:\n for root in ['https://www.google.com/search?q=','https://html.duckduckgo.com/html/?q=']:\n  add(root+urllib.parse.quote(q),'proxy CONNECT 403 Egress denied or unavailable','Search unavailable, no body read; abandoned',False)\nadd('https://base-prod.rspb-prod.magnolia-platform.com/.imaging/focalpoint/landscape16to9/1200x675/dam/jcr:55ede384-dc72-4998-9ac1-72f04b37783d/cetti_s-warbler_1200x675.jpg',200,'Independent Cetti candidate illustration comparison, rejected; no reverse image search')\n# Exact independent photo URLs read from saved guide responses, first two per candidate.\nfrom bs4 import BeautifulSoup\nfor name,file in [('russet','idref4'),('brownflank','idsecond1'),('cetti','idsecond2'),('willow','idsecond3'),('alder','idsecond4')]:\n s=BeautifulSoup((W/(file+'.html')).read_text(),'html.parser');ims=[i for i in s.find_all('img') if '/photos/' in i.get('src','') and '120.h' not in i.get('src','')]\n for i in ims[:2]:add(i['src'],200,'Independent candidate morphology photo selected by species guide; never used to locate input source',name=='alder')\nfor f in ['thirdref0','thirdref2']:\n s=BeautifulSoup((W/(f+'.html')).read_text(),'html.parser');i=next(i for i in s.find_all('img') if '/photos/' in i.get('src',''));add(i['src'],200,'Independent brown bush/Savi candidate morphology comparison')\nfor name,n in [('willow',13881),('alder',13755),('brownflank',457122),('russet',81233)]:\n add('https://xeno-canto.org/'+str(n),200,'Independent candidate species recording page selected from guide, only generic song structure; not a search for the input media',name=='alder')\n s=BeautifulSoup((W/('xc_'+name+'.html')).read_text(),'html.parser');im=s.select_one('img.spectro-image');add(im['src'],200,'View independent candidate song sonogram, not source matching',name=='alder')\nif (W/'network_new.jsonl').exists():\n for ln in (W/'network_new.jsonl').read_text().splitlines():entries.append(json.loads(ln))\nlog={\n 'author':'single independent answering model; no agents or other recognition models',\n 'network_policy':'All HTTP requests used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY environment settings; edge-tts proxy was passed explicitly. No direct public connections. Python requests/curl did not fetch webpage-linked assets except the explicitly selected allowed species photos and sonograms. No blocklisted domain was requested. No input media or source audio was uploaded.',\n 'research_scope':'Candidates were chosen from visible plumage, bill, posture, habitat and locally computed sonograms. Candidate audio references were used only to inspect general species note structure; no fingerprints, embeddings, cross-correlations, source searches, reverse image search, filenames or file metadata used for identification. Technical ffprobe metadata was used only for output format/timing validation.',\n 'third_party_source_answer_encountered':False,\n 'limitations':'No native audio listening tool. Audio observations are numerical/visual sonogram observations; subjective voice naturalness and sound timbre have not been directly auditioned. Search snippets were not treated as read source bodies. Some independent guide pages contain pre-existing translated text; no AI endpoint or identification feature on those sites was invoked.',\n 'accesses':entries,\n 'software_acquisition':[\n {'tool':'pip','request':'edge-tts matplotlib','result':'Failed because matplotlib distribution was unavailable; no matplotlib installed.'},\n {'tool':'pip','request':'edge-tts','result':'Installed edge-tts 7.3.1 and dependencies in /workspace/site-packages through configured package/proxy environment.'},\n {'url':'https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf','result':'Failed after max-time with no font obtained; abandoned.'},\n {'url':'https://deb.debian.org/debian/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20220127+repack1-1_all.deb','result':'HTTP200 but 54MB download timed out after50s with partial2.1MB; never installed.'},\n {'url':'https://deb.debian.org/debian/pool/main/f/fonts-wqy-microhei/','result':'HTTP200 directory listing read to obtain actual small font package filename.'},\n {'url':'https://deb.debian.org/debian/pool/main/f/fonts-wqy-microhei/fonts-wqy-microhei_0.2.0-beta-4_all.deb','result':'HTTP200 downloaded and extracted locally; WenQuanYi Micro Hei used for burned captions; license included.'}],\n 'speech_synthesis':json.load(open(B/'tts_implementation.json')),\n 'speech_test':'Successful initial 5.784-second test with zh-CN-XiaoxiaoNeural, then17 final text chunks. Only self-authored text sent to Microsoft Edge speech service; audio responses were decoded locally.',\n 'saved_at_unix':time.time()}\n(B/'research_log.json').write_text(json.dumps(log,ensure_ascii=False,indent=2),encoding='utf-8')\nPY\npython3 /workspace/scratch/write_research_log.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 81,
+        "purpose": "记录选型、依赖与复现说明（含命令示例）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/README.md <<'MD'\n本目录为六章中文鸟类科普视频交付。\n\n必需文件：final.mp4、narration.wav、subtitles.srt、segments.json。\n\n成片保留输入的画面顺序、正常速度和完整时间线，以1280×720、30fps、H.264/AAC转码。最终时长185.500秒，覆盖输入末帧；输入容器时长185.504秒。原片的时间戳在章节接缝处有极小空隙，常规30fps转换只填补这些帧间时间，不进行删章、变速、人工冻结或图片替换。\n\n配音使用 edge-tts 7.3.1 调用 zh-CN-XiaoxiaoNeural，rate=-5%、pitch=+0Hz，统一普通话女声。17段自写文本分别合成，保留服务返回的自然停顿，没有用变速挤压时长。仅旁白文字发送给语音合成服务，没有上传输入视频、原音轨或画面。synthesize_narration.py 为实际实现，narration_plan.json 为实际文本和排布，tts_implementation.json 记录方案，narration_intervals.json 记录解码后的时间区间。\n\nnarration.wav 为48kHz、16-bit PCM、单声道，长度与成片一致，未配音处为数字静音。原声保留双声道及原来的每个采样位置，只进行章节音量平衡、旁白时约9dB避让及输出峰值限制。未添加音乐、参考鸟叫或任何伪造的动物声音。mix_report.json 记录增益及淡变参数。\n\n中文字幕依据语音服务实际返回的字词时间戳生成。subtitles.srt 与烧录使用的 burn_subtitles.ass 文字、时间一致（ASS以百分之一秒精度储存）。多数字幕放在底部空地或原有黑边，末章字幕放在右下方并适当换行，避开中央前景雏鸟和成鸟头颈。\n\n限制：没有原生听音工具，未亲耳试听。实际以numpy/scipy读取原声和合成语音，查看声谱、幅度、停顿与字词边界，并人工检查画面动作。因此不声称完成主观听感验收。segments.json 如实记录识别置信度、遮挡情况与声音归属限制。第二、四章保留暂定判断。未调用其他识别模型或子代理。\n\n独立资料研究见 research_log.json；其中包含成功访问、失败访问、放弃来源和安装过程。参考鸟叫仅用于人工查看候选物种的一般声谱结构，均排除在混音输入之外。没有反向搜图、声纹检索或原素材溯源，也没有访问题目禁止的域名。\n\n复现命令（须保留输入路径）：\n\n\"'```bash\npython3 -m pip install --target /workspace/site-packages -r /workspace/submission/requirements.txt\nmkdir -p /workspace/scratch\nffmpeg -y -i /candidate/birds_source.mp4 -vn -c:a pcm_s16le /workspace/scratch/original.wav\npython3 /workspace/submission/synthesize_narration.py\npython3 /workspace/submission/assemble.py\nbash /workspace/submission/render.sh\n```\n\n中文字体为 WenQuanYi Micro Hei，已附 fonts/wqy-microhei.ttc 和许可证。依赖的实际版本见 environment_versions.json；FFmpeg须支持libx264、AAC和libass。\nMD\npython3 - <<'\"'PY'\nimport sys,json,pathlib,importlib.metadata as m,subprocess\np=pathlib.Path('/workspace/submission');names=['edge-tts','numpy','scipy','Pillow','requests','beautifulsoup4','aiohttp'];d={'python':sys.version,'packages':{n:m.version(n) for n in names},'ffmpeg':subprocess.check_output(['ffmpeg','-version'],text=True).splitlines()[0]};(p/'environment_versions.json').write_text(json.dumps(d,indent=2));(p/'requirements.txt').write_text('\\\\n'.join(f'{n}=={d[\\\"packages\\\"][n]}' for n in ['edge-tts','numpy','scipy','Pillow'])+'\\\\n');print(d)\nPY\ncp /workspace/scratch/research_fetch.py /workspace/submission/research_fetch.py\ncp /workspace/scratch/reference_spectra.py /workspace/submission/reference_spectra.py\ncp /workspace/scratch/audio_stats.json /workspace/submission/source_audio_stats.json\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{'python': '3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]', 'packages': {'edge-tts': '7.3.1', 'numpy': '1.26.4', 'scipy': '1.11.4', 'Pillow': '10.2.0', 'requests': '2.31.0', 'beautifulsoup4': '4.12.3', 'aiohttp': '3.14.5'}, 'ffmpeg': 'ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers'}\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 84,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/verify_delivery.py <<'PY'\n#\"'!/usr/bin/env python3\nimport pathlib,json,subprocess,numpy as np,re\nfrom scipy.io import wavfile\nB=pathlib.Path('\"'/workspace/submission');W=pathlib.Path('/workspace/scratch')\ninfo=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(B/'final.mp4')],text=True));video=next(s for s in info['streams'] if s['codec_type']=='video');audio=next(s for s in info['streams'] if s['codec_type']=='audio')\nsource=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','json','/candidate/birds_source.mp4'],text=True));sd=float(source['format']['duration']);duration=float(info['format']['duration'])\nassert video['codec_name']=='h264' and audio['codec_name']=='aac';assert video['width']>=1280 and video['height']>=720;assert video['r_frame_rate']=='30/1';assert abs(duration-sd)<=.5\nsr,n=wavfile.read(B/'narration.wav');assert sr==48000 and n.dtype==np.int16;assert abs(len(n)/sr-duration)<=1/sr\nss=json.load(open(B/'segments.json'));sr2,orig=wavfile.read(W/'original.wav');windows=[]\nfor s in ss['segments']:\n assert s['narration'];long=False\n for win in s['original_sound_windows']:\n  a=round(win['start']*sr);b=round(win['end']*sr);peak=int(np.max(np.abs(n[a:b].astype(np.int32))));assert peak==0,(s['segment'],win,peak)\n  q=orig[a:b].astype(float)/32768;rms=float(20*np.log10(np.sqrt(np.mean(q*q))+1e-12));assert np.any(q)\n  windows.append({'segment':s['segment'],**win,'narration_peak_pcm':peak,'source_rms_dbfs':rms})\n  if win['end']-win['start']>=2:long=True\n assert long\n cues=json.load(open(B/'subtitle_cues.json'));ct=''.join(c['text'] for c in cues if c['segment']==s['segment']);nt=''.join(i['text'] for i in s['narration']);assert ct==nt\nfor f in ['final.mp4','narration.wav','subtitles.srt','segments.json','research_log.json','synthesize_narration.py','README.md']:assert (B/f).stat().st_size>0\n# Full audiovisual decode checks stream validity and the entire delivered file.\nr=subprocess.run(['ffmpeg','-v','error','-i',str(B/'final.mp4'),'-f','null','-'],capture_output=True,text=True);assert r.returncode==0 and not r.stderr.strip(),r.stderr\nreport={'video':{k:video.get(k) for k in ['codec_name','width','height','r_frame_rate','nb_frames','duration']},'audio':{k:audio.get(k) for k in ['codec_name','sample_rate','channels','duration']},'output_duration':duration,'input_duration':sd,'duration_difference':duration-sd,'narration_duration':len(n)/sr,'narration_format':'48000 Hz signed 16-bit mono PCM','six_chapters_present':len(ss['segments'])==6,'caption_text_equals_spoken_text':True,'full_decode':'passed','original_sound_window_checks':windows,'subjective_listening':'Not performed: no native audio audition tool available. Checked actual waveforms and spectrograms instead.'}\n(B/'validation_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2))\nPY\npython3 /workspace/submission/verify_delivery.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\n  \"video\": {\n    \"codec_name\": \"h264\",\n    \"width\": 1280,\n    \"height\": 720,\n    \"r_frame_rate\": \"30/1\",\n    \"nb_frames\": \"5565\",\n    \"duration\": \"185.500000\"\n  },\n  \"audio\": {\n    \"codec_name\": \"aac\",\n    \"sample_rate\": \"48000\",\n    \"channels\": 2,\n    \"duration\": \"185.500000\"\n  },\n  \"output_duration\": 185.5,\n  \"input_duration\": 185.504,\n  \"duration_difference\": -0.003999999999990678,\n  \"narration_duration\": 185.5,\n  \"narration_format\": \"48000 Hz signed 16-bit mono PCM\",\n  \"six_chapters_present\": true,\n  \"caption_text_equals_spoken_text\": true,\n  \"full_decode\": \"passed\",\n  \"original_sound_wi\n…\n931\n    },\n    {\n      \"segment\": 4,\n      \"start\": 101,\n      \"end\": 106.6,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -46.6825572973459\n    },\n    {\n      \"segment\": 4,\n      \"start\": 115.99,\n      \"end\": 117.7,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -51.1794058677345\n    },\n    {\n      \"segment\": 5,\n      \"start\": 124.2,\n      \"end\": 129.6,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -44.31732353821439\n    },\n    {\n      \"segment\": 5,\n      \"start\": 148.5,\n      \"end\": 152.6,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -52.2295261047484\n    },\n    {\n      \"segment\": 6,\n      \"start\": 158.6,\n      \"end\": 162.6,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -35.98015188463621\n    },\n    {\n      \"segment\": 6,\n      \"start\": 168.4,\n      \"end\": 172.6,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -24.147785472255137\n    },\n    {\n      \"segment\": 6,\n      \"start\": 179.5,\n      \"end\": 185.4,\n      \"narration_peak_pcm\": 0,\n      \"source_rms_dbfs\": -27.540044046005285\n    }\n  ],\n  \"subjective_listening\": \"Not performed: no native audio audition tool available. Checked actual waveforms and spectrograms instead.\"\n}\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 88,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"mkdir -p /workspace/submission/audit/tts_boundaries /workspace/submission/audit/source_spectrograms\ncp /workspace/scratch/tts/*_boundary.json /workspace/submission/audit/tts_boundaries/\ncp /workspace/scratch/spec1.png /workspace/scratch/spec2.png /workspace/scratch/spec3.png /workspace/scratch/spec4.png /workspace/scratch/spec5.png /workspace/scratch/spec6.png /workspace/submission/audit/source_spectrograms/\ncat > /workspace/submission/analyze_source.py <<'PY'\n#\"'!/usr/bin/env python3\n\"\"\"Reproduce the actual local sample analysis used to inspect source sounds.\nNo model or remote service is invoked. Frequency pictures are not direct hearing.\n\"\"\"\nimport json,pathlib,numpy as np\nfrom scipy.io import wavfile\nfrom scipy.signal import stft\nfrom PIL import Image,ImageDraw\nW=pathlib.Path('\"'/workspace/scratch');B=pathlib.Path('/workspace/submission');sr,a=wavfile.read(W/'original.wav');x=a.astype(float).mean(axis=1)/32768\nstats=[]\nfor s in json.load(open('/candidate/chapters.json'))['segments']:\n y=x[round(s['start']*sr):round(s['end']*sr)]\n f,t,z=stft(y,sr,nperseg=1024,noverlap=768);db=20*np.log10(np.abs(z)+1e-7);v=np.clip((db[f<12000]+85)/65,0,1)\n im=Image.fromarray((v[::-1]*255).astype('uint8')).resize((1500,500));out=Image.new('RGB',(1600,580),'white');out.paste(im,(70,25));d=ImageDraw.Draw(out)\n for freq in range(0,12001,2000):d.text((5,520-freq/12000*500),str(freq),fill='black')\n for sec in range(0,int(s['end']-s['start'])+1,2):d.text((70+sec/(s['end']-s['start'])*1500,535),f'{s[\\\"start\\\"]+sec:.1f}',fill='black')\n out.save(B/'audit'/'source_spectrograms'/f'spec{s[\\\"segment\\\"]}.png')\n stats.append({'segment':s['segment'],'rms_dbfs':float(20*np.log10(np.sqrt(np.mean(y*y))+1e-9)),'peak_dbfs':float(20*np.log10(np.max(np.abs(y))+1e-9))})\n(B/'source_audio_stats.json').write_text(json.dumps(stats,indent=2))\nPY\npython3 - <<'PY'\nimport json,pathlib,time,hashlib\nB=pathlib.Path('/workspace/submission');r=json.load(open(B/'validation_report.json'));r['final_audio_measurement']={'integrated_loudness_lufs':-16.6,'loudness_range_lu':10.7,'true_peak_dbfs':-.6,'method':'ffmpeg ebur128=peak=true, decoded final AAC'};r['burned_caption_visual_review']={'sample_times':[7.8,14,55,80.7,86,109.5,119.5,135,142,145,154.5,166,175,177.5],'result':'Manually viewed actual rendered frames; Chinese glyphs present, subtitles below primary bodies; final chapter captions moved right to avoid central foreground chick.'};r['finished_unix']=time.time();r['deadline_unix']=json.load(open('/workspace/DEADLINE.json'))['deadline_unix'];assert r['finished_unix']<r['deadline_unix'];(B/'validation_report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))\nwith (B/'SHA256SUMS.txt').open('w') as out:\n for f in ['final.mp4','narration.wav','subtitles.srt','segments.json','research_log.json','synthesize_narration.py']:\n  h=hashlib.sha256((B/f).read_bytes()).hexdigest();out.write(f'{h}  {f}\\\\n')\nprint('Complete before deadline; remaining seconds:',round(r['deadline_unix']-r['finished_unix']))\nprint('Required files:',[(f,(B/f).stat().st_size) for f in ['final.mp4','narration.wav','subtitles.srt','segments.json']])\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Complete before deadline; remaining seconds: 796\nRequired files: [('final.mp4', 62109612), ('narration.wav', 17808044), ('subtitles.srt', 2143), ('segments.json', 16796)]\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/sol/environment_versions.json",
+        "sha256": "03b5753ea156d4bbb61c2e0b4f3a1f06c83fab6b606c6d71ea8caa1a5c837e72",
+        "relevant_lines": [
+          {
+            "line": 4,
+            "text": "    \"edge-tts\": \"7.3.1\","
+          }
+        ]
+      },
+      {
+        "path": "results/sol/README.md",
+        "sha256": "5812a3412b04744ead1f9cfe7cc6dae3a70faa16d0d45aefbd2494ea54d326fc",
+        "relevant_lines": [
+          {
+            "line": 7,
+            "text": "配音使用 edge-tts 7.3.1 调用 zh-CN-XiaoxiaoNeural，rate=-5%、pitch=+0Hz，统一普通话女声。17段自写文本分别合成，保留服务返回的自然停顿，没有用变速挤压时长。仅旁白文字发送给语音合成服务，没有上传输入视频、原音轨或画面。synthesize_narration.py 为实际实现，narration_plan.json 为实际文本和排布，tts_implementation.json 记录方案，narration_intervals.json 记录解码后的时间区间。"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/requirements.txt",
+        "sha256": "5d0276f74d1b5bb19a24f853ecb84c6c857dd7903c1423bf8b8a6fa811b83063",
+        "relevant_lines": [
+          {
+            "line": 1,
+            "text": "edge-tts==7.3.1"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/research_log.json",
+        "sha256": "fd465d4dd7da970e9daf0732be088b3385b816c05c1a072f392d2ffc0a461ef0",
+        "relevant_lines": [
+          {
+            "line": 3,
+            "text": "  \"network_policy\": \"All HTTP requests used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY environment settings; edge-tts proxy was passed explicitly. No direct public connections. Python requests/curl did not fetch webpage-linked assets except the explicitly selected allowed species photos and sonograms. No blocklisted domain was requested. No input media or source audio was uploaded.\","
+          },
+          {
+            "line": 178,
+            "text": "      \"status\": \"initial proxy connection interrupted; later successful\","
+          },
+          {
+            "line": 256,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 262,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 268,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 274,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 280,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 286,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 292,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 298,
+            "text": "      \"status\": \"proxy CONNECT 403 Egress denied or unavailable\","
+          },
+          {
+            "line": 608,
+            "text": "      \"request\": \"edge-tts matplotlib\","
+          },
+          {
+            "line": 613,
+            "text": "      \"request\": \"edge-tts\","
+          },
+          {
+            "line": 614,
+            "text": "      \"result\": \"Installed edge-tts 7.3.1 and dependencies in /workspace/site-packages through configured package/proxy environment.\""
+          },
+          {
+            "line": 634,
+            "text": "    \"package\": \"edge-tts\","
+          },
+          {
+            "line": 636,
+            "text": "    \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 639,
+            "text": "    \"proxy_env\": \"HTTPS_PROXY / HTTP_PROXY\","
+          },
+          {
+            "line": 643,
+            "text": "  \"speech_test\": \"Successful initial 5.784-second test with zh-CN-XiaoxiaoNeural, then17 final text chunks. Only self-authored text sent to Microsoft Edge speech service; audio responses were decoded locally.\","
+          }
+        ]
+      },
+      {
+        "path": "results/sol/synthesize_narration.py",
+        "sha256": "95be083a34c59519482ee0bef8c95d2b3ad6fd648349e5351f1271a2104ab4c2",
+        "relevant_lines": [
+          {
+            "line": 2,
+            "text": "\"\"\"Synthesize only self-authored Mandarin narration through configured HTTP proxy."
+          },
+          {
+            "line": 6,
+            "text": "import edge_tts"
+          },
+          {
+            "line": 8,
+            "text": "VOICE='zh-CN-XiaoxiaoNeural';RATE='-5%'"
+          },
+          {
+            "line": 16,
+            "text": "     c=edge_tts.Communicate(item['text'],voice=VOICE,rate=RATE,pitch='+0Hz',volume='+0%',boundary='WordBoundary',proxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY'))"
+          },
+          {
+            "line": 32,
+            "text": " (BASE/'tts_implementation.json').write_text(json.dumps({'package':'edge-tts','version':edge_tts.__version__,'voice':VOICE,'rate':RATE,'pitch':'+0Hz','proxy_env':'HTTPS_PROXY / HTTP_PROXY','sent_data':'Only self-authored narration text in narration_plan.json; no source media uploaded','time_unix':time.time()},ensure_ascii=False,indent=2))"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/tts_implementation.json",
+        "sha256": "7d284b3e51885bbc9804d144ef2d2eecc29761540d8a06c5b81a1b491ace8526",
+        "relevant_lines": [
+          {
+            "line": 2,
+            "text": "  \"package\": \"edge-tts\","
+          },
+          {
+            "line": 4,
+            "text": "  \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 7,
+            "text": "  \"proxy_env\": \"HTTPS_PROXY / HTTP_PROXY\","
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "cf4b1a5e60ee9b17a8fe5b22e615af5aee026b2def3de192e83eaa8b7be809f9",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。"
+  },
+  "luna": {
+    "summary": "模型自行选择并安装 edge-tts，在 Python 中调用网络语音服务，编写制作脚本完成配音与混音。",
+    "package": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存提交文件中的明确音色字符串；选型过程另见调用证据。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 20,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Collecting edge-tts\n  Using cached edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)\nCollecting tabulate<1.0.0,>=0.4.4 (from edge-tts)\n  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)\nCollecting typing-extensions<5.0.0,>=4.1.0 (from edge-tts)\n  Downloading typing_extensions-4.16.0-py3-none-a\n…\nx86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)\nDownloading tabulate-0.10.0-py3-none-any.whl (39 kB)\nDownloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nDownloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)\nDownloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)\nDownloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)\nDownloading attrs-26.1.0-py3-none-any.whl (67 kB)\nDownloading certifi-2026.10.23-py3-none-any.whl (135 kB)\nDownloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)\nDownloading idna-3.20-py3-none-any.whl (69 kB)\nDownloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)\nInstalling collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts\n\nSuccessfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 21,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"edge-tts --voice zh-CN-XiaoxiaoNeural --text '你好，欢迎来到鸟类观察。' --write-media /workspace/scratch/tts-test.mp3\"",
+        "exit_code": 127,
+        "status": "failed",
+        "output_excerpt": "/usr/bin/bash: line 1: edge-tts: command not found\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 25,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 -m edge_tts --voice zh-CN-XiaoxiaoNeural --text '你好，欢迎来到鸟类观察。' --write-media /workspace/scratch/tts-test.mp3\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1592, in _create_direct_connection\n    hosts = await self._resolve_host(host, port, traces=traces)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1202, in _resolve_host\n    return await asyncio.shield(resolved_host_task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1233, in _resolve_host_with_throttle\n    addrs = await self._resolver.resolve(host, port, fa\n…\nt.py\", line 1312, in _ws_connect\n    resp = await self.request(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 900, in _request\n    resp = await handler(req)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 854, in _connect_and_send_request\n    conn = await self._connector.connect(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 665, in connect\n    proto = await self._create_connection(req, traces, timeout)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1263, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1598, in _create_direct_connection\n    raise ClientConnectorDNSError(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x7462b2740f50> [Temporary failure in name resolution]\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 29,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts'",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Collecting edge-tts\n  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(\"HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out. (read timeout=15)\")': /packages/35/86/3b97d755992777d5a9ca0e45a8ec96cc9858b2d6dd8f65f3f688d60e8709/edge_tts-7.3.1-py3-none-any.whl.metadata\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.met\n…\n Connection interrupted while downloading.\n  WARNING: Attempting to resume incomplete download (6.0 MB/7.4 MB, attempt 3)\n  Resuming download aiohttp-3.8.6.tar.gz (6.0 MB/7.4 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸        6.0/7.4 MB ? eta -:--:--\n  WARNING: Connection interrupted while downloading.\n  WARNING: Attempting to resume incomplete download (6.0 MB/7.4 MB, attempt 4)\n  Resuming download aiohttp-3.8.6.tar.gz (6.0 MB/7.4 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸        6.0/7.4 MB ? eta -:--:--\n  WARNING: Connection interrupted while downloading.\n  WARNING: Attempting to resume incomplete download (6.0 MB/7.4 MB, attempt 5)\n  Resuming download aiohttp-3.8.6.tar.gz (6.0 MB/7.4 MB)\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸        6.0/7.4 MB ? eta -:--:--\n  WARNING: Connection interrupted while downloading.\nerror: incomplete-download\n\n× Download failed after 6 attempts because not enough bytes were received (6.0 MB/7.4 MB)\n╰─> URL: https://files.pythonhosted.org/packages/fd/01/f180d31923751fd20185c96938994823f00918ee5ac7b058edc005382406/aiohttp-3.8.6.tar.gz\n\nnote: This is an issue with network connectivity, not pip.\nhint: Use --resume-retries to configure resume attempt limit.\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 31,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport os,edge_tts,asyncio\np=os.environ.get('HTTPS_PROXY')\nprint('proxy configured',bool(p),'edge_tts',edge_tts.__version__ if hasattr(edge_tts,'__version__') else 'imported')\nasync def main():\n c=edge_tts.Communicate('你好，欢迎来到鸟类观察。','zh-CN-XiaoxiaoNeural',proxy=p)\n await c.save('/workspace/scratch/tts-test.mp3')\nasyncio.run(main())\nPY\nfile /workspace/scratch/tts-test.mp3\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "proxy configured True edge_tts 7.3.1\n/workspace/scratch/tts-test.mp3: MPEG ADTS, layer III, v2,  48 kbps, 24 kHz, Monaural\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 42,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('/workspace/submission/produce.py')\ns=p.read_text()\ns=s.replace(\\\"windows=[dict(start=91.5, end=94.5)]\\\", \\\"windows=[dict(start=96, end=99.5)]\\\")\np.write_text(s)\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 46,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"mkdir -p /workspace/submission/fonts && cp /workspace/scratch/NotoSansSC.ttf /workspace/submission/fonts/NotoSansSC.ttf && fc-scan --format '%{family}\\\\n' /workspace/submission/fonts/NotoSansSC.ttf | head -1 && python3 /workspace/submission/produce.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Noto Sans SC,Noto Sans SC Thin\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 64,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 /workspace/submission/produce.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 70,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 /workspace/submission/produce.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 77,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 /workspace/submission/produce.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "luna/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/luna/dependencies.txt",
+        "sha256": "ecb889e8bfe2e0a788e5b75621227646fd1daea824a43ac8ca11ae6d6b8e7b1f",
+        "relevant_lines": [
+          {
+            "line": 1,
+            "text": "Speech synthesis: edge-tts 7.3.1, voice zh-CN-XiaoxiaoNeural, rate -4%; speech service receives only authored narration text."
+          },
+          {
+            "line": 2,
+            "text": "Python runtime dependencies: aiohttp 3.14.5, scipy (preinstalled), numpy (preinstalled), edge-tts transitive packages installed under /workspace/site-packages."
+          },
+          {
+            "line": 4,
+            "text": "Synthesis uses HTTPS_PROXY from the environment, passed explicitly to edge-tts. No video or source audio was sent to any external service."
+          }
+        ]
+      },
+      {
+        "path": "results/luna/produce.py",
+        "sha256": "cf429f7b445d71d469422f220ea769348e3684bce47b13fa94ebd49108ebc76b",
+        "relevant_lines": [
+          {
+            "line": 10,
+            "text": "import edge_tts"
+          },
+          {
+            "line": 22,
+            "text": "VOICE = 'zh-CN-XiaoxiaoNeural'"
+          },
+          {
+            "line": 23,
+            "text": "PROXY = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')"
+          },
+          {
+            "line": 82,
+            "text": "        tts = edge_tts.Communicate(text, VOICE, rate='-4%', proxy=PROXY)"
+          },
+          {
+            "line": 83,
+            "text": "        await tts.save(str(mp3))"
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "815bd8d66b33717c82900f89cdd40e3205b664c4c363f25720c02730a65be494",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "v4-autonomous-voice",
+  "parent": "v3-fixed-voice",
+  "same_video_sha256": "f72bafdc520233d255118192789a7eff694e295be4217dad404f7e98469354ce",
+  "scoring_weights_unchanged": true,
+  "removed": [
+    "prebuilt /tts.py",
+    "fixed voice",
+    "prebuilt /research.py",
+    "bird-site allowlist"
+  ],
+  "network": "Generic logged proxy; domain blacklist; encrypted TLS payload not inspected",
+  "runtime": "fresh independent workspaces; no solver history",
+  "extra_blacklist": [
+    "nanxiang-git.github.io"
+  ],
+  "evaluator_implementation": "Known V3 final-review PCM and PTS corrections incorporated before freeze; scoring weights, thresholds and judge prompts otherwise unchanged."
+}

@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-11-15T14:19:19.839420+00:00",
+  "actor": "Task author host, isolated from solvers",
+  "clips": [
+    {
+      "chapter": 5,
+      "local_file": "D:\\omniALE\\case_birds\\题目\\3.webm",
+      "species": "黑脚信天翁",
+      "sha256": "3fc5a640b38c15aae792d0ce7094ca4d9e7e42437728e99fb5528697d72b8114",
+      "sha1": "15888e0aa6a0e5a180bb1905d6f8a5a4461adac4",
+      "label_basis": "v1 frozen author-provided labels; v3 local source hash matches",
+      "public_exact_source_url": null,
+      "public_exact_source_status": "Unresolved. Web-search connector transport unavailable; Commons API request timed out. No exact public-source claim."
+    },
+    {
+      "chapter": 6,
+      "local_file": "D:\\omniALE\\case_birds\\题目\\4.webm",
+      "species": "莱桑信天翁",
+      "sha256": "027745a9c58942d832a14c52b990c13292438a0b6bb004b0e87ff02e651a8d40",
+      "sha1": "1808a072c8cb541b63388aebeb668d70b152f1b2",
+      "label_basis": "v1 frozen author-provided labels; v3 local source hash matches",
+      "public_exact_source_url": null,
+      "public_exact_source_status": "Unresolved. Web-search connector transport unavailable; Commons API request timed out. No exact public-source claim."
+    }
+  ],
+  "blocking_checks": [
+    {
+      "url": "https://commons.wikimedia.org/",
+      "blocked": true,
+      "reason": "Domain blocked or outside independent bird-reference allowlist: commons.wikimedia.org"
+    },
+    {
+      "url": "https://upload.wikimedia.org/",
+      "blocked": true,
+      "reason": "Domain blocked or outside independent bird-reference allowlist: upload.wikimedia.org"
+    },
+    {
+      "url": "https://www.flickr.com/",
+      "blocked": true,
+      "reason": "Domain blocked or outside independent bird-reference allowlist: www.flickr.com"
+    },
+    {
+      "url": "https://www.fws.gov/",
+      "blocked": true,
+      "reason": "Domain blocked or outside independent bird-reference allowlist: www.fws.gov"
+    },
+    {
+      "url": "https://macaulaylibrary.org/",
+      "blocked": true,
+      "reason": "Domain blocked or outside independent bird-reference allowlist: macaulaylibrary.org"
+    }
+  ],
+  "policy_change": false,
+  "limitations": "Known dataset domains and non-allowlisted mirrors blocked; unknown third-party derivatives cannot be excluded."
+}

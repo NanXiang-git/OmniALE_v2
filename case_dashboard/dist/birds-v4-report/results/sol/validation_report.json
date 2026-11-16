@@ -1,0 +1,166 @@
+{
+  "video": {
+    "codec_name": "h264",
+    "width": 1280,
+    "height": 720,
+    "r_frame_rate": "30/1",
+    "nb_frames": "5565",
+    "duration": "185.500000"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "duration": "185.500000"
+  },
+  "output_duration": 185.5,
+  "input_duration": 185.504,
+  "duration_difference": -0.003999999999990678,
+  "narration_duration": 185.5,
+  "narration_format": "48000 Hz signed 16-bit mono PCM",
+  "six_chapters_present": true,
+  "caption_text_equals_spoken_text": true,
+  "full_decode": "passed",
+  "original_sound_window_checks": [
+    {
+      "segment": 1,
+      "start": 0.3,
+      "end": 5.8,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -12.89644323648995
+    },
+    {
+      "segment": 1,
+      "start": 20,
+      "end": 27.5,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -15.335545109675232
+    },
+    {
+      "segment": 1,
+      "start": 41.5,
+      "end": 45.7,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -26.377393774029425
+    },
+    {
+      "segment": 2,
+      "start": 46.3,
+      "end": 49.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -31.630052619908383
+    },
+    {
+      "segment": 2,
+      "start": 57.7,
+      "end": 61.7,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -30.374485918334294
+    },
+    {
+      "segment": 2,
+      "start": 67.1,
+      "end": 72.5,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -30.79824072737031
+    },
+    {
+      "segment": 3,
+      "start": 73.2,
+      "end": 78.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -23.58942900447304
+    },
+    {
+      "segment": 3,
+      "start": 89.5,
+      "end": 91.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -25.028077184929423
+    },
+    {
+      "segment": 3,
+      "start": 97,
+      "end": 100.4,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -21.95962178669931
+    },
+    {
+      "segment": 4,
+      "start": 101,
+      "end": 106.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -46.6825572973459
+    },
+    {
+      "segment": 4,
+      "start": 115.99,
+      "end": 117.7,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -51.1794058677345
+    },
+    {
+      "segment": 5,
+      "start": 124.2,
+      "end": 129.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -44.31732353821439
+    },
+    {
+      "segment": 5,
+      "start": 148.5,
+      "end": 152.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -52.2295261047484
+    },
+    {
+      "segment": 6,
+      "start": 158.6,
+      "end": 162.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -35.98015188463621
+    },
+    {
+      "segment": 6,
+      "start": 168.4,
+      "end": 172.6,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -24.147785472255137
+    },
+    {
+      "segment": 6,
+      "start": 179.5,
+      "end": 185.4,
+      "narration_peak_pcm": 0,
+      "source_rms_dbfs": -27.540044046005285
+    }
+  ],
+  "subjective_listening": "Not performed: no native audio audition tool available. Checked actual waveforms and spectrograms instead.",
+  "final_audio_measurement": {
+    "integrated_loudness_lufs": -16.6,
+    "loudness_range_lu": 10.7,
+    "true_peak_dbfs": -0.6,
+    "method": "ffmpeg ebur128=peak=true, decoded final AAC"
+  },
+  "burned_caption_visual_review": {
+    "sample_times": [
+      7.8,
+      14,
+      55,
+      80.7,
+      86,
+      109.5,
+      119.5,
+      135,
+      142,
+      145,
+      154.5,
+      166,
+      175,
+      177.5
+    ],
+    "result": "Manually viewed actual rendered frames; Chinese glyphs present, subtitles below primary bodies; final chapter captions moved right to avoid central foreground chick."
+  },
+  "finished_unix": 1794798805.3050897,
+  "deadline_unix": 1794799601.4902873
+}

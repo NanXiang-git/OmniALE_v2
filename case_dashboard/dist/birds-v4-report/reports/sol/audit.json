@@ -1,0 +1,1071 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "harness": "Codex 0.163.0",
+  "limit_seconds": 3600,
+  "elapsed_seconds": 2873.4741501808167,
+  "timed_out": false,
+  "returned_models": [
+    "gpt-6.1-sol"
+  ],
+  "model_verified": true,
+  "all_requests_high": true,
+  "api_requests": 57,
+  "api_failures": [],
+  "api_error_seconds": 0,
+  "normal_codex_exit": true,
+  "infrastructure_interrupted": false,
+  "submission_matches_sealed": true,
+  "frozen_files_unchanged": true,
+  "blacklist_actual_accesses": [],
+  "successful_connected_domains": [
+    "ab.chatgpt.com",
+    "api.github.com",
+    "base-prod.rspb-prod.magnolia-platform.com",
+    "chatgpt.com",
+    "cn.bing.com",
+    "codeload.github.com",
+    "deb.debian.org",
+    "files.pythonhosted.org",
+    "github.com",
+    "pypi.org",
+    "raw.githubusercontent.com",
+    "speech.platform.bing.com",
+    "www.audubon.org",
+    "www.bing.com",
+    "www.birdfinding.info",
+    "www.birdforum.net",
+    "www.oiseaux-birds.com",
+    "www.oiseaux.net",
+    "www.rspb.org.uk",
+    "xeno-canto.org"
+  ],
+  "isolation_checks": [
+    {
+      "input_readable": true,
+      "input_readonly": true,
+      "submission_writable": true,
+      "host_paths_hidden": true,
+      "credential_absent": true,
+      "network_blocked": true,
+      "visible_process_count": 2,
+      "pid_namespace_small": true
+    }
+  ],
+  "audio_capacity": "Codex仅命令与图片工具；输入鸟声分析方法以模型实际操作为准。Judge独立获得实际音频。",
+  "tts_condition": "No preset TTS helper, package, service or voice. Solver chooses and implements within budget.",
+  "network_audit_limit": "CONNECT目标域名、IP、连接结果与流量；HTTPS具体路径、正文及供应商逐次API返回不可见，不把连接建立当作正文访问成功。",
+  "segments": [
+    {
+      "segment": 1,
+      "answer": {
+        "segment": 1,
+        "start": 0,
+        "end": 46.066667,
+        "chinese_name": "四川短翅莺",
+        "english_name": "Sichuan Bush Warbler",
+        "scientific_name": "Locustella chengi",
+        "confidence": 91,
+        "visual_evidence": [
+          {
+            "start": 1,
+            "end": 5,
+            "description": "近景呈暖棕褐色上体，灰白喉胸，嘴细长且深色；尾较长，翼较短。近景整段构图基本不变，鸟被手托住；没有同步的张嘴或觅食动作可核验。"
+          },
+          {
+            "start": 12,
+            "end": 18,
+            "description": "可清楚检查深色嘴、浅灰喉部、棕褐背翼和向左伸出的长尾；没有显著长眉纹。形态本身与部分短翅莺近似，结合声谱作判断。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 0.4,
+            "end": 5,
+            "description": "采样声谱显示约2.4–2.8kHz为主的短促宽带音，约半秒重复一次，并有约5及7.5–8kHz的较高能量成分；呈成串重复的鸣唱结构。与独立四川短翅莺参考的低频重复单元相符。近景无同步喙动，不能逐声归属。"
+          },
+          {
+            "start": 18,
+            "end": 25,
+            "description": "这部分还有约5.5–6.5kHz的另一组重复音，不能确认与前半段同源；保留其原声，不把它作为同一个体改变叫声的事实。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 0.3,
+            "end": 5.8
+          },
+          {
+            "start": 20,
+            "end": 27.5
+          },
+          {
+            "start": 41.5,
+            "end": 45.7
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+            "supports": "学名、中文名及物种照片辅助核对暖褐上体、灰喉胸和深色嘴；照片只作候选种形态参考。"
+          },
+          {
+            "url": "https://xeno-canto.org/238544/download",
+            "supports": "独立候选种鸣唱参考，实际下载并以声谱检查一般低频短音重复结构；未用于匹配原素材或混入成片。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 6.302625,
+            "end": 9.381583,
+            "text": "这只小鸟，我判断是四川短翅莺。"
+          },
+          {
+            "start": 12.602625,
+            "end": 17.576291,
+            "text": "看它暖褐色的背部、深色细嘴，还有向后伸出的长尾。"
+          },
+          {
+            "start": 28.102625,
+            "end": 32.576291,
+            "text": "原声里的短音有节奏地重复，像一串简短的鸣唱。"
+          },
+          {
+            "start": 35.302625,
+            "end": 40.315791,
+            "text": "不过，画面没有同步的张嘴动作，声音归属仍需谨慎。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+          "supports": "学名、中文名及物种照片辅助核对暖褐上体、灰喉胸和深色嘴；照片只作候选种形态参考。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+            "checked_utc": "2026-11-16T05:10:17.313551+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.oiseaux.net/en/oiseaux/sichuan.bush.warbler.html",
+            "http_status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "redirects": [
+              {
+                "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+                "status": 301
+              }
+            ],
+            "bytes": 57000,
+            "sha256": "01195e442e5ee57f739f59a5d9f31d6f1a1be2a9adf7c34597dc9c1c2455e5aa",
+            "retrieved_successfully": true,
+            "title": "Sichuan Bush Warbler - Locustella chengi - Oiseaux.net",
+            "text_archive": "reference_review/7fca7ab3ac02502c.txt",
+            "text_excerpt": "Sichuan Bush Warbler - Locustella chengi - Oiseaux.net\nHome\nList\nPasseriformes\nLocustellidae\nFile\nRange\nPictures\nSystematics\nOrder\nPassériformes\nFamily\nLocustellidés\nGenus\nLocustella\nSpecies\nchengi\nStatut de conservation\nLC\nPréoccupation mineure\nGeographic range\nCouleurs dominantes\nMorphology\nPoids\n10 à 10 g\n50 mm\nnarine :\n7,2 mm\nL×H :\n2,8 × 3 mm\n17,8 mm\nLongévité\nâge moyen\n2,3 ans\nâge maxi\n7.358 ans\nOther names\nLocustelle de Cheng\n,\nZarzalero de Sichuan\n,\ncigarrinha-de-sujuão\n,\nSichuanschwirl\n,\nSichuanstruikzanger\n,\nsichuansmygsångare\n,\nTaosanger\n,\nsvrčiak sivý\n,\nboscarler de Sichuan\n,\nświerszczak syczuański\n,\nСычуаньская пестрогрудка\n,\nシセンオオセッカ\n,\n四川短翅莺\n,\nsichuansmygsångare\n,\n四川短翅鶯\n,\nIdentification\nadulte\nsp.\nLocustella chengi\nSimilar species\nJavan Bush Warbler\nLong-tailed Bush Warbler\nSpotted Bush Warbler\nDalat Bush Warbler\nRusset Bush Warbler\nLong-billed Bush Warbler\nDistribution\nAdditional data\nMigration\nFull Migrant | Partially migratory\nBird et al. 2020, Tobias et al. 2021\nAire\n314467.34 km²\nBird et al. 2020, Tobias et al. 2021\nLatitudes de reproduction\n25,9 à 34,4 °\nTobias et al. 2021\nVoice\nsong and calls\n▶\n0:00 / 0:00\n▶\nSong\n1:09\nHunan province Hu Ping Shan (China)\nJonathan  Martinez\nCC BY-NC-ND\n▶\nCall\n0:21\nDashiba, Longcanggou, Ya'an, Sichuan (China)\nDave Guo\nCC BY-NC-SA\n▶\nSong\n0:14\nLaojun Shan, Pingshan county, Sichuan province (China)\nPer Alström\nCC BY-NC-SA\n▶\nSong\n0:38\nLama Monastery, nr Wolong, Sichuan (China)\nZhou Zhe 周哲\nCC BY-NC-SA\n▶\nSong\n0:37\nLongmen Shan, Sichuan (China)\nPeter Boesman\nCC BY-NC-ND\n▶\nSong\n0:10\n大石坝Dashiba, 龙苍沟Longcanggou, Ya'an, Sichuan (China)\nJJSUN\nCC BY-NC-SA\n▶\nSong\n0:51\nLongcanggou, Yingjing, Sichuan (China)\nGuy Kirwan\nCC BY-NC-SA\n▶\nSong\n0:42\nLongcanggou, Yingjing, Sichuan (China)\nMike Nelson\nCC BY-NC-SA\n▶\nSong\n0:49\nLongcanggou, Ya'an, Sichuan (China)\nShuangqi Liu\nCC BY-NC-SA\nAll sounds (20)\n▶\nSong\n1:00\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:03\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:08\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:08\nLongcanggou, Yingjing, Sichuan (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:13\nLongcanggou, Yingjing, Sichuan (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n0:23\nYaan Shi, Sichuan Sheng (China)\nLieven De Temmerman\nCC BY-NC-SA\n▶\nSong\n0:56\nLongcanggou, Sichuan (China)\nJarmo Pirhonen\nCC BY-NC-SA\n▶\nSong\n0:23\nHu Ping Shan NNR, Hunan province (China)\nQin Huang\nCC BY-NC-SA\n▶\nSong\n0:41\nLongcanggou, Ya'an, Sichuan (China)\nely what\nCC BY-NC-SA\n▶\nSong\n1:10\nLongmen Shan, Sichuan (China)\nPeter Boesman\nCC BY-NC-ND\n▶\nSong\n0:59\nDalaoling National Forest Park, Hubei (China)\nShuangqi Liu\nCC BY-NC-SA\nFlight and movements\nCapacité de vol\n:\nHWI\n= 14,9\n(vol court, faible dispersion)\nHabitat\nAdditional data\nHabitat\nNA\nTobias et al. 2021\nDensité\nSemi-open habitats\nTobias et al. 2021\nMode de vie\nDIURNAL | Terrestrial\nBird et al. 2020\nAltitude\n1000 à 2275 m\nDiet\n- feeding behaviour\nAdditional data\nNiveau trophique\nCarnivore\nTobias et al. 2021\nNiche trophique\nInvertivore\nTobias et al. 2021\nBreeding\nand nesting\nAdditional data\nâge première reproduction\n1 ans\nBird et al. 2020\nThreats and conservation\nStatut de conservation IUCN\nEteint\nMenacé\nPréoccupation\nmineure\nÉteint\nà l'état sauvage\nQuasi\nmenacé\nNon\névalué\nEX\nEW\nCR\nEN\nVU\nNT\nLC\nNE\nPictures\nView all pictures\nData sources\nBird et al. 2020\nClements 2021\nTobias et al. 2021\nFurther references\nIUCN Red List\n— IUCN Red List of Threatened species,\nIUCN\nGBIF\n— GBIF - Global Biodiversity Information Facility,\nGBIF Secretariat\nWikidata\n— Wikidata, la base de connaissances libre,\nWikimedia Foundation\nNCBI Taxonomy\n— NCBI Taxonomy Database,\nNational Center for Biotechnology Information\neBird\n— eBird,\nCornell Lab of Ornithology et National Audubon Society\nBirds of the World\n— Birds of the World,\nThe Cornell Lab of Ornithology\nXeno-Canto\n© 1996-2026\nOiseaux.net"
+          }
+        },
+        {
+          "url": "https://xeno-canto.org/238544/download",
+          "supports": "独立候选种鸣唱参考，实际下载并以声谱检查一般低频短音重复结构；未用于匹配原素材或混入成片。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://xeno-canto.org/238544/download",
+            "checked_utc": "2026-11-16T05:11:14.529694+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://xeno-canto.org/238544/download",
+            "http_status": 200,
+            "content_type": "audio/mpeg",
+            "redirects": [],
+            "bytes": 267345,
+            "sha256": "86d156c4258943752245c2abec213d765550f80266a76949a1d0056f3d1c190b",
+            "retrieved_successfully": true
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 1,
+          "end": 5,
+          "timestamp_within_chapter": true,
+          "description": "近景呈暖棕褐色上体，灰白喉胸，嘴细长且深色；尾较长，翼较短。近景整段构图基本不变，鸟被手托住；没有同步的张嘴或觅食动作可核验。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 12,
+          "end": 18,
+          "timestamp_within_chapter": true,
+          "description": "可清楚检查深色嘴、浅灰喉部、棕褐背翼和向左伸出的长尾；没有显著长眉纹。形态本身与部分短翅莺近似，结合声谱作判断。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 0.4,
+          "end": 5,
+          "timestamp_within_chapter": true,
+          "description": "采样声谱显示约2.4–2.8kHz为主的短促宽带音，约半秒重复一次，并有约5及7.5–8kHz的较高能量成分；呈成串重复的鸣唱结构。与独立四川短翅莺参考的低频重复单元相符。近景无同步喙动，不能逐声归属。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 18,
+          "end": 25,
+          "timestamp_within_chapter": true,
+          "description": "这部分还有约5.5–6.5kHz的另一组重复音，不能确认与前半段同源；保留其原声，不把它作为同一个体改变叫声的事实。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "answer": {
+        "segment": 2,
+        "start": 46.066667,
+        "end": 72.8,
+        "chinese_name": "四川短翅莺（暂定）",
+        "english_name": "Sichuan Bush Warbler (tentative)",
+        "scientific_name": "Locustella chengi",
+        "confidence": 82,
+        "visual_evidence": [
+          {
+            "start": 47,
+            "end": 58,
+            "description": "画面是浓密绿叶和交错枝条，未获得足以诊断物种的清晰鸟体。没有凭阴影或遮挡处推断眼纹、羽色或动作。"
+          },
+          {
+            "start": 62,
+            "end": 71,
+            "description": "镜头仍被枝叶占据，不能确认具体发声位置，也没有可核验的捕食、飞行或筑巢动作。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 46.4,
+            "end": 48.4,
+            "description": "约2.8–3.2kHz的短音连续重复，带短尾音；背景还有细高音，来源不确定。"
+          },
+          {
+            "start": 52,
+            "end": 59,
+            "description": "较长一串相似短音，以约每秒两次的节奏重复，主能量近3kHz。声谱音节及节奏较符合四川短翅莺的重复鸣唱；相似种及环境噪声使判断仍有不确定性。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 46.3,
+            "end": 49.6
+          },
+          {
+            "start": 57.7,
+            "end": 61.7
+          },
+          {
+            "start": 67.1,
+            "end": 72.5
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+            "supports": "物种名称和独立鸣唱参考索引；不作为片中鸟体动作或地点的证据。"
+          },
+          {
+            "url": "https://xeno-canto.org/238544/download",
+            "supports": "低频短音成串重复的一般结构作为辅助；未进行声纹或源素材搜索。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 50.102625,
+            "end": 56.565791,
+            "text": "枝叶把鸟遮住了。根据成串重复的鸣唱，我暂按四川短翅莺识别。"
+          },
+          {
+            "start": 62.102625,
+            "end": 66.076291,
+            "text": "声音一阵接着一阵，鸟却藏在浓密的枝叶后。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+          "supports": "物种名称和独立鸣唱参考索引；不作为片中鸟体动作或地点的证据。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+            "checked_utc": "2026-11-16T05:10:17.313551+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.oiseaux.net/en/oiseaux/sichuan.bush.warbler.html",
+            "http_status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "redirects": [
+              {
+                "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+                "status": 301
+              }
+            ],
+            "bytes": 57000,
+            "sha256": "01195e442e5ee57f739f59a5d9f31d6f1a1be2a9adf7c34597dc9c1c2455e5aa",
+            "retrieved_successfully": true,
+            "title": "Sichuan Bush Warbler - Locustella chengi - Oiseaux.net",
+            "text_archive": "reference_review/7fca7ab3ac02502c.txt",
+            "text_excerpt": "Sichuan Bush Warbler - Locustella chengi - Oiseaux.net\nHome\nList\nPasseriformes\nLocustellidae\nFile\nRange\nPictures\nSystematics\nOrder\nPassériformes\nFamily\nLocustellidés\nGenus\nLocustella\nSpecies\nchengi\nStatut de conservation\nLC\nPréoccupation mineure\nGeographic range\nCouleurs dominantes\nMorphology\nPoids\n10 à 10 g\n50 mm\nnarine :\n7,2 mm\nL×H :\n2,8 × 3 mm\n17,8 mm\nLongévité\nâge moyen\n2,3 ans\nâge maxi\n7.358 ans\nOther names\nLocustelle de Cheng\n,\nZarzalero de Sichuan\n,\ncigarrinha-de-sujuão\n,\nSichuanschwirl\n,\nSichuanstruikzanger\n,\nsichuansmygsångare\n,\nTaosanger\n,\nsvrčiak sivý\n,\nboscarler de Sichuan\n,\nświerszczak syczuański\n,\nСычуаньская пестрогрудка\n,\nシセンオオセッカ\n,\n四川短翅莺\n,\nsichuansmygsångare\n,\n四川短翅鶯\n,\nIdentification\nadulte\nsp.\nLocustella chengi\nSimilar species\nJavan Bush Warbler\nLong-tailed Bush Warbler\nSpotted Bush Warbler\nDalat Bush Warbler\nRusset Bush Warbler\nLong-billed Bush Warbler\nDistribution\nAdditional data\nMigration\nFull Migrant | Partially migratory\nBird et al. 2020, Tobias et al. 2021\nAire\n314467.34 km²\nBird et al. 2020, Tobias et al. 2021\nLatitudes de reproduction\n25,9 à 34,4 °\nTobias et al. 2021\nVoice\nsong and calls\n▶\n0:00 / 0:00\n▶\nSong\n1:09\nHunan province Hu Ping Shan (China)\nJonathan  Martinez\nCC BY-NC-ND\n▶\nCall\n0:21\nDashiba, Longcanggou, Ya'an, Sichuan (China)\nDave Guo\nCC BY-NC-SA\n▶\nSong\n0:14\nLaojun Shan, Pingshan county, Sichuan province (China)\nPer Alström\nCC BY-NC-SA\n▶\nSong\n0:38\nLama Monastery, nr Wolong, Sichuan (China)\nZhou Zhe 周哲\nCC BY-NC-SA\n▶\nSong\n0:37\nLongmen Shan, Sichuan (China)\nPeter Boesman\nCC BY-NC-ND\n▶\nSong\n0:10\n大石坝Dashiba, 龙苍沟Longcanggou, Ya'an, Sichuan (China)\nJJSUN\nCC BY-NC-SA\n▶\nSong\n0:51\nLongcanggou, Yingjing, Sichuan (China)\nGuy Kirwan\nCC BY-NC-SA\n▶\nSong\n0:42\nLongcanggou, Yingjing, Sichuan (China)\nMike Nelson\nCC BY-NC-SA\n▶\nSong\n0:49\nLongcanggou, Ya'an, Sichuan (China)\nShuangqi Liu\nCC BY-NC-SA\nAll sounds (20)\n▶\nSong\n1:00\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:03\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:08\nlocation in Changqing nature reserve, Shaanxi (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:08\nLongcanggou, Yingjing, Sichuan (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n1:13\nLongcanggou, Yingjing, Sichuan (China)\nFrank Lambert\nCC BY-NC-ND\n▶\nSong\n0:23\nYaan Shi, Sichuan Sheng (China)\nLieven De Temmerman\nCC BY-NC-SA\n▶\nSong\n0:56\nLongcanggou, Sichuan (China)\nJarmo Pirhonen\nCC BY-NC-SA\n▶\nSong\n0:23\nHu Ping Shan NNR, Hunan province (China)\nQin Huang\nCC BY-NC-SA\n▶\nSong\n0:41\nLongcanggou, Ya'an, Sichuan (China)\nely what\nCC BY-NC-SA\n▶\nSong\n1:10\nLongmen Shan, Sichuan (China)\nPeter Boesman\nCC BY-NC-ND\n▶\nSong\n0:59\nDalaoling National Forest Park, Hubei (China)\nShuangqi Liu\nCC BY-NC-SA\nFlight and movements\nCapacité de vol\n:\nHWI\n= 14,9\n(vol court, faible dispersion)\nHabitat\nAdditional data\nHabitat\nNA\nTobias et al. 2021\nDensité\nSemi-open habitats\nTobias et al. 2021\nMode de vie\nDIURNAL | Terrestrial\nBird et al. 2020\nAltitude\n1000 à 2275 m\nDiet\n- feeding behaviour\nAdditional data\nNiveau trophique\nCarnivore\nTobias et al. 2021\nNiche trophique\nInvertivore\nTobias et al. 2021\nBreeding\nand nesting\nAdditional data\nâge première reproduction\n1 ans\nBird et al. 2020\nThreats and conservation\nStatut de conservation IUCN\nEteint\nMenacé\nPréoccupation\nmineure\nÉteint\nà l'état sauvage\nQuasi\nmenacé\nNon\névalué\nEX\nEW\nCR\nEN\nVU\nNT\nLC\nNE\nPictures\nView all pictures\nData sources\nBird et al. 2020\nClements 2021\nTobias et al. 2021\nFurther references\nIUCN Red List\n— IUCN Red List of Threatened species,\nIUCN\nGBIF\n— GBIF - Global Biodiversity Information Facility,\nGBIF Secretariat\nWikidata\n— Wikidata, la base de connaissances libre,\nWikimedia Foundation\nNCBI Taxonomy\n— NCBI Taxonomy Database,\nNational Center for Biotechnology Information\neBird\n— eBird,\nCornell Lab of Ornithology et National Audubon Society\nBirds of the World\n— Birds of the World,\nThe Cornell Lab of Ornithology\nXeno-Canto\n© 1996-2026\nOiseaux.net"
+          }
+        },
+        {
+          "url": "https://xeno-canto.org/238544/download",
+          "supports": "低频短音成串重复的一般结构作为辅助；未进行声纹或源素材搜索。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://xeno-canto.org/238544/download",
+            "checked_utc": "2026-11-16T05:11:14.529694+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://xeno-canto.org/238544/download",
+            "http_status": 200,
+            "content_type": "audio/mpeg",
+            "redirects": [],
+            "bytes": 267345,
+            "sha256": "86d156c4258943752245c2abec213d765550f80266a76949a1d0056f3d1c190b",
+            "retrieved_successfully": true
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 47,
+          "end": 58,
+          "timestamp_within_chapter": true,
+          "description": "画面是浓密绿叶和交错枝条，未获得足以诊断物种的清晰鸟体。没有凭阴影或遮挡处推断眼纹、羽色或动作。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 62,
+          "end": 71,
+          "timestamp_within_chapter": true,
+          "description": "镜头仍被枝叶占据，不能确认具体发声位置，也没有可核验的捕食、飞行或筑巢动作。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 46.4,
+          "end": 48.4,
+          "timestamp_within_chapter": true,
+          "description": "约2.8–3.2kHz的短音连续重复，带短尾音；背景还有细高音，来源不确定。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 52,
+          "end": 59,
+          "timestamp_within_chapter": true,
+          "description": "较长一串相似短音，以约每秒两次的节奏重复，主能量近3kHz。声谱音节及节奏较符合四川短翅莺的重复鸣唱；相似种及环境噪声使判断仍有不确定性。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "answer": {
+        "segment": 3,
+        "start": 72.8,
+        "end": 100.766667,
+        "chinese_name": "桤木纹霸鹟",
+        "english_name": "Alder Flycatcher",
+        "scientific_name": "Empidonax alnorum",
+        "confidence": 88,
+        "visual_evidence": [
+          {
+            "start": 73.3,
+            "end": 73.7,
+            "description": "转身时清楚露出两道浅翼斑、橄榄灰背、浅色细眼圈和较宽的嘴；随后多为正面。"
+          },
+          {
+            "start": 74.4,
+            "end": 79,
+            "description": "直立停在裸枝上，喉白、腹淡；头向不同方向转动，未看到捕虫。"
+          },
+          {
+            "start": 80.8,
+            "end": 81.5,
+            "description": "抬头张嘴，仍抓着同一枝条。89秒左右亦可见张嘴姿态，支持枝头发声行为。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 76.85,
+            "end": 77.3,
+            "description": "实际采样有短促鸣唱单元：前部快速调制，后部较强的约3–4.7kHz拱形音节，末端下降；重复出现在后续数秒。"
+          },
+          {
+            "start": 88.9,
+            "end": 89.5,
+            "description": "有相似的短句重复，附近画面可见仰头张嘴；结合外形与独立桤木纹霸鹟参考的先调制后上扬下降音节，倾向此种。与柳纹霸鹟外形很相近，不能只凭羽色确定；无亲耳声辨，保留置信度限制。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 73.2,
+            "end": 78.6
+          },
+          {
+            "start": 89.5,
+            "end": 91.6
+          },
+          {
+            "start": 97,
+            "end": 100.4
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+            "supports": "灰绿背、宽嘴、白喉；与柳纹霸鹟极相似，声音是重要区分线索；一般鸣唱为带沙音的fee-bee-o。"
+          },
+          {
+            "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+            "supports": "核查相似种外形重叠，及其fitz-bew鸣唱与桤木纹霸鹟的区别，避免只以外形过度确定。"
+          },
+          {
+            "url": "https://xeno-canto.org/13755/download",
+            "supports": "独立桤木纹霸鹟鸣唱参考，查看一般调制音节与后续上扬下降音节；未作源素材匹配。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 79.102625,
+            "end": 81.892082,
+            "text": "这只鸟，我判断是桤木纹霸鹟。"
+          },
+          {
+            "start": 84.102625,
+            "end": 88.457916,
+            "text": "浅色喉部、淡眼圈和两道翼斑，是主要线索。"
+          },
+          {
+            "start": 92.102625,
+            "end": 95.852666,
+            "text": "它在枝头抬头鸣唱，短句之间留着停顿。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+          "supports": "灰绿背、宽嘴、白喉；与柳纹霸鹟极相似，声音是重要区分线索；一般鸣唱为带沙音的fee-bee-o。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+            "checked_utc": "2026-11-16T05:10:11.662920+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+            "http_status": 200,
+            "content_type": "text/html; charset=UTF-8",
+            "redirects": [],
+            "bytes": 177674,
+            "sha256": "ebbfc9a95f2c8cd5a24e240089d740eed3687d5bfc5d18b07d524078bc8a68df",
+            "retrieved_successfully": true,
+            "title": "Alder Flycatcher | Audubon Field Guide",
+            "text_archive": "reference_review/0df6cfc8a7edb1db.txt",
+            "text_excerpt": "Alder Flycatcher | Audubon Field Guide\nSkip to main content\nOpen Search\nBird Guide\nTyrant Flycatchers\nAlder Flycatcher\nListen\n6\nAlder Flycatcher\nAdult.\nPhoto:\nSimon Pierre Barrette/Wikimedia (CC BY-SA 4.0)\nJuvenile.\nPhoto:\nJukka Jantunen/Shutterstock\nAdult.\nPhoto:\nJukka Jantunen/Shutterstock\nAdult.\nPhoto:\nAlan Schmierer\nAlder Flycatcher\nEmpidonax alnorum\nAt a Glance\nRange & Identification\nBehavior\nConservation\nBack to Top\nAt a Glance\nA small bird that spends the summer catching flying insects in northern thickets. The Alder Flycatcher and the Willow Flycatcher are so similar to each other that they were considered one species until the 1970s. The only differences apparent in the field are in their voices. However, voice is important to these birds: many other kinds of songbirds have to learn their songs, but the Willow Flycatcher and the Alder Flycatcher are born instinctively knowing the voice of their own species.\nAll bird guide text and rangemaps adapted from\nLives of North American Birds\nby Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved.\nCategory\nPerching Birds, Tyrant Flycatchers\nIUCN Status\nLeast Concern\nHabitat\nForests and Woodlands, Freshwater Wetlands, Lakes, Ponds, and Rivers, Tundra and Boreal Habitats\nRegion\nAlaska and The North, Eastern Canada, Florida, Great Lakes, Mid Atlantic, New England, Plains, Southeast, Texas, Western Canada\nBehavior\nFlitter, Hovering\nPopulation\n120.000.000\nRange & Identification\nMigration & Range Maps\nThe Alder Flycatcher is more of a long-distance migrant than Willow Flycatcher, tending to nest farther north and winter farther south. Migrates late in spring and early in fall.\nDescription\nSexes similar — Length: 5-6 in (13-15 cm); wingspan: 8-9 in (20-23 cm); weight: 0.4-0.5 oz (11-14 g). the Alder Flycatcher is a large Empidonax flycatcher with greenish gray back, large bill, white throat. Eye-ring sometimes not well defined. Extremely similar to Willow Flycatcher, most safely identified by voice.\nSize\nAbout the size of a Sparrow\nColor\nGray, Green, Olive, White\nWing Shape\nRounded\nTail Shape\nNotched, Square-tipped\nSongs and Calls\nA burry fee-bee-o, rather different from the wheezy fitz-bew of the Willow Flycatcher.\nCall Pattern\nFalling, Flat, Undulating\nCall Type\nBuzz, Chirp/Chip, Whistle\nHabitat\nWillows, alders, brushy swamps, swales. Breeds in thickets of deciduous trees and shrubs, usually near water, as around streams, ponds, or bogs. Especially common in thickets of willows or alders. Winters in woodland edges or second growth in the tropics, especially near water.\nSign up for Audubon's newsletter to learn more about birds like the Alder Flycatcher\nEmail\nZip\nPhone (optional)\nBy submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our\nPrivacy Policy\nand\nTerms & Conditions\n.\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy\nand\nTerms of Service\napply.\nBehavior\nEggs\nAn Alder Flycatcher generally lays 3-4 eggs, rarely 2. The eggs are white, with brown spots concentrated toward larger end. Incubation is by female, 12-14 days.\nYoung\nBoth parents bring food for nestlings. Age of young at first flight about 13-14 days.\nFeeding Behavior\nForages by watching from a perch and then flying out to catch insects. Usually forages from perches within tall shrubs or low trees; catches insects in mid-air, or takes them from foliage while hovering.\nDiet\nDifferences in diet, if any, between the Alder Flycatcher and Willow Flycatcher are not well known. Apparently eats mostly insects, including wasps, bees, winged ants, beetles, flies, caterpillars, moths, true bugs, and others. Also eats some spiders, a few berries, and possibly some seeds.\nNesting\nMale defends nesting territory by singing. Courtship behavior is not w"
+          }
+        },
+        {
+          "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+          "supports": "核查相似种外形重叠，及其fitz-bew鸣唱与桤木纹霸鹟的区别，避免只以外形过度确定。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+            "checked_utc": "2026-11-16T05:10:16.457347+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+            "http_status": 200,
+            "content_type": "text/html; charset=UTF-8",
+            "redirects": [],
+            "bytes": 185146,
+            "sha256": "5071b2a2ec55e851cc6c4f2e05b10c1949aa03488ac1d6fb721f8dd46f3196c7",
+            "retrieved_successfully": true,
+            "title": "Willow Flycatcher | Audubon Field Guide",
+            "text_archive": "reference_review/18bd3804e8162cb2.txt",
+            "text_excerpt": "Willow Flycatcher | Audubon Field Guide\nSkip to main content\nOpen Search\nBird Guide\nTyrant Flycatchers\nWillow Flycatcher\nListen\n4\nWillow Flycatcher\nAdult.\nPhoto:\nAndrew Weitzel/Flickr (CC-BY-SA-2.0)\nAdult.\nPhoto:\nSusan Ward/Audubon Photography Awards\nImmature.\nPhoto:\nBecky Matsubara/Flickr (CC-BY-2.0)\nAdult.\nPhoto:\nKelly Colgan Azar/Flickr (CC-BY-ND-2.0)\nAdult.\nPhoto:\nKelly Colgan Azar/Flickr (CC-BY-ND-2.0)\nAdult.\nPhoto:\nAndrew Weitzel/Flickr (CC-BY-SA-2.0)\nWillow Flycatcher\nEmpidonax traillii\nAt a Glance\nRange & Identification\nBehavior\nConservation\nExplore More\nBack to Top\nAt a Glance\nUntil the 1970s, the Willow Flycatcher and the Alder Flycatcher masqueraded as just one species under the name 'Traill's Flycatcher.' They are essentially identical in looks, but their voices are different. Either kind may be found in thickets of either willow or alder shrubs, but their ranges are largely separate: Alder Flycatchers spend the summer mostly in Canada and Alaska, while Willow Flycatchers nest mostly south of the Canadian border.\nAll bird guide text and rangemaps adapted from\nLives of North American Birds\nby Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved.\nCategory\nPerching Birds, Tyrant Flycatchers\nIUCN Status\nLeast Concern\nHabitat\nArroyos and Canyons, Fields, Meadows, and Grasslands, Forests and Woodlands, Freshwater Wetlands, Shrublands, Savannas, and Thickets\nRegion\nCalifornia, Eastern Canada, Florida, Great Lakes, Mid Atlantic, New England, Northwest, Plains, Rocky Mountains, Southeast, Southwest, Texas, Western Canada\nBehavior\nFlitter, Hovering, Swooping\nPopulation\n8.100.000\nRange & Identification\nMigration & Range Maps\nMigrates relatively late in spring and early in fall. In North America, migrants are seen moving north mostly during mid to late May, moving south in August and September.\nDescription\nSexes similar — Length: 5.5 - 5.9 in (14 - 15 cm); wingspan: 8.7 - 9.4 in (22 - 24 cm); weight: 0.4 - 0.5 oz (11 - 14 g). The Willow Flycatcher is almost identical to Alder Flycatcher (and formerly considered same species). It tends to be browner and show less obvious eye-ring, but safely identified only by voice.\nSize\nAbout the size of a Robin, About the size of a Sparrow\nColor\nGray, White\nWing Shape\nRounded\nTail Shape\nNotched, Square-tipped\nSongs and Calls\nA wheezy fitz-bew or pit-speer. The song of the Alder Flycatcher is a burry fee-bee-o, descending more abruptly in pitch.\nCall Pattern\nFalling, Flat, Undulating\nCall Type\nBuzz, Chirp/Chip\nHabitat\nBushes, willow thickets, brushy fields, upland copses. The Willow Flycatcher breeds in thickets of deciduous trees and shrubs, especially willows, or along woodland edges. Often near streams or marshes (especially in southern part of range), but may be found in drier habitats than Alder Flycatcher. Winters around clearings and second growth in the tropics, especially near water.\nSign up for Audubon's newsletter to learn more about birds like the Willow Flycatcher\nEmail\nZip\nPhone (optional)\nBy submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our\nPrivacy Policy\nand\nTerms & Conditions\n.\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy\nand\nTerms of Service\napply.\nBehavior\nEggs\nA Willow Flycatcher generally lays 3-4 eggs. The eggs are pale buff to whitish, with brown spots concentrated toward larger end. Incubation is by female, 12-15 days.\nYoung\nBoth parents bring food for nestlings. Age of young at first flight about 12-14 days.\nFeeding Behavior\nForages by watching from a perch and then flying out to catch insects. Usually forages from perches within tall shrubs or low trees; catches insects in mid-air, or takes them from foliage while hovering.\nDiet\nDifferences in diet, if any, between the Will"
+          }
+        },
+        {
+          "url": "https://xeno-canto.org/13755/download",
+          "supports": "独立桤木纹霸鹟鸣唱参考，查看一般调制音节与后续上扬下降音节；未作源素材匹配。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://xeno-canto.org/13755/download",
+            "checked_utc": "2026-11-16T05:10:23.166911+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://xeno-canto.org/13755/download",
+            "http_status": 200,
+            "content_type": "audio/mpeg",
+            "redirects": [],
+            "bytes": 966874,
+            "sha256": "20b135fe3d7e01ccbbc2cc63902bff54de54c2fe153218a3f240b8b74a140dae",
+            "retrieved_successfully": true
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 73.3,
+          "end": 73.7,
+          "timestamp_within_chapter": true,
+          "description": "转身时清楚露出两道浅翼斑、橄榄灰背、浅色细眼圈和较宽的嘴；随后多为正面。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 74.4,
+          "end": 79,
+          "timestamp_within_chapter": true,
+          "description": "直立停在裸枝上，喉白、腹淡；头向不同方向转动，未看到捕虫。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 80.8,
+          "end": 81.5,
+          "timestamp_within_chapter": true,
+          "description": "抬头张嘴，仍抓着同一枝条。89秒左右亦可见张嘴姿态，支持枝头发声行为。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 76.85,
+          "end": 77.3,
+          "timestamp_within_chapter": true,
+          "description": "实际采样有短促鸣唱单元：前部快速调制，后部较强的约3–4.7kHz拱形音节，末端下降；重复出现在后续数秒。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 88.9,
+          "end": 89.5,
+          "timestamp_within_chapter": true,
+          "description": "有相似的短句重复，附近画面可见仰头张嘴；结合外形与独立桤木纹霸鹟参考的先调制后上扬下降音节，倾向此种。与柳纹霸鹟外形很相近，不能只凭羽色确定；无亲耳声辨，保留置信度限制。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "answer": {
+        "segment": 4,
+        "start": 100.766667,
+        "end": 123.966667,
+        "chinese_name": "芦苇莺（暂定）",
+        "english_name": "Eurasian Reed Warbler / Common Reed Warbler (tentative)",
+        "scientific_name": "Acrocephalus scirpaceus",
+        "confidence": 70,
+        "visual_evidence": [
+          {
+            "start": 104.7,
+            "end": 105.4,
+            "description": "芦苇间短暂出现失焦的褐色小鸟头部轮廓，能辨出暗眼及尖嘴的大致形状；细节不够，不能用眉纹或翼式下结论。"
+          },
+          {
+            "start": 107,
+            "end": 123,
+            "description": "主体持续被近处茎叶及失焦前景遮挡；没有可靠证据确认具体取食动作或翅尾细节。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 101.5,
+            "end": 106.5,
+            "description": "声谱上是多种短音接续，约2–7kHz的擦音状、弯曲调频和短脉冲成分相交替；原录整体声级较低。"
+          },
+          {
+            "start": 110,
+            "end": 115,
+            "description": "短音节多次接续、部分成对重复，中间夹短暂停顿，符合苇莺类的连续鸣唱。结合芦苇环境暂定芦苇莺；没有清晰体羽及亲耳辨音，无法排除近似苇莺，旁白明确暂定，未枚举碰答案。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 101,
+            "end": 106.6
+          },
+          {
+            "start": 115.99,
+            "end": 117.7
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+            "supports": "芦苇莺名称、芦苇生境和一般由反复短擦音及哨音组成的鸣唱；未将参考习性写成画面中的未见动作。"
+          },
+          {
+            "url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+            "supports": "独立芦苇莺鸣唱参考，仅核对一般连续短音节结构；没有混入输出。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 107.102625,
+            "end": 110.471041,
+            "text": "芦苇后的这只小鸟，暂按芦苇莺识别。"
+          },
+          {
+            "start": 113.102625,
+            "end": 115.378916,
+            "text": "画面失焦，细节看不清。"
+          },
+          {
+            "start": 118.102625,
+            "end": 121.563166,
+            "text": "原声中，短小多变的鸣唱接连出现。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+          "supports": "芦苇莺名称、芦苇生境和一般由反复短擦音及哨音组成的鸣唱；未将参考习性写成画面中的未见动作。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+            "checked_utc": "2026-11-16T05:10:17.247400+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.oiseaux.net/en/oiseaux/common.reed.warbler.html",
+            "http_status": 200,
+            "content_type": "text/html; charset=utf-8",
+            "redirects": [
+              {
+                "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+                "status": 301
+              }
+            ],
+            "bytes": 93588,
+            "sha256": "7039c6a09673cdb0048426bb8fa8afcd55a8a60ab02d70c4649082a7ab9bec22",
+            "retrieved_successfully": true,
+            "title": "Common Reed Warbler - Acrocephalus scirpaceus - Oiseaux.net",
+            "text_archive": "reference_review/7761fa97003af9a9.txt",
+            "text_excerpt": "Common Reed Warbler - Acrocephalus scirpaceus - Oiseaux.net\nHome\nList\nPasseriformes\nAcrocephalidae\nFile\nRange\nPictures\nSystematics\nOrder\nPassériformes\nFamily\nAcrocephalidés\nGenus\nAcrocephalus\nSpecies\nscirpaceus\nStatut de conservation\nLC\nPréoccupation mineure\nGeographic range\nCouleurs dominantes\nMorphology\nTaille\n13 cm\nEnvergure\n19 cm\nPoids\n10 à 15 g\nLongévité\nâge moyen\n2,8 ans\nâge maxi\n14 ans\nOther names\nRousserolle effarvatte\n,\nCarricero común\n,\nrouxinol-pequeno-dos-caniços\n,\nTeichrohrsänger\n,\ncserregő nádiposzáta\n,\nKleine Karekiet\n,\nCannaiola\n,\nrörsångare\n,\nRørsanger\n,\ntrsteniarik bahenný\n,\nrákosník obecný\n,\nRørsanger\n,\nrytikerttunen\n,\nHermansrietsanger\n,\nboscarla de canyar\n,\nSefsöngvari\n,\ntrzcinniczek (zwyczajny)\n,\nezeru ķauķis\n,\nsrpična trstnica\n,\nТростниковая камышевка\n,\nヨーロッパヨシキリ\n,\n芦苇莺\n,\nrörsångare\n,\n蘆葦鶯〔歐葦鶯〕\n,\nIdentification\nadulte\nsp.\nAcrocephalus scirpaceus\n1ère année\nsp.\nAcrocephalus scirpaceus\nThe Common Reed Warbler is the most common of our aquatic warblers, which are recognized by their sharp profile (Acrocephalus), round tail at the end, and long undertail coverts. It frequents reed beds with phragmites during the breeding season.\nBoth sexes are identical.\nIn fresh plumage, the adult has quite warm upper parts, a dark, muted brown. A clear russet tone is visible on the lower back, rump, and coverts. The front of the crown is slightly darker. The pale fringes of the remiges contrast with the dark centers of these, breaking the uniformity of the plumage. The primary projection is medium, about equal to 2/3 of the length of the tertiaries. The short, cream-russet eyebrow, clear in front of the eye, does not continue behind or is indistinct. It is highlighted by the front of the crown, a little darker than the rest and underlined by a dark loreal line. The eye is surrounded by a white eye ring broken in front and in the back. The lower parts are light. The flanks and sides of the chest are strongly infiltrated with chamois. The throat is white, a character that appears well when singing. The underside of the wings, the axillars and the undertail coverts are chamois-cream. The upper mandible is dark horn gray while the lower mandible is of a more or less vivid yellow. The legs are of a brownish colour and appear dark on the ground. The plant of the feet is dull yellow. The iris is light brown.\nIn worn plumage (June-September for most birds), the adult upper parts become more grey-brown and the lower parts pale.\nThe juvenile has much redder new plumage than the adult and its legs are greyer. It then looks very much like the other young reed warblers, Verderolle in particular, which can lead to confusion.\nSimilar species\nGreat Reed Warbler\nBasra Reed Warbler\nManchurian Reed Warbler\nGreater Swamp Warbler\nLarge-billed Reed Warbler\nLesser Swamp Warbler\nDistribution\nadulte\nsp.\nAcrocephalus scirpaceus\nIt is the most widespread warbler in Europe. It has a vast distribution area from the Atlantic in the west to the outer reaches of China in the east and from southern Scandinavia in the north to Iran in the south, touching on North Africa. Despite this, there are only two subspecies, scirpaceus, to which the European population belongs, and fuscus, with a slightly cooler plumage, from Turkey to Kazakhstan.\nAdditional data\nMigration\nFull Migrant | Migratory\nBird et al. 2020, Tobias et al. 2021\nAire\n15112845.4 km²\nBird et al. 2020, Tobias et al. 2021\nLatitudes de reproduction\n-34,8 à 65,1 °\nTobias et al. 2021\nAire restreinte\nN\nBirdlife's Worldbird Database\nVoice\nsong and calls\n▶\n0:00 / 0:00\n▶\nSong\n1:00\nAube, Moselle, Grand Est (France)\nDidier Collin\nCC BY-NC\n▶\nAlarm call, call\n0:24\nSablons, Isère, Auvergne-Rhône-Alpes (France)\nVincent Palomares\nCC BY-NC-SA\n▶\nSong\n0:18\nArrondissement de Fontenay-le-Comte near Sainte-Radégonde-des-Noyers, Vendée, Pays de la Loire (France)\nOlivier Swift\nCC BY-NC-SA\n▶\nSong\n0:47\nCinqueux, Oise, Picardy (France)\nFernand Deroussen\nCC BY-NC-ND\n▶\nSong\n1:50\nFrossay, Loire-Atlantique, Pays de la Loire (Fra"
+          }
+        },
+        {
+          "url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+          "supports": "独立芦苇莺鸣唱参考，仅核对一般连续短音节结构；没有混入输出。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+            "checked_utc": "2026-11-16T05:10:18.893293+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+            "http_status": 200,
+            "content_type": "audio/mpeg",
+            "redirects": [],
+            "bytes": 955904,
+            "sha256": "0e82a5bd2a8e4253c5f17f36717278f2115c32b6b1b16f790acec0d046411c45",
+            "retrieved_successfully": true
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 104.7,
+          "end": 105.4,
+          "timestamp_within_chapter": true,
+          "description": "芦苇间短暂出现失焦的褐色小鸟头部轮廓，能辨出暗眼及尖嘴的大致形状；细节不够，不能用眉纹或翼式下结论。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 107,
+          "end": 123,
+          "timestamp_within_chapter": true,
+          "description": "主体持续被近处茎叶及失焦前景遮挡；没有可靠证据确认具体取食动作或翅尾细节。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 101.5,
+          "end": 106.5,
+          "timestamp_within_chapter": true,
+          "description": "声谱上是多种短音接续，约2–7kHz的擦音状、弯曲调频和短脉冲成分相交替；原录整体声级较低。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 110,
+          "end": 115,
+          "timestamp_within_chapter": true,
+          "description": "短音节多次接续、部分成对重复，中间夹短暂停顿，符合苇莺类的连续鸣唱。结合芦苇环境暂定芦苇莺；没有清晰体羽及亲耳辨音，无法排除近似苇莺，旁白明确暂定，未枚举碰答案。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "answer": {
+        "segment": 5,
+        "start": 123.966667,
+        "end": 158.466667,
+        "chinese_name": "黑脚信天翁",
+        "english_name": "Black-footed Albatross",
+        "scientific_name": "Phoebastria nigripes",
+        "confidence": 99,
+        "visual_evidence": [
+          {
+            "start": 124.5,
+            "end": 133.5,
+            "description": "前景雏鸟披褐色绒羽，长而端部钩曲的深色嘴，多次张嘴；背景还有其他鸟。"
+          },
+          {
+            "start": 133.5,
+            "end": 141.5,
+            "description": "成鸟来到雏鸟旁边，成鸟整体深褐，嘴基及脸部较浅，背翼褐色；雏鸟向成鸟嘴部伸头。"
+          },
+          {
+            "start": 143,
+            "end": 155,
+            "description": "成鸟反复俯身，雏鸟的嘴与成鸟张开的嘴接触，出现典型亲鸟喂雏互动。不能仅靠画面细辨吐出的食物种类，未作此类描述。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 124.4,
+            "end": 133.9,
+            "description": "有短促、较高频的窄带及谐波拱形音，夹杂环境底噪，声谱与尖细叫声相容；画面有张嘴的雏鸟，但群落中多只鸟同时在场，不逐声断言来源。"
+          },
+          {
+            "start": 148.3,
+            "end": 152.6,
+            "description": "仍有断续的较高频短音及较低能量环境声；没有把喂食接触推定为特定叫声的原因。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 124.2,
+            "end": 129.6
+          },
+          {
+            "start": 148.5,
+            "end": 152.6
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+            "supports": "深褐色成鸟、嘴基周围较浅、深色嘴脚；亲鸟以反刍方式喂雏，以及繁殖地多种叫声的一般信息。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 130.102625,
+            "end": 136.078958,
+            "text": "这是黑脚信天翁。深褐色的成鸟，正靠近全身绒羽的雏鸟。"
+          },
+          {
+            "start": 140.102625,
+            "end": 147.381583,
+            "text": "成鸟俯身，和雏鸟嘴对嘴地接触。信天翁会把食物反刍出来，喂给幼鸟。"
+          },
+          {
+            "start": 153.102625,
+            "end": 155.747375,
+            "text": "原声里，还夹着尖细的叫声。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+          "supports": "深褐色成鸟、嘴基周围较浅、深色嘴脚；亲鸟以反刍方式喂雏，以及繁殖地多种叫声的一般信息。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+            "checked_utc": "2026-11-16T05:10:11.663833+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+            "http_status": 200,
+            "content_type": "text/html; charset=UTF-8",
+            "redirects": [],
+            "bytes": 183100,
+            "sha256": "62a8a9805fd3d7c65a47342e5e508e9e30852a1f79b9319f9d303acea42ebc1a",
+            "retrieved_successfully": true,
+            "title": "Black-footed Albatross | Audubon Field Guide",
+            "text_archive": "reference_review/134848eb8ed1b479.txt",
+            "text_excerpt": "Black-footed Albatross | Audubon Field Guide\nSkip to main content\nOpen Search\nBird Guide\nAlbatrosses\nBlack-footed Albatross\nListen\n2\nBlack-footed Albatross\nAdult Black-footed Albatross.\nPhoto:\nRobin Agarwal/Flickr (CC BY NC 2.0)\nAdult or juvenile Black-footed Albatross.\nPhoto:\nKat Paleckova/Audubon Photography Awards\nAdult Black-footed Albatross.\nPhoto:\nOregon Department of Fish and Wildlife/Flickr (CC BY SA 2.0)\nAdult Black-footed Albatross.\nPhoto:\nKen Zaremba/Audubon Photography Awards\nAdult or Juvenile Black-footed Albatross.\nPhoto:\nKat Paleckova/Audubon Photography Awards\nAdult Black-footed Albatross.\nPhoto:\nDavid Larson/Flickr (CC BY NC ND 2.0)\nAdult or Juvenile Black-footed Albatross.\nPhoto:\nTom Benson/Flickr (CC BY NC ND 2.0)\nBlack-footed Albatross\nPhoebastria nigripes\nAt a Glance\nRange & Identification\nBehavior\nConservation\nBack to Top\nAt a Glance\nRestricted to the North Pacific, the Black-footed Albatross is the only albatross seen commonly off the North American coastline. Its closest nesting colonies are in Hawaii. At sea it often follows ships, feeding on refuse in their wake.\nAll bird guide text and rangemaps adapted from\nLives of North American Birds\nby Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved.\nCategory\nAlbatrosses\nIUCN Status\nNear Threatened\nHabitat\nOpen Ocean\nRegion\nAlaska and The North, California, Northwest, Western Canada\nBehavior\nFlap/Glide, Soaring, Swimming\nPopulation\n130.000\nRange & Identification\nMigration & Range Maps\nSome can be found throughout North Pacific at all seasons but adults concentrate near nesting islands (Hawaii and off Japan) from November to June; most restricted in February when feeding young nestlings. Most numerous off North American coast from June through August.\nDescription\nSexes similar; male slightly larger — Length: 2 ft 5 in-2 ft 8 in (74-84 cm); wingspan: 6 ft 5 in-7 ft 2 in (2-2.2 m); weight: 5 lb 5 oz-8 lb 2 oz (2.4-3.7 kg). The Black-footed Albatross is much larger than any of the other true seabirds seen commonly off the West Coast, with very long narrow wings, heavy bill, and slow wingbeats interspersed with long glides. In windy conditions, may not have to flap at all. Dusky brown, with white around base of bill and sometimes at base of tail; bill and feet dark.\nSize\nAbout the size of a Heron\nColor\nBlack, Brown, Gray, White\nWing Shape\nLong, Narrow, Pointed, Tapered\nTail Shape\nRounded, Short, Square-tipped, Wedge-shaped\nSongs and Calls\nShrieks and squeals during fights over food; on nesting grounds, makes a variety of bill-clapping sounds, quacks, and whistles.\nCall Pattern\nFlat, Simple\nCall Type\nChatter, Croak/Quack, Odd\nHabitat\nOpen ocean. In foraging at sea, most common over upwellings or over continental shelf, but rarely close to shore. Nests on sandy beaches and other open flat areas on islands in Pacific.\nSign up for Audubon's newsletter to learn more about birds like the Black-footed Albatross\nEmail\nZip\nPhone (optional)\nBy submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our\nPrivacy Policy\nand\nTerms & Conditions\n.\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy\nand\nTerms of Service\napply.\nBehavior\nEggs\nA Black-footed Albatross lays one egg. The egg is creamy white, spotted with brown. Incubation (by both sexes) averages 65-66 days.\nYoung\nFor about 18-20 days after hatching, one parent broods and guards the nestling while other forages for food, taking turns every one or two days. Young is fed by regurgitation, by both parents, until it leaves the nest. Period from hatching to departure from island is about 140-150 days.\nFeeding Behavior\nForages while swimming by seizing items at surface, up-ending to reach underwater, or diving short distances underwater with wing"
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 124.5,
+          "end": 133.5,
+          "timestamp_within_chapter": true,
+          "description": "前景雏鸟披褐色绒羽，长而端部钩曲的深色嘴，多次张嘴；背景还有其他鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 133.5,
+          "end": 141.5,
+          "timestamp_within_chapter": true,
+          "description": "成鸟来到雏鸟旁边，成鸟整体深褐，嘴基及脸部较浅，背翼褐色；雏鸟向成鸟嘴部伸头。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 143,
+          "end": 155,
+          "timestamp_within_chapter": true,
+          "description": "成鸟反复俯身，雏鸟的嘴与成鸟张开的嘴接触，出现典型亲鸟喂雏互动。不能仅靠画面细辨吐出的食物种类，未作此类描述。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 124.4,
+          "end": 133.9,
+          "timestamp_within_chapter": true,
+          "description": "有短促、较高频的窄带及谐波拱形音，夹杂环境底噪，声谱与尖细叫声相容；画面有张嘴的雏鸟，但群落中多只鸟同时在场，不逐声断言来源。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 148.3,
+          "end": 152.6,
+          "timestamp_within_chapter": true,
+          "description": "仍有断续的较高频短音及较低能量环境声；没有把喂食接触推定为特定叫声的原因。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "answer": {
+        "segment": 6,
+        "start": 158.466667,
+        "end": 185.466667,
+        "chinese_name": "黑背信天翁",
+        "english_name": "Laysan Albatross",
+        "scientific_name": "Phoebastria immutabilis",
+        "confidence": 99,
+        "visual_evidence": [
+          {
+            "start": 159,
+            "end": 166,
+            "description": "成鸟头颈、胸腹白色，与深黑褐背翼对比明显，眼周深色，嘴浅粉肉色并有钩端。两只成鸟相对活动，旁有绒羽雏鸟。"
+          },
+          {
+            "start": 168.5,
+            "end": 170,
+            "description": "两只前景成鸟同时伸颈仰头，嘴指向上方。"
+          },
+          {
+            "start": 171,
+            "end": 179.5,
+            "description": "两只鸟互相面对，低头、点头，靠近并反复开合或碰触嘴，之后又仰头。与信天翁仪式化求偶展示相符；没有根据画面推定性别或配偶年限。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 168.5,
+            "end": 170.4,
+            "description": "可见多条谐波带组成的较长调频音，并与成鸟伸颈张嘴的时段相近；与仰头长鸣相容。"
+          },
+          {
+            "start": 171.1,
+            "end": 173.3,
+            "description": "密集短脉冲和宽带声与近嘴互动时段相邻，可能包括碰嘴、叩嘴声；群落背景音混杂，不能把每次脉冲都准确分给某只鸟。"
+          },
+          {
+            "start": 181,
+            "end": 184.4,
+            "description": "再次出现较长、带谐波的调频音，画面也有仰头姿态，完整保留末尾原声供观察。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 158.6,
+            "end": 162.6
+          },
+          {
+            "start": 168.4,
+            "end": 172.6
+          },
+          {
+            "start": 179.5,
+            "end": 185.4
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+            "supports": "白色体部与暗色背翼的辨识特征；一般求偶展示包含低头、左右摆头及嘴指向天空并鸣叫等仪式动作。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 163.102625,
+            "end": 167.35525,
+            "text": "这是黑背信天翁。白头白腹，背翼深黑。"
+          },
+          {
+            "start": 173.102625,
+            "end": 178.431583,
+            "text": "仰头长鸣、相互碰嘴，配合点头，这是它们的求偶展示。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+          "supports": "白色体部与暗色背翼的辨识特征；一般求偶展示包含低头、左右摆头及嘴指向天空并鸣叫等仪式动作。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": false,
+          "content_support": "not_independently_verified",
+          "verification_note": "代理记录显示该域名连接建立，但HTTPS加密，无法据此证明具体URL正文已读取。",
+          "archive": null,
+          "post_run_check": {
+            "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+            "checked_utc": "2026-11-16T05:10:16.456297+00:00",
+            "phase": "independent_post_run_review",
+            "proves_solver_read_body": false,
+            "semantic_support": "not_judged",
+            "final_url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+            "http_status": 200,
+            "content_type": "text/html; charset=UTF-8",
+            "redirects": [],
+            "bytes": 198494,
+            "sha256": "381f6d4a7b2c2a9d034d4578f61c21fa220d40a52ad4c029b5c4feacbc8b0165",
+            "retrieved_successfully": true,
+            "title": "Laysan Albatross | Audubon Field Guide",
+            "text_archive": "reference_review/f6243d0d2deaf3e1.txt",
+            "text_excerpt": "Laysan Albatross | Audubon Field Guide\nSkip to main content\nOpen Search\nBird Guide\nAlbatrosses\nLaysan Albatross\nListen\n1\nLaysan Albatross\nAdults.\nPhoto:\nKat Paleckova/Audubon Photography Awards\nAdult and nestling.\nPhoto:\nJoseph Tenne/Audubon Photography Awards\nAdult.\nPhoto:\nkschneider/Flickr (CC BY NC 2.0)\nAdults.\nPhoto:\nKat Paleckova/Audubon Photography Awards\nAdults.\nPhoto:\nPamela Walz/Audubon Photography Awards\nAdult.\nPhoto:\nAaron Maizlish/Flickr (CC BY NC 2.0)\nAdult and nestling.\nPhoto:\nJoseph Mahoney/Audubon Photography Awards\nAdult.\nPhoto:\nRon Horn/Audubon Photography Awards\nAdult, with adult Black-footed Albatross.\nPhoto:\nGreg Schechter/Flickr (CC BY 2.0)\nAdult.\nPhoto:\nNonnie Thompson/Audubon Photography Awards\nAdult.\nPhoto:\nRobert Martin/Audubon Photography Awards\nAdult.\nPhoto:\nGreg Schechter/Flickr (CC BY 2.0)\nAdult.\nPhoto:\nTom Benson/Flickr (CC BY NC ND 2.0)\nLaysan Albatross\nPhoebastria immutabilis\nAt a Glance\nRange & Identification\nBehavior\nConservation\nBack to Top\nAt a Glance\nIn total population, the Laysan Albatross is much more numerous than the Black-footed Albatross. However, it is seen less often off the west coast of North America (and generally farther offshore), although sightings have increased in recent decades. Beginning in the 1980s, it has been found nesting on islands off the west coast of Mexico, a range extension of thousands of miles. Oddly, several Laysan Albatrosses have been found far inland in the southwestern United States.\nAll bird guide text and rangemaps adapted from\nLives of North American Birds\nby Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved.\nCategory\nAlbatrosses\nIUCN Status\nNear Threatened\nHabitat\nOpen Ocean\nRegion\nAlaska and The North, California, Northwest, Western Canada\nBehavior\nSoaring, Swimming\nPopulation\n1.200.000\nRange & Identification\nMigration & Range Maps\nBirds leave Hawaiian breeding grounds in July and evidently most go northwest toward Japan, then northeast toward Aleutians, before turning south toward Hawaii again. Non-breeders may wander anywhere in North Pacific at any season. Most numerous off Alaska in summer, off California in winter. Strays found in interior of American Southwest are thought to be birds that moved north in Gulf of California and then attempted to continue north overland.\nDescription\nSexes similar; male slightly larger — Length: 2 ft 7 in-2 ft 10 in (79-89 cm); wingspan: 6 ft 5 in-6 ft 8 in (2-2.1 m); weight: 4 lb 12 oz-7 lb 5 oz (2.2-3.3 kg). The Laysan Albatross is a huge, long-winged seabird. Back and upper wings dark, body mostly white. Has dark marks on center of white underwing and U-shaped white pattern across rump.\nSize\nAbout the size of a Heron\nColor\nBlack, Brown, Gray, White, Yellow\nWing Shape\nLong, Narrow, Pointed, Tapered\nTail Shape\nRounded, Short, Square-tipped, Wedge-shaped\nSongs and Calls\nSilent at sea, except for grunting calls when squabbling over food.\nCall Pattern\nFlat, Simple\nCall Type\nChatter, Croak/Quack, Drum, Odd, Raucous, Scream\nHabitat\nOpen ocean. Generally forages far from land, beyond continental shelf, and mainly over cold waters. Nests on open sandy or grassy areas on low, flat islands.\nSign up for Audubon's newsletter to learn more about birds like the Laysan Albatross\nEmail\nZip\nPhone (optional)\nBy submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our\nPrivacy Policy\nand\nTerms & Conditions\n.\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy\nand\nTerms of Service\napply.\nBehavior\nEggs\nA Laysan Albatross lays one egg. The egg is creamy white, spotted with brown. Incubation (by both sexes) averages 64-65 days.\nYoung\nFor 12-24 days after egg hatches, one parent stays with young while other forages for food. Nestling fed by regurgitatio"
+          }
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 159,
+          "end": 166,
+          "timestamp_within_chapter": true,
+          "description": "成鸟头颈、胸腹白色，与深黑褐背翼对比明显，眼周深色，嘴浅粉肉色并有钩端。两只成鸟相对活动，旁有绒羽雏鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 168.5,
+          "end": 170,
+          "timestamp_within_chapter": true,
+          "description": "两只前景成鸟同时伸颈仰头，嘴指向上方。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 171,
+          "end": 179.5,
+          "timestamp_within_chapter": true,
+          "description": "两只鸟互相面对，低头、点头，靠近并反复开合或碰触嘴，之后又仰头。与信天翁仪式化求偶展示相符；没有根据画面推定性别或配偶年限。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 168.5,
+          "end": 170.4,
+          "timestamp_within_chapter": true,
+          "description": "可见多条谐波带组成的较长调频音，并与成鸟伸颈张嘴的时段相近；与仰头长鸣相容。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 171.1,
+          "end": 173.3,
+          "timestamp_within_chapter": true,
+          "description": "密集短脉冲和宽带声与近嘴互动时段相邻，可能包括碰嘴、叩嘴声；群落背景音混杂，不能把每次脉冲都准确分给某只鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 181,
+          "end": 184.4,
+          "timestamp_within_chapter": true,
+          "description": "再次出现较长、带谐波的调频音，画面也有仰头姿态，完整保留末尾原声供观察。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    }
+  ],
+  "run_termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "birds",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794798874.964437,
+    "elapsed_seconds": 2873.4741501808167
+  }
+}

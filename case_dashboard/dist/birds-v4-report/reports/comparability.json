@@ -1,0 +1,17 @@
+{
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-luna"
+  ],
+  "effort": "high",
+  "harness": "Codex 0.163.0",
+  "time_budget": 3600,
+  "inputs_identical": true,
+  "prompt_identical": true,
+  "network_policy_identical": true,
+  "tts_engine": "Chosen independently by each solver; no preset voice/package/helper",
+  "installed_environment": "Python3 + pip + numpy/scipy/Pillow; ffmpeg/ffprobe/curl; fresh private installation directories",
+  "commercial_tts_keys_provided": false,
+  "no_prebuilt_solver_helpers": true,
+  "configuration_limitations": "Same model API endpoint, different existing credential groups; service congestion not guaranteed identical. Generic HTTPS proxy logs domains, IPs and byte counts; encrypted URLs and bodies are not visible."
+}

@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "created_unix": 1794805928.4695733,
+  "checks": {
+    "frozen_inputs_runtime_and_scorer_unchanged": true,
+    "same_video_as_v3": true,
+    "judge_actual_audio_challenge": true,
+    "scoring_controls": true,
+    "no_package_voice_or_helper_recommendation_in_instructions": true
+  },
+  "models": {
+    "sol": {
+      "checks": {
+        "environment_preflight_passed": true,
+        "actual_model_verified": true,
+        "all_requests_high": true,
+        "within_3600_seconds_plus_5_second_shutdown_tolerance": true,
+        "sealed_answers_unchanged": true,
+        "no_infrastructure_interruption": true,
+        "no_blacklist_domain_connection": true,
+        "scoring_complete": true,
+        "body_formula_consistent": true,
+        "quality_formula_consistent": true,
+        "summary_matches_reviewed_result": true
+      },
+      "task_gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": true,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "video_decodes": true,
+      "narration_valid": true,
+      "score": 63.2175,
+      "elapsed_seconds": 2873.4741501808167,
+      "audit_sha256": "230de06cb7f3e39f94fb074983f654d0bb484c20ff31c694b5614796fc411909",
+      "reviewed_result_sha256": "aa1065d4035748a9f751e26049b16f96f33c89a9560f5b85834e6cdb63becc9d"
+    },
+    "luna": {
+      "checks": {
+        "environment_preflight_passed": true,
+        "actual_model_verified": true,
+        "all_requests_high": true,
+        "within_3600_seconds_plus_5_second_shutdown_tolerance": true,
+        "sealed_answers_unchanged": true,
+        "no_infrastructure_interruption": true,
+        "no_blacklist_domain_connection": true,
+        "scoring_complete": true,
+        "body_formula_consistent": true,
+        "quality_formula_consistent": true,
+        "summary_matches_reviewed_result": true
+      },
+      "task_gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": false,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "video_decodes": true,
+      "narration_valid": true,
+      "score": 0.0,
+      "elapsed_seconds": 2450.4303121566772,
+      "audit_sha256": "df4174a2ff4e465687081a4e54142ee968a844c0951a3a6604290dd063e4efef",
+      "reviewed_result_sha256": "91a416c814e9b771e4b78b91d10827fe0b18e64debc152ff097335c61841076f"
+    }
+  },
+  "meaning": "Experiment integrity acceptance, not task passing; original task failures remain in scores and gates.",
+  "network_limit": "HTTPS target domains and byte counts only; exact paths, response bodies and unknown derivative sources cannot be fully verified.",
+  "judge": {
+    "passed": true,
+    "expected": "163170",
+    "response": {
+      "heard_audio": true,
+      "digits": "163170"
+    },
+    "actual_model": "qwen3.8-omni-flash",
+    "actual_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  },
+  "browser_playback_verified": false
+}

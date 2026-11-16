@@ -1,0 +1,195 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "枝叶把鸟遮住了。根据成串重复的鸣唱，我暂按四川短翅莺识别。声音一阵接着一阵，鸟却藏在浓密的枝叶后。",
+    "speech_spans": [
+      {
+        "start": 4.08,
+        "end": 5.36,
+        "text": "枝叶把鸟遮住了。"
+      },
+      {
+        "start": 6.08,
+        "end": 10.24,
+        "text": "根据成串重复的鸣唱，我暂按四川短翅莺识别。"
+      },
+      {
+        "start": 15.76,
+        "end": 19.6,
+        "text": "声音一阵接着一阵，鸟却藏在浓密的枝叶后。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫和啁啾声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械感和合成痕迹。",
+      "times": [
+        4.32,
+        9.84,
+        16.24,
+        20.0
+      ]
+    },
+    "timbre": {
+      "score": 0.75,
+      "reason": "音色本身较为清晰稳定，没有刺耳的杂音，但整体听感偏冷，有轻微的AI合成质感。",
+      "times": [
+        4.32,
+        9.84,
+        16.24,
+        20.0
+      ]
+    },
+    "clarity": {
+      "score": 1.0,
+      "reason": "发音非常标准，咬字清晰，每个字都能轻松听懂，无模糊或吞音现象。",
+      "times": [
+        4.32,
+        9.84,
+        16.24,
+        20.0
+      ]
+    },
+    "pacing": {
+      "score": 0.75,
+      "reason": "语速适中，句间停顿基本符合语法逻辑，但节奏略显刻板，不够灵动。",
+      "times": [
+        4.32,
+        9.84,
+        16.24,
+        20.0
+      ]
+    },
+    "balance": {
+      "score": 1.0,
+      "reason": "人声与背景鸟鸣声的比例控制得很好，两者互不干扰，既能听清解说也能欣赏环境音。",
+      "times": [
+        4.32,
+        9.84,
+        16.24,
+        20.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中的鸟叫声非常真实、清脆且富有层次，保留了良好的自然环境氛围。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 10.0,
+        "end": 16.0,
+        "reason": "此时间段内无人声，可以清晰听到连续的、真实的鸟类鸣叫声。"
+      },
+      {
+        "start": 20.0,
+        "end": 26.0,
+        "reason": "此时间段内无人声，背景中持续存在清晰的鸟鸣声。"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 1,
+    "spoken_species": "四川短翅莺",
+    "I_reason": "在06.08-10.24秒，旁白明确说出“我暂按四川短翅莺识别”。“四川短翅莺”为真值物种“四川蝗莺”的别名，且发音清晰可辨，符合单一正确暂定识别的标准。",
+    "F": {
+      "score": 1.0,
+      "reason": "旁白指出鸟被枝叶遮住（对应视觉证据），并根据成串重复的鸣唱进行识别（对应听觉证据），最终给出暂定物种名称，所述内容与客观事实及提供的视听线索完全一致，无事实错误。",
+      "times": [
+        [
+          4.08,
+          5.36
+        ],
+        [
+          6.08,
+          10.24
+        ]
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "解说词与本片视听证据高度对应：提到“枝叶把鸟遮住了”完美契合画面中茂密灌丛遮挡鸟体的情况；提到“根据成串重复的鸣唱”准确描述了背景中持续且有节奏的鸟鸣声特征。同时，旁白使用了“暂按...识别”，诚实地反映了仅凭声音和隐蔽画面无法绝对确认物种的不确定性。",
+      "times": [
+        [
+          0.0,
+          26.0
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "枝叶把鸟遮住了",
+        "supported": true,
+        "reason": "视频画面显示茂密的绿色灌木丛和交错的枝叶，确实将鸟类主体遮挡，无法看清其形态。"
+      },
+      {
+        "claim": "根据成串重复的鸣唱，我暂按四川短翅莺识别",
+        "supported": true,
+        "reason": "音频背景中存在持续、有节奏的类似昆虫或鸟类的鸣叫声，且“四川短翅莺”是真值物种“四川蝗莺”的有效别名，该推断基于合理的听觉线索并保持了科学上的严谨性（使用“暂按”）。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": null,
+      "reason": "无法判断。提供的拼图帧时间戳（如48.29s至70.57s）与SRT字幕文件的时间范围（50.068s至66.206s）存在严重错位，且画面中未显示任何烧录字幕文本，导致无法验证字幕的实际渲染、可读性及遮挡情况。",
+      "times": []
+    },
+    "timing": {
+      "score": null,
+      "reason": "无法判断。由于缺乏有效的视觉证据来确认字幕是否出现在对应的视频时间点，因此无法评估解说时机与画面的同步性。虽然独立转写提供了语音内容，但无法通过当前图像核实其是否与最终成片的时间轴对齐。",
+      "times": []
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 50.167,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 56.617,
+        "end": 62.167,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 66.067,
+        "end": 72.8,
+        "matched_original_seconds": 5
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 10.0,
+        "end": 16.0,
+        "reason": "此时间段内无人声，可以清晰听到连续的、真实的鸟类鸣叫声。"
+      },
+      {
+        "start": 20.0,
+        "end": 26.0,
+        "reason": "此时间段内无人声，背景中持续存在清晰的鸟鸣声。"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 15,
+    "compared_seconds": 25
+  }
+}

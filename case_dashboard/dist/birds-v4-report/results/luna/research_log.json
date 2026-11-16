@@ -1,0 +1,37 @@
+{
+  "policy": "Queries were limited to species and visual field marks. No source tracing, reverse image search, original file names, metadata, blocked domains, cached copies, or model-based recognition were used.",
+  "accesses": [
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "status": 200,
+      "result": "Downloaded the Noto Sans SC font for subtitle rendering only; no bird information was used."
+    },
+    {
+      "url": "https://www.birdlife.org/species/black-browed-albatross/",
+      "status": 403,
+      "result": "Access denied; no page content used."
+    },
+    {
+      "url": "https://www.birdlife.org/species/southern-giant-petrel/",
+      "status": 403,
+      "result": "Access denied; no page content used."
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/black-browed-albatross",
+      "status": "proxy CONNECT 403",
+      "result": "Could not access the page; no content used."
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=black-browed+albatross+identification+birdlife",
+      "status": "proxy CONNECT 403",
+      "result": "Search failed; no results or snippets used."
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/black-browed-albatross",
+      "status": 200,
+      "result": "Returned an Error 404 page; no species facts used."
+    }
+  ],
+  "successful_species_sources": [],
+  "identification_limitations": "Species guesses rely on visible morphology and behavior only. Chapters 2 and 4 obscure or blur the bird; their names are explicitly tentative and low confidence. No native listening tool was available."
+}

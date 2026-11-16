@@ -1,0 +1,183 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "枝叶遮住了主体，这里暂认作夜鹰。音轨有间歇谐波脉冲，画面不足以确认声音来自这只鸟。",
+    "speech_spans": [
+      {
+        "start": 12.08,
+        "end": 15.36,
+        "text": "枝叶遮住了主体，这里暂认作夜鹰。"
+      },
+      {
+        "start": 16.0,
+        "end": 21.44,
+        "text": "音轨有间歇谐波脉冲，画面不足以确认声音来自这只鸟。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫声和虫鸣声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械朗读感。",
+      "times": [
+        12.48,
+        21.36
+      ]
+    },
+    "timbre": {
+      "score": 0.75,
+      "reason": "音色清晰稳定，没有明显的电流声或失真，但略显单薄，带有一点合成感。",
+      "times": [
+        12.48,
+        21.36
+      ]
+    },
+    "clarity": {
+      "score": 0.9,
+      "reason": "发音非常标准，咬字清晰，每个字都能轻松听懂。",
+      "times": [
+        12.48,
+        21.36
+      ]
+    },
+    "pacing": {
+      "score": 0.75,
+      "reason": "语速适中，停顿基本符合句法结构，但整体节奏略显僵硬。",
+      "times": [
+        12.48,
+        21.36
+      ]
+    },
+    "balance": {
+      "score": 0.8,
+      "reason": "人声突出，背景鸟鸣声虽然一直存在且音量不小，但没有严重干扰到对解说内容的理解。",
+      "times": [
+        12.48,
+        21.36
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声作为背景音贯穿始终。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 12.48,
+        "reason": "连续无人声，可清晰听到多种鸟类鸣叫的背景音"
+      },
+      {
+        "start": 21.36,
+        "end": 26.0,
+        "reason": "连续无人声，可清晰听到多种鸟类鸣叫的背景音"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "夜鹰",
+    "I_reason": "在12.08-15.36秒的旁白中，实际说出的是“这里暂认作夜鹰”，并未提及真值物种“四川蝗莺”。",
+    "F": {
+      "score": 0.0,
+      "reason": "将画面中的鸟识别为“夜鹰”属于事实错误。结合真值信息，该物种实为“四川蝗莺”，且音频特征（持续的、有节奏的鸣声）更符合蝗莺而非典型的夜鹰。",
+      "times": [
+        [
+          12.08,
+          15.36
+        ]
+      ]
+    },
+    "E": {
+      "score": 0.9,
+      "reason": "解说词准确描述了视觉证据（枝叶遮挡主体导致难以辨认）和听觉证据（间歇谐波脉冲），并基于这些观察做出了保守的判断声明（暂认作、不足以确认）。虽然最终给出的物种名称是错误的，但其推理过程与本片提供的视听线索高度对应。",
+      "times": [
+        [
+          12.08,
+          21.44
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "枝叶遮住了主体，这里暂认作夜鹰。",
+        "supported": false,
+        "reason": "前半句关于枝叶遮挡的描述符合视频画面；但后半句将其认定为“夜鹰”与真值“四川蝗莺”不符，属错误鉴定。"
+      },
+      {
+        "claim": "音轨有间歇谐波脉冲，画面不足以确认声音来自这只鸟。",
+        "supported": true,
+        "reason": "客观描述了听到的声音特征以及由于视线受阻导致的声源归属不确定性，符合本片的视听实际情况。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 0.8,
+      "reason": "字幕已实际烧录且清晰可读，未遮挡任何主要鸟体（因画面被枝叶完全遮蔽）。但存在明显的内容错误：独立转写文本为“夜鹰”，而视频内嵌字幕显示为“夜莺”；此外，SRT文件中的时间戳（58s-67s）与实际成片出现的时间段（约15s-20s）严重不符。",
+      "times": [
+        {
+          "start": 15.39,
+          "end": 20.05,
+          "text": "枝叶遮住了主体，这里暂认作夜莺。音轨有间歇谐波脉冲，画面不足以确认声音来自这只鸟。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 0.9,
+      "reason": "解说时机与当前章节画面高度对应。在影片15秒至20秒期间，画面确实呈现茂密灌丛及交错枝叶，无法辨认鸟体形态，此时出现的解说词准确描述了这一视觉状态（枝叶遮住主体），做到了视听同步。",
+      "times": [
+        {
+          "start": 15.39,
+          "end": 20.05,
+          "description": "解说内容关于‘枝叶遮住主体’与画面中密集的树叶和隐蔽的鸟类完美契合。"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 58.017,
+        "matched_original_seconds": 11
+      },
+      {
+        "start": 67.067,
+        "end": 72.8,
+        "matched_original_seconds": 4
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 12.48,
+        "reason": "连续无人声，可清晰听到多种鸟类鸣叫的背景音"
+      },
+      {
+        "start": 21.36,
+        "end": 26.0,
+        "reason": "连续无人声，可清晰听到多种鸟类鸣叫的背景音"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 16,
+    "compared_seconds": 25
+  }
+}

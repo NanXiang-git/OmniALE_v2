@@ -1,0 +1,454 @@
+{
+  "audio_analysis_method": "本环境没有原生听音工具，未声称亲耳试听。用 ffmpeg 将本地原声解码为48 kHz双声道PCM；用numpy/scipy实际读取采样、计算RMS、峰值、短时傅里叶声谱（1024点及局部高时频分辨率图），以Pillow显示声谱，并人工逐帧核对喙部、姿态和动作。只由本答题模型判断，无其他识别模型、ASR或子代理。候选种的独立参考录音仅用于查看一般音节结构和频段，不进行源文件匹配、声纹检索或素材溯源，不进入混音。声音音质和普通话韵律未经过亲耳试听，实际只检查了生成音频、时长、幅度、停顿、字词时间戳和字幕。源音轨中的背景鸟声可能混杂；频谱形态本身不能证明某个可见个体发声。",
+  "timeline_duration": 185.5,
+  "chapter_boundaries_source": "/candidate/chapters.json，六章切点保持；30fps常规转码向上覆盖末帧，最终185.500秒，与原文件185.504秒相差0.004秒。",
+  "segments": [
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 46.066667,
+      "chinese_name": "四川短翅莺",
+      "english_name": "Sichuan Bush Warbler",
+      "scientific_name": "Locustella chengi",
+      "confidence": 91,
+      "visual_evidence": [
+        {
+          "start": 1,
+          "end": 5,
+          "description": "近景呈暖棕褐色上体，灰白喉胸，嘴细长且深色；尾较长，翼较短。近景整段构图基本不变，鸟被手托住；没有同步的张嘴或觅食动作可核验。"
+        },
+        {
+          "start": 12,
+          "end": 18,
+          "description": "可清楚检查深色嘴、浅灰喉部、棕褐背翼和向左伸出的长尾；没有显著长眉纹。形态本身与部分短翅莺近似，结合声谱作判断。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 0.4,
+          "end": 5,
+          "description": "采样声谱显示约2.4–2.8kHz为主的短促宽带音，约半秒重复一次，并有约5及7.5–8kHz的较高能量成分；呈成串重复的鸣唱结构。与独立四川短翅莺参考的低频重复单元相符。近景无同步喙动，不能逐声归属。"
+        },
+        {
+          "start": 18,
+          "end": 25,
+          "description": "这部分还有约5.5–6.5kHz的另一组重复音，不能确认与前半段同源；保留其原声，不把它作为同一个体改变叫声的事实。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 0.3,
+          "end": 5.8
+        },
+        {
+          "start": 20,
+          "end": 27.5
+        },
+        {
+          "start": 41.5,
+          "end": 45.7
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+          "supports": "学名、中文名及物种照片辅助核对暖褐上体、灰喉胸和深色嘴；照片只作候选种形态参考。"
+        },
+        {
+          "url": "https://xeno-canto.org/238544/download",
+          "supports": "独立候选种鸣唱参考，实际下载并以声谱检查一般低频短音重复结构；未用于匹配原素材或混入成片。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 6.302625,
+          "end": 9.381583,
+          "text": "这只小鸟，我判断是四川短翅莺。"
+        },
+        {
+          "start": 12.602625,
+          "end": 17.576291,
+          "text": "看它暖褐色的背部、深色细嘴，还有向后伸出的长尾。"
+        },
+        {
+          "start": 28.102625,
+          "end": 32.576291,
+          "text": "原声里的短音有节奏地重复，像一串简短的鸣唱。"
+        },
+        {
+          "start": 35.302625,
+          "end": 40.315791,
+          "text": "不过，画面没有同步的张嘴动作，声音归属仍需谨慎。"
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "start": 46.066667,
+      "end": 72.8,
+      "chinese_name": "四川短翅莺（暂定）",
+      "english_name": "Sichuan Bush Warbler (tentative)",
+      "scientific_name": "Locustella chengi",
+      "confidence": 82,
+      "visual_evidence": [
+        {
+          "start": 47,
+          "end": 58,
+          "description": "画面是浓密绿叶和交错枝条，未获得足以诊断物种的清晰鸟体。没有凭阴影或遮挡处推断眼纹、羽色或动作。"
+        },
+        {
+          "start": 62,
+          "end": 71,
+          "description": "镜头仍被枝叶占据，不能确认具体发声位置，也没有可核验的捕食、飞行或筑巢动作。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 46.4,
+          "end": 48.4,
+          "description": "约2.8–3.2kHz的短音连续重复，带短尾音；背景还有细高音，来源不确定。"
+        },
+        {
+          "start": 52,
+          "end": 59,
+          "description": "较长一串相似短音，以约每秒两次的节奏重复，主能量近3kHz。声谱音节及节奏较符合四川短翅莺的重复鸣唱；相似种及环境噪声使判断仍有不确定性。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 46.3,
+          "end": 49.6
+        },
+        {
+          "start": 57.7,
+          "end": 61.7
+        },
+        {
+          "start": 67.1,
+          "end": 72.5
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/sichuan.bush.warbler.html",
+          "supports": "物种名称和独立鸣唱参考索引；不作为片中鸟体动作或地点的证据。"
+        },
+        {
+          "url": "https://xeno-canto.org/238544/download",
+          "supports": "低频短音成串重复的一般结构作为辅助；未进行声纹或源素材搜索。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 50.102625,
+          "end": 56.565791,
+          "text": "枝叶把鸟遮住了。根据成串重复的鸣唱，我暂按四川短翅莺识别。"
+        },
+        {
+          "start": 62.102625,
+          "end": 66.076291,
+          "text": "声音一阵接着一阵，鸟却藏在浓密的枝叶后。"
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "start": 72.8,
+      "end": 100.766667,
+      "chinese_name": "桤木纹霸鹟",
+      "english_name": "Alder Flycatcher",
+      "scientific_name": "Empidonax alnorum",
+      "confidence": 88,
+      "visual_evidence": [
+        {
+          "start": 73.3,
+          "end": 73.7,
+          "description": "转身时清楚露出两道浅翼斑、橄榄灰背、浅色细眼圈和较宽的嘴；随后多为正面。"
+        },
+        {
+          "start": 74.4,
+          "end": 79,
+          "description": "直立停在裸枝上，喉白、腹淡；头向不同方向转动，未看到捕虫。"
+        },
+        {
+          "start": 80.8,
+          "end": 81.5,
+          "description": "抬头张嘴，仍抓着同一枝条。89秒左右亦可见张嘴姿态，支持枝头发声行为。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 76.85,
+          "end": 77.3,
+          "description": "实际采样有短促鸣唱单元：前部快速调制，后部较强的约3–4.7kHz拱形音节，末端下降；重复出现在后续数秒。"
+        },
+        {
+          "start": 88.9,
+          "end": 89.5,
+          "description": "有相似的短句重复，附近画面可见仰头张嘴；结合外形与独立桤木纹霸鹟参考的先调制后上扬下降音节，倾向此种。与柳纹霸鹟外形很相近，不能只凭羽色确定；无亲耳声辨，保留置信度限制。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 73.2,
+          "end": 78.6
+        },
+        {
+          "start": 89.5,
+          "end": 91.6
+        },
+        {
+          "start": 97,
+          "end": 100.4
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+          "supports": "灰绿背、宽嘴、白喉；与柳纹霸鹟极相似，声音是重要区分线索；一般鸣唱为带沙音的fee-bee-o。"
+        },
+        {
+          "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+          "supports": "核查相似种外形重叠，及其fitz-bew鸣唱与桤木纹霸鹟的区别，避免只以外形过度确定。"
+        },
+        {
+          "url": "https://xeno-canto.org/13755/download",
+          "supports": "独立桤木纹霸鹟鸣唱参考，查看一般调制音节与后续上扬下降音节；未作源素材匹配。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 79.102625,
+          "end": 81.892082,
+          "text": "这只鸟，我判断是桤木纹霸鹟。"
+        },
+        {
+          "start": 84.102625,
+          "end": 88.457916,
+          "text": "浅色喉部、淡眼圈和两道翼斑，是主要线索。"
+        },
+        {
+          "start": 92.102625,
+          "end": 95.852666,
+          "text": "它在枝头抬头鸣唱，短句之间留着停顿。"
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "start": 100.766667,
+      "end": 123.966667,
+      "chinese_name": "芦苇莺（暂定）",
+      "english_name": "Eurasian Reed Warbler / Common Reed Warbler (tentative)",
+      "scientific_name": "Acrocephalus scirpaceus",
+      "confidence": 70,
+      "visual_evidence": [
+        {
+          "start": 104.7,
+          "end": 105.4,
+          "description": "芦苇间短暂出现失焦的褐色小鸟头部轮廓，能辨出暗眼及尖嘴的大致形状；细节不够，不能用眉纹或翼式下结论。"
+        },
+        {
+          "start": 107,
+          "end": 123,
+          "description": "主体持续被近处茎叶及失焦前景遮挡；没有可靠证据确认具体取食动作或翅尾细节。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 101.5,
+          "end": 106.5,
+          "description": "声谱上是多种短音接续，约2–7kHz的擦音状、弯曲调频和短脉冲成分相交替；原录整体声级较低。"
+        },
+        {
+          "start": 110,
+          "end": 115,
+          "description": "短音节多次接续、部分成对重复，中间夹短暂停顿，符合苇莺类的连续鸣唱。结合芦苇环境暂定芦苇莺；没有清晰体羽及亲耳辨音，无法排除近似苇莺，旁白明确暂定，未枚举碰答案。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 101,
+          "end": 106.6
+        },
+        {
+          "start": 115.99,
+          "end": 117.7
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/birds/common.reed.warbler.html",
+          "supports": "芦苇莺名称、芦苇生境和一般由反复短擦音及哨音组成的鸣唱；未将参考习性写成画面中的未见动作。"
+        },
+        {
+          "url": "https://www.oiseaux.net/chant/didier.collin/rousserolle.effarvatte.2.mp3",
+          "supports": "独立芦苇莺鸣唱参考，仅核对一般连续短音节结构；没有混入输出。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 107.102625,
+          "end": 110.471041,
+          "text": "芦苇后的这只小鸟，暂按芦苇莺识别。"
+        },
+        {
+          "start": 113.102625,
+          "end": 115.378916,
+          "text": "画面失焦，细节看不清。"
+        },
+        {
+          "start": 118.102625,
+          "end": 121.563166,
+          "text": "原声中，短小多变的鸣唱接连出现。"
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "start": 123.966667,
+      "end": 158.466667,
+      "chinese_name": "黑脚信天翁",
+      "english_name": "Black-footed Albatross",
+      "scientific_name": "Phoebastria nigripes",
+      "confidence": 99,
+      "visual_evidence": [
+        {
+          "start": 124.5,
+          "end": 133.5,
+          "description": "前景雏鸟披褐色绒羽，长而端部钩曲的深色嘴，多次张嘴；背景还有其他鸟。"
+        },
+        {
+          "start": 133.5,
+          "end": 141.5,
+          "description": "成鸟来到雏鸟旁边，成鸟整体深褐，嘴基及脸部较浅，背翼褐色；雏鸟向成鸟嘴部伸头。"
+        },
+        {
+          "start": 143,
+          "end": 155,
+          "description": "成鸟反复俯身，雏鸟的嘴与成鸟张开的嘴接触，出现典型亲鸟喂雏互动。不能仅靠画面细辨吐出的食物种类，未作此类描述。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 124.4,
+          "end": 133.9,
+          "description": "有短促、较高频的窄带及谐波拱形音，夹杂环境底噪，声谱与尖细叫声相容；画面有张嘴的雏鸟，但群落中多只鸟同时在场，不逐声断言来源。"
+        },
+        {
+          "start": 148.3,
+          "end": 152.6,
+          "description": "仍有断续的较高频短音及较低能量环境声；没有把喂食接触推定为特定叫声的原因。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 124.2,
+          "end": 129.6
+        },
+        {
+          "start": 148.5,
+          "end": 152.6
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+          "supports": "深褐色成鸟、嘴基周围较浅、深色嘴脚；亲鸟以反刍方式喂雏，以及繁殖地多种叫声的一般信息。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 130.102625,
+          "end": 136.078958,
+          "text": "这是黑脚信天翁。深褐色的成鸟，正靠近全身绒羽的雏鸟。"
+        },
+        {
+          "start": 140.102625,
+          "end": 147.381583,
+          "text": "成鸟俯身，和雏鸟嘴对嘴地接触。信天翁会把食物反刍出来，喂给幼鸟。"
+        },
+        {
+          "start": 153.102625,
+          "end": 155.747375,
+          "text": "原声里，还夹着尖细的叫声。"
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "start": 158.466667,
+      "end": 185.466667,
+      "chinese_name": "黑背信天翁",
+      "english_name": "Laysan Albatross",
+      "scientific_name": "Phoebastria immutabilis",
+      "confidence": 99,
+      "visual_evidence": [
+        {
+          "start": 159,
+          "end": 166,
+          "description": "成鸟头颈、胸腹白色，与深黑褐背翼对比明显，眼周深色，嘴浅粉肉色并有钩端。两只成鸟相对活动，旁有绒羽雏鸟。"
+        },
+        {
+          "start": 168.5,
+          "end": 170,
+          "description": "两只前景成鸟同时伸颈仰头，嘴指向上方。"
+        },
+        {
+          "start": 171,
+          "end": 179.5,
+          "description": "两只鸟互相面对，低头、点头，靠近并反复开合或碰触嘴，之后又仰头。与信天翁仪式化求偶展示相符；没有根据画面推定性别或配偶年限。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 168.5,
+          "end": 170.4,
+          "description": "可见多条谐波带组成的较长调频音，并与成鸟伸颈张嘴的时段相近；与仰头长鸣相容。"
+        },
+        {
+          "start": 171.1,
+          "end": 173.3,
+          "description": "密集短脉冲和宽带声与近嘴互动时段相邻，可能包括碰嘴、叩嘴声；群落背景音混杂，不能把每次脉冲都准确分给某只鸟。"
+        },
+        {
+          "start": 181,
+          "end": 184.4,
+          "description": "再次出现较长、带谐波的调频音，画面也有仰头姿态，完整保留末尾原声供观察。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 158.6,
+          "end": 162.6
+        },
+        {
+          "start": 168.4,
+          "end": 172.6
+        },
+        {
+          "start": 179.5,
+          "end": 185.4
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+          "supports": "白色体部与暗色背翼的辨识特征；一般求偶展示包含低头、左右摆头及嘴指向天空并鸣叫等仪式动作。"
+        }
+      ],
+      "narration": [
+        {
+          "start": 163.102625,
+          "end": 167.35525,
+          "text": "这是黑背信天翁。白头白腹，背翼深黑。"
+        },
+        {
+          "start": 173.102625,
+          "end": 178.431583,
+          "text": "仰头长鸣、相互碰嘴，配合点头，这是它们的求偶展示。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4494 @@
+[
+  {
+    "utc": 1794796004.2707694,
+    "action": "connect_request",
+    "connection_id": 1794796004254844602,
+    "host": "chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796004.2926917,
+    "action": "connect_established",
+    "connection_id": 1794796004254844602,
+    "host": "chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796004.3115208,
+    "action": "connection_error",
+    "connection_id": 1794796004254844602,
+    "host": "chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796004.3203437,
+    "action": "connect_request",
+    "connection_id": 1794796004303676887,
+    "host": "github.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796004.4410045,
+    "action": "connect_established",
+    "connection_id": 1794796004303676887,
+    "host": "github.com",
+    "port": 443,
+    "peer_ip": "20.6.7.17",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796005.4954774,
+    "action": "connection_closed",
+    "connection_id": 1794796004303676887,
+    "host": "github.com",
+    "sent_bytes": 1001,
+    "received_bytes": 41485
+  },
+  {
+    "utc": 1794796006.1245382,
+    "action": "connect_request",
+    "connection_id": 1794796006108193984,
+    "host": "github.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796006.2271416,
+    "action": "connect_established",
+    "connection_id": 1794796006108193984,
+    "host": "github.com",
+    "port": 443,
+    "peer_ip": "20.6.7.17",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796012.747538,
+    "action": "connection_closed",
+    "connection_id": 1794796006108193984,
+    "host": "github.com",
+    "sent_bytes": 1219,
+    "received_bytes": 25593106
+  },
+  {
+    "utc": 1794796046.1542583,
+    "action": "connect_request",
+    "connection_id": 1794796046141649521,
+    "host": "api.github.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796046.2522945,
+    "action": "connect_established",
+    "connection_id": 1794796046141649521,
+    "host": "api.github.com",
+    "port": 443,
+    "peer_ip": "20.205.243.168",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796046.8252525,
+    "action": "connect_request",
+    "connection_id": 1794796046804565921,
+    "host": "codeload.github.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796046.9048545,
+    "action": "connect_established",
+    "connection_id": 1794796046804565921,
+    "host": "codeload.github.com",
+    "port": 443,
+    "peer_ip": "57.155.223.241",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796056.55602,
+    "action": "connect_request",
+    "connection_id": 1794796056545750524,
+    "host": "pypi.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796056.7002368,
+    "action": "connection_closed",
+    "connection_id": 1794796046804565921,
+    "host": "codeload.github.com",
+    "sent_bytes": 1962,
+    "received_bytes": 3577
+  },
+  {
+    "utc": 1794796056.7459195,
+    "action": "connection_closed",
+    "connection_id": 1794796046141649521,
+    "host": "api.github.com",
+    "sent_bytes": 2466,
+    "received_bytes": 13595
+  },
+  {
+    "utc": 1794796056.7686608,
+    "action": "connect_request",
+    "connection_id": 1794796056758037744,
+    "host": "chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796057.8072488,
+    "action": "connect_established",
+    "connection_id": 1794796056545750524,
+    "host": "pypi.org",
+    "port": 443,
+    "peer_ip": "151.101.128.223",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796059.9379098,
+    "action": "connect_request",
+    "connection_id": 1794796059929560208,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796061.2008178,
+    "action": "connect_request",
+    "connection_id": 1794796061180400836,
+    "host": "files.pythonhosted.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796065.569489,
+    "action": "connect_established",
+    "connection_id": 1794796061180400836,
+    "host": "files.pythonhosted.org",
+    "port": 443,
+    "peer_ip": "151.101.0.223",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796066.8003457,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796056758037744,
+    "host": "chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796069.9667745,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796059929560208,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796086.746784,
+    "action": "connection_closed",
+    "connection_id": 1794796056545750524,
+    "host": "pypi.org",
+    "sent_bytes": 1881,
+    "received_bytes": 119924
+  },
+  {
+    "utc": 1794796086.769564,
+    "action": "connection_closed",
+    "connection_id": 1794796061180400836,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1244,
+    "received_bytes": 11080
+  },
+  {
+    "utc": 1794796118.0634916,
+    "action": "connect_request",
+    "connection_id": 1794796118050721494,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796128.0773633,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796118050721494,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796168.7169514,
+    "action": "connect_request",
+    "connection_id": 1794796168699929050,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796168.7494936,
+    "action": "connect_established",
+    "connection_id": 1794796168699929050,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796169.1206481,
+    "action": "connect_request",
+    "connection_id": 1794796169100388012,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796169.1616483,
+    "action": "connect_established",
+    "connection_id": 1794796169100388012,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796169.5997064,
+    "action": "connection_closed",
+    "connection_id": 1794796169100388012,
+    "host": "cn.bing.com",
+    "sent_bytes": 956,
+    "received_bytes": 98842
+  },
+  {
+    "utc": 1794796169.621147,
+    "action": "connection_closed",
+    "connection_id": 1794796168699929050,
+    "host": "www.bing.com",
+    "sent_bytes": 957,
+    "received_bytes": 8851
+  },
+  {
+    "utc": 1794796176.4153929,
+    "action": "connect_request",
+    "connection_id": 1794796176400166854,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796186.43132,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796176400166854,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796196.6151602,
+    "action": "connect_request",
+    "connection_id": 1794796196604181833,
+    "host": "pypi.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796196.7952983,
+    "action": "connect_established",
+    "connection_id": 1794796196604181833,
+    "host": "pypi.org",
+    "port": 443,
+    "peer_ip": "151.101.0.223",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796213.3000848,
+    "action": "connect_request",
+    "connection_id": 1794796213278479173,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796213.4283574,
+    "action": "connect_established",
+    "connection_id": 1794796213278479173,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "peer_ip": "150.171.110.135",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796215.8971844,
+    "action": "connect_request",
+    "connection_id": 1794796215871876935,
+    "host": "files.pythonhosted.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796216.132499,
+    "action": "connect_established",
+    "connection_id": 1794796215871876935,
+    "host": "files.pythonhosted.org",
+    "port": 443,
+    "peer_ip": "151.101.0.223",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796217.455482,
+    "action": "connect_request",
+    "connection_id": 1794796217442714528,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796217.5846343,
+    "action": "connect_established",
+    "connection_id": 1794796217442714528,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "peer_ip": "150.171.110.135",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796220.9106185,
+    "action": "connection_closed",
+    "connection_id": 1794796213278479173,
+    "host": "www.rspb.org.uk",
+    "sent_bytes": 1315,
+    "received_bytes": 121410
+  },
+  {
+    "utc": 1794796221.7878244,
+    "action": "connect_request",
+    "connection_id": 1794796220934380179,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796224.1053164,
+    "action": "connect_established",
+    "connection_id": 1794796220934380179,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796227.2868996,
+    "action": "connection_closed",
+    "connection_id": 1794796217442714528,
+    "host": "www.rspb.org.uk",
+    "sent_bytes": 1314,
+    "received_bytes": 86755
+  },
+  {
+    "utc": 1794796227.3556945,
+    "action": "connect_request",
+    "connection_id": 1794796227340598218,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796228.6526332,
+    "action": "connect_established",
+    "connection_id": 1794796227340598218,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796229.9701135,
+    "action": "connection_closed",
+    "connection_id": 1794796220934380179,
+    "host": "www.audubon.org",
+    "sent_bytes": 783,
+    "received_bytes": 62879
+  },
+  {
+    "utc": 1794796229.9986594,
+    "action": "connection_closed",
+    "connection_id": 1794796227340598218,
+    "host": "www.audubon.org",
+    "sent_bytes": 784,
+    "received_bytes": 62626
+  },
+  {
+    "utc": 1794796235.5611632,
+    "action": "connect_request",
+    "connection_id": 1794796235536558338,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796244.6948233,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796235536558338,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796284.188556,
+    "action": "connect_request",
+    "connection_id": 1794796284169732091,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.206829,
+    "action": "connect_request",
+    "connection_id": 1794796284170119011,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.2297218,
+    "action": "connect_request",
+    "connection_id": 1794796284170751408,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.2532666,
+    "action": "connect_request",
+    "connection_id": 1794796284170530685,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.282346,
+    "action": "connect_request",
+    "connection_id": 1794796284171250535,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.3098965,
+    "action": "connect_established",
+    "connection_id": 1794796284169732091,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.333494,
+    "action": "connect_established",
+    "connection_id": 1794796284170119011,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.350333,
+    "action": "connect_established",
+    "connection_id": 1794796284170751408,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.3787851,
+    "action": "connect_established",
+    "connection_id": 1794796284171250535,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.3967693,
+    "action": "connect_established",
+    "connection_id": 1794796284170530685,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.5278008,
+    "action": "connect_request",
+    "connection_id": 1794796284511215604,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.544188,
+    "action": "connect_request",
+    "connection_id": 1794796284515528517,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.562469,
+    "action": "connect_request",
+    "connection_id": 1794796284515726103,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.5837955,
+    "action": "connect_established",
+    "connection_id": 1794796284511215604,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.6012957,
+    "action": "connect_established",
+    "connection_id": 1794796284515528517,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.6174557,
+    "action": "connect_established",
+    "connection_id": 1794796284515726103,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.635753,
+    "action": "connect_request",
+    "connection_id": 1794796284585086683,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.6575215,
+    "action": "connect_request",
+    "connection_id": 1794796284631384144,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796284.6796536,
+    "action": "connect_established",
+    "connection_id": 1794796284585086683,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.6971962,
+    "action": "connect_established",
+    "connection_id": 1794796284631384144,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796284.8225555,
+    "action": "connection_closed",
+    "connection_id": 1794796284511215604,
+    "host": "cn.bing.com",
+    "sent_bytes": 1075,
+    "received_bytes": 57185
+  },
+  {
+    "utc": 1794796284.8295581,
+    "action": "connection_closed",
+    "connection_id": 1794796284169732091,
+    "host": "www.bing.com",
+    "sent_bytes": 934,
+    "received_bytes": 9158
+  },
+  {
+    "utc": 1794796284.852766,
+    "action": "connection_closed",
+    "connection_id": 1794796284515528517,
+    "host": "cn.bing.com",
+    "sent_bytes": 1073,
+    "received_bytes": 56818
+  },
+  {
+    "utc": 1794796284.8694665,
+    "action": "connection_closed",
+    "connection_id": 1794796284170751408,
+    "host": "www.bing.com",
+    "sent_bytes": 932,
+    "received_bytes": 9154
+  },
+  {
+    "utc": 1794796284.8839526,
+    "action": "connection_closed",
+    "connection_id": 1794796284515726103,
+    "host": "cn.bing.com",
+    "sent_bytes": 1085,
+    "received_bytes": 56929
+  },
+  {
+    "utc": 1794796284.8978858,
+    "action": "connection_closed",
+    "connection_id": 1794796284170119011,
+    "host": "www.bing.com",
+    "sent_bytes": 944,
+    "received_bytes": 9175
+  },
+  {
+    "utc": 1794796284.9423873,
+    "action": "connection_closed",
+    "connection_id": 1794796284631384144,
+    "host": "cn.bing.com",
+    "sent_bytes": 1066,
+    "received_bytes": 56420
+  },
+  {
+    "utc": 1794796284.95909,
+    "action": "connection_closed",
+    "connection_id": 1794796284170530685,
+    "host": "www.bing.com",
+    "sent_bytes": 925,
+    "received_bytes": 9140
+  },
+  {
+    "utc": 1794796284.9754539,
+    "action": "connection_closed",
+    "connection_id": 1794796284585086683,
+    "host": "cn.bing.com",
+    "sent_bytes": 1073,
+    "received_bytes": 57071
+  },
+  {
+    "utc": 1794796284.9892313,
+    "action": "connection_closed",
+    "connection_id": 1794796284171250535,
+    "host": "www.bing.com",
+    "sent_bytes": 932,
+    "received_bytes": 9151
+  },
+  {
+    "utc": 1794796285.2357163,
+    "action": "connect_request",
+    "connection_id": 1794796285125562172,
+    "host": "www.birdforum.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796285.4651527,
+    "action": "connect_established",
+    "connection_id": 1794796285125562172,
+    "host": "www.birdforum.net",
+    "port": 443,
+    "peer_ip": "104.26.10.45",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796285.9383318,
+    "action": "connection_closed",
+    "connection_id": 1794796285125562172,
+    "host": "www.birdforum.net",
+    "sent_bytes": 801,
+    "received_bytes": 9825
+  },
+  {
+    "utc": 1794796285.9927726,
+    "action": "connect_request",
+    "connection_id": 1794796285976446831,
+    "host": "www.birdforum.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796286.3275259,
+    "action": "connect_established",
+    "connection_id": 1794796285976446831,
+    "host": "www.birdforum.net",
+    "port": 443,
+    "peer_ip": "172.67.74.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796287.1520398,
+    "action": "connection_closed",
+    "connection_id": 1794796285976446831,
+    "host": "www.birdforum.net",
+    "sent_bytes": 791,
+    "received_bytes": 9783
+  },
+  {
+    "utc": 1794796287.191711,
+    "action": "connect_request",
+    "connection_id": 1794796287178638043,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796287.3788447,
+    "action": "connect_established",
+    "connection_id": 1794796287178638043,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796288.8901985,
+    "action": "connect_request",
+    "connection_id": 1794796288881630912,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796290.0908742,
+    "action": "connect_established",
+    "connection_id": 1794796288881630912,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796291.0017316,
+    "action": "connection_closed",
+    "connection_id": 1794796287178638043,
+    "host": "www.audubon.org",
+    "sent_bytes": 788,
+    "received_bytes": 61492
+  },
+  {
+    "utc": 1794796291.360476,
+    "action": "connect_request",
+    "connection_id": 1794796291047605855,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796291.4747834,
+    "action": "connect_established",
+    "connection_id": 1794796291047605855,
+    "host": "www.rspb.org.uk",
+    "port": 443,
+    "peer_ip": "150.171.110.68",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796293.798483,
+    "action": "connect_request",
+    "connection_id": 1794796293773658882,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796293.8858874,
+    "action": "connect_established",
+    "connection_id": 1794796293773658882,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796293.912036,
+    "action": "connection_error",
+    "connection_id": 1794796293773658882,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796297.2525997,
+    "action": "connection_closed",
+    "connection_id": 1794796288881630912,
+    "host": "www.audubon.org",
+    "sent_bytes": 782,
+    "received_bytes": 62486
+  },
+  {
+    "utc": 1794796297.2865028,
+    "action": "connection_closed",
+    "connection_id": 1794796291047605855,
+    "host": "www.rspb.org.uk",
+    "sent_bytes": 1313,
+    "received_bytes": 97727
+  },
+  {
+    "utc": 1794796335.7693553,
+    "action": "connect_request",
+    "connection_id": 1794796335759903117,
+    "host": "raw.githubusercontent.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796335.9778798,
+    "action": "connect_established",
+    "connection_id": 1794796335759903117,
+    "host": "raw.githubusercontent.com",
+    "port": 443,
+    "peer_ip": "185.199.111.133",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796345.893928,
+    "action": "connection_closed",
+    "connection_id": 1794796196604181833,
+    "host": "pypi.org",
+    "sent_bytes": 8378,
+    "received_bytes": 2769560
+  },
+  {
+    "utc": 1794796352.2579854,
+    "action": "connect_request",
+    "connection_id": 1794796352211284872,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796352.3591573,
+    "action": "connect_established",
+    "connection_id": 1794796352211284872,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796352.6240475,
+    "action": "connection_error",
+    "connection_id": 1794796352211284872,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796375.3119845,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375295546512,
+    "host": "www.google.com",
+    "error": "Private/local destination blocked"
+  },
+  {
+    "utc": 1794796375.330482,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375299223852,
+    "host": "www.google.com",
+    "error": "Private/local destination blocked"
+  },
+  {
+    "utc": 1794796375.3464868,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375300949528,
+    "host": "www.google.com",
+    "error": "Private/local destination blocked"
+  },
+  {
+    "utc": 1794796375.3613775,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375302134715,
+    "host": "www.google.com",
+    "error": "Private/local destination blocked"
+  },
+  {
+    "utc": 1794796375.3764653,
+    "action": "connect_request",
+    "connection_id": 1794796375321865982,
+    "host": "html.duckduckgo.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796375.3925846,
+    "action": "connect_request",
+    "connection_id": 1794796375339293579,
+    "host": "html.duckduckgo.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796375.4078958,
+    "action": "connect_request",
+    "connection_id": 1794796375352690140,
+    "host": "html.duckduckgo.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796375.4246118,
+    "action": "connect_request",
+    "connection_id": 1794796375372897646,
+    "host": "html.duckduckgo.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796378.313703,
+    "action": "connect_request",
+    "connection_id": 1794796376424638778,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796378.4878395,
+    "action": "connect_established",
+    "connection_id": 1794796376424638778,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "peer_ip": "162.241.245.71",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796379.0837626,
+    "action": "connection_closed",
+    "connection_id": 1794796376424638778,
+    "host": "www.birdfinding.info",
+    "sent_bytes": 800,
+    "received_bytes": 6698
+  },
+  {
+    "utc": 1794796379.1000307,
+    "action": "connect_request",
+    "connection_id": 1794796379087820015,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796379.2761881,
+    "action": "connect_established",
+    "connection_id": 1794796379087820015,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "peer_ip": "162.241.245.71",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796379.8245604,
+    "action": "connection_closed",
+    "connection_id": 1794796379087820015,
+    "host": "www.birdfinding.info",
+    "sent_bytes": 790,
+    "received_bytes": 6698
+  },
+  {
+    "utc": 1794796379.8397536,
+    "action": "connect_request",
+    "connection_id": 1794796379826932773,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796380.0168798,
+    "action": "connect_established",
+    "connection_id": 1794796379826932773,
+    "host": "www.birdfinding.info",
+    "port": 443,
+    "peer_ip": "162.241.245.71",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796380.325209,
+    "action": "connection_closed",
+    "connection_id": 1794796215871876935,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 17707,
+    "received_bytes": 3750415
+  },
+  {
+    "utc": 1794796380.5713859,
+    "action": "connection_closed",
+    "connection_id": 1794796379826932773,
+    "host": "www.birdfinding.info",
+    "sent_bytes": 785,
+    "received_bytes": 6698
+  },
+  {
+    "utc": 1794796385.3961036,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375321865982,
+    "host": "html.duckduckgo.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796385.4181378,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375339293579,
+    "host": "html.duckduckgo.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796385.4354527,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375352690140,
+    "host": "html.duckduckgo.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796385.4535544,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796375372897646,
+    "host": "html.duckduckgo.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796410.6087177,
+    "action": "connect_request",
+    "connection_id": 1794796410596611219,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796410.6259758,
+    "action": "connect_established",
+    "connection_id": 1794796410596611219,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796410.6422963,
+    "action": "connection_error",
+    "connection_id": 1794796410596611219,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796424.7391975,
+    "action": "connection_closed",
+    "connection_id": 1794796335759903117,
+    "host": "raw.githubusercontent.com",
+    "sent_bytes": 793,
+    "received_bytes": 4908
+  },
+  {
+    "utc": 1794796458.026774,
+    "action": "connect_request",
+    "connection_id": 1794796457355384623,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796458.2179918,
+    "action": "connect_established",
+    "connection_id": 1794796457355384623,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "port": 443,
+    "peer_ip": "199.232.162.132",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796458.4339783,
+    "action": "connect_request",
+    "connection_id": 1794796458418498112,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796458.515527,
+    "action": "connect_established",
+    "connection_id": 1794796458418498112,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796460.008025,
+    "action": "connection_error",
+    "connection_id": 1794796458418498112,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796460.5626204,
+    "action": "connection_closed",
+    "connection_id": 1794796457355384623,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "sent_bytes": 892,
+    "received_bytes": 37559
+  },
+  {
+    "utc": 1794796469.8765962,
+    "action": "connect_request",
+    "connection_id": 1794796469866117335,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796469.9553785,
+    "action": "connect_established",
+    "connection_id": 1794796469866117335,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796469.9874196,
+    "action": "connection_error",
+    "connection_id": 1794796469866117335,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796487.191109,
+    "action": "connect_request",
+    "connection_id": 1794796487157681193,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.215405,
+    "action": "connect_request",
+    "connection_id": 1794796487163518806,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.4121978,
+    "action": "connect_request",
+    "connection_id": 1794796487396202103,
+    "host": "deb.debian.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.439873,
+    "action": "connect_request",
+    "connection_id": 1794796487156783390,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.4603164,
+    "action": "connect_request",
+    "connection_id": 1794796487157478004,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.4799912,
+    "action": "connect_request",
+    "connection_id": 1794796487157149543,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.4978502,
+    "action": "connect_request",
+    "connection_id": 1794796487156513947,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.5242393,
+    "action": "connect_request",
+    "connection_id": 1794796487157926938,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796487.6057687,
+    "action": "connect_established",
+    "connection_id": 1794796487396202103,
+    "host": "deb.debian.org",
+    "port": 443,
+    "peer_ip": "146.75.114.132",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796487.6692994,
+    "action": "connect_established",
+    "connection_id": 1794796487156783390,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "peer_ip": "46.105.204.31",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796487.6882865,
+    "action": "connect_established",
+    "connection_id": 1794796487157149543,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "peer_ip": "46.105.204.31",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796487.703573,
+    "action": "connect_established",
+    "connection_id": 1794796487157478004,
+    "host": "www.oiseaux-birds.com",
+    "port": 443,
+    "peer_ip": "46.105.204.31",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796487.7501876,
+    "action": "connect_established",
+    "connection_id": 1794796487157926938,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796487.7656288,
+    "action": "connect_established",
+    "connection_id": 1794796487156513947,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796488.5139427,
+    "action": "connect_established",
+    "connection_id": 1794796487163518806,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796488.5428975,
+    "action": "connection_closed",
+    "connection_id": 1794796487157149543,
+    "host": "www.oiseaux-birds.com",
+    "sent_bytes": 800,
+    "received_bytes": 4457
+  },
+  {
+    "utc": 1794796488.6030836,
+    "action": "connection_closed",
+    "connection_id": 1794796487157478004,
+    "host": "www.oiseaux-birds.com",
+    "sent_bytes": 810,
+    "received_bytes": 4436
+  },
+  {
+    "utc": 1794796488.6642346,
+    "action": "connection_closed",
+    "connection_id": 1794796487156783390,
+    "host": "www.oiseaux-birds.com",
+    "sent_bytes": 795,
+    "received_bytes": 4415
+  },
+  {
+    "utc": 1794796489.007742,
+    "action": "connection_closed",
+    "connection_id": 1794796487156513947,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 1018,
+    "received_bytes": 8571
+  },
+  {
+    "utc": 1794796490.175768,
+    "action": "connection_closed",
+    "connection_id": 1794796487157926938,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 998,
+    "received_bytes": 67373
+  },
+  {
+    "utc": 1794796491.8420079,
+    "action": "connection_closed",
+    "connection_id": 1794796487163518806,
+    "host": "www.audubon.org",
+    "sent_bytes": 784,
+    "received_bytes": 62600
+  },
+  {
+    "utc": 1794796492.5597584,
+    "action": "connect_established",
+    "connection_id": 1794796487157681193,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796493.8313131,
+    "action": "connection_closed",
+    "connection_id": 1794796487157681193,
+    "host": "www.audubon.org",
+    "sent_bytes": 782,
+    "received_bytes": 62092
+  },
+  {
+    "utc": 1794796528.7744036,
+    "action": "connect_request",
+    "connection_id": 1794796528764441724,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796528.8595185,
+    "action": "connect_established",
+    "connection_id": 1794796528764441724,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796528.8759253,
+    "action": "connection_error",
+    "connection_id": 1794796528764441724,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796537.4223728,
+    "action": "connection_closed",
+    "connection_id": 1794796487396202103,
+    "host": "deb.debian.org",
+    "sent_bytes": 838,
+    "received_bytes": 2220203
+  },
+  {
+    "utc": 1794796539.2202508,
+    "action": "connect_request",
+    "connection_id": 1794796539208459942,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796539.261827,
+    "action": "connect_established",
+    "connection_id": 1794796539208459942,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796539.9797988,
+    "action": "connect_request",
+    "connection_id": 1794796539971900284,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796540.012742,
+    "action": "connect_established",
+    "connection_id": 1794796539971900284,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796540.673779,
+    "action": "connection_closed",
+    "connection_id": 1794796539971900284,
+    "host": "cn.bing.com",
+    "sent_bytes": 1056,
+    "received_bytes": 57131
+  },
+  {
+    "utc": 1794796540.6952817,
+    "action": "connection_closed",
+    "connection_id": 1794796539208459942,
+    "host": "www.bing.com",
+    "sent_bytes": 915,
+    "received_bytes": 8938
+  },
+  {
+    "utc": 1794796564.0290868,
+    "action": "connect_request",
+    "connection_id": 1794796563985793474,
+    "host": "deb.debian.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796564.2068536,
+    "action": "connect_established",
+    "connection_id": 1794796563985793474,
+    "host": "deb.debian.org",
+    "port": 443,
+    "peer_ip": "199.232.162.132",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796565.3472972,
+    "action": "connection_closed",
+    "connection_id": 1794796563985793474,
+    "host": "deb.debian.org",
+    "sent_bytes": 786,
+    "received_bytes": 6327
+  },
+  {
+    "utc": 1794796587.6133142,
+    "action": "connect_request",
+    "connection_id": 1794796587602411707,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796587.6959286,
+    "action": "connect_established",
+    "connection_id": 1794796587602411707,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796587.724869,
+    "action": "connection_error",
+    "connection_id": 1794796587602411707,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794796614.7966275,
+    "action": "connect_request",
+    "connection_id": 1794796614772262027,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796614.8106458,
+    "action": "connect_request",
+    "connection_id": 1794796614772992933,
+    "host": "www.audubon.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796614.834709,
+    "action": "connect_established",
+    "connection_id": 1794796614772262027,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796614.9916806,
+    "action": "connect_request",
+    "connection_id": 1794796614771581067,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796615.006978,
+    "action": "connect_request",
+    "connection_id": 1794796614772665115,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796615.022608,
+    "action": "connect_request",
+    "connection_id": 1794796614773218915,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796615.0361605,
+    "action": "connect_request",
+    "connection_id": 1794796614774187261,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796615.1410975,
+    "action": "connect_request",
+    "connection_id": 1794796615131401531,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796615.1814568,
+    "action": "connect_established",
+    "connection_id": 1794796615131401531,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796615.2082844,
+    "action": "connect_established",
+    "connection_id": 1794796614771581067,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796615.2291276,
+    "action": "connect_established",
+    "connection_id": 1794796614772665115,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796615.2428968,
+    "action": "connect_established",
+    "connection_id": 1794796614774187261,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796615.5961099,
+    "action": "connection_closed",
+    "connection_id": 1794796615131401531,
+    "host": "cn.bing.com",
+    "sent_bytes": 1088,
+    "received_bytes": 57809
+  },
+  {
+    "utc": 1794796615.6147943,
+    "action": "connection_closed",
+    "connection_id": 1794796614772262027,
+    "host": "www.bing.com",
+    "sent_bytes": 947,
+    "received_bytes": 9176
+  },
+  {
+    "utc": 1794796615.9947674,
+    "action": "connect_established",
+    "connection_id": 1794796614772992933,
+    "host": "www.audubon.org",
+    "port": 443,
+    "peer_ip": "23.185.0.3",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796616.267736,
+    "action": "connect_established",
+    "connection_id": 1794796614773218915,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796616.806635,
+    "action": "connection_closed",
+    "connection_id": 1794796614774187261,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 1012,
+    "received_bytes": 74517
+  },
+  {
+    "utc": 1794796616.9427881,
+    "action": "connection_closed",
+    "connection_id": 1794796614771581067,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 992,
+    "received_bytes": 100442
+  },
+  {
+    "utc": 1794796617.2747915,
+    "action": "connection_closed",
+    "connection_id": 1794796614772665115,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 994,
+    "received_bytes": 83200
+  },
+  {
+    "utc": 1794796617.2956603,
+    "action": "connection_closed",
+    "connection_id": 1794796614772992933,
+    "host": "www.audubon.org",
+    "sent_bytes": 782,
+    "received_bytes": 62081
+  },
+  {
+    "utc": 1794796618.9566858,
+    "action": "connection_closed",
+    "connection_id": 1794796614773218915,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 990,
+    "received_bytes": 106809
+  },
+  {
+    "utc": 1794796640.4738998,
+    "action": "connect_request",
+    "connection_id": 1794796640456941184,
+    "host": "deb.debian.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796640.7007601,
+    "action": "connect_established",
+    "connection_id": 1794796640456941184,
+    "host": "deb.debian.org",
+    "port": 443,
+    "peer_ip": "199.232.162.132",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796642.0170999,
+    "action": "connect_request",
+    "connection_id": 1794796641999582725,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796642.0516737,
+    "action": "connect_established",
+    "connection_id": 1794796641999582725,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796642.644073,
+    "action": "connect_request",
+    "connection_id": 1794796642615130640,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796642.6810255,
+    "action": "connect_established",
+    "connection_id": 1794796642615130640,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796643.3056118,
+    "action": "connect_request",
+    "connection_id": 1794796643297997166,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796643.3416724,
+    "action": "connect_established",
+    "connection_id": 1794796643297997166,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796644.0350952,
+    "action": "connect_request",
+    "connection_id": 1794796644020147401,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796644.0722334,
+    "action": "connect_established",
+    "connection_id": 1794796644020147401,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796644.6854305,
+    "action": "connection_closed",
+    "connection_id": 1794796642615130640,
+    "host": "cn.bing.com",
+    "sent_bytes": 1058,
+    "received_bytes": 55746
+  },
+  {
+    "utc": 1794796644.7114305,
+    "action": "connection_closed",
+    "connection_id": 1794796641999582725,
+    "host": "www.bing.com",
+    "sent_bytes": 917,
+    "received_bytes": 9124
+  },
+  {
+    "utc": 1794796644.7912273,
+    "action": "connect_request",
+    "connection_id": 1794796644759112494,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796644.8284025,
+    "action": "connect_established",
+    "connection_id": 1794796644759112494,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796645.5592654,
+    "action": "connect_request",
+    "connection_id": 1794796645539733174,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796645.6024492,
+    "action": "connect_established",
+    "connection_id": 1794796645539733174,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796646.341793,
+    "action": "connection_closed",
+    "connection_id": 1794796644020147401,
+    "host": "cn.bing.com",
+    "sent_bytes": 1051,
+    "received_bytes": 56904
+  },
+  {
+    "utc": 1794796646.3628266,
+    "action": "connection_closed",
+    "connection_id": 1794796643297997166,
+    "host": "www.bing.com",
+    "sent_bytes": 910,
+    "received_bytes": 9107
+  },
+  {
+    "utc": 1794796646.3971577,
+    "action": "connect_request",
+    "connection_id": 1794796646386612281,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796646.4292285,
+    "action": "connect_established",
+    "connection_id": 1794796646386612281,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796646.5109756,
+    "action": "connect_request",
+    "connection_id": 1794796646497134084,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796647.102492,
+    "action": "connect_request",
+    "connection_id": 1794796647089164707,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796647.1415231,
+    "action": "connect_established",
+    "connection_id": 1794796647089164707,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796647.7968023,
+    "action": "connection_closed",
+    "connection_id": 1794796645539733174,
+    "host": "cn.bing.com",
+    "sent_bytes": 1051,
+    "received_bytes": 56628
+  },
+  {
+    "utc": 1794796647.8156066,
+    "action": "connection_closed",
+    "connection_id": 1794796644759112494,
+    "host": "www.bing.com",
+    "sent_bytes": 910,
+    "received_bytes": 9110
+  },
+  {
+    "utc": 1794796647.83453,
+    "action": "connection_closed",
+    "connection_id": 1794796647089164707,
+    "host": "cn.bing.com",
+    "sent_bytes": 1057,
+    "received_bytes": 56747
+  },
+  {
+    "utc": 1794796647.8562949,
+    "action": "connection_closed",
+    "connection_id": 1794796646386612281,
+    "host": "www.bing.com",
+    "sent_bytes": 916,
+    "received_bytes": 8940
+  },
+  {
+    "utc": 1794796656.528086,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796646497134084,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796684.7625704,
+    "action": "connection_closed",
+    "connection_id": 1794796640456941184,
+    "host": "deb.debian.org",
+    "sent_bytes": 840,
+    "received_bytes": 1636796
+  },
+  {
+    "utc": 1794796705.3773642,
+    "action": "connect_request",
+    "connection_id": 1794796705351118158,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796715.399637,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796705351118158,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796734.9828732,
+    "action": "connect_request",
+    "connection_id": 1794796734967209990,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796734.9987228,
+    "action": "connect_request",
+    "connection_id": 1794796734967738107,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796735.0093048,
+    "action": "connect_request",
+    "connection_id": 1794796734968317744,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796735.0210562,
+    "action": "connect_request",
+    "connection_id": 1794796734968637135,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796735.0310876,
+    "action": "connect_request",
+    "connection_id": 1794796734969000577,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796735.216172,
+    "action": "connect_established",
+    "connection_id": 1794796734967738107,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796735.234184,
+    "action": "connect_established",
+    "connection_id": 1794796734968637135,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796735.2509055,
+    "action": "connect_established",
+    "connection_id": 1794796734967209990,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796735.263597,
+    "action": "connect_established",
+    "connection_id": 1794796734969000577,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796735.2765632,
+    "action": "connect_established",
+    "connection_id": 1794796734968317744,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796736.2692482,
+    "action": "connect_request",
+    "connection_id": 1794796736054641502,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796736.2893996,
+    "action": "connect_request",
+    "connection_id": 1794796736206371767,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796736.3053467,
+    "action": "connect_request",
+    "connection_id": 1794796736294390004,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796736.3966265,
+    "action": "connect_request",
+    "connection_id": 1794796736387903717,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796736.4861925,
+    "action": "connect_established",
+    "connection_id": 1794796736054641502,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796736.5021029,
+    "action": "connect_established",
+    "connection_id": 1794796736206371767,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796736.5259926,
+    "action": "connect_established",
+    "connection_id": 1794796736294390004,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796736.6088982,
+    "action": "connect_established",
+    "connection_id": 1794796736387903717,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796736.7479064,
+    "action": "connect_request",
+    "connection_id": 1794796736740789594,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796736.974648,
+    "action": "connect_established",
+    "connection_id": 1794796736740789594,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796737.0593781,
+    "action": "connection_closed",
+    "connection_id": 1794796734967738107,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 830,
+    "received_bytes": 19259
+  },
+  {
+    "utc": 1794796737.0717342,
+    "action": "connection_closed",
+    "connection_id": 1794796734969000577,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 829,
+    "received_bytes": 24339
+  },
+  {
+    "utc": 1794796737.150861,
+    "action": "connection_closed",
+    "connection_id": 1794796734968317744,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 828,
+    "received_bytes": 30530
+  },
+  {
+    "utc": 1794796737.1717393,
+    "action": "connection_closed",
+    "connection_id": 1794796734967209990,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 830,
+    "received_bytes": 21734
+  },
+  {
+    "utc": 1794796737.2317894,
+    "action": "connection_closed",
+    "connection_id": 1794796736387903717,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 830,
+    "received_bytes": 9900
+  },
+  {
+    "utc": 1794796737.2942097,
+    "action": "connection_closed",
+    "connection_id": 1794796736054641502,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 833,
+    "received_bytes": 11818
+  },
+  {
+    "utc": 1794796737.3362396,
+    "action": "connection_closed",
+    "connection_id": 1794796734968637135,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 831,
+    "received_bytes": 31707
+  },
+  {
+    "utc": 1794796737.3519504,
+    "action": "connection_closed",
+    "connection_id": 1794796736206371767,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 835,
+    "received_bytes": 10623
+  },
+  {
+    "utc": 1794796737.4853084,
+    "action": "connection_closed",
+    "connection_id": 1794796736294390004,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 832,
+    "received_bytes": 11341
+  },
+  {
+    "utc": 1794796737.9443333,
+    "action": "connection_closed",
+    "connection_id": 1794796736740789594,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 842,
+    "received_bytes": 11273
+  },
+  {
+    "utc": 1794796764.2139404,
+    "action": "connect_request",
+    "connection_id": 1794796764157265407,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796774.235089,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796764157265407,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796791.6518226,
+    "action": "connect_request",
+    "connection_id": 1794796791605910670,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796791.6707063,
+    "action": "connect_request",
+    "connection_id": 1794796791605727002,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796791.6913493,
+    "action": "connect_request",
+    "connection_id": 1794796791606185501,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796791.7073996,
+    "action": "connect_request",
+    "connection_id": 1794796791625012991,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796791.8476048,
+    "action": "connect_established",
+    "connection_id": 1794796791605910670,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796791.867023,
+    "action": "connect_established",
+    "connection_id": 1794796791605727002,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796791.8838553,
+    "action": "connect_established",
+    "connection_id": 1794796791606185501,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796791.9005158,
+    "action": "connect_established",
+    "connection_id": 1794796791625012991,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796793.0129685,
+    "action": "connection_closed",
+    "connection_id": 1794796791605727002,
+    "host": "xeno-canto.org",
+    "sent_bytes": 753,
+    "received_bytes": 11910
+  },
+  {
+    "utc": 1794796793.032173,
+    "action": "connection_closed",
+    "connection_id": 1794796791605910670,
+    "host": "xeno-canto.org",
+    "sent_bytes": 753,
+    "received_bytes": 11883
+  },
+  {
+    "utc": 1794796793.257426,
+    "action": "connection_closed",
+    "connection_id": 1794796791625012991,
+    "host": "xeno-canto.org",
+    "sent_bytes": 753,
+    "received_bytes": 12022
+  },
+  {
+    "utc": 1794796793.762367,
+    "action": "connection_closed",
+    "connection_id": 1794796791606185501,
+    "host": "xeno-canto.org",
+    "sent_bytes": 754,
+    "received_bytes": 11863
+  },
+  {
+    "utc": 1794796823.009962,
+    "action": "connect_request",
+    "connection_id": 1794796822982450296,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796833.0290923,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796822982450296,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796837.7955942,
+    "action": "connect_request",
+    "connection_id": 1794796837560565495,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796837.8137517,
+    "action": "connect_request",
+    "connection_id": 1794796837561189959,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796837.8294234,
+    "action": "connect_request",
+    "connection_id": 1794796837561057201,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796837.852661,
+    "action": "connect_request",
+    "connection_id": 1794796837560814700,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796837.8686383,
+    "action": "connect_request",
+    "connection_id": 1794796837561394140,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796838.0281055,
+    "action": "connect_established",
+    "connection_id": 1794796837561189959,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796838.044139,
+    "action": "connect_established",
+    "connection_id": 1794796837561057201,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796838.0581746,
+    "action": "connect_established",
+    "connection_id": 1794796837560565495,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796838.0709887,
+    "action": "connect_established",
+    "connection_id": 1794796837560814700,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796838.0821857,
+    "action": "connect_established",
+    "connection_id": 1794796837561394140,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796839.2993348,
+    "action": "connection_closed",
+    "connection_id": 1794796837561189959,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 1002,
+    "received_bytes": 8555
+  },
+  {
+    "utc": 1794796839.6330435,
+    "action": "connection_closed",
+    "connection_id": 1794796837561057201,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 996,
+    "received_bytes": 69390
+  },
+  {
+    "utc": 1794796839.759155,
+    "action": "connection_closed",
+    "connection_id": 1794796837560565495,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 996,
+    "received_bytes": 93562
+  },
+  {
+    "utc": 1794796839.8145216,
+    "action": "connection_closed",
+    "connection_id": 1794796837561394140,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 1000,
+    "received_bytes": 7879
+  },
+  {
+    "utc": 1794796839.8830872,
+    "action": "connection_closed",
+    "connection_id": 1794796837560814700,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 988,
+    "received_bytes": 92094
+  },
+  {
+    "utc": 1794796865.1724172,
+    "action": "connect_request",
+    "connection_id": 1794796865146072245,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796865.1887655,
+    "action": "connect_request",
+    "connection_id": 1794796865160461521,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796865.4110548,
+    "action": "connect_established",
+    "connection_id": 1794796865146072245,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796865.43446,
+    "action": "connect_established",
+    "connection_id": 1794796865160461521,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796866.3892639,
+    "action": "connection_closed",
+    "connection_id": 1794796865146072245,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 827,
+    "received_bytes": 31163
+  },
+  {
+    "utc": 1794796866.4787238,
+    "action": "connection_closed",
+    "connection_id": 1794796865160461521,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 829,
+    "received_bytes": 20709
+  },
+  {
+    "utc": 1794796882.3974338,
+    "action": "connect_request",
+    "connection_id": 1794796882381272506,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796891.8082547,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796882381272506,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796892.602267,
+    "action": "connect_request",
+    "connection_id": 1794796892573563356,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796892.6189966,
+    "action": "connect_request",
+    "connection_id": 1794796892573800339,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796892.6353033,
+    "action": "connect_request",
+    "connection_id": 1794796892573204994,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796892.6504586,
+    "action": "connect_request",
+    "connection_id": 1794796892574028960,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796892.8225262,
+    "action": "connect_established",
+    "connection_id": 1794796892573563356,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796892.8419716,
+    "action": "connect_established",
+    "connection_id": 1794796892573800339,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796892.8575625,
+    "action": "connect_established",
+    "connection_id": 1794796892573204994,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796892.8847463,
+    "action": "connect_established",
+    "connection_id": 1794796892574028960,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796893.97266,
+    "action": "connection_closed",
+    "connection_id": 1794796892573204994,
+    "host": "xeno-canto.org",
+    "sent_bytes": 801,
+    "received_bytes": 23723
+  },
+  {
+    "utc": 1794796894.0212286,
+    "action": "connection_closed",
+    "connection_id": 1794796892573563356,
+    "host": "xeno-canto.org",
+    "sent_bytes": 800,
+    "received_bytes": 39663
+  },
+  {
+    "utc": 1794796894.1856527,
+    "action": "connection_closed",
+    "connection_id": 1794796892574028960,
+    "host": "xeno-canto.org",
+    "sent_bytes": 800,
+    "received_bytes": 35944
+  },
+  {
+    "utc": 1794796894.3416345,
+    "action": "connection_closed",
+    "connection_id": 1794796892573800339,
+    "host": "xeno-canto.org",
+    "sent_bytes": 800,
+    "received_bytes": 39974
+  },
+  {
+    "utc": 1794796941.2466943,
+    "action": "connect_request",
+    "connection_id": 1794796941201491102,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796950.7169406,
+    "action": "blocked_or_failed",
+    "connection_id": 1794796941201491102,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794796993.6098468,
+    "action": "connect_request",
+    "connection_id": 1794796993582506052,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796993.6284077,
+    "action": "connect_request",
+    "connection_id": 1794796993581023289,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796993.644725,
+    "action": "connect_request",
+    "connection_id": 1794796993583336279,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796993.8148305,
+    "action": "connect_established",
+    "connection_id": 1794796993582506052,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796993.8404849,
+    "action": "connect_established",
+    "connection_id": 1794796993581023289,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796993.8758156,
+    "action": "connect_established",
+    "connection_id": 1794796993583336279,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796994.656053,
+    "action": "connect_request",
+    "connection_id": 1794796994634334078,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796994.8496065,
+    "action": "connect_established",
+    "connection_id": 1794796994634334078,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796995.8021963,
+    "action": "connect_request",
+    "connection_id": 1794796995782656081,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796996.0224867,
+    "action": "connect_established",
+    "connection_id": 1794796995782656081,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796996.047709,
+    "action": "connection_closed",
+    "connection_id": 1794796993582506052,
+    "host": "xeno-canto.org",
+    "sent_bytes": 762,
+    "received_bytes": 409226
+  },
+  {
+    "utc": 1794796997.394075,
+    "action": "connection_closed",
+    "connection_id": 1794796993583336279,
+    "host": "xeno-canto.org",
+    "sent_bytes": 762,
+    "received_bytes": 468912
+  },
+  {
+    "utc": 1794796997.4770565,
+    "action": "connect_request",
+    "connection_id": 1794796997229677781,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796997.5022337,
+    "action": "connect_request",
+    "connection_id": 1794796997392156602,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796997.6736548,
+    "action": "connect_established",
+    "connection_id": 1794796997229677781,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796997.7572134,
+    "action": "connect_established",
+    "connection_id": 1794796997392156602,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796998.2196822,
+    "action": "connection_closed",
+    "connection_id": 1794796995782656081,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 795,
+    "received_bytes": 7877
+  },
+  {
+    "utc": 1794796999.1804512,
+    "action": "connect_request",
+    "connection_id": 1794796999162151819,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794796999.3750582,
+    "action": "connect_established",
+    "connection_id": 1794796999162151819,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794796999.7058551,
+    "action": "connection_closed",
+    "connection_id": 1794796997229677781,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 800,
+    "received_bytes": 101657
+  },
+  {
+    "utc": 1794797000.074361,
+    "action": "connect_request",
+    "connection_id": 1794797000054359122,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797000.335395,
+    "action": "connection_closed",
+    "connection_id": 1794796993581023289,
+    "host": "xeno-canto.org",
+    "sent_bytes": 762,
+    "received_bytes": 975796
+  },
+  {
+    "utc": 1794797000.351527,
+    "action": "connect_request",
+    "connection_id": 1794797000324765916,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797000.5837963,
+    "action": "connect_established",
+    "connection_id": 1794797000324765916,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797001.1985536,
+    "action": "connection_closed",
+    "connection_id": 1794796997392156602,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 809,
+    "received_bytes": 295139
+  },
+  {
+    "utc": 1794797001.2181742,
+    "action": "connection_closed",
+    "connection_id": 1794796994634334078,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 608724
+  },
+  {
+    "utc": 1794797001.3125823,
+    "action": "connection_closed",
+    "connection_id": 1794796999162151819,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 789,
+    "received_bytes": 7865
+  },
+  {
+    "utc": 1794797002.8403187,
+    "action": "connection_closed",
+    "connection_id": 1794797000324765916,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 794,
+    "received_bytes": 102964
+  },
+  {
+    "utc": 1794797002.9263225,
+    "action": "connect_request",
+    "connection_id": 1794797002906164522,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797004.1860175,
+    "action": "connect_established",
+    "connection_id": 1794797002906164522,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797005.6181543,
+    "action": "connect_request",
+    "connection_id": 1794797005569356675,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797005.8477883,
+    "action": "connect_established",
+    "connection_id": 1794797005569356675,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797006.2965302,
+    "action": "connection_closed",
+    "connection_id": 1794797002906164522,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 796,
+    "received_bytes": 7879
+  },
+  {
+    "utc": 1794797009.456493,
+    "action": "connection_closed",
+    "connection_id": 1794797005569356675,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 801,
+    "received_bytes": 101623
+  },
+  {
+    "utc": 1794797010.1000652,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797000054359122,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797058.8738897,
+    "action": "connect_request",
+    "connection_id": 1794797058851859935,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797068.892151,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797058851859935,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797117.6791527,
+    "action": "connect_request",
+    "connection_id": 1794797117638857637,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797127.7159536,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797117638857637,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797157.4626245,
+    "action": "connect_request",
+    "connection_id": 1794797156051012652,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797157.482231,
+    "action": "connect_request",
+    "connection_id": 1794797156052972845,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797157.5028143,
+    "action": "connect_request",
+    "connection_id": 1794797156053429336,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797157.6968734,
+    "action": "connect_established",
+    "connection_id": 1794797156052972845,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797157.7146425,
+    "action": "connect_established",
+    "connection_id": 1794797156053429336,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797157.7339687,
+    "action": "connect_established",
+    "connection_id": 1794797156051012652,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797160.8096876,
+    "action": "connection_closed",
+    "connection_id": 1794797156052972845,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 642208
+  },
+  {
+    "utc": 1794797176.563377,
+    "action": "connect_request",
+    "connection_id": 1794797176550027062,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797186.5778985,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797176550027062,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797209.439989,
+    "action": "connect_request",
+    "connection_id": 1794797209172966640,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797209.459501,
+    "action": "connect_request",
+    "connection_id": 1794797209174633310,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797209.4804797,
+    "action": "connect_request",
+    "connection_id": 1794797209173300657,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797209.4984581,
+    "action": "connection_closed",
+    "connection_id": 1794797156053429336,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 1723165
+  },
+  {
+    "utc": 1794797209.629005,
+    "action": "connect_established",
+    "connection_id": 1794797209172966640,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797209.6839828,
+    "action": "connect_established",
+    "connection_id": 1794797209173300657,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797209.7300737,
+    "action": "connect_established",
+    "connection_id": 1794797209174633310,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797210.8013656,
+    "action": "connect_request",
+    "connection_id": 1794797210542752132,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797210.8251152,
+    "action": "connect_request",
+    "connection_id": 1794797210568290459,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797210.8463519,
+    "action": "connect_request",
+    "connection_id": 1794797210778574348,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797211.0156596,
+    "action": "connect_established",
+    "connection_id": 1794797210542752132,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797211.0484178,
+    "action": "connect_established",
+    "connection_id": 1794797210568290459,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797211.0782936,
+    "action": "connect_established",
+    "connection_id": 1794797210778574348,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797211.5362296,
+    "action": "connection_closed",
+    "connection_id": 1794797209172966640,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 795,
+    "received_bytes": 7877
+  },
+  {
+    "utc": 1794797211.5556736,
+    "action": "connection_closed",
+    "connection_id": 1794797209173300657,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 796,
+    "received_bytes": 7879
+  },
+  {
+    "utc": 1794797211.7515836,
+    "action": "connection_closed",
+    "connection_id": 1794797209174633310,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 796,
+    "received_bytes": 7879
+  },
+  {
+    "utc": 1794797213.066662,
+    "action": "connect_request",
+    "connection_id": 1794797213046062579,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797213.1903949,
+    "action": "connection_closed",
+    "connection_id": 1794797210568290459,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 801,
+    "received_bytes": 68073
+  },
+  {
+    "utc": 1794797213.232904,
+    "action": "connection_closed",
+    "connection_id": 1794797210778574348,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 801,
+    "received_bytes": 64980
+  },
+  {
+    "utc": 1794797213.2854226,
+    "action": "connect_request",
+    "connection_id": 1794797213275631769,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797213.3000932,
+    "action": "connect_established",
+    "connection_id": 1794797213046062579,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797213.5173573,
+    "action": "connect_established",
+    "connection_id": 1794797213275631769,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797214.753317,
+    "action": "connection_closed",
+    "connection_id": 1794797213275631769,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 828,
+    "received_bytes": 43322
+  },
+  {
+    "utc": 1794797214.7842257,
+    "action": "connection_closed",
+    "connection_id": 1794797213046062579,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 832,
+    "received_bytes": 30186
+  },
+  {
+    "utc": 1794797218.3948104,
+    "action": "connection_closed",
+    "connection_id": 1794797210542752132,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 800,
+    "received_bytes": 67234
+  },
+  {
+    "utc": 1794797218.4478118,
+    "action": "connect_request",
+    "connection_id": 1794797218433896469,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797218.6472254,
+    "action": "connect_established",
+    "connection_id": 1794797218433896469,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797219.1783574,
+    "action": "connection_closed",
+    "connection_id": 1794797218433896469,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 843,
+    "received_bytes": 30189
+  },
+  {
+    "utc": 1794797235.917508,
+    "action": "connect_request",
+    "connection_id": 1794797235905803397,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797245.9438028,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797235905803397,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797253.3223417,
+    "action": "connection_closed",
+    "connection_id": 1794797156051012652,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 2454646
+  },
+  {
+    "utc": 1794797295.9456663,
+    "action": "connect_request",
+    "connection_id": 1794797295918779993,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797305.962005,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797295918779993,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797320.740442,
+    "action": "connect_request",
+    "connection_id": 1794797320704361613,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797320.7566423,
+    "action": "connect_request",
+    "connection_id": 1794797320705774615,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797320.7715788,
+    "action": "connect_request",
+    "connection_id": 1794797320703864272,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797320.9352071,
+    "action": "connect_established",
+    "connection_id": 1794797320704361613,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797320.973259,
+    "action": "connect_established",
+    "connection_id": 1794797320703864272,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797320.988098,
+    "action": "connect_established",
+    "connection_id": 1794797320705774615,
+    "host": "xeno-canto.org",
+    "port": 443,
+    "peer_ip": "145.136.250.151",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797321.0038915,
+    "action": "connect_request",
+    "connection_id": 1794797320702637316,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797321.2236652,
+    "action": "connect_established",
+    "connection_id": 1794797320702637316,
+    "host": "www.oiseaux.net",
+    "port": 443,
+    "peer_ip": "87.98.164.225",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797322.5625577,
+    "action": "connection_closed",
+    "connection_id": 1794797320703864272,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 64390
+  },
+  {
+    "utc": 1794797323.2882018,
+    "action": "connection_closed",
+    "connection_id": 1794797320705774615,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 274212
+  },
+  {
+    "utc": 1794797339.931804,
+    "action": "connection_closed",
+    "connection_id": 1794797320702637316,
+    "host": "www.oiseaux.net",
+    "sent_bytes": 813,
+    "received_bytes": 965487
+  },
+  {
+    "utc": 1794797354.221049,
+    "action": "connection_closed",
+    "connection_id": 1794797320704361613,
+    "host": "xeno-canto.org",
+    "sent_bytes": 763,
+    "received_bytes": 3096604
+  },
+  {
+    "utc": 1794797355.9354892,
+    "action": "connect_request",
+    "connection_id": 1794797355911291411,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797365.9466267,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797355911291411,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797371.7086387,
+    "action": "connect_request",
+    "connection_id": 1794797371680567464,
+    "host": "www.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797371.7374947,
+    "action": "connect_established",
+    "connection_id": 1794797371680567464,
+    "host": "www.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.100",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797372.0174356,
+    "action": "connect_request",
+    "connection_id": 1794797372008121259,
+    "host": "cn.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797372.0479727,
+    "action": "connect_established",
+    "connection_id": 1794797372008121259,
+    "host": "cn.bing.com",
+    "port": 443,
+    "peer_ip": "202.89.233.101",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797372.624922,
+    "action": "connection_closed",
+    "connection_id": 1794797371680567464,
+    "host": "www.bing.com",
+    "sent_bytes": 930,
+    "received_bytes": 9150
+  },
+  {
+    "utc": 1794797372.6823452,
+    "action": "connection_closed",
+    "connection_id": 1794797372008121259,
+    "host": "cn.bing.com",
+    "sent_bytes": 929,
+    "received_bytes": 56652
+  },
+  {
+    "utc": 1794797415.938616,
+    "action": "connect_request",
+    "connection_id": 1794797415912158859,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797425.95762,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797415912158859,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797475.918071,
+    "action": "connect_request",
+    "connection_id": 1794797475907246221,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797485.9292321,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797475907246221,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797535.9200423,
+    "action": "connect_request",
+    "connection_id": 1794797535908110846,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797545.9320061,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797535908110846,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797573.8646474,
+    "action": "connect_request",
+    "connection_id": 1794797573834199210,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797573.8801363,
+    "action": "connect_request",
+    "connection_id": 1794797573834714859,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797573.8960516,
+    "action": "connect_request",
+    "connection_id": 1794797573835941149,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797573.9648244,
+    "action": "connect_established",
+    "connection_id": 1794797573834199210,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797573.986067,
+    "action": "connect_established",
+    "connection_id": 1794797573834714859,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797574.0286405,
+    "action": "connect_established",
+    "connection_id": 1794797573835941149,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797575.5330515,
+    "action": "connection_error",
+    "connection_id": 1794797573834714859,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797575.560273,
+    "action": "connection_error",
+    "connection_id": 1794797573835941149,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797575.8866034,
+    "action": "connect_request",
+    "connection_id": 1794797575872067202,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797575.9003453,
+    "action": "connect_request",
+    "connection_id": 1794797575872737574,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797575.9860272,
+    "action": "connect_established",
+    "connection_id": 1794797575872067202,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.28.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797576.0078156,
+    "action": "connect_established",
+    "connection_id": 1794797575872737574,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.28.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797576.051924,
+    "action": "connection_error",
+    "connection_id": 1794797573834199210,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797576.198789,
+    "action": "connect_request",
+    "connection_id": 1794797576187336867,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797576.3142142,
+    "action": "connect_established",
+    "connection_id": 1794797576187336867,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797577.7014549,
+    "action": "connection_error",
+    "connection_id": 1794797576187336867,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797577.9924433,
+    "action": "connection_error",
+    "connection_id": 1794797575872067202,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797578.17805,
+    "action": "connect_request",
+    "connection_id": 1794797578163498844,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797578.1963425,
+    "action": "connect_request",
+    "connection_id": 1794797578138835733,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797578.2776594,
+    "action": "connect_established",
+    "connection_id": 1794797578163498844,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797578.2987275,
+    "action": "connect_established",
+    "connection_id": 1794797578138835733,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797578.3414357,
+    "action": "connection_error",
+    "connection_id": 1794797575872737574,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797578.6068556,
+    "action": "connect_request",
+    "connection_id": 1794797578569000549,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797578.7140677,
+    "action": "connect_established",
+    "connection_id": 1794797578569000549,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797580.1482232,
+    "action": "connection_error",
+    "connection_id": 1794797578138835733,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797580.174601,
+    "action": "connection_error",
+    "connection_id": 1794797578163498844,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797580.540167,
+    "action": "connect_request",
+    "connection_id": 1794797580529286130,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797580.546528,
+    "action": "connect_request",
+    "connection_id": 1794797580532248423,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797580.634951,
+    "action": "connect_established",
+    "connection_id": 1794797580529286130,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797580.6723092,
+    "action": "connect_established",
+    "connection_id": 1794797580532248423,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797580.707238,
+    "action": "connection_error",
+    "connection_id": 1794797578569000549,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797580.9037912,
+    "action": "connect_request",
+    "connection_id": 1794797580886389286,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797581.0045514,
+    "action": "connect_established",
+    "connection_id": 1794797580886389286,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797582.6892078,
+    "action": "connection_error",
+    "connection_id": 1794797580532248423,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797582.7496142,
+    "action": "connection_error",
+    "connection_id": 1794797580886389286,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797582.9377844,
+    "action": "connect_request",
+    "connection_id": 1794797582905813954,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797582.9528024,
+    "action": "connect_request",
+    "connection_id": 1794797582907781731,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797582.995917,
+    "action": "connection_error",
+    "connection_id": 1794797580529286130,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797583.0262647,
+    "action": "connect_established",
+    "connection_id": 1794797582905813954,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.28.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797583.05287,
+    "action": "connect_established",
+    "connection_id": 1794797582907781731,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.28.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797583.1141014,
+    "action": "connect_request",
+    "connection_id": 1794797583105614286,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797583.7197132,
+    "action": "connect_established",
+    "connection_id": 1794797583105614286,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797584.7276816,
+    "action": "connection_error",
+    "connection_id": 1794797582905813954,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797585.0139153,
+    "action": "connect_request",
+    "connection_id": 1794797584991127666,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797585.1257417,
+    "action": "connect_established",
+    "connection_id": 1794797584991127666,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797585.181108,
+    "action": "connection_error",
+    "connection_id": 1794797582907781731,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797585.5159283,
+    "action": "connect_request",
+    "connection_id": 1794797585440274922,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797585.6340904,
+    "action": "connection_error",
+    "connection_id": 1794797583105614286,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797585.670168,
+    "action": "connect_established",
+    "connection_id": 1794797585440274922,
+    "host": "speech.platform.bing.com",
+    "port": 443,
+    "peer_ip": "150.171.27.10",
+    "encrypted": true
+  },
+  {
+    "utc": 1794797587.8142161,
+    "action": "connection_error",
+    "connection_id": 1794797585440274922,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797588.4381447,
+    "action": "connection_error",
+    "connection_id": 1794797584991127666,
+    "host": "speech.platform.bing.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794797595.999364,
+    "action": "connect_request",
+    "connection_id": 1794797595909600884,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797606.0127974,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797595909600884,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797655.9785469,
+    "action": "connect_request",
+    "connection_id": 1794797655942073819,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797666.0196102,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797655942073819,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797715.948549,
+    "action": "connect_request",
+    "connection_id": 1794797715910221917,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797725.9760563,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797715910221917,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797775.9552004,
+    "action": "connect_request",
+    "connection_id": 1794797775908780122,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797785.9705923,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797775908780122,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797835.9552858,
+    "action": "connect_request",
+    "connection_id": 1794797835912550919,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797845.9714124,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797835912550919,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797895.9421422,
+    "action": "connect_request",
+    "connection_id": 1794797895925583018,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797905.9562664,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797895925583018,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794797955.928817,
+    "action": "connect_request",
+    "connection_id": 1794797955911544642,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794797965.9471285,
+    "action": "blocked_or_failed",
+    "connection_id": 1794797955911544642,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798015.9255443,
+    "action": "connect_request",
+    "connection_id": 1794798015912646094,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798025.9444737,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798015912646094,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798075.9270666,
+    "action": "connect_request",
+    "connection_id": 1794798075913140595,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798085.9413965,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798075913140595,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798135.9498262,
+    "action": "connect_request",
+    "connection_id": 1794798135913743221,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798145.975031,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798135913743221,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798195.9494398,
+    "action": "connect_request",
+    "connection_id": 1794798195915943505,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798205.9747884,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798195915943505,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798255.9473605,
+    "action": "connect_request",
+    "connection_id": 1794798255914311215,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798265.9614246,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798255914311215,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798315.9245758,
+    "action": "connect_request",
+    "connection_id": 1794798315915581505,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798325.9377105,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798315915581505,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798375.9303365,
+    "action": "connect_request",
+    "connection_id": 1794798375917572723,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798385.9541533,
+    "action": "blocked_or_failed",
+    "connection_id": 1794798375917572723,
+    "host": "ab.chatgpt.com",
+    "error": "Connection failed: TimeoutError,OSError"
+  },
+  {
+    "utc": 1794798435.9403377,
+    "action": "connect_request",
+    "connection_id": 1794798435914881519,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798436.0164185,
+    "action": "connect_established",
+    "connection_id": 1794798435914881519,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798436.0581975,
+    "action": "connection_error",
+    "connection_id": 1794798435914881519,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798495.9433057,
+    "action": "connect_request",
+    "connection_id": 1794798495916724940,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798496.0406826,
+    "action": "connect_established",
+    "connection_id": 1794798495916724940,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798496.0777888,
+    "action": "connection_error",
+    "connection_id": 1794798495916724940,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798556.0129428,
+    "action": "connect_request",
+    "connection_id": 1794798555914083807,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798556.0450046,
+    "action": "connect_established",
+    "connection_id": 1794798555914083807,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798556.0713115,
+    "action": "connection_error",
+    "connection_id": 1794798555914083807,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798615.9342198,
+    "action": "connect_request",
+    "connection_id": 1794798615917643353,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798616.0171943,
+    "action": "connect_established",
+    "connection_id": 1794798615917643353,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798616.054505,
+    "action": "connection_error",
+    "connection_id": 1794798615917643353,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798675.9580762,
+    "action": "connect_request",
+    "connection_id": 1794798675917225152,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798676.0376976,
+    "action": "connect_established",
+    "connection_id": 1794798675917225152,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798676.06819,
+    "action": "connection_error",
+    "connection_id": 1794798675917225152,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798735.9604383,
+    "action": "connect_request",
+    "connection_id": 1794798735916086343,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798736.0493689,
+    "action": "connect_established",
+    "connection_id": 1794798735916086343,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798736.0774994,
+    "action": "connection_error",
+    "connection_id": 1794798735916086343,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798795.9532692,
+    "action": "connect_request",
+    "connection_id": 1794798795918094525,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798796.0357962,
+    "action": "connect_established",
+    "connection_id": 1794798795918094525,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "172.64.155.209",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798796.0680928,
+    "action": "connection_error",
+    "connection_id": 1794798795918094525,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798855.9381864,
+    "action": "connect_request",
+    "connection_id": 1794798855916096387,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798856.019914,
+    "action": "connect_established",
+    "connection_id": 1794798855916096387,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798856.0429478,
+    "action": "connection_error",
+    "connection_id": 1794798855916096387,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794798874.4334037,
+    "action": "connect_request",
+    "connection_id": 1794798874413394125,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "method": "CONNECT",
+    "url": null
+  },
+  {
+    "utc": 1794798874.5069897,
+    "action": "connect_established",
+    "connection_id": 1794798874413394125,
+    "host": "ab.chatgpt.com",
+    "port": 443,
+    "peer_ip": "104.18.32.47",
+    "encrypted": true
+  },
+  {
+    "utc": 1794798874.535945,
+    "action": "connection_error",
+    "connection_id": 1794798874413394125,
+    "host": "ab.chatgpt.com",
+    "error": "[Errno 104] Connection reset by peer"
+  }
+]
