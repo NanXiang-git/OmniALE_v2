@@ -1,0 +1,15 @@
+{
+  "original_reviewed_sha256": "e59781d4fe5320c9cb1494d405e47ae307adc798eea05e416738f9b709d2b94e",
+  "policy": "Only previously null scoring fields receive the first valid value from one identical-input retry. Existing decided scores, task, answer and frozen evaluator stay unchanged. Both models use the same policy.",
+  "records": [
+    {
+      "segment": 2,
+      "group": "visual",
+      "field": "subtitles",
+      "before": null,
+      "after": 0.95,
+      "accepted": true,
+      "response": "pending_retry/segment_2/visual.json"
+    }
+  ]
+}

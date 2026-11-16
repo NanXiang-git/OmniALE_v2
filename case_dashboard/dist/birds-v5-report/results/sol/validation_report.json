@@ -1,0 +1,235 @@
+{
+  "status": "passed_objective_checks",
+  "source": {
+    "programs": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "185.475651",
+        "nb_frames": "5559"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "185.504000",
+        "nb_frames": "8702"
+      }
+    ],
+    "format": {
+      "duration": "185.504000"
+    }
+  },
+  "final": {
+    "programs": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "185.500000",
+        "nb_frames": "5565"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "185.500000",
+        "nb_frames": "8697"
+      }
+    ],
+    "format": {
+      "duration": "185.500000"
+    }
+  },
+  "narration_duration_s": 185.5,
+  "narration_pcm_bits": 16,
+  "narration_channels": 1,
+  "subtitle_text_matches_actual_tts_input": true,
+  "complete_decode_without_errors": true,
+  "chapters": [
+    {
+      "segment": 1,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 0,
+          "end": 5.0
+        },
+        {
+          "start": 23.0,
+          "end": 28.8
+        },
+        {
+          "start": 39.5,
+          "end": 45.8
+        }
+      ],
+      "utterances": [
+        {
+          "start": 5.2,
+          "end": 13.576,
+          "rms_dbfs": -20.76
+        },
+        {
+          "start": 16.0,
+          "end": 22.624,
+          "rms_dbfs": -20.4
+        },
+        {
+          "start": 29.0,
+          "end": 39.032,
+          "rms_dbfs": -19.74
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 46.2,
+          "end": 49.5
+        },
+        {
+          "start": 56.6,
+          "end": 61.2
+        },
+        {
+          "start": 70.2,
+          "end": 72.6
+        }
+      ],
+      "utterances": [
+        {
+          "start": 49.8,
+          "end": 56.208,
+          "rms_dbfs": -19.73
+        },
+        {
+          "start": 61.5,
+          "end": 69.876,
+          "rms_dbfs": -20.64
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 73.0,
+          "end": 78.7
+        },
+        {
+          "start": 88.8,
+          "end": 91.7
+        }
+      ],
+      "utterances": [
+        {
+          "start": 79.0,
+          "end": 88.36,
+          "rms_dbfs": -20.59
+        },
+        {
+          "start": 92.0,
+          "end": 99.32,
+          "rms_dbfs": -20.39
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 100.9,
+          "end": 104.8
+        }
+      ],
+      "utterances": [
+        {
+          "start": 105.1,
+          "end": 113.356,
+          "rms_dbfs": -19.54
+        },
+        {
+          "start": 115.0,
+          "end": 122.752,
+          "rms_dbfs": -19.72
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 124.1,
+          "end": 128.0
+        },
+        {
+          "start": 139.3,
+          "end": 143.9
+        },
+        {
+          "start": 154.8,
+          "end": 158.2
+        }
+      ],
+      "utterances": [
+        {
+          "start": 128.3,
+          "end": 138.908,
+          "rms_dbfs": -20.64
+        },
+        {
+          "start": 144.2,
+          "end": 154.352,
+          "rms_dbfs": -20.39
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "minimum_two_second_silent_narration_windows": [
+        {
+          "start": 158.6,
+          "end": 162.1
+        },
+        {
+          "start": 172.1,
+          "end": 174.8
+        }
+      ],
+      "utterances": [
+        {
+          "start": 162.4,
+          "end": 171.688,
+          "rms_dbfs": -20.03
+        },
+        {
+          "start": 175.1,
+          "end": 184.724,
+          "rms_dbfs": -20.25
+        }
+      ]
+    }
+  ],
+  "limitations": "没有原生听音工具，未亲耳审听；此报告不把自然听感或物种识别自动判为通过。",
+  "final_audio_measurements": {
+    "integrated_lufs": -16.21,
+    "true_peak_dbtp": -1.08,
+    "loudness_range_lu": 9.6
+  }
+}

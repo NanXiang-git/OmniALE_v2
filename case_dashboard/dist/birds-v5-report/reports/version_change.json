@@ -1,0 +1,21 @@
+{
+  "version": "v5-source-guard",
+  "parent": "v4",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "effort": "high",
+  "time_budget_seconds": 3600,
+  "same_input_video": true,
+  "same_scoring": true,
+  "changes": [
+    "specific source blacklist XC238544 and known Flickr source 7245581374",
+    "HTTPS path and returned-content inspection",
+    "pre-delivery waveform guard for downloaded media"
+  ],
+  "limits": [
+    "Does not guarantee exclusion of all derivative materials",
+    "Network mediation changes can affect latency; not pure wording-only intervention"
+  ],
+  "status": "formal_run_and_scoring_complete"
+}

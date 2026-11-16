@@ -1,0 +1,70 @@
+{
+  "recorded_at_utc": "2026-11-16T15:37:40.014880+00:00",
+  "final_synthesis": {
+    "transport": "websocket-client==1.9.2; HTTP CONNECT using HTTPS_PROXY",
+    "protocol_source": "edge-tts==7.3.1",
+    "endpoint": "wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "-4%",
+    "input": "Only self-authored Chinese narration text",
+    "output": "audio-24khz-48kbitrate-mono-mp3 + WordBoundary",
+    "credential": "Public client constant from edge-tts; no private credentials",
+    "source_media_uploaded": false
+  },
+  "observed_failed_or_abandoned_attempts": [
+    {
+      "tool": "edge-tts 7.2.3 dependency resolver",
+      "result": "Cancelled automatic dependency resolution after slow downloads/backtracking. Installed small edge-tts wheel without dependencies."
+    },
+    {
+      "tool": "aiohttp 3.12.15 direct wheel",
+      "result": "Installed, but not used for final TTS. Incomplete ancillary dependency installation abandoned."
+    },
+    {
+      "tool": "Old Edge protocol via websocket-client",
+      "url": "wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1",
+      "result": "101 response missing required websocket headers; no speech obtained."
+    },
+    {
+      "tool": "Old Edge v1 protocol at consumer endpoint",
+      "url": "wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1",
+      "result": "403. Updated to current edge-tts 7.3.1 v2 protocol, which generated the actual submitted speech."
+    },
+    {
+      "tool": "Google Translate TTS",
+      "url": "https://translate.google.com/translate_tts",
+      "result": "HTTP proxy CONNECT rejected 403; no usable response audio; abandoned."
+    },
+    {
+      "tool": "StreamElements Zhiyu TTS",
+      "url": "https://api.streamelements.com/kappa/v2/speech",
+      "result": "401 JSON 74 bytes, no usable audio; abandoned."
+    },
+    {
+      "tool": "Piper TTS backup",
+      "url": "https://huggingface.co/api/models/rhasspy/piper-voices/tree/main/zh/zh_CN",
+      "result": "403 source-material policy response; did not obtain a model listing."
+    },
+    {
+      "tool": "Piper TTS backup",
+      "url": "https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json",
+      "result": "403 source-material policy response; abandoned this TTS backup; no model weights downloaded or inference run."
+    },
+    {
+      "tool": "fonts-noto-cjk apt installation",
+      "result": "No apt package sources present; no font installed by apt."
+    },
+    {
+      "tool": "Noto font download",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "result": "403. This failed font resource was not used."
+    }
+  ],
+  "font_used": {
+    "css_url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC",
+    "font_url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "bytes": 10540644,
+    "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af"
+  },
+  "unused_packages": "Initial matplotlib/soundfile/Piper installs interrupted. No recognition models or agents used."
+}

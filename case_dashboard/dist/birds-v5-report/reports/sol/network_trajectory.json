@@ -1,0 +1,4509 @@
+[
+  {
+    "utc": 1794840691.9254782,
+    "action": "connect_request",
+    "connection_id": 1794840691915092960,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840691.9520426,
+    "action": "connect_request",
+    "connection_id": 1794840691938412874,
+    "host": "github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840692.1162417,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840691915092960,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1794840692.1283004,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840692.3298662,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840691938412874,
+    "host": "github.com"
+  },
+  {
+    "utc": 1794840692.4062178,
+    "action": "connect_request",
+    "connection_id": 1794840692391824199,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840692.5418975,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840692391824199,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794840692.5547054,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840692.885475,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 5854,
+    "sha256": "4132f14b065ec7164717cca0e889abb4104a2a51c55186735a3b8cf59e4cb911",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5854
+  },
+  {
+    "utc": 1794840692.9079752,
+    "action": "connect_request",
+    "connection_id": 1794840692896884797,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840692.9213543,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840692896884797,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794840692.9496088,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840693.242228,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 326,
+    "sha256": "4b9a8b2cce6a7723094c545ec327fd31d43adfa05d7303db80d97a4018f35c92",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 326
+  },
+  {
+    "utc": 1794840693.2590525,
+    "action": "connect_request",
+    "connection_id": 1794840693250525647,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840693.2739437,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840693250525647,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794840693.2900193,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840693.6212819,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "status": 302,
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840693.6397994,
+    "action": "connect_request",
+    "connection_id": 1794840693625173219,
+    "host": "codeload.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840693.7997985,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840693625173219,
+    "host": "codeload.github.com"
+  },
+  {
+    "utc": 1794840693.8163962,
+    "action": "http_request",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840704.9104557,
+    "action": "http_response_inspected",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "status": 429,
+    "content_type": "text/plain",
+    "bytes": 82,
+    "sha256": "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 82
+  },
+  {
+    "utc": 1794840704.9479473,
+    "action": "connect_request",
+    "connection_id": 1794840704938539717,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840704.9700313,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840704938539717,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1794840704.9916067,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840707.7823997,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='chatgpt.com', port=443): Max retries exceeded with url: /backend-api/plugins/featured?platform=codex (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dda833b0>, 'Connection to chatgpt.com ti",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840720.0214338,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='chatgpt.com', port=443): Max retries exceeded with url: /backend-api/plugins/export/curated (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc4b77d0>, 'Connection to chatgpt.com timed out. ",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840725.2792387,
+    "action": "connect_request",
+    "connection_id": 1794840725260940847,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840726.5225308,
+    "action": "connect_established",
+    "connection_id": 1794840725260940847,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840729.2681878,
+    "action": "connect_request",
+    "connection_id": 1794840729258947485,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840729.557128,
+    "action": "connect_established",
+    "connection_id": 1794840729258947485,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840751.4043908,
+    "action": "connect_request",
+    "connection_id": 1794840751396349822,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840751.5209756,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840751396349822,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794840751.5398788,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794840766.5635803,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc4b7080>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840776.9212863,
+    "action": "connection_closed",
+    "connection_id": 1794840729258947485,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1952,
+    "received_bytes": 40850
+  },
+  {
+    "utc": 1794840776.9570274,
+    "action": "connect_request",
+    "connection_id": 1794840776932874212,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840777.216717,
+    "action": "connect_established",
+    "connection_id": 1794840776932874212,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840811.8557832,
+    "action": "connect_request",
+    "connection_id": 1794840811829569255,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840811.8789153,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840811829569255,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794840811.9012802,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794840814.8494196,
+    "action": "connect_request",
+    "connection_id": 1794840814711715878,
+    "host": "www.birdguides.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840815.0467803,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840814711715878,
+    "host": "www.birdguides.com"
+  },
+  {
+    "utc": 1794840815.067129,
+    "action": "http_request",
+    "host": "www.birdguides.com",
+    "url": "https://www.birdguides.com/species-guide/ioc/cettia-cetti",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840815.6091352,
+    "action": "connect_request",
+    "connection_id": 1794840815591973955,
+    "host": "raw.githubusercontent.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840815.8141556,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840815591973955,
+    "host": "raw.githubusercontent.com"
+  },
+  {
+    "utc": 1794840815.8382814,
+    "action": "http_request",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840815.8588498,
+    "action": "http_response_inspected",
+    "host": "www.birdguides.com",
+    "url": "https://www.birdguides.com/species-guide/ioc/cettia-cetti",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5424,
+    "sha256": "b6c762d75709382a986f423bbcc2beaf04ad6451ce0743cd21298434eb4645a7",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5424
+  },
+  {
+    "utc": 1794840816.388757,
+    "action": "connect_request",
+    "connection_id": 1794840815873666951,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840816.5406473,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840815873666951,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794840816.5606873,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/understanding-birds/birdfacts/cettis-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840817.3558862,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/understanding-birds/birdfacts/cettis-warbler",
+    "status": 301,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 418,
+    "sha256": "efe13fc66b55bbf9fd85ba27678886be69b05b118ebfd820ca61b09470a2969d",
+    "location": "/learn/about-birds/birdfacts/cettis-warbler",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 418
+  },
+  {
+    "utc": 1794840817.390236,
+    "action": "connect_request",
+    "connection_id": 1794840817376526254,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840817.509077,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840817376526254,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1794840817.531404,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=alder+willow+flycatcher+song+spectrogram+identification",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840817.7504365,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=alder+willow+flycatcher+song+spectrogram+identification",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 201,
+    "sha256": "8ee596344b4c8fa644a3de9391c4357aadc1528503ee7de39cb0d80bf6f19247",
+    "location": "https://cn.bing.com/search?q=alder+willow+flycatcher+song+spectrogram+identification",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 201
+  },
+  {
+    "utc": 1794840826.9312358,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1a88c0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840857.7338479,
+    "action": "connection_closed",
+    "connection_id": 1794840725260940847,
+    "host": "pypi.org",
+    "sent_bytes": 3179,
+    "received_bytes": 1166753
+  },
+  {
+    "utc": 1794840857.7830262,
+    "action": "connection_closed",
+    "connection_id": 1794840776932874212,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 2039,
+    "received_bytes": 105755
+  },
+  {
+    "utc": 1794840860.2185323,
+    "action": "connect_request",
+    "connection_id": 1794840860165459020,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840860.4311028,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840860165459020,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794840860.4559863,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/cettis-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840861.3212059,
+    "action": "inspection_failed_closed",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+    "error": "ReadTimeout: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=45)",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840864.386118,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/cettis-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 192019,
+    "sha256": "850fa4ac9bf8dc58c9c48a1d4ef250c2c44a556aa7f6b3be25696d234de07e5a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 192019
+  },
+  {
+    "utc": 1794840864.631681,
+    "action": "connect_request",
+    "connection_id": 1794840864600692566,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840865.6509295,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840864600692566,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1794840865.6923983,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=alder+willow+flycatcher+song+spectrogram+identification",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840866.077296,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=alder+willow+flycatcher+song+spectrogram+identification",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 103345,
+    "sha256": "9f0b96b9e67c887660d13fdcb721b1a8dd5df45cc980633b57de23490e68a378",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 103345
+  },
+  {
+    "utc": 1794840866.1822193,
+    "action": "connect_request",
+    "connection_id": 1794840866165748380,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840866.5596044,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840866165748380,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1794840866.5979524,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=reed+warbler+song+spectrogram+Acrocephalus",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840866.914173,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=reed+warbler+song+spectrogram+Acrocephalus",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 188,
+    "sha256": "104af694f84c998fdf671ff555ab699f17e5473d900086ef02e567ad4f732e6b",
+    "location": "https://cn.bing.com/search?q=reed+warbler+song+spectrogram+Acrocephalus",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 188
+  },
+  {
+    "utc": 1794840870.68285,
+    "action": "connect_request",
+    "connection_id": 1794840870668877723,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840870.968418,
+    "action": "connect_established",
+    "connection_id": 1794840870668877723,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840871.863967,
+    "action": "connect_request",
+    "connection_id": 1794840871840364345,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840871.90203,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840871840364345,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794840871.9332798,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794840887.429474,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1aa4b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840907.9912302,
+    "action": "connection_closed",
+    "connection_id": 1794840870668877723,
+    "host": "pypi.org",
+    "sent_bytes": 1229,
+    "received_bytes": 121809
+  },
+  {
+    "utc": 1794840908.0559697,
+    "action": "connect_request",
+    "connection_id": 1794840908028219211,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840908.3680763,
+    "action": "connect_established",
+    "connection_id": 1794840908028219211,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840914.1209834,
+    "action": "connect_request",
+    "connection_id": 1794840914091501475,
+    "host": "fonts.googleapis.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840914.5933979,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840914091501475,
+    "host": "fonts.googleapis.com"
+  },
+  {
+    "utc": 1794840914.6769955,
+    "action": "http_request",
+    "host": "fonts.googleapis.com",
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840914.9198802,
+    "action": "http_response_inspected",
+    "host": "fonts.googleapis.com",
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "bytes": 211,
+    "sha256": "43c4b8a6fe1ad9e95446d4b9882cba8b050dfae4c55917d4ab9bfd5ffb74cda5",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 211
+  },
+  {
+    "utc": 1794840915.0920699,
+    "action": "connect_request",
+    "connection_id": 1794840914251339968,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840915.5362828,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840914251339968,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1794840915.5699985,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840923.1051154,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 550940,
+    "sha256": "bbd50f426df40e26831eae2968b485c749b55c2a8463cb3c3544e5a482ee922b",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 550940
+  },
+  {
+    "utc": 1794840923.3041933,
+    "action": "connect_request",
+    "connection_id": 1794840923285495745,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840923.7084956,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840923285495745,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794840923.74778,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840924.9560242,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 271743,
+    "sha256": "05d27195e5297ea1a0fbcd5157e417437c2b85a09d96756136c2c6caee10ba9f",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 271743
+  },
+  {
+    "utc": 1794840925.1365063,
+    "action": "connect_request",
+    "connection_id": 1794840925100314136,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840925.4439673,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840925100314136,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794840925.4829535,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840927.2212973,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 263604,
+    "sha256": "0b4dbf8f25cfae2f3e001532111ddd71fa743133f73e5f61004d36f5845fcbc3",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 263604
+  },
+  {
+    "utc": 1794840931.8865366,
+    "action": "connect_request",
+    "connection_id": 1794840931837554955,
+    "host": "fonts.gstatic.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840932.3166475,
+    "action": "connect_request",
+    "connection_id": 1794840932294820323,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840932.9726768,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840931837554955,
+    "host": "fonts.gstatic.com"
+  },
+  {
+    "utc": 1794840933.0151105,
+    "action": "http_request",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840933.051529,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840932294820323,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794840933.0936239,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794840948.5082757,
+    "action": "inspection_failed_closed",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='fonts.gstatic.com', port=443): Max retries exceeded with url: /s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b4e90>, 'C",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840948.8123157,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b5fd0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794840957.9026272,
+    "action": "connection_closed",
+    "connection_id": 1794840908028219211,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 7211,
+    "received_bytes": 69606
+  },
+  {
+    "utc": 1794840957.9261925,
+    "action": "connect_request",
+    "connection_id": 1794840957911362266,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840958.172172,
+    "action": "connect_established",
+    "connection_id": 1794840957911362266,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840967.3780303,
+    "action": "connect_request",
+    "connection_id": 1794840967352619409,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840967.5010183,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840967352619409,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1794840967.5157468,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/nightingale",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840973.941704,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/nightingale",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 561513,
+    "sha256": "ce0e2cbbcb0616753e42c9560f36d3c9de45d282e82afdc1d536154f5de657d1",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 561513
+  },
+  {
+    "utc": 1794840974.0203345,
+    "action": "connect_request",
+    "connection_id": 1794840974010384775,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840974.1351576,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840974010384775,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794840974.1588264,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/reed-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840977.903541,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/reed-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 203978,
+    "sha256": "917ad53f2f2cee4be38b02298fd0bb5b7a65c2849b219c56078e520accdc4a01",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 203978
+  },
+  {
+    "utc": 1794840978.0091867,
+    "action": "connect_request",
+    "connection_id": 1794840978000599595,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840978.1128874,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840978000599595,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794840978.1360207,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/marsh-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840980.3893673,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/marsh-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 182601,
+    "sha256": "c5c9987275c02d3b4e26f56f80385066545422df15fede5bb99da6e3dda575b7",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 182601
+  },
+  {
+    "utc": 1794840983.9796376,
+    "action": "connection_closed",
+    "connection_id": 1794840957911362266,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 5287,
+    "received_bytes": 42764
+  },
+  {
+    "utc": 1794840984.0775747,
+    "action": "connect_request",
+    "connection_id": 1794840983979866443,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840984.2910745,
+    "action": "connect_established",
+    "connection_id": 1794840983979866443,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794840992.7518137,
+    "action": "connect_request",
+    "connection_id": 1794840992743997841,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840992.7722204,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840992743997841,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794840992.786532,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794840995.408792,
+    "action": "connect_request",
+    "connection_id": 1794840995401301514,
+    "host": "fonts.gstatic.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794840995.5237083,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794840995401301514,
+    "host": "fonts.gstatic.com"
+  },
+  {
+    "utc": 1794840995.5350316,
+    "action": "http_request",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794840996.101147,
+    "action": "http_response_inspected",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "status": 200,
+    "content_type": "font/ttf",
+    "bytes": 10540644,
+    "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 10540644
+  },
+  {
+    "utc": 1794841007.8114266,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc4b7560>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841019.664328,
+    "action": "connection_closed",
+    "connection_id": 1794840983979866443,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 26449,
+    "received_bytes": 207268
+  },
+  {
+    "utc": 1794841020.8791301,
+    "action": "connect_request",
+    "connection_id": 1794841020869496063,
+    "host": "fonts.gstatic.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841020.9951587,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841020869496063,
+    "host": "fonts.gstatic.com"
+  },
+  {
+    "utc": 1794841021.016488,
+    "action": "http_request",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841021.5040915,
+    "action": "http_response_inspected",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "status": 200,
+    "content_type": "font/ttf",
+    "bytes": 10540644,
+    "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 10540644
+  },
+  {
+    "utc": 1794841027.0039027,
+    "action": "connect_request",
+    "connection_id": 1794841026968165879,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841042.0001192,
+    "action": "connect_request",
+    "connection_id": 1794841041986943904,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841042.2643628,
+    "action": "connect_established",
+    "connection_id": 1794841041986943904,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841048.827078,
+    "action": "blocked_or_failed",
+    "host": "pypi.org",
+    "error": "BrokenPipeError: [Errno 32] Broken pipe"
+  },
+  {
+    "utc": 1794841053.8406758,
+    "action": "connect_request",
+    "connection_id": 1794841053829864070,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841053.8604443,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841053829864070,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841053.8804953,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794841068.1594741,
+    "action": "connection_closed",
+    "connection_id": 1794841041986943904,
+    "host": "pypi.org",
+    "sent_bytes": 1229,
+    "received_bytes": 267397
+  },
+  {
+    "utc": 1794841068.9122112,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1a9010>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841082.7459524,
+    "action": "connect_request",
+    "connection_id": 1794841082036912240,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841082.992168,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841082036912240,
+    "host": "base-prod.rspb-prod.magnolia-platform.com"
+  },
+  {
+    "utc": 1794841083.0118134,
+    "action": "http_request",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:60b60927-611a-41ce-bc8f-6926ea4776dd/XC40233%20-%20Cetti's%20Warbler%20-%20Cettia%20cetti.mp3",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841087.3575287,
+    "action": "connect_request",
+    "connection_id": 1794841087346263021,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841087.5285864,
+    "action": "connect_established",
+    "connection_id": 1794841087346263021,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841089.908215,
+    "action": "connection_closed",
+    "connection_id": 1794841087346263021,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1235,
+    "received_bytes": 35672
+  },
+  {
+    "utc": 1794841103.2625787,
+    "action": "http_response_inspected",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:60b60927-611a-41ce-bc8f-6926ea4776dd/XC40233%20-%20Cetti's%20Warbler%20-%20Cettia%20cetti.mp3",
+    "status": 200,
+    "content_type": "audio/mpeg;charset=ISO-8859-1",
+    "bytes": 417553,
+    "sha256": "4077962b544bc42c3f341b6f4802835d0708a682e9fd85e9d470614012ad302f",
+    "location": null,
+    "audio_check": {
+      "blocked": false,
+      "reason": "no_known_waveform_detected",
+      "hits": []
+    },
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 417553
+  },
+  {
+    "utc": 1794841103.3171117,
+    "action": "connect_request",
+    "connection_id": 1794841103308746889,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841103.4372733,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841103308746889,
+    "host": "base-prod.rspb-prod.magnolia-platform.com"
+  },
+  {
+    "utc": 1794841103.4578855,
+    "action": "http_request",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:16cc846c-b6dd-42dc-a8f2-e3e38c5d78e4/Nightingale%20(Luscinia%20megarhynchos)%20audio.mp3",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841111.6251562,
+    "action": "connect_request",
+    "connection_id": 1794841111590881295,
+    "host": "duckduckgo.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841111.7881668,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841111590881295,
+    "host": "duckduckgo.com"
+  },
+  {
+    "utc": 1794841111.8086379,
+    "action": "http_request",
+    "host": "duckduckgo.com",
+    "url": "https://duckduckgo.com/html/?q=willow+flycatcher+song+spectrogram",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841111.838712,
+    "action": "inspection_failed_closed",
+    "host": "duckduckgo.com",
+    "url": "https://duckduckgo.com/html/?q=willow+flycatcher+song+spectrogram",
+    "error": "ConnectionError: HTTPSConnectionPool(host='duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=willow+flycatcher+song+spectrogram (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74f6dc1b5a30>: Failed to establish a new c",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841111.8680198,
+    "action": "connect_request",
+    "connection_id": 1794841111858420009,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841111.9831336,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841111858420009,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794841112.0021155,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/nightingale",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841114.0556982,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/nightingale",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 227527,
+    "sha256": "088b4dd116e1ee68df475031e14b52179d1c464f7051145332df2eb6c9db4cf9",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 227527
+  },
+  {
+    "utc": 1794841115.0582213,
+    "action": "connect_request",
+    "connection_id": 1794841115046297686,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841115.0811667,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841115046297686,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841115.1029072,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794841130.1286273,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc455af0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841133.455004,
+    "action": "connect_request",
+    "connection_id": 1794841133433978871,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841133.747002,
+    "action": "connect_established",
+    "connection_id": 1794841133433978871,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841135.9143028,
+    "action": "connect_request",
+    "connection_id": 1794841135899390280,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841136.279202,
+    "action": "connect_established",
+    "connection_id": 1794841135899390280,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841144.4455042,
+    "action": "connect_request",
+    "connection_id": 1794841143746412569,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841145.6774828,
+    "action": "connect_established",
+    "connection_id": 1794841143746412569,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841154.8584666,
+    "action": "connect_request",
+    "connection_id": 1794841154849120564,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841156.098995,
+    "action": "connect_established",
+    "connection_id": 1794841154849120564,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841165.3448482,
+    "action": "connection_closed",
+    "connection_id": 1794841154849120564,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1914,
+    "received_bytes": 110691
+  },
+  {
+    "utc": 1794841165.3808305,
+    "action": "connection_closed",
+    "connection_id": 1794841143746412569,
+    "host": "pypi.org",
+    "sent_bytes": 1238,
+    "received_bytes": 23625
+  },
+  {
+    "utc": 1794841175.8465056,
+    "action": "connect_request",
+    "connection_id": 1794841175818039103,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841175.9750466,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841175818039103,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841176.0095859,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794841191.7269778,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b5790>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841196.0906863,
+    "action": "inspection_failed_closed",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:16cc846c-b6dd-42dc-a8f2-e3e38c5d78e4/Nightingale%20(Luscinia%20megarhynchos)%20audio.mp3",
+    "error": "ValueError: Response exceeds inspection bound",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841217.9828274,
+    "action": "connect_request",
+    "connection_id": 1794841217967523352,
+    "host": "api.msedgeservices.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841218.117002,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841217967523352,
+    "host": "api.msedgeservices.com"
+  },
+  {
+    "utc": 1794841218.1339424,
+    "action": "http_request",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=d280931495324729b051eb4105c0df20&Sec-MS-GEC=E052C7E6A2FE795A02E3F4A02E7C2F2EB00AF79BA1E53D03B2AAD17A43816CC9&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841219.7504134,
+    "action": "http_response_inspected",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=d280931495324729b051eb4105c0df20&Sec-MS-GEC=E052C7E6A2FE795A02E3F4A02E7C2F2EB00AF79BA1E53D03B2AAD17A43816CC9&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "status": 101,
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841227.9021025,
+    "action": "connection_closed",
+    "connection_id": 1794841133433978871,
+    "host": "pypi.org",
+    "sent_bytes": 767,
+    "received_bytes": 31549
+  },
+  {
+    "utc": 1794841235.4795704,
+    "action": "connection_closed",
+    "connection_id": 1794841135899390280,
+    "host": "pypi.org",
+    "sent_bytes": 757,
+    "received_bytes": 1053743
+  },
+  {
+    "utc": 1794841236.9848204,
+    "action": "connect_request",
+    "connection_id": 1794841236971556544,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841237.0137613,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841236971556544,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841237.044028,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794841239.1786208,
+    "action": "connect_request",
+    "connection_id": 1794841239136231461,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841239.3593922,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841239136231461,
+    "host": "base-prod.rspb-prod.magnolia-platform.com"
+  },
+  {
+    "utc": 1794841239.3871307,
+    "action": "http_request",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/.imaging/focalpoint/landscape16to9/1280x720/dam/jcr:265c266a-fb56-493e-a4d8-24725d98cd0d/1589986492_Species_Cettis%20Warbler_on%20log%20with%20blurred%20background.jpg",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841247.90768,
+    "action": "inspection_failed_closed",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/.imaging/focalpoint/landscape16to9/1280x720/dam/jcr:265c266a-fb56-493e-a4d8-24725d98cd0d/1589986492_Species_Cettis%20Warbler_on%20log%20with%20blurred%20background.jpg",
+    "error": "ValueError: Media duration could not be inspected",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841252.6896152,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1aa120>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841269.5576382,
+    "action": "connect_request",
+    "connection_id": 1794841269538238536,
+    "host": "api.msedgeservices.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841269.716655,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841269538238536,
+    "host": "api.msedgeservices.com"
+  },
+  {
+    "utc": 1794841269.73774,
+    "action": "http_request",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=02b0c67037e04aab99ca94d4c8b91228&Sec-MS-GEC=E052C7E6A2FE795A02E3F4A02E7C2F2EB00AF79BA1E53D03B2AAD17A43816CC9&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841270.494483,
+    "action": "connect_request",
+    "connection_id": 1794841270486857405,
+    "host": "www.bto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841270.7327306,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841270486857405,
+    "host": "www.bto.org"
+  },
+  {
+    "utc": 1794841270.7597637,
+    "action": "http_request",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/alder-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841272.5121133,
+    "action": "http_response_inspected",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=02b0c67037e04aab99ca94d4c8b91228&Sec-MS-GEC=E052C7E6A2FE795A02E3F4A02E7C2F2EB00AF79BA1E53D03B2AAD17A43816CC9&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "status": 101,
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841273.0891259,
+    "action": "http_response_inspected",
+    "host": "www.bto.org",
+    "url": "https://www.bto.org/learn/about-birds/birdfacts/alder-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 149870,
+    "sha256": "a1549321d239623270404c79db5e1a22571812910c1787ff94b12a84609303c0",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 149870
+  },
+  {
+    "utc": 1794841273.197272,
+    "action": "connect_request",
+    "connection_id": 1794841273180570336,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841273.335168,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841273180570336,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1794841273.3572617,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841279.376144,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 358831,
+    "sha256": "0390029043bcd77d54623e8ac23a3e6a078d45e04d7c20c413309d0ac2e00546",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 358831
+  },
+  {
+    "utc": 1794841279.4371023,
+    "action": "connect_request",
+    "connection_id": 1794841279428545814,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841279.5960739,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841279428545814,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1794841279.616679,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Cettia+cetti%22+%E4%B8%AD%E6%96%87&setlang=en&cc=us",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841279.8343623,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Cettia+cetti%22+%E4%B8%AD%E6%96%87&setlang=en&cc=us",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 208,
+    "sha256": "a69292d27f7c9af11ba558e7dd9efe9a8e11d68143dd39216829cfae2f1f3400",
+    "location": "https://cn.bing.com/search?q=%22Cettia+cetti%22+%E4%B8%AD%E6%96%87&setlang=en&cc=us",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 208
+  },
+  {
+    "utc": 1794841298.1814976,
+    "action": "connect_request",
+    "connection_id": 1794841298165226689,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841298.2150583,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841298165226689,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841298.2466123,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794841301.0279586,
+    "action": "connect_request",
+    "connection_id": 1794841300734269067,
+    "host": "www.bird-sounds.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841307.465671,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841300734269067,
+    "host": "www.bird-sounds.net"
+  },
+  {
+    "utc": 1794841307.9712977,
+    "action": "http_request",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/willow-flycatcher/",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841735.3992634,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b56a0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841981.4957833,
+    "action": "connect_request",
+    "connection_id": 1794841981421116605,
+    "host": "api.msedgeservices.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841981.779945,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841981421116605,
+    "host": "api.msedgeservices.com"
+  },
+  {
+    "utc": 1794841981.8132584,
+    "action": "http_request",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=3445b4c77bd24225ba31f1f339f10c84&Sec-MS-GEC=6D4C19232B7A455C6A04A3B09343D613A98997BBBF904B3EAA2454696180E560&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841983.1931748,
+    "action": "http_response_inspected",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/websocket/v1?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=3445b4c77bd24225ba31f1f339f10c84&Sec-MS-GEC=6D4C19232B7A455C6A04A3B09343D613A98997BBBF904B3EAA2454696180E560&Sec-MS-GEC-Version=1-140.0.3485.14",
+    "status": 101,
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841989.6100225,
+    "action": "connect_request",
+    "connection_id": 1794841989593651832,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841989.7953668,
+    "action": "connect_established",
+    "connection_id": 1794841989593651832,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794841993.4888923,
+    "action": "connect_request",
+    "connection_id": 1794841993466575060,
+    "host": "www.bird-sounds.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841993.6455517,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841993466575060,
+    "host": "www.bird-sounds.net"
+  },
+  {
+    "utc": 1794841993.6681259,
+    "action": "http_request",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/alder-flycatcher/",
+    "method": "GET"
+  },
+  {
+    "utc": 1794841995.2180374,
+    "action": "inspection_failed_closed",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/willow-flycatcher/",
+    "error": "ConnectionError: HTTPSConnectionPool(host='www.bird-sounds.net', port=443): Read timed out.",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794841996.789345,
+    "action": "http_response_inspected",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/alder-flycatcher/",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 35300,
+    "sha256": "074efb88ad66e8d25723f657df3d6c5594742d67886de3ed1416a0813b56e1c2",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 35300
+  },
+  {
+    "utc": 1794841999.0924284,
+    "action": "connect_request",
+    "connection_id": 1794841999066613030,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794841999.1142242,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794841999066613030,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794841999.1336858,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842014.15919,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1aa480>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842037.0910285,
+    "action": "blocked_or_failed",
+    "host": "translate.google.com",
+    "error": "ValueError: Blocked domain or port"
+  },
+  {
+    "utc": 1794842037.13738,
+    "action": "connect_request",
+    "connection_id": 1794842037119973654,
+    "host": "www.bird-sounds.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842037.2655635,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842037119973654,
+    "host": "www.bird-sounds.net"
+  },
+  {
+    "utc": 1794842037.288164,
+    "action": "http_request",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/birdmedia/235/alder-flycatcher-call-song-855.mp3",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842059.122788,
+    "action": "connect_request",
+    "connection_id": 1794842059090603538,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842059.1667855,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842059090603538,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842059.1924384,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842069.555248,
+    "action": "connect_request",
+    "connection_id": 1794842069543533678,
+    "host": "api.msedgeservices.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842069.693884,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842069543533678,
+    "host": "api.msedgeservices.com"
+  },
+  {
+    "utc": 1794842069.7159972,
+    "action": "http_request",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/voices/list?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842072.6392736,
+    "action": "http_response_inspected",
+    "host": "api.msedgeservices.com",
+    "url": "https://api.msedgeservices.com/tts/cognitiveservices/voices/list?Ocp-Apim-Subscription-Key=6A5AA1D4EAFF4E9FB37E23D68491D6F4",
+    "status": 403,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 10,
+    "sha256": "c029d1c560ecb35bbb632f9f7102907b41a289e258055d477f92e21884f9ab79",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 10
+  },
+  {
+    "utc": 1794842074.2237232,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b7fb0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842083.3542292,
+    "action": "connect_request",
+    "connection_id": 1794842082453080583,
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842083.509251,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842082453080583,
+    "host": "base-prod.rspb-prod.magnolia-platform.com"
+  },
+  {
+    "utc": 1794842083.5311184,
+    "action": "http_request",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:e04afa09-60f3-4a80-b996-9e45f131722e/XC27122%20-%20Eurasian%20Reed%20Warbler%20-%20Acrocephalus%20scirpaceus.mp3",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842107.1513188,
+    "action": "connect_request",
+    "connection_id": 1794842106943308858,
+    "host": "api.streamelements.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842107.2416606,
+    "action": "connect_request",
+    "connection_id": 1794842107221532916,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842107.3293986,
+    "action": "connect_established",
+    "connection_id": 1794842107221532916,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842107.4671686,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842106943308858,
+    "host": "api.streamelements.com"
+  },
+  {
+    "utc": 1794842107.4953067,
+    "action": "http_request",
+    "host": "api.streamelements.com",
+    "url": "https://api.streamelements.com/kappa/v2/speech?voice=Zhiyu&text=%E5%85%88%E5%90%AC%E4%B8%80%E5%90%AC%EF%BC%8C%E7%81%8C%E6%9C%A8%E4%B8%9B%E4%B8%AD%E7%9A%84%E9%B8%9F%E5%A3%B0%E3%80%82",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842108.4120922,
+    "action": "http_response_inspected",
+    "host": "api.streamelements.com",
+    "url": "https://api.streamelements.com/kappa/v2/speech?voice=Zhiyu&text=%E5%85%88%E5%90%AC%E4%B8%80%E5%90%AC%EF%BC%8C%E7%81%8C%E6%9C%A8%E4%B8%9B%E4%B8%AD%E7%9A%84%E9%B8%9F%E5%A3%B0%E3%80%82",
+    "status": 401,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 74,
+    "sha256": "477c594ef2924cde55036dc9a43190098e34365797723aab1c1cac17ce211b3a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 74
+  },
+  {
+    "utc": 1794842108.7754357,
+    "action": "connect_request",
+    "connection_id": 1794842108764602414,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842108.8256636,
+    "action": "connection_closed",
+    "connection_id": 1794842107221532916,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 1831,
+    "received_bytes": 7857
+  },
+  {
+    "utc": 1794842108.9611545,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842108764602414,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1794842108.988357,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Cettia+cetti%22+%E4%B8%AD%E6%96%87&setlang=en&cc=us",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842109.2980776,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Cettia+cetti%22+%E4%B8%AD%E6%96%87&setlang=en&cc=us",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 102746,
+    "sha256": "bda170494c8beb405648dee2cc6871d7288baad450080122a2c848fa2159155a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 102746
+  },
+  {
+    "utc": 1794842109.3595185,
+    "action": "connect_request",
+    "connection_id": 1794842109348733424,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842109.5038724,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842109348733424,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794842109.5175009,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842112.8917243,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 269491,
+    "sha256": "6588018ebf52d6e04770044a389ea8e2250b9b33e699a33c963fb244234ee7d1",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 269491
+  },
+  {
+    "utc": 1794842112.9683347,
+    "action": "connect_request",
+    "connection_id": 1794842112960282532,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842113.076043,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842112960282532,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794842113.0902958,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842119.1185858,
+    "action": "connection_closed",
+    "connection_id": 1794841989593651832,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1278,
+    "received_bytes": 1727085
+  },
+  {
+    "utc": 1794842119.3561065,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 286125,
+    "sha256": "93c975195a204fe0e6e47def614c698c47e6150deffd02c91ce627f12fe67d4b",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 286125
+  },
+  {
+    "utc": 1794842119.546779,
+    "action": "connect_request",
+    "connection_id": 1794842119539063780,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842119.5679965,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842119539063780,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842119.5885143,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842126.0131168,
+    "action": "connect_request",
+    "connection_id": 1794842125999400836,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842128.317409,
+    "action": "connect_established",
+    "connection_id": 1794842125999400836,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842132.7633662,
+    "action": "inspection_failed_closed",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/birdmedia/235/alder-flycatcher-call-song-855.mp3",
+    "error": "ValueError: Response exceeds inspection bound",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842134.613837,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc3c0680>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842162.7140925,
+    "action": "http_response_inspected",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:e04afa09-60f3-4a80-b996-9e45f131722e/XC27122%20-%20Eurasian%20Reed%20Warbler%20-%20Acrocephalus%20scirpaceus.mp3",
+    "status": 200,
+    "content_type": "audio/mpeg;charset=ISO-8859-1",
+    "bytes": 1294015,
+    "sha256": "c7b1415c7e4beb65556691d64b34e6f21421790f43d9b9654a2db964272f0097",
+    "location": null,
+    "audio_check": {
+      "blocked": false,
+      "reason": "no_known_waveform_detected",
+      "hits": []
+    },
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 1294015
+  },
+  {
+    "utc": 1794842162.7264388,
+    "action": "inspection_failed_closed",
+    "host": "base-prod.rspb-prod.magnolia-platform.com",
+    "url": "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:e04afa09-60f3-4a80-b996-9e45f131722e/XC27122%20-%20Eurasian%20Reed%20Warbler%20-%20Acrocephalus%20scirpaceus.mp3",
+    "error": "SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2417)",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842178.3108675,
+    "action": "connect_request",
+    "connection_id": 1794842178292651523,
+    "host": "huggingface.co",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842178.4999454,
+    "action": "connect_request",
+    "connection_id": 1794842178485379287,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842178.7045462,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842178292651523,
+    "host": "huggingface.co"
+  },
+  {
+    "utc": 1794842178.7457592,
+    "action": "http_request",
+    "host": "huggingface.co",
+    "url": "https://huggingface.co/api/models/rhasspy/piper-voices/tree/main/zh/zh_CN",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842178.8439648,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842178485379287,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842178.8622482,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/628005",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842180.1730056,
+    "action": "connect_request",
+    "connection_id": 1794842180147215063,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842180.2075837,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842180147215063,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842180.229444,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842180.599546,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/628005",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 25177,
+    "sha256": "b59829a3b488e42f6e51c0f066a83c38377ee0bd46e659bf18be878d9649c656",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 25177
+  },
+  {
+    "utc": 1794842180.652845,
+    "action": "connect_request",
+    "connection_id": 1794842180638245838,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842180.812259,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842180638245838,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842180.83268,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/645039",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842183.7654617,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/645039",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 25472,
+    "sha256": "a91a7ba910d1dded75ebc75e3ca6b3652236a366009ed312d6076b831091f548",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 25472
+  },
+  {
+    "utc": 1794842186.5226178,
+    "action": "connect_request",
+    "connection_id": 1794842186515165870,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842186.7765708,
+    "action": "connect_established",
+    "connection_id": 1794842186515165870,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842188.4449382,
+    "action": "connect_request",
+    "connection_id": 1794842188429991290,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842189.2818189,
+    "action": "connection_closed",
+    "connection_id": 1794842125999400836,
+    "host": "pypi.org",
+    "sent_bytes": 517,
+    "received_bytes": 0
+  },
+  {
+    "utc": 1794842189.3077483,
+    "action": "connect_request",
+    "connection_id": 1794842189283649159,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842189.5625443,
+    "action": "connect_established",
+    "connection_id": 1794842189283649159,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842190.8149548,
+    "action": "connect_established",
+    "connection_id": 1794842188429991290,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842194.3659022,
+    "action": "inspection_failed_closed",
+    "host": "huggingface.co",
+    "url": "https://huggingface.co/api/models/rhasspy/piper-voices/tree/main/zh/zh_CN",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/rhasspy/piper-voices/tree/main/zh/zh_CN (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b6d20>, 'Connection to hugg",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842195.767564,
+    "action": "connect_request",
+    "connection_id": 1794842195751992721,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842195.8635418,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1d8b00>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842195.9734538,
+    "action": "connect_established",
+    "connection_id": 1794842195751992721,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842222.7888389,
+    "action": "connect_request",
+    "connection_id": 1794842222778185378,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842223.012893,
+    "action": "connect_established",
+    "connection_id": 1794842222778185378,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842232.6553907,
+    "action": "connect_request",
+    "connection_id": 1794842232640715360,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842234.9852355,
+    "action": "connect_established",
+    "connection_id": 1794842232640715360,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842241.2685242,
+    "action": "connect_request",
+    "connection_id": 1794842241240305076,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842241.301682,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842241240305076,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842241.3273833,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842242.2906384,
+    "action": "connection_closed",
+    "connection_id": 1794842232640715360,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1235,
+    "received_bytes": 44383
+  },
+  {
+    "utc": 1794842242.3175926,
+    "action": "connection_closed",
+    "connection_id": 1794842222778185378,
+    "host": "pypi.org",
+    "sent_bytes": 1271,
+    "received_bytes": 4750
+  },
+  {
+    "utc": 1794842252.2517908,
+    "action": "connect_request",
+    "connection_id": 1794842252242479201,
+    "host": "huggingface.co",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842252.3824437,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842252242479201,
+    "host": "huggingface.co"
+  },
+  {
+    "utc": 1794842252.4005213,
+    "action": "http_request",
+    "host": "huggingface.co",
+    "url": "https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842256.3702974,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1d8050>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842267.4205036,
+    "action": "inspection_failed_closed",
+    "host": "huggingface.co",
+    "url": "https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at ",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842301.9969785,
+    "action": "connect_request",
+    "connection_id": 1794842301977873356,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842302.0375907,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842301977873356,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842302.0623405,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842317.0920753,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6e12015e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842318.9616003,
+    "action": "connect_request",
+    "connection_id": 1794842318854092874,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842319.0511007,
+    "action": "connect_established",
+    "connection_id": 1794842318854092874,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842319.8961442,
+    "action": "connect_request",
+    "connection_id": 1794842319881237575,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842320.1601775,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842319881237575,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842320.1856642,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/sounds/spectrograms/VOXVCHVBIP/628005/grey-medium.png",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842320.7473426,
+    "action": "connection_closed",
+    "connection_id": 1794842318854092874,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2673,
+    "received_bytes": 32812
+  },
+  {
+    "utc": 1794842320.7686396,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842321.8798358,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/sounds/spectrograms/VOXVCHVBIP/628005/grey-medium.png",
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 32040,
+    "sha256": "f25bf7c9aa0a1103195c86e63d86e3f4191f8bb676f0a085e13280907a4c8bc1",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 32040
+  },
+  {
+    "utc": 1794842343.0933595,
+    "action": "connect_request",
+    "connection_id": 1794842343077667980,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842343.2589107,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842343077667980,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842343.292481,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/sounds/spectrograms/YSPYKACHLO/645039/grey-medium.png",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842344.8353217,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/sounds/spectrograms/YSPYKACHLO/645039/grey-medium.png",
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 32676,
+    "sha256": "b5d32735a493d132585dcb06031e118783bd8d08ff6272a7eeef3ab5d8e6f649",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 32676
+  },
+  {
+    "utc": 1794842347.3756485,
+    "action": "connection_closed",
+    "connection_id": 1794842188429991290,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 6101,
+    "received_bytes": 124231
+  },
+  {
+    "utc": 1794842347.3969607,
+    "action": "connect_request",
+    "connection_id": 1794842347383419907,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842348.69612,
+    "action": "connect_established",
+    "connection_id": 1794842347383419907,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842363.0962348,
+    "action": "connect_request",
+    "connection_id": 1794842363085643083,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842363.1235542,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842363085643083,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842363.1448145,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842378.168473,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1aa660>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842380.0556598,
+    "action": "connection_closed",
+    "connection_id": 1794842195751992721,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 5482,
+    "received_bytes": 104933
+  },
+  {
+    "utc": 1794842380.0767787,
+    "action": "connection_closed",
+    "connection_id": 1794842189283649159,
+    "host": "pypi.org",
+    "sent_bytes": 5130,
+    "received_bytes": 1530666
+  },
+  {
+    "utc": 1794842380.0959356,
+    "action": "connection_closed",
+    "connection_id": 1794842347383419907,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1361,
+    "received_bytes": 594492
+  },
+  {
+    "utc": 1794842380.1188126,
+    "action": "connection_closed",
+    "connection_id": 1794842186515165870,
+    "host": "pypi.org",
+    "sent_bytes": 5133,
+    "received_bytes": 1024184
+  },
+  {
+    "utc": 1794842423.599842,
+    "action": "connect_request",
+    "connection_id": 1794842423585244125,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842423.6395833,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842423585244125,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842423.6650043,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842423.8424973,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842469.5726159,
+    "action": "connect_request",
+    "connection_id": 1794842469323688699,
+    "host": "www.oiseaux-birds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842469.785302,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842469323688699,
+    "host": "www.oiseaux-birds.com"
+  },
+  {
+    "utc": 1794842469.8095095,
+    "action": "http_request",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/card-cetti-warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842470.6363537,
+    "action": "connect_request",
+    "connection_id": 1794842470621065530,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842470.6547167,
+    "action": "connect_request",
+    "connection_id": 1794842470621673493,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842470.7296104,
+    "action": "connect_established",
+    "connection_id": 1794842470621065530,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842470.7571108,
+    "action": "connect_established",
+    "connection_id": 1794842470621673493,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842471.8284528,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/card-cetti-warbler.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 18163,
+    "sha256": "8a36c2f2037dd2630e81972cbddbbe073c3e2b24a58b5fdb201c8a1524e0cad8",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 18163
+  },
+  {
+    "utc": 1794842471.8595672,
+    "action": "connect_request",
+    "connection_id": 1794842471843858943,
+    "host": "baike.baidu.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842471.9708028,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842471843858943,
+    "host": "baike.baidu.com"
+  },
+  {
+    "utc": 1794842471.9937768,
+    "action": "http_request",
+    "host": "baike.baidu.com",
+    "url": "https://baike.baidu.com/item/%E5%AE%BD%E5%B0%BE%E6%A0%91%E8%8E%BA",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842472.1351702,
+    "action": "http_response_inspected",
+    "host": "baike.baidu.com",
+    "url": "https://baike.baidu.com/item/%E5%AE%BD%E5%B0%BE%E6%A0%91%E8%8E%BA",
+    "status": 403,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 2529,
+    "sha256": "f1a50bf119a13ff6e15bc4684d79927c3e39aba676e70f347a6a69944c41b25e",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 2529
+  },
+  {
+    "utc": 1794842472.166015,
+    "action": "connect_request",
+    "connection_id": 1794842472146506884,
+    "host": "baike.baidu.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842472.2794569,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842472146506884,
+    "host": "baike.baidu.com"
+  },
+  {
+    "utc": 1794842472.3015506,
+    "action": "http_request",
+    "host": "baike.baidu.com",
+    "url": "https://baike.baidu.com/item/%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842472.477872,
+    "action": "http_response_inspected",
+    "host": "baike.baidu.com",
+    "url": "https://baike.baidu.com/item/%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F",
+    "status": 403,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 2529,
+    "sha256": "df2b7950284cd9e11945e08ed741a699b2d7e53faca88c0d3217ba29e945fb6d",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 2529
+  },
+  {
+    "utc": 1794842472.6835556,
+    "action": "connection_closed",
+    "connection_id": 1794842470621065530,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2721,
+    "received_bytes": 57662
+  },
+  {
+    "utc": 1794842472.7015076,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842472.7849672,
+    "action": "connect_request",
+    "connection_id": 1794842472777174826,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842473.3000317,
+    "action": "connect_established",
+    "connection_id": 1794842472777174826,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842474.3593557,
+    "action": "connection_closed",
+    "connection_id": 1794842470621673493,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2742,
+    "received_bytes": 70815
+  },
+  {
+    "utc": 1794842474.4471364,
+    "action": "connect_request",
+    "connection_id": 1794842474435326800,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842474.5464115,
+    "action": "connect_established",
+    "connection_id": 1794842474435326800,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842476.525689,
+    "action": "connection_closed",
+    "connection_id": 1794842474435326800,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2715,
+    "received_bytes": 56485
+  },
+  {
+    "utc": 1794842476.6066039,
+    "action": "connect_request",
+    "connection_id": 1794842476596706705,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842476.7040436,
+    "action": "connect_established",
+    "connection_id": 1794842476596706705,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842479.1111736,
+    "action": "connection_closed",
+    "connection_id": 1794842476596706705,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2742,
+    "received_bytes": 70790
+  },
+  {
+    "utc": 1794842479.1320589,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842479.243981,
+    "action": "connect_request",
+    "connection_id": 1794842479221634949,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842479.3376315,
+    "action": "connect_established",
+    "connection_id": 1794842479221634949,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842481.3226633,
+    "action": "connection_closed",
+    "connection_id": 1794842479221634949,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2748,
+    "received_bytes": 77948
+  },
+  {
+    "utc": 1794842481.3582776,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842481.464447,
+    "action": "connect_request",
+    "connection_id": 1794842481446788088,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842481.551959,
+    "action": "connect_established",
+    "connection_id": 1794842481446788088,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842482.2398095,
+    "action": "connection_closed",
+    "connection_id": 1794842472777174826,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2760,
+    "received_bytes": 82954
+  },
+  {
+    "utc": 1794842482.261895,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842482.334009,
+    "action": "connect_request",
+    "connection_id": 1794842482318165105,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842482.4455655,
+    "action": "connect_established",
+    "connection_id": 1794842482318165105,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842483.9708762,
+    "action": "connection_closed",
+    "connection_id": 1794842481446788088,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2724,
+    "received_bytes": 63058
+  },
+  {
+    "utc": 1794842484.026527,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842484.044322,
+    "action": "connect_request",
+    "connection_id": 1794842484035598371,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842484.138852,
+    "action": "connect_established",
+    "connection_id": 1794842484035598371,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842484.414308,
+    "action": "connection_closed",
+    "connection_id": 1794842482318165105,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2733,
+    "received_bytes": 69931
+  },
+  {
+    "utc": 1794842484.4333704,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842484.4864497,
+    "action": "connect_request",
+    "connection_id": 1794842484478310491,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842484.5842273,
+    "action": "connect_established",
+    "connection_id": 1794842484478310491,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842484.6426108,
+    "action": "connect_request",
+    "connection_id": 1794842484632748534,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842484.6633327,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842484632748534,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842484.6799343,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842484.9246216,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842486.5641522,
+    "action": "connection_closed",
+    "connection_id": 1794842484478310491,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2757,
+    "received_bytes": 80936
+  },
+  {
+    "utc": 1794842486.594127,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842486.6540263,
+    "action": "connect_request",
+    "connection_id": 1794842486645971145,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842487.1344445,
+    "action": "connect_established",
+    "connection_id": 1794842486645971145,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842487.7638848,
+    "action": "connection_closed",
+    "connection_id": 1794842484035598371,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2733,
+    "received_bytes": 66283
+  },
+  {
+    "utc": 1794842487.7912009,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842487.8644943,
+    "action": "connect_request",
+    "connection_id": 1794842487838586344,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842487.9553022,
+    "action": "connect_established",
+    "connection_id": 1794842487838586344,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842491.776282,
+    "action": "connection_closed",
+    "connection_id": 1794842487838586344,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2751,
+    "received_bytes": 77571
+  },
+  {
+    "utc": 1794842491.8566463,
+    "action": "connect_request",
+    "connection_id": 1794842491841765470,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842491.9424825,
+    "action": "connect_established",
+    "connection_id": 1794842491841765470,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842492.8703773,
+    "action": "connection_closed",
+    "connection_id": 1794842486645971145,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2760,
+    "received_bytes": 83830
+  },
+  {
+    "utc": 1794842492.905598,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842494.2134593,
+    "action": "connection_closed",
+    "connection_id": 1794842491841765470,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2748,
+    "received_bytes": 75646
+  },
+  {
+    "utc": 1794842494.2259483,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842502.4061792,
+    "action": "connect_request",
+    "connection_id": 1794842502388389428,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842502.532299,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842502388389428,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842502.555969,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/lang/zh_CN",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842503.9711354,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/lang/zh_CN",
+    "status": 303,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 250,
+    "sha256": "f7036dbf5a5b4f6c5cac06ed07b55d75d74739df6e392b9ff7a3f43b1d4fe0b4",
+    "location": "/",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 250
+  },
+  {
+    "utc": 1794842504.0139527,
+    "action": "connect_request",
+    "connection_id": 1794842503980910873,
+    "host": "xeno-canto.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842504.1212835,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842503980910873,
+    "host": "xeno-canto.org"
+  },
+  {
+    "utc": 1794842504.1413653,
+    "action": "http_request",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/628005",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842504.9130645,
+    "action": "http_response_inspected",
+    "host": "xeno-canto.org",
+    "url": "https://xeno-canto.org/628005",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 25182,
+    "sha256": "28e37e877c660f8c9276c1bd2153ad097d1c01f6aafa86e88f781910d6172411",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 25182
+  },
+  {
+    "utc": 1794842538.3669093,
+    "action": "connect_request",
+    "connection_id": 1794842537752825397,
+    "host": "www.oiseaux-birds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842538.5694346,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842537752825397,
+    "host": "www.oiseaux-birds.com"
+  },
+  {
+    "utc": 1794842538.5885608,
+    "action": "http_request",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/card-cetti-warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842540.112537,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/card-cetti-warbler.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 18163,
+    "sha256": "8a36c2f2037dd2630e81972cbddbbe073c3e2b24a58b5fdb201c8a1524e0cad8",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 18163
+  },
+  {
+    "utc": 1794842540.7486706,
+    "action": "connect_request",
+    "connection_id": 1794842540137263638,
+    "host": "www.bird-sounds.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842540.8508697,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842540137263638,
+    "host": "www.bird-sounds.net"
+  },
+  {
+    "utc": 1794842540.8714647,
+    "action": "http_request",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/willow-flycatcher/",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842542.8201902,
+    "action": "http_response_inspected",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/willow-flycatcher/",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 35439,
+    "sha256": "977914c982f9505ec0e448cdf9c824d67d6facc0cef9fc17912e089cc4574b7f",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 35439
+  },
+  {
+    "utc": 1794842545.750185,
+    "action": "connect_request",
+    "connection_id": 1794842545736679181,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842545.7716222,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842545736679181,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842545.7986434,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842545.937771,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842606.855194,
+    "action": "connect_request",
+    "connection_id": 1794842606841326474,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842606.8818142,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842606841326474,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842606.9050608,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842621.940932,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b7b30>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842668.0511005,
+    "action": "connect_request",
+    "connection_id": 1794842668040458495,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842668.1008568,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842668040458495,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842668.1250594,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842681.7909758,
+    "action": "connect_request",
+    "connection_id": 1794842681572268475,
+    "host": "www.oiseaux-birds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842681.9599323,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842681572268475,
+    "host": "www.oiseaux-birds.com"
+  },
+  {
+    "utc": 1794842681.979914,
+    "action": "http_request",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/passeriformes/cettiides/bouscarle-de-cetti/bouscarle-de-cetti-jlb2.jpg",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842682.993289,
+    "action": "connect_request",
+    "connection_id": 1794842682980202774,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842683.0903516,
+    "action": "connect_established",
+    "connection_id": 1794842682980202774,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842683.1591017,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b75f0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842683.5150511,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux-birds.com",
+    "url": "https://www.oiseaux-birds.com/passeriformes/cettiides/bouscarle-de-cetti/bouscarle-de-cetti-jlb2.jpg",
+    "status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 50834,
+    "sha256": "c3e1c2ba173551f6b383603a24d4a9161b4e2b4814cef2913deb02b2884bba75",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 50834
+  },
+  {
+    "utc": 1794842683.8825543,
+    "action": "connect_request",
+    "connection_id": 1794842683651151490,
+    "host": "www.bird-sounds.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842683.9940312,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842683651151490,
+    "host": "www.bird-sounds.net"
+  },
+  {
+    "utc": 1794842684.0155778,
+    "action": "http_request",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/birdmedia/775/willow-flycatcher-call-song-1391.mp3",
+    "method": "GET"
+  },
+  {
+    "utc": 1794842686.1789315,
+    "action": "connection_closed",
+    "connection_id": 1794842682980202774,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2763,
+    "received_bytes": 87603
+  },
+  {
+    "utc": 1794842686.201802,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842686.3943124,
+    "action": "connect_request",
+    "connection_id": 1794842686384258091,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842686.495129,
+    "action": "connect_established",
+    "connection_id": 1794842686384258091,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842689.089425,
+    "action": "connection_closed",
+    "connection_id": 1794842686384258091,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2751,
+    "received_bytes": 80055
+  },
+  {
+    "utc": 1794842689.1153104,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842728.0055375,
+    "action": "connect_request",
+    "connection_id": 1794842727988798630,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842728.0281038,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842727988798630,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842728.0517313,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842729.941127,
+    "action": "connect_request",
+    "connection_id": 1794842729908407930,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842729.962414,
+    "action": "connect_request",
+    "connection_id": 1794842729905306070,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842730.0499191,
+    "action": "connect_established",
+    "connection_id": 1794842729905306070,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842731.2569232,
+    "action": "connect_established",
+    "connection_id": 1794842729908407930,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842733.770153,
+    "action": "connection_closed",
+    "connection_id": 1794842729905306070,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2721,
+    "received_bytes": 63683
+  },
+  {
+    "utc": 1794842733.790893,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842733.8557744,
+    "action": "connect_request",
+    "connection_id": 1794842733845536627,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842734.3478165,
+    "action": "connect_established",
+    "connection_id": 1794842733845536627,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842737.39042,
+    "action": "connection_closed",
+    "connection_id": 1794842733845536627,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2760,
+    "received_bytes": 91338
+  },
+  {
+    "utc": 1794842737.467953,
+    "action": "connect_request",
+    "connection_id": 1794842737457421443,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842737.9757895,
+    "action": "connect_established",
+    "connection_id": 1794842737457421443,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842739.327468,
+    "action": "connection_closed",
+    "connection_id": 1794842729908407930,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2742,
+    "received_bytes": 79999
+  },
+  {
+    "utc": 1794842739.347541,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842739.411209,
+    "action": "connect_request",
+    "connection_id": 1794842739403564152,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842739.503208,
+    "action": "connect_established",
+    "connection_id": 1794842739403564152,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842740.0761,
+    "action": "connection_closed",
+    "connection_id": 1794842737457421443,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2715,
+    "received_bytes": 61264
+  },
+  {
+    "utc": 1794842740.1012757,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842740.1667058,
+    "action": "connect_request",
+    "connection_id": 1794842740156850150,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842740.2544825,
+    "action": "connect_established",
+    "connection_id": 1794842740156850150,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842741.9349372,
+    "action": "connection_closed",
+    "connection_id": 1794842739403564152,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2742,
+    "received_bytes": 77598
+  },
+  {
+    "utc": 1794842741.9563808,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842742.008687,
+    "action": "connect_request",
+    "connection_id": 1794842741999879866,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842742.115672,
+    "action": "connect_established",
+    "connection_id": 1794842741999879866,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842742.2376912,
+    "action": "connection_closed",
+    "connection_id": 1794842740156850150,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2748,
+    "received_bytes": 85955
+  },
+  {
+    "utc": 1794842742.2557452,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842742.3124092,
+    "action": "connect_request",
+    "connection_id": 1794842742303735947,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842742.3972347,
+    "action": "connect_established",
+    "connection_id": 1794842742303735947,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842743.5963001,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b4ad0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842743.8461428,
+    "action": "connection_closed",
+    "connection_id": 1794842741999879866,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2724,
+    "received_bytes": 69037
+  },
+  {
+    "utc": 1794842743.9049785,
+    "action": "connect_request",
+    "connection_id": 1794842743897849954,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842743.994757,
+    "action": "connect_established",
+    "connection_id": 1794842743897849954,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842744.5966122,
+    "action": "connection_closed",
+    "connection_id": 1794842742303735947,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2733,
+    "received_bytes": 76314
+  },
+  {
+    "utc": 1794842744.6132498,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842744.6798506,
+    "action": "connect_request",
+    "connection_id": 1794842744655471955,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842745.1322844,
+    "action": "connect_established",
+    "connection_id": 1794842744655471955,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842745.6929464,
+    "action": "connection_closed",
+    "connection_id": 1794842743897849954,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2733,
+    "received_bytes": 73465
+  },
+  {
+    "utc": 1794842745.705298,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842745.7592285,
+    "action": "connect_request",
+    "connection_id": 1794842745748479345,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842745.8536875,
+    "action": "connect_established",
+    "connection_id": 1794842745748479345,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842748.1582737,
+    "action": "connection_closed",
+    "connection_id": 1794842744655471955,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2763,
+    "received_bytes": 97178
+  },
+  {
+    "utc": 1794842748.2282524,
+    "action": "connect_request",
+    "connection_id": 1794842748217918350,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842748.3246813,
+    "action": "connect_established",
+    "connection_id": 1794842748217918350,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842748.395518,
+    "action": "connection_closed",
+    "connection_id": 1794842745748479345,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2760,
+    "received_bytes": 91011
+  },
+  {
+    "utc": 1794842748.4596078,
+    "action": "connect_request",
+    "connection_id": 1794842748453327853,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842748.5522373,
+    "action": "connect_established",
+    "connection_id": 1794842748453327853,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794842750.9927063,
+    "action": "connection_closed",
+    "connection_id": 1794842748453327853,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2751,
+    "received_bytes": 86808
+  },
+  {
+    "utc": 1794842751.0152173,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842751.1895967,
+    "action": "connection_closed",
+    "connection_id": 1794842748217918350,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2751,
+    "received_bytes": 84727
+  },
+  {
+    "utc": 1794842751.2102509,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794842776.8457794,
+    "action": "inspection_failed_closed",
+    "host": "www.bird-sounds.net",
+    "url": "https://www.bird-sounds.net/birdmedia/775/willow-flycatcher-call-song-1391.mp3",
+    "error": "ValueError: Response exceeds inspection bound",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842789.0892303,
+    "action": "connect_request",
+    "connection_id": 1794842789076356711,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842789.1148922,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842789076356711,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842789.1347804,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842804.769206,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b7b60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842850.3712049,
+    "action": "connect_request",
+    "connection_id": 1794842850360182962,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842850.4075563,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842850360182962,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842850.4291084,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842865.4571216,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc4b7950>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842911.7169979,
+    "action": "connect_request",
+    "connection_id": 1794842911703678001,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842911.747203,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842911703678001,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842911.768178,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842926.7938135,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1db770>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794842972.426352,
+    "action": "connect_request",
+    "connection_id": 1794842972415015742,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794842972.4496334,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794842972415015742,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794842972.4745252,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794842988.2009177,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1da6c0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843033.7119977,
+    "action": "connect_request",
+    "connection_id": 1794843033692415282,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843033.7485666,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843033692415282,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843033.773924,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843048.8315492,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dccb4cb0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843094.2304416,
+    "action": "connect_request",
+    "connection_id": 1794843094215478484,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843094.2603815,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843094215478484,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843094.284588,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843109.323878,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1da960>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843154.212387,
+    "action": "connect_request",
+    "connection_id": 1794843154177116706,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843154.2365007,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843154177116706,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843154.2502944,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843169.7891214,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1dbe90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843215.2562022,
+    "action": "connect_request",
+    "connection_id": 1794843215242187756,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843215.2852194,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843215242187756,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843215.3076117,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843230.3362012,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1d9280>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843275.8342476,
+    "action": "connect_request",
+    "connection_id": 1794843275824799309,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843275.8541658,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843275824799309,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843275.8684177,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843291.579673,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc1b78f0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843336.9675872,
+    "action": "connect_request",
+    "connection_id": 1794843336958791209,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843336.9888895,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843336958791209,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843337.0083044,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843352.0352006,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x74f6dc4b79e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843398.1138897,
+    "action": "connect_request",
+    "connection_id": 1794843398094485227,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843398.136318,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843398094485227,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843398.1583135,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843398.205993,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74f6dc1d8e30>: Failed to establish a new connection: [Errno 111] Conn",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843458.131882,
+    "action": "connect_request",
+    "connection_id": 1794843458104502389,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843458.1603673,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843458104502389,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843458.1819959,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843458.2122169,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74f6dc1da3c0>: Failed to establish a new connection: [Errno 111] Conn",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843519.167017,
+    "action": "connect_request",
+    "connection_id": 1794843519142701860,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843519.1897142,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843519142701860,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843519.2104654,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843519.2495878,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74f6dc1da120>: Failed to establish a new connection: [Errno 111] Conn",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794843550.7524142,
+    "action": "connect_request",
+    "connection_id": 1794843550727727729,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794843550.7647562,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794843550727727729,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794843550.78184,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794843550.814215,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74f6dc616870>: Failed to establish a new connection: [Errno 111] Conn",
+    "delivered_bytes": 0
+  }
+]

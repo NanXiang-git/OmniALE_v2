@@ -1,0 +1,214 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "灌木丛里，鸟没有清楚露面。这一段暂判断为宽尾树莺。短音反复出现，还夹着较急的颤音。枝叶挡住了鸟体，无法确认发声的具体个体。",
+    "speech_spans": [
+      {
+        "start": 3.68,
+        "end": 9.28,
+        "text": "灌木丛里，鸟没有清楚露面。"
+      },
+      {
+        "start": 15.47,
+        "end": 23.07,
+        "text": "这一段暂判断为宽尾树莺。"
+      }
+    ],
+    "background": "持续的户外自然环境声，包括多种清晰的鸟类鸣叫、啁啾和啼叫声，以及轻微的树叶沙沙声。",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "人声语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械感和合成痕迹。",
+      "times": [
+        3.84,
+        16.24
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色略显干瘪单薄，不够饱满圆润，听感上有一定的生硬感。",
+      "times": [
+        3.84,
+        16.24
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音清晰，字正腔圆，能够轻松听懂所有内容，但个别字词的连接略显不自然。",
+      "times": [
+        3.84,
+        16.24
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但略显呆板，句间停顿时间固定且稍长，缺乏人类说话时的自然节奏感。",
+      "times": [
+        3.84,
+        16.24
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景的鸟鸣声比例基本协调，鸟鸣声作为环境音没有严重干扰到人声的听取。",
+      "times": [
+        0.0,
+        26.96
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声，包括短促的啾鸣和颤音，背景动物声保留完整。",
+      "times": [
+        0.0,
+        26.96
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 3.84,
+        "reason": "纯背景鸟鸣声，无人声"
+      },
+      {
+        "start": 11.2,
+        "end": 16.24,
+        "reason": "纯背景鸟鸣声，无人声"
+      },
+      {
+        "start": 23.76,
+        "end": 26.96,
+        "reason": "纯背景鸟鸣声，无人声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "宽尾树莺",
+    "I_reason": "在15.47-23.07秒的音频中，旁白明确说出“这一段暂判断为宽尾树莺”，实际说出的物种与真值“四川蝗莺”不符。",
+    "F": {
+      "score": 0.8,
+      "reason": "解说内容准确描述了当前画面的视觉限制（鸟未露面、枝叶挡住）以及听觉特征（短音反复、较急颤音），并诚实地表达了无法确认具体发声个体的不确定性，符合科普严谨性。",
+      "times": [
+        3.68,
+        9.28,
+        15.47,
+        23.07
+      ]
+    },
+    "E": {
+      "score": 0.9,
+      "reason": "视听证据高度对应：背景中确实存在持续的、有节奏的短促鸟鸣和颤音，画面呈现茂密灌丛且无明显鸟类主体，解说的描述与实际听到的声音和看到的画面完全一致。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "claims": [
+      {
+        "claim": "灌木丛里，鸟没有清楚露面",
+        "supported": true,
+        "reason": "视频全程展示的是茂密的绿色枝叶，确实没有清晰可见的鸟类实体。"
+      },
+      {
+        "claim": "这一段暂判断为宽尾树莺",
+        "supported": false,
+        "reason": "虽然这是旁白的实际陈述，但根据提供的真值，该物种应为四川蝗莺，因此该鉴定结论在事实层面是错误的。"
+      },
+      {
+        "claim": "短音反复出现，还夹着较急的颤音",
+        "supported": true,
+        "reason": "背景音频中清晰可辨一种高频、短促且重复的鸣叫声，其中包含快速的颤音成分，与描述相符。"
+      },
+      {
+        "claim": "枝叶挡住了鸟体，无法确认发声的具体个体",
+        "supported": true,
+        "reason": "由于视觉上缺乏清晰的鸟体参照，仅凭声音难以在野外复杂环境中绝对锁定单一物种，该谨慎的表述符合逻辑。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": null,
+      "reason": "提供的拼图画面中未显示任何字幕文本，无法评估其实际烧录情况、可读性以及与旁白文字的对应关系。",
+      "times": []
+    },
+    "timing": {
+      "score": 0.9,
+      "reason": "根据SRT时间轴与独立转写比对，解说时机与当前章节画面（茂密灌丛及交错枝叶）高度对应。例如在51s左右提示“鸟没有清楚露面”，61-64s描述听到的声音特征，66-69s解释因枝叶遮挡无法确认个体，逻辑连贯且符合视觉事实。抽样帧的时间点均落在对应的语音区间内。",
+      "times": [
+        {
+          "start": 49.902,
+          "end": 52.483
+        },
+        {
+          "start": 52.964,
+          "end": 55.74
+        },
+        {
+          "start": 61.602,
+          "end": 63.154
+        },
+        {
+          "start": 63.282,
+          "end": 64.925
+        },
+        {
+          "start": 65.393,
+          "end": 66.919
+        },
+        {
+          "start": 67.086,
+          "end": 69.38
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 49.967,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 55.667,
+        "end": 61.667,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 69.317,
+        "end": 72.8,
+        "matched_original_seconds": 2
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 3.84,
+        "reason": "纯背景鸟鸣声，无人声"
+      },
+      {
+        "start": 11.2,
+        "end": 16.24,
+        "reason": "纯背景鸟鸣声，无人声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 10,
+    "compared_seconds": 25
+  }
+}

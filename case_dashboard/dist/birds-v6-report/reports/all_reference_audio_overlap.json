@@ -1,0 +1,531 @@
+{
+  "passed": true,
+  "method": "8kHz mono, 250–3700Hz bandpass, 2s zero-mean reference templates at 1s strides, all sample-level offsets in each of six original chapters. Absolute correlation >=0.90 flags possible shared recording.",
+  "limits": [
+    "No time stretching/pitch search.",
+    "Less than two seconds is untested.",
+    "Only inspected media responses; encrypted infrastructure and images are outside scope.",
+    "No waveform match is not universal proof of independent provenance."
+  ],
+  "controls": {
+    "passed": true,
+    "positive_source_crop": [
+      {
+        "max_absolute_correlation": 0.11989014199303187,
+        "reference_second": 3.0,
+        "chapter_second": 8.242125
+      },
+      {
+        "max_absolute_correlation": 0.22710604224961142,
+        "reference_second": 2.0,
+        "chapter_second": 12.946875
+      },
+      {
+        "max_absolute_correlation": 1.000000104843223,
+        "reference_second": 0.0,
+        "chapter_second": 2.2
+      },
+      {
+        "max_absolute_correlation": 0.22028334572818561,
+        "reference_second": 2.0,
+        "chapter_second": 0.011875
+      },
+      {
+        "max_absolute_correlation": 0.20107041368373693,
+        "reference_second": 2.0,
+        "chapter_second": 25.453625
+      },
+      {
+        "max_absolute_correlation": 0.21311672233291504,
+        "reference_second": 2.0,
+        "chapter_second": 7.550125
+      }
+    ],
+    "reversed_negative": [
+      {
+        "max_absolute_correlation": 0.14005657624226647,
+        "reference_second": 1.0,
+        "chapter_second": 5.961
+      },
+      {
+        "max_absolute_correlation": 0.26273923022806167,
+        "reference_second": 2.0,
+        "chapter_second": 4.16925
+      },
+      {
+        "max_absolute_correlation": 0.23112901754849743,
+        "reference_second": 2.0,
+        "chapter_second": 14.758
+      },
+      {
+        "max_absolute_correlation": 0.16977246344204974,
+        "reference_second": 2.0,
+        "chapter_second": 11.413
+      },
+      {
+        "max_absolute_correlation": 0.1613821028258845,
+        "reference_second": 3.0,
+        "chapter_second": 24.599
+      },
+      {
+        "max_absolute_correlation": 0.2448259236265657,
+        "reference_second": 2.0,
+        "chapter_second": 24.417625
+      }
+    ]
+  },
+  "results": [
+    {
+      "sha256": "0d58e99e32ddab2b56e6a15d9597253d5f7b7a7fd178a4d223394049fbd95379",
+      "urls": [
+        "https://www.bird-sounds.net/birdmedia/235/alder-flycatcher-call-song-855.mp3"
+      ],
+      "duration": 73.74375,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.19534414866731015,
+          "reference_second": 59.0,
+          "chapter_second": 14.164375
+        },
+        {
+          "max_absolute_correlation": 0.289935633249587,
+          "reference_second": 8.0,
+          "chapter_second": 17.036125
+        },
+        {
+          "max_absolute_correlation": 0.31365428440229576,
+          "reference_second": 37.0,
+          "chapter_second": 6.316375
+        },
+        {
+          "max_absolute_correlation": 0.2906554625138313,
+          "reference_second": 27.0,
+          "chapter_second": 0.03125
+        },
+        {
+          "max_absolute_correlation": 0.33298777909222727,
+          "reference_second": 37.0,
+          "chapter_second": 32.469875
+        },
+        {
+          "max_absolute_correlation": 0.26936461858784927,
+          "reference_second": 8.0,
+          "chapter_second": 4.659
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "18135b12f93d8f99cd35a1a4de1b6e2cefe194496f460681203a883eb537fa96",
+      "urls": [
+        "https://www.bird-sounds.net/birdmedia/427/eastern-wood-pewee-call-song-1045.mp3"
+      ],
+      "duration": 14.053875,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.15745169422470656,
+          "reference_second": 2.0,
+          "chapter_second": 8.711875
+        },
+        {
+          "max_absolute_correlation": 0.11686190490365979,
+          "reference_second": 11.0,
+          "chapter_second": 17.407625
+        },
+        {
+          "max_absolute_correlation": 0.17575142184064382,
+          "reference_second": 12.0,
+          "chapter_second": 10.232125
+        },
+        {
+          "max_absolute_correlation": 0.14106393802336287,
+          "reference_second": 2.0,
+          "chapter_second": 12.882875
+        },
+        {
+          "max_absolute_correlation": 0.2090455890073812,
+          "reference_second": 10.0,
+          "chapter_second": 22.308625
+        },
+        {
+          "max_absolute_correlation": 0.1775717842860698,
+          "reference_second": 11.0,
+          "chapter_second": 14.60225
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "20b135fe3d7e01ccbbc2cc63902bff54de54c2fe153218a3f240b8b74a140dae",
+      "urls": [
+        "https://xeno-canto.org/13755/download"
+      ],
+      "duration": 60.133875,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.1458745801330553,
+          "reference_second": 2.0,
+          "chapter_second": 42.679625
+        },
+        {
+          "max_absolute_correlation": 0.3389665325115847,
+          "reference_second": 54.0,
+          "chapter_second": 20.49575
+        },
+        {
+          "max_absolute_correlation": 0.2977133288385121,
+          "reference_second": 57.0,
+          "chapter_second": 6.363625
+        },
+        {
+          "max_absolute_correlation": 0.4978497598102491,
+          "reference_second": 17.0,
+          "chapter_second": 0.009875
+        },
+        {
+          "max_absolute_correlation": 0.23445327897074342,
+          "reference_second": 57.0,
+          "chapter_second": 32.462375
+        },
+        {
+          "max_absolute_correlation": 0.2479212440733881,
+          "reference_second": 17.0,
+          "chapter_second": 7.55825
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "260975148391e52b74ed85af0fa5b22ed4a76e022ad920eb42cc2a50d22f00b9",
+      "urls": [
+        "https://www.british-birdsongs.uk/birdmedia/857/nightingale-song-1464.mp3"
+      ],
+      "duration": 76.683375,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.39360170121816473,
+          "reference_second": 15.0,
+          "chapter_second": 40.76975
+        },
+        {
+          "max_absolute_correlation": 0.59575879973442,
+          "reference_second": 22.0,
+          "chapter_second": 21.7365
+        },
+        {
+          "max_absolute_correlation": 0.3362689357742896,
+          "reference_second": 22.0,
+          "chapter_second": 2.296875
+        },
+        {
+          "max_absolute_correlation": 0.3109278547377616,
+          "reference_second": 61.0,
+          "chapter_second": 0.052
+        },
+        {
+          "max_absolute_correlation": 0.24712102060966623,
+          "reference_second": 9.0,
+          "chapter_second": 13.224
+        },
+        {
+          "max_absolute_correlation": 0.34765374961213136,
+          "reference_second": 22.0,
+          "chapter_second": 24.389375
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "4077962b544bc42c3f341b6f4802835d0708a682e9fd85e9d470614012ad302f",
+      "urls": [
+        "https://base-prod.rspb-prod.magnolia-platform.com/dam/jcr:60b60927-611a-41ce-bc8f-6926ea4776dd/XC40233%20-%20Cetti's%20Warbler%20-%20Cettia%20cetti.mp3"
+      ],
+      "duration": 25.809,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.08839685179954962,
+          "reference_second": 23.0,
+          "chapter_second": 14.157375
+        },
+        {
+          "max_absolute_correlation": 0.1506353257723531,
+          "reference_second": 23.0,
+          "chapter_second": 1.475375
+        },
+        {
+          "max_absolute_correlation": 0.2159991843918978,
+          "reference_second": 4.0,
+          "chapter_second": 8.24325
+        },
+        {
+          "max_absolute_correlation": 0.2176690242678887,
+          "reference_second": 4.0,
+          "chapter_second": 7.4735
+        },
+        {
+          "max_absolute_correlation": 0.25778817176629726,
+          "reference_second": 4.0,
+          "chapter_second": 25.331625
+        },
+        {
+          "max_absolute_correlation": 0.15192109696962725,
+          "reference_second": 1.0,
+          "chapter_second": 4.80125
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "5221525ddc01f10d3016fe240b6d39d8be7453d512747242654f08669cab5c19",
+      "urls": [
+        "https://www.british-birdsongs.uk/birdmedia/140/marsh-warbler-song-763.mp3"
+      ],
+      "duration": 54.83375,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.2945837346860885,
+          "reference_second": 25.0,
+          "chapter_second": 8.199
+        },
+        {
+          "max_absolute_correlation": 0.38159414030527466,
+          "reference_second": 38.0,
+          "chapter_second": 1.448
+        },
+        {
+          "max_absolute_correlation": 0.34128614519999506,
+          "reference_second": 31.0,
+          "chapter_second": 8.771375
+        },
+        {
+          "max_absolute_correlation": 0.2814190893947981,
+          "reference_second": 42.0,
+          "chapter_second": 6.416375
+        },
+        {
+          "max_absolute_correlation": 0.47419052272866324,
+          "reference_second": 31.0,
+          "chapter_second": 16.976625
+        },
+        {
+          "max_absolute_correlation": 0.27621382445956494,
+          "reference_second": 38.0,
+          "chapter_second": 7.506875
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "919b2b4a2307b9269a5e1d0aca67cb812d264a8dd31983510dbaa447caaf6fa7",
+      "urls": [
+        "https://xeno-canto.org/161967/download"
+      ],
+      "duration": 19.67025,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.06619629390088366,
+          "reference_second": 10.0,
+          "chapter_second": 38.647625
+        },
+        {
+          "max_absolute_correlation": 0.05846281293314586,
+          "reference_second": 17.0,
+          "chapter_second": 13.214625
+        },
+        {
+          "max_absolute_correlation": 0.06999113685929798,
+          "reference_second": 14.0,
+          "chapter_second": 4.256875
+        },
+        {
+          "max_absolute_correlation": 0.08568633623731407,
+          "reference_second": 15.0,
+          "chapter_second": 21.12925
+        },
+        {
+          "max_absolute_correlation": 0.06183041070820578,
+          "reference_second": 14.0,
+          "chapter_second": 13.65925
+        },
+        {
+          "max_absolute_correlation": 0.057394844544351266,
+          "reference_second": 7.0,
+          "chapter_second": 14.4725
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "d0a05fa178c99c7cd409962144088671985d50748658002ba7c3f0ac3ce42436",
+      "urls": [
+        "https://xeno-canto.org/801516/download"
+      ],
+      "duration": 18.885375,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.17469739465971304,
+          "reference_second": 0.0,
+          "chapter_second": 5.68125
+        },
+        {
+          "max_absolute_correlation": 0.3424320604285407,
+          "reference_second": 16.0,
+          "chapter_second": 20.561375
+        },
+        {
+          "max_absolute_correlation": 0.21871075498328324,
+          "reference_second": 16.0,
+          "chapter_second": 25.535625
+        },
+        {
+          "max_absolute_correlation": 0.1796333473164203,
+          "reference_second": 13.0,
+          "chapter_second": 6.075625
+        },
+        {
+          "max_absolute_correlation": 0.21596860101795945,
+          "reference_second": 13.0,
+          "chapter_second": 3.97625
+        },
+        {
+          "max_absolute_correlation": 0.18839577251786294,
+          "reference_second": 13.0,
+          "chapter_second": 24.46875
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "d33c3635c56696c8d4e6ade5358eae5583e2c105db07f58e407433197c8bfd14",
+      "urls": [
+        "https://xeno-canto.org/138170/download"
+      ],
+      "duration": 13.656,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.05671558245414833,
+          "reference_second": 5.0,
+          "chapter_second": 42.970125
+        },
+        {
+          "max_absolute_correlation": 0.07443018223200014,
+          "reference_second": 8.0,
+          "chapter_second": 21.556875
+        },
+        {
+          "max_absolute_correlation": 0.43391277480433726,
+          "reference_second": 5.0,
+          "chapter_second": 10.5555
+        },
+        {
+          "max_absolute_correlation": 0.18951586972265363,
+          "reference_second": 7.0,
+          "chapter_second": 5.585625
+        },
+        {
+          "max_absolute_correlation": 0.33872895988202756,
+          "reference_second": 5.0,
+          "chapter_second": 19.96075
+        },
+        {
+          "max_absolute_correlation": 0.2636938305683849,
+          "reference_second": 5.0,
+          "chapter_second": 17.1495
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "d73e3b154b70065ad660680c27bab16cb66376c063643803e7a188995da950e8",
+      "urls": [
+        "https://xeno-canto.org/14862/download"
+      ],
+      "duration": 56.450625,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.15958561895271373,
+          "reference_second": 3.0,
+          "chapter_second": 40.77875
+        },
+        {
+          "max_absolute_correlation": 0.2463500337154804,
+          "reference_second": 14.0,
+          "chapter_second": 13.052
+        },
+        {
+          "max_absolute_correlation": 0.1928533533569911,
+          "reference_second": 10.0,
+          "chapter_second": 10.3615
+        },
+        {
+          "max_absolute_correlation": 0.2806783340410872,
+          "reference_second": 41.0,
+          "chapter_second": 0.005
+        },
+        {
+          "max_absolute_correlation": 0.14955265161799028,
+          "reference_second": 10.0,
+          "chapter_second": 13.476625
+        },
+        {
+          "max_absolute_correlation": 0.1938200965401062,
+          "reference_second": 41.0,
+          "chapter_second": 8.056375
+        }
+      ],
+      "possible_overlap": false
+    },
+    {
+      "sha256": "e3c80f5b4865a3d8b102806ad675d9783da4cf30f7960d57e6bcbddf5a611d4f",
+      "urls": [
+        "https://www.bird-sounds.net/birdmedia/775/willow-flycatcher-call-song-1391.mp3"
+      ],
+      "duration": 43.67675,
+      "tested": true,
+      "best_by_chapter": [
+        {
+          "max_absolute_correlation": 0.09806286749144325,
+          "reference_second": 40.0,
+          "chapter_second": 13.775625
+        },
+        {
+          "max_absolute_correlation": 0.22523970564903578,
+          "reference_second": 38.0,
+          "chapter_second": 4.2005
+        },
+        {
+          "max_absolute_correlation": 0.27782851392222957,
+          "reference_second": 35.0,
+          "chapter_second": 8.732375
+        },
+        {
+          "max_absolute_correlation": 0.283356490125981,
+          "reference_second": 16.0,
+          "chapter_second": 6.98275
+        },
+        {
+          "max_absolute_correlation": 0.3066585664115353,
+          "reference_second": 36.0,
+          "chapter_second": 17.92875
+        },
+        {
+          "max_absolute_correlation": 0.1973942834835173,
+          "reference_second": 8.0,
+          "chapter_second": 7.469375
+        }
+      ],
+      "possible_overlap": false
+    }
+  ],
+  "errors": []
+}

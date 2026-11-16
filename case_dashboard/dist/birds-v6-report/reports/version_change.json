@@ -1,0 +1,17 @@
+{
+  "version": "v6-source-guard-tts-compatibility",
+  "parent": "v5",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "effort": "high",
+  "time_budget_seconds": 3600,
+  "same_input_video": true,
+  "same_candidate_as_v5": true,
+  "same_scoring": true,
+  "changes": [
+    "api.msedgeservices.com added to the speech infrastructure passthrough set to support WebSocket upgrades"
+  ],
+  "status": "formal_run_and_scoring_complete",
+  "old_run_preserved": "../omni_task_v5"
+}

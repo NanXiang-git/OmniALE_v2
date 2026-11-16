@@ -1,0 +1,298 @@
+{
+  "sol": {
+    "summary": "模型自行选择并安装 edge-tts，在 Python 中调用网络语音服务，编写制作脚本完成配音与混音。",
+    "package": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存提交文件中的明确音色字符串；选型过程另见调用证据。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 9,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts matplotlib'",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Collecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nERROR: Could not find a version that satisfies the requirement matplotlib (from versions: none)\nERROR: No matching distribution found for matplotlib\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 34,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Collecting edge-tts\n  Using cached edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)\nCollecting tabulate<1.0.0,>=0.4.4 (from edge-tts)\n  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)\nCollecting typing-extensions<5.0.0,>=4.1.0 (from edge-tts)\n  Downloading typing_extensions-4.16.0-py3-none-an\n…\nx86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)\nDownloading tabulate-0.10.0-py3-none-any.whl (39 kB)\nDownloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nDownloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)\nDownloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)\nDownloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)\nDownloading attrs-26.1.0-py3-none-any.whl (67 kB)\nDownloading certifi-2026.10.23-py3-none-any.whl (135 kB)\nDownloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)\nDownloading idna-3.20-py3-none-any.whl (69 kB)\nDownloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)\nInstalling collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts\n\nSuccessfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 38,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/test_tts.py <<'PY'\nimport asyncio,os,json,time,edge_tts\nasync def main():\n text='先看看这两只鸟的动作。它们伸长脖子，互相触喙，又一起低下头。这是黑背信天翁的展示行为。'\n proxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY')\n t=time.time()\n c=edge_tts.Communicate(text,voice='zh-CN-XiaoxiaoNeural',rate='-6%',proxy=proxy,connect_timeout=30,receive_timeout=120,boundary='WordBoundary')\n chunks=[]\n with open('/workspace/scratch/test_voice.mp3','wb') as f:\n  async for q in c.stream():\n   if q['type']=='audio':f.write(q['data'])\n   else:chunks.append(q)\n json.dump(chunks,open('/workspace/scratch/test_voice_timing.json','w'),ensure_ascii=False,indent=2)\n print('done',time.time()-t,os.path.getsize('/workspace/scratch/test_voice.mp3'),flush=True)\nasyncio.run(main())\nPY\npython3 /workspace/scratch/test_tts.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "done 3.280240297317505 61488\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 68,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/narration_plan.json <<'JSON'\n[\n {\\\"id\\\":\\\"s1a\\\",\\\"segment\\\":1,\\\"start\\\":4.5,\\\"latest_end\\\":9.8,\\\"text\\\":\\\"这只棕褐色的小鸟，是宽尾树莺。\\\"},\n {\\\"id\\\":\\\"s1b\\\",\\\"segment\\\":1,\\\"start\\\":10.5,\\\"latest_end\\\":19.0,\\\"text\\\":\\\"短而圆的翅膀、较长的宽尾，还有浅色的喉部，都是观察线索。\\\"},\n {\\\"id\\\":\\\"s1c\\\",\\\"segment\\\":1,\\\"start\\\":26.0,\\\"latest_end\\\":35.0,\\\"text\\\":\\\"原声中，低一些的短叫和更尖的音节先后出现，节奏也有变化。\\\"},\n {\\\"id\\\":\\\"s1d\\\",\\\"segment\\\":1,\\\"start\\\":36.0,\\\"latest_end\\\":45.7,\\\"text\\\":\\\"画面没有显示开口动作，不能把每一声都确定归给这只鸟。\\\"},\n {\\\"id\\\":\\\"s2a\\\",\\\"segment\\\":2,\\\"start\\\":50.0,\\\"latest_end\\\":58.8,\\\"text\\\":\\\"灌丛里这组短叫，暂按新疆歌鸲，也就是夜莺来判断。\\\"},\n {\\\"id\\\":\\\"s2b\\\",\\\"segment\\\":2,\\\"start\\\":62.0,\\\"latest_end\\\":72.5,\\\"text\\\":\\\"这种重复的短声更像警戒叫。鸟体被枝叶遮住，具体动作还看不清。\\\"},\n {\\\"id\\\":\\\"s3a\\\",\\\"segment\\\":3,\\\"start\\\":78.0,\\\"latest_end\\\":88.5,\\\"text\\\":\\\"枝头这只是桤木纹霸鹟。灰橄榄色上体，白喉，翅上还有两道浅色翼斑。\\\"},\n {\\\"id\\\":\\\"s3b\\\",\\\"segment\\\":3,\\\"start\\\":91.0,\\\"latest_end\\\":100.5,\\\"text\\\":\\\"它抬头张嘴，重复短促、带沙哑感的声句。相似的霸鹟，常要靠声音区分。\\\"},\n {\\\"id\\\":\\\"s4a\\\",\\\"segment\\\":4,\\\"start\\\":105.0,\\\"latest_end\\\":110.0,\\\"text\\\":\\\"这里暂按长嘴沼泽鹪鹩判断。\\\"},\n {\\\"id\\\":\\\"s4b\\\",\\\"segment\\\":4,\\\"start\\\":112.0,\\\"latest_end\\\":123.4,\\\"text\\\":\\\"短音与颤音交替，像一串串急促的轻响。鸟体被遮挡，具体动作看不清。\\\"},\n {\\\"id\\\":\\\"s5a\\\",\\\"segment\\\":5,\\\"start\\\":127.4,\\\"latest_end\\\":132.5,\\\"text\\\":\\\"这只绒羽蓬松的雏鸟，是黑脚信天翁。\\\"},\n {\\\"id\\\":\\\"s5b\\\",\\\"segment\\\":5,\\\"start\\\":138.5,\\\"latest_end\\\":147.8,\\\"text\\\":\\\"成鸟全身深褐，嘴基周围泛白。雏鸟把嘴凑向成鸟，成鸟也俯下头。\\\"},\n {\\\"id\\\":\\\"s5c\\\",\\\"segment\\\":5,\\\"start\\\":149.0,\\\"latest_end\\\":158.1,\\\"text\\\":\\\"这是信天翁亲鸟喂食时常见的姿势，食物本身并不容易看清。\\\"},\n {\\\"id\\\":\\\"s6a\\\",\\\"segment\\\":6,\\\"start\\\":162.0,\\\"latest_end\\\":168.5,\\\"text\\\":\\\"这些白头、白腹、黑色背翼的，是黑背信天翁。\\\"},\n {\\\"id\\\":\\\"s6b\\\",\\\"segment\\\":6,\\\"start\\\":172.0,\\\"latest_end\\\":180.2,\\\"text\\\":\\\"两只鸟相向站立，摆头、低头，又互相触喙。这是它们的求偶展示。\\\"},\n {\\\"id\\\":\\\"s6c\\\",\\\"segment\\\":6,\\\"start\\\":180.5,\\\"latest_end\\\":185.3,\\\"text\\\":\\\"鸣叫和急促的喙击声，配合着这些动作。\\\"}\n]\nJSON\ncat > /workspace/submission/generate_narration.py <<'PY'\n#\"'!/usr/bin/env python3\n\"\"\"Generate original Mandarin narration with edge-tts, using ONLY authored text.\nNo input video/audio is transmitted. All network uses the environment HTTP proxy.\nRun: PYTHONPATH=/workspace/site-packages python3 generate_narration.py\n\"\"\"\nimport asyncio,json,os,subprocess,time,hashlib\nfrom pathlib import Path\nimport edge_tts\nROOT=Path('\"'/workspace/submission');CACHE=Path('/workspace/scratch/tts');CACHE.mkdir(parents=True,exist_ok=True)\nVOICE='zh-CN-XiaoxiaoNeural';RATE='-8%'\nasync def main():\n plan=json.loads((ROOT/'narration_plan.json').read_text())\n semaphore=asyncio.Semaphore(3)\n async def generate(item):\n  async with semaphore:\n   ident=item['id'];p=CACHE/f'{ident}.mp3';timing=CACHE/f'{ident}.json'\n   key=hashlib.sha256((VOICE+RATE+item['text']).encode()).hexdigest()\n   old=json.loads(timing.read_text()) if timing.exists() else {}\n   if not p.exists() or old.get('cache_key')\"'!=key:\n    for attempt in range(3):\n     try:\n      comm=edge_tts.Communicate(item['\"'text'],voice=VOICE,rate=RATE,volume='+0%',pitch='+0Hz',boundary='WordBoundary',proxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY'),connect_timeout=30,receive_timeout=120)\n      events=[]\n      with p.open('wb') as f:\n       async for chunk in comm.stream():\n        if chunk['type']=='audio':f.write(chunk['data'])\n        else:events.append(chunk)\n      timing.write_text(json.dumps({'voice':VOICE,'rate':RATE,'cache_key':key,'text':item['text'],'events':events},ensure_ascii=False,indent=2))\n      break\n     except Exception:\n      if attempt==2:raise\n      await asyncio.sleep(2)\n   wav=CACHE/f'{ident}.wav'\n   subprocess.run(['ffmpeg','-v','error','-y','-i',str(p),'-ac','1','-ar','48000','-c:a','pcm_s16le',str(wav)],check=True)\n   dur=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(wav)]).decode())\n   item.update(duration=dur,end=round(item['start']+dur,6),audio_file=str(wav),word_timing_file=str(timing))\n   item['fits']=item['end']<=item['latest_end']\n   print(ident,'duration',round(dur,3),'end',round(item['end'],3),'fits',item['fits'],flush=True)\n  return item\n result=await asyncio.gather(*(generate(x) for x in plan))\n (ROOT/'narration_timing.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))\n if not all(x['fits'] for x in result):raise RuntimeError('One or more utterances exceeds its slot. Revise text/schedule; do not time-stretch.')\nif __name__=='__main__':asyncio.run(main())\nPY\npython3 /workspace/submission/generate_narration.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "s1b duration 6.552 end 17.052 fits True\ns1c duration 6.888 end 32.888 fits True\ns1a duration 3.888 end 8.388 fits True\ns1d duration 5.928 end 41.928 fits True\ns2a duration 5.856 end 55.856 fits True\ns2b duration 7.656 end 69.656 fits True\ns3b duration 8.472 end 99.472 fits True\ns3a duration 7.992 end 85.992 fits True\ns4a duration 3.624 end 108.624 fits True\ns5a duration 4.248 end 131.648 fits True\ns4b duration 8.112 end 120.112 fits True\ns6a duration 5.472 end 167.472 fits True\ns5b duration 8.256 end 146.756 fits True\ns5c duration 6.456 end 155.456 fits True\ns6c duration 4.344 end 184.844 fits True\ns6b duration 7.704 end 179.704 fits True\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 84,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/write_segments.py <<'PY'\nimport json\nfrom pathlib import Path\nR=Path('/workspace/submission')\nplan=json.loads((R/'narration_timing.json').read_text())\nchapters=json.loads(Path('/candidate/chapters.json').read_text())['segments']\ndef e(a,b,d):return {'start':a,'end':b,'description':d}\ndef source(u,s):return {'url':u,'supports':s}\ninfo=[\n {'chinese_name':'宽尾树莺','english_name':\\\"Cetti's Warbler\\\",'scientific_name':'Cettia cetti','confidence':88,\n  'visual_evidence':[e(1,3,'近距离侧面可见暖棕褐色上体、灰褐色喉胸、浅色喉部与淡眼弧；细喙、短圆的收拢翅及较长的宽尾。'),e(11,16,'眼前个体由人的手指托持，画面主要是静态的形态展示；未见可供核验发声同步的开口动作。')],\n  'audio_evidence':[e(0.8,4.1,'采样声谱见约2—3千赫的短声单元间歇重复，夹有宽频成分。只能说明原音轨含重复短叫，不能据静态近景逐声归属。'),e(18.2,25.0,'声谱出现较高频、约5—7千赫的重复声单元，与前面的低频短声结构不同。未将这种频率变化解释为画面中个体正在换一种叫法。')],\n  'original_sound_windows':[{'start':0.2,'end':4.2},{'start':18.0,'end':25.0},{'start':42.4,'end':45.8}],\n  'sources':[source('https://www.oiseaux.net/birds/cetti.s.warbler.html','独立物种条目：中文名“宽尾树莺”、暖棕上体、灰色喉胸、短初级飞羽突出、宽尾及叫声多样；用于形态核对。'),source('https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler','短翅、圆尾、隐蔽活动及爆发式鸣唱是该种特征；仅作一般鉴别资料，未把鸣唱行为强加给静态画面。'),source('https://xeno-canto.org/161967/download','成功下载另一份独立的宽尾树莺报警声参考；仅手工查看声谱，了解其快速重复声结构，不用于原素材匹配或混音。')],\n  'identification_notes':'主要依赖画面形态；原音轨有多种声单元，无法保证均来自画面中的个体。'},\n {'chinese_name':'新疆歌鸲（夜莺，暂定）','english_name':'Common Nightingale (tentative)','scientific_name':'Luscinia megarhynchos','confidence':83,\n  'visual_evidence':[e(47,52,'画面是浓密灌丛和交错枝条，未取得可清楚辨别鸟体羽色的视野。'),e(63,68,'镜头仍朝向同一片灌丛，无法核验具体个体的张嘴或运动，未推断其性别、巢位或受惊原因。')],\n  'audio_evidence':[e(52.0,59.0,'采样声谱约3千赫附近出现形状相近的短音单元，约每半秒至一秒重复，起部较宽、后部收窄；与独立夜莺报警叫声参考的短、重复结构相符。'),e(65.3,67.0,'重复短声再次出现；画外还存在较高的细窄声线，不能保证全部属于同一种鸟。称“更像警戒叫”为声音类型推断，不表示观察到了威胁或报警原因。')],\n  'original_sound_windows':[{'start':46.3,'end':49.6},{'start':56.5,'end':61.5},{'start':70.1,'end':72.5}],\n  'sources':[source('https://www.oiseaux.net/birds/common.nightingale.html','确认Common Nightingale的中文名“新疆歌鸲”、学名及隐蔽于浓密植被的习性；条目提供独立叫声分类。'),source('https://xeno-canto.org/138170/download','成功下载Fernand Deroussen的独立夜莺报警叫声参考，手工比较短声句的包络与频率轮廓；未做音频指纹或来源追溯。'),source('https://www.rspb.org.uk/birds-and-wildlife/nightingale','物种体色与复杂鸣唱的一般资料，辅助区分短促叫声和完整鸣唱，不作为本段可见羽色的证据。')],\n  'identification_notes':'单一暂定识别已在实际旁白中明确说明；鸟体不可见，声音归属和功能的判断有局限。'},\n {'chinese_name':'桤木纹霸鹟','english_name':'Alder Flycatcher','scientific_name':'Empidonax alnorum','confidence':96,\n  'visual_evidence':[e(73.8,80.0,'枝上小型霸鹟，灰橄榄色头背、浅白喉、淡色腹部、两条浅色翼斑，淡眼圈不很醒目，下喙较浅。'),e(76.35,77.15,'逐帧可见由平视转为仰头、喙略开，随后低头；与附近短促声句时间相邻。'),e(93.5,94.7,'仍在同一枝条上，短暂抬头开喙；未见飞出捕虫，故旁白没有宣称已经捕获昆虫。')],\n  'audio_evidence':[e(76.65,77.22,'声谱为短促的较宽频起音、随后较强的弯曲音节，尾部快速下降；画面仰头开喙提供发声归属的支持。'),e(88.6,89.6,'相似结构的沙哑短声句再次出现。与独立桤木纹霸鹟参考声谱及其fee-bee-o声型文字描述相符；同时参考柳纹霸鹟及林霸鹟资料避免仅靠相似羽色确定种。')],\n  'original_sound_windows':[{'start':73.1,'end':77.4},{'start':86.5,'end':90.4}],\n  'sources':[source('https://www.audubon.org/field-guide/bird/alder-flycatcher','灰绿上体、白喉、淡眼圈，大嘴；与柳纹霸鹟外观近似，声音尤其重要；典型声句为带沙哑音的fee-bee-o。'),source('https://www.audubon.org/field-guide/bird/willow-flycatcher','柳纹霸鹟外形相似，典型fitz-bew声句用于排除仅凭外形武断识别。'),source('https://www.oiseaux.net/birds/alder.flycatcher.html','学名和中文别名核对：桤木/赤杨对应Alder；该条目也列出独立参考录音。'),source('https://xeno-canto.org/13755/download','成功下载Andrew Spencer的独立桤木纹霸鹟鸣唱参考，手工比较声句形状与下降尾音，不作原片声源匹配。')],\n  'identification_notes':'形态和声谱相互支持；发声时的抬头张喙也可见。中文“桤木纹霸鹟”作为单一物种名实际念出。'},\n {'chinese_name':'长嘴沼泽鹪鹩（暂定）','english_name':'Marsh Wren (tentative)','scientific_name':'Cistothorus palustris','confidence':74,\n  'visual_evidence':[e(101.1,105.0,'水生植物密集，镜头移动并明显失焦；没有足够清楚的鸟体羽色证据。'),e(107.2,119.2,'仅有茎叶间模糊、被遮的局部轮廓；无法可靠确认眉纹、背部纹路或具体身体动作，旁白已保守说明。')],\n  'audio_evidence':[e(101.3,104.5,'声谱有约2—6千赫的多种短音，部分窄带、部分较宽，反复起落。'),e(110.0,116.5,'短音与密集颤动、较宽频的声簇交替，符合沼泽鹪鹩类液态短音接急促颤声的声型；与一份独立Marsh Wren参考手工比较，但因无直接听音且视野差，保留暂定。')],\n  'original_sound_windows':[{'start':101.1,'end':104.6},{'start':109.1,'end':111.6},{'start':120.7,'end':123.6}],\n  'sources':[source('https://www.audubon.org/field-guide/bird/marsh-wren','沼泽密植被环境、隐蔽活动及液态音转机械颤声的声型；不能据资料宣称画面已显示翘尾或造巢。'),source('https://www.oiseaux.net/birds/marsh.wren.html','核对中文名“长嘴沼泽鹪鹩”、英文名及拉丁名，取得独立参考录音目录。'),source('https://xeno-canto.org/14862/download','成功下载Andrew Spencer的独立Marsh Wren鸣唱参考，查看短音和颤音声簇的声谱结构；未用于混音。')],\n  'identification_notes':'受失焦和遮挡限制，主要依据声音结构与植被环境作单一暂定判断；实际旁白中有“暂按”限定，不枚举候选。'},\n {'chinese_name':'黑脚信天翁','english_name':'Black-footed Albatross','scientific_name':'Phoebastria nigripes','confidence':99,\n  'visual_evidence':[e(124.8,133.5,'雏鸟通体褐色绒羽，深色钩形喙，张嘴并伸长颈部；不能只靠绒羽区分所有信天翁雏鸟，需结合后面成鸟。'),e(138.5,146.8,'同场成鸟通体深褐色，嘴基周围较浅；与旁边雏鸟接近，雏鸟将嘴伸向成鸟。'),e(148.0,155.5,'成鸟俯头，双方喙部紧密接触，呈亲鸟反刍喂食常见姿势；未能看清具体食物或转移的量，旁白没有凭空指认食物种类。')],\n  'audio_evidence':[e(132.3,137.9,'原声有较低的谐波声段及较高的细窄音线，局部伴有短促脉冲；附近有多只鸟，无法把所有背景声都归给雏鸟。'),e(141.0,146.5,'声谱仍见不同音高的短声，画中成鸟与雏鸟互动；此处未宣称某一种叫声必然导致喂食，也未配造鸟叫。')],\n  'original_sound_windows':[{'start':124.3,'end':126.9},{'start':132.3,'end':137.9},{'start':156.0,'end':158.2}],\n  'sources':[source('https://www.audubon.org/field-guide/bird/black-footed-albatross','成鸟深褐色、嘴基有白色、嘴足深色；双亲以反刍方式喂养雏鸟。用于形态与喂食姿势解释。')],\n  'identification_notes':'种的确定主要由同场成鸟的全深褐羽色及浅嘴基支持；未仅凭雏鸟绒羽给种名。'},\n {'chinese_name':'黑背信天翁','english_name':'Laysan Albatross','scientific_name':'Phoebastria immutabilis','confidence':99,\n  'visual_evidence':[e(159.0,166.5,'白色头颈和腹部、黑褐色背与上翼，眼周有深色区域；前景两只成鸟相对。'),e(168.5,179.5,'相向的个体先后摆头、低头、将喙靠近或相触，动作反复，符合该种展示动作。'),e(180.5,184.8,'一只伸颈张嘴，另一只调整朝向；群落内还有其他个体，不据此判断性别或断定已组成繁殖配对。')],\n  'audio_evidence':[e(168.0,171.5,'声谱可见谐波密集的有声段与短促脉冲段交替，邻近画面有伸颈张喙及近距离喙部互动；支持鸣声和喙击声的类型判断。'),e(180.5,184.8,'有声段与急促脉冲仍出现；背景也有其他鸟，不能将每个声响严格指派给前景某一个体。')],\n  'original_sound_windows':[{'start':158.8,'end':161.5},{'start':168.0,'end':171.5}],\n  'sources':[source('https://animaldiversity.org/accounts/Phoebastria_immutabilis/','背翼黑褐色、与全深色黑脚信天翁的区别；复杂求偶展示含触喙、摆姿势、朝天伸喙和鸣叫，交流兼具视觉、触觉和声音。')],\n  'identification_notes':'黑白羽色和眼周暗色特征清楚；将相互配合的姿态解释为求偶展示，不推断个体性别。'}\n]\nfor ch,inf in zip(chapters,info):\n inf.update(ch)\n inf['narration']=[{'start':x['start'],'end':x['end'],'text':x['text']} for x in plan if x['segment']==ch['segment']]\nresult={\n'audio_analysis_method':'没有原生听音工具，未亲耳试听输入、独立参考或合成旁白。实际用ffmpeg解码原声为48 kHz立体声PCM，读取采样、计算峰值和RMS；为观察原声结构，立体声求均值并重采样至16 kHz，用SciPy STFT（512点窗、448点重叠）生成0—7 kHz声谱，另以1024点窗查看局部。人工查看声谱、代表帧、逐帧开喙/抬头动作，并手工比较允许的独立参考声谱。没有使用ASR、鸟声识别模型、其他识别模型、子代理、反向搜图或音视频指纹。声谱能支持重复节奏、音长、频率和宽窄带结构，不能等同主观听感或可靠地逐声判断画外来源。物种及声音功能的不足分别在段内说明。配音用edge-tts 7.3.1的zh-CN-XiaoxiaoNeural生成原创文字；仅发送文字，未上传输入音视频。旁白自然度没有人工听审，采用稳定音色和轻度原生语速设置，并检查波形、时长、峰值和服务返回的词级时间戳。',\n'duration':185.46666666666667,'timebase':'完整成片秒数；画面30 fps，共5564帧；各章边界使用所给chapters.json。',\n'segments':info}\n(R/'segments.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')\nprint('segments.json saved')\nPY\npython3 /workspace/scratch/write_segments.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "segments.json saved\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 90,
+        "purpose": "记录选型、依赖与复现说明（含命令示例）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/write_research_log.py <<'PY'\nimport json,glob,time,platform,os\nfrom pathlib import Path\nS=Path('/workspace/scratch');R=Path('/workspace/submission')\nentries=[]\ndef add(url,status,purpose,outcome,**extra):entries.append(dict(url=url,status=status,purpose=purpose,outcome=outcome,**extra))\n# Requests that preceded the structured downloader. Statuses come from actual tool outputs.\nadd('https://www.google.com/search?q=common+nightingale+thrush+nightingale+identification+rufous+tail',403,'形态候选独立检索','Access denied by source-material policy；放弃，未使用搜索结果。')\nadd('https://www.audubon.org',200,'连通性HEAD检查','仅确认允许网站可连接，不作物种资料。')\nfor name in ['nightingale','reed-warbler','cettis-warbler','savis-warbler','grasshopper-warbler','marsh-warbler']:\n add('https://www.rspb.org.uk/birds-and-wildlife/'+name,200,'独立物种资料','已成功读取正文；最终仅引用segments.json列出的相关事实。')\nadd('https://www.rspb.org.uk/birds-and-wildlife/great-reed-warbler',200,'候选鉴别','HTTP 200但正文是404错误页，未作资料引用。')\nfor name in ['willow-flycatcher','eastern-wood-pewee','black-footed-albatross','alder-flycatcher','eastern-phoebe','marsh-wren']:\n add('https://www.audubon.org/field-guide/bird/'+name,200,'独立物种鉴别资料','成功读取正文；使用与外观、声型、互动相关事实，未跟随外部受限网站链接。')\nadd('https://www.audubon.org/field-guide/bird/laysan-albatross',403,'独立物种资料','Access denied by source-material policy；放弃该页面，未访问其媒体或替代地址。')\nfor name in ['nightingale','cettis-warbler']:\n add('https://www.birdfact.com/birds/'+name,429,'独立物种资料','仅出现Vercel安全验证，未成功阅读物种正文，未引用。')\nadd('https://www.bto.org/understanding-birds/species-focus/nightingale',404,'独立物种资料','404，未使用。')\nadd('https://www.birdguides.com/articles/identification/thrush-nightingale-and-nightingale/',403,'独立鉴别资料','Cloudflare验证页，未成功阅读正文，未引用。')\nadd('https://www.bird-sounds.net/nightingale/',404,'寻找独立物种参考','404，未使用。')\nfor name in ['nightingale','cettis-warbler']:\n add('https://www.british-birdsongs.uk/'+name+'/',200,'独立物种资料及音频目录','已读物种与音频目录；不使用其识别功能。')\nfor name in ['Thrush_Nightingale','Common_Nightingale','Cetti%27s_Warbler']:\n add('https://www.birdforum.net/opus/'+name,403,'独立物种资料','Cloudflare验证页，未成功阅读正文，未使用。')\nfor name in ['Cettia+cetti','Empidonax+alnorum','Cistothorus+palustris']:\n add('https://www.bing.com/search?q='+name+'+%E4%B8%AD%E6%96%87%E5%90%8D',200,'查询中文标准名','返回与鸟类不相关的结果；未引用任何摘要或链接。')\n add('https://avibase.bsc-eoc.org/search.jsp?lang=ZH&searchstr='+name,403,'查询中文标准名','Cloudflare验证页；未读取正文，未引用。')\nfor name in ['cettis-warbler','thrush-nightingale','great-reed-warbler','alder-flycatcher']:\n add('https://animalia.bio/'+name,403,'独立物种资料','Cloudflare验证页，未读到物种正文，未使用。')\nfor tail in ['eBook.php?specieID=1317&compareSpecieID=1298','eBook.php']:\n add('https://www.birdid.no/bird/'+tail,200,'查找独立鸟类手册','只返回鸟书导航，无具体候选资料，未作依据；未调用识别模型或测验。')\nfor name in ['cetti.s.warbler','thrush.nightingale','great.reed.warbler','common.nightingale','alder.flycatcher','marsh.wren','common.reed.warbler']:\n add('https://www.oiseaux.net/birds/'+name+'.html',200,'独立物种正文与参考录音目录','成功读取正文或目录；仅跟随明确选中的允许独立录音，不追溯输入来源，不跟随受限域名链接。')\nfor name in ['Phoebastria_immutabilis','Luscinia_megarhynchos']:\n add('https://animaldiversity.org/accounts/'+name+'/',200,'独立物种资料','成功读取正文；黑背信天翁外观与求偶动作、夜莺形态等事实核对。')\n# Preserve actual machine-readable results, including timeouts and policy denials.\nraw_logs={}\nfor name in ['ref_batch.json','soundpages.json','soundpages2.json','extra_refs.json','reference_download_log.json','reference_download_log2.json','reference_retry_log.json','image_ref_log.json','rspb_audio_log.json','independent_refs_log.json','reed_reference_log.json']:\n p=S/name\n if p.exists():\n  data=json.loads(p.read_text());raw_logs[name]=data\n  items=data if isinstance(data,list) else [data]\n  for item in items:\n   if not isinstance(item,dict) or 'url' not in item:continue\n   d={k:v for k,v in item.items() if k not in ['text','data']}\n   d['purpose']='独立参考资料或录音的实际访问'\n   d['outcome']=('成功读取；录音只做人工声谱比较，未混入成片。' if d.get('status')==200 else '失败、超时或被拦截；未作为成功阅读/听过的资料。')\n   entries.append(d)\n# Extra failed audio request recorded in terminal; no alternate copy was sought.\nadd('https://www.british-birdsongs.uk/birdmedia/858/cettis-warbler-song-3391.mp3','ProxyError RemoteDisconnected','独立Cetti录音','未取得媒体，放弃；未声称听过。')\nsoftware=[\n {'action':'pip install edge-tts matplotlib','result':'matplotlib不可用，整个安装失败；后续未使用matplotlib。'},\n {'action':'python3 -m pip install --target /workspace/site-packages edge-tts','result':'成功，edge-tts 7.3.1；依赖版本见requirements-lock.txt。'},\n {'url':'https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf','status':403,'result':'被素材策略拒绝；放弃该URL。'},\n {'url':'https://fonts.gstatic.com/ea/notosanssc/v1/NotoSansSC-Regular.otf','status':404,'result':'旧版字体URL不存在，未使用。'},\n {'url':'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&display=swap','status':200,'result':'成功读取CSS，随后按CSS字体URL下载。'},\n {'url':'https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf','status':200,'bytes':10540644,'result':'最终字幕使用的Noto Sans SC字体。'},\n {'url':'https://deb.debian.org/debian/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20220127+repack1-1_all.deb','result':'并行尝试的字体包下载超时，未使用。'},\n {'action':'apt-get update with explicit HTTP/HTTPS proxy','result':'系统无apt源/目录，失败；没有安装任何apt依赖。'},\n {'action':'First RSPB audio URL extraction','result':'最初正则误将页面中多段转义JSON连成一个无效长URL，收到403后停止；修正解析后只请求页面列出的独立XC40233音频原URL并成功。保留此调试说明，不把最初失败算作成功访问。'}\n]\nlog={\n 'purpose':'独立完成六段鸟类中文科普视频；审计工具、联网访问、失败及实际使用的识别依据。',\n 'network':'requests默认读取HTTP_PROXY/HTTPS_PROXY/ALL_PROXY；pip/curl读取环境变量；edge-tts明确传入环境HTTPS_PROXY。未设置直连或绕过黑名单。网页中的外部受限链接未跟随。',\n 'limitations':'没有原生听音工具，未亲耳试听。只读取音频采样、查看声谱，并核对可见动作；未调用任何识别模型或子代理。没有发现并使用输入原素材或历史答案；政策拒绝的资源一律未引用内容。',\n 'tts':{'tool':'edge-tts','version':'7.3.1','service':'Microsoft Edge online speech synthesis','voice':'zh-CN-XiaoxiaoNeural','native_rate':'-8%','pitch':'+0Hz','volume':'+0%','boundary':'WordBoundary','transport':'HTTPS/WSS via supplied standard proxy','test_script':'/workspace/scratch/test_tts.py','production_script':'generate_narration.py','payload':'Only independently authored Mandarin text; no input video or original sound uploaded.','credentials':'No host/experiment/commercial keys used.','result':'16 actual speech clips successfully synthesized; exact request text, durations and returned token timestamps retained. No post-synthesis tempo change.'},\n 'references':entries,'software_setup':software,\n 'reference_policy':'Downloaded reference audio is used only for manual spectrogram inspection. Final mix reads only original.wav and narration.wav. Failed/denied reference media was abandoned, never replaced by a mirror or cache. Ordinary retry once after a read timeout retained the same reference URL; RemoteDisconnected failures were abandoned.',\n 'raw_result_files':list(raw_logs),\n 'log_scope':'Summarizes actual terminal calls, coalescing repeated reads of the same article. Optional hashes are present only where actually calculated. Source citation facts are limited to successful body reads in segments.json.',\n 'created_unix':time.time()}\n(R/'research_log.json').write_text(json.dumps(log,ensure_ascii=False,indent=2),encoding='utf-8')\n# Retain the original JSON network records for independent checking.\nA=R/'audit';A.mkdir(exist_ok=True)\nfor name,data in raw_logs.items():(A/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')\nprint('research log:',len(entries),'entries')\nPY\npython3 /workspace/scratch/write_research_log.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "research log: 90 entries\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 91,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 -m pip freeze --path /workspace/site-packages > /workspace/submission/requirements-lock.txt; python3 - <<'PY'\nimport platform,importlib.metadata,subprocess,json\nfrom pathlib import Path\nr={'python':platform.python_version(),'ffmpeg':subprocess.check_output(['ffmpeg','-version'],text=True).splitlines()[0],'libraries':{x:importlib.metadata.version(x) for x in ['edge-tts','numpy','scipy','Pillow','requests','beautifulsoup4']}}\nPath('/workspace/submission/environment.json').write_text(json.dumps(r,indent=2))\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 92,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\np='/workspace/scratch/write_research_log.py'\ns=open(p).read();s=s.replace(\\\"for name,data in raw_logs.items():(A/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')\\\", \\\"for name,data in raw_logs.items():\\\\n def clean(v):\\\\n  if isinstance(v,dict):return {k:clean(x) for k,x in v.items() if k not in ['text','data']}\\\\n  if isinstance(v,list):return [clean(x) for x in v]\\\\n  return v\\\\n (A/name).write_text(json.dumps(clean(data),ensure_ascii=False,indent=2),encoding='utf-8')\\\")\nopen(p,'w').write(s)\nPY\npython3 /workspace/scratch/write_research_log.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "research log: 90 entries\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 96,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"kill 6457; python3 - <<'PY'\np='/workspace/scratch/write_research_log.py'\ns=open(p).read().replace('并行尝试的字体包下载超时，未使用。','并行尝试的字体包下载持续过久；取得Google字体后终止该下载，未使用。');open(p,'w').write(s)\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 97,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'mkdir -p /workspace/submission/voice_assets /workspace/submission/fonts; cp /workspace/scratch/tts/*.mp3 /workspace/scratch/tts/*.json /workspace/submission/voice_assets/; cp /workspace/scratch/NotoSansSC.ttf /workspace/submission/fonts/; cp /workspace/scratch/source_pts_summary.json /workspace/submission/audit/; python3 /workspace/scratch/write_research_log.py; cat /workspace/submission/environment.json; cat /workspace/submission/requirements-lock.txt'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "research log: 90 entries\n{\n  \"python\": \"3.12.3\",\n  \"ffmpeg\": \"ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\",\n  \"libraries\": {\n    \"edge-tts\": \"7.3.1\",\n    \"numpy\": \"1.26.4\",\n    \"scipy\": \"1.11.4\",\n    \"Pillow\": \"10.2.0\",\n    \"requests\": \"2.31.0\",\n    \"beautifulsoup4\": \"4.12.3\"\n  }\n}aiohappyeyeballs==2.7.1\naiohttp==3.14.5\naiosignal==1.4.0\nattrs==26.1.0\ncertifi==2026.10.23\nedge-tts==7.3.1\nfrozenlist==1.8.0\nidna==3.20\nmultidict==7.2.1\npropcache==0.5.4\ntabulate==0.10.0\ntyping_extensions==4.16.0\nyarl==1.25.1\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 98,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\np='/workspace/submission/build_media.py';s=open(p).read().replace('DURATION=185.46666666666667','DURATION=185.5').replace('atrim=end=185.466666666667','atrim=end=185.5');open(p,'w').write(s)\np='/workspace/submission/render_video.py';s=open(p).read().replace(\\\"'-frames:v','5564'\\\",\\\"'-frames:v','5565'\\\").replace(\\\"'-t','185.466666666667'\\\",\\\"'-t','185.5'\\\");open(p,'w').write(s)\np='/workspace/scratch/write_segments.py';s=open(p).read().replace(\\\"'duration':185.46666666666667\\\", \\\"'duration':185.5\\\").replace('共5564帧；各章边界使用所给chapters.json。','共5565帧；前五个章界保持所给chapters.json，末尾按完整输入最后一帧延至185.500秒（与输入容器时长差约4毫秒）。')\ns=s.replace(\\\"inf.update(ch)\\\\n inf['narration']\\\", \\\"inf.update(ch)\\\\n if ch['segment']==6:\\\\n  inf['provided_chapter_end']=ch['end'];inf['end']=185.5\\\\n inf['narration']\\\")\nopen(p,'w').write(s)\nPY\npython3 /workspace/submission/build_media.py\npython3 /workspace/scratch/write_segments.py\npython3 /workspace/submission/render_video.py > /workspace/scratch/render.log 2>&1\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Narration, subtitles, and mix ready. 38 captions\nsegments.json saved\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 99,
+        "purpose": "记录选型、依赖与复现说明（含命令示例）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/README.md <<'MD'\n交付文件\n\n- \"'`final.mp4`：完整六段画面，H.264、1280×720、30 fps；AAC 48 kHz立体声；烧录与SRT相同的中文字幕。\n- `narration.wav`：与成片对齐的48 kHz、24-bit PCM立体声独立旁白；无旁白处为零采样静音。\n- `subtitles.srt`：UTF-8，按语音服务返回的词级时间戳对齐；字幕不包含未念出的物种答案。\n- `segments.json`：逐段中英文名、学名、置信度、画面与原声证据、旁白时间、原声窗口及成功访问的引用。\n- `research_log.json`、`audit/`：实际工具选择、独立资料访问、失败及放弃的来源。\n\n配音与依赖\n\n实际使用 Python 3.12.3、edge-tts 7.3.1 和微软 Edge 在线语音合成接口，音色 `zh-CN-XiaoxiaoNeural`，原生 `rate=-8%`、`pitch=+0Hz`、`volume=+0%`。只发送自行编写的中文文本；没有上传输入视频或原始音轨，没有使用商业密钥或宿主凭据。16段语音全部实际生成，原始MP3及返回的词级时间戳保存在 `voice_assets/`。没有对合成语音进行后期加速、拉伸或改变音高。\n\n安装命令为 `python3 -m pip install --target /workspace/site-packages edge-tts`。实际安装的全部依赖及版本见 `requirements-lock.txt`，预置科学计算库和FFmpeg版本见 `environment.json`。分析与排版使用预置 NumPy、SciPy、Pillow、requests、BeautifulSoup；没有使用matplotlib。字体为Google Fonts正常分发的 Noto Sans SC，已保存在 `fonts/`。\n\n`generate_narration.py` 是实际配音调用脚本，读取 `narration_plan.json`，明确使用环境变量提供的HTTPS代理；`narration_timing.json` 为真实音频的长度、位置和词级时间文件索引。`build_media.py` 是实际时间线、字幕及混音实现；`render_video.py` 是实际字幕烧录与编码实现，`render_command.json` 保存最终命令。\n\n在本环境复现：运行 `python3 generate_narration.py`；确保 `/workspace/scratch/original.wav` 是由 `ffmpeg -i /candidate/birds_source.mp4 -vn -c:a pcm_s16le /workspace/scratch/original.wav` 解码得到的原始音轨，并将 `fonts/NotoSansSC.ttf` 放到 `/workspace/scratch/NotoSansSC.ttf`；再运行 `python3 build_media.py`、`python3 render_video.py`。脚本中的绝对目录对应本次任务环境。\n\n声音和画面的处理\n\n保留原始立体声的时间位置，只施加逐章增益、旁白期间的平滑音量避让和瞬时峰值限制。旁白目标综合响度为−18.5 LUFS；原声窗口及增益参数见 `mix_settings.json`。不加音乐，不使用参考鸟叫，不移动、复制或替换任何原始叫声。每章安排多处至少2秒的无旁白原声窗口，已检查其中独立旁白采样精确为零。\n\n输入视频有5559个解码帧及少量章间时间戳间隙，视频流首帧PTS约0.021秒，末帧PTS约185.463秒。按要求转为30 fps恒定帧率时，正常转码需要在时间戳空隙重复既有帧；最终共5565帧，保留全部输入帧及最后一帧，未改变播放速度或添加静态替代画面。成片185.500秒，与输入容器185.504秒差约4毫秒。前五个章界按所给边界保留；最后一章结束按完整末帧延至185.500秒。`audit/source_pts_summary.json` 保留技术核对数据，这些数据仅用于完整性与编码，不用于识别鸟种。\n\n分析限制\n\n本环境没有原生听音工具，未亲耳试听输入、参考录音或合成旁白。实际读取PCM采样，计算RMS和峰值，查看整体与局部声谱，结合画面代表帧和开喙动作判断。独立参考只做手工声谱观察，没有ASR、鸟声识别模型、其他识别模型、子代理、反向搜图或音视频指纹。配音听感没有人工听审；通过稳定音色、原生语速、语音时长、波形和词级时间戳作有限质量核验。\n\n第2、4段因鸟体不可见或严重遮挡，实际旁白明确给出单一暂定识别；不能确定每一声的画外归属。其余声音功能和食物不可见之处也分别限定，不将一般习性当作片中确定发生的事件。参考资料只支持其明确记载的事实，失败网页和未取得的媒体不列为成功阅读或听过的依据。\nMD\npython3 - <<'\"'PY'\nfrom pathlib import Path\nimport shutil\nS=Path('/workspace/scratch');A=Path('/workspace/submission/audit')\nfor p in [S/'analyze.py',S/'reference_specs.py',S/'write_segments.py',S/'write_research_log.py',S/'voice_loudness_pass1.json',S/'render.log']:\n if p.exists():shutil.copy2(p,A/p.name)\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "sol/tool_trajectory.json"
+      },
+      {
+        "sequence": 101,
+        "purpose": "编写或运行自制配音/制作代码（见完整命令）",
+        "command": "/usr/bin/bash -lc \"cat > /workspace/submission/validate_submission.py <<'PY'\n#\"'!/usr/bin/env python3\n\"\"\"Technical validation, with no recognition model or subjective hearing claim.\"\"\"\nimport json,subprocess,re,hashlib,time\nfrom pathlib import Path\nimport numpy as np\nfrom scipy.io import wavfile\nfrom PIL import Image\nR=Path('\"'/workspace/submission');S=Path('/workspace/scratch');report={'checked_unix':time.time(),'subjective_audio_review':False,'limitations':'No native listening tool; no claim of human audition or model-based audio recognition.'}\ndef probe(p):return json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]))\nsource=probe('/candidate/birds_source.mp4');final=probe(R/'final.mp4');narr=probe(R/'narration.wav')\nvs=next(s for s in final['streams'] if s['codec_type']=='video');aud=next(s for s in final['streams'] if s['codec_type']=='audio');ns=narr['streams'][0]\nassert vs['codec_name']=='h264' and int(vs['width'])>=1280 and int(vs['height'])>=720 and vs['r_frame_rate']=='30/1'\nassert aud['codec_name']=='aac' and aud['sample_rate']=='48000'\nassert ns['codec_name'].startswith('pcm_') and ns['sample_rate']=='48000'\nduration=float(final['format']['duration']);diff=abs(duration-float(source['format']['duration']))\nassert diff<=.5 and abs(duration-float(narr['format']['duration']))<.0001\nreport['format']={'video_codec':vs['codec_name'],'width':vs['width'],'height':vs['height'],'fps':vs['r_frame_rate'],'frames':int(vs['nb_frames']),'audio_codec':aud['codec_name'],'audio_rate':aud['sample_rate'],'narration_codec':ns['codec_name'],'narration_rate':ns['sample_rate'],'duration':duration,'input_duration':float(source['format']['duration']),'duration_difference':diff}\n# Fully decode once. Error output must be empty.\np=subprocess.run(['ffmpeg','-v','error','-i',str(R/'final.mp4'),'-map','0:v','-map','0:a','-f','null','-'],capture_output=True,text=True)\nassert p.returncode==0 and not p.stderr.strip(),p.stderr\nreport['complete_decode']='passed, no reported errors'\nsubprocess.run(['ffmpeg','-v','error','-y','-i',str(R/'final.mp4'),'-vn','-c:a','pcm_s24le',str(S/'final_decoded.wav')],check=True)\nsr,n=wavfile.read(R/'narration.wav');assert sr==48000\nn=n.astype(np.float64)/(2**31 if n.dtype==np.int32 else 32768) if False else n.astype(np.float64)/2147483648\nsr,o=wavfile.read(S/'original.wav');o=o.astype(np.float64)/32768\nsr,m=wavfile.read(S/'mixed.wav');m=m.astype(np.float64)/2147483648\nsr,f=wavfile.read(S/'final_decoded.wav');f=f.astype(np.float64)/2147483648\nsegments=json.loads((R/'segments.json').read_text())['segments'];plan=json.loads((R/'narration_timing.json').read_text())\nwindows=[]\nfor seg in segments:\n assert seg['narration']\n for w in seg['original_sound_windows']:\n  a=round(w['start']*sr);b=round(w['end']*sr);assert w['end']-w['start']>=2 and np.max(np.abs(n[a:b]))==0\n  assert np.sqrt(np.mean(o[a:b]**2))>0 and np.sqrt(np.mean(f[a:b]**2))>0\n  # Within a pure original window the mix must remain correlated to the source.\n  z=o[a:b].reshape(-1);y=f[a:b].reshape(-1);corr=float(np.corrcoef(z,y)[0,1])\n  expected=m[a:b].reshape(-1);encoded_corr=float(np.corrcoef(expected,y)[0,1])\n  assert encoded_corr>.95,(seg['segment'],w,encoded_corr)\n  windows.append({'segment':seg['segment'],**w,'narration_max_abs':float(np.max(abs(n[a:b]))),'source_rms':float(np.sqrt(np.mean(z*z))),'final_rms':float(np.sqrt(np.mean(y*y))),'source_final_correlation':corr,'pcm_mix_aac_correlation':encoded_corr})\nreport['original_sound_windows']=windows\nreport['narration']={'samples':len(n),'channels':n.shape[1],'peak':float(abs(n).max()),'rms':float(np.sqrt(np.mean(n*n))),'utterances':len(plan),'no_tempo_processing':True}\nassert all(i['end']<=i['latest_end'] for i in plan)\n# Captions come from exactly the same timing data used to build the ASS burn.\nsubs=json.loads((R/'subtitle_timing.json').read_text());srt=(R/'subtitles.srt').read_text(encoding='utf-8');ass=(R/'subtitles.ass').read_text(encoding='utf-8')\nassert len(re.findall(r' --> ',srt))==len(subs)==ass.count('Dialogue:')\nfor i,x in enumerate(subs):\n assert 0<=x['start']<x['end']<=duration\n assert x['text'] in srt and x['text'].replace('\\\\n',r'\\\\N') in ass\n if i:assert subs[i-1]['end']<=x['start']\nreport['subtitles']={'captions':len(subs),'UTF8':True,'same_text_used_for_burn':True,'word_timestamps_used':True,'visual_review':'Representative frames from all six chapters inspected. Font size increased to 46 ASS units for legibility; subtitles at bottom clear of principal bird bodies.'}\n# Compare the final picture to the actual last source picture. No caption exists here.\nfor tag,pth,index in [('source','/candidate/birds_source.mp4',5558),('output',str(R/'final.mp4'),5564)]:\n subprocess.run(['ffmpeg','-v','error','-y','-i',pth,'-vf',f'select=eq(n\\\\\\\\,{index})','-fps_mode','passthrough','-frames:v','1',str(S/f'last_{tag}.png')],check=True)\na=np.asarray(Image.open(S/'last_source.png')).astype(float);b=np.asarray(Image.open(S/'last_output.png')).astype(float)\nmae=float(np.mean(abs(a-b)));mse=float(np.mean((a-b)**2));psnr=float(10*np.log10(255**2/mse))\nassert mae<6,(mae,psnr)\nreport['last_frame']={'source_frame_index':5558,'output_frame_index':5564,'mean_absolute_pixel_error':mae,'PSNR_dB':psnr,'complete_last_source_frame_preserved':True}\nreport['files']={p.name:{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in [R/'final.mp4',R/'narration.wav',R/'subtitles.srt',R/'segments.json']}\nreport['result']='all programmatic delivery checks passed'\n(R/'validation_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))\nprint(json.dumps({'result':report['result'],'format':report['format'],'windows_checked':len(windows),'last_frame':report['last_frame']},ensure_ascii=False,indent=2))\nPY\npython3 /workspace/submission/validate_submission.py\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\n  \"result\": \"all programmatic delivery checks passed\",\n  \"format\": {\n    \"video_codec\": \"h264\",\n    \"width\": 1280,\n    \"height\": 720,\n    \"fps\": \"30/1\",\n    \"frames\": 5565,\n    \"audio_codec\": \"aac\",\n    \"audio_rate\": \"48000\",\n    \"narration_codec\": \"pcm_s24le\",\n    \"narration_rate\": \"48000\",\n    \"duration\": 185.5,\n    \"input_duration\": 185.504,\n    \"duration_difference\": 0.003999999999990678\n  },\n  \"windows_checked\": 16,\n  \"last_frame\": {\n    \"source_frame_index\": 5558,\n    \"output_frame_index\": 5564,\n    \"mean_absolute_pixel_error\": 0.8972529658564815,\n    \"PSNR_dB\": 43.82993086866335,\n    \"complete_last_source_frame_preserved\": true\n  }\n}\n",
+        "full_output_in": "sol/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/sol/audit/write_research_log.py",
+        "sha256": "6c939e2b172485fffb31ef818bd3e40a519f6abe9b87663dd4d598c60f1d382a",
+        "relevant_lines": [
+          {
+            "line": 51,
+            "text": " {'action':'pip install edge-tts matplotlib','result':'matplotlib不可用，整个安装失败；后续未使用matplotlib。'},"
+          },
+          {
+            "line": 52,
+            "text": " {'action':'python3 -m pip install --target /workspace/site-packages edge-tts','result':'成功，edge-tts 7.3.1；依赖版本见requirements-lock.txt。'},"
+          },
+          {
+            "line": 58,
+            "text": " {'action':'apt-get update with explicit HTTP/HTTPS proxy','result':'系统无apt源/目录，失败；没有安装任何apt依赖。'},"
+          },
+          {
+            "line": 63,
+            "text": " 'network':'requests默认读取HTTP_PROXY/HTTPS_PROXY/ALL_PROXY；pip/curl读取环境变量；edge-tts明确传入环境HTTPS_PROXY。未设置直连或绕过黑名单。网页中的外部受限链接未跟随。',"
+          },
+          {
+            "line": 65,
+            "text": " 'tts':{'tool':'edge-tts','version':'7.3.1','service':'Microsoft Edge online speech synthesis','voice':'zh-CN-XiaoxiaoNeural','native_rate':'-8%','pitch':'+0Hz','volume':'+0%','boundary':'WordBoundary','transport':'HTTPS/WSS via supplied standard proxy','test_script':'/workspace/scratch/test_tts.py','production_script':'generate_narration.py','payload':'Only independently authored Mandarin text; no input video or original sound uploaded.','credentials':'No host/experiment/commercial keys used.','result':'16 actual speech clips successfully synthesized; exact request text, durations and returned token timestamps retained. No post-synthesis tempo change.'},"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/audit/write_segments.py",
+        "sha256": "917b3fa704a86c99113dce65a5114c32739704292d9f9cea8a28dbe8e7cb04d5",
+        "relevant_lines": [
+          {
+            "line": 52,
+            "text": "'audio_analysis_method':'没有原生听音工具，未亲耳试听输入、独立参考或合成旁白。实际用ffmpeg解码原声为48 kHz立体声PCM，读取采样、计算峰值和RMS；为观察原声结构，立体声求均值并重采样至16 kHz，用SciPy STFT（512点窗、448点重叠）生成0—7 kHz声谱，另以1024点窗查看局部。人工查看声谱、代表帧、逐帧开喙/抬头动作，并手工比较允许的独立参考声谱。没有使用ASR、鸟声识别模型、其他识别模型、子代理、反向搜图或音视频指纹。声谱能支持重复节奏、音长、频率和宽窄带结构，不能等同主观听感或可靠地逐声判断画外来源。物种及声音功能的不足分别在段内说明。配音用edge-tts 7.3.1的zh-CN-XiaoxiaoNeural生成原创文字；仅发送文字，未上传输入音视频。旁白自然度没有人工听审，采用稳定音色和轻度原生语速设置，并检查波形、时长、峰值和服务返回的词级时间戳。',"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/environment.json",
+        "sha256": "d5c42dfdf4a4d9dce661d9918667fcc34e2ff1cc71bb65a5131eacf0dee70caf",
+        "relevant_lines": [
+          {
+            "line": 5,
+            "text": "    \"edge-tts\": \"7.3.1\","
+          }
+        ]
+      },
+      {
+        "path": "results/sol/generate_narration.py",
+        "sha256": "bc5fba36e9bfc96b588de57a2cf3c7c5a0a07a5fc674640318dc5e95fb36851e",
+        "relevant_lines": [
+          {
+            "line": 2,
+            "text": "\"\"\"Generate original Mandarin narration with edge-tts, using ONLY authored text."
+          },
+          {
+            "line": 3,
+            "text": "No input video/audio is transmitted. All network uses the environment HTTP proxy."
+          },
+          {
+            "line": 8,
+            "text": "import edge_tts"
+          },
+          {
+            "line": 10,
+            "text": "VOICE='zh-CN-XiaoxiaoNeural';RATE='-8%'"
+          },
+          {
+            "line": 22,
+            "text": "      comm=edge_tts.Communicate(item['text'],voice=VOICE,rate=RATE,volume='+0%',pitch='+0Hz',boundary='WordBoundary',proxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY'),connect_timeout=30,receive_timeout=120)"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/README.md",
+        "sha256": "a3204058b247a207e4c7be9befdfc54de246e7cb7b3113158e58244bcb4208f2",
+        "relevant_lines": [
+          {
+            "line": 11,
+            "text": "实际使用 Python 3.12.3、edge-tts 7.3.1 和微软 Edge 在线语音合成接口，音色 `zh-CN-XiaoxiaoNeural`，原生 `rate=-8%`、`pitch=+0Hz`、`volume=+0%`。只发送自行编写的中文文本；没有上传输入视频或原始音轨，没有使用商业密钥或宿主凭据。16段语音全部实际生成，原始MP3及返回的词级时间戳保存在 `voice_assets/`。没有对合成语音进行后期加速、拉伸或改变音高。"
+          },
+          {
+            "line": 13,
+            "text": "安装命令为 `python3 -m pip install --target /workspace/site-packages edge-tts`。实际安装的全部依赖及版本见 `requirements-lock.txt`，预置科学计算库和FFmpeg版本见 `environment.json`。分析与排版使用预置 NumPy、SciPy、Pillow、requests、BeautifulSoup；没有使用matplotlib。字体为Google Fonts正常分发的 Noto Sans SC，已保存在 `fonts/`。"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/requirements-lock.txt",
+        "sha256": "316b13b7b0114297ac4ed7dc532edd9d9e3eea7742835adb3c043f8db1d27d8c",
+        "relevant_lines": [
+          {
+            "line": 6,
+            "text": "edge-tts==7.3.1"
+          }
+        ]
+      },
+      {
+        "path": "results/sol/research_log.json",
+        "sha256": "09bd3d929df31dd2f0f1c685ed24d02d83ed31ac2a196d3d7228396abfa1973e",
+        "relevant_lines": [
+          {
+            "line": 3,
+            "text": "  \"network\": \"requests默认读取HTTP_PROXY/HTTPS_PROXY/ALL_PROXY；pip/curl读取环境变量；edge-tts明确传入环境HTTPS_PROXY。未设置直连或绕过黑名单。网页中的外部受限链接未跟随。\","
+          },
+          {
+            "line": 6,
+            "text": "    \"tool\": \"edge-tts\","
+          },
+          {
+            "line": 9,
+            "text": "    \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 14,
+            "text": "    \"transport\": \"HTTPS/WSS via supplied standard proxy\","
+          },
+          {
+            "line": 505,
+            "text": "      \"error\": \"HTTPSConnectionPool(host='www.british-birdsongs.uk', port=443): Max retries exceeded with url: /birdmedia/857/nightingale-call-1544.mp3 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))\","
+          },
+          {
+            "line": 511,
+            "text": "      \"error\": \"HTTPSConnectionPool(host='www.british-birdsongs.uk', port=443): Max retries exceeded with url: /birdmedia/857/nightingale-alarm-1545.mp3 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))\","
+          },
+          {
+            "line": 526,
+            "text": "      \"error\": \"HTTPSConnectionPool(host='www.bird-sounds.net', port=443): Max retries exceeded with url: /birdmedia/235/alder-flycatcher-call-song-855.mp3 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))\","
+          },
+          {
+            "line": 532,
+            "text": "      \"error\": \"HTTPSConnectionPool(host='www.bird-sounds.net', port=443): Max retries exceeded with url: /birdmedia/550/marsh-wren-call-song-1167.mp3 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))\","
+          },
+          {
+            "line": 538,
+            "text": "      \"error\": \"HTTPSConnectionPool(host='www.british-birdsongs.uk', port=443): Max retries exceeded with url: /birdmedia/142/reed-warbler-song-1917.mp3 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))\","
+          },
+          {
+            "line": 636,
+            "text": "      \"action\": \"pip install edge-tts matplotlib\","
+          },
+          {
+            "line": 640,
+            "text": "      \"action\": \"python3 -m pip install --target /workspace/site-packages edge-tts\","
+          },
+          {
+            "line": 641,
+            "text": "      \"result\": \"成功，edge-tts 7.3.1；依赖版本见requirements-lock.txt。\""
+          },
+          {
+            "line": 669,
+            "text": "      \"action\": \"apt-get update with explicit HTTP/HTTPS proxy\","
+          }
+        ]
+      },
+      {
+        "path": "results/sol/segments.json",
+        "sha256": "e6f957cf9e41a9fe870b3ed8a24ce71ac92fa03fda3d9423ba93fb10ba129a12",
+        "relevant_lines": [
+          {
+            "line": 2,
+            "text": "  \"audio_analysis_method\": \"没有原生听音工具，未亲耳试听输入、独立参考或合成旁白。实际用ffmpeg解码原声为48 kHz立体声PCM，读取采样、计算峰值和RMS；为观察原声结构，立体声求均值并重采样至16 kHz，用SciPy STFT（512点窗、448点重叠）生成0—7 kHz声谱，另以1024点窗查看局部。人工查看声谱、代表帧、逐帧开喙/抬头动作，并手工比较允许的独立参考声谱。没有使用ASR、鸟声识别模型、其他识别模型、子代理、反向搜图或音视频指纹。声谱能支持重复节奏、音长、频率和宽窄带结构，不能等同主观听感或可靠地逐声判断画外来源。物种及声音功能的不足分别在段内说明。配音用edge-tts 7.3.1的zh-CN-XiaoxiaoNeural生成原创文字；仅发送文字，未上传输入音视频。旁白自然度没有人工听审，采用稳定音色和轻度原生语速设置，并检查波形、时长、峰值和服务返回的词级时间戳。\","
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "06cf3d67c6f19aada7df11a0e1f042faee7bdebfd2ed77d15cdf63482bc2bb3e",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。"
+  }
+}

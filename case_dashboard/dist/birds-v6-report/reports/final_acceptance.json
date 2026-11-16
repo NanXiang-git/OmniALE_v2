@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "created_unix": 1794846991.8912284,
+  "checks": {
+    "frozen_inputs_runtime_and_scorer_unchanged": true,
+    "same_video_as_v3": true,
+    "judge_actual_audio_challenge": true,
+    "scoring_controls": true,
+    "source_guard_preflight": true,
+    "all_downloaded_reference_audio_no_detected_overlap": true,
+    "speech_websocket_and_audio_preflight": true,
+    "same_candidate_as_v5": true,
+    "no_package_voice_or_helper_recommendation_in_instructions": true
+  },
+  "models": {
+    "sol": {
+      "checks": {
+        "environment_preflight_passed": true,
+        "actual_model_verified": true,
+        "all_requests_high": true,
+        "within_3600_seconds_plus_5_second_shutdown_tolerance": true,
+        "sealed_answers_unchanged": true,
+        "no_infrastructure_interruption": true,
+        "no_blacklist_domain_connection": true,
+        "no_known_source_delivered": true,
+        "source_delivery_post_run_audit_passed": true,
+        "scoring_complete": true,
+        "body_formula_consistent": true,
+        "quality_formula_consistent": true,
+        "summary_matches_reviewed_result": true
+      },
+      "task_gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": true,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "video_decodes": true,
+      "narration_valid": true,
+      "score": 39.348,
+      "elapsed_seconds": 2596.6889204978943,
+      "audit_sha256": "6368ffba83e4e2f2e44df9839496689b8b5bf8a1e94440592e91b16a50e5956a",
+      "reviewed_result_sha256": "6d11105ac8de43ebb7940dca0eff0ff4eaefbf1ab5ca8e21db03d76819f4f2dd"
+    }
+  },
+  "meaning": "Experiment integrity acceptance, not task passing; original task failures remain in scores and gates.",
+  "network_limit": "Research responses inspected before delivery; speech/package infrastructure remains passthrough. Unknown derivative content is not completely excluded.",
+  "judge": {
+    "passed": true,
+    "expected": "994539",
+    "response": {
+      "heard_audio": true,
+      "digits": "994539"
+    },
+    "actual_model": "qwen3.8-omni-flash",
+    "actual_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  },
+  "browser_playback_verified": false,
+  "post_exit_sealing_recovery": {
+    "kind": "post_solver_exit_missing_sealed_parent_directory",
+    "cause": "Fresh V6 setup omitted runs/sol/sealed parent; orchestrator mkdir without parents failed after normal namespace exit.",
+    "solver_returncode": 0,
+    "solver_elapsed_seconds": 2596.6889204978943,
+    "no_model_restart": true,
+    "no_answer_edits": true,
+    "manifest_identical_before_after_move": true,
+    "file_count": 70,
+    "recovered_unix": 1794846865.6073174,
+    "solver_end_unix": 1794846682.2712445,
+    "elapsed_note": "Solver environment time is measured by namespace termination, excludes later host sealing/scoring.",
+    "original_host_orchestrator_returncode": 1
+  }
+}

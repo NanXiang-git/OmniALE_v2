@@ -1,0 +1,38 @@
+{
+  "version": "V5",
+  "previous": "V4",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "effort": "high",
+  "seconds": 3600,
+  "preserved": [
+    "input_video",
+    "truth",
+    "scoring_weights_and_gates",
+    "autonomous_narration",
+    "generic_python_environment",
+    "model_and_effort",
+    "time_limit"
+  ],
+  "changed": [
+    "explicit_XC238544_blacklist",
+    "explicit_Flickr_7245581374_blacklist",
+    "research_HTTPS_inspection",
+    "response_text_and_redirect_filter",
+    "media_waveform_filter"
+  ],
+  "old_answer_and_score_unchanged": true,
+  "fresh_solver_history": true,
+  "prior_contamination": "V4 Sol downloaded XC238544; chapter 1 matches 14.31575 seconds with absolute correlation 0.980946 after sign/gain alignment.",
+  "limits": [
+    "Pages containing blocked IDs are withheld entirely.",
+    "Inspection can alter latency.",
+    "Infrastructure passthrough is encrypted.",
+    "Unknown derivatives and strong transformations may evade matching.",
+    "One stochastic rerun cannot establish the causal effect of one reference.",
+    "Non-passthrough hosts do not support WebSocket upgrade forwarding. api.msedgeservices.com returned HTTP 101 during this run, followed by a solver WebSocket handshake failure. This changes usable TTS routes relative to V4."
+  ],
+  "strict_single_source_causal_comparison": false,
+  "observed_tts_recovery": "Solver independently switched to speech.platform.bing.com and implemented websocket-client synthesis; narration clips were generated without host hints. Earlier failed attempts still consumed time."
+}

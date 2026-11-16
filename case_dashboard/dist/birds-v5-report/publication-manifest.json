@@ -1,0 +1,828 @@
+{
+  "files": [
+    {
+      "path": "candidate/TASK.md",
+      "bytes": 8713,
+      "sha256": "d75cb65bc3a9f8613d4f6ef4c4dcf10d160d0264d4ce3e547ec0b325aca24e15",
+      "storage": "repository",
+      "deployed_sha256": "d75cb65bc3a9f8613d4f6ef4c4dcf10d160d0264d4ce3e547ec0b325aca24e15",
+      "deployed_bytes": 8713
+    },
+    {
+      "path": "candidate/birds_source.mp4",
+      "bytes": 62605681,
+      "sha256": "f72bafdc520233d255118192789a7eff694e295be4217dad404f7e98469354ce",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v3-assets-20261116/f72bafdc520233d25511-birds_source.mp4",
+      "preview": "web-media/f72bafdc520233d25511.mp4"
+    },
+    {
+      "path": "candidate/chapters.json",
+      "bytes": 570,
+      "sha256": "fc25db98479483cedd7380a3c02eba6b2eaa38845ffb8321bd9b29099aa46252",
+      "storage": "repository",
+      "deployed_sha256": "fc25db98479483cedd7380a3c02eba6b2eaa38845ffb8321bd9b29099aa46252",
+      "deployed_bytes": 570
+    },
+    {
+      "path": "candidate_package.zip",
+      "bytes": 62435981,
+      "sha256": "c1927326a0da21250a50578536e2f77d9328dc9b1da05ac5cc1024dea36ebbf1",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v5-assets-20261116/c1927326a0da21250a50-candidate_package.zip"
+    },
+    {
+      "path": "evaluator/rubric.json",
+      "bytes": 1403,
+      "sha256": "513793d7967d96fd50606aba5e58da5f05985d2a179d1b5811fe1015c874cb80",
+      "storage": "repository",
+      "deployed_sha256": "513793d7967d96fd50606aba5e58da5f05985d2a179d1b5811fe1015c874cb80",
+      "deployed_bytes": 1403
+    },
+    {
+      "path": "frozen_manifest.json",
+      "bytes": 107177,
+      "sha256": "03ae9ab3b151902b88b05bf133ef4492e3c3196c0f975526b56ed75fbd7a0df0",
+      "storage": "repository",
+      "deployed_sha256": "03ae9ab3b151902b88b05bf133ef4492e3c3196c0f975526b56ed75fbd7a0df0",
+      "deployed_bytes": 107177
+    },
+    {
+      "path": "reports/SUMMARY.json",
+      "bytes": 897,
+      "sha256": "137874894a9303d5701360066cdf1359163a40419a96a8ae61550c642fa13d72",
+      "storage": "repository",
+      "deployed_sha256": "137874894a9303d5701360066cdf1359163a40419a96a8ae61550c642fa13d72",
+      "deployed_bytes": 897
+    },
+    {
+      "path": "reports/SUMMARY.md",
+      "bytes": 836,
+      "sha256": "c0847a453b9ac16d28d582cc858f91721e5795d2c2a30e36dd590f523d0f0f30",
+      "storage": "repository",
+      "deployed_sha256": "c0847a453b9ac16d28d582cc858f91721e5795d2c2a30e36dd590f523d0f0f30",
+      "deployed_bytes": 836
+    },
+    {
+      "path": "reports/all_reference_audio_overlap.json",
+      "bytes": 5140,
+      "sha256": "fe461a62dab8814171452af9aab302138d2bb816b9e05fc51d43fc28bdc42584",
+      "storage": "repository",
+      "deployed_sha256": "fe461a62dab8814171452af9aab302138d2bb816b9e05fc51d43fc28bdc42584",
+      "deployed_bytes": 5140
+    },
+    {
+      "path": "reports/comparability.json",
+      "bytes": 1597,
+      "sha256": "ddaa1c26f14cd77ccd867d7dee8dc2077bb2eb693a3cba3b01b59d0c21efc129",
+      "storage": "repository",
+      "deployed_sha256": "ddaa1c26f14cd77ccd867d7dee8dc2077bb2eb693a3cba3b01b59d0c21efc129",
+      "deployed_bytes": 1597
+    },
+    {
+      "path": "reports/contamination_notice.json",
+      "bytes": 593,
+      "sha256": "d62133f954d94af8fc6e25909c5e50f321444148e951f0fc03a02437d5a20d91",
+      "storage": "repository",
+      "deployed_sha256": "d62133f954d94af8fc6e25909c5e50f321444148e951f0fc03a02437d5a20d91",
+      "deployed_bytes": 593
+    },
+    {
+      "path": "reports/controls.json",
+      "bytes": 999,
+      "sha256": "978bb1f4a087ca4e16e1849c6600037b24db59fce11f8e15ae35eab418e05e04",
+      "storage": "repository",
+      "deployed_sha256": "978bb1f4a087ca4e16e1849c6600037b24db59fce11f8e15ae35eab418e05e04",
+      "deployed_bytes": 999
+    },
+    {
+      "path": "reports/dashboard_links.json",
+      "bytes": 2120,
+      "sha256": "4ad74237c066937dbfa1041ff95b3a937fd6f994e0d35342a350f6d37e6564a0",
+      "storage": "repository",
+      "deployed_sha256": "cf4365babf0e97e565e7fd37d4e072dc3a149693540e1dfc593ca5c0f79fc3fe",
+      "deployed_bytes": 2082
+    },
+    {
+      "path": "reports/dashboard_qa.json",
+      "bytes": 211,
+      "sha256": "851fe53865ce0e4c08eadeede45fe06e86929403b77deb779aec7ac892eddd42",
+      "storage": "repository",
+      "deployed_sha256": "0a2413e255a5a86d987a924b1c3b16f9418b299214bcfbb91361b2038f9bab4e",
+      "deployed_bytes": 211
+    },
+    {
+      "path": "reports/final_acceptance.json",
+      "bytes": 2325,
+      "sha256": "dae9c9d26253e1de033cf08b1dc01a715c929af09561a56ef651809fd2c86202",
+      "storage": "repository",
+      "deployed_sha256": "dae9c9d26253e1de033cf08b1dc01a715c929af09561a56ef651809fd2c86202",
+      "deployed_bytes": 2325
+    },
+    {
+      "path": "reports/index.html",
+      "bytes": 2502341,
+      "sha256": "da8695cb4387611e5377d8705e13fd43d94a8b9f0f02d1ea189f826277ba9d52",
+      "storage": "repository",
+      "deployed_sha256": "bab320d131c722bee944e34205a1e1c0114c8071a774db80158e310b914c0279",
+      "deployed_bytes": 2504572
+    },
+    {
+      "path": "reports/prior_source_overlap/confirmed_XC238544.json",
+      "bytes": 3367,
+      "sha256": "1a9c26cdc3c70615a7b3a9900ae13792f73a32c12c9e07f1fd5d8aaf59d6987a",
+      "storage": "repository",
+      "deployed_sha256": "1a9c26cdc3c70615a7b3a9900ae13792f73a32c12c9e07f1fd5d8aaf59d6987a",
+      "deployed_bytes": 3367
+    },
+    {
+      "path": "reports/prior_source_overlap/original_video_confirmation.json",
+      "bytes": 381,
+      "sha256": "a366250468a8ab6294db37b932bb8810cd2c28e5f23dd2d3bb4eface0c513d59",
+      "storage": "repository",
+      "deployed_sha256": "a366250468a8ab6294db37b932bb8810cd2c28e5f23dd2d3bb4eface0c513d59",
+      "deployed_bytes": 381
+    },
+    {
+      "path": "reports/sol/api_audit.jsonl",
+      "bytes": 1789631,
+      "sha256": "e07e64a218597f63d7f7e0a1b869c8b8fee0b6d6888b60b07b0b398357e2aa8f",
+      "storage": "repository",
+      "deployed_sha256": "e07e64a218597f63d7f7e0a1b869c8b8fee0b6d6888b60b07b0b398357e2aa8f",
+      "deployed_bytes": 1789631
+    },
+    {
+      "path": "reports/sol/audit.json",
+      "bytes": 39383,
+      "sha256": "8f0ab59f0863a9ef4364b6b4e853731964057bcb81aca16311aa1479380978d6",
+      "storage": "repository",
+      "deployed_sha256": "8f0ab59f0863a9ef4364b6b4e853731964057bcb81aca16311aa1479380978d6",
+      "deployed_bytes": 39383
+    },
+    {
+      "path": "reports/sol/network_trajectory.json",
+      "bytes": 139625,
+      "sha256": "2a17ba3d25cac1a9aaa88854a8e3eb23af321cf9d824ef86a4c1b51966c81fbc",
+      "storage": "repository",
+      "deployed_sha256": "2a17ba3d25cac1a9aaa88854a8e3eb23af321cf9d824ef86a4c1b51966c81fbc",
+      "deployed_bytes": 139625
+    },
+    {
+      "path": "reports/sol/pending_resolution.json",
+      "bytes": 563,
+      "sha256": "1959c34b881b927dbd18b64704bf473989f1172095c908590eb06cfc52c82c98",
+      "storage": "repository",
+      "deployed_sha256": "1959c34b881b927dbd18b64704bf473989f1172095c908590eb06cfc52c82c98",
+      "deployed_bytes": 563
+    },
+    {
+      "path": "reports/sol/pending_retry/segment_2/visual.json",
+      "bytes": 1834,
+      "sha256": "3c4b09258a189824c4ea87d656bcd7b108b4f15730483aa40b613ae272da2135",
+      "storage": "repository",
+      "deployed_sha256": "3c4b09258a189824c4ea87d656bcd7b108b4f15730483aa40b613ae272da2135",
+      "deployed_bytes": 1834
+    },
+    {
+      "path": "reports/sol/raw_events.jsonl",
+      "bytes": 4788736,
+      "sha256": "fac7c068b6b78e1d235528000069b1db545603e123452282ed1440013044d221",
+      "storage": "repository",
+      "deployed_sha256": "fac7c068b6b78e1d235528000069b1db545603e123452282ed1440013044d221",
+      "deployed_bytes": 4788736
+    },
+    {
+      "path": "reports/sol/result.json",
+      "bytes": 68162,
+      "sha256": "45f7751ce4e447835c5f3ef0fef38d8b605ef00ebf7ef2aea62e9e05a10b0004",
+      "storage": "repository",
+      "deployed_sha256": "45f7751ce4e447835c5f3ef0fef38d8b605ef00ebf7ef2aea62e9e05a10b0004",
+      "deployed_bytes": 68162
+    },
+    {
+      "path": "reports/sol/reviewed_before_pending.json",
+      "bytes": 68609,
+      "sha256": "e59781d4fe5320c9cb1494d405e47ae307adc798eea05e416738f9b709d2b94e",
+      "storage": "repository",
+      "deployed_sha256": "e59781d4fe5320c9cb1494d405e47ae307adc798eea05e416738f9b709d2b94e",
+      "deployed_bytes": 68609
+    },
+    {
+      "path": "reports/sol/reviewed_result.json",
+      "bytes": 69968,
+      "sha256": "85caa06f409f250ef0f7b67a21f10757ab7a25de2fd2e9db1c0cfc069e8b7a5b",
+      "storage": "repository",
+      "deployed_sha256": "85caa06f409f250ef0f7b67a21f10757ab7a25de2fd2e9db1c0cfc069e8b7a5b",
+      "deployed_bytes": 69968
+    },
+    {
+      "path": "reports/sol/segment_1/actual_final.wav",
+      "bytes": 2211278,
+      "sha256": "551b5d09b6a255fbbf259cb5e07e6d17b68227548cf7124765e6f3ab28e26d65",
+      "storage": "repository",
+      "deployed_sha256": "551b5d09b6a255fbbf259cb5e07e6d17b68227548cf7124765e6f3ab28e26d65",
+      "deployed_bytes": 2211278
+    },
+    {
+      "path": "reports/sol/segment_1/contact.jpg",
+      "bytes": 595714,
+      "sha256": "36200c84751bb0366355273a4d60979396a20345a420871f43a377767879b42f",
+      "storage": "repository",
+      "deployed_sha256": "36200c84751bb0366355273a4d60979396a20345a420871f43a377767879b42f",
+      "deployed_bytes": 595714
+    },
+    {
+      "path": "reports/sol/segment_1/judgment.json",
+      "bytes": 8343,
+      "sha256": "768152edcf5748806c1fbd209d57f7d151c80dcbcc4752e55b2565a1c51eb00a",
+      "storage": "repository",
+      "deployed_sha256": "768152edcf5748806c1fbd209d57f7d151c80dcbcc4752e55b2565a1c51eb00a",
+      "deployed_bytes": 8343
+    },
+    {
+      "path": "reports/sol/segment_2/actual_final.wav",
+      "bytes": 1283278,
+      "sha256": "3c585edae687a97a8d9349c50a19298b7898262dce9bf1d6149933b3ea44fafd",
+      "storage": "repository",
+      "deployed_sha256": "3c585edae687a97a8d9349c50a19298b7898262dce9bf1d6149933b3ea44fafd",
+      "deployed_bytes": 1283278
+    },
+    {
+      "path": "reports/sol/segment_2/contact.jpg",
+      "bytes": 1145213,
+      "sha256": "4a272c95e279f873aa38816eb379282fabeccb25a6723abaab55777a6e975d09",
+      "storage": "repository",
+      "deployed_sha256": "4a272c95e279f873aa38816eb379282fabeccb25a6723abaab55777a6e975d09",
+      "deployed_bytes": 1145213
+    },
+    {
+      "path": "reports/sol/segment_2/judgment.json",
+      "bytes": 6765,
+      "sha256": "0797add910562dc2f857a521ea2d4e42b8970dce0192e4e72e47c22f9a650349",
+      "storage": "repository",
+      "deployed_sha256": "0797add910562dc2f857a521ea2d4e42b8970dce0192e4e72e47c22f9a650349",
+      "deployed_bytes": 6765
+    },
+    {
+      "path": "reports/sol/segment_3/actual_final.wav",
+      "bytes": 1342478,
+      "sha256": "23524eb4d63767634df5aebe376d2113abef95be3422c45f44b1644f23e289c7",
+      "storage": "repository",
+      "deployed_sha256": "23524eb4d63767634df5aebe376d2113abef95be3422c45f44b1644f23e289c7",
+      "deployed_bytes": 1342478
+    },
+    {
+      "path": "reports/sol/segment_3/contact.jpg",
+      "bytes": 359685,
+      "sha256": "279d77df99bcd10e6f6c373f3de9e438978e49fa2a2f45791e36cdbc6e54cb9d",
+      "storage": "repository",
+      "deployed_sha256": "279d77df99bcd10e6f6c373f3de9e438978e49fa2a2f45791e36cdbc6e54cb9d",
+      "deployed_bytes": 359685
+    },
+    {
+      "path": "reports/sol/segment_3/judgment.json",
+      "bytes": 7896,
+      "sha256": "2e3c6c20fa53ed51931e9addc83ea14c2e56599035c8af064439f0fa425fc56e",
+      "storage": "repository",
+      "deployed_sha256": "2e3c6c20fa53ed51931e9addc83ea14c2e56599035c8af064439f0fa425fc56e",
+      "deployed_bytes": 7896
+    },
+    {
+      "path": "reports/sol/segment_4/actual_final.wav",
+      "bytes": 1113678,
+      "sha256": "5efbad1a47d9de4f5fd2f430d6a30ff9d7a3185b5a92b3c2b052c9c9880ba52b",
+      "storage": "repository",
+      "deployed_sha256": "5efbad1a47d9de4f5fd2f430d6a30ff9d7a3185b5a92b3c2b052c9c9880ba52b",
+      "deployed_bytes": 1113678
+    },
+    {
+      "path": "reports/sol/segment_4/contact.jpg",
+      "bytes": 354137,
+      "sha256": "6861d85d7a636e0787a67552a84f47a972f5b416521e661dac676253bde48ba9",
+      "storage": "repository",
+      "deployed_sha256": "6861d85d7a636e0787a67552a84f47a972f5b416521e661dac676253bde48ba9",
+      "deployed_bytes": 354137
+    },
+    {
+      "path": "reports/sol/segment_4/judgment.json",
+      "bytes": 8199,
+      "sha256": "7ae9ad466885463ae1bcc776c8d767762fde2c92e8003b79e4e40f525bea5cc8",
+      "storage": "repository",
+      "deployed_sha256": "7ae9ad466885463ae1bcc776c8d767762fde2c92e8003b79e4e40f525bea5cc8",
+      "deployed_bytes": 8199
+    },
+    {
+      "path": "reports/sol/segment_5/actual_final.wav",
+      "bytes": 1656078,
+      "sha256": "191188c4d2143ef9ce62f80ab1b55bc57e4080ff10d523dfe1a12f8d4d7903a2",
+      "storage": "repository",
+      "deployed_sha256": "191188c4d2143ef9ce62f80ab1b55bc57e4080ff10d523dfe1a12f8d4d7903a2",
+      "deployed_bytes": 1656078
+    },
+    {
+      "path": "reports/sol/segment_5/contact.jpg",
+      "bytes": 476587,
+      "sha256": "11ee65a7356f30f7c68f3abe1c0096138cefc0b21b7006b151b424c3902a35b4",
+      "storage": "repository",
+      "deployed_sha256": "11ee65a7356f30f7c68f3abe1c0096138cefc0b21b7006b151b424c3902a35b4",
+      "deployed_bytes": 476587
+    },
+    {
+      "path": "reports/sol/segment_5/judgment.json",
+      "bytes": 8755,
+      "sha256": "7945ac9d922276d4baa9e0e0b1472cb35bfd7d4d08811022ec83ec9cb0af6c42",
+      "storage": "repository",
+      "deployed_sha256": "7945ac9d922276d4baa9e0e0b1472cb35bfd7d4d08811022ec83ec9cb0af6c42",
+      "deployed_bytes": 8755
+    },
+    {
+      "path": "reports/sol/segment_6/actual_final.wav",
+      "bytes": 1296078,
+      "sha256": "f80d97fd4b22365461f091bc072cf7cc6435c27876e0f60f78afeb16c4be31ba",
+      "storage": "repository",
+      "deployed_sha256": "f80d97fd4b22365461f091bc072cf7cc6435c27876e0f60f78afeb16c4be31ba",
+      "deployed_bytes": 1296078
+    },
+    {
+      "path": "reports/sol/segment_6/contact.jpg",
+      "bytes": 665621,
+      "sha256": "de43f40cd68f446f27249c09aa2e51572c054414df110f9b4c16bfd74e268f6e",
+      "storage": "repository",
+      "deployed_sha256": "de43f40cd68f446f27249c09aa2e51572c054414df110f9b4c16bfd74e268f6e",
+      "deployed_bytes": 665621
+    },
+    {
+      "path": "reports/sol/segment_6/judgment.json",
+      "bytes": 8257,
+      "sha256": "4bfa68855bd8b4d0ae65203633e052de91e7fb13cb635c8ef4616be7dcf52b29",
+      "storage": "repository",
+      "deployed_sha256": "4bfa68855bd8b4d0ae65203633e052de91e7fb13cb635c8ef4616be7dcf52b29",
+      "deployed_bytes": 8257
+    },
+    {
+      "path": "reports/sol/service_trajectory.json",
+      "bytes": 3414973,
+      "sha256": "85fbd410d6d8ba8562a8f7bd693a41bbc1eb8b83d71f267a10cec4844ac0f611",
+      "storage": "repository",
+      "deployed_sha256": "85fbd410d6d8ba8562a8f7bd693a41bbc1eb8b83d71f267a10cec4844ac0f611",
+      "deployed_bytes": 3414973
+    },
+    {
+      "path": "reports/sol/supplemental_review.json",
+      "bytes": 401,
+      "sha256": "0c2ac2df2801f9561ba73630af93b491bcf86ce875ef4f6f5cd7b4ddda448a6a",
+      "storage": "repository",
+      "deployed_sha256": "0c2ac2df2801f9561ba73630af93b491bcf86ce875ef4f6f5cd7b4ddda448a6a",
+      "deployed_bytes": 401
+    },
+    {
+      "path": "reports/sol/tool_trajectory.json",
+      "bytes": 331303,
+      "sha256": "f76a2a6fa63e9d2fa64aeb37bcfcbb10daf53d15826b692f2ab4f993ff150172",
+      "storage": "repository",
+      "deployed_sha256": "f76a2a6fa63e9d2fa64aeb37bcfcbb10daf53d15826b692f2ab4f993ff150172",
+      "deployed_bytes": 331303
+    },
+    {
+      "path": "reports/sol_submission.zip",
+      "bytes": 70054596,
+      "sha256": "020dc480abfd4e8b44dd0bf2fab8a3cbb48c929ca75fde899dc09c3832463ccd",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v5-assets-20261116/020dc480abfd4e8b44dd-sol_submission.zip"
+    },
+    {
+      "path": "reports/source_delivery_audit.json",
+      "bytes": 25995,
+      "sha256": "89391b7bc37e0ce20ac6e93551e8f18c122a96ba21dfe1380c1a9674a4f1c813",
+      "storage": "repository",
+      "deployed_sha256": "89391b7bc37e0ce20ac6e93551e8f18c122a96ba21dfe1380c1a9674a4f1c813",
+      "deployed_bytes": 25995
+    },
+    {
+      "path": "reports/source_guard_controls.json",
+      "bytes": 4050,
+      "sha256": "3af29b66ef7caf6cfbe37aab0b9cb7f0293353d9687ff1c8abd4efce3dd1fe23",
+      "storage": "repository",
+      "deployed_sha256": "3af29b66ef7caf6cfbe37aab0b9cb7f0293353d9687ff1c8abd4efce3dd1fe23",
+      "deployed_bytes": 4050
+    },
+    {
+      "path": "reports/version_change.json",
+      "bytes": 631,
+      "sha256": "b92284132401d95db10efb623515866d0e837877b40709a13241dc0e54dc517b",
+      "storage": "repository",
+      "deployed_sha256": "b92284132401d95db10efb623515866d0e837877b40709a13241dc0e54dc517b",
+      "deployed_bytes": 631
+    },
+    {
+      "path": "reports/voice_choices.json",
+      "bytes": 44251,
+      "sha256": "9f38bd494e0045d0b076fbdfba93c7cd6ce25fc23f67a3fa53e0ff80acb71405",
+      "storage": "repository",
+      "deployed_sha256": "9f38bd494e0045d0b076fbdfba93c7cd6ce25fc23f67a3fa53e0ff80acb71405",
+      "deployed_bytes": 44251
+    },
+    {
+      "path": "results/sol/DEPENDENCIES.md",
+      "bytes": 3816,
+      "sha256": "41b69b84f30a91250e59013b3aa52886fb761755d3974d888df7123223e57476",
+      "storage": "repository",
+      "deployed_sha256": "41b69b84f30a91250e59013b3aa52886fb761755d3974d888df7123223e57476",
+      "deployed_bytes": 3816
+    },
+    {
+      "path": "results/sol/EDGE_TTS_LICENSE.txt",
+      "bytes": 9041,
+      "sha256": "3613045a46a5bce847f80eadbbf013e4260ef19d728ffd061d61e792689ec3a8",
+      "storage": "repository",
+      "deployed_sha256": "3613045a46a5bce847f80eadbbf013e4260ef19d728ffd061d61e792689ec3a8",
+      "deployed_bytes": 9041
+    },
+    {
+      "path": "results/sol/__pycache__/assemble_media.cpython-312.pyc",
+      "bytes": 10205,
+      "sha256": "4a303e578bce624f11360660518291416f61ed789e98d0533c7fc23cca38fa74",
+      "storage": "repository",
+      "deployed_sha256": "4a303e578bce624f11360660518291416f61ed789e98d0533c7fc23cca38fa74",
+      "deployed_bytes": 10205
+    },
+    {
+      "path": "results/sol/__pycache__/edge_token.cpython-312.pyc",
+      "bytes": 22294,
+      "sha256": "99b515aa08703c3650461c9f248cb92d6cc4ba20ed5444260f1a7b3bf91c7d59",
+      "storage": "repository",
+      "deployed_sha256": "99b515aa08703c3650461c9f248cb92d6cc4ba20ed5444260f1a7b3bf91c7d59",
+      "deployed_bytes": 22294
+    },
+    {
+      "path": "results/sol/__pycache__/generate_narration.cpython-312.pyc",
+      "bytes": 2339,
+      "sha256": "7f3979da79ee80016791f76364d3c1d884f065b527273f1409b3c5db9408a95a",
+      "storage": "repository",
+      "deployed_sha256": "7f3979da79ee80016791f76364d3c1d884f065b527273f1409b3c5db9408a95a",
+      "deployed_bytes": 2339
+    },
+    {
+      "path": "results/sol/__pycache__/synthesize_narration.cpython-312.pyc",
+      "bytes": 6181,
+      "sha256": "3074adeb06c0effbb593c9ec9b99ce7c491a6c32b9de7783baeee63d053844c2",
+      "storage": "repository",
+      "deployed_sha256": "3074adeb06c0effbb593c9ec9b99ce7c491a6c32b9de7783baeee63d053844c2",
+      "deployed_bytes": 6181
+    },
+    {
+      "path": "results/sol/assemble_media.py",
+      "bytes": 4838,
+      "sha256": "08b52845d85a6580c81e293c86561622be27be30e7b76a422c8053811e2c22d6",
+      "storage": "repository",
+      "deployed_sha256": "08b52845d85a6580c81e293c86561622be27be30e7b76a422c8053811e2c22d6",
+      "deployed_bytes": 4838
+    },
+    {
+      "path": "results/sol/edge_token.py",
+      "bytes": 18463,
+      "sha256": "a913ca1f7838076403a55ee05f1bae6912a5f3017075a4f2409115c9a128e99f",
+      "storage": "repository",
+      "deployed_sha256": "a913ca1f7838076403a55ee05f1bae6912a5f3017075a4f2409115c9a128e99f",
+      "deployed_bytes": 18463
+    },
+    {
+      "path": "results/sol/final.mp4",
+      "bytes": 55401905,
+      "sha256": "6c8008f08d58d3b67e1ecb0e79135936d20fbcf3fd481c9298817a3674838f84",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v5-assets-20261116/6c8008f08d58d3b67e1e-final.mp4",
+      "preview": "web-media/6c8008f08d58d3b67e1e.mp4"
+    },
+    {
+      "path": "results/sol/fonts/NotoSansSC.ttf",
+      "bytes": 10540644,
+      "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v5-assets-20261116/450625c8d46ab3df97b7-NotoSansSC.ttf"
+    },
+    {
+      "path": "results/sol/generate_narration.py",
+      "bytes": 1059,
+      "sha256": "c822134bcb1cc2a8c1a4844824c197b548a163dd420b3a91ae34103b0f62c559",
+      "storage": "repository",
+      "deployed_sha256": "c822134bcb1cc2a8c1a4844824c197b548a163dd420b3a91ae34103b0f62c559",
+      "deployed_bytes": 1059
+    },
+    {
+      "path": "results/sol/manifest.json",
+      "bytes": 642,
+      "sha256": "166ad1e0decc960792fb82a518a3dcbbf7b760f97adb4d1b3ea66b8eb5215472",
+      "storage": "repository",
+      "deployed_sha256": "166ad1e0decc960792fb82a518a3dcbbf7b760f97adb4d1b3ea66b8eb5215472",
+      "deployed_bytes": 642
+    },
+    {
+      "path": "results/sol/mix_report.json",
+      "bytes": 753,
+      "sha256": "de06765d24f29e7ea4ca630864cdaaa0f96e1493ba7260705971a6d87793ab6a",
+      "storage": "repository",
+      "deployed_sha256": "de06765d24f29e7ea4ca630864cdaaa0f96e1493ba7260705971a6d87793ab6a",
+      "deployed_bytes": 753
+    },
+    {
+      "path": "results/sol/narration.wav",
+      "bytes": 17808044,
+      "sha256": "8b8345f2b7d2738a9d80194a8a9cc64d07d924ce296791de6712a9d27e769611",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v5-assets-20261116/8b8345f2b7d2738a9d80-narration.wav"
+    },
+    {
+      "path": "results/sol/narration_plan.json",
+      "bytes": 3754,
+      "sha256": "6fdea1b3c8483fc7d6d8bc74ace8ea9af93d1b93bc646b10f7d6c09ab7b84b51",
+      "storage": "repository",
+      "deployed_sha256": "6fdea1b3c8483fc7d6d8bc74ace8ea9af93d1b93bc646b10f7d6c09ab7b84b51",
+      "deployed_bytes": 3754
+    },
+    {
+      "path": "results/sol/render.sh",
+      "bytes": 780,
+      "sha256": "ff4e4caf642c7561ed21305819463c83a4861ebf706af0b4f5cea9d54f4b4ab3",
+      "storage": "repository",
+      "deployed_sha256": "ff4e4caf642c7561ed21305819463c83a4861ebf706af0b4f5cea9d54f4b4ab3",
+      "deployed_bytes": 780
+    },
+    {
+      "path": "results/sol/requirements.txt",
+      "bytes": 84,
+      "sha256": "4519439e8aca26b0eac11316958eaf4812eafe2467fb668cd09a3127a7d9e13b",
+      "storage": "repository",
+      "deployed_sha256": "4519439e8aca26b0eac11316958eaf4812eafe2467fb668cd09a3127a7d9e13b",
+      "deployed_bytes": 84
+    },
+    {
+      "path": "results/sol/research_log.json",
+      "bytes": 13103,
+      "sha256": "7ece985b3fe40727a9948935de23bfbf42771734e49a879bcf463052ff918615",
+      "storage": "repository",
+      "deployed_sha256": "7ece985b3fe40727a9948935de23bfbf42771734e49a879bcf463052ff918615",
+      "deployed_bytes": 13103
+    },
+    {
+      "path": "results/sol/segments.json",
+      "bytes": 15953,
+      "sha256": "70b2cb8a9b3ff76501b3e9555e8c6b1a3af9d86dfbbca7bf64c96cff1c0792ee",
+      "storage": "repository",
+      "deployed_sha256": "70b2cb8a9b3ff76501b3e9555e8c6b1a3af9d86dfbbca7bf64c96cff1c0792ee",
+      "deployed_bytes": 15953
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_00.mp3.json",
+      "bytes": 8433,
+      "sha256": "8f0105ea174dd2453350cc33893305e806bbf5cf5a2f35be618b650f6714c3b5",
+      "storage": "repository",
+      "deployed_sha256": "8f0105ea174dd2453350cc33893305e806bbf5cf5a2f35be618b650f6714c3b5",
+      "deployed_bytes": 8433
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_01.mp3.json",
+      "bytes": 5467,
+      "sha256": "90b149458194f0c307bc5282aadf2b6654d280c8046f06f37bc23dfcfae1381b",
+      "storage": "repository",
+      "deployed_sha256": "90b149458194f0c307bc5282aadf2b6654d280c8046f06f37bc23dfcfae1381b",
+      "deployed_bytes": 5467
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_02.mp3.json",
+      "bytes": 7820,
+      "sha256": "aa2e7581a520f8254210a18d06673db47bb190bb82664ce831eaa7d12faacbc0",
+      "storage": "repository",
+      "deployed_sha256": "aa2e7581a520f8254210a18d06673db47bb190bb82664ce831eaa7d12faacbc0",
+      "deployed_bytes": 7820
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_03.mp3.json",
+      "bytes": 4800,
+      "sha256": "d0a17f6e3b28e117c10b3f36f5dc12733802a34ae538e3828865168601bc720c",
+      "storage": "repository",
+      "deployed_sha256": "d0a17f6e3b28e117c10b3f36f5dc12733802a34ae538e3828865168601bc720c",
+      "deployed_bytes": 4800
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_04.mp3.json",
+      "bytes": 6482,
+      "sha256": "5603e1ebebf60e8a73562806825c4f44a0f09084b5cf158b57a90222f77244fd",
+      "storage": "repository",
+      "deployed_sha256": "5603e1ebebf60e8a73562806825c4f44a0f09084b5cf158b57a90222f77244fd",
+      "deployed_bytes": 6482
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_05.mp3.json",
+      "bytes": 7468,
+      "sha256": "2cf01e2f7d94d06a845434cefd02014dcb9c264afea9eae2a6c6558a6c9cc9cf",
+      "storage": "repository",
+      "deployed_sha256": "2cf01e2f7d94d06a845434cefd02014dcb9c264afea9eae2a6c6558a6c9cc9cf",
+      "deployed_bytes": 7468
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_06.mp3.json",
+      "bytes": 5793,
+      "sha256": "eeeb6965822be40120a495c7906231b10056d4c0e98a3d383d78154070ca962e",
+      "storage": "repository",
+      "deployed_sha256": "eeeb6965822be40120a495c7906231b10056d4c0e98a3d383d78154070ca962e",
+      "deployed_bytes": 5793
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_07.mp3.json",
+      "bytes": 6140,
+      "sha256": "9ef66994eebccb2d0e91b433de9d3b1714ee36e2a614d94bb3273fbe8d2e0438",
+      "storage": "repository",
+      "deployed_sha256": "9ef66994eebccb2d0e91b433de9d3b1714ee36e2a614d94bb3273fbe8d2e0438",
+      "deployed_bytes": 6140
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_08.mp3.json",
+      "bytes": 6789,
+      "sha256": "9a00c94216aded542cefb767b7f930dc70b25ee2dba4a8d54b4602f493feb798",
+      "storage": "repository",
+      "deployed_sha256": "9a00c94216aded542cefb767b7f930dc70b25ee2dba4a8d54b4602f493feb798",
+      "deployed_bytes": 6789
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_09.mp3.json",
+      "bytes": 9127,
+      "sha256": "85c9c896904e8e0332d72a19ef92f16f6f144af4732af6690bbf9ed46a0d8412",
+      "storage": "repository",
+      "deployed_sha256": "85c9c896904e8e0332d72a19ef92f16f6f144af4732af6690bbf9ed46a0d8412",
+      "deployed_bytes": 9127
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_10.mp3.json",
+      "bytes": 6842,
+      "sha256": "cfdb5a482a699fdc4c7274d7a5a1ae57a30b0a2a9056657c57d3d3dc3efc70af",
+      "storage": "repository",
+      "deployed_sha256": "cfdb5a482a699fdc4c7274d7a5a1ae57a30b0a2a9056657c57d3d3dc3efc70af",
+      "deployed_bytes": 6842
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_11.mp3.json",
+      "bytes": 6825,
+      "sha256": "472929f3d6454db72cd66e49ddd55f501bf1fc06823cbc8c5419f38354ec4b7f",
+      "storage": "repository",
+      "deployed_sha256": "472929f3d6454db72cd66e49ddd55f501bf1fc06823cbc8c5419f38354ec4b7f",
+      "deployed_bytes": 6825
+    },
+    {
+      "path": "results/sol/speech_metadata/narr_12.mp3.json",
+      "bytes": 6497,
+      "sha256": "0c6245c6481d8442d7f9b20a56317651253428c1a7bfef147dfc2e09fd733d89",
+      "storage": "repository",
+      "deployed_sha256": "0c6245c6481d8442d7f9b20a56317651253428c1a7bfef147dfc2e09fd733d89",
+      "deployed_bytes": 6497
+    },
+    {
+      "path": "results/sol/speech_sources/narr_00.mp3",
+      "bytes": 50256,
+      "sha256": "70998351f23f3372ab9a6dd842d0886f495676b39469402f327e05581e872727",
+      "storage": "repository",
+      "deployed_sha256": "70998351f23f3372ab9a6dd842d0886f495676b39469402f327e05581e872727",
+      "deployed_bytes": 50256
+    },
+    {
+      "path": "results/sol/speech_sources/narr_01.mp3",
+      "bytes": 39744,
+      "sha256": "8dc7160af929352fbcc1fb3501cbe30bbe90b086dd572a8b8b53ef226b2155b4",
+      "storage": "repository",
+      "deployed_sha256": "8dc7160af929352fbcc1fb3501cbe30bbe90b086dd572a8b8b53ef226b2155b4",
+      "deployed_bytes": 39744
+    },
+    {
+      "path": "results/sol/speech_sources/narr_02.mp3",
+      "bytes": 60192,
+      "sha256": "15b4941cad6af1d15c7acc39dcf8eaac8299025fb2dd34bf491a7bee249fdb53",
+      "storage": "repository",
+      "deployed_sha256": "15b4941cad6af1d15c7acc39dcf8eaac8299025fb2dd34bf491a7bee249fdb53",
+      "deployed_bytes": 60192
+    },
+    {
+      "path": "results/sol/speech_sources/narr_03.mp3",
+      "bytes": 38448,
+      "sha256": "1b590315a16f47c0350a412cc9b0341b542be4a1f6860fd3604340233aa2e217",
+      "storage": "repository",
+      "deployed_sha256": "1b590315a16f47c0350a412cc9b0341b542be4a1f6860fd3604340233aa2e217",
+      "deployed_bytes": 38448
+    },
+    {
+      "path": "results/sol/speech_sources/narr_04.mp3",
+      "bytes": 50256,
+      "sha256": "179b86f6f53b12de8c75efaf88b81c83536c84562c9c160609c084ab2be39995",
+      "storage": "repository",
+      "deployed_sha256": "179b86f6f53b12de8c75efaf88b81c83536c84562c9c160609c084ab2be39995",
+      "deployed_bytes": 50256
+    },
+    {
+      "path": "results/sol/speech_sources/narr_05.mp3",
+      "bytes": 56160,
+      "sha256": "4d14a53e0c1f58449317d27c8ff5923a14c3380529f0d5dd6b71c7c31cd21454",
+      "storage": "repository",
+      "deployed_sha256": "4d14a53e0c1f58449317d27c8ff5923a14c3380529f0d5dd6b71c7c31cd21454",
+      "deployed_bytes": 56160
+    },
+    {
+      "path": "results/sol/speech_sources/narr_06.mp3",
+      "bytes": 43920,
+      "sha256": "702b6a2ce9481cb3be793765b82be7975468ff7eb42e30814f4a765d6643db2c",
+      "storage": "repository",
+      "deployed_sha256": "702b6a2ce9481cb3be793765b82be7975468ff7eb42e30814f4a765d6643db2c",
+      "deployed_bytes": 43920
+    },
+    {
+      "path": "results/sol/speech_sources/narr_07.mp3",
+      "bytes": 49536,
+      "sha256": "c3943d5cda79b6c0b85c0407456c05d7010c1ff7a1c1f8fe09a05fd6f80a7d48",
+      "storage": "repository",
+      "deployed_sha256": "c3943d5cda79b6c0b85c0407456c05d7010c1ff7a1c1f8fe09a05fd6f80a7d48",
+      "deployed_bytes": 49536
+    },
+    {
+      "path": "results/sol/speech_sources/narr_08.mp3",
+      "bytes": 46512,
+      "sha256": "7edc79b23ddb1a857405cc5ec537028dea1fd6b24e7740fb576643127e0912e4",
+      "storage": "repository",
+      "deployed_sha256": "7edc79b23ddb1a857405cc5ec537028dea1fd6b24e7740fb576643127e0912e4",
+      "deployed_bytes": 46512
+    },
+    {
+      "path": "results/sol/speech_sources/narr_09.mp3",
+      "bytes": 63648,
+      "sha256": "fab3ba1acd0792d484831eeb17ce619948f09b504e1ab4878a0bad11d68efb47",
+      "storage": "repository",
+      "deployed_sha256": "fab3ba1acd0792d484831eeb17ce619948f09b504e1ab4878a0bad11d68efb47",
+      "deployed_bytes": 63648
+    },
+    {
+      "path": "results/sol/speech_sources/narr_10.mp3",
+      "bytes": 60912,
+      "sha256": "800bf8f9c6657cc7d2738a5b68981aa1133652617f32eab34e4f388a40fd38b8",
+      "storage": "repository",
+      "deployed_sha256": "800bf8f9c6657cc7d2738a5b68981aa1133652617f32eab34e4f388a40fd38b8",
+      "deployed_bytes": 60912
+    },
+    {
+      "path": "results/sol/speech_sources/narr_11.mp3",
+      "bytes": 55728,
+      "sha256": "a92d78068f8d536407c5f4f3af27553ebea3fc6c3e424ed266ac61369cdeaf00",
+      "storage": "repository",
+      "deployed_sha256": "a92d78068f8d536407c5f4f3af27553ebea3fc6c3e424ed266ac61369cdeaf00",
+      "deployed_bytes": 55728
+    },
+    {
+      "path": "results/sol/speech_sources/narr_12.mp3",
+      "bytes": 57744,
+      "sha256": "971554963f8e9c45f021aabee476eb03ce4765756e462189424109245bf6ee4d",
+      "storage": "repository",
+      "deployed_sha256": "971554963f8e9c45f021aabee476eb03ce4765756e462189424109245bf6ee4d",
+      "deployed_bytes": 57744
+    },
+    {
+      "path": "results/sol/subtitles.srt",
+      "bytes": 2862,
+      "sha256": "2d7b31fe50b957c80990a9c17bfbe93aa4470b1c32eabe5ff1e0ef2d4cc20fc0",
+      "storage": "repository",
+      "deployed_sha256": "2d7b31fe50b957c80990a9c17bfbe93aa4470b1c32eabe5ff1e0ef2d4cc20fc0",
+      "deployed_bytes": 2862
+    },
+    {
+      "path": "results/sol/synthesize_narration.py",
+      "bytes": 3019,
+      "sha256": "f15d917f6fd8c444575f4e39cbb690c77d5ea83ad402664b338b7c2426695a48",
+      "storage": "repository",
+      "deployed_sha256": "f15d917f6fd8c444575f4e39cbb690c77d5ea83ad402664b338b7c2426695a48",
+      "deployed_bytes": 3019
+    },
+    {
+      "path": "results/sol/tool_selection_log.json",
+      "bytes": 3254,
+      "sha256": "b535d8add47de0e5b29d6c2b0e3dd05cd0e1924e365050178af520e90ba8e6bf",
+      "storage": "repository",
+      "deployed_sha256": "b535d8add47de0e5b29d6c2b0e3dd05cd0e1924e365050178af520e90ba8e6bf",
+      "deployed_bytes": 3254
+    },
+    {
+      "path": "results/sol/validation_report.json",
+      "bytes": 4709,
+      "sha256": "74ad64d79d2a0337034ccd82025e746adaffe364f12daf3e19ba675d0e784c62",
+      "storage": "repository",
+      "deployed_sha256": "74ad64d79d2a0337034ccd82025e746adaffe364f12daf3e19ba675d0e784c62",
+      "deployed_bytes": 4709
+    },
+    {
+      "path": "results/sol/verify_submission.py",
+      "bytes": 3135,
+      "sha256": "a03ea7bf151f3bfb33905c370b2faabd2e59368438ebe83754ae396bb4ef90f9",
+      "storage": "repository",
+      "deployed_sha256": "a03ea7bf151f3bfb33905c370b2faabd2e59368438ebe83754ae396bb4ef90f9",
+      "deployed_bytes": 3135
+    }
+  ],
+  "secret_scan": "passed",
+  "scope": "Linked report evidence, public task, frozen answers only; no credentials or run homes.",
+  "release": "https://github.com/NanXiang-git/OmniALE_v2/releases/tag/birds-v5-assets-20261116",
+  "previews_only_for_browsing": true
+}

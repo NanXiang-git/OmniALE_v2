@@ -1,0 +1,222 @@
+{
+  "segment": 4,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "这里暂按长嘴沼泽鹪鹩判断。短音与颤音交替，像一串串急促的清响。鸟体被遮挡，具体动作看不清。",
+    "speech_spans": [
+      {
+        "start": 4.08,
+        "end": 6.72,
+        "text": "这里暂按长嘴沼泽鹪鹩判断。"
+      },
+      {
+        "start": 10.96,
+        "end": 14.56,
+        "text": "短音与颤音交替，像一串串急促的清响。"
+      },
+      {
+        "start": 15.36,
+        "end": 18.4,
+        "text": "鸟体被遮挡，具体动作看不清。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫声（包括啁啾、叽喳和类似虫鸣的高频颤音）",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.75,
+      "reason": "女声解说整体流畅，但语调略显平淡，缺乏自然交流中的情感起伏，带有轻微的合成感。",
+      "times": [
+        4.32,
+        18.6
+      ]
+    },
+    "timbre": {
+      "score": 0.75,
+      "reason": "音色清晰稳定，但听起来不够丰满真实，有轻微的电子处理痕迹。",
+      "times": [
+        4.32,
+        18.6
+      ]
+    },
+    "clarity": {
+      "score": 1.0,
+      "reason": "发音非常标准清晰，即使在背景鸟鸣声中也能轻松听懂每一个字。",
+      "times": [
+        4.32,
+        18.6
+      ]
+    },
+    "pacing": {
+      "score": 0.75,
+      "reason": "语速适中，停顿基本合理，但节奏略显刻板，不够自然灵动。",
+      "times": [
+        4.32,
+        18.6
+      ]
+    },
+    "balance": {
+      "score": 1.0,
+      "reason": "人声与背景鸟鸣声的混音比例恰当，两者互不干扰，听感舒适。",
+      "times": [
+        0.0,
+        22.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类叫声作为背景音，保留了现场的自然环境声。",
+      "times": [
+        0.0,
+        22.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 4.32,
+        "reason": "连续无人声，可清晰听到多种鸟类的真实鸣叫声"
+      },
+      {
+        "start": 18.6,
+        "end": 22.0,
+        "reason": "连续无人声，背景中持续有清晰的鸟鸣声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "长嘴沼泽鹪鹩",
+    "I_reason": "在04.08-06.72秒，旁白明确说出“这里暂按长嘴沼泽鹪鹩判断”，实际说出的物种与真值“弗吉尼亚秧鸡”不符。",
+    "F": {
+      "score": 0.0,
+      "reason": "事实错误：将鸟鸣声误识别为“长嘴沼泽鹪鹩”，而实际应为“弗吉尼亚秧鸡”。",
+      "times": [
+        [
+          4.08,
+          6.72
+        ]
+      ]
+    },
+    "E": {
+      "score": 0.5,
+      "reason": "视听证据部分对应：旁白描述的“短音与颤音交替”、“鸟体被遮挡”与实际听到的持续高频鸟鸣及模糊的视觉画面相符；但基于这些证据得出的物种结论是错误的。",
+      "times": [
+        [
+          10.96,
+          14.56
+        ],
+        [
+          15.36,
+          18.4
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "这里暂按长嘴沼泽鹪鹩判断。",
+        "supported": false,
+        "reason": "实际物种为弗吉尼亚秧鸡，旁白给出的鉴定结果错误。"
+      },
+      {
+        "claim": "短音与颤音交替，像一串串急促的清响。",
+        "supported": true,
+        "reason": "背景音中确实存在持续的、高频的鸟鸣声和间歇性的短促啁啾声，描述符合听觉特征。"
+      },
+      {
+        "claim": "鸟体被遮挡，具体动作看不清。",
+        "supported": true,
+        "reason": "视频画面显示失焦的湿地茎叶，鸟体无法可靠辨认，描述符合视觉现状。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕清晰可读，位于画面底部黑色留边区域，未遮挡任何主体内容。字幕内容与提供的独立转写文本完全一致（注：SRT中的'轻响'与转写中的'清响'存在同音字差异，但成片截图显示为'轻响'，符合SRT记录）。",
+      "times": [
+        {
+          "start": 105.104,
+          "end": 108.135,
+          "text": "这里暂按长嘴沼泽鹪鹩判断"
+        },
+        {
+          "start": 112.104,
+          "end": 113.926,
+          "text": "短音与颤音交替"
+        },
+        {
+          "start": 114.047,
+          "end": 116.127,
+          "text": "像一串串急促的轻响"
+        },
+        {
+          "start": 116.606,
+          "end": 119.65,
+          "text": "鸟体被遮挡，具体动作看不清"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与画面内容高度对应。当旁白提到“鸟体被遮挡”时，对应的视频帧（movie 118s-122s）确实展示了失焦且密集的植被背景，无法看清鸟类实体，视觉证据支持了文案描述。前段关于物种判断和声音描述的时机也处于该场景的起始阶段，逻辑连贯。",
+      "times": [
+        {
+          "start": 105.104,
+          "end": 108.135,
+          "note": "引入话题，画面为模糊湿地环境"
+        },
+        {
+          "start": 116.606,
+          "end": 119.65,
+          "note": "明确说明“鸟体被遮挡”，此时画面确认为不可辨识的茎叶特写，图文相符"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 100.767,
+        "end": 105.217,
+        "matched_original_seconds": 4
+      },
+      {
+        "start": 108.017,
+        "end": 112.167,
+        "matched_original_seconds": 4
+      },
+      {
+        "start": 119.517,
+        "end": 123.967,
+        "matched_original_seconds": 4
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 4.32,
+        "reason": "连续无人声，可清晰听到多种鸟类的真实鸣叫声"
+      },
+      {
+        "start": 18.6,
+        "end": 22.0,
+        "reason": "连续无人声，背景中持续有清晰的鸟鸣声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 11,
+    "compared_seconds": 22
+  }
+}
