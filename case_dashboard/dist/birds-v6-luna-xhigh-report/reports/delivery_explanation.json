@@ -1,0 +1,80 @@
+{
+  "formal_score": 10.7291,
+  "body": [
+    15.666666666666671,
+    15.666666666666671
+  ],
+  "raw_weighted_quality": 0.6848333333333333,
+  "effective_quality": [
+    0.6848333333333334,
+    0.6848333333333334
+  ],
+  "all_chapters_audible_mandarin_false": false,
+  "scored_chapters": 1,
+  "text_label_matches": 1,
+  "text_label_method": "Exact case-insensitive Latin names against frozen truth, descriptive only.",
+  "rows": [
+    {
+      "segment": 1,
+      "submitted_chinese": "卡罗来纳鹪鹩（暂定）",
+      "submitted_latin": "Thryothorus ludovicianus",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:07-00:12的旁白中，实际说出的物种名称为“卡罗莱纳鹪鹩”，与真值“四川蝗莺”完全不符，属于明确的物种错误。"
+    },
+    {
+      "segment": 2,
+      "submitted_chinese": "未定种灌丛鸣禽",
+      "submitted_latin": "Passeriformes indet.",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "旁白在00:11-00:18明确表示“不足以可靠定种，这一段保留为未识别的灌丛鸣禽”，并未说出真值物种名称。"
+    },
+    {
+      "segment": 3,
+      "submitted_chinese": "东部林鹟（暂定）",
+      "submitted_latin": "Contopus virens",
+      "expected_chinese": "桤木纹霸鹟",
+      "expected_latin": "Empidonax alnorum",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:03.68-00:09.2期间，旁白明确说出“外形暂定为东部林鹟”，未提及真值物种“桤木纹霸鹟”。"
+    },
+    {
+      "segment": 4,
+      "submitted_chinese": "未定种芦苇间鸣禽",
+      "submitted_latin": "Aves indet.",
+      "expected_chinese": "弗吉尼亚秧鸡",
+      "expected_latin": "Rallus limicola",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在 09.68-17.36 秒的旁白中，解说员明确表示“来源无法确认，这段只能保留为未定种的芦苇间鸣禽”，并未说出真值物种名称“弗吉尼亚秧鸡”。"
+    },
+    {
+      "segment": 5,
+      "submitted_chinese": "褐色燕鸥",
+      "submitted_latin": "Anous stolidus",
+      "expected_chinese": "黑脚信天翁",
+      "expected_latin": "Phoebastria nigripes",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在音频7.68秒至10.24秒处，旁白明确说出“这是褐色燕鸥成鸟与雏鸟”，将物种错误地识别为“褐色燕鸥”，而非真值中的“黑脚信天翁”。"
+    },
+    {
+      "segment": 6,
+      "submitted_chinese": "莱山信天翁",
+      "submitted_latin": "Phoebastria immutabilis",
+      "expected_chinese": "莱桑信天翁",
+      "expected_latin": "Phoebastria immutabilis",
+      "exact_latin_match": true,
+      "scored_I": 1,
+      "scoring_reason": "在00:06-00:12期间，旁白明确说出“外形很像莱山信天翁”。“莱山”与真值“莱桑”同音（lái shān / lái sāng），属于纯音频无法区分的同音字转写差异，按可听读音和语义判断为正确识别。"
+    }
+  ],
+  "explanation": "文字学名精确匹配 1/6；成片视听计分识别达标 1/6。文字标签核对仅供解释，不替代冻结评分器对实际旁白的判断。",
+  "formal_reviewed_result_sha256": "f35aa95362b6868f85882d4d3363ca40811a00269b3e74ac5f13edb144c41716"
+}

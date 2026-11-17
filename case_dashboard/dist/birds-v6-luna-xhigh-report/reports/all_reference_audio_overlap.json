@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "method": "8kHz mono, 250–3700Hz bandpass, 2s zero-mean reference templates at 1s strides, all sample-level offsets in each of six original chapters. Absolute correlation >=0.90 flags possible shared recording.",
+  "limits": [
+    "No time stretching/pitch search.",
+    "Less than two seconds is untested.",
+    "Only inspected media responses; encrypted infrastructure and images are outside scope.",
+    "No waveform match is not universal proof of independent provenance."
+  ],
+  "controls": {
+    "passed": true,
+    "positive_source_crop": [
+      {
+        "max_absolute_correlation": 0.11989014199303187,
+        "reference_second": 3.0,
+        "chapter_second": 8.242125
+      },
+      {
+        "max_absolute_correlation": 0.22710604224961142,
+        "reference_second": 2.0,
+        "chapter_second": 12.946875
+      },
+      {
+        "max_absolute_correlation": 1.000000104843223,
+        "reference_second": 0.0,
+        "chapter_second": 2.2
+      },
+      {
+        "max_absolute_correlation": 0.22028334572818561,
+        "reference_second": 2.0,
+        "chapter_second": 0.011875
+      },
+      {
+        "max_absolute_correlation": 0.20107041368373693,
+        "reference_second": 2.0,
+        "chapter_second": 25.453625
+      },
+      {
+        "max_absolute_correlation": 0.21311672233291504,
+        "reference_second": 2.0,
+        "chapter_second": 7.550125
+      }
+    ],
+    "reversed_negative": [
+      {
+        "max_absolute_correlation": 0.14005657624226647,
+        "reference_second": 1.0,
+        "chapter_second": 5.961
+      },
+      {
+        "max_absolute_correlation": 0.26273923022806167,
+        "reference_second": 2.0,
+        "chapter_second": 4.16925
+      },
+      {
+        "max_absolute_correlation": 0.23112901754849743,
+        "reference_second": 2.0,
+        "chapter_second": 14.758
+      },
+      {
+        "max_absolute_correlation": 0.16977246344204974,
+        "reference_second": 2.0,
+        "chapter_second": 11.413
+      },
+      {
+        "max_absolute_correlation": 0.1613821028258845,
+        "reference_second": 3.0,
+        "chapter_second": 24.599
+      },
+      {
+        "max_absolute_correlation": 0.2448259236265657,
+        "reference_second": 2.0,
+        "chapter_second": 24.417625
+      }
+    ]
+  },
+  "results": [],
+  "errors": []
+}

@@ -1,0 +1,5032 @@
+[
+  {
+    "utc": 1794909556.3053114,
+    "action": "connect_request",
+    "connection_id": 1794909556288515028,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909556.381596,
+    "action": "connect_request",
+    "connection_id": 1794909556367656119,
+    "host": "github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909556.6741457,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909556288515028,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1794909556.6901948,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909556.7994738,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909556367656119,
+    "host": "github.com"
+  },
+  {
+    "utc": 1794909556.8178544,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909556.8504694,
+    "action": "connect_request",
+    "connection_id": 1794909556837160112,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909557.1566293,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909556837160112,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794909557.1730368,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909557.512933,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 5854,
+    "sha256": "dc5befdb3f2ba513763e2392d624fdffb1c772999332621fa43785f954292c8c",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5854
+  },
+  {
+    "utc": 1794909557.5523074,
+    "action": "connect_request",
+    "connection_id": 1794909557519030566,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909557.5738919,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909557519030566,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794909557.5946038,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909557.915083,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 326,
+    "sha256": "4b9a8b2cce6a7723094c545ec327fd31d43adfa05d7303db80d97a4018f35c92",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 326
+  },
+  {
+    "utc": 1794909557.9480321,
+    "action": "connect_request",
+    "connection_id": 1794909557929319829,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909557.9784422,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909557929319829,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1794909558.0088387,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909558.3306313,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "status": 302,
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909558.3582382,
+    "action": "connect_request",
+    "connection_id": 1794909558334848736,
+    "host": "codeload.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909558.557388,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909558334848736,
+    "host": "codeload.github.com"
+  },
+  {
+    "utc": 1794909558.5896463,
+    "action": "http_request",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909569.9697428,
+    "action": "http_response_inspected",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+    "status": 429,
+    "content_type": "text/plain",
+    "bytes": 82,
+    "sha256": "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 82
+  },
+  {
+    "utc": 1794909570.009836,
+    "action": "connect_request",
+    "connection_id": 1794909570002861232,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909570.0352356,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909570002861232,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1794909570.061479,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "method": "GET"
+  },
+  {
+    "utc": 1794909570.1694815,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909615.162994,
+    "action": "connect_request",
+    "connection_id": 1794909615152949395,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909615.398364,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909615152949395,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909615.4293792,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909630.4451766,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7ed20980>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909676.1212976,
+    "action": "connect_request",
+    "connection_id": 1794909676102756797,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909676.157197,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909676102756797,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909676.1852355,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909692.2533886,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a34d0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909738.2845562,
+    "action": "connect_request",
+    "connection_id": 1794909738274133150,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909738.3242335,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909738274133150,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909738.3564153,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909754.5525203,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053a0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909800.6361527,
+    "action": "connect_request",
+    "connection_id": 1794909800617268690,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909800.656162,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909800617268690,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909800.6795206,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909815.7051408,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606240>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909862.651196,
+    "action": "connect_request",
+    "connection_id": 1794909862636731174,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909862.6856441,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909862636731174,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909862.7158568,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909877.745164,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6070b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909896.463242,
+    "action": "connect_request",
+    "connection_id": 1794909896450960653,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909896.7407615,
+    "action": "connect_established",
+    "connection_id": 1794909896450960653,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794909898.8479953,
+    "action": "connect_request",
+    "connection_id": 1794909898833496447,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909901.157436,
+    "action": "connect_established",
+    "connection_id": 1794909898833496447,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794909923.6223648,
+    "action": "connect_request",
+    "connection_id": 1794909923589539473,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909923.6674862,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794909923589539473,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794909923.7027984,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794909925.5035574,
+    "action": "connection_closed",
+    "connection_id": 1794909896450960653,
+    "host": "pypi.org",
+    "sent_bytes": 1878,
+    "received_bytes": 169895
+  },
+  {
+    "utc": 1794909939.755971,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c805106b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794909949.0040383,
+    "action": "connection_closed",
+    "connection_id": 1794909898833496447,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 4559,
+    "received_bytes": 38898
+  },
+  {
+    "utc": 1794909949.039143,
+    "action": "connect_request",
+    "connection_id": 1794909948998595767,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794909949.3285933,
+    "action": "connect_established",
+    "connection_id": 1794909948998595767,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910032.304611,
+    "action": "connection_closed",
+    "connection_id": 1794909948998595767,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 43025,
+    "received_bytes": 339788
+  },
+  {
+    "utc": 1794910047.7581472,
+    "action": "connect_request",
+    "connection_id": 1794910047743886602,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910047.7907474,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910047743886602,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910047.811934,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910062.8377442,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606c90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910086.3280337,
+    "action": "connect_request",
+    "connection_id": 1794910086304204118,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910086.5207832,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910086304204118,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794910086.5510857,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-kingbird",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910088.5626464,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-kingbird",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 274679,
+    "sha256": "fa6ce68a48ecad52e2fd0d345080ac84e20915cfadb05bf75f4d30ef6703a88a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 274679
+  },
+  {
+    "utc": 1794910109.7830899,
+    "action": "connect_request",
+    "connection_id": 1794910109772143836,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910109.8105078,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910109772143836,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910109.8403733,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910124.8711236,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605dc0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910170.1163607,
+    "action": "connect_request",
+    "connection_id": 1794910170106644139,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910170.3010263,
+    "action": "connect_established",
+    "connection_id": 1794910170106644139,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910170.9218545,
+    "action": "connect_request",
+    "connection_id": 1794910170906721457,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910170.9526763,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910170906721457,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910170.985601,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910173.1001263,
+    "action": "connect_request",
+    "connection_id": 1794910173087215825,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910173.2700708,
+    "action": "connect_established",
+    "connection_id": 1794910173087215825,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910187.1974971,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610b30>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910233.5480852,
+    "action": "connect_request",
+    "connection_id": 1794910233538311371,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910233.5744712,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910233538311371,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910233.6016583,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910248.625439,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053a0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910254.211934,
+    "action": "connect_request",
+    "connection_id": 1794910254200637551,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910254.4654005,
+    "action": "connect_established",
+    "connection_id": 1794910254200637551,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910256.2233195,
+    "action": "connection_closed",
+    "connection_id": 1794910254200637551,
+    "host": "pypi.org",
+    "sent_bytes": 794,
+    "received_bytes": 121957
+  },
+  {
+    "utc": 1794910276.0727463,
+    "action": "connection_closed",
+    "connection_id": 1794910170106644139,
+    "host": "pypi.org",
+    "sent_bytes": 7087,
+    "received_bytes": 1657043
+  },
+  {
+    "utc": 1794910276.105585,
+    "action": "connection_closed",
+    "connection_id": 1794910173087215825,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 6696,
+    "received_bytes": 115971
+  },
+  {
+    "utc": 1794910294.642943,
+    "action": "connect_request",
+    "connection_id": 1794910294630524004,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910294.6986396,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910294630524004,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910294.7262723,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910311.1871374,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6068a0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910356.0729473,
+    "action": "connect_request",
+    "connection_id": 1794910356063413490,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910356.1068957,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910356063413490,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910356.1373887,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910359.312978,
+    "action": "connect_request",
+    "connection_id": 1794910359303631400,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910359.4458878,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910359303631400,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794910359.4573872,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/western-kingbird",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910371.16639,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3aa0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910375.8331382,
+    "action": "inspection_failed_closed",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/western-kingbird",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910375.880732,
+    "action": "connect_request",
+    "connection_id": 1794910375867215914,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910376.2431672,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910375867215914,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794910376.3041549,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910379.6602058,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 266801,
+    "sha256": "b72158b09d0a7b0d947ec77d176cc41dbdc72491000c00ff18b7b616d7dafa65",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 266801
+  },
+  {
+    "utc": 1794910379.774031,
+    "action": "connect_request",
+    "connection_id": 1794910379764465198,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910379.9204383,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910379764465198,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794910379.9506288,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910382.505106,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 286126,
+    "sha256": "2b112ec426c2a316576f0716be8b60d041eb2b0dfb2475f990bdeb7bb11482dc",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 286126
+  },
+  {
+    "utc": 1794910417.9269974,
+    "action": "connect_request",
+    "connection_id": 1794910417913193029,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910417.96696,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910417913193029,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910417.9960437,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910433.02068,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611eb0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910469.7562358,
+    "action": "blocked_or_failed",
+    "host": "translate.google.com",
+    "error": "ValueError: Blocked domain or port"
+  },
+  {
+    "utc": 1794910479.0657337,
+    "action": "connect_request",
+    "connection_id": 1794910479046123025,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910479.0847318,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910479046123025,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910479.111573,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910494.959599,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a36b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910507.213163,
+    "action": "connect_request",
+    "connection_id": 1794910507181210081,
+    "host": "raw.githubusercontent.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910507.2428076,
+    "action": "connect_request",
+    "connection_id": 1794910507178075784,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910507.27157,
+    "action": "connect_request",
+    "connection_id": 1794910507186285546,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910507.3982074,
+    "action": "connect_established",
+    "connection_id": 1794910507186285546,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910507.4362993,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910507181210081,
+    "host": "raw.githubusercontent.com"
+  },
+  {
+    "utc": 1794910507.4652805,
+    "action": "http_request",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910508.533981,
+    "action": "connect_established",
+    "connection_id": 1794910507178075784,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910510.5587826,
+    "action": "connection_closed",
+    "connection_id": 1794910507178075784,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 868,
+    "received_bytes": 44016
+  },
+  {
+    "utc": 1794910510.9829257,
+    "action": "connection_closed",
+    "connection_id": 1794910507186285546,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 1398,
+    "received_bytes": 177469
+  },
+  {
+    "utc": 1794910541.097965,
+    "action": "connect_request",
+    "connection_id": 1794910541068261479,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910541.168027,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910541068261479,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910541.199637,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910555.0998633,
+    "action": "inspection_failed_closed",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+    "error": "ReadTimeout: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=45)",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910557.244479,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6103b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910603.2180066,
+    "action": "connect_request",
+    "connection_id": 1794910603200010213,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910603.267439,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910603200010213,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910603.2989602,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910618.3268359,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612300>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910665.4616725,
+    "action": "connect_request",
+    "connection_id": 1794910665448115441,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910665.5280588,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910665448115441,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910665.5589607,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910680.6001236,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605790>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910727.7353601,
+    "action": "connect_request",
+    "connection_id": 1794910727712435541,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910727.7869904,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910727712435541,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910727.817915,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910742.854455,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6064e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910789.9617703,
+    "action": "connect_request",
+    "connection_id": 1794910789939428124,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910789.9923363,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910789939428124,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910790.0202034,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910790.1676466,
+    "action": "connect_request",
+    "connection_id": 1794910790159297549,
+    "host": "raw.githubusercontent.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910790.1868358,
+    "action": "connect_request",
+    "connection_id": 1794910790177396792,
+    "host": "fonts.googleapis.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910790.3266296,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910790159297549,
+    "host": "raw.githubusercontent.com"
+  },
+  {
+    "utc": 1794910790.3549082,
+    "action": "http_request",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910790.3840232,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910790177396792,
+    "host": "fonts.googleapis.com"
+  },
+  {
+    "utc": 1794910790.4138317,
+    "action": "http_request",
+    "host": "fonts.googleapis.com",
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910790.6548266,
+    "action": "http_response_inspected",
+    "host": "fonts.googleapis.com",
+    "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap",
+    "status": 200,
+    "content_type": "text/css; charset=utf-8",
+    "bytes": 466,
+    "sha256": "2aa29097462c7ac09fafe2a1ea5eaf0169c5cc3b1e59b0700ab589149c0021c9",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 466
+  },
+  {
+    "utc": 1794910805.0447803,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3050>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910806.2350664,
+    "action": "http_response_inspected",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 4388,
+    "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 4388
+  },
+  {
+    "utc": 1794910835.9832788,
+    "action": "connect_request",
+    "connection_id": 1794910835970772918,
+    "host": "fonts.gstatic.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910836.438115,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910835970772918,
+    "host": "fonts.gstatic.com"
+  },
+  {
+    "utc": 1794910836.4665349,
+    "action": "http_request",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "method": "GET"
+  },
+  {
+    "utc": 1794910838.4329054,
+    "action": "http_response_inspected",
+    "host": "fonts.gstatic.com",
+    "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+    "status": 200,
+    "content_type": "font/ttf",
+    "bytes": 10540644,
+    "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 10540644
+  },
+  {
+    "utc": 1794910851.0654044,
+    "action": "connect_request",
+    "connection_id": 1794910851056116523,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910851.098207,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910851056116523,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910851.1302454,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910852.9913237,
+    "action": "connect_request",
+    "connection_id": 1794910852979095813,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910853.275864,
+    "action": "connect_established",
+    "connection_id": 1794910852979095813,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910867.285888,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613260>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910913.3303692,
+    "action": "connect_request",
+    "connection_id": 1794910913264676283,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910913.3899875,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910913264676283,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910913.4220982,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910929.7810056,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a2f60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794910946.328165,
+    "action": "connect_request",
+    "connection_id": 1794910946281629730,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910946.5224528,
+    "action": "connect_established",
+    "connection_id": 1794910946281629730,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794910975.7843254,
+    "action": "connect_request",
+    "connection_id": 1794910975765185473,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794910975.8325722,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794910975765185473,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794910975.8635418,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794910992.0566103,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6052e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911038.166714,
+    "action": "connect_request",
+    "connection_id": 1794911038152702157,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911038.2127318,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911038152702157,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911038.2500184,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911053.2766438,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d607080>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911100.7891622,
+    "action": "connect_request",
+    "connection_id": 1794911100756893619,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911100.848784,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911100756893619,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911100.8851717,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911115.9136,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6123c0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911156.3808274,
+    "action": "connection_closed",
+    "connection_id": 1794910946281629730,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 6822,
+    "received_bytes": 138711
+  },
+  {
+    "utc": 1794911161.967291,
+    "action": "connect_request",
+    "connection_id": 1794911161933457478,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911162.00032,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911161933457478,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911162.0344718,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911170.8775363,
+    "action": "connect_request",
+    "connection_id": 1794911170847601690,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911171.0672228,
+    "action": "connect_established",
+    "connection_id": 1794911170847601690,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794911177.083932,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613ce0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911222.6714509,
+    "action": "connect_request",
+    "connection_id": 1794911222654323837,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911222.699852,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911222654323837,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911222.728815,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911237.7616074,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606960>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911266.219081,
+    "action": "connection_closed",
+    "connection_id": 1794910852979095813,
+    "host": "pypi.org",
+    "sent_bytes": 7730,
+    "received_bytes": 2747872
+  },
+  {
+    "utc": 1794911283.3867297,
+    "action": "connect_request",
+    "connection_id": 1794911283366731210,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911283.4233625,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911283366731210,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911283.4620903,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911283.5625026,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911345.051531,
+    "action": "connect_request",
+    "connection_id": 1794911345017983988,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911345.0823421,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911345017983988,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911345.1150286,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911345.2564683,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911365.7406452,
+    "action": "connection_closed",
+    "connection_id": 1794911170847601690,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 9487,
+    "received_bytes": 3434989
+  },
+  {
+    "utc": 1794911405.8487432,
+    "action": "connect_request",
+    "connection_id": 1794911405831263620,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911405.9336073,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911405831263620,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911405.9663532,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911406.1102052,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911466.6442168,
+    "action": "connect_request",
+    "connection_id": 1794911466633874701,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911466.6791024,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911466633874701,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911466.6994777,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911481.7302608,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3410>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911528.253449,
+    "action": "connect_request",
+    "connection_id": 1794911528235145303,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911528.317262,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911528235145303,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911528.349465,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911543.3910427,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611c70>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911561.4405167,
+    "action": "connect_request",
+    "connection_id": 1794911561418065517,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911561.5402093,
+    "action": "connect_established",
+    "connection_id": 1794911561418065517,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794911564.2467916,
+    "action": "connection_closed",
+    "connection_id": 1794911561418065517,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2903,
+    "received_bytes": 51241
+  },
+  {
+    "utc": 1794911564.2802908,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794911589.672159,
+    "action": "connect_request",
+    "connection_id": 1794911589659159597,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911589.7028964,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911589659159597,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911589.7304473,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911604.7517354,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613d10>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911605.2549229,
+    "action": "connect_request",
+    "connection_id": 1794911605245948012,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911605.2752082,
+    "action": "connect_request",
+    "connection_id": 1794911605246208736,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911605.2953277,
+    "action": "connect_request",
+    "connection_id": 1794911605246656884,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911605.3152692,
+    "action": "connect_request",
+    "connection_id": 1794911605245825940,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911605.3732154,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911605245948012,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794911605.3944194,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/bewicks-wren",
+    "method": "GET"
+  },
+  {
+    "utc": 1794911605.4217901,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911605246208736,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794911605.445861,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911605246656884,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794911605.4601264,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911605245825940,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1794911605.4872398,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+    "method": "GET"
+  },
+  {
+    "utc": 1794911605.512848,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+    "method": "GET"
+  },
+  {
+    "utc": 1794911605.538376,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+    "method": "GET"
+  },
+  {
+    "utc": 1794911606.6037621,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 265220,
+    "sha256": "5168bbfb6d5143561b9e2898136bd29000a3fdf1e7a12cd8d82338e7a48afcf8",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 265220
+  },
+  {
+    "utc": 1794911607.0092702,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/bewicks-wren",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 270602,
+    "sha256": "69f5590844cf16bdb3d8020c9a650ffc6b3c50de11bcf7883ccc2ca66381e3b5",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 270602
+  },
+  {
+    "utc": 1794911611.881276,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 268268,
+    "sha256": "9a959f8483c634492b83d416812f73a3a9fa3a13486c5a8315606a974df0e751",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 268268
+  },
+  {
+    "utc": 1794911612.5855424,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 276709,
+    "sha256": "3779c55ef65c4363260c2d710d38ae425a391ca35c36b8c859d4375d555d75b4",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 276709
+  },
+  {
+    "utc": 1794911651.1915398,
+    "action": "connect_request",
+    "connection_id": 1794911651177680920,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911651.2280297,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911651177680920,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911651.2588677,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911666.2897794,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612e70>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911711.9805458,
+    "action": "connect_request",
+    "connection_id": 1794911711971291256,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911712.013595,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911711971291256,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911712.0430315,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911712.1041684,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911773.7706075,
+    "action": "connect_request",
+    "connection_id": 1794911773749715510,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911773.808063,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911773749715510,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911773.8427072,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911788.9728715,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ReadTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Read timed out. (read timeout=15)",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911835.351432,
+    "action": "connect_request",
+    "connection_id": 1794911835343096373,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911835.381884,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911835343096373,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911835.4107375,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911850.4333394,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6344a0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911897.1429014,
+    "action": "connect_request",
+    "connection_id": 1794911897124731057,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911897.202347,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911897124731057,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911897.2357986,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911912.2945564,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606f60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794911958.0020425,
+    "action": "connect_request",
+    "connection_id": 1794911957985584978,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794911958.0680354,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794911957985584978,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794911958.1028264,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794911973.1410093,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c805127e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912019.979869,
+    "action": "connect_request",
+    "connection_id": 1794912019959130307,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912020.0472298,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912019959130307,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912020.0870957,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912035.142379,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612450>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912081.689977,
+    "action": "connect_request",
+    "connection_id": 1794912081660214581,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912081.7269337,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912081660214581,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912081.769905,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912096.8017116,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612570>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912142.825554,
+    "action": "connect_request",
+    "connection_id": 1794912142810601826,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912142.8573604,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912142810601826,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912142.8857517,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912158.6785164,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6139b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912202.0545707,
+    "action": "connect_request",
+    "connection_id": 1794912202025216316,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912202.213253,
+    "action": "connect_established",
+    "connection_id": 1794912202025216316,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912204.4624028,
+    "action": "connect_request",
+    "connection_id": 1794912204453110388,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912204.489356,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912204453110388,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912204.5181968,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912215.506923,
+    "action": "connection_closed",
+    "connection_id": 1794912202025216316,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3047,
+    "received_bytes": 120074
+  },
+  {
+    "utc": 1794912215.5382533,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912215.7901537,
+    "action": "connect_request",
+    "connection_id": 1794912215781036268,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912215.9108758,
+    "action": "connect_established",
+    "connection_id": 1794912215781036268,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912217.871155,
+    "action": "connection_closed",
+    "connection_id": 1794912215781036268,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3008,
+    "received_bytes": 96409
+  },
+  {
+    "utc": 1794912217.892949,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912217.9917912,
+    "action": "connect_request",
+    "connection_id": 1794912217983869014,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912218.0863597,
+    "action": "connect_established",
+    "connection_id": 1794912217983869014,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912219.544487,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7db4f800>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912220.1275492,
+    "action": "connection_closed",
+    "connection_id": 1794912217983869014,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 107809
+  },
+  {
+    "utc": 1794912220.1582656,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912220.4175947,
+    "action": "connect_request",
+    "connection_id": 1794912220408323558,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912220.5129123,
+    "action": "connect_established",
+    "connection_id": 1794912220408323558,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912223.8689268,
+    "action": "connection_closed",
+    "connection_id": 1794912220408323558,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2993,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794912223.890756,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912224.0592618,
+    "action": "connect_request",
+    "connection_id": 1794912224051310013,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912224.1497748,
+    "action": "connect_established",
+    "connection_id": 1794912224051310013,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912226.0526252,
+    "action": "connection_closed",
+    "connection_id": 1794912224051310013,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2990,
+    "received_bytes": 108044
+  },
+  {
+    "utc": 1794912226.0810409,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912226.2684424,
+    "action": "connect_request",
+    "connection_id": 1794912226256742504,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912226.356194,
+    "action": "connect_established",
+    "connection_id": 1794912226256742504,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912231.7567368,
+    "action": "connection_closed",
+    "connection_id": 1794912226256742504,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110149
+  },
+  {
+    "utc": 1794912231.7855897,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912266.290934,
+    "action": "connect_request",
+    "connection_id": 1794912266155752877,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912266.3834445,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912266155752877,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912266.4177272,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912281.4405918,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605970>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912388.6729443,
+    "action": "connect_request",
+    "connection_id": 1794912388658053158,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912388.738712,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912388658053158,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912388.7691386,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912403.8083603,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612e40>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912450.6924362,
+    "action": "connect_request",
+    "connection_id": 1794912450681552883,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912450.734781,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912450681552883,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912450.76095,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912450.9107277,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912512.3749485,
+    "action": "connect_request",
+    "connection_id": 1794912512364744346,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912512.4034243,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912512364744346,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912512.4296558,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912512.5667686,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912573.2255745,
+    "action": "connect_request",
+    "connection_id": 1794912573206590479,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912573.2823713,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912573206590479,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912573.3143835,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912573.4066103,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912635.2427208,
+    "action": "connect_request",
+    "connection_id": 1794912635221693370,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912635.285508,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912635221693370,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912635.3170488,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912635.4349787,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912696.932629,
+    "action": "connect_request",
+    "connection_id": 1794912696903385433,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912696.9709542,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912696903385433,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912696.9874492,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912697.1330266,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912720.8164103,
+    "action": "connect_request",
+    "connection_id": 1794912720793548451,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912720.9088614,
+    "action": "connect_established",
+    "connection_id": 1794912720793548451,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912723.863532,
+    "action": "connection_closed",
+    "connection_id": 1794912720793548451,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120100
+  },
+  {
+    "utc": 1794912723.8951032,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912724.449864,
+    "action": "connect_request",
+    "connection_id": 1794912724437012800,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912724.5530941,
+    "action": "connect_established",
+    "connection_id": 1794912724437012800,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912727.2449236,
+    "action": "connection_closed",
+    "connection_id": 1794912724437012800,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2984,
+    "received_bytes": 96383
+  },
+  {
+    "utc": 1794912727.280523,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912727.585255,
+    "action": "connect_request",
+    "connection_id": 1794912727577391595,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912727.6813662,
+    "action": "connect_established",
+    "connection_id": 1794912727577391595,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912732.7790823,
+    "action": "connection_closed",
+    "connection_id": 1794912727577391595,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 107835
+  },
+  {
+    "utc": 1794912732.8518305,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912733.4535398,
+    "action": "connect_request",
+    "connection_id": 1794912733182179528,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912733.6476157,
+    "action": "connect_established",
+    "connection_id": 1794912733182179528,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912735.9614022,
+    "action": "connection_closed",
+    "connection_id": 1794912733182179528,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2993,
+    "received_bytes": 104092
+  },
+  {
+    "utc": 1794912735.9947658,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912736.3052428,
+    "action": "connect_request",
+    "connection_id": 1794912736295657548,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912736.7838068,
+    "action": "connect_established",
+    "connection_id": 1794912736295657548,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912738.8903446,
+    "action": "connection_closed",
+    "connection_id": 1794912736295657548,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2990,
+    "received_bytes": 108070
+  },
+  {
+    "utc": 1794912738.9174037,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912739.2071686,
+    "action": "connect_request",
+    "connection_id": 1794912739171014185,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912739.3263574,
+    "action": "connect_established",
+    "connection_id": 1794912739171014185,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912742.1145592,
+    "action": "connection_closed",
+    "connection_id": 1794912739171014185,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110149
+  },
+  {
+    "utc": 1794912742.1532114,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794912758.567716,
+    "action": "connect_request",
+    "connection_id": 1794912758547989243,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912758.5903757,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912758547989243,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912758.6109905,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912758.7533422,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912820.5401826,
+    "action": "connect_request",
+    "connection_id": 1794912820267624026,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912820.571283,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912820267624026,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912820.6381185,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912820.9098406,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912881.109592,
+    "action": "connect_request",
+    "connection_id": 1794912881101167928,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912881.1415052,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912881101167928,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912881.174149,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912881.297171,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912942.8754246,
+    "action": "connect_request",
+    "connection_id": 1794912942846704636,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912942.9131072,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794912942846704636,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794912942.944314,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794912943.0664792,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794912957.3869667,
+    "action": "connect_request",
+    "connection_id": 1794912957332410974,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794912960.599138,
+    "action": "connect_established",
+    "connection_id": 1794912957332410974,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794912962.068781,
+    "action": "connection_closed",
+    "connection_id": 1794912957332410974,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2918,
+    "received_bytes": 64785
+  },
+  {
+    "utc": 1794912962.10182,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913004.6854312,
+    "action": "connect_request",
+    "connection_id": 1794913004666391181,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913004.7313468,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913004666391181,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913004.7622104,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913020.744954,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3920>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913066.4830961,
+    "action": "connect_request",
+    "connection_id": 1794913066451428291,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913066.519139,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913066451428291,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913066.551343,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913067.170134,
+    "action": "connect_request",
+    "connection_id": 1794913067156506759,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913067.2618375,
+    "action": "connect_established",
+    "connection_id": 1794913067156506759,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913069.098593,
+    "action": "connection_closed",
+    "connection_id": 1794913067156506759,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120178
+  },
+  {
+    "utc": 1794913069.1281526,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913081.589737,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a2e70>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913128.422105,
+    "action": "connect_request",
+    "connection_id": 1794913128222564609,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913128.4483287,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913128222564609,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913128.6555278,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913143.874503,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606de0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913189.9962373,
+    "action": "connect_request",
+    "connection_id": 1794913189982839625,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913190.0412245,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913189982839625,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913190.0699894,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913205.0952227,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6100e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913245.891858,
+    "action": "connect_request",
+    "connection_id": 1794913245867524972,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913246.0271726,
+    "action": "connect_established",
+    "connection_id": 1794913245867524972,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913249.3970964,
+    "action": "connection_closed",
+    "connection_id": 1794913245867524972,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120074
+  },
+  {
+    "utc": 1794913249.43113,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913249.9469304,
+    "action": "connect_request",
+    "connection_id": 1794913249931416290,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913250.0437517,
+    "action": "connect_established",
+    "connection_id": 1794913249931416290,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913251.7140396,
+    "action": "connection_closed",
+    "connection_id": 1794913249931416290,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3008,
+    "received_bytes": 96461
+  },
+  {
+    "utc": 1794913251.7467792,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913251.7728853,
+    "action": "connect_request",
+    "connection_id": 1794913251700339040,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913251.807752,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913251700339040,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913251.8376658,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913251.9572709,
+    "action": "connect_request",
+    "connection_id": 1794913251939904106,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913252.0631106,
+    "action": "connect_established",
+    "connection_id": 1794913251939904106,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913253.5936944,
+    "action": "connection_closed",
+    "connection_id": 1794913251939904106,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3020,
+    "received_bytes": 107887
+  },
+  {
+    "utc": 1794913253.63135,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913253.9473994,
+    "action": "connect_request",
+    "connection_id": 1794913253923500139,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913255.2225986,
+    "action": "connect_established",
+    "connection_id": 1794913253923500139,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913259.6341753,
+    "action": "connection_closed",
+    "connection_id": 1794913253923500139,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2993,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794913259.6676922,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913260.0645049,
+    "action": "connect_request",
+    "connection_id": 1794913260040444808,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913260.15794,
+    "action": "connect_established",
+    "connection_id": 1794913260040444808,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913263.9804332,
+    "action": "connection_closed",
+    "connection_id": 1794913260040444808,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3014,
+    "received_bytes": 108070
+  },
+  {
+    "utc": 1794913264.002719,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913264.2609475,
+    "action": "connect_request",
+    "connection_id": 1794913264248219661,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913264.359587,
+    "action": "connect_established",
+    "connection_id": 1794913264248219661,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913266.653202,
+    "action": "connection_closed",
+    "connection_id": 1794913264248219661,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110149
+  },
+  {
+    "utc": 1794913266.68179,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913266.862724,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610b00>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913312.595947,
+    "action": "connect_request",
+    "connection_id": 1794913312558832699,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913312.6653984,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913312558832699,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913312.6943226,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913328.5494475,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6350d0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913373.4011729,
+    "action": "connect_request",
+    "connection_id": 1794913373385154775,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913373.4856246,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913373385154775,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913373.5146224,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913388.547786,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611160>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913436.6577613,
+    "action": "connect_request",
+    "connection_id": 1794913436342769548,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913436.6983008,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913436342769548,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913436.755927,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913451.8005545,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612cf0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913498.1039157,
+    "action": "connect_request",
+    "connection_id": 1794913498062439807,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913498.178613,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913498062439807,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913498.2200434,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913513.2598789,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605eb0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913558.9264264,
+    "action": "connect_request",
+    "connection_id": 1794913558898173599,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913558.9573557,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913558898173599,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913558.993912,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913574.8604941,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a30b0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913620.6735034,
+    "action": "connect_request",
+    "connection_id": 1794913620600073769,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913620.7057083,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913620600073769,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913620.7775154,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913635.8345885,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6347d0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913682.3966925,
+    "action": "connect_request",
+    "connection_id": 1794913682370412327,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913682.4343472,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913682370412327,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913682.497239,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913698.359311,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053d0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913744.1083665,
+    "action": "connect_request",
+    "connection_id": 1794913744055877906,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913744.1878774,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913744055877906,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913744.228069,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913759.2733595,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7df92840>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913805.775118,
+    "action": "connect_request",
+    "connection_id": 1794913805761601238,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913805.807392,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913805761601238,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913805.8385918,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913820.8706288,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6121e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913867.4416623,
+    "action": "connect_request",
+    "connection_id": 1794913867424269204,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913867.5031743,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913867424269204,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913867.5374439,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913882.5822558,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d634e90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913928.29827,
+    "action": "connect_request",
+    "connection_id": 1794913928284788797,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913928.3360007,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913928284788797,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913928.367291,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913944.2042906,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6358e0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794913987.8346667,
+    "action": "connect_request",
+    "connection_id": 1794913987812579865,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913987.9353483,
+    "action": "connect_established",
+    "connection_id": 1794913987812579865,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913989.9241772,
+    "action": "connect_request",
+    "connection_id": 1794913989908826623,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913989.9767857,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794913989908826623,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794913990.014438,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794913993.0963085,
+    "action": "connection_closed",
+    "connection_id": 1794913987812579865,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120126
+  },
+  {
+    "utc": 1794913993.1298144,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913993.679331,
+    "action": "connect_request",
+    "connection_id": 1794913993669115434,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794913994.1880121,
+    "action": "connect_established",
+    "connection_id": 1794913993669115434,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794913999.6225436,
+    "action": "connection_closed",
+    "connection_id": 1794913993669115434,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2984,
+    "received_bytes": 96409
+  },
+  {
+    "utc": 1794913999.639832,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794913999.9445763,
+    "action": "connect_request",
+    "connection_id": 1794913999926715816,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914000.0392303,
+    "action": "connect_established",
+    "connection_id": 1794913999926715816,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914005.08213,
+    "action": "connection_closed",
+    "connection_id": 1794913999926715816,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 107809
+  },
+  {
+    "utc": 1794914005.1215603,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914005.4364665,
+    "action": "connect_request",
+    "connection_id": 1794914005424288076,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914005.5321665,
+    "action": "connect_established",
+    "connection_id": 1794914005424288076,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914005.836724,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611910>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914007.4644017,
+    "action": "connection_closed",
+    "connection_id": 1794914005424288076,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3017,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794914007.4946272,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914007.689534,
+    "action": "connect_request",
+    "connection_id": 1794914007677849997,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914007.8030612,
+    "action": "connect_established",
+    "connection_id": 1794914007677849997,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914011.465446,
+    "action": "connection_closed",
+    "connection_id": 1794914007677849997,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2990,
+    "received_bytes": 108070
+  },
+  {
+    "utc": 1794914011.483915,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914011.6541452,
+    "action": "connect_request",
+    "connection_id": 1794914011635180973,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914011.7511122,
+    "action": "connect_established",
+    "connection_id": 1794914011635180973,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914014.0135252,
+    "action": "connection_closed",
+    "connection_id": 1794914011635180973,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110175
+  },
+  {
+    "utc": 1794914014.0325189,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914051.5343006,
+    "action": "connect_request",
+    "connection_id": 1794914051517415209,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914051.565921,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914051517415209,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914051.5876844,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914066.6106486,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c80512c00>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914112.285791,
+    "action": "connect_request",
+    "connection_id": 1794914112268050908,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914112.337648,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914112268050908,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914112.3675494,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914127.4086628,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606b10>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914172.2746289,
+    "action": "connect_request",
+    "connection_id": 1794914172265437765,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914172.305586,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914172265437765,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914172.338517,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914187.3653193,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635670>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914232.2897482,
+    "action": "connect_request",
+    "connection_id": 1794914232266930216,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914232.3575413,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914232266930216,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914232.3944607,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914247.8546364,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605dc0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914283.0859563,
+    "action": "connect_request",
+    "connection_id": 1794914283062705001,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914283.184663,
+    "action": "connect_established",
+    "connection_id": 1794914283062705001,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914285.7270901,
+    "action": "connection_closed",
+    "connection_id": 1794914283062705001,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120100
+  },
+  {
+    "utc": 1794914285.7637763,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914286.4453332,
+    "action": "connect_request",
+    "connection_id": 1794914286420397376,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914286.546494,
+    "action": "connect_established",
+    "connection_id": 1794914286420397376,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914288.4598897,
+    "action": "connection_closed",
+    "connection_id": 1794914286420397376,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3008,
+    "received_bytes": 96435
+  },
+  {
+    "utc": 1794914288.4935768,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914288.657203,
+    "action": "connect_request",
+    "connection_id": 1794914288649495749,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914288.7652376,
+    "action": "connect_established",
+    "connection_id": 1794914288649495749,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914290.515428,
+    "action": "connection_closed",
+    "connection_id": 1794914288649495749,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 107835
+  },
+  {
+    "utc": 1794914290.549657,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914290.8711863,
+    "action": "connect_request",
+    "connection_id": 1794914290840362136,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914291.3941698,
+    "action": "connect_established",
+    "connection_id": 1794914290840362136,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914293.121757,
+    "action": "connect_request",
+    "connection_id": 1794914293096331177,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914293.2068334,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914293096331177,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914293.238848,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914298.069373,
+    "action": "connection_closed",
+    "connection_id": 1794914290840362136,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2993,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794914298.0980027,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914298.444087,
+    "action": "connect_request",
+    "connection_id": 1794914298422392689,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914298.9610498,
+    "action": "connect_established",
+    "connection_id": 1794914298422392689,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914303.3068182,
+    "action": "connection_closed",
+    "connection_id": 1794914298422392689,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2990,
+    "received_bytes": 108070
+  },
+  {
+    "utc": 1794914303.3387156,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914303.7100906,
+    "action": "connect_request",
+    "connection_id": 1794914303688371333,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914303.8229752,
+    "action": "connect_established",
+    "connection_id": 1794914303688371333,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794914306.033279,
+    "action": "connection_closed",
+    "connection_id": 1794914303688371333,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110149
+  },
+  {
+    "utc": 1794914306.0719144,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794914308.2736576,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3500>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914353.8644798,
+    "action": "connect_request",
+    "connection_id": 1794914353849848035,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914353.9227533,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914353849848035,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914353.9691079,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914369.0128055,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611220>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914413.8696656,
+    "action": "connect_request",
+    "connection_id": 1794914413851785408,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914413.9100454,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914413851785408,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914413.9470992,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914428.9708776,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613da0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914473.861668,
+    "action": "connect_request",
+    "connection_id": 1794914473849753376,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914473.8929224,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914473849753376,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914473.9208462,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914488.9465425,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6366f0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914534.778668,
+    "action": "connect_request",
+    "connection_id": 1794914534762562293,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914534.8214636,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914534762562293,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914534.854973,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914549.889417,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613170>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914594.7975833,
+    "action": "connect_request",
+    "connection_id": 1794914594764553641,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914594.8548017,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914594764553641,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914594.8891904,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914596.0269935,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914654.9321687,
+    "action": "connect_request",
+    "connection_id": 1794914654771498942,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914654.9888215,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914654771498942,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914655.1488295,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914670.3287556,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3200>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914714.7966068,
+    "action": "connect_request",
+    "connection_id": 1794914714774784191,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914714.8442848,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914714774784191,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914714.8743627,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914730.3199942,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606bd0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914835.6084704,
+    "action": "connect_request",
+    "connection_id": 1794914835589110757,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914835.6515453,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914835589110757,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914835.6851296,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914851.1318908,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635d60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794914957.5305827,
+    "action": "connect_request",
+    "connection_id": 1794914957513865826,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794914957.5744984,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794914957513865826,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794914957.6133585,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794914972.6419723,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3590>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915079.1921647,
+    "action": "connect_request",
+    "connection_id": 1794915079181432507,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915079.2199032,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915079181432507,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915079.2461584,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915094.75302,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7ed88890>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915189.722205,
+    "action": "connect_request",
+    "connection_id": 1794915189702035573,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915190.697643,
+    "action": "connect_established",
+    "connection_id": 1794915189702035573,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915194.4631417,
+    "action": "connection_closed",
+    "connection_id": 1794915189702035573,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3047,
+    "received_bytes": 120100
+  },
+  {
+    "utc": 1794915194.4998057,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915195.0363564,
+    "action": "connect_request",
+    "connection_id": 1794915195019946119,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915195.1465237,
+    "action": "connect_established",
+    "connection_id": 1794915195019946119,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915199.7128904,
+    "action": "connection_closed",
+    "connection_id": 1794915195019946119,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2984,
+    "received_bytes": 96409
+  },
+  {
+    "utc": 1794915199.7541869,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915200.0759325,
+    "action": "connect_request",
+    "connection_id": 1794915200062598975,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915200.5930684,
+    "action": "connect_established",
+    "connection_id": 1794915200062598975,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915201.1421149,
+    "action": "connect_request",
+    "connection_id": 1794915201124712376,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915201.1986697,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915201124712376,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915201.2286549,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915211.8139374,
+    "action": "connection_closed",
+    "connection_id": 1794915200062598975,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 107835
+  },
+  {
+    "utc": 1794915211.8503778,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915212.1462026,
+    "action": "connect_request",
+    "connection_id": 1794915212131872650,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915212.2410748,
+    "action": "connect_established",
+    "connection_id": 1794915212131872650,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915213.8761754,
+    "action": "connection_closed",
+    "connection_id": 1794915212131872650,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2993,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794915213.906644,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915214.2308774,
+    "action": "connect_request",
+    "connection_id": 1794915214218018974,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915214.727954,
+    "action": "connect_established",
+    "connection_id": 1794915214218018974,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915216.2845259,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610e90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915217.8728452,
+    "action": "connection_closed",
+    "connection_id": 1794915214218018974,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3014,
+    "received_bytes": 108096
+  },
+  {
+    "utc": 1794915217.8914313,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915218.174169,
+    "action": "connect_request",
+    "connection_id": 1794915218028948027,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915218.2958443,
+    "action": "connect_established",
+    "connection_id": 1794915218028948027,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915220.108549,
+    "action": "connection_closed",
+    "connection_id": 1794915218028948027,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2996,
+    "received_bytes": 110149
+  },
+  {
+    "utc": 1794915220.1347146,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915262.2823677,
+    "action": "connect_request",
+    "connection_id": 1794915262135612848,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915262.345389,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915262135612848,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915262.477708,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915277.5169704,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635d90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915322.6371195,
+    "action": "connect_request",
+    "connection_id": 1794915322617719696,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915322.6749825,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915322617719696,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915322.7045765,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915338.414961,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d636f30>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915383.9956036,
+    "action": "connect_request",
+    "connection_id": 1794915383810781873,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915384.0282056,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915383810781873,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915384.070768,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915399.1087127,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611d90>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915505.6302643,
+    "action": "connect_request",
+    "connection_id": 1794915505453239630,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915505.6656916,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915505453239630,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915505.8341136,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915521.503723,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3530>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915565.9577143,
+    "action": "connect_request",
+    "connection_id": 1794915565931169939,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915566.05046,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915565931169939,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915566.0875754,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915581.1196268,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605af0>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915625.9708433,
+    "action": "connect_request",
+    "connection_id": 1794915625927845969,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915626.026617,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915625927845969,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915626.06076,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915628.448103,
+    "action": "connect_request",
+    "connection_id": 1794915628410009737,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915628.6082892,
+    "action": "connect_established",
+    "connection_id": 1794915628410009737,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915631.2423296,
+    "action": "connection_closed",
+    "connection_id": 1794915628410009737,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3023,
+    "received_bytes": 120126
+  },
+  {
+    "utc": 1794915631.280656,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915631.817453,
+    "action": "connect_request",
+    "connection_id": 1794915631796325345,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915631.9145756,
+    "action": "connect_established",
+    "connection_id": 1794915631796325345,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915635.0156941,
+    "action": "connection_closed",
+    "connection_id": 1794915631796325345,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3008,
+    "received_bytes": 96409
+  },
+  {
+    "utc": 1794915635.0503445,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915635.2696574,
+    "action": "connect_request",
+    "connection_id": 1794915635252532246,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915635.416801,
+    "action": "connect_established",
+    "connection_id": 1794915635252532246,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915637.42456,
+    "action": "connection_closed",
+    "connection_id": 1794915635252532246,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3020,
+    "received_bytes": 107887
+  },
+  {
+    "utc": 1794915637.4530637,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915637.753583,
+    "action": "connect_request",
+    "connection_id": 1794915637676632585,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915637.9557576,
+    "action": "connect_established",
+    "connection_id": 1794915637676632585,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915640.7540152,
+    "action": "connection_closed",
+    "connection_id": 1794915637676632585,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3017,
+    "received_bytes": 104014
+  },
+  {
+    "utc": 1794915640.7916186,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915641.0900085,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d634e60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915641.1472955,
+    "action": "connect_request",
+    "connection_id": 1794915641122122664,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915641.2552876,
+    "action": "connect_established",
+    "connection_id": 1794915641122122664,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915644.0979836,
+    "action": "connection_closed",
+    "connection_id": 1794915641122122664,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2990,
+    "received_bytes": 108070
+  },
+  {
+    "utc": 1794915644.1290903,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915644.2987466,
+    "action": "connect_request",
+    "connection_id": 1794915644288949726,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915644.390293,
+    "action": "connect_established",
+    "connection_id": 1794915644288949726,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1794915650.4538665,
+    "action": "connection_closed",
+    "connection_id": 1794915644288949726,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 3092,
+    "received_bytes": 154721
+  },
+  {
+    "utc": 1794915650.4848304,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1794915685.9816878,
+    "action": "connect_request",
+    "connection_id": 1794915685926202770,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915686.0131702,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915685926202770,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915686.073122,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915701.128149,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c80512c00>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915745.943019,
+    "action": "connect_request",
+    "connection_id": 1794915745925956480,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915745.9779735,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915745925956480,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915746.004863,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915761.0615466,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7df90b60>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915805.937652,
+    "action": "connect_request",
+    "connection_id": 1794915805926296730,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915805.9678042,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915805926296730,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915805.996225,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1794915821.0302787,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611c10>, 'Connection to ab.chatgpt.com timed out. (connect time",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1794915824.041665,
+    "action": "connect_request",
+    "connection_id": 1794915823889836870,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1794915824.0739994,
+    "action": "tls_inspection_ready",
+    "connection_id": 1794915823889836870,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1794915824.099569,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  }
+]

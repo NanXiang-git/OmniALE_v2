@@ -1,0 +1,188 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "灌木枝叶遮住了鸟体，只留下几组短促的声响。现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。",
+    "speech_spans": [
+      {
+        "start": 7.28,
+        "end": 10.96,
+        "text": "灌木枝叶遮住了鸟体，只留下几组短促的声响。"
+      },
+      {
+        "start": 11.52,
+        "end": 18.4,
+        "text": "现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫和啁啾声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "声音带有明显的AI合成特征，语调平直缺乏起伏，句尾处理生硬，听起来像机器朗读而非真人解说。",
+      "times": [
+        7.68,
+        19.32
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色虽然清晰但显得单薄且扁平，缺乏自然人声的共鸣和质感，具有典型的电子音色彩。",
+      "times": [
+        7.68,
+        19.32
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音非常标准清晰，字正腔圆，没有任何模糊或吞音现象，易于听懂。",
+      "times": [
+        7.68,
+        19.32
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但节奏机械，停顿位置过于规整（如逗号处），缺乏人类说话时的自然呼吸感和情感驱动的节奏变化。",
+      "times": [
+        7.68,
+        19.32
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声位于前景，背景鸟鸣声在后方，两者分离度尚可，但在某些时刻鸟叫声略显突出，不过未严重干扰语音理解。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中保留了丰富且真实的鸟类鸣叫声和环境音，能够清晰分辨出不同种类的鸟叫，增强了现场感。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 7.68,
+        "reason": "纯背景环境音，可听到多种清晰的鸟鸣声"
+      },
+      {
+        "start": 19.32,
+        "end": 26.0,
+        "reason": "纯背景环境音，持续有鸟叫声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "旁白在00:11-00:18明确表示“不足以可靠定种，这一段保留为未识别的灌丛鸣禽”，并未说出真值物种名称。",
+    "F": {
+      "score": 1.0,
+      "reason": "旁白准确描述了画面中鸟体被遮挡的情况，并基于现有视听证据做出了无法可靠定种的客观结论，事实表述准确且严谨。",
+      "times": [
+        [
+          7.28,
+          18.4
+        ]
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "旁白的解说与视频画面（茂密枝叶遮挡）及音频背景（持续的鸟鸣声）完全对应，如实反映了当前素材的证据局限性。",
+      "times": [
+        [
+          7.28,
+          18.4
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "灌木枝叶遮住了鸟体，只留下几组短促的声响。",
+        "supported": true,
+        "reason": "画面确实显示茂密的枝叶遮挡了视线，且背景音中存在鸟鸣声。"
+      },
+      {
+        "claim": "现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。",
+        "supported": null,
+        "reason": "这是基于当前有限视听证据做出的合理推断与保守声明，符合科学认知规律，但无法通过本片段直接验证其绝对真伪。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录，白色字体清晰可读；内容与旁白文字完全一致；位置处于画面下方黑色留边区域，未遮挡主要鸟体或枝叶主体。",
+      "times": [
+        {
+          "start": 53.6,
+          "end": 58.395,
+          "text": "灌木枝叶遮住了鸟体，只留下几组短促的声响。"
+        },
+        {
+          "start": 58.395,
+          "end": 65.329,
+          "text": "现有画面与声谱不足以可靠定种，这一段保留为未\n识别的灌丛鸣禽。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面对应：字幕出现时（约53.6s起），画面正展示茂密交错的灌丛枝叶，且如转写所述确实无法看清鸟体，视觉事实与文案描述高度吻合。",
+      "times": [
+        {
+          "start": 53.6,
+          "end": 65.329,
+          "text": "对应茂密灌丛枝叶遮挡、无清晰鸟体的画面段落"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 53.667,
+        "matched_original_seconds": 6
+      },
+      {
+        "start": 64.817,
+        "end": 72.8,
+        "matched_original_seconds": 7
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 7.68,
+        "reason": "纯背景环境音，可听到多种清晰的鸟鸣声"
+      },
+      {
+        "start": 19.32,
+        "end": 26.0,
+        "reason": "纯背景环境音，持续有鸟叫声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 17,
+    "compared_seconds": 25
+  }
+}

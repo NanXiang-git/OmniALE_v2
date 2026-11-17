@@ -1,0 +1,559 @@
+{
+  "model": "gpt-6-luna",
+  "effort": "xhigh",
+  "harness": "Codex 0.163.0",
+  "limit_seconds": null,
+  "time_limit_enforced": false,
+  "elapsed_seconds": 6281.995866060257,
+  "timed_out": false,
+  "returned_models": [
+    "gpt-6-luna"
+  ],
+  "model_verified": true,
+  "all_requests_xhigh": true,
+  "returned_effort_xhigh": true,
+  "api_requests": 97,
+  "api_failures": [
+    {
+      "utc": 1794909912.109566,
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": {
+        "effort": "xhigh",
+        "context": "all_turns"
+      },
+      "request_sha256": "9fdf669d9383f110e1c5c9414875ad338fbbd8388d51fd6e6649992943688636",
+      "input_items": 37,
+      "http_status": 200,
+      "id": "resp_1f48b53de95348b2915b4873e8ea4ab5",
+      "model": "gpt-6-luna",
+      "status": "failed",
+      "usage": null,
+      "reasoning": null,
+      "error": {
+        "code": "gateway_concurrency_limit",
+        "message": "Concurrency limit exceeded for account, please retry later"
+      },
+      "elapsed_seconds": 121.16403865814209
+    },
+    {
+      "utc": 1794915048.9275625,
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": {
+        "effort": "xhigh",
+        "context": "all_turns"
+      },
+      "request_sha256": "8b3227425438aa7fe2e93069b74ac700ffad6a03409f344367d9b505c63b5976",
+      "input_items": 409,
+      "http_status": 200,
+      "id": "resp_205f2e3432f845e3aadf3d7ba6aae463",
+      "model": "gpt-6-luna",
+      "status": "failed",
+      "usage": null,
+      "reasoning": null,
+      "error": {
+        "code": "gateway_concurrency_limit",
+        "message": "Concurrency limit exceeded for account, please retry later"
+      },
+      "elapsed_seconds": 122.38634729385376
+    },
+    {
+      "utc": 1794915381.9135933,
+      "model_requested": "gpt-6-luna",
+      "reasoning_requested": {
+        "effort": "xhigh",
+        "context": "all_turns"
+      },
+      "request_sha256": "4eeb18a2543e62644e70d578e46ef960b2f2a8e5fcb355c39eea55747c4acfaa",
+      "input_items": 424,
+      "http_status": 200,
+      "id": "resp_abfd7b6b31064e9082f138b229d82eb0",
+      "model": "gpt-6-luna",
+      "status": "failed",
+      "usage": null,
+      "reasoning": null,
+      "error": {
+        "code": "gateway_concurrency_limit",
+        "message": "Concurrency limit exceeded for account, please retry later"
+      },
+      "elapsed_seconds": 122.46033382415771
+    }
+  ],
+  "api_error_seconds": 366.01071977615356,
+  "normal_codex_exit": true,
+  "infrastructure_interrupted": false,
+  "submission_matches_sealed": true,
+  "frozen_files_unchanged": true,
+  "blacklist_actual_accesses": [],
+  "successful_connected_domains": [
+    "api.github.com",
+    "files.pythonhosted.org",
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "pypi.org",
+    "raw.githubusercontent.com",
+    "speech.platform.bing.com",
+    "www.audubon.org"
+  ],
+  "isolation_checks": [
+    {
+      "input_readable": true,
+      "input_readonly": true,
+      "submission_writable": true,
+      "host_paths_hidden": true,
+      "credential_absent": true,
+      "network_blocked": true,
+      "visible_process_count": 2,
+      "pid_namespace_small": true
+    }
+  ],
+  "audio_capacity": "Codex仅命令与图片工具；输入鸟声分析方法以模型实际操作为准。Judge独立获得实际音频。",
+  "tts_condition": "No preset TTS helper, package, service or voice. Solver chooses and implements without a total time limit.",
+  "network_includes_runtime_background_connections": true,
+  "network_audit_limit": "Research HTTP/HTTPS: exact URLs, response status, hashes and content guard decisions recorded; speech/package infrastructure remains encrypted passthrough. Unknown derivatives, heavily transformed and sub-two-second excerpts are not fully excluded.",
+  "segments": [
+    {
+      "segment": 1,
+      "answer": {
+        "segment": 1,
+        "start": 0,
+        "end": 46.066667,
+        "chinese_name": "卡罗来纳鹪鹩（暂定）",
+        "english_name": "Carolina Wren (tentative)",
+        "scientific_name": "Thryothorus ludovicianus",
+        "confidence": 55,
+        "visual_evidence": [
+          {
+            "start": 2.0,
+            "end": 6.0,
+            "description": "棕红色上体、浅色腹部、较长尾羽；鸟被人托起，画面静止，未显示觅食或飞行动作。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 0.0,
+            "end": 5.0,
+            "description": "单声道波形与声谱有数组短时、高频调性成分；没有原生听音工具，不能确认它们是鸟鸣，也不能归属于手持个体。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+            "supports": "候选种的棕红上体、浅黄褐下体與明显眉纹；只用于外形比对，片中个体仍为暂定识别。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 7.0,
+            "end": 22.12,
+            "text": "这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来纳鹪鹩。它被托在手中，羽毛与长尾清楚可见；开头有几组短促高音，但不能确认来自这只鸟。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 0.0,
+            "end": 5.0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+          "supports": "候选种的棕红上体、浅黄褐下体與明显眉纹；只用于外形比对，片中个体仍为暂定识别。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "3779c55ef65c4363260c2d710d38ae425a391ca35c36b8c859d4375d555d75b4"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 2.0,
+          "end": 6.0,
+          "timestamp_within_chapter": true,
+          "description": "棕红色上体、浅色腹部、较长尾羽；鸟被人托起，画面静止，未显示觅食或飞行动作。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 0.0,
+          "end": 5.0,
+          "timestamp_within_chapter": true,
+          "description": "单声道波形与声谱有数组短时、高频调性成分；没有原生听音工具，不能确认它们是鸟鸣，也不能归属于手持个体。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "answer": {
+        "segment": 2,
+        "start": 46.066667,
+        "end": 72.8,
+        "chinese_name": "未定种灌丛鸣禽",
+        "english_name": "Unidentified passerine in shrubland",
+        "scientific_name": "Passeriformes indet.",
+        "confidence": 0,
+        "visual_evidence": [
+          {
+            "start": 46.066667,
+            "end": 72.8,
+            "description": "画面持续为浓密灌木，未见可确认的鸟体或具体行为；抽帧未能支持物种识别。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 46.066667,
+            "end": 51.066667,
+            "description": "谱图显示数组短时窄带能量；无听音工具，无法判断音色、节律是否具物种诊断性，声源归属也不明。"
+          }
+        ],
+        "sources": [],
+        "narration": [
+          {
+            "start": 53.5,
+            "end": 65.38,
+            "text": "灌木枝叶遮住了鸟体，只留下几组短促的声响。现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 46.066667,
+            "end": 51.066667
+          }
+        ]
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 46.066667,
+          "end": 72.8,
+          "timestamp_within_chapter": true,
+          "description": "画面持续为浓密灌木，未见可确认的鸟体或具体行为；抽帧未能支持物种识别。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 46.066667,
+          "end": 51.066667,
+          "timestamp_within_chapter": true,
+          "description": "谱图显示数组短时窄带能量；无听音工具，无法判断音色、节律是否具物种诊断性，声源归属也不明。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "answer": {
+        "segment": 3,
+        "start": 72.8,
+        "end": 100.766667,
+        "chinese_name": "东部林鹟（暂定）",
+        "english_name": "Eastern Wood-Pewee (tentative)",
+        "scientific_name": "Contopus virens",
+        "confidence": 53,
+        "visual_evidence": [
+          {
+            "start": 72.8,
+            "end": 100.766667,
+            "description": "灰橄榄色背部、浅色喉腹、较长暗色尾羽；停在裸枝上，多次张嘴。外形接近林鹟，画面未提供地理线索。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 95.766667,
+            "end": 100.766667,
+            "description": "重复调性脉冲与张嘴时段相邻，支持可能的发声行为；无听音工具，不能依赖鸣声排除西部林鹟或确认声源个体。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+            "supports": "候选种的素淡灰橄榄外观、浅色翼斑；资料亦指出东部与西部林鹟外形极相近，故此处仅作暂定识别。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 76.5,
+            "end": 89.94,
+            "text": "枝头这只灰橄榄背、浅腹的小型鹟，外形暂定为东部林鹟。它停栖时数次张嘴，声谱也有重复的调性脉冲；近似种仍难排除。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 95.766667,
+            "end": 100.766667
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+          "supports": "候选种的素淡灰橄榄外观、浅色翼斑；资料亦指出东部与西部林鹟外形极相近，故此处仅作暂定识别。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "9a959f8483c634492b83d416812f73a3a9fa3a13486c5a8315606a974df0e751"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 72.8,
+          "end": 100.766667,
+          "timestamp_within_chapter": true,
+          "description": "灰橄榄色背部、浅色喉腹、较长暗色尾羽；停在裸枝上，多次张嘴。外形接近林鹟，画面未提供地理线索。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 95.766667,
+          "end": 100.766667,
+          "timestamp_within_chapter": true,
+          "description": "重复调性脉冲与张嘴时段相邻，支持可能的发声行为；无听音工具，不能依赖鸣声排除西部林鹟或确认声源个体。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "answer": {
+        "segment": 4,
+        "start": 100.766667,
+        "end": 123.966667,
+        "chinese_name": "未定种芦苇间鸣禽",
+        "english_name": "Unidentified reedbed bird",
+        "scientific_name": "Aves indet.",
+        "confidence": 0,
+        "visual_evidence": [
+          {
+            "start": 100.766667,
+            "end": 123.966667,
+            "description": "全段为高密芦苇与草茎，抽帧未见可辨认鸟体，不能据栖境单独推断物种或行为。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 100.766667,
+            "end": 105.5,
+            "description": "谱图只有稀疏的低能量窄带成分；无听音工具，不能确认其为鸟声或判别物种，声源归属不明。"
+          }
+        ],
+        "sources": [],
+        "narration": [
+          {
+            "start": 106.5,
+            "end": 119.412,
+            "text": "芦苇高而密，鸟体始终被叶片挡住。背景声谱里有零散的窄带短音，来源无法确认；这段只能保留为未定种的芦苇间鸣禽。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 100.766667,
+            "end": 105.5
+          }
+        ]
+      },
+      "sources": [],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 100.766667,
+          "end": 123.966667,
+          "timestamp_within_chapter": true,
+          "description": "全段为高密芦苇与草茎，抽帧未见可辨认鸟体，不能据栖境单独推断物种或行为。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 100.766667,
+          "end": 105.5,
+          "timestamp_within_chapter": true,
+          "description": "谱图只有稀疏的低能量窄带成分；无听音工具，不能确认其为鸟声或判别物种，声源归属不明。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "answer": {
+        "segment": 5,
+        "start": 123.966667,
+        "end": 158.466667,
+        "chinese_name": "褐色燕鸥",
+        "english_name": "Brown Noddy",
+        "scientific_name": "Anous stolidus",
+        "confidence": 92,
+        "visual_evidence": [
+          {
+            "start": 123.966667,
+            "end": 158.466667,
+            "description": "地面聚集的深褐色成鸟与绒羽幼鸟；成鸟俯向张口幼鸟，多次接触其嘴部，符合育雏喂食画面。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 126.5,
+            "end": 131.0,
+            "description": "原声波形包含断续短脉冲，与幼鸟张嘴及成鸟靠近的时间相邻；没有听音工具，不能确认声源属于哪只个体。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+            "supports": "种名、成鸟深褐色外观及亲鸟以反刍方式喂育幼鸟。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 131.5,
+            "end": 144.916,
+            "text": "这是褐色燕鸥成鸟与雏鸟。雏鸟张嘴迎向成鸟；亲鸟会反刍喂食。原声有断续短声，但不能只凭波形确定声源属于哪只。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 126.5,
+            "end": 131.0
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+          "supports": "种名、成鸟深褐色外观及亲鸟以反刍方式喂育幼鸟。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "b72158b09d0a7b0d947ec77d176cc41dbdc72491000c00ff18b7b616d7dafa65"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 123.966667,
+          "end": 158.466667,
+          "timestamp_within_chapter": true,
+          "description": "地面聚集的深褐色成鸟与绒羽幼鸟；成鸟俯向张口幼鸟，多次接触其嘴部，符合育雏喂食画面。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 126.5,
+          "end": 131.0,
+          "timestamp_within_chapter": true,
+          "description": "原声波形包含断续短脉冲，与幼鸟张嘴及成鸟靠近的时间相邻；没有听音工具，不能确认声源属于哪只个体。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "answer": {
+        "segment": 6,
+        "start": 158.466667,
+        "end": 185.466667,
+        "chinese_name": "莱山信天翁",
+        "english_name": "Laysan Albatross",
+        "scientific_name": "Phoebastria immutabilis",
+        "confidence": 92,
+        "visual_evidence": [
+          {
+            "start": 158.466667,
+            "end": 185.466667,
+            "description": "开阔草地上有大型白身、深色背翅和长翼海鸟，周围可见灰褐绒羽幼鸟；成鸟靠近幼鸟并俯首互动。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 158.466667,
+            "end": 163.466667,
+            "description": "原声有多个不规则的短时能量脉冲；无听音工具，不能据此判别叫声类型或将其归给特定个体。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+            "supports": "种名、白色身体与深色上翼的外形，以及亲鸟反刍喂雏、在草地或沙地岛屿繁殖的事实。"
+          }
+        ],
+        "narration": [
+          {
+            "start": 164.5,
+            "end": 184.3,
+            "text": "这群长翼、白色身体配深色背翅的海鸟，外形很像莱山信天翁。绒羽雏鸟紧靠成鸟；亲鸟会反刍喂雏，并共同照看很长时间。原声声谱有不规则短脉冲，具体叫声与来源无法确认。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 158.466667,
+            "end": 163.466667
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+          "supports": "种名、白色身体与深色上翼的外形，以及亲鸟反刍喂雏、在草地或沙地岛屿繁殖的事实。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "2b112ec426c2a316576f0716be8b60d041eb2b0dfb2475f990bdeb7bb11482dc"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 158.466667,
+          "end": 185.466667,
+          "timestamp_within_chapter": true,
+          "description": "开阔草地上有大型白身、深色背翅和长翼海鸟，周围可见灰褐绒羽幼鸟；成鸟靠近幼鸟并俯首互动。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 158.466667,
+          "end": 163.466667,
+          "timestamp_within_chapter": true,
+          "description": "原声有多个不规则的短时能量脉冲；无听音工具，不能据此判别叫声类型或将其归给特定个体。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    }
+  ],
+  "run_termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "birds",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1794915834.0210223,
+    "elapsed_seconds": 6281.995866060257
+  },
+  "source_guard": {
+    "blocked_responses": [],
+    "delivered_research_responses": 12,
+    "known_material_delivered": false,
+    "inspection_failures": 99,
+    "policy": "Research HTTPS paths and complete responses inspected before delivery; infrastructure passthrough hosts separately labelled.",
+    "post_run_source_audit_passed": true,
+    "return_log_semantics": "The gateway logs approval before writing the response body; this is not proof of full client receipt. See matching tool output."
+  }
+}

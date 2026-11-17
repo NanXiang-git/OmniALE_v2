@@ -1,0 +1,39 @@
+{
+  "version": "3.0",
+  "formula": "B=(100/6)*sum(I*(.40+.32F+.28E)); Q=mean(.70H+.20A+.10D); S=B*Q",
+  "segments": 6,
+  "body_per_segment": 16.666666666666668,
+  "H": {
+    "naturalness": 0.35,
+    "timbre": 0.25,
+    "clarity": 0.25,
+    "pacing": 0.15
+  },
+  "A": {
+    "preservation": 0.4,
+    "balance": 0.4,
+    "window": 0.2
+  },
+  "D": {
+    "integrity": 0.4,
+    "subtitles": 0.3,
+    "timing": 0.2,
+    "delivery": 0.1
+  },
+  "quality_weights": {
+    "H": 0.7,
+    "A": 0.2,
+    "D": 0.1
+  },
+  "visual": {
+    "similarity_threshold": 0.88,
+    "sample_step": 0.5
+  },
+  "pass_threshold": 80,
+  "species_policy": "Each wrong or absent spoken species makes only that chapter body zero. Single correctly named tentative species accepted; aliases accepted; multi-species hedging not accepted. Sidecar alone not enough. Homophonic Chinese transcription differences are not species errors; unresolved pronunciation is pending.",
+  "pending_policy": "Unknown gates or scores remain pending with conservative interval; never silently full credit.",
+  "judge_model": "qwen3.8-omni-flash",
+  "judge_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+  "minimum_original_window_seconds": 2,
+  "truth_policy": "Source identity fixed before solver; visual/audio facts from separate modality inspection; uncertain events not mandatory."
+}

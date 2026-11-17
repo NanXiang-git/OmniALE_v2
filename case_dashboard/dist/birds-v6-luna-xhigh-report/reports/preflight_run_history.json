@@ -1,0 +1,97 @@
+{
+  "formal_attempts": 1,
+  "reports": {
+    "generic_preflight": {
+      "case": "generic_preflight",
+      "source_case": "generic_preflight",
+      "mode": "tools",
+      "host_process_returncode": 1,
+      "host_start_unix": 1794908969.9583693,
+      "host_end_unix": 1794909007.547843,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "generic_preflight",
+        "returncode": 1,
+        "timed_out": false,
+        "utc": 1794909008.2488115,
+        "elapsed_seconds": 36.15548610687256
+      }
+    },
+    "generic_preflight_retry1": {
+      "case": "generic_preflight_retry1",
+      "source_case": "generic_preflight",
+      "mode": "tools",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794909351.3651404,
+      "host_end_unix": 1794909374.983701,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "generic_preflight_retry1",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794909375.6161926,
+        "elapsed_seconds": 20.98779559135437
+      }
+    },
+    "deadline_preflight": {
+      "case": "deadline_preflight",
+      "source_case": "deadline_preflight",
+      "mode": "wallcheck",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794909044.2421465,
+      "host_end_unix": 1794909047.1115048,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "deadline_preflight",
+        "returncode": -9,
+        "timed_out": true,
+        "utc": 1794909047.5423558,
+        "elapsed_seconds": 2.01578688621521
+      }
+    },
+    "unbounded_preflight": {
+      "case": "unbounded_preflight",
+      "source_case": "unbounded_preflight",
+      "mode": "unboundedcheck",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794909044.242134,
+      "host_end_unix": 1794909048.434723,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "unbounded_preflight",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794909048.788295,
+        "elapsed_seconds": 3.2611279487609863
+      }
+    },
+    "model_preflight_user_credential": {
+      "case": "model_preflight_user_credential",
+      "source_case": "model_preflight_user_credential",
+      "mode": "smoke",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794908969.969443,
+      "host_end_unix": 1794909195.2818995,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "model_preflight_user_credential",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794909195.7149575,
+        "elapsed_seconds": 223.62165522575378
+      }
+    }
+  },
+  "generic_first_failure": "w\u0000s\u0000l\u0000:\u0000 \u0000�hKm0R \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006tM�n\f�FO*g\\��P0R \u0000W\u0000S\u0000L\u0000\u00020N\u0000A\u0000T\u0000 \u0000!j\u000f_\u000bN�v \u0000W\u0000S\u0000L\u0000 \u0000\nN/e\u0001c \u0000l\u0000o\u0000c\u0000a\u0000l\u0000h\u0000o\u0000s\u0000t\u0000 \u0000�N\u0006t\u00020\n\u0000\n\u0000Traceback (most recent call last):\n  File \"/usr/lib/python3.12/urllib/request.py\", line 1344, in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n  File \"/usr/lib/python3.12/http/client.py\", line 1365, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n  File \"/usr/lib/python3.12/http/client.py\", line 1411, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n  File \"/usr/lib/python3.12/http/client.py\", line 1360, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n  File \"/usr/lib/python3.12/http/client.py\", line 1120, in _send_output\n    self.send(msg)\n  File \"/usr/lib/python3.12/http/client.py\", line 1064, in send\n    self.connect()\n  File \"/usr/lib/python3.12/http/client.py\", line 1506, in connect\n    self.sock = self._context.wrap_socket(self.sock,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/ssl.py\", line 455, in wrap_socket\n    return self.sslsocket_class._create(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/ssl.py\", line 1042, in _create\n    self.do_handshake()\n  File \"/usr/lib/python3.12/ssl.py\", line 1320, in do_handshake\n    self._sslobj.do_handshake()\nssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/runtime/inside.py\", line 90, in <module>\n    with urllib.request.urlopen('https://pypi.org/pypi/packaging/json',timeout=30) as response:assert response.status==200\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 515, in open\n    response = self._open(req, data)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 532, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 1392, in https_open\n    return self.do_open(http.client.HTTPSConnection, req,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 1347, in do_open\n    raise URLError(err)\nurllib.error.URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>\n",
+  "note": "First generic preflight failed in PyPI TLS handshake; unchanged-environment retry passed. Model smoke does not inspect benchmark. Judge and source controls are separate."
+}

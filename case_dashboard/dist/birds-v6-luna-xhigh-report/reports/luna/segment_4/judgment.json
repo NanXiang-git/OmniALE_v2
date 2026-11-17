@@ -1,0 +1,183 @@
+{
+  "segment": 4,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "芦苇高而密，鸟体始终被叶片挡住。背景声谱里有零散的窄带短音，来源无法确认，这段只能保留为未定种的芦苇间鸣禽。",
+    "speech_spans": [
+      {
+        "start": 5.84,
+        "end": 9.04,
+        "text": "芦苇高而密，鸟体始终被叶片挡住。"
+      },
+      {
+        "start": 9.68,
+        "end": 17.36,
+        "text": "背景声谱里有零散的窄带短音，来源无法确认，这段只能保留为未定种的芦苇间鸣禽。"
+      }
+    ],
+    "background": "持续的户外自然环境音，包括多种鸟类鸣叫和昆虫 chirping 声。",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "语调平直，缺乏自然的情感起伏和重音变化，带有明显的机械朗读感。",
+      "times": [
+        6.48,
+        17.92
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色干瘪，缺乏真人发声的共鸣和气息感，听起来像基础的合成语音。",
+      "times": [
+        6.48,
+        17.92
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音字正腔圆，每个字都很清晰，没有吞音或模糊的情况，易于理解。",
+      "times": [
+        6.48,
+        17.92
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但略显生硬，句间停顿时间固定，缺乏自然说话的呼吸节奏。",
+      "times": [
+        6.48,
+        17.92
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声分离度较好，鸟鸣声作为环境音存在，未严重干扰人声的听取。",
+      "times": [
+        0.0,
+        23.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "全程可清晰听到真实的鸟类鸣叫声，保留了丰富的自然环境音细节。",
+      "times": [
+        0.0,
+        23.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 6.48,
+        "reason": "无人声，可清晰听到多种鸟类鸣叫的背景音"
+      },
+      {
+        "start": 17.92,
+        "end": 23.0,
+        "reason": "无人声，可清晰听到多种鸟类鸣叫的背景音"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "未定种的芦苇间鸣禽",
+    "I_reason": "在 09.68-17.36 秒的旁白中，解说员明确表示“来源无法确认，这段只能保留为未定种的芦苇间鸣禽”，并未说出真值物种名称“弗吉尼亚秧鸡”。",
+    "F": {
+      "score": 1.0,
+      "reason": "解说内容准确描述了画面中鸟体被叶片遮挡、视觉无法辨认的事实，并基于此做出了保守且符合逻辑的判断（未定种），没有捏造任何虚假的视觉或听觉事实。",
+      "times": [
+        [
+          5.84,
+          17.36
+        ]
+      ]
+    },
+    "E": {
+      "score": 1.0,
+      "reason": "视听证据高度对应：视频画面确实显示失焦的湿地茎叶，鸟体不可见；音频背景中确实存在零散的窄带短音（鸟鸣）。解说词如实反映了这些观察结果，承认了单凭当前素材无法进行物种鉴定，没有将不确定的声音与画面强行绑定。",
+      "times": [
+        [
+          5.84,
+          17.36
+        ]
+      ]
+    },
+    "claims": [
+      {
+        "claim": "芦苇高而密，鸟体始终被叶片挡住。",
+        "supported": true,
+        "reason": "视频画面全程展示的是失焦的绿色植物茎叶，确实无法看到清晰的鸟类个体，该描述与视觉证据一致。"
+      },
+      {
+        "claim": "背景声谱里有零散的窄带短音，来源无法确认，这段只能保留为未定种的芦苇间鸣禽。",
+        "supported": true,
+        "reason": "音频中确实包含间歇性的高频鸟鸣声，但由于画面中没有出现对应的鸟类实体，无法通过视觉交叉验证声源，因此判定为“来源无法确认”和“未定种”是严谨且符合本片证据状况的结论。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录，白色字体清晰可读。内容准确对应旁白文字（含SRT中的换行），且位置处于画面下方黑边/暗部区域，未遮挡主要视觉对象（芦苇）。",
+      "times": [
+        {
+          "start": 106.6,
+          "end": 119.355,
+          "text": "芦苇高而密... / 背景声谱里..."
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面完美对应。当画面展示“失焦湿地茎叶”时，字幕同步显示“鸟体始终被叶片挡住”，随后对声音来源进行说明，逻辑连贯且符合视觉事实。",
+      "times": [
+        {
+          "start": 106.6,
+          "end": 119.355,
+          "text": "画面为密集芦苇，无可见鸟类，解说描述环境及声音状态"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 100.767,
+        "end": 106.667,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 118.817,
+        "end": 123.967,
+        "matched_original_seconds": 5
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 6.48,
+        "reason": "无人声，可清晰听到多种鸟类鸣叫的背景音"
+      },
+      {
+        "start": 17.92,
+        "end": 23.0,
+        "reason": "无人声，可清晰听到多种鸟类鸣叫的背景音"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 9,
+    "compared_seconds": 22
+  }
+}

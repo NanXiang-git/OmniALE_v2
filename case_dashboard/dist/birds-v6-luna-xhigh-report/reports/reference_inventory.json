@@ -1,0 +1,1366 @@
+{
+  "scope": "Exact URL events from formal proxy records. Approved response is a return decision, not proof that the solver read/understood every byte. Infra passthrough URLs are not visible.",
+  "urls": [
+    {
+      "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+      "events": [
+        {
+          "utc": 1794909556.6901948,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909556.8178544,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://api.github.com/repos/openai/plugins",
+      "events": [
+        {
+          "utc": 1794909557.1730368,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909557.512933,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 5854
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "dc5befdb3f2ba513763e2392d624fdffb1c772999332621fa43785f954292c8c"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+      "events": [
+        {
+          "utc": 1794909557.5946038,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909557.915083,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 326
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "4b9a8b2cce6a7723094c545ec327fd31d43adfa05d7303db80d97a4018f35c92"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://api.github.com/repos/openai/plugins/zipball/d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "events": [
+        {
+          "utc": 1794909558.0088387,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909558.3306313,
+          "action": "http_response_inspected",
+          "status": 302,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 0
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "events": [
+        {
+          "utc": 1794909558.5896463,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909569.9697428,
+          "action": "http_response_inspected",
+          "status": 429,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 82
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+      "events": [
+        {
+          "utc": 1794909570.061479,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909570.1694815,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+      "events": [
+        {
+          "utc": 1794909615.4293792,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909630.4451766,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7ed20980>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794909676.1852355,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909692.2533886,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a34d0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794909738.3564153,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909754.5525203,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053a0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794909800.6795206,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909815.7051408,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606240>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794909862.7158568,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909877.745164,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6070b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794909923.7027984,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794909939.755971,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c805106b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910047.811934,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910062.8377442,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606c90>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910109.8403733,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910124.8711236,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605dc0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910170.985601,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910187.1974971,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610b30>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910233.6016583,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910248.625439,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053a0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910294.7262723,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910311.1871374,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6068a0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910356.1373887,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910371.16639,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3aa0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910417.9960437,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910433.02068,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611eb0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910479.111573,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910494.959599,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a36b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910541.199637,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910557.244479,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6103b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910603.2989602,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910618.3268359,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612300>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910665.5589607,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910680.6001236,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605790>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910727.817915,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910742.854455,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6064e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910790.0202034,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910805.0447803,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3050>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910851.1302454,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910867.285888,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613260>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910913.4220982,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910929.7810056,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a2f60>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794910975.8635418,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910992.0566103,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6052e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911038.2500184,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911053.2766438,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d607080>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911100.8851717,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911115.9136,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6123c0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911162.0344718,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911177.083932,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613ce0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911222.728815,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911237.7616074,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606960>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911283.4620903,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911283.5625026,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794911345.1150286,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911345.2564683,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794911405.9663532,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911406.1102052,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794911466.6994777,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911481.7302608,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3410>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911528.349465,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911543.3910427,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611c70>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911589.7304473,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911604.7517354,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613d10>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911651.2588677,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911666.2897794,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612e70>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911712.0430315,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911712.1041684,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794911773.8427072,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911788.9728715,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ReadTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Read timed out. (read timeout=15)"
+        },
+        {
+          "utc": 1794911835.4107375,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911850.4333394,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6344a0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911897.2357986,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911912.2945564,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606f60>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794911958.1028264,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911973.1410093,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c805127e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912020.0870957,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912035.142379,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612450>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912081.769905,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912096.8017116,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612570>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912142.8857517,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912158.6785164,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6139b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912204.5181968,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912219.544487,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7db4f800>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912266.4177272,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912281.4405918,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605970>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912388.7691386,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912403.8083603,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612e40>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794912450.76095,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912450.9107277,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912512.4296558,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912512.5667686,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912573.3143835,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912573.4066103,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912635.3170488,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912635.4349787,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912696.9874492,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912697.1330266,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912758.6109905,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912758.7533422,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912820.6381185,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912820.9098406,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912881.174149,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912881.297171,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794912942.944314,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794912943.0664792,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794913004.7622104,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913020.744954,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3920>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913066.551343,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913081.589737,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a2e70>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913128.6555278,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913143.874503,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606de0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913190.0699894,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913205.0952227,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6100e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913251.8376658,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913266.862724,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610b00>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913312.6943226,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913328.5494475,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6350d0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913373.5146224,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913388.547786,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611160>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913436.755927,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913451.8005545,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d612cf0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913498.2200434,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913513.2598789,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605eb0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913558.993912,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913574.8604941,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a30b0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913620.7775154,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913635.8345885,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6347d0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913682.497239,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913698.359311,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6053d0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913744.228069,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913759.2733595,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7df92840>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913805.8385918,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913820.8706288,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6121e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913867.5374439,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913882.5822558,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d634e90>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913928.367291,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794913944.2042906,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6358e0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794913990.014438,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914005.836724,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611910>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914051.5876844,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914066.6106486,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c80512c00>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914112.3675494,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914127.4086628,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606b10>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914172.338517,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914187.3653193,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635670>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914232.3944607,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914247.8546364,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605dc0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914293.238848,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914308.2736576,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3500>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914353.9691079,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914369.0128055,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611220>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914413.9470992,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914428.9708776,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613da0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914473.9208462,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914488.9465425,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d6366f0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914534.854973,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914549.889417,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d613170>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914594.8891904,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914596.0269935,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794914655.1488295,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914670.3287556,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3200>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914714.8743627,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914730.3199942,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d606bd0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914835.6851296,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914851.1318908,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635d60>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794914957.6133585,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794914972.6419723,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3590>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915079.2461584,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915094.75302,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7ed88890>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915201.2286549,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915216.2845259,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d610e90>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915262.477708,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915277.5169704,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d635d90>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915322.7045765,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915338.414961,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d636f30>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915384.070768,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915399.1087127,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611d90>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915505.8341136,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915521.503723,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d5a3530>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915566.0875754,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915581.1196268,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d605af0>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915626.06076,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915641.0900085,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d634e60>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915686.073122,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915701.128149,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c80512c00>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915746.004863,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915761.0615466,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7df90b60>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915805.996225,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794915821.0302787,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='ab.chatgpt.com', port=443): Max retries exceeded with url: /otlp/v1/metrics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7c7d611c10>, 'Connection to ab.chatgpt.com timed out. (connect time"
+        },
+        {
+          "utc": 1794915824.099569,
+          "action": "http_request"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/eastern-kingbird",
+      "events": [
+        {
+          "utc": 1794910086.5510857,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910088.5626464,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 274679
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "fa6ce68a48ecad52e2fd0d345080ac84e20915cfadb05bf75f4d30ef6703a88a"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/western-kingbird",
+      "events": [
+        {
+          "utc": 1794910359.4573872,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910375.8331382,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+      "events": [
+        {
+          "utc": 1794910376.3041549,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910379.6602058,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 266801
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "b72158b09d0a7b0d947ec77d176cc41dbdc72491000c00ff18b7b616d7dafa65"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "events": [
+        {
+          "utc": 1794910379.9506288,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910382.505106,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 286126
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "2b112ec426c2a316576f0716be8b60d041eb2b0dfb2475f990bdeb7bb11482dc"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "events": [
+        {
+          "utc": 1794910507.4652805,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910555.0998633,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ReadTimeout: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=45)"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
+      "events": [
+        {
+          "utc": 1794910790.3549082,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910806.2350664,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 4388
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap",
+      "events": [
+        {
+          "utc": 1794910790.4138317,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910790.6548266,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 466
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "2aa29097462c7ac09fafe2a1ea5eaf0169c5cc3b1e59b0700ab589149c0021c9"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+      "events": [
+        {
+          "utc": 1794910836.4665349,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794910838.4329054,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 10540644
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/bewicks-wren",
+      "events": [
+        {
+          "utc": 1794911605.3944194,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911607.0092702,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 270602
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "69f5590844cf16bdb3d8020c9a650ffc6b3c50de11bcf7883ccc2ca66381e3b5"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+      "events": [
+        {
+          "utc": 1794911605.4872398,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911606.6037621,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 265220
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "5168bbfb6d5143561b9e2898136bd29000a3fdf1e7a12cd8d82338e7a48afcf8"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+      "events": [
+        {
+          "utc": 1794911605.512848,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911612.5855424,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 276709
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "3779c55ef65c4363260c2d710d38ae425a391ca35c36b8c859d4375d555d75b4"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+      "events": [
+        {
+          "utc": 1794911605.538376,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794911611.881276,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 268268
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "9a959f8483c634492b83d416812f73a3a9fa3a13486c5a8315606a974df0e751"
+      ],
+      "audio_overlap": null
+    }
+  ]
+}

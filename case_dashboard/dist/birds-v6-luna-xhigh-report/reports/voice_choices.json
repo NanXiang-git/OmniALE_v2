@@ -1,0 +1,377 @@
+{
+  "luna": {
+    "summary": "模型自行选择并安装 edge-tts，在 Python 中调用网络语音服务，编写制作脚本完成配音与混音。",
+    "package": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存提交文件中的明确音色字符串；选型过程另见调用证据。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 14,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc \"/usr/bin/time -p python3 -m pip install --target /workspace/site-packages edge-tts && fc-list :lang=zh family | sort -u | head -20 && curl -L --max-time 20 -sS -o /workspace/scratch/audubon.html -w '%{http_code} %{url_effective} %{size_download}\\\\n' 'https://www.audubon.org/field-guide/bird/eastern-kingbird' && sha256sum /workspace/scratch/audubon.html && date -u +%s.%N\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Collecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\n  Downloading edge_tts-7.3.0-py3-none-any.whl.metadata (6.1 kB)\nINFO: pip is looking at multiple versions of edge-tts to determine which version is compatible with other requirements. This could take a while.\n  Downloading edge_tts-7.2.8-py3-none-any.whl.metadata (5.5 kB)\n  Downloading edge_tts-7.2.7-py3-none-any.whl.metadata (5.5 kB)\n  Downloading edge_tts-7.2.6-py3-none-any.whl.metadata (5.5 kB)\n  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken b\n…\naiohttp>=3.7.4.post0\n    edge-tts 4.0.9 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.8 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.7 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.6 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.5 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.4 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.3 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.2 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.1 depends on aiohttp>=3.7.4.post0\n    edge-tts 4.0.0 depends on aiohttp>=3.7.4.post0\n    edge-tts 3.0.2 depends on aiohttp>=3.7.4.post0\n    edge-tts 3.0.1 depends on aiohttp>=3.7.4.post0\n    edge-tts 3.0.0 depends on aiohttp>=3.7.4.post0\n    edge-tts 2.2.2 depends on aiohttp>=3.7.4.post0\n\nAdditionally, some packages in these conflicts have no matching distributions available for your environment:\n    aiohttp\n\nTo fix this you could try to:\n1. loosen the range of package versions you've specified\n2. remove package versions to allow pip to attempt to solve the dependency conflict\n\nERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts\nreal 153.47\nuser 1.34\nsys 0.91\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 24,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --disable-pip-version-check --no-cache-dir --retries 1 --timeout 30 --target /workspace/site-packages edge-tts'",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Collecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)\nCollecting tabulate<1.0.0,>=0.4.4 (from edge-tts)\n  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)\nCollecting typing-extensions<5.0.0,>=4.1.0 (from edge-tts)\n  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)\nCollecting aiohappyeyeballs>=2.5.0 (from aiohttp<4.0.0,>=3.8.0->edge-tts)\n  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)\nCollecting aiosignal>=1.4.0 (from aiohttp<4.0.0,>=3.8.0->edge-tts)\n  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)\nCollecting attrs>=17.3.0 (from aiohttp<4.0.0,>=3.8.0->edge-tts)\n  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)\nCollecting frozenlist>=1.1.1 (from aiohttp<4.0.0,>=3.8.0->edge-tts)\n  Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)\nERROR: Operation cancelled by user\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 36,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc \"python3 -m pip install --disable-pip-version-check --no-deps --target /workspace/site-packages /workspace/scratch/edge_tts.whl && python3 - <<'PY'\nfrom zipfile import ZipFile\nfrom pathlib import Path\np=Path('/workspace/scratch/edge_tts.whl')\nwith ZipFile(p) as z:\n for n in z.namelist():\n  if n.endswith('METADATA'):\n   for line in z.read(n).decode().splitlines():\n    if line.startswith('Requires-Dist:'): print(line)\nPY\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "ERROR: Invalid wheel filename (wrong number of parts): 'edge_tts'\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 37,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc \"mv /workspace/scratch/edge_tts.whl /workspace/scratch/edge_tts-7.3.1-py3-none-any.whl && python3 -m pip install --disable-pip-version-check --no-deps --target /workspace/site-packages /workspace/scratch/edge_tts-7.3.1-py3-none-any.whl && python3 - <<'PY'\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nclass Blocks(HTMLParser):\n def __init__(self): super().__init__(); self.stack=[]; self.active=False; self.depth=0; self.buf=[]; self.items=[]; self.capture=False\n def handle_starttag(self,tag,attrs):\n  d=dict(attrs)\n  if tag=='div' and 'content' in d.get('class','').split():\n   self.capture=True; self.depth=1; self.buf=[]\n  elif self.capture and tag=='div': self.depth+=1\n def handle_endtag(self,tag):\n  if self.capture and tag=='div':\n   self.depth-=1\n   if self.depth<=0: self.items.append(' '.join(''.join(self.buf).split())); self.capture=False\n def handle_data(self,d):\n  if self.capture: self.buf.append(d)\nfor name in ['noddy','albatross']:\n p=Blocks(); p.feed(Path('/workspace/scratch/'+name+'.html').read_text(errors='ignore'))\n print('\\\\n'+name)\n for x in p.items: print(x[:1500])\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Processing ./scratch/edge_tts-7.3.1-py3-none-any.whl\nInstalling collected packages: edge-tts\nSuccessfully installed edge-tts-7.3.1\n\nnoddy\nMovements not well known. Present around the Dry Tortugas January to October. May be seen well offshore elsewhere in Florida waters during warmer months. Sometimes driven to shore or inland in southeast by tropical storms.\nSexes similar — Length: 14-17 in (34-43 cm); wingspan: 2 ft 6 in-2 ft 11 in (76-88 cm); weight: 4.9-7.4 oz (140-210 g). The Brown Noddy is mostly dark brown, with a wedge-shaped tail. White-capped adults are distinct; immatures show less w\n…\nht vision.\nSmall squid are apparently a staple fare of the Laysan Albatross, as they are for some larger albatrosses of southern hemisphere. Also eats fish and fish eggs, crustaceans, some carrion and refuse.\nFirst breeds at age of 7-9 years. Breeding season in Hawaii extends from November to July. Elaborate courtship \"dance,\" performed only by first-time breeders and pre-breeders, includes many movements including bowing head, mutual preening, swinging head from side to side, pointing bill straight up while calling. Nest: Site is on open ground, preferably close to taller vegetation. Nest (begun by female, finished by both sexes) is shallow depression in ground, surrounded by built-up rim.\nMany Laysan Albatross colonies were decimated by feather hunters around beginning of 20th century, but population later recovered and expanded in range. Recent estimates suggest close to 600,000 breeding pairs. In the past, large numbers were killed by driftnets and longline fisheries; these threats have been reduced, but many now die after swallowing large amounts of floating plastic trash, apparently mistaking it for food. Sea level rise is likely to inundate some nesting colonies on islands.\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 50,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"/usr/bin/time -p python3 -m edge_tts --voice zh-CN-XiaoxiaoNeural --rate=-5% --text '这是一段普通话配音测试，语速稍慢，留意句间停顿。' --write-media /workspace/scratch/tts_sample.mp3 && ffprobe -v error -show_entries format=duration:stream=codec_name,sample_rate,channels -of json /workspace/scratch/tts_sample.mp3 && sha256sum /workspace/scratch/tts_sample.mp3\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1592, in _create_direct_connection\n    hosts = await self._resolve_host(host, port, traces=traces)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1202, in _resolve_host\n    return await asyncio.shield(resolved_host_task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1233, in _resolve_host_with_throttle\n    addrs = await self._resolver.resolve(host, port, fa\n…\nect\n    resp = await self.request(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 900, in _request\n    resp = await handler(req)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 854, in _connect_and_send_request\n    conn = await self._connector.connect(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 665, in connect\n    proto = await self._create_connection(req, traces, timeout)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1263, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1598, in _create_direct_connection\n    raise ClientConnectorDNSError(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x7093878db750> [Temporary failure in name resolution]\nreal 4.40\nuser 0.30\nsys 0.14\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 53,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport asyncio, os, edge_tts\nproxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or os.environ.get('ALL_PROXY')\nassert proxy and proxy.startswith(('http://','https://'))\nasync def main():\n await edge_tts.Communicate('这是一段普通话配音测试，语速稍慢，留意句间停顿。',voice='zh-CN-XiaoxiaoNeural',rate='-5%',proxy=proxy).save('/workspace/scratch/tts_sample.mp3')\nasyncio.run(main())\nPY\nffprobe -v error -show_entries format=duration:stream=codec_name,sample_rate,channels -of json /workspace/scratch/tts_sample.mp3 && sha256sum /workspace/scratch/tts_sample.mp3\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mp3\",\n            \"sample_rate\": \"24000\",\n            \"channels\": 1\n        }\n    ],\n    \"format\": {\n        \"duration\": \"5.760000\"\n    }\n}\n39167fffbdb765a202fd3834fe5b28776212e0b7986cdfc4cd2d98e16b587ca2  /workspace/scratch/tts_sample.mp3\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 63,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'cp /workspace/scratch/NotoSansSC.ttf /workspace/submission/NotoSansSC.ttf && sha256sum /workspace/submission/NotoSansSC.ttf && python3 -m py_compile /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af  /workspace/submission/NotoSansSC.ttf\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 65,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc '/usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/candidate/birds_source.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf62.3.100\n  Duration: 00:03:05.50, start: 0.000000, bitrate: 2699 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2496 kb/s, 29.97 fps, 30 tbr, 15360 tbn (default)\n    Metadata:\n      handler_name    : VideoHandler\n      vendor_id       : [0][0][0][0]\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 4\n…\n 14.1%  8.8%  0.0%  0.0%    skip:35.4%\n[libx264 @ 0x613e026308c0] mb B  I16..4:  0.8%  1.0%  0.1%  B16..8: 24.7%  5.1%  0.8%  direct: 4.1%  skip:63.4%  L0:44.1% L1:43.0% BI:12.9%\n[libx264 @ 0x613e026308c0] 8x8 transform intra:58.1% inter:58.6%\n[libx264 @ 0x613e026308c0] direct mvs  spatial:97.6% temporal:2.4%\n[libx264 @ 0x613e026308c0] coded y,uvDC,uvAC intra: 37.8% 69.2% 34.9% inter: 9.7% 14.5% 0.5%\n[libx264 @ 0x613e026308c0] i16 v,h,dc,p: 43% 22% 12% 23%\n[libx264 @ 0x613e026308c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 15% 33%  3%  5%  6%  5%  4%  5%\n[libx264 @ 0x613e026308c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 20% 15%  5%  9%  7%  9%  6%  7%\n[libx264 @ 0x613e026308c0] i8c dc,h,v,p: 51% 20% 21%  8%\n[libx264 @ 0x613e026308c0] Weighted P-Frames: Y:1.8% UV:1.6%\n[libx264 @ 0x613e026308c0] ref P L0: 62.7% 10.6% 18.6%  4.5%  3.5%  0.0%\n[libx264 @ 0x613e026308c0] ref B L0: 82.2% 13.4%  3.6%  0.9%\n[libx264 @ 0x613e026308c0] ref B L1: 95.7%  4.3%\n[libx264 @ 0x613e026308c0] kb/s:2299.82\n[aac @ 0x613e03522f00] Qavg: 3710.731\n{\"tts_seconds\": 29.233, \"assembly_seconds\": 1.018, \"render_seconds\": 33.944, \"validation_seconds\": 0.264, \"final_duration_seconds\": 185.5}\nreal 71.45\nuser 318.43\nsys 12.21\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 74,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc '/usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 21.714, \"assembly_seconds\": 1.095, \"render_seconds\": 33.342, \"validation_seconds\": 0.254, \"final_duration_seconds\": 185.5}\nreal 62.98\nuser 314.81\nsys 12.37\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 80,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport asyncio, os, edge_tts\nproxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or os.environ.get('ALL_PROXY')\nasync def main():\n c=edge_tts.Communicate('第一句在树枝上。第二句说明了鸟的行为。第三句补充声谱限制。',voice='zh-CN-XiaoxiaoNeural',rate='-5%',boundary='SentenceBoundary',proxy=proxy)\n async for m in c.stream():\n  if m['type']=='audio': continue\n  print(m)\nasyncio.run(main())\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{'type': 'SentenceBoundary', 'offset': 1000000, 'duration': 21210526, 'text': '第一句在树枝上。'}\n{'type': 'SentenceBoundary', 'offset': 21710526, 'duration': 25131579, 'text': '第二句说明了鸟的行为。'}\n{'type': 'SentenceBoundary', 'offset': 46842105, 'duration': 27500000, 'text': '第三句补充声谱限制。'}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 81,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport asyncio, os, edge_tts\ntext='这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来纳鹪鹩。它被托在手中，羽毛与长尾清楚可见；开头有几组短促高音，但不能确认来自这只鸟。'\nproxy=os.environ.get('HTTPS_PROXY') or os.environ.get('HTTP_PROXY') or os.environ.get('ALL_PROXY')\nasync def main():\n c=edge_tts.Communicate(text,voice='zh-CN-XiaoxiaoNeural',rate='-5%',boundary='SentenceBoundary',proxy=proxy)\n boundaries=[]\n async for m in c.stream():\n  if m['type']=='SentenceBoundary': boundaries.append(m['text']); print(round(m['offset']/10_000_000,3),round(m['duration']/10_000_000,3),repr(m['text']))\n print('joined_matches', ''.join(boundaries)==text)\nasyncio.run(main())\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "0.1 6.305 '这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来纳鹪鹩。'\n6.355 8.697 '它被托在手中，羽毛与长尾清楚可见；开头有几组短促高音，但不能确认来自这只鸟。'\njoined_matches True\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 85,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 -m py_compile /workspace/submission/tts_and_mix.py && /usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 20.292, \"assembly_seconds\": 1.068, \"render_seconds\": 31.138, \"validation_seconds\": 0.173, \"final_duration_seconds\": 185.5}\nreal 59.46\nuser 326.21\nsys 12.19\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 87,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json,re,wave\nfrom pathlib import Path\np=Path('/workspace/submission')\nseg=json.loads((p/'segments.json').read_text())\nlog=json.loads((p/'research_log.json').read_text())\nsrt=(p/'subtitles.srt').read_text()\nblocks=re.findall(r'(?m)\"'^'\"\\\\d+\\\\n([\"'^'\"\\\\n]+)\\\\n((?:(?\"'!'\"\\\\n\\\\n).)+)',srt)\nprint('srt cues',len(blocks))\nfor i,x in enumerate(seg['segments'],1):\n cues=[]\n for timing,body in blocks:\n  a,b=[float(t.split(':')[0])*3600+float(t.split(':')[1])*60+float(t.split(':')[2].replace(',','.')) for t in timing.split(' --> ')]\n  if a>=x['start'] and a<x['end']:\n   cues.append(re.sub(r'\\\\{\\\\\\\\an8\\\\}','',body).replace('\\\\n',''))\n shown=''.join(cues)\n actual=''.join(y['text'] for y in x['narration'])\n print(i,'transcript_match',shown==actual,'cue_count',len(cues),'voice',x['narration'][0]['start'],x['narration'][0]['end'],'window',x['original_sound_windows'])\nwith wave.open(str(p/'narration.wav'),'rb') as w: print('narration_wav',w.getframerate(),w.getnchannels(),w.getnframes())\nprint('research_log_elapsed',log['elapsed_seconds_from_supplied_start'],'tts_phase',log['actions'][-3]['elapsed_seconds'],'render',log['generation']['render_seconds'])\nprint('outputs',[(x.name,x.stat().st_size) for x in sorted(p.iterdir()) if x.is_file()])\nPY\nffprobe -v error -show_entries format=duration:stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels,nb_frames -of json /workspace/submission/final.mp4\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "srt cues 13\n1 transcript_match False cue_count 2 voice 7.0 22.12 window [{'start': 0.0, 'end': 5.0}]\n2 transcript_match False cue_count 2 voice 53.5 65.38 window [{'start': 46.066667, 'end': 51.066667}]\n3 transcript_match False cue_count 2 voice 76.5 89.94 window [{'start': 95.766667, 'end': 100.766667}]\n4 transcript_match False cue_count 2 voice 106.5 119.412 window [{'start': 100.766667, 'end': 105.5}]\n5 transcript_match False cue_count 3 voice 131.5 144.916 window [{'start': 126.5, 'end': 131.0}]\n6 transcript_match False cue_count 2 voice 164.5 178.252 window [{'start': 158.466667, 'end': 163.466667}]\nnarration_wav 48000 2 8902400\nresearch_log_elapsed 3748.203 tts_phase 1.0679018619994167 render 31.138\noutputs [('DEPENDENCIES.md', 1260), ('final.mp4', 58973839), ('narration.wav', 35609644), ('research_log.json', 14510), ('segments.json', 8653), ('subtitles.srt', 1462), ('tts_and_mix.py', 31979)]\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"r_frame_rate\": \"30/1\",\n            \"nb_frames\": \"5565\"\n        },\n        {\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"r_frame_rate\": \"0/0\",\n            \"nb_frames\": \"8695\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"185.500000\"\n    }\n}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 99,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 -m py_compile /workspace/submission/tts_and_mix.py && /usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 25.604, \"assembly_seconds\": 0.408, \"render_seconds\": 31.734, \"validation_seconds\": 5.727, \"final_duration_seconds\": 185.5}\nreal 70.17\nuser 331.92\nsys 13.45\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 100,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json,re,wave\nfrom pathlib import Path\np=Path('/workspace/submission')\nsegments=json.loads((p/'segments.json').read_text())['segments']\nlog=json.loads((p/'research_log.json').read_text())\nsrt=(p/'subtitles.srt').read_text(encoding='utf8')\nblocks=srt.strip().split('\\\\n\\\\n')\nparsed=[]\nfor block in blocks:\n lines=block.splitlines()\n start,end=lines[1].split(' --> ')\n def sec(t):\n  h,m,s=t.split(':'); ss,ms=s.split(','); return int(h)*3600+int(m)*60+int(ss)+int(ms)/1000\n parsed.append((sec(start),sec(end),re.sub(r'\\\\{\\\\\\\\an8\\\\}','',''.join(lines[2:]))))\nprint('subtitle_cues',len(parsed))\nfor i,x in enumerate(segments,1):\n shown=''.join(text for a,b,text in parsed if x['start']<=a<x['end'])\n actual=''.join(n['text'] for n in x['narration'])\n print(i,'exact_subtitle_match',shown==actual,'cues',sum(1 for a,b,t in parsed if x['start']<=a<x['end']),'window_secs',x['original_sound_windows'][0]['end']-x['original_sound_windows'][0]['start'],'voice_start',x['narration'][0]['start'],'voice_end',x['narration'][0]['end'])\nprint('audio similarity',log['generation']['original_audio_window_similarity_after_codec_alignment'])\nprint('timing',log['task_started_at_utc'],log['completed_at_utc'],log['elapsed_seconds_from_supplied_start'])\nprint('latest generation',log['generation']['render_seconds'],log['generation']['render_duration_seconds'])\nwith wave.open(str(p/'narration.wav'),'rb') as w: print('narration',w.getframerate(),w.getnchannels(),w.getnframes(),w.getnframes()/w.getframerate())\nprint('files',[(f.name,f.stat().st_size) for f in sorted(p.iterdir()) if f.is_file()])\nPY\nffprobe -v error -show_entries format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels,nb_frames -of json /workspace/submission/final.mp4\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nsubtitle_cues 13\n1 exact_subtitle_match True cues 2 window_secs 5.0 voice_start 7.0 voice_end 22.12\n2 exact_subtitle_match True cues 2 window_secs 5.0 voice_start 53.5 voice_end 65.38\n3 exact_subtitle_match True cues 2 window_secs 5.0 voice_start 76.5 voice_end 89.94\n4 exact_subtitle_match True cues 2 window_secs 4.733333000000002 voice_start 106.5 voice_end 119.412\n5 exact_subtitle_match True cues 3 window_secs 4.5 voice_start 131.5 voice_end 144.916\n6 exact_subtitle_match True cues 2 window_secs 5.0 voice_start 164.5 v\n…\n2]}, {'segment': 3, 'window': {'start': 95.766667, 'end': 100.766667}, 'codec_delay_alignment_seconds': 0.005, 'channel_correlations': [0.892, 0.892]}, {'segment': 4, 'window': {'start': 100.766667, 'end': 105.5}, 'codec_delay_alignment_seconds': 0.005, 'channel_correlations': [0.918, 0.918]}, {'segment': 5, 'window': {'start': 126.5, 'end': 131.0}, 'codec_delay_alignment_seconds': 0.005, 'channel_correlations': [0.885, 0.885]}, {'segment': 6, 'window': {'start': 158.466667, 'end': 163.466667}, 'codec_delay_alignment_seconds': 0.005, 'channel_correlations': [0.925, 0.925]}]\nKeyError: 'task_started_at_utc'\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"r_frame_rate\": \"30/1\",\n            \"nb_frames\": \"5565\"\n        },\n        {\n            \"index\": 1,\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"r_frame_rate\": \"0/0\",\n            \"nb_frames\": \"8695\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"185.500000\"\n    }\n}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 104,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 -m py_compile /workspace/submission/tts_and_mix.py && /usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 23.491, \"assembly_seconds\": 1.055, \"render_seconds\": 32.484, \"validation_seconds\": 5.007, \"final_duration_seconds\": 185.5}\nreal 67.66\nuser 332.32\nsys 12.58\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 106,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"ffmpeg -hide_banner -loglevel error -ss 10 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final4_10.jpg && ffmpeg -hide_banner -loglevel error -ss 15 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final4_15.jpg && ffmpeg -hide_banner -loglevel error -ss 80 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final4_80.jpg && ffmpeg -hide_banner -loglevel error -ss 137 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final4_137.jpg && ffmpeg -hide_banner -loglevel error -ss 170 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final4_170.jpg && python3 - <<'PY'\nimport json,re,wave\nfrom pathlib import Path\np=Path('/workspace/submission')\nsegments=json.loads((p/'segments.json').read_text(encoding='utf8'))['segments']\nlog=json.loads((p/'research_log.json').read_text(encoding='utf8'))\nsrt=(p/'subtitles.srt').read_text(encoding='utf8')\nblocks=srt.strip().split('\\\\n\\\\n')\nparsed=[]\nfor block in blocks:\n lines=block.splitlines(); start,end=lines[1].split(' --> ')\n def sec(t):\n  h,m,s=t.split(':'); ss,ms=s.split(','); return int(h)*3600+int(m)*60+int(ss)+int(ms)/1000\n parsed.append((sec(start),sec(end),re.sub(r'\\\\{\\\\\\\\an8\\\\}','',''.join(lines[2:]))))\nfor i,x in enumerate(segments,1):\n shown=''.join(text for a,b,text in parsed if x['start']<=a<x['end'])\n actual=''.join(n['text'] for n in x['narration'])\n print(i,'exact_subtitle_match',shown==actual,'cues',sum(1 for a,b,t in parsed if x['start']<=a<x['end']),'window',round(x['original_sound_windows'][0]['end']-x['original_sound_windows'][0]['start'],3))\nprint('research_log_keys',sorted(log.keys()))\nprint('elapsed_seconds',log['elapsed_seconds_from_supplied_start'],'audio_window_correlations',[x['channel_correlations'][0] for x in log['generation']['original_audio_window_similarity_after_codec_alignment']])\nprint('dependencies_sha256',__import__('hashlib').sha256((p/'fonts/NotoSansSC.ttf').read_bytes()).hexdigest())\nwith wave.open(str(p/'narration.wav'),'rb') as w: print('narration',w.getframerate(),w.getnchannels(),w.getnframes())\nprint('outputs',[(f.relative_to(p).as_posix(),f.stat().st_size) for f in sorted(p.rglob('*')) if f.is_file()])\nPY\nffprobe -v error -show_entries format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels,nb_frames -of json /workspace/submission/final.mp4\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "1 exact_subtitle_match True cues 2 window 5.0\n2 exact_subtitle_match True cues 2 window 5.0\n3 exact_subtitle_match True cues 2 window 5.0\n4 exact_subtitle_match True cues 2 window 4.733\n5 exact_subtitle_match True cues 3 window 4.5\n6 exact_subtitle_match True cues 2 window 5.0\nresearch_log_keys ['actions', 'completed_at_utc', 'dependencies', 'elapsed_accounting_note', 'elapsed_seconds_from_supplied_start', 'events', 'final_generation_started_at_utc', 'generation', 'network_policy', 'started_at_utc', 'subjective_listening_limit', 'tool_choices']\nelapsed_seconds 4793.818 audio_window_correlations [0.94, 0.912, 0.892, 0.918, 0.885, 0.925]\ndependencies_sha256 450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af\nnarration 48000 2 8902400\noutputs [('DEPENDENCIES.md', 1260), ('__pycache__/tts_and_mix.cpython-312.pyc', 37292), ('final.mp4', 59294552), ('fonts/NotoSansSC.ttf', 10540644), ('narration.wav', 35609644), ('research_log.json', 17436), ('segments.json', 8653), ('subtitles.srt', 1462), ('tts_and_mix.py', 35908)]\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"r_frame_rate\": \"30/1\",\n            \"nb_frames\": \"5565\"\n        },\n        {\n            \"index\": 1,\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"r_frame_rate\": \"0/0\",\n            \"nb_frames\": \"8695\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"185.500000\"\n    }\n}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 107,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"sed -n '1,45p' /workspace/submission/subtitles.srt && python3 - <<'PY'\nfrom datetime import datetime,timezone\nimport json\np=json.load(open('/workspace/submission/research_log.json'))\nfor k in ['started_at_utc','final_generation_started_at_utc','completed_at_utc','elapsed_seconds_from_supplied_start']:\n print(k,p.get(k))\nprint('actions',[(x['action'],x['elapsed_seconds']) for x in p['actions']])\nPY\npython3 -m pip show certifi | sed -n '1,8p'\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "1\n00:00:07,100 --> 00:00:13,405\n{\\an8}这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来\n纳鹪鹩。\n\n2\n00:00:13,355 --> 00:00:22,053\n{\\an8}它被托在手中，羽毛与长尾清楚可见；开头有几组\n短促高音，但不能确认来自这只鸟。\n\n3\n00:00:53,600 --> 00:00:58,445\n灌木枝叶遮住了鸟体，只留下几组短促的声响。\n\n4\n00:00:58,395 --> 00:01:05,329\n现有画面与声谱不足以可靠定种，这一段保留为未\n识别的灌丛鸣禽。\n\n5\n00:01:16,600 --> 00:01:22,892\n枝头这只灰橄榄背、浅腹的小型鹟，外形暂定为东\n部林鹟。\n\n6\n00:01:22,842 --> 00:01:29,882\n它停栖时数次张嘴，声谱也有重复的调性脉冲；近\n似种仍难排除。\n\n7\n00:01:46,600 --> 00:01:50,642\n芦苇高而密，鸟体始终被叶片挡住。\n\n8\n00:01:50,592 --> 00:01:59,355\n背景声谱里有零散的窄带短音，来源无法确认；这\n段只能保留为未定种的芦苇间鸣禽。\n\n9\n00:02:11,600 --> 00:02:14,682\n这是褐色燕鸥成鸟与雏鸟。\n\n10\n00:02:14,632 --> 00:02:19,053\n雏鸟张嘴迎向成鸟；亲鸟会反刍喂食。\nstarted_at_utc 2026-11-17T09:59:12.025159+00:00\nfinal_generation_started_at_utc 2026-11-17T11:18:03.050816+00:00\ncompleted_at_utc 2026-11-17T11:19:05.843199+00:00\nelapsed_seconds_from_supplied_start 4793.818\nactions [('initial_visual_and_audio_analysis', 110.477), ('first_edge_tts_dependency_resolution_attempt', 95.0), ('edge_tts_wheel_download_and_local_install', 15.538), ('proxy_debug_and_tts_sample', 11.12), ('sentence_boundary_alignment_probe', 4.0), ('font_download', 4.536), ('aiohttp_and_cli_dependencies_install', 120.0), ('narration_synthesis_and_conversion', 23.491009391998887), ('superseded_full_render_passes', 193.89000000000001), ('narration_assembly_and_metadata', 1.0550869069993496), ('video_render', 32.48438824499863), ('output_validation', 5.006624567999097)]\nName: certifi\nVersion: 2023.11.17\nSummary: Python package for providing Mozilla's CA Bundle.\nHome-page: https://github.com/certifi/python-certifi\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: MPL-2.0\nLocation: /usr/lib/python3/dist-packages\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 114,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 -m py_compile /workspace/submission/tts_and_mix.py && /usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 30.134, \"assembly_seconds\": 0.514, \"render_seconds\": 32.232, \"validation_seconds\": 5.571, \"final_duration_seconds\": 185.5}\nreal 74.50\nuser 333.27\nsys 13.47\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 116,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"ffmpeg -hide_banner -loglevel error -ss 10 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final5_10.jpg && ffmpeg -hide_banner -loglevel error -ss 15 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final5_15.jpg && ffmpeg -hide_banner -loglevel error -ss 80 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final5_80.jpg && ffmpeg -hide_banner -loglevel error -ss 137 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final5_137.jpg && ffmpeg -hide_banner -loglevel error -ss 170 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final5_170.jpg && python3 - <<'PY'\nimport json,re,wave\nfrom pathlib import Path\np=Path('/workspace/submission')\nsegs=json.loads((p/'segments.json').read_text(encoding='utf8'))['segments']\nlog=json.loads((p/'research_log.json').read_text(encoding='utf8'))\nblocks=(p/'subtitles.srt').read_text(encoding='utf8').strip().split('\\\\n\\\\n')\nparsed=[]\ndef sec(t):\n h,m,s=t.split(':'); ss,ms=s.split(','); return int(h)*3600+int(m)*60+int(ss)+int(ms)/1000\nfor block in blocks:\n lines=block.splitlines(); a,b=lines[1].split(' --> '); text=re.sub(r'\\\\{\\\\\\\\an8\\\\}','',''.join(lines[2:]))\n parsed.append((sec(a),sec(b),text))\nfor i,x in enumerate(segs,1):\n cues=[c for c in parsed if x['start']<=c[0]<x['end']]\n actual=''.join(n['text'] for n in x['narration']); shown=''.join(c[2] for c in cues)\n print(i,'transcript',shown==actual,'cues',len(cues),'window',round(x['original_sound_windows'][0]['end']-x['original_sound_windows'][0]['start'],2))\nprint('cue_overlap',any(a[1]>b[0] for a,b in zip(parsed,parsed[1:])))\nprint('started',log['started_at_utc'],'final_generation',log['final_generation_started_at_utc'],'completed',log['completed_at_utc'])\nprint('elapsed',log['elapsed_seconds_from_supplied_start'],'audio_corr',[x['channel_correlations'][0] for x in log['generation']['original_audio_window_similarity_after_codec_alignment']])\nprint('generation',log['generation']['tts_clips'] and log['generation']['render_seconds'],log['generation']['render_duration_seconds'])\nwith wave.open(str(p/'narration.wav'),'rb') as w: print('wav',w.getframerate(),w.getnchannels(),w.getnframes())\nprint('required',[(f,p.joinpath(f).is_file()) for f in ['final.mp4','narration.wav','subtitles.srt','segments.json','research_log.json','tts_and_mix.py','DEPENDENCIES.md']])\nPY\nffprobe -v error -show_entries format=duration:stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels,nb_frames -of json /workspace/submission/final.mp4\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "1 transcript True cues 2 window 5.0\n2 transcript True cues 2 window 5.0\n3 transcript True cues 2 window 5.0\n4 transcript True cues 2 window 4.73\n5 transcript True cues 3 window 4.5\n6 transcript True cues 2 window 5.0\ncue_overlap False\nstarted 2026-11-17T09:59:12.025159+00:00 final_generation 2026-11-17T11:33:09.679883+00:00 completed 2026-11-17T11:34:19.631366+00:00\nelapsed 5707.606 audio_corr [0.94, 0.912, 0.892, 0.918, 0.885, 0.925]\ngeneration 32.232 185.5\nwav 48000 2 8902400\nrequired [('final.mp4', True), ('narration.wav', True), ('subtitles.srt', True), ('segments.json', True), ('research_log.json', True), ('tts_and_mix.py', True), ('DEPENDENCIES.md', True)]\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"r_frame_rate\": \"30/1\",\n            \"nb_frames\": \"5565\"\n        },\n        {\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"r_frame_rate\": \"0/0\",\n            \"nb_frames\": \"8695\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"185.500000\"\n    }\n}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 119,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'python3 -m py_compile /workspace/submission/tts_and_mix.py && /usr/bin/time -p python3 /workspace/submission/tts_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\"tts_seconds\": 22.409, \"assembly_seconds\": 0.908, \"render_seconds\": 32.156, \"validation_seconds\": 4.823, \"final_duration_seconds\": 185.5}\nreal 64.85\nuser 331.91\nsys 14.24\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 120,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"ffmpeg -hide_banner -loglevel error -ss 180 -i /workspace/submission/final.mp4 -frames:v 1 -y /workspace/scratch/final_last.jpg && python3 - <<'PY'\nimport json,re,wave\nfrom pathlib import Path\np=Path('/workspace/submission')\nseg=json.loads((p/'segments.json').read_text(encoding='utf8'))['segments']\nlog=json.loads((p/'research_log.json').read_text(encoding='utf8'))\nblocks=(p/'subtitles.srt').read_text(encoding='utf8').strip().split('\\\\n\\\\n')\ncues=[]\ndef sec(t):\n h,m,s=t.split(':'); ss,ms=s.split(','); return int(h)*3600+int(m)*60+int(ss)+int(ms)/1000\nfor b in blocks:\n lines=b.splitlines(); a,z=lines[1].split(' --> '); cues.append((sec(a),sec(z),re.sub(r'\\\\{\\\\\\\\an8\\\\}','',''.join(lines[2:]))))\nassert all(not(a[1]>b[0]) for a,b in zip(cues,cues[1:]))\nfor i,x in enumerate(seg):\n shown=''.join(t for a,z,t in cues if x['start']<=a<x['end'])\n actual=''.join(n['text'] for n in x['narration'])\n assert shown==actual,(i+1,shown,actual)\n assert x['original_sound_windows'][0]['end']-x['original_sound_windows'][0]['start']>=2\nprint('six transcripts exactly match; cue timing non-overlapping; all six original windows >=2s')\nwith wave.open(str(p/'narration.wav'),'rb') as w:\n assert w.getframerate()==48000 and w.getnframes()==round(185.4666666666667*48000)\n print('narration',w.getframerate(),w.getnchannels(),w.getnframes())\nprint('output size bytes', (p/'final.mp4').stat().st_size)\nprint('log duration',log['elapsed_seconds_from_supplied_start'],'latest render sec',log['generation']['render_seconds'])\nprint('source correlations',[x['channel_correlations'][0] for x in log['generation']['original_audio_window_similarity_after_codec_alignment']])\nprint('deliverables',sorted(str(x.relative_to(p)) for x in p.rglob('*') if x.is_file()))\nPY\nffprobe -v error -show_entries format=duration:stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of json /workspace/submission/final.mp4\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "six transcripts exactly match; cue timing non-overlapping; all six original windows >=2s\nnarration 48000 2 8902400\noutput size bytes 58969975\nlog duration 6136.652 latest render sec 32.156\nsource correlations [0.94, 0.912, 0.892, 0.918, 0.885, 0.925]\ndeliverables ['DEPENDENCIES.md', '__pycache__/tts_and_mix.cpython-312.pyc', 'final.mp4', 'fonts/NotoSansSC.ttf', 'narration.wav', 'research_log.json', 'segments.json', 'subtitles.srt', 'tts_and_mix.py']\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"h264\",\n            \"codec_type\": \"video\",\n            \"width\": 1280,\n            \"height\": 720,\n            \"r_frame_rate\": \"30/1\"\n        },\n        {\n            \"codec_name\": \"aac\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"r_frame_rate\": \"0/0\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"185.500000\"\n    }\n}\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/luna/DEPENDENCIES.md",
+        "sha256": "e3613e645f63557fc4ea648da45e6757c684f52702c29c89f9e3ddb71c9513d3",
+        "relevant_lines": [
+          {
+            "line": 5,
+            "text": "- 配音客户端：`edge-tts 7.3.1`"
+          },
+          {
+            "line": 6,
+            "text": "- 在线音色：Microsoft Edge `zh-CN-XiaoxiaoNeural`，语速 `-5%`，标准音高"
+          },
+          {
+            "line": 7,
+            "text": "- HTTP 客户端：`aiohttp 3.14.5`，通过 `edge_tts.Communicate(proxy=HTTPS_PROXY)` 显式走环境代理"
+          },
+          {
+            "line": 15,
+            "text": "环境预装 Python、NumPy、SciPy、FFmpeg 与 FFprobe。通过代理下载并安装了 `edge-tts 7.3.1` 及其运行依赖："
+          }
+        ]
+      },
+      {
+        "path": "results/luna/research_log.json",
+        "sha256": "dd752b8471a4df2c7b1d1ecfe7a8fa69a5d0759f1758e17a29c621479c076919",
+        "relevant_lines": [
+          {
+            "line": 8,
+            "text": "    \"proxy\": \"Used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY from the environment; Edge TTS receives the HTTPS_PROXY value explicitly.\","
+          },
+          {
+            "line": 18,
+            "text": "      \"client\": \"edge-tts 7.3.1\","
+          },
+          {
+            "line": 20,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 22,
+            "text": "      \"proxy_argument\": \"HTTPS_PROXY passed to edge_tts.Communicate(proxy=...).\","
+          },
+          {
+            "line": 29,
+            "text": "    \"edge-tts\": \"7.3.1\","
+          },
+          {
+            "line": 395,
+            "text": "      \"action\": \"first_edge_tts_dependency_resolution_attempt\","
+          },
+          {
+            "line": 397,
+            "text": "      \"note\": \"Pip remained in dependency resolution without installing packages; stopped after the recorded 95-second process age and switched to a direct wheel download through the proxy.\""
+          },
+          {
+            "line": 400,
+            "text": "      \"action\": \"edge_tts_wheel_download_and_local_install\","
+          },
+          {
+            "line": 402,
+            "text": "      \"note\": \"Downloaded edge-tts 7.3.1 wheel through the configured proxy and installed it locally without dependencies.\""
+          },
+          {
+            "line": 405,
+            "text": "      \"action\": \"proxy_debug_and_tts_sample\","
+          },
+          {
+            "line": 422,
+            "text": "      \"note\": \"Installed aiohttp and its runtime dependencies plus tabulate through pip and the configured proxy.\""
+          },
+          {
+            "line": 427,
+            "text": "      \"note\": \"Six Mandarin passages synthesized with zh-CN-XiaoxiaoNeural at -5% rate; MP3s converted to 48 kHz PCM.\""
+          }
+        ]
+      },
+      {
+        "path": "results/luna/tts_and_mix.py",
+        "sha256": "a258c4e5fd053389f384a17da94f15841cf660395f2a959cae00d374c3a0015d",
+        "relevant_lines": [
+          {
+            "line": 19,
+            "text": "import edge_tts"
+          },
+          {
+            "line": 29,
+            "text": "VOICE = \"zh-CN-XiaoxiaoNeural\""
+          },
+          {
+            "line": 315,
+            "text": "async def synthesize_all(proxy: str) -> list[dict]:"
+          },
+          {
+            "line": 322,
+            "text": "        communication = edge_tts.Communicate("
+          },
+          {
+            "line": 328,
+            "text": "            proxy=proxy,"
+          },
+          {
+            "line": 551,
+            "text": "            \"action\": \"first_edge_tts_dependency_resolution_attempt\","
+          },
+          {
+            "line": 553,
+            "text": "            \"note\": \"Pip remained in dependency resolution without installing packages; stopped after the recorded 95-second process age and switched to a direct wheel download through the proxy.\","
+          },
+          {
+            "line": 556,
+            "text": "            \"action\": \"edge_tts_wheel_download_and_local_install\","
+          },
+          {
+            "line": 558,
+            "text": "            \"note\": \"Downloaded edge-tts 7.3.1 wheel through the configured proxy and installed it locally without dependencies.\","
+          },
+          {
+            "line": 561,
+            "text": "            \"action\": \"proxy_debug_and_tts_sample\","
+          },
+          {
+            "line": 578,
+            "text": "            \"note\": \"Installed aiohttp and its runtime dependencies plus tabulate through pip and the configured proxy.\","
+          },
+          {
+            "line": 583,
+            "text": "            \"note\": \"Six Mandarin passages synthesized with zh-CN-XiaoxiaoNeural at -5% rate; MP3s converted to 48 kHz PCM.\","
+          },
+          {
+            "line": 607,
+            "text": "        \"edge-tts\": \"7.3.1\","
+          },
+          {
+            "line": 633,
+            "text": "            \"proxy\": \"Used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY from the environment; Edge TTS receives the HTTPS_PROXY value explicitly.\","
+          },
+          {
+            "line": 643,
+            "text": "                \"client\": \"edge-tts 7.3.1\","
+          },
+          {
+            "line": 647,
+            "text": "                \"proxy_argument\": \"HTTPS_PROXY passed to edge_tts.Communicate(proxy=...).\","
+          },
+          {
+            "line": 816,
+            "text": "    proxy = os.environ.get(\"HTTPS_PROXY\") or os.environ.get(\"HTTP_PROXY\") or os.environ.get(\"ALL_PROXY\")"
+          },
+          {
+            "line": 817,
+            "text": "    if not proxy or not proxy.startswith((\"http://\", \"https://\")):"
+          },
+          {
+            "line": 818,
+            "text": "        raise RuntimeError(\"An HTTP(S) proxy is required; no direct connection will be attempted\")"
+          },
+          {
+            "line": 824,
+            "text": "    details = await synthesize_all(proxy)"
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "7e7243951a2ae8a219c8db76fed30bb429256c33b9f52f48e717c4f4f1fbe022",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。"
+  }
+}

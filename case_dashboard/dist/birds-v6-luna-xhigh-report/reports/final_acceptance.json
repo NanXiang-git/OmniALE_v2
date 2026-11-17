@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "created_unix": 1794922290.2693675,
+  "checks": {
+    "frozen_inputs_runtime_and_scorer_unchanged": true,
+    "same_video_as_v3": true,
+    "judge_actual_audio_challenge": true,
+    "scoring_controls": true,
+    "source_guard_preflight": true,
+    "all_downloaded_reference_audio_no_detected_overlap": true,
+    "speech_websocket_and_audio_preflight": true,
+    "authorized_timing_only_task_diff": true,
+    "no_package_voice_or_helper_recommendation_in_instructions": true
+  },
+  "models": {
+    "luna": {
+      "checks": {
+        "environment_preflight_passed": true,
+        "actual_model_verified": true,
+        "all_requests_xhigh": true,
+        "returned_effort_xhigh": true,
+        "no_total_time_limit": true,
+        "sealed_answers_unchanged": true,
+        "no_infrastructure_interruption": true,
+        "no_blacklist_domain_connection": true,
+        "no_known_source_delivered": true,
+        "source_delivery_post_run_audit_passed": true,
+        "scoring_complete": true,
+        "body_formula_consistent": true,
+        "quality_formula_consistent": true,
+        "summary_matches_reviewed_result": true
+      },
+      "task_gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": true,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "video_decodes": true,
+      "narration_valid": true,
+      "score": 10.7291,
+      "elapsed_seconds": 6281.995866060257,
+      "audit_sha256": "282e68715249eb9f3f6dc1fabbd8daac2403214069fa3f3a24ac03f0138ce776",
+      "reviewed_result_sha256": "f35aa95362b6868f85882d4d3363ca40811a00269b3e74ac5f13edb144c41716",
+      "quality_gate_check": {
+        "raw_weighted_quality": 0.6848333333333333,
+        "frozen_global_zero_rule_applies": false,
+        "effective_quality": 0.6848333333333333
+      }
+    }
+  },
+  "meaning": "Experiment integrity acceptance, not task passing; original task failures remain in scores and gates.",
+  "network_limit": "Research responses inspected before delivery; speech/package infrastructure remains passthrough. Unknown derivative content is not completely excluded.",
+  "judge": {
+    "passed": true,
+    "expected": "441243",
+    "response": {
+      "heard_audio": true,
+      "digits": "441243"
+    },
+    "actual_model": "qwen3.8-omni-flash",
+    "actual_endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  },
+  "browser_playback_verified": false
+}

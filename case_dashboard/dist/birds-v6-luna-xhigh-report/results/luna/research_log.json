@@ -1,0 +1,450 @@
+{
+  "started_at_utc": "2026-11-17T09:59:12.025159+00:00",
+  "final_generation_started_at_utc": "2026-11-17T11:40:28.358106+00:00",
+  "completed_at_utc": "2026-11-17T11:41:28.677097+00:00",
+  "elapsed_seconds_from_supplied_start": 6136.652,
+  "elapsed_accounting_note": "Recorded command/session wall times are listed per action; exploratory visual review and source reading are covered by the initial-analysis interval and individual HTTP records.",
+  "network_policy": {
+    "proxy": "Used HTTP_PROXY/HTTPS_PROXY/ALL_PROXY from the environment; Edge TTS receives the HTTPS_PROXY value explicitly.",
+    "source_media_uploaded": false,
+    "external_speech_input": "Only the six authored Chinese narration passages and a short authored test sentence.",
+    "blocked_or_failed_targets_retried_via_alternate_hosts": false,
+    "other_recognition_models_or_subagents_used": false
+  },
+  "tool_choices": {
+    "vision": "FFmpeg sampled frames/contact sheets and local image viewing; no image recognition model.",
+    "audio": "FFmpeg PCM decode, NumPy RMS, SciPy spectrogram; no native listening tool.",
+    "tts": {
+      "client": "edge-tts 7.3.1",
+      "service": "Microsoft Edge neural speech endpoint",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-5%",
+      "proxy_argument": "HTTPS_PROXY passed to edge_tts.Communicate(proxy=...).",
+      "media_upload": false
+    },
+    "mixing": "FFmpeg sidechaincompress lowers the unchanged source audio only while narration is active, followed by a limiter; no music added.",
+    "subtitles": "UTF-8 SRT burned with FFmpeg/libass and local Noto Sans SC."
+  },
+  "dependencies": {
+    "edge-tts": "7.3.1",
+    "aiohttp": "3.14.5",
+    "certifi": "2023.11.17",
+    "tabulate": "0.10.0",
+    "aiohappyeyeballs": "2.7.1",
+    "aiosignal": "1.4.0",
+    "attrs": "26.1.0",
+    "frozenlist": "1.8.0",
+    "idna": "3.20",
+    "multidict": "7.2.1",
+    "propcache": "0.5.4",
+    "typing_extensions": "4.16.0",
+    "yarl": "1.25.1",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4 (system-provided, spectrogram analysis)",
+    "ffmpeg": "system-provided",
+    "ffprobe": "system-provided",
+    "font": "Noto Sans SC TrueType from Google Fonts CSS endpoint"
+  },
+  "events": [
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/carolina-wren",
+      "status": 200,
+      "response_sha256": "3779c55ef65c4363260c2d710d38ae425a391ca35c36b8c859d4375d555d75b4",
+      "used": true,
+      "note": "Read page body; used only for candidate plumage comparison."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+      "status": 200,
+      "response_sha256": "9a959f8483c634492b83d416812f73a3a9fa3a13486c5a8315606a974df0e751",
+      "used": true,
+      "note": "Read page body; used for tentative flycatcher comparison and eastern/western ambiguity."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/brown-noddy",
+      "status": 200,
+      "response_sha256": "b72158b09d0a7b0d947ec77d176cc41dbdc72491000c00ff18b7b616d7dafa65",
+      "used": true,
+      "note": "Read page body; used for adult plumage and regurgitative feeding fact."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "status": 200,
+      "response_sha256": "2b112ec426c2a316576f0716be8b60d041eb2b0dfb2475f990bdeb7bb11482dc",
+      "used": true,
+      "note": "Read page body; used for plumage, nesting setting, and parent-to-young feeding fact."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/bewicks-wren",
+      "status": 200,
+      "response_sha256": "69f5590844cf16bdb3d8020c9a650ffc6b3c50de11bcf7883ccc2ca66381e3b5",
+      "used": false,
+      "note": "Read for comparison; white tail corners and paler underparts fit less well than the chosen tentative candidate."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+      "status": 200,
+      "response_sha256": "5168bbfb6d5143561b9e2898136bd29000a3fdf1e7a12cd8d82338e7a48afcf8",
+      "used": false,
+      "note": "Read for flycatcher comparison; no call-based conclusion drawn."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/eastern-kingbird",
+      "status": 200,
+      "response_sha256": "fa6ce68a48ecad52e2fd0d345080ac84e20915cfadb05bf75f4d30ef6703a88a",
+      "used": false,
+      "note": "Page returned navigation/title text but no useful identification body; not used as evidence."
+    },
+    {
+      "type": "species_reference",
+      "url": "https://www.audubon.org/field-guide/bird/western-kingbird",
+      "status": 403,
+      "response_sha256": "9cd4cf9302730492289d66373bb73c0502528f4b15e8ca9a7e97a81775012387",
+      "used": false,
+      "note": "Access denied; abandoned without trying another host or mirror."
+    },
+    {
+      "type": "tts_probe",
+      "url": "https://translate.google.com/translate_tts",
+      "status": 403,
+      "response_sha256": null,
+      "used": false,
+      "note": "HTTP CONNECT returned 403; abandoned this service and did not retry via another route."
+    },
+    {
+      "type": "tts_service",
+      "url": "https://speech.platform.bing.com/consumer/speech/synthesize/readaloud/voices/list",
+      "status": 200,
+      "response_sha256": null,
+      "used": true,
+      "note": "Voice-list probe succeeded; Edge TTS receives authored text only, never video or source audio."
+    },
+    {
+      "type": "font_download",
+      "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap",
+      "status": 200,
+      "response_sha256": null,
+      "used": true,
+      "note": "CSS identifies a Simplified Chinese Noto Sans font file used for burned subtitles."
+    },
+    {
+      "type": "font_download",
+      "url": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+      "status": 200,
+      "response_sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af",
+      "used": true,
+      "note": "Noto Sans SC TrueType font, downloaded for local subtitle rendering."
+    }
+  ],
+  "generation": {
+    "prior_attempts": [
+      {
+        "reason_superseded": "Initial captions were shortened and the font directory included non-font outputs.",
+        "wall_seconds": 71.45,
+        "tts_seconds": 29.233,
+        "assembly_seconds": 1.018,
+        "render_seconds": 33.944,
+        "validation_seconds": 0.264
+      },
+      {
+        "reason_superseded": "Full transcript was restored, then sentence-level subtitle timing was added after preview.",
+        "wall_seconds": 62.98,
+        "tts_seconds": 21.714,
+        "assembly_seconds": 1.095,
+        "render_seconds": 33.342,
+        "validation_seconds": 0.254
+      },
+      {
+        "reason_superseded": "Sentence timing was correct, but preview showed that a smaller subtitle size would reduce overlap with the birds.",
+        "wall_seconds": 59.46,
+        "tts_seconds": 20.292,
+        "assembly_seconds": 1.068,
+        "render_seconds": 31.138,
+        "validation_seconds": 0.173
+      },
+      {
+        "reason_superseded": "The smaller subtitle was readable, but segment 1 has a clean lower letterbox area and should not use top placement; adjacent sentence cues also had a 50 ms overlap.",
+        "wall_seconds": 70.17,
+        "tts_seconds": 25.604,
+        "assembly_seconds": 0.408,
+        "render_seconds": 31.734,
+        "validation_seconds": 5.727
+      }
+    ],
+    "tts_clips": [
+      {
+        "segment": 1,
+        "seconds": 3.394,
+        "audio_duration_seconds": 15.12,
+        "mp3_sha256": "c9aa717bbd6db3b9246159afb14c5ed52ed3210c81a2e8ced65ee2ff0d4291c5",
+        "text": "这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来纳鹪鹩。它被托在手中，羽毛与长尾清楚可见；开头有几组短促高音，但不能确认来自这只鸟。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 6.305,
+            "text": "这只棕红背、浅色腹部的小鸟，外形暂定为卡罗来纳鹪鹩。"
+          },
+          {
+            "offset_seconds": 6.355,
+            "duration_seconds": 8.697,
+            "text": "它被托在手中，羽毛与长尾清楚可见；开头有几组短促高音，但不能确认来自这只鸟。"
+          }
+        ]
+      },
+      {
+        "segment": 2,
+        "seconds": 3.442,
+        "audio_duration_seconds": 11.88,
+        "mp3_sha256": "a326f70cfa494dee7b0ec9ca0473540994cf41dfe04ffc385d439036a490087e",
+        "text": "灌木枝叶遮住了鸟体，只留下几组短促的声响。现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 4.845,
+            "text": "灌木枝叶遮住了鸟体，只留下几组短促的声响。"
+          },
+          {
+            "offset_seconds": 4.895,
+            "duration_seconds": 6.934,
+            "text": "现有画面与声谱不足以可靠定种，这一段保留为未识别的灌丛鸣禽。"
+          }
+        ]
+      },
+      {
+        "segment": 3,
+        "seconds": 2.424,
+        "audio_duration_seconds": 13.44,
+        "mp3_sha256": "c4f730a42676ad3ea67539a5ba98339dd0fd4804077da7c16f380049a27a92c5",
+        "text": "枝头这只灰橄榄背、浅腹的小型鹟，外形暂定为东部林鹟。它停栖时数次张嘴，声谱也有重复的调性脉冲；近似种仍难排除。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 6.292,
+            "text": "枝头这只灰橄榄背、浅腹的小型鹟，外形暂定为东部林鹟。"
+          },
+          {
+            "offset_seconds": 6.342,
+            "duration_seconds": 7.039,
+            "text": "它停栖时数次张嘴，声谱也有重复的调性脉冲；近似种仍难排除。"
+          }
+        ]
+      },
+      {
+        "segment": 4,
+        "seconds": 3.421,
+        "audio_duration_seconds": 12.912,
+        "mp3_sha256": "be645076ad661b1f9e666e2a305f1cbf8e23ae383bfcb9f3f13498b02859f6f0",
+        "text": "芦苇高而密，鸟体始终被叶片挡住。背景声谱里有零散的窄带短音，来源无法确认；这段只能保留为未定种的芦苇间鸣禽。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 4.042,
+            "text": "芦苇高而密，鸟体始终被叶片挡住。"
+          },
+          {
+            "offset_seconds": 4.092,
+            "duration_seconds": 8.763,
+            "text": "背景声谱里有零散的窄带短音，来源无法确认；这段只能保留为未定种的芦苇间鸣禽。"
+          }
+        ]
+      },
+      {
+        "segment": 5,
+        "seconds": 3.169,
+        "audio_duration_seconds": 13.416,
+        "mp3_sha256": "351e33f7f6ffd5501ecb5e0708c6e9be9a90584301407a949c859ecdfd59662c",
+        "text": "这是褐色燕鸥成鸟与雏鸟。雏鸟张嘴迎向成鸟；亲鸟会反刍喂食。原声有断续短声，但不能只凭波形确定声源属于哪只。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 3.082,
+            "text": "这是褐色燕鸥成鸟与雏鸟。"
+          },
+          {
+            "offset_seconds": 3.132,
+            "duration_seconds": 4.421,
+            "text": "雏鸟张嘴迎向成鸟；亲鸟会反刍喂食。"
+          },
+          {
+            "offset_seconds": 7.553,
+            "duration_seconds": 5.789,
+            "text": "原声有断续短声，但不能只凭波形确定声源属于哪只。"
+          }
+        ]
+      },
+      {
+        "segment": 6,
+        "seconds": 6.488,
+        "audio_duration_seconds": 19.8,
+        "mp3_sha256": "8a06181d617c7f17ca510ac9f9aab3ac66e02753272afdc71b15b3a5f96728af",
+        "text": "这群长翼、白色身体配深色背翅的海鸟，外形很像莱山信天翁。绒羽雏鸟紧靠成鸟；亲鸟会反刍喂雏，并共同照看很长时间。原声声谱有不规则短脉冲，具体叫声与来源无法确认。",
+        "sentence_boundaries": [
+          {
+            "offset_seconds": 0.1,
+            "duration_seconds": 7.029,
+            "text": "这群长翼、白色身体配深色背翅的海鸟，外形很像莱山信天翁。"
+          },
+          {
+            "offset_seconds": 7.079,
+            "duration_seconds": 6.618,
+            "text": "绒羽雏鸟紧靠成鸟；亲鸟会反刍喂雏，并共同照看很长时间。"
+          },
+          {
+            "offset_seconds": 13.697,
+            "duration_seconds": 6.039,
+            "text": "原声声谱有不规则短脉冲，具体叫声与来源无法确认。"
+          }
+        ]
+      }
+    ],
+    "narration_wav_samples": 8902400,
+    "narration_wav_sample_rate": 48000,
+    "narration_wav_peak_dbfs": -1.36,
+    "render_seconds": 32.156,
+    "render_duration_seconds": 185.5,
+    "original_audio_window_similarity_after_codec_alignment": [
+      {
+        "segment": 1,
+        "window": {
+          "start": 0.0,
+          "end": 5.0
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.94,
+          0.94
+        ]
+      },
+      {
+        "segment": 2,
+        "window": {
+          "start": 46.066667,
+          "end": 51.066667
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.912,
+          0.912
+        ]
+      },
+      {
+        "segment": 3,
+        "window": {
+          "start": 95.766667,
+          "end": 100.766667
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.892,
+          0.892
+        ]
+      },
+      {
+        "segment": 4,
+        "window": {
+          "start": 100.766667,
+          "end": 105.5
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.918,
+          0.918
+        ]
+      },
+      {
+        "segment": 5,
+        "window": {
+          "start": 126.5,
+          "end": 131.0
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.885,
+          0.885
+        ]
+      },
+      {
+        "segment": 6,
+        "window": {
+          "start": 158.466667,
+          "end": 163.466667
+        },
+        "codec_delay_alignment_seconds": 0.005,
+        "channel_correlations": [
+          0.925,
+          0.925
+        ]
+      }
+    ]
+  },
+  "subjective_listening_limit": "The synthesized track was not auditioned because no native listening tool was available; naturalness is not claimed as personally heard. The chosen voice is a neural Mandarin voice at near-normal rate, with no time-stretching.",
+  "actions": [
+    {
+      "action": "initial_visual_and_audio_analysis",
+      "elapsed_seconds": 110.477,
+      "note": "Frame extraction, chapter inspection, source PCM decoding and initial RMS/spectrogram analysis; measured from the supplied task start timestamp to the first recorded shell timestamp."
+    },
+    {
+      "action": "first_edge_tts_dependency_resolution_attempt",
+      "elapsed_seconds": 95.0,
+      "note": "Pip remained in dependency resolution without installing packages; stopped after the recorded 95-second process age and switched to a direct wheel download through the proxy."
+    },
+    {
+      "action": "edge_tts_wheel_download_and_local_install",
+      "elapsed_seconds": 15.538,
+      "note": "Downloaded edge-tts 7.3.1 wheel through the configured proxy and installed it locally without dependencies."
+    },
+    {
+      "action": "proxy_debug_and_tts_sample",
+      "elapsed_seconds": 11.12,
+      "note": "First attempt used a direct connection and failed DNS in 4.40 s; explicit HTTPS_PROXY passed to Edge TTS then synthesized a 5.76 s test MP3 in 6.72 s. Only authored test text was sent."
+    },
+    {
+      "action": "sentence_boundary_alignment_probe",
+      "elapsed_seconds": 4.0,
+      "note": "Confirmed Microsoft Edge SentenceBoundary offsets and durations concatenate to the authored Mandarin exactly; used these returned boundaries for SRT timing."
+    },
+    {
+      "action": "font_download",
+      "elapsed_seconds": 4.536,
+      "note": "Downloaded the Noto Sans SC TrueType font for local subtitle rendering."
+    },
+    {
+      "action": "aiohttp_and_cli_dependencies_install",
+      "elapsed_seconds": 120.0,
+      "note": "Installed aiohttp and its runtime dependencies plus tabulate through pip and the configured proxy."
+    },
+    {
+      "action": "narration_synthesis_and_conversion",
+      "elapsed_seconds": 22.409143009999752,
+      "note": "Six Mandarin passages synthesized with zh-CN-XiaoxiaoNeural at -5% rate; MP3s converted to 48 kHz PCM."
+    },
+    {
+      "action": "superseded_full_render_passes",
+      "elapsed_seconds": 264.06,
+      "note": "Four earlier full render passes took 71.45 s, 62.98 s, 59.46 s, and 70.17 s respectively; subtitle size and placement were revised after visual review. Per-pass phase timing is retained in generation.prior_attempts."
+    },
+    {
+      "action": "narration_assembly_and_metadata",
+      "elapsed_seconds": 0.9077858089985966,
+      "note": "Created the exact-length stereo PCM narration bed, SRT subtitles, and segment metadata."
+    },
+    {
+      "action": "video_render",
+      "elapsed_seconds": 32.15570848700008,
+      "note": "Burned subtitles, retained the source audio with voice-triggered ducking, and encoded H.264/AAC at 30 fps."
+    },
+    {
+      "action": "output_validation",
+      "elapsed_seconds": 4.822800493999239,
+      "note": "Checked stream codecs, dimensions, duration, chapter coverage, narration sample count and required output files."
+    }
+  ]
+}
