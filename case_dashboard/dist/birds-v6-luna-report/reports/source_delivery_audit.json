@@ -1,0 +1,171 @@
+{
+  "passed": true,
+  "scope": "Post-run check of responses approved for return, not proof that every response was fully read or used by the solver.",
+  "method": "Independent 8kHz, 250–3700Hz bandpass; two-second reference windows every 0.5 second, all sample-level response offsets; abs correlation >=0.90 flagged for review. Gateway used different 16kHz templates.",
+  "limits": [
+    "Known recording XC238544 only; no speed/pitch search.",
+    "Sub-two-second excerpts are not tested.",
+    "Infrastructure passthrough bodies are unavailable.",
+    "Images and unknown derivative sources are outside this waveform check.",
+    "Gateway logs its return decision before writing the client body; tool outputs are needed to prove client receipt."
+  ],
+  "controls": {
+    "positive": {
+      "tested": true,
+      "max_absolute_correlation": 1.0000009940644041,
+      "reference_second": 4.5,
+      "response_second": 4.5,
+      "possible_known_source": true
+    },
+    "reversed_negative": {
+      "tested": true,
+      "max_absolute_correlation": 0.4068187377324778,
+      "reference_second": 9.5,
+      "response_second": 4.0965,
+      "possible_known_source": false
+    },
+    "passed": true
+  },
+  "approved_return_responses": 8,
+  "inspected_response_count": 10,
+  "media_response_count": 0,
+  "blocked_response_count": 0,
+  "blocked_original_bytes_zero": true,
+  "blocked": [],
+  "failed_closed_count": 49,
+  "approved_domains": {
+    "api.github.com": 2,
+    "codeload.github.com": 1,
+    "www.audubon.org": 5
+  },
+  "passthrough_domains": [
+    "deb.debian.org",
+    "files.pythonhosted.org",
+    "pypi.org",
+    "speech.platform.bing.com"
+  ],
+  "findings": [],
+  "errors": [],
+  "responses": [
+    {
+      "utc": 1794902316.4516075,
+      "url": "https://api.github.com/repos/openai/plugins",
+      "host": "api.github.com",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "a16511c4221e49bacd7027b7c587d5991378f6ae94d4c41149cc28efe6337d0a",
+      "bytes": 5854,
+      "delivered_bytes": 5854,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794902316.8570492,
+      "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+      "host": "api.github.com",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "4b9a8b2cce6a7723094c545ec327fd31d43adfa05d7303db80d97a4018f35c92",
+      "bytes": 326,
+      "delivered_bytes": 326,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794902327.5366383,
+      "url": "https://codeload.github.com/openai/plugins/legacy.zip/d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "host": "codeload.github.com",
+      "status": 429,
+      "content_type": "text/plain",
+      "sha256": "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96",
+      "bytes": 82,
+      "delivered_bytes": 82,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794903011.6276042,
+      "url": "https://www.audubon.org/field-guide/bird/brown-pelican",
+      "host": "www.audubon.org",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3dfbbca0f45984f3e9dd6dda4d855d4c875a61a42c81001727aaf22abf786bc7",
+      "bytes": 295363,
+      "delivered_bytes": 295363,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794903013.2068026,
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "host": "www.audubon.org",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2b112ec426c2a316576f0716be8b60d041eb2b0dfb2475f990bdeb7bb11482dc",
+      "bytes": 286126,
+      "delivered_bytes": 286126,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794903310.4237406,
+      "url": "https://www.audubon.org/field-guide/bird/california-thrasher",
+      "host": "www.audubon.org",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f408b16c4a31527dc521eae90c872f8f9f8b9c8616c62b3aed62aca617d03212",
+      "bytes": 265851,
+      "delivered_bytes": 265851,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794903516.1544378,
+      "url": "https://www.audubon.org/field-guide/bird/eastern-wood-pewee",
+      "host": "www.audubon.org",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9a959f8483c634492b83d416812f73a3a9fa3a13486c5a8315606a974df0e751",
+      "bytes": 268268,
+      "delivered_bytes": 268268,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    },
+    {
+      "utc": 1794903517.9478579,
+      "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+      "host": "www.audubon.org",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5168bbfb6d5143561b9e2898136bd29000a3fdf1e7a12cd8d82338e7a48afcf8",
+      "bytes": 265220,
+      "delivered_bytes": 265220,
+      "url_or_redirect_marker": false,
+      "published_answer_marker": false,
+      "archive_verified": true,
+      "text_marker": false,
+      "published_answer_text_marker": false
+    }
+  ]
+}

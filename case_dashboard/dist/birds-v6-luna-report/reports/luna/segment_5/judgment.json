@@ -1,0 +1,119 @@
+{
+  "segment": 5,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的鸟鸣声和昆虫振翅的嗡嗡声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "在人声存在的片段中，背景鸟鸣声清晰可闻但音量较低，没有严重干扰到主体语音的收听。",
+      "times": [
+        1.68,
+        14.32
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类叫声作为背景音，尤其是在无人声的段落，环境音保存完好。",
+      "times": [
+        0.0,
+        33.92
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 14.32,
+        "end": 33.92,
+        "reason": "此时间段内完全没有人工解说声音，只有持续且清晰的真实鸟鸣等自然环境音。"
+      }
+    ],
+    "limitations": [
+      "提供的参考文稿为乱码/无意义字符，无法用于核对语音内容的准确性。"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中无中文旁白，仅有非人声的鸟鸣和昆虫振翅声。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": []
+  },
+  "visual": {
+    "subtitles": {
+      "score": null,
+      "reason": "独立转写显示无语音内容（mandarin_speech为false），但SRT提供了包含旁白描述的字幕文本。由于缺乏实际的语音转写作为基准，无法验证字幕是否与旁白文字及时间严格对应。",
+      "times": []
+    },
+    "timing": {
+      "score": 0.6,
+      "reason": "存在明显的音画不同步问题。根据画面事实，成鸟与幼鸟的明显互动发生在约21-29秒处，但在抽样的前几帧（如movie 126.84s、131.92s等）中，画面仅显示幼鸟张嘴而未见成鸟靠近时，却已经显示了描述“成鸟低头靠近”的字幕；直到movie 138.34s才出现成鸟靠近的画面。此外，该字幕在后续多个时间点持续显示，未能准确匹配当前章节的实际画面进展。",
+      "times": [
+        126.84,
+        131.92,
+        132.59,
+        138.34
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 138.067,
+        "end": 158.467,
+        "matched_original_seconds": 19
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 14.32,
+        "end": 33.92,
+        "reason": "此时间段内完全没有人工解说声音，只有持续且清晰的真实鸟鸣等自然环境音。"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 20,
+    "compared_seconds": 34
+  }
+}

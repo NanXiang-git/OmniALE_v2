@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "name": "literal and percent encoded URL identifiers",
+      "passed": true
+    },
+    {
+      "name": "exact recording blocked",
+      "passed": true,
+      "detail": {
+        "blocked": true,
+        "reason": "known_audio_hash"
+      }
+    },
+    {
+      "name": "crop gain polarity encoding changes blocked",
+      "passed": true,
+      "detail": {
+        "blocked": true,
+        "reason": "known_audio_waveform",
+        "hits": [
+          {
+            "reference_second": 2,
+            "received_second": 1.0,
+            "offset": -1.0,
+            "correlation": 0.9970144707940543
+          }
+        ]
+      }
+    },
+    {
+      "name": "independent reference reference_alder.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_baikal.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_brownbush.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_brownflankcall.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_cetti.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_cetticall.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_chinesebush.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_reed.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_russet.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_russetcall.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "independent reference reference_willow.mp3",
+      "passed": true,
+      "detail": {
+        "blocked": false,
+        "reason": "no_known_waveform_detected",
+        "hits": []
+      }
+    },
+    {
+      "name": "new speech endpoint websocket and actual audio",
+      "passed": true,
+      "detail": {
+        "passed": true,
+        "host": "api.msedgeservices.com",
+        "websocket_handshake_verified": true,
+        "turn_end_received": true,
+        "audio_bytes": 33552,
+        "audio_sha256": "da77e63a283893df51d0519dd6c1d0a320cde76f2ab4b9450787b32a3eef7bb7",
+        "media": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "mp3",
+              "sample_rate": "24000"
+            }
+          ],
+          "format": {
+            "duration": "5.592000"
+          }
+        },
+        "fixed_host_test_text": "这是一次独立的语音连接测试。一，七，三，九。",
+        "not_installed_in_candidate": true
+      }
+    },
+    {
+      "name": "HTTPS precise block https://xeno-canto.org/238544",
+      "passed": true,
+      "http": 403
+    },
+    {
+      "name": "HTTPS precise block https://xeno-canto.org/238544/download",
+      "passed": true,
+      "http": 403
+    },
+    {
+      "name": "HTTPS precise block https://xeno-canto.org/%32%33%38%35%34%34/download",
+      "passed": true,
+      "http": 403
+    },
+    {
+      "name": "HTTPS precise block https://www.flickr.com/video_download.gne?id=7245581374",
+      "passed": true,
+      "http": 403
+    },
+    {
+      "name": "independent HTTPS allowed https://www.audubon.org/field-guide/bird/alder-flycatcher",
+      "passed": true,
+      "http": 200,
+      "bytes": 263747
+    },
+    {
+      "name": "independent HTTPS allowed https://xeno-canto.org/13755/download",
+      "passed": true,
+      "http": 200,
+      "bytes": 966874
+    },
+    {
+      "name": "page containing prohibited embedded recording withheld",
+      "passed": true,
+      "http": 403
+    }
+  ]
+}

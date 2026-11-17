@@ -1,0 +1,126 @@
+{
+  "segment": 4,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的鸟鸣声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声的比例尚可，两者都能听清，没有严重的掩蔽效应。",
+      "times": [
+        0.0,
+        23.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中有非常清晰、真实的鸟类鸣叫声，且在无人声区间（如14.5秒后）依然持续存在，保留了良好的环境音。",
+      "times": [
+        0.0,
+        23.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 14.5,
+        "end": 23.0,
+        "reason": "此时间段内完全没有人声，可以清晰地听到背景中持续的多种鸟类鸣叫声。"
+      }
+    ],
+    "limitations": [
+      "提供的参考文稿为英文单词，而实际音频中的人声是中文数字朗读，两者内容不匹配，因此无法进行基于文稿的内容准确性比对，仅对听感进行评价。"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中无中文旁白，仅有英文数字播报和鸟鸣声，未说出任何物种名称。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": []
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录在画面下方，字体清晰可读；内容准确对应了SRT文本（“芦苇遮住了水边的鸟影...”），且未遮挡主要视觉主体（虽然画面本身失焦无明确鸟体，但字幕位置合理）。",
+      "times": [
+        {
+          "start": 102.7,
+          "end": 114.3,
+          "text": "芦苇遮住了水边的鸟影。原声很轻，这里听一听零散的细小声响，暂时无法锁定具体种类。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面完美对应。字幕出现时（约102s-115s区间），画面展示的正是失焦的湿地茎叶/芦苇丛，符合文案描述的“芦苇遮住”、“无法辨认”的情境，音画同步逻辑自洽。",
+      "times": [
+        {
+          "start": 102.7,
+          "end": 114.3,
+          "description": "画面为模糊的绿色植物背景，配合关于环境遮蔽和声音微弱的解说。"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 115.167,
+        "end": 123.967,
+        "matched_original_seconds": 8
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 14.5,
+        "end": 23.0,
+        "reason": "此时间段内完全没有人声，可以清晰地听到背景中持续的多种鸟类鸣叫声。"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 8,
+    "compared_seconds": 22
+  }
+}

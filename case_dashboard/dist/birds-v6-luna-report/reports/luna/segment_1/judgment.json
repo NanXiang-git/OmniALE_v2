@@ -1,0 +1,134 @@
+{
+  "segment": 1,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的蟋蟀鸣叫声和一段轻快的器乐背景音乐",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景的鸟鸣声分离度较好，鸟鸣声作为环境音存在，没有严重干扰到人声的听取，比例尚可。",
+      "times": [
+        0.0,
+        45.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声（如开头和结尾处的清脆鸟鸣），背景动物声保留完整且自然。",
+      "times": [
+        0.0,
+        45.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 4.6,
+        "reason": "只有清晰的鸟鸣声，无人声"
+      },
+      {
+        "start": 24.8,
+        "end": 45.0,
+        "reason": "人声结束后，持续可闻真实的鸟鸣声"
+      }
+    ],
+    "limitations": [
+      "提供的参考文本与实际音频内容完全不符，无法进行内容比对评估。"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中无中文旁白，仅有机器合成的英文语音（TTS）朗读物种信息，未实际说出中文科普内容。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": []
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕在画面下方清晰显示，未遮挡主要鸟体；内容与SRT文本一致，且准确描述了当前画面的视觉事实（长尾褐鸟、停在手上等）。",
+      "times": [
+        {
+          "start": 5.5,
+          "end": 25.037,
+          "text": "镜头里这只长尾褐鸟，暂按加州鸫鹛辨认。它有细长略弯的嘴和暖褐色羽衣，安静地停在人的手上。原声有连续的背景声，来源无法确认。"
+        }
+      ]
+    },
+    "timing": {
+      "score": null,
+      "reason": "独立转写显示无语音（mandarin_speech: false），仅存在背景音，因此不存在“解说”声音与画面对应的时机问题，无法评估该维度。"
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 0.0,
+        "end": 5.5,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 24.75,
+        "end": 46.067,
+        "matched_original_seconds": 21
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 4.6,
+        "reason": "只有清晰的鸟鸣声，无人声"
+      },
+      {
+        "start": 24.8,
+        "end": 45.0,
+        "reason": "人声结束后，持续可闻真实的鸟鸣声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 28,
+    "compared_seconds": 46
+  }
+}

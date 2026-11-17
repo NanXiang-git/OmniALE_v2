@@ -1,0 +1,135 @@
+{
+  "segment": 6,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的昆虫鸣叫声（如蟋蟀或蝉），以及类似无线电静电的噼啪声和嘶嘶声。",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": 0.5,
+      "reason": "人声虽然难听但音量足够大，能够盖过背景的鸟叫声，两者在音量上基本平衡，没有互相严重干扰到听不见的程度。",
+      "times": [
+        2.36,
+        14.8
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中有非常清晰、真实的鸟类鸣叫声（如海鸥等），保留了良好的自然环境音。",
+      "times": [
+        0.0,
+        27.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 14.8,
+        "end": 27.0,
+        "reason": "此时间段内完全没有人工语音，只有清晰的真实鸟类鸣叫声作为背景音。"
+      }
+    ],
+    "limitations": [
+      "未提供文稿，无法判断语音内容的正确性，仅对声音本身的听感进行评价。"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中无中文旁白，仅有类似机器合成的非人类语音片段（约0.2-13秒）以及背景噪音。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": [
+      {
+        "claim": "莱桑信天翁",
+        "supported": false,
+        "reason": "未在音频中被说出"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "根据提供的独立转写，影片无旁白人声（mandarin_speech为false）。因此字幕作为纯描述性文本存在。在抽样的前4帧中，字幕清晰可见，排版规范，位于画面下方安全区域，未遮挡鸟类主体。虽然字幕内容与画面事实相符，但由于缺乏语音对照，其功能仅为视觉补充说明。",
+      "times": [
+        160.72,
+        165.22,
+        168.68,
+        169.72
+      ]
+    },
+    "timing": {
+      "score": 0.9,
+      "reason": "字幕出现的时间段（SRT显示约160s-172s）与抽样帧中的画面内容高度对应。文字描述的“成鸟在地面张望”、“原声里高低起伏的鸣声”准确概括了该时间段内信天翁的互动行为及背景音效特征。尽管后几帧（174s+）字幕消失但仍有相关画面，但在有效时间窗内的解说时机是准确的。",
+      "times": [
+        160.72,
+        165.22,
+        168.68,
+        169.72
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 158.467,
+        "end": 160.667,
+        "matched_original_seconds": 1
+      },
+      {
+        "start": 172.417,
+        "end": 185.467,
+        "matched_original_seconds": 12
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 14.8,
+        "end": 27.0,
+        "reason": "此时间段内完全没有人工语音，只有清晰的真实鸟类鸣叫声作为背景音。"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 13,
+    "compared_seconds": 26
+  }
+}

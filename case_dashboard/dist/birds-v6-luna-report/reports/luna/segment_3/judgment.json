@@ -1,0 +1,134 @@
+{
+  "segment": 3,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的鸟鸣声（包括多种鸟类叫声）和昆虫鸣叫声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": null,
+      "reason": "音频中无人声，无法评估人声与背景声的平衡",
+      "times": []
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰听到真实的鸟鸣和虫叫声，背景动物声保留完整且自然",
+      "times": [
+        0.0,
+        28.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 28.0,
+        "reason": "全程只有鸟鸣和虫叫等自然环境音，无任何人类语音"
+      }
+    ],
+    "limitations": [
+      "未提供有效的人声音频，导致四项人声指标（naturalness, timbre, clarity, pacing）得分为0，balance无法评估"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "在 00:02-00:15 期间，音频中仅包含一段快速、机械的英文数字和字母朗读（如 'four two one five...'），完全没有中文旁白，因此未说出任何物种名称。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": [
+      {
+        "claim": "实际解说",
+        "supported": false,
+        "reason": "音频中没有中文解说词，只有英文数字朗读。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录在画面中，字体清晰可读。字幕内容准确描述了当前画面的视觉事实（东菲比霸鹟停在枝头、安静守候），且位置处于下方留白/天空区域，未遮挡主要鸟体。虽然独立转写显示无旁白人声，但字幕作为解说文本与画面动作高度契合。",
+      "times": [
+        {
+          "start": 75.0,
+          "end": 86.2,
+          "text": "这只东菲比霸鹟停在枝头，张口鸣叫后仍安静守候。原声里也有几声短促的高音。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "字幕出现的时机（约75s-86s）与画面中鸟类停栖、观察的行为完全同步。抽样帧显示该时间段内画面稳定为同一场景，文字描述与视觉内容一一对应，无错位或滞后现象。",
+      "times": [
+        {
+          "start": 75.0,
+          "end": 86.2,
+          "label": "对应画面：鸟停栖枝头，静止守候阶段"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 72.8,
+        "end": 75.0,
+        "matched_original_seconds": 2
+      },
+      {
+        "start": 85.95,
+        "end": 100.767,
+        "matched_original_seconds": 14
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 28.0,
+        "reason": "全程只有鸟鸣和虫叫等自然环境音，无任何人类语音"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 16,
+    "compared_seconds": 27
+  }
+}

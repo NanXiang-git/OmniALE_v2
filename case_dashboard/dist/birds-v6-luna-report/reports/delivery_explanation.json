@@ -1,0 +1,80 @@
+{
+  "formal_score": 0.0,
+  "body": [
+    0.0,
+    0.0
+  ],
+  "raw_weighted_quality": 0.27,
+  "effective_quality": [
+    0,
+    0
+  ],
+  "all_chapters_audible_mandarin_false": true,
+  "scored_chapters": 0,
+  "text_label_matches": 1,
+  "text_label_method": "Exact case-insensitive Latin-name comparison with frozen truth; descriptive audit only, not a scoring replacement.",
+  "rows": [
+    {
+      "segment": 1,
+      "submitted_chinese": "加州鸫鹛（暂定）",
+      "submitted_latin": "Toxostoma redivivum",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "音频中无中文旁白，仅有机器合成的英文语音（TTS）朗读物种信息，未实际说出中文科普内容。"
+    },
+    {
+      "segment": 2,
+      "submitted_chinese": "未确认的灌丛鸣禽",
+      "submitted_latin": "Unidentified",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "音频中未检测到任何中文旁白，仅有鸟鸣声，因此无法说出物种名称。"
+    },
+    {
+      "segment": 3,
+      "submitted_chinese": "东菲比霸鹟",
+      "submitted_latin": "Sayornis phoebe",
+      "expected_chinese": "桤木纹霸鹟",
+      "expected_latin": "Empidonax alnorum",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在 00:02-00:15 期间，音频中仅包含一段快速、机械的英文数字和字母朗读（如 'four two one five...'），完全没有中文旁白，因此未说出任何物种名称。"
+    },
+    {
+      "segment": 4,
+      "submitted_chinese": "未确认的芦苇区鸟类",
+      "submitted_latin": "Unidentified",
+      "expected_chinese": "弗吉尼亚秧鸡",
+      "expected_latin": "Rallus limicola",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "音频中无中文旁白，仅有英文数字播报和鸟鸣声，未说出任何物种名称。"
+    },
+    {
+      "segment": 5,
+      "submitted_chinese": "棕鹈鹕",
+      "submitted_latin": "Pelecanus occidentalis",
+      "expected_chinese": "黑脚信天翁",
+      "expected_latin": "Phoebastria nigripes",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "音频中无中文旁白，仅有非人声的鸟鸣和昆虫振翅声。"
+    },
+    {
+      "segment": 6,
+      "submitted_chinese": "莱桑信天翁",
+      "submitted_latin": "Phoebastria immutabilis",
+      "expected_chinese": "莱桑信天翁",
+      "expected_latin": "Phoebastria immutabilis",
+      "exact_latin_match": true,
+      "scored_I": 0,
+      "scoring_reason": "音频中无中文旁白，仅有类似机器合成的非人类语音片段（约0.2-13秒）以及背景噪音。"
+    }
+  ],
+  "explanation": "成片可播放，但冻结评审六章均判无可懂中文解说，原规则将有效质量系数归零。成片计分识别为0/6；提交的文字标签第6章学名正确，共1/6，不能将本轮描述为六段文字识别全错。自动听审理由与实际音轨均保留供人工复核。",
+  "formal_reviewed_result_sha256": "59c6c1e779f94ed636be07ce9f5d6f4ecb037108e841ea29643dd0115505f89a"
+}

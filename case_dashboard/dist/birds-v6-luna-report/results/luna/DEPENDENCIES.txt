@@ -1,0 +1,11 @@
+Production environment and choices
+
+- Python 3.12
+- ffmpeg / ffprobe (video decode, sidechain mix, subtitle burn-in, H.264/AAC encode)
+- espeak-ng 1.51 with the installed Mandarin voice `cmn` (offline narration synthesis)
+- numpy and scipy (48 kHz narration assembly and resampling)
+- Debian `fonts-wqy-zenhei` 0.9.45-8, extracted locally under `fonts/` for CJK subtitle rendering
+- edge-tts 7.3.1 and its pip dependencies were installed for a neural voice attempt. Its service returned no audio through the configured proxy, so it was not used in the final render.
+
+Run `bash /workspace/submission/render_final.sh` to regenerate narration.wav, subtitles.srt,
+segments.json, and final.mp4. No video or original audio was sent to an external service.

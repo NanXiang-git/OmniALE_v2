@@ -1,0 +1,6 @@
+{
+  "type": "acceptance_validator_global_quality_gate",
+  "description": "Original host acceptance checker compared weighted Q directly and missed the frozen global no-Mandarin override. Validator now checks the existing zero gate. No task, evaluator, answer or score changes.",
+  "prior_acceptance": "final_acceptance_before_gate_check.json",
+  "score_sha256_unchanged": true
+}

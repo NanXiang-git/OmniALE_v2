@@ -1,0 +1,175 @@
+{
+  "luna": {
+    "summary": "模型尝试网络语音并自行安装 edge-tts，最终交付脚本调用系统已有的 eSpeak NG / cmn 离线合成普通话。配音、补静音与混音代码由模型自行编写；最终工具与失败尝试分别记录。",
+    "package": "eSpeak NG 1.51（系统命令行）",
+    "voice": "cmn（普通话）",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存 Python 制作脚本实际调用 espeak-ng -v cmn，并结合提交的依赖说明和脚本运行轨迹；不把试用的神经音色当作最终配音。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 7,
+        "purpose": "检查或调用本地普通话合成器",
+        "command": "/usr/bin/bash -lc 'which ffmpeg ffprobe espeak-ng espeak festival flite || true'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "/usr/bin/ffmpeg\n/usr/bin/ffprobe\n/usr/bin/espeak-ng\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 11,
+        "purpose": "检查或调用本地普通话合成器",
+        "command": "/usr/bin/bash -lc \"mkdir -p /workspace/scratch /workspace/submission && ffmpeg -hide_banner -loglevel error -i /candidate/birds_source.mp4 -vf \\\"fps=1/4,scale=384:216,tile=4x4\\\" -frames:v 1 /workspace/scratch/contact.jpg && espeak-ng --voices | rg -i 'zh|cmn|Mandarin' && espeak-ng --version\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": " 5  cmn             --/M      Chinese_(Mandarin,_latin_as_English) sit/cmn              (zh-cmn 5)(zh 5)\n 5  cmn-latn-pinyin --/M      Chinese_(Mandarin,_latin_as_Pinyin) sit/cmn-Latn-pinyin  (zh-cmn 5)(zh 5)\n 5  yue             --/M      Chinese_(Cantonese) sit/yue              (zh-yue 5)(zh 8)\n 5  yue             --/M      Chinese_(Cantonese,_latin_as_Jyutping) sit/yue-Latn-jyutping (zh-yue 5)(zh 8)\neSpeak NG text-to-speech: 1.51  Data at: /usr/lib/x86_64-linux-gnu/espeak-ng-data\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 25,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc 'python3 -m pip install --target /workspace/site-packages edge-tts'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(\"HTTPSConnectionPool(host='pypi.org', port=443): Read timed out. (read timeout=15)\")': /simple/edge-tts/\nCollecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Downloading certifi-2026.10.23-py3-none-any.whl.meta\n…\nx86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)\nDownloading tabulate-0.10.0-py3-none-any.whl (39 kB)\nDownloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nDownloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)\nDownloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)\nDownloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)\nDownloading attrs-26.1.0-py3-none-any.whl (67 kB)\nDownloading certifi-2026.10.23-py3-none-any.whl (135 kB)\nDownloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)\nDownloading idna-3.20-py3-none-any.whl (69 kB)\nDownloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)\nInstalling collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts\n\nSuccessfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 27,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"PYTHONPATH=/workspace/site-packages python3 -m edge_tts --text '枝头上一只东菲比霸鹟停下来，浅色的胸腹在蓝天下格外醒目。' --voice zh-CN-XiaoxiaoNeural --write-media /workspace/scratch/edge_probe.mp3\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1592, in _create_direct_connection\n    hosts = await self._resolve_host(host, port, traces=traces)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1202, in _resolve_host\n    return await asyncio.shield(resolved_host_task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1233, in _resolve_host_with_throttle\n    addrs = await self._resolver.resolve(host, port, fa\n…\nt.py\", line 1312, in _ws_connect\n    resp = await self.request(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 900, in _request\n    resp = await handler(req)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/client.py\", line 854, in _connect_and_send_request\n    conn = await self._connector.connect(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 665, in connect\n    proto = await self._create_connection(req, traces, timeout)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1263, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/aiohttp/connector.py\", line 1598, in _create_direct_connection\n    raise ClientConnectorDNSError(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host speech.platform.bing.com:443 ssl:<ssl.SSLContext object at 0x7873abb7d050> [Temporary failure in name resolution]\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 28,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc 'PYTHONPATH=/workspace/site-packages python3 -m edge_tts --help'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "usage: __main__.py [-h] [-t TEXT] [-f FILE] [-v VOICE] [-l] [--rate RATE]\n                   [--volume VOLUME] [--pitch PITCH]\n                   [--write-media WRITE_MEDIA]\n                   [--write-subtitles WRITE_SUBTITLES] [--proxy PROXY]\n                   [--no-progress] [--version]\n\nText-to-speech using Microsoft Edge's online TTS service.\n\noptions:\n  -h, --help            show this help message and exit\n  -t TEXT, --text TEXT  what TTS will say\n  -f FILE, --file FILE  same as --text but read from file\n  -v VOICE, --voice VOICE\n                        voice for TTS. Default: en-US-EmmaMultilingualNeural\n  -l, --list-voices     lists available voices and exits\n  --rate RATE           set TTS rate. Default +0%.\n  --volume VOLUME       set TTS volume. Default +0%.\n  --pitch PITCH         set TTS pitch. Default +0Hz.\n  --write-media WRITE_MEDIA\n                        send media output to file instead of stdout\n  --write-subtitles WRITE_SUBTITLES\n                        send subtitle output to provided file instead of\n                        stderr\n  --proxy PROXY         use a proxy for TTS and voice list.\n  --no-progress         do not show the progress bar on stderr\n  --version             show program's version number and exit\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 29,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc 'PYTHONPATH=/workspace/site-packages python3 -m edge_tts --proxy \"$HTTPS_PROXY\" --text '\"'枝头上一只东菲比霸鹟停下来，浅色的胸腹在蓝天下格外醒目。' --voice zh-CN-XiaoxiaoNeural --write-media /workspace/scratch/edge_probe.mp3\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/workspace/site-packages/edge_tts/__main__.py\", line 6, in <module>\n    main()\n  File \"/workspace/site-packages/edge_tts/util.py\", line 184, in main\n    asyncio.run(amain())\n  File \"/usr/lib/python3.12/asyncio/runners.py\", line 194, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/workspace/site-packages/edge_tts/util.py\", line 179, in amain\n    await _run_tts(args)\n  File \"/workspace/site-packages/edge_tts/util.py\", line 95, in _run_tts\n    async for chunk in communicate.stream():\n  File \"/workspace/site-packages/edge_tts/communicate.py\", line 588, in stream\n    async for message in self.__stream():\n  File \"/workspace/site-packages/edge_tts/communicate.py\", line 562, in __stream\n    raise NoAudioReceived(\nedge_tts.exceptions.NoAudioReceived: No audio was received. Please verify that your parameters are correct.\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 52,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"PYTHONPATH=/workspace/site-packages python3 /workspace/submission/voice_and_mix.py && python3 - <<'PY'\nimport json,wave\np='/workspace/submission/segments.json';d=json.load(open(p))\nfor s in d['segments']:\n n=s['narration'][0];w=s['original_sound_windows'][0]\n print(s['segment'],n['start'],n['end'],'window',w,'gap',round(w['start']-n['end'],2))\nwith wave.open('/workspace/submission/narration.wav') as w: print('wav',w.getnchannels(),w.getframerate(),w.getnframes(),round(w.getnframes()/w.getframerate(),3))\nPY\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"/workspace/submission/voice_and_mix.py\", line 186, in <module>\n    main()\n  File \"/workspace/submission/voice_and_mix.py\", line 160, in main\n    raise RuntimeError(f\"Narration overlaps original sound window in chapter {item['segment']}\")\nRuntimeError: Narration overlaps original sound window in chapter 1\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 54,
+        "purpose": "检查或调用本地普通话合成器",
+        "command": "/usr/bin/bash -lc \"PYTHONPATH=/workspace/submission python3 - <<'PY'\nimport voice_and_mix as m,subprocess,tempfile,os\nfor x in m.SEGMENTS:\n p=f\\\"/workspace/scratch/voice_{x['segment']}.wav\\\"\n subprocess.run(['espeak-ng','-v','cmn','-s','140','-p','45','-a','165','-w',p,x['narration_text']],check=True)\n r=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',p],capture_output=True,text=True,check=True)\n dur=float(r.stdout); end=x['narration_start']+dur\n print(x['segment'],'speech',round(dur,2),'end',round(end,2),'window',x['sound_window'])\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "1 speech 19.37 end 24.87 window [16.0, 19.2]\n2 speech 17.08 end 65.58 window [58.0, 61.2]\n3 speech 16.67 end 91.67 window [89.0, 92.2]\n4 speech 17.7 end 120.1 window [117.0, 120.2]\n5 speech 14.12 end 139.62 window [135.5, 138.7]\n6 speech 16.59 end 177.29 window [174.0, 177.2]\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 55,
+        "purpose": "检查或调用本地普通话合成器",
+        "command": "/usr/bin/bash -lc 'for sp in 140 165 180 195 210; do espeak-ng -v cmn -s \"$sp\" -p 45 -a 165 -w \"/workspace/scratch/rate_$sp.wav\" '\"'镜头里这只长尾褐鸟，暂按加州鸫鹛辨认。它有细长略弯的嘴和暖褐色羽衣，安静地停在人的手上。'; ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 \\\"/workspace/scratch/rate_\"'$sp.wav\" | tr '\"'\\\\n' ' '; done; printf '\\\\n'\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "19.368435 16.508299 14.920227 13.753923 12.791156 \n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 57,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"PYTHONPATH=/workspace/site-packages python3 /workspace/submission/voice_and_mix.py && python3 - <<'PY'\nimport json,wave\np='/workspace/submission/segments.json';d=json.load(open(p))\nfor s in d['segments']:\n n=s['narration'][0];w=s['original_sound_windows'][0]\n print(s['segment'],n['start'],n['end'],'window',w,'gap',round(w['start']-n['end'],2))\nwith wave.open('/workspace/submission/narration.wav') as w: print('wav',w.getnchannels(),w.getframerate(),w.getnframes(),round(w.getnframes()/w.getframerate(),3))\nPY\"",
+        "exit_code": 1,
+        "status": "failed",
+        "output_excerpt": "Traceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nKeyError: 'original_sound_windows'\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 64,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"PYTHONPATH=/workspace/site-packages python3 /workspace/submission/voice_and_mix.py && python3 - <<'PY'\nimport json,wave\np='/workspace/submission/segments.json';d=json.load(open(p))\nfor s in d['segments']:\n n=s['narration'][0];w=s['original_sound_windows'][0]\n print(s['segment'],n['start'],n['end'],'window',w,'gap',round(w['start']-n['end'],2))\nwith wave.open('/workspace/submission/narration.wav') as f: print('wav',f.getnchannels(),f.getframerate(),f.getnframes(),round(f.getnframes()/f.getframerate(),3))\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "1 5.5 19.697 window {'start': 21.0, 'end': 24.2} gap 1.3\n2 48.5 61.039 window {'start': 67.2, 'end': 70.4} gap 6.16\n3 75.0 82.062 window {'start': 93.0, 'end': 96.2} gap 10.94\n4 102.4 115.398 window {'start': 117.0, 'end': 120.2} gap 1.6\n5 125.5 132.058 window {'start': 134.5, 'end': 137.7} gap 2.44\n6 160.7 168.098 window {'start': 174.0, 'end': 177.2} gap 5.9\nwav 1 48000 8902400 185.467\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 70,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'PYTHONPATH=/workspace/site-packages python3 /workspace/submission/voice_and_mix.py'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "luna/tool_trajectory.json"
+      },
+      {
+        "sequence": 81,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc 'ls -lh /workspace/submission && python3 -m json.tool /workspace/submission/segments.json >/dev/null && python3 -m json.tool /workspace/submission/research_log.json >/dev/null && file /workspace/submission/narration.wav /workspace/submission/subtitles.srt'",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "total 63M\n-rwxrwxrwx 1 1000 1000  750 Nov 17 08:34 DEPENDENCIES.txt\n-rwxrwxrwx 1 1000 1000  46M Nov 17 08:56 final.mp4\ndrwxrwxrwx 1 1000 1000  512 Nov 17 08:56 fonts\n-rwxrwxrwx 1 1000 1000  17M Nov 17 08:56 narration.wav\n-rwxrwxrwx 1 1000 1000  806 Nov 17 08:34 render_final.sh\n-rwxrwxrwx 1 1000 1000 2.5K Nov 17 08:34 research_log.json\n-rwxrwxrwx 1 1000 1000 8.0K Nov 17 08:56 segments.json\n-rwxrwxrwx 1 1000 1000  960 Nov 17 08:56 subtitles.srt\n-rwxrwxrwx 1 1000 1000  11K Nov 17 08:48 voice_and_mix.py\n/workspace/submission/narration.wav: RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 48000 Hz\n/workspace/submission/subtitles.srt: SubRip, Unicode text, UTF-8 text\n",
+        "full_output_in": "luna/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/luna/DEPENDENCIES.txt",
+        "sha256": "7787a54eca8b462f7845f0bb6c158175e2ab8891d0f406bde9e1211b95b88f65",
+        "relevant_lines": [
+          {
+            "line": 5,
+            "text": "- espeak-ng 1.51 with the installed Mandarin voice `cmn` (offline narration synthesis)"
+          },
+          {
+            "line": 8,
+            "text": "- edge-tts 7.3.1 and its pip dependencies were installed for a neural voice attempt. Its service returned no audio through the configured proxy, so it was not used in the final render."
+          }
+        ]
+      },
+      {
+        "path": "results/luna/research_log.json",
+        "sha256": "a44d5ab64ee2de6caae09a801b53dfcde9b2cb5936011b3051bcbbc962208157",
+        "relevant_lines": [
+          {
+            "line": 36,
+            "text": "      \"service\": \"Microsoft Edge neural TTS via edge-tts 7.3.1\","
+          }
+        ]
+      },
+      {
+        "path": "results/luna/voice_and_mix.py",
+        "sha256": "6f38fa04cfd70dcb3c79a4fc7342c295282d2db0122f4c981562ee7817c7ef6e",
+        "relevant_lines": [
+          {
+            "line": 127,
+            "text": "        run([\"espeak-ng\", \"-v\", \"cmn\", \"-s\", \"190\", \"-p\", \"45\", \"-a\", \"165\","
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "560b51a40b725c424c9d9ca08d7abe4b9d2a36c47e11cb8ff8f0ed3fcb70165e",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。",
+    "attempted_packages": [
+      "edge-tts"
+    ],
+    "attempted_neural_voices": [],
+    "final_implementation_files": [
+      "results/luna/voice_and_mix.py"
+    ]
+  }
+}

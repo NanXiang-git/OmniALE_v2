@@ -1,0 +1,127 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": false,
+    "transcript": "",
+    "speech_spans": [],
+    "background": "持续的鸟鸣声",
+    "limitations": [
+      "音频中未检测到普通话人声"
+    ]
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": false,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "timbre": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "clarity": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "pacing": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声的比例基本协调，鸟鸣声作为环境音没有严重干扰到人声的听取。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中持续存在清晰、真实的鸟类鸣叫声，保留了良好的自然环境氛围。",
+      "times": [
+        0.0,
+        26.0
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 14.0,
+        "end": 26.0,
+        "reason": "此时间段内完全没有人工解说声音，可以清晰地听到连续的、真实的背景鸟鸣声。"
+      }
+    ],
+    "limitations": [
+      "提供的参考文稿与实际音频内容完全不匹配，实际音频为无意义的数字串朗读，因此无法评估其作为“科普解说”的内容传达效果，仅能评估其声音本身的物理属性。"
+    ]
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "",
+    "I_reason": "音频中未检测到任何中文旁白，仅有鸟鸣声，因此无法说出物种名称。",
+    "F": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "E": {
+      "score": 0,
+      "reason": "音频盲听无可懂中文旁白",
+      "times": []
+    },
+    "claims": []
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录，在画面中清晰可读。虽然背景为复杂的枝叶，但字幕带有明显的黑色描边/阴影处理，确保了良好的对比度和辨识度。字幕内容准确描述了当前画面的视觉事实（茂密灌丛遮挡鸟影），且未遮挡任何可见的主要鸟体目标。",
+      "times": [
+        {
+          "start": 48.5,
+          "end": 61.039,
+          "text": "灌木层把鸟影遮住了，原声里重复出现几组细高音。无法看到鸣叫者，物种暂不能确认。"
+        }
+      ]
+    },
+    "timing": {
+      "score": null,
+      "reason": "独立转写显示音频中无普通话人声（仅有持续鸟鸣），不存在旁白语音轨道。因此无法评估解说时机与画面对应的同步性（即没有语音可供对齐）。根据规则，缺失关键模态信息导致无法判断时返回null。",
+      "times": []
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 48.517,
+        "matched_original_seconds": 1
+      },
+      {
+        "start": 60.817,
+        "end": 72.8,
+        "matched_original_seconds": 11
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 14.0,
+        "end": 26.0,
+        "reason": "此时间段内完全没有人工解说声音，可以清晰地听到连续的、真实的背景鸟鸣声。"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 12,
+    "compared_seconds": 25
+  }
+}

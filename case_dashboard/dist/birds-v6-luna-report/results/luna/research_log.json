@@ -1,0 +1,52 @@
+{
+  "purpose": "辅助物种名和基础生态信息核对；不用于反向寻找视频来源或素材答案。",
+  "audio_and_visual_work": {
+    "visual": "直接查看源视频抽帧与章节画面，未使用反向搜图、视觉识别模型或素材指纹。",
+    "audio": "本地 ffmpeg 解码，numpy 分析 PCM 幅度，scipy 生成 0–8 kHz 声谱图；无原生听音工具，因此没有声称亲耳听辨。未上传输入视频或原始音轨。"
+  },
+  "references": [
+    {
+      "url": "https://www.audubon.org/field-guide/bird/california-thrasher",
+      "result": "页面读取成功，标题为 California Thrasher；正文描述其加州灌丛分布。",
+      "use": "名称、学名和灌丛生态交叉核对；画面识别保持暂定。"
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/eastern-phoebe",
+      "result": "页面读取成功，标题为 Eastern Phoebe；正文描述其外观朴素、霸鹟习性及尾部动作。",
+      "use": "名称与学名核对；本片未把网页声音描述当作实听证据。"
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/brown-pelican",
+      "result": "页面读取成功，标题为 Brown Pelican；正文称其为海岸鸟类。",
+      "use": "名称、学名和海岸生态交叉核对。"
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "result": "页面读取成功，标题为 Laysan Albatross；正文提到其在岛屿繁殖。",
+      "use": "名称、学名和繁殖习性交叉核对。"
+    }
+  ],
+  "failed_or_discarded": [
+    {
+      "service": "Google Translate TTS endpoint",
+      "attempt": "仅提交自行撰写的一句测试旁白，不含源视频或原始音轨。",
+      "result": "代理 CONNECT 返回 403；停止使用。"
+    },
+    {
+      "service": "Microsoft Edge neural TTS via edge-tts 7.3.1",
+      "attempt": "配置 HTTPS_PROXY 显式生成同一句自写测试旁白。",
+      "result": "服务未返回音频；停止使用。"
+    },
+    {
+      "service": "raw.githubusercontent.com Noto CJK font URL",
+      "attempt": "通用字幕字体资源。",
+      "result": "网关返回来源策略拒绝内容；响应已丢弃，没有使用该文件。随后使用 Debian 官方软件包字体以便显示中文字幕。"
+    }
+  ],
+  "restrictions": {
+    "restricted_domains_accessed": false,
+    "source_video_or_audio_uploaded": false,
+    "recognition_models_or_subagents_used": false,
+    "history_or_source_material_search": false
+  }
+}
