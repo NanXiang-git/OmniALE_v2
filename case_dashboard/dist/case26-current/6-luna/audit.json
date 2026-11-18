@@ -1,0 +1,57 @@
+{
+  "utc": 1794985391.631422,
+  "integrity_passed": true,
+  "integrity_failures": [],
+  "frozen_files_checked": 54,
+  "sealed_files": 9,
+  "solver_model_and_effort_verified": true,
+  "solver_model": "gpt-6-luna",
+  "reasoning_effort": "xhigh",
+  "deadline": {
+    "start_unix": 1794976747.5368028,
+    "deadline_unix": null,
+    "wall_clock_seconds": null,
+    "unlimited": true,
+    "mode": "official"
+  },
+  "unlimited_verified": true,
+  "api_calls": 35,
+  "api_failed": 0,
+  "completed_commands": 57,
+  "failed_commands": 2,
+  "elapsed_seconds": 1636.3501057624817,
+  "timed_out": false,
+  "host_returncode": 0,
+  "initial_environment_failure": {
+    "case": "case_26_music",
+    "reason": "Sol credential group returned model_not_found for gpt-6-luna",
+    "http_404_requests": 6,
+    "successful_responses": 0,
+    "submission_files": 0
+  },
+  "same_inputs": {
+    "checked_unix": 1794977520.0769267,
+    "original_frozen_files_unchanged": true,
+    "files_checked": 54,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "xhigh",
+    "wall_clock_seconds": null,
+    "input_manifest_identical": true
+  },
+  "score": {
+    "formal_total": 32.9005,
+    "visual_points": 25.62154,
+    "audio_points_verified": 7.278948300941949,
+    "pending": [],
+    "accepted": false,
+    "hard_failures": [
+      "light_tile_error"
+    ],
+    "critical_failures": [
+      "musical_content",
+      "timbre_detail",
+      "audible_artifacts",
+      "restoration_quality"
+    ]
+  }
+}

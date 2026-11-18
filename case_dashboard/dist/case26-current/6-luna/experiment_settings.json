@@ -1,0 +1,19 @@
+{
+  "model": "gpt-6-luna",
+  "reasoning_effort": "xhigh",
+  "harness": "Codex CLI 0.163.0",
+  "wall_clock_seconds": null,
+  "unlimited": true,
+  "network": false,
+  "truth_access": false,
+  "video_judge": "gpt-6.1-sol",
+  "video_judge_effort": "high",
+  "audio_judge": "qwen3.8-omni-flash with actual-audio controls",
+  "input_audio": "user-selected heavy audition, byte-identical",
+  "same_task_and_scoring_as": "run_20261116_heavy",
+  "status": "sealed_evaluation_running",
+  "active_case": "case_26_music_retry1",
+  "credential": "existing Luna credential group; differs from Sol group",
+  "previous_attempt": "case_26_music: model_not_found before any successful response",
+  "runtime_prompt_override": "No wall-clock deadline overrides the frozen task metadata of 60 minutes; model/effort supplied by harness."
+}

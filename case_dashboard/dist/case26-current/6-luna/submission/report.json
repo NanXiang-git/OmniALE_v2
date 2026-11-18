@@ -1,0 +1,36 @@
+{
+  "method": "Protected frames [0,48), [264,288), and [600,624) were copied unchanged. In damaged sections, OpenCV colored non-local-means denoising was applied with restrained strengths (luma h=5.5, chroma h=9), followed by a low-weight bidirectional Farneback motion-compensated neighbor blend gated by forward/backward flow consistency and photometric agreement. No exposure normalization, crop, frame synthesis, or frame reordering was applied. The master was encoded as lossless FFV1 from 8-bit BGR/RGB samples; the repair layer stores the signed correction using the supplied replay convention.",
+  "protected_ranges": [
+    [0, 48],
+    [264, 288],
+    [600, 624]
+  ],
+  "color_contract": "8bit displayRGB, same candidate transform; no linear/mastering reinterpretation",
+  "limitations": "No clean frame reference or hidden target was available, so denoising strength was selected by visual inspection of input frames and restrained to avoid smoothing hand and control-panel edges. Optical flow can be less reliable at occlusions and during fast motion; flow confidence reduces but cannot eliminate temporal blending errors. The authored warm sweep and cool dimming were left in the source signal, so any source flicker not separable from those effects remains.",
+  "checks": [
+    {
+      "frame": 48,
+      "observation": "First degraded block begins at frame 48; source geometry and native frame position were retained."
+    },
+    {
+      "frame": 120,
+      "observation": "Moving sleeve and control surface remain visible after restrained spatial and flow-gated temporal denoising."
+    },
+    {
+      "frame": 264,
+      "observation": "Start of the middle protected range; protected frames were copied from the source without processing."
+    },
+    {
+      "frame": 360,
+      "observation": "Moving hand/arm and authored bright sweep remain in the same frame and color transform."
+    },
+    {
+      "frame": 432,
+      "observation": "Cooler/darker authored passage remains; restoration does not apply a global exposure lift."
+    },
+    {
+      "frame": 600,
+      "observation": "Start of final protected range; protected frames were copied from source unchanged."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Music: Glass Steps — Case26 original programmed instrumental, 12 bars at 120 BPM. Authored specifically for this task using a new note arrangement and deterministic additive/FM/plucked synthesis; no external music recording. Video source and credits remain in input/SOURCES.md. Audio independently added; not synchronous production sound.

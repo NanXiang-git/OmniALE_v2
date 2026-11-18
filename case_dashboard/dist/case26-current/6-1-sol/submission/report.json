@@ -1,0 +1,45 @@
+{
+  "method": "CPU restoration in the supplied 8-bit display RGB convention. A short Gaussian temporal trend of global luminance corrects rapid brightness fluctuation without normalizing the longer warm sweep or cool darkening. Nine-frame neighborhoods are aligned to each current frame using dense optical flow on lightly filtered half-resolution guides. Warped samples are photometrically matched and combined with local residual-dependent weights to limit averaging across motion and occlusions. Modest spatial nonlocal filtering reduces remaining grain. Chroma median/bilateral filtering and a separate saturation-limited nonlocal chroma pass reduce colored blotches while retaining saturated controls and broad lighting colors. No resizing of the delivered frame, crop, replacement frame, synthesis or frame reordering is used. Protected frames bypass all processing. Final corrections are quantized to the contractual signed two-level step and the master is generated from those corrections. Changed image pixels: 114131792; changed RGB samples: 317234902.",
+  "protected_ranges": [
+    [
+      0,
+      48
+    ],
+    [
+      264,
+      288
+    ],
+    [
+      600,
+      624
+    ]
+  ],
+  "color_contract": "8bit displayRGB, same candidate transform; no linear/mastering reinterpretation",
+  "limitations": "There is no clean reference. Motion alignment cannot separate every injected trail from real exposure blur; some sleeve mottling, fine-edge softness and motion trails remain in the most damaged windows. Filtering is deliberately residual-weighted to limit cross-object mixing. Visual observations are from extracted native frames and montage comparisons, not a claim of clean-reference fidelity. Replay validates the editable correction representation, not reproduction of the original restoration algorithm.",
+  "checks": [
+    {
+      "frame": 60,
+      "observation": "Native-frame inspection: strong grain is reduced on the green wall, shirt and console while the grasp and colored controls remain visible."
+    },
+    {
+      "frame": 132,
+      "observation": "Warm sweep remains spatially visible; restoration does not apply a uniform exposure or white-balance normalization."
+    },
+    {
+      "frame": 204,
+      "observation": "Moving forearm and hand remain in the original frame position. Some source motion blur/trail is retained; no generated detail is substituted."
+    },
+    {
+      "frame": 276,
+      "observation": "All three protected ranges were checked sample by sample: maximum difference is 0. Full-strength correction replay maximum error is 0; half-strength midpoint error is at most 0.5 RGB level."
+    },
+    {
+      "frame": 456,
+      "observation": "Cooler, darker interval remains distinct from the warmer surrounding scene. Grain is reduced, with some fine-edge softness."
+    },
+    {
+      "frame": 612,
+      "observation": "Protected ending is copied exactly. Verified all 624 decoded frames, identity mapping, lossless master/repair replay and actual corrections in every damaged block. H264 maximum per-frame RGB MAE to master 0.008164; minimum grayscale correlation 0.997994. Silent and AV preview pictures decode identically."
+    }
+  ]
+}

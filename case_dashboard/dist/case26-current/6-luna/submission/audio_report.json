@@ -1,0 +1,41 @@
+{
+  "method": "The input is 48 kHz, stereo PCM16. I kept samples in 0-2 s and 24-26 s bit-identical. Across 2-24 s I formed mid/side signals, estimated the clean protected-window side-to-mid spectral ratio from 0.08-1.92 s, smoothed the estimate across frequency, and used a conservative time-frequency Wiener attenuation with 4096-sample Hann windows, 512-sample hop, and smoothed gains. The stereo side estimate is anchored to the protected-window ratio; gains were bounded to avoid spectral nulls. The restored WAV was written as 48 kHz stereo PCM16. The AV preview uses that WAV with AAC at 512 kbit/s.",
+  "limitations": "No audio-perception tool is available in this session, so I did not listen to the result and make no subjective sound-quality claim. No clean reference waveform or fixed onset/damage-event locations were available. Observations below are signal measurements; they do not establish reference-relative SNR, onset fidelity, or perceptual artifact removal. The mid/side prior can attenuate genuine stereo width when the music's spatial content differs from the protected windows.",
+  "checks": [
+    {
+      "start": 0,
+      "end": 2,
+      "observation": "Protected input/output samples are bit-identical; stereo mid/side power ratio is -16.79 dB in both."
+    },
+    {
+      "start": 2,
+      "end": 8,
+      "observation": "RMS changed from 0.13813 to 0.11450; side/mid power ratio changed from -7.65 dB to -15.53 dB."
+    },
+    {
+      "start": 8,
+      "end": 13,
+      "observation": "RMS changed from 0.15049 to 0.12108; side/mid power ratio changed from -7.01 dB to -14.71 dB."
+    },
+    {
+      "start": 13,
+      "end": 19,
+      "observation": "RMS changed from 0.14465 to 0.11951; side/mid power ratio changed from -7.55 dB to -15.27 dB."
+    },
+    {
+      "start": 19,
+      "end": 24,
+      "observation": "RMS changed from 0.13478 to 0.10840; side/mid power ratio changed from -7.05 dB to -14.77 dB."
+    },
+    {
+      "start": 24,
+      "end": 26,
+      "observation": "Protected input/output samples are bit-identical; stereo mid/side power ratio is -20.06 dB in both."
+    },
+    {
+      "start": 0,
+      "end": 26,
+      "observation": "AAC decode-to-WAV SNR is 35.8 dB over 26 seconds; lowest measured assessment-block SNR is 35.5 dB. Decoded audio is 48 kHz stereo; AAC encoder padding adds 256 decoded samples beyond the 1,248,000-sample WAV duration."
+    }
+  ]
+}

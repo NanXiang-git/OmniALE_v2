@@ -1,0 +1,582 @@
+[
+  {
+    "step": 1,
+    "source_line": 1,
+    "kind": "namespace_start",
+    "output": "{\"op\": \"event\", \"event\": \"namespace_start\", \"utc\": 1794840416.4257767, \"deadline_unix\": 1794844016.4257767, \"case\": \"case_26_music\", \"mode\": \"official\"}",
+    "utc": 1794840416.4257767
+  },
+  {
+    "step": 2,
+    "source_line": 2,
+    "kind": "watchdog_target",
+    "output": "{\"op\": \"event\", \"event\": \"watchdog_target\", \"bwrap_pid\": 717, \"deadline_unix\": 1794844016.4257767}",
+    "utc": null
+  },
+  {
+    "step": 3,
+    "source_line": 3,
+    "kind": "isolation_checks",
+    "output": "{\"op\": \"event\", \"utc\": 1794840416.8933399, \"event\": \"isolation_checks\", \"checks\": {\"input_readable\": true, \"input_readonly\": true, \"submission_writable\": true, \"host_paths_hidden\": true, \"credential_absent\": true, \"network_blocked\": true, \"visible_process_count\": 2, \"pid_namespace_small\": true}}",
+    "utc": 1794840416.8933399
+  },
+  {
+    "step": 4,
+    "source_line": 4,
+    "kind": "codex_start",
+    "output": "{\"op\": \"event\", \"utc\": 1794840416.8952138, \"event\": \"codex_start\", \"mode\": \"official\", \"model\": \"gpt-6.1-sol\", \"effort\": \"high\"}",
+    "utc": 1794840416.8952138
+  },
+  {
+    "step": 5,
+    "source_line": 8,
+    "kind": "agent_message",
+    "command": "",
+    "output": "I’ll read the task and deadline, inspect the available media, and create the required deliverables in `/workspace/submission`.",
+    "exit_code": null,
+    "utc": 1794840429.3003423
+  },
+  {
+    "step": 6,
+    "source_line": 10,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /candidate/TASK.md /workspace/DEADLINE.json'",
+    "output": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n{\"start_unix\": 1794840416.4257767, \"deadline_unix\": 1794844016.4257767, \"wall_clock_seconds\": 3600, \"mode\": \"official\"}",
+    "exit_code": 0,
+    "utc": 1794840430.4080093
+  },
+  {
+    "step": 7,
+    "source_line": 12,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'ls -la /candidate && cat /candidate/VISUAL_TASK_V3.md && cat /candidate/public_rules.json'",
+    "output": "total 41\ndrwxrwxrwx  1 1000 1000  512 Nov 16 14:38 .\ndrwxr-xr-x 11 1000 1000  280 Nov 16 14:46 ..\n-rwxrwxrwx  1 1000 1000  342 Nov 16 14:38 CREDITS.md\n-rwxrwxrwx  1 1000 1000 2527 Nov 16 14:40 TASK.md\n-rwxrwxrwx  1 1000 1000 3261 Nov 16 01:49 VISUAL_TASK_V3.md\ndrwxrwxrwx  1 1000 1000  512 Nov 16 14:38 input\n-rwxrwxrwx  1 1000 1000 1286 Nov 16 14:38 output_schema.json\n-rwxrwxrwx  1 1000 1000  820 Nov  1 15:50 project_schema.json\n-rwxrwxrwx  1 1000 1000 4966 Nov 16 14:40 public_rules.json\n-rwxrwxrwx  1 1000 1000 1231 Nov  1 16:03 replay.py\n-rwxrwxrwx  1 1000 1000 1291 Nov  1 15:50 report_schema.json\n-rwxrwxrwx  1 1000 1000  579 Nov 11 08:21 tools_manifest.json\n-rwxrwxrwx  1 1000 1000  140 Nov 16 01:49 version.json\n-rwxrwxrwx  1 1000 1000 5357 Nov 16 01:49 visual_rules_v3.json\n# Case26｜保留局部光变与手部细节的弱光修复（加重损伤版v3）\r\n\r\n修复26秒控制台手部实拍的受控退化：更明显的暗部颗粒、局部彩色斑噪和横向噪声、运动拖尾与异常快速闪动。制作方有意加入了移动暖色扫光与较慢的冷暗变化，这些须保留。previous_attempt.mp4是存在过度平滑、残影及光变压平问题的旧尝试，不能直接作为目标。\r\n\r\n输入damaged.mkv是权威RGB8母版：640×338、24fps、624帧、无声音。源动作来自真实拍摄，光变与退化由出题人施加，不声称自然相机故障或原片灯光设计。三段正常保护窗为帧[0,48)、[264,288)、[600,624)，应保持原有质感与颜色。其余区段均应有实际改善，不能只修静态背景。\r\n\r\n交付submission.json，索引restored.mkv、preview.mp4、repair.mkv、project.json、report.json。两条MKV均FFV1、RGB8、624帧、同尺寸和帧率、无声音；预览为H264 MP4，必须来自交付母版。报告说明方法/限制与最多6条自查证据，不得据模型名称宣称保真。\r\n\r\nrepair.mkv是可编辑修订层，每通道128代表不改，实际修订量为2×(像素−128)。project按schema记录输入、强度1.0和逐帧映射。通过replay.py可对原输入加修订层重建母版，每RGB样本容许1级量化差；把强度改为0或0.5应分别得到原片或中间修订。该合同用于重放结果、交接和调整强度，不等同证明你原本的降噪算法可复现。允许使用任何本地传统/专业/模型工具制作修订，评测不执行提交者任意代码。\r\n\r\n保留所有源动作、帧序、画幅和色彩约定；不裁切、镜像、换帧、生成不同手指/物件、叠字幕或统一消除所有曝光变化。不要以缩小后放大或整幅强模糊掩盖噪声。\r\n\r\n自动60分：交付5、修订层重放5、分段改善15、运动细节15、时序5、光变10、正常保护5。judge40分：动作证据15、实际修复质量15、光变意图10，均为核心条目。指标区域从真值固定生成，逐段/逐帧验收；总分≥80且无硬失败/核心失败才通过。无独立judge时正式总分待定。精确门槛、锚点和公式见public_rules.json。\r\n\r\n\r\n## 本次实验版本与预算\r\n\r\n本题版本为v3，submission.json的version必须为\"3.0\"。独立答题墙钟上限60分钟，包含分析、工具运行、处理、导出和自检。提前结束立即封存，到时终止全部子进程。只允许访问公开题包和自己的工作目录，无外网检索、下载、参考答案或评分反馈。\r\n\r\n有意的暖色移动扫光位于4–10秒，较慢偏冷变暗位于17–21秒；它们属于需要保留的画面效果。正常保护窗为0–2秒、11–12秒、25–26秒（区间右端不含）。各受损区段必须实际改善，同时保留真实动作和自然运动模糊。不要把正常灯光变化全部拉平。\r\n\r\nprevious_attempt.mp4是对本版受损输入做强空间/时间平滑与曝光压平得到的失败示范，不是修复目标。数据含受控合成损伤，不声称是真实摄影机故障。公开数值评分规则与v2相同；跨版本分数不可直接视为同题条件下的能力提升或下降。\r\n{\r\n  \"version\": \"3.2-av-music-heavy\",\r\n  \"pass_threshold\": 80,\r\n  \"modality_minima\": {\r\n    \"visual\": 42,\r\n    \"audio\": 18\r\n  },\r\n  \"visual\": {\r\n    \"maximum\": 70,\r\n    \"formula\": \"0.7 * C * (automatic_quality_40 + visual_judge_60)\",\r\n    \"compliance\": \"C=min(delivery/5,repair_replay/5), clipped to [0,1]\",\r\n    \"automatic_weights\": {\r\n      \"restoration\": 12,\r\n      \"motion_detail\": 12,\r\n      \"temporal\": 4,\r\n      \"lighting\": 8,\r\n      \"protected\": 4\r\n    },\r\n    \"judge_weights\": {\r\n      \"motion_evidence\": 22.5,\r\n      \"restoration_quality\": 22.5,\r\n      \"lighting_intent\": 15\r\n    },\r\n    \"details\": \"visual_rules_v3.json retains measurement anchors and hard constraints; weights above supersede its historical weights.\"\r\n  },\r\n  \"audio\": {\r\n    \"maximum\": 30,\r\n    \"objective\": {\r\n      \"relative_improvement\": 6,\r\n      \"absolute_waveform\": 6,\r\n      \"spectral_fidelity\": 6,\r\n      \"musical_onsets\": 2,\r\n      \"damage_events\": 1,\r\n      \"stereo_preservation\": 1,\r\n      \"normal_protection\": 2\r\n    },\r\n    \"judge_items\": [\r\n      {\r\n        \"id\": \"musical_content\",\r\n        \"weight\": 2,\r\n        \"criterion\": \"Same melody, rhythm, note attacks, instruments and stereo relationships; no replaced, omitted or hallucinated music.\"\r\n      },\r\n      {\r\n        \"id\": \"timbre_detail\",\r\n        \"weight\": 2,\r\n        \"criterion\": \"Preserve timbre, high-frequency detail and natural decay compared with clean music; no muffling or pumping.\"\r\n      },\r\n      {\r\n        \"id\": \"audible_artifacts\",\r\n        \"weight\": 2,\r\n        \"criterion\": \"Remove injected hiss, hum, clicks and distortion without adding musical noise or unstable processing.\"\r\n      }\r\n    ],\r\n    \"judge_ratings\": {\r\n      \"0\": \"Core content wrong/lost, severe damage or no meaningful repair; acceptance fails.\",\r\n      \"1\": \"Reference-faithful music with effective repair and no material new artifacts.\",\r\n      \"0.5\": \"Audible improvement and core music preserved, but localized defects remain.\"\r\n    },\r\n    \"sample_rate\": 48000,\r\n    \"channels\": 2,\r\n    \"sample_frames\": 1248000,\r\n    \"format\": \"PCM16 WAV\",\r\n    \"protected_seconds\": [\r\n      [\r\n        0,\r\n        2\r\n      ],\r\n      [\r\n        24,\r\n        26\r\n      ]\r\n    ],\r\n    \"assessment_blocks\": [\r\n      [\r\n        2,\r\n        8\r\n      ],\r\n      [\r\n        8,\r\n        13\r\n      ],\r\n      [\r\n        13,\r\n        19\r\n      ],\r\n      [\r\n        19,\r\n        24\r\n      ]\r\n    ],\r\n    \"damage_score\": \"For four fixed windows, improvement quality clip(gain/15,0,1), absolute quality clip((output_SNR-3)/32,0,1), spectral quality 1-clip((weighted_log_spectral_distance-0.75)/11.25,0,1). Each contributes 6*pool(quality). pool=0.75*mean+0.25*mean(worst ceil(count/4)). No post-hoc gain/time fitting.\",\r\n    \"normal_score\": \"2*clip((minimum_protected_SNR_dB-30)/20,0,1)\",\r\n    \"format_score\": \"No bonus; exact format/time/synchronization are hard gates.\",\r\n    \"hard_constraints\": {\r\n      \"each_block_gain_db\": 0.5,\r\n      \"each_block_output_snr_db\": 3,\r\n      \"protected_snr_db\": 30,\r\n      \"global_waveform_correlation\": 0.65,\r\n      \"no_silence_or_replacement\": true,\r\n      \"av_preview_audio_snr_db\": 25,\r\n      \"av_preview_frame_mae\": 0.025\r\n    },\r\n    \"spectral_distance\": \"Mean across STFT sizes 512/2048/4096, half overlap: weighted mean absolute log magnitude difference (dB), weights=sqrt(reference_magnitude+1e-5), log floor=1e-5. Included in score.\",\r\n    \"event_score\": \"Authored musical attacks: mean absolute 5ms RMS-envelope error / mean reference envelope, assessed [-12,+65]ms around fixed attacks, quality=1-clip((error-.03)/.57,0,1), 2*pool. Damage event windows [-8,+15]ms around true event: quality=clip((SNR-3)/27,0,1), 1*pool. Half-second stereo windows: error=abs(left energy fraction difference)+abs(side/mid energy ratio difference)/(1+reference ratio), quality=1-clip((error-.01)/.24,0,1), 1*pool.\"\r\n  },\r\n  \"judges\": {\r\n    \"visual_model\": \"gpt-6.1-sol\",\r\n    \"visual_reasoning_effort\": \"high\",\r\n    \"visual_protocol\": \"Old v3 final corrected protocol: 26 one-second native-frame master/target/input windows plus 26 preview/old/target/input windows; full frozen Chinese rubric; final direct-image supplementary review for unverified items. No Qwen visual ratings.\",\r\n    \"audio_model\": \"qwen3.8-omni-flash\",\r\n    \"audio_protocol\": \"Actual audio, randomized A/B order against reference; same-media and strong-damage calibration before formal run; independent identical-media control during judging; failed controls leave score pending. Three criteria, 2 points each, ratings 0/.5/1.\",\r\n    \"missing_evidence\": \"pending; formal total remains null\",\r\n    \"zero_core_rating\": \"separate actual-media confirmation required\",\r\n    \"timestamp_policy\": \"Only evaluator constructed source intervals are trusted.\"\r\n  },\r\n  \"solver\": {\r\n    \"model\": \"gpt-6.1-sol\",\r\n    \"reasoning_effort\": \"high\",\r\n    \"harness\": \"Codex CLI\",\r\n    \"wall_clock_seconds\": 3600,\r\n    \"network\": false,\r\n    \"truth_access\": false\r\n  }\r\n}",
+    "exit_code": 0,
+    "utc": 1794840438.3867807
+  },
+  {
+    "step": 8,
+    "source_line": 14,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"find /candidate /workspace -maxdepth 3 -type f -printf '%p %s bytes\\\\n'\"",
+    "output": "/candidate/CREDITS.md 342 bytes\n/candidate/input/damaged.mkv 304020790 bytes\n/candidate/input/damaged_av.mkv 309015423 bytes\n/candidate/input/music_damaged.wav 4992044 bytes\n/candidate/input/previous_attempt.mp4 5499946 bytes\n/candidate/input/SOURCES.md 446 bytes\n/candidate/output_schema.json 1286 bytes\n/candidate/project_schema.json 820 bytes\n/candidate/public_rules.json 4966 bytes\n/candidate/replay.py 1231 bytes\n/candidate/report_schema.json 1291 bytes\n/candidate/TASK.md 2527 bytes\n/candidate/tools_manifest.json 579 bytes\n/candidate/version.json 140 bytes\n/candidate/visual_rules_v3.json 5357 bytes\n/candidate/VISUAL_TASK_V3.md 3261 bytes\n/workspace/codex_home/.tmp/plugins.sync.lock 0 bytes\n/workspace/codex_home/goals_1.sqlite 4096 bytes\n/workspace/codex_home/goals_1.sqlite-shm 32768 bytes\n/workspace/codex_home/goals_1.sqlite-wal 74192 bytes\n/workspace/codex_home/installation_id 36 bytes\n/workspace/codex_home/logs_2.sqlite 49152 bytes\n/workspace/codex_home/logs_2.sqlite-shm 32768 bytes\n/workspace/codex_home/logs_2.sqlite-wal 115392 bytes\n/workspace/codex_home/memories_1.sqlite 4096 bytes\n/workspace/codex_home/memories_1.sqlite-shm 32768 bytes\n/workspace/codex_home/memories_1.sqlite-wal 86552 bytes\n/workspace/codex_home/queue_1.sqlite 4096 bytes\n/workspace/codex_home/queue_1.sqlite-shm 32768 bytes\n/workspace/codex_home/queue_1.sqlite-wal 82432 bytes\n/workspace/codex_home/shell_snapshots/01a1e4d3-657f-7443-9adf-a3faf35fbee2.1794840421917440249.sh 2257 bytes\n/workspace/codex_home/state_5.sqlite 4096 bytes\n/workspace/codex_home/state_5.sqlite-shm 32768 bytes\n/workspace/codex_home/state_5.sqlite-wal 2117712 bytes\n/workspace/DEADLINE.json 119 bytes\n",
+    "exit_code": 0,
+    "utc": 1794840438.5855527
+  },
+  {
+    "step": 9,
+    "source_line": 16,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /candidate/project_schema.json /candidate/report_schema.json /candidate/output_schema.json /candidate/replay.py /candidate/visual_rules_v3.json /candidate/tools_manifest.json'",
+    "output": "{\r\n  \"type\": \"object\",\r\n  \"required\": [\r\n    \"version\",\r\n    \"input\",\r\n    \"operation\",\r\n    \"neutral\",\r\n    \"step\",\r\n    \"strength\",\r\n    \"rounding\",\r\n    \"frame_map\"\r\n  ],\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"version\": {\r\n      \"const\": \"1.0\"\r\n    },\r\n    \"input\": {\r\n      \"const\": \"input/damaged.mkv\"\r\n    },\r\n    \"operation\": {\r\n      \"const\": \"add_signed8_correction\"\r\n    },\r\n    \"neutral\": {\r\n      \"const\": 128\r\n    },\r\n    \"step\": {\r\n      \"const\": 2\r\n    },\r\n    \"strength\": {\r\n      \"const\": 1.0\r\n    },\r\n    \"rounding\": {\r\n      \"const\": \"nearest_even_then_clip_uint8\"\r\n    },\r\n    \"frame_map\": {\r\n      \"type\": \"array\",\r\n      \"minItems\": 624,\r\n      \"maxItems\": 624,\r\n      \"items\": {\r\n        \"type\": \"integer\",\r\n        \"minimum\": 0,\r\n        \"maximum\": 623\r\n      }\r\n    }\r\n  }\r\n}{\r\n  \"type\": \"object\",\r\n  \"required\": [\r\n    \"method\",\r\n    \"protected_ranges\",\r\n    \"color_contract\",\r\n    \"limitations\",\r\n    \"checks\"\r\n  ],\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"method\": {\r\n      \"type\": \"string\",\r\n      \"minLength\": 15,\r\n      \"maxLength\": 2400\r\n    },\r\n    \"protected_ranges\": {\r\n      \"const\": [\r\n        [\r\n          0,\r\n          48\r\n        ],\r\n        [\r\n          264,\r\n          288\r\n        ],\r\n        [\r\n          600,\r\n          624\r\n        ]\r\n      ]\r\n    },\r\n    \"color_contract\": {\r\n      \"const\": \"8bit displayRGB, same candidate transform; no linear/mastering reinterpretation\"\r\n    },\r\n    \"limitations\": {\r\n      \"type\": \"string\",\r\n      \"minLength\": 15,\r\n      \"maxLength\": 2000\r\n    },\r\n    \"checks\": {\r\n      \"type\": \"array\",\r\n      \"maxItems\": 6,\r\n      \"items\": {\r\n        \"type\": \"object\",\r\n        \"required\": [\r\n          \"frame\",\r\n          \"observation\"\r\n        ],\r\n        \"additionalProperties\": false,\r\n        \"properties\": {\r\n          \"frame\": {\r\n            \"type\": \"integer\",\r\n            \"minimum\": 0,\r\n            \"maximum\": 623\r\n          },\r\n          \"observation\": {\r\n            \"type\": \"string\",\r\n            \"minLength\": 5,\r\n            \"maxLength\": 400\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}{\r\n  \"type\": \"object\",\r\n  \"required\": [\r\n    \"version\",\r\n    \"case_id\",\r\n    \"files\"\r\n  ],\r\n  \"additionalProperties\": false,\r\n  \"properties\": {\r\n    \"version\": {\r\n      \"const\": \"3.2-av-music-heavy\"\r\n    },\r\n    \"case_id\": {\r\n      \"const\": \"26\"\r\n    },\r\n    \"files\": {\r\n      \"type\": \"object\",\r\n      \"required\": [\r\n        \"master\",\r\n        \"preview\",\r\n        \"repair\",\r\n        \"project\",\r\n        \"report\",\r\n        \"audio\",\r\n        \"av_preview\",\r\n        \"audio_report\"\r\n      ],\r\n      \"additionalProperties\": false,\r\n      \"properties\": {\r\n        \"master\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"preview\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"repair\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"project\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"report\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"audio\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"av_preview\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        },\r\n        \"audio_report\": {\r\n          \"type\": \"string\",\r\n          \"minLength\": 1\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\"\"\"Pack/replay editable corrections without hidden truth. OpenCV + ffmpeg required.\"\"\"\r\nimport argparse,subprocess,json\r\nfrom pathlib import Path\r\nimport cv2,numpy as np\r\ncv2.setNumThreads(1)\r\np=argparse.ArgumentParser();p.add_argument('--input',required=True);p.add_argument('--repair');p.add_argument('--master');p.add_argument('--out',required=True);p.add_argument('--strength',type=float,default=1.0);a=p.parse_args();assert bool(a.repair)!=bool(a.master),'choose repair to replay OR master to pack';assert 0<=a.strength<=1\r\ncaps=[cv2.VideoCapture(str(x),cv2.CAP_FFMPEG,[cv2.CAP_PROP_N_THREADS,1]) for x in [a.input,a.repair or a.master]];proc=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','bgr24','-s','640x338','-r','24','-i','-','-an','-c:v','ffv1','-level','3','-threads','2',a.out],stdin=subprocess.PIPE)\r\nfor n in range(624):\r\n x=[]\r\n for c in caps:\r\n  ok,f=c.read();assert ok and f.shape==(338,640,3);x.append(f.astype(np.float32))\r\n if a.master:z=np.clip(np.rint((x[1]-x[0])/2)+128,0,255)\r\n else:z=np.clip(np.rint(x[0]+2*(x[1]-128)*a.strength),0,255)\r\n proc.stdin.write(z.astype(np.uint8).tobytes())\r\nfor c in caps:assert not c.read()[0];c.release()\r\nproc.stdin.close();assert proc.wait()==0\r\n{\n  \"version\": \"3.0\",\n  \"case_id\": \"26\",\n  \"pass_threshold\": 80,\n  \"automatic_weights\": {\n    \"delivery\": 5,\n    \"repair_replay\": 5,\n    \"restoration\": 15,\n    \"motion_detail\": 15,\n    \"temporal\": 5,\n    \"lighting\": 10,\n    \"protected\": 5\n  },\n  \"automatic_rule\": \"Continuous metrics use linear clipped quality anchors; hard gates apply independently. Master/repair are measured losslessly; preview is only checked for reconstruction and viewing.\",\n  \"anchors\": {\n    \"restoration_gain_db\": [\n      0,\n      5\n    ],\n    \"motion_mae\": [\n      0.012,\n      0.06\n    ],\n    \"gradient_relative_error\": [\n      0.1,\n      0.7\n    ],\n    \"temporal_residual\": [\n      0.006,\n      0.035\n    ],\n    \"light_tile_error\": [\n      0.003,\n      0.025\n    ],\n    \"protected_mae\": [\n      0.001,\n      0.006\n    ]\n  },\n  \"hard_constraints\": {\n    \"format\": \"master and repair:FFV1 MKV,624frames,24fps,640x338,RGB8(no subsampling),no audio; preview:MP4,H264,624frames,24fps,640x338,no audio\",\n    \"protected\": \"[0,48),[264,288),[600,624) are normal reference windows; per-frame mean absolute RGB error to input<=0.006; repair neutral is encouraged, no forced changes\",\n    \"restoration\": \"at least1.0dB PSNR improvement over damaged input in EACH degraded assessment block [48,144),[144,264),[288,432),[432,600); no averaging easy windows to hide an unprocessed block\",\n    \"motion_detail\": \"on truth-defined moving regions mean RGB error<=0.060; true-edge Sobel magnitude relative absolute error<=0.70 and magnitude ratio between0.55 and1.55; pixel-space frame alignment remains1:1\",\n    \"temporal\": \"truth-flow-compensated grayscale residual error<=0.035 on valid correspondences; no>=6 consecutive frames frozen while truth has measurable movement\",\n    \"lighting\": \"authored warm moving sweep and slow cool darkening must remain, no new flicker; each intentional event gain0.70–1.30 relative to clean-minus-base light field, tile linear-RGB MAE<=0.025; event timing/appearance additionally judged\",\n    \"repair_replay\": \"repair represents signed delta2*(channel-128). Reconstruction=clip(round_even(input+delta*strength),0,255),strength1.0. Max absolute difference from submitted master<=1 integer level per RGB sample, all624frames. Neutral128. Full image correction range covered with1level quantization tolerance.\",\n    \"preview_replay\": \"each frame RGB MAE to master<=0.025 and grayscale correlation>=0.97; no overlays or different restored content\",\n    \"frame_map\": \"exact0..623; no crop/mirror/reorder/invented actions or missing frames\",\n    \"editing_intervention\": \"replay strength0 returns original input; strength0.5 must yield the arithmetic midpoint to within1 integer level; actual changed-pixel count reported. This verifies editable correction delivery, NOT restoration-algorithm reproducibility.\"\n  },\n  \"metric_definitions\": {\n    \"restoration\": \"mean per-assessment-block PSNR gain; target includes authored light changes, not rawEXR\",\n    \"motion_detail\": \"50% motionRGBquality +50% truth-edge relative-gradient-error quality; moving mask comes from clean base frame changes, not candidate\",\n    \"gradient\": \"Sobel magnitude divided by4 on grayscale; truth edges magnitude>0.08; compare candidates on same fixed mask\",\n    \"temporal\": \"compare candidate-vs-truth warp residual at320x169 with fixed truth backwardFarneback and trusted validity mask\",\n    \"lighting\": \"linearize displayRGB with fixed sRGB transfer for tile metric; intended gain estimated by projection onto target-minus-base field across each event; no posthoc color fitting\",\n    \"protected\": \"all normal frames separately, includes middle and end rather than just initial prefix\"\n  },\n  \"judge_items\": [\n    {\n      \"id\": \"motion_evidence\",\n      \"weight\": 15,\n      \"critical\": true,\n      \"criterion\": \"相对真实目标，手指、握持、松手、器件关系和镜头运动均保留，无新增/丢失动作、冻结或合成假细节；有真实运动模糊时不误判为缺陷。\",\n      \"rating_anchors\": {\n        \"0\": \"动作/物件关系变化或明显冻结、伪造。\",\n        \"1\": \"动作、轮廓、接触/松开与细节均可信且连续。\",\n        \"0.5\": \"主要动作正确，局部手部边缘/纹理有修复瑕疵。\"\n      }\n    },\n    {\n      \"id\": \"restoration_quality\",\n      \"weight\": 15,\n      \"critical\": true,\n      \"criterion\": \"实际降低暗部/色度噪声与运动后拖影，未用整幅模糊、蜡化、过锐和游动纹理换取数值；看全长与运动/细节窗口。\",\n      \"rating_anchors\": {\n        \"0\": \"未改善或以严重模糊/拖尾/伪纹理替代原损伤。\",\n        \"1\": \"噪声和拖影受控，纹理自然，未见影响复用的修复伪影。\",\n        \"0.5\": \"明显改善但仍有少量残噪、细边软化或短暂残影。\"\n      }\n    },\n    {\n      \"id\": \"lighting_intent\",\n      \"weight\": 10,\n      \"critical\": true,\n      \"criterion\": \"保留移动暖扫光和缓慢冷暗变化的空间形状、节奏与颜色，去除额外高频闪动；正常保护窗与修复段之间自然衔接。\",\n      \"rating_anchors\": {\n        \"0\": \"光变被抹除/错位、颜色意图反转或新明显闪烁。\",\n        \"1\": \"意图光变完整自然，时点与形态一致，无新增异常闪动。\",\n        \"0.5\": \"两种意图保持，但局部亮度/色彩或接缝尚需修整。\"\n      }\n    }\n  ]\n}{\r\n  \"version\": \"3.0\",\r\n  \"tools\": [\r\n    \"ffmpeg8\",\r\n    \"Python3.13\",\r\n    \"numpy\",\r\n    \"opencv\",\r\n    \"local restoration tools/models permitted\"\r\n  ],\r\n  \"budget\": {\r\n    \"wall_minutes\": 60,\r\n    \"gpu\": \"not exposed; CPU only\"\r\n  },\r\n  \"network\": \"isolated; only provided local tools and host-mediated gpt-6.1-sol/high; no internet or reference/dashboard access\",\r\n  \"source_family_overlap\": \"Case21 uses same Tears of Steel04_5a; independent solver session required\",\r\n  \"reproducibility_scope\": \"declarative correction replay only; report original processing separately\"\r\n}",
+    "exit_code": 0,
+    "utc": 1794840445.6757798
+  },
+  {
+    "step": 10,
+    "source_line": 18,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport importlib.util, os, time\nfor m in ['numpy','scipy','cv2','torch','librosa','soundfile','pywt','skimage','numba']:\n print(m, bool(importlib.util.find_spec(m)))\nprint(time.time())\nPY\nffprobe -v error -show_streams /candidate/input/damaged.mkv\"",
+    "output": "numpy True\nscipy True\ncv2 True\ntorch False\nlibrosa False\nsoundfile True\npywt False\nskimage False\nnumba False\n1794840445.8494809\n[STREAM]\nindex=0\ncodec_name=ffv1\ncodec_long_name=FFmpeg video codec #1\nprofile=unknown\ncodec_type=video\ncodec_tag_string=[0][0][0][0]\ncodec_tag=0x0000\nwidth=640\nheight=338\ncoded_width=640\ncoded_height=338\nclosed_captions=0\nfilm_grain=0\nhas_b_frames=0\nsample_aspect_ratio=N/A\ndisplay_aspect_ratio=N/A\npix_fmt=bgr0\nlevel=-99\ncolor_range=pc\ncolor_space=gbr\ncolor_transfer=unknown\ncolor_primaries=unknown\nchroma_location=unspecified\nfield_order=progressive\nrefs=1\nid=N/A\nr_frame_rate=24/1\navg_frame_rate=24/1\ntime_base=1/1000\nstart_pts=0\nstart_time=0.000000\nduration_ts=N/A\nduration=N/A\nbit_rate=N/A\nmax_bit_rate=N/A\nbits_per_raw_sample=8\nnb_frames=N/A\nnb_read_frames=N/A\nnb_read_packets=N/A\nextradata_size=42\nDISPOSITION:default=0\nDISPOSITION:dub=0\nDISPOSITION:original=0\nDISPOSITION:comment=0\nDISPOSITION:lyrics=0\nDISPOSITION:karaoke=0\nDISPOSITION:forced=0\nDISPOSITION:hearing_impaired=0\nDISPOSITION:visual_impaired=0\nDISPOSITION:clean_effects=0\nDISPOSITION:attached_pic=0\nDISPOSITION:timed_thumbnails=0\nDISPOSITION:non_diegetic=0\nDISPOSITION:captions=0\nDISPOSITION:descriptions=0\nDISPOSITION:metadata=0\nDISPOSITION:dependent=0\nDISPOSITION:still_image=0\nTAG:ENCODER=Lavc62.11.100 ffv1\nTAG:DURATION=00:00:26.000000000\n[/STREAM]\n",
+    "exit_code": 0,
+    "utc": 1794840445.9200752
+  },
+  {
+    "step": 11,
+    "source_line": 20,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"mkdir -p /workspace/submission /workspace/work\ncat > /workspace/work/inspect.py <<'PY'\nimport cv2,numpy as np,soundfile as sf\nfrom scipy import signal\ncv2.setNumThreads(2)\nc=cv2.VideoCapture('/candidate/input/damaged.mkv');fs=[]\nwhile True:\n ok,f=c.read()\n if not ok: break\n fs.append(f)\nx=np.stack(fs);np.save('/workspace/work/video.npy',x)\nprint('video',x.shape)\nidx=[0,36,60,96,132,168,204,240,276,312,348,384,420,456,492,528,564,612]\nthumbs=[cv2.resize(x[i],(384,203)) for i in idx]\nfor i,f in zip(idx,thumbs):cv2.putText(f,f'{i} / {i/24:.2f}s',(5,20),0,.5,(255,255,255),1)\ncv2.imwrite('/workspace/work/montage.jpg',np.vstack([np.hstack(thumbs[i:i+3]) for i in range(0,len(idx),3)]))\ny,sr=sf.read('/candidate/input/music_damaged.wav');np.save('/workspace/work/audio.npy',y)\nprint('audio',y.shape,sr,'range',y.min(0),y.max(0),'rms',np.sqrt(np.mean(y*y,axis=0)))\nfor sec in np.arange(0,26,.5):\n a=y[int(sec*sr):int((sec+.5)*sr)];print(f'{sec:.1f}', 'rms',np.round(np.sqrt(np.mean(a*a,0)),4),'peak',np.round(np.max(abs(a),0),3),'diff',np.round(np.sqrt(np.mean(np.diff(a,axis=0)**2,0)),4),'corr',round(np.corrcoef(a.T)[0,1],3))\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/inspect.py\"",
+    "output": "Traceback (most recent call last):\n  File \"/workspace/work/inspect.py\", line 1, in <module>\n    import cv2,numpy as np,soundfile as sf\n  File \"/opencv/cv2/__init__.py\", line 11, in <module>\n    import numpy\n  File \"/runtime/deps/numpy/__init__.py\", line 159, in <module>\n    from . import ma\n  File \"/runtime/deps/numpy/ma/__init__.py\", line 42, in <module>\n    from . import core\n  File \"/runtime/deps/numpy/ma/core.py\", line 24, in <module>\n    import inspect\n  File \"/workspace/work/inspect.py\", line 1, in <module>\n    import cv2,numpy as np,soundfile as sf\n  File \"/runtime/deps/soundfile.py\", line 22, in <module>\n    from typing_extensions import Self\n  File \"/runtime/deps/typing_extensions.py\", line 1154, in <module>\n    _TAKES_MODULE = \"module\" in inspect.signature(typing._type_check).parameters\n                                ^^^^^^^^^^^^^^^^^\nAttributeError: partially initialized module 'inspect' has no attribute 'signature' (most likely due to a circular import)\n",
+    "exit_code": 1,
+    "utc": 1794840471.9891846
+  },
+  {
+    "step": 12,
+    "source_line": 22,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'mv /workspace/work/inspect.py /workspace/work/analyze_media.py\nOPENBLAS_NUM_THREADS=2 python /workspace/work/analyze_media.py'",
+    "output": "/runtime/deps/numpy/lib/function_base.py:2897: RuntimeWarning: invalid value encountered in divide\n  c /= stddev[:, None]\nvideo (624, 338, 640, 3)\naudio (1248000, 2) 48000 range [-0.92001343 -0.71734619] [0.84109497 0.76800537] rms [0.14130767 0.12706525]\n0.0 rms [0.1327 0.1295] peak [0.408 0.389] diff [0.0097 0.0121] corr 0.972\n0.5 rms [0.1169 0.1218] peak [0.441 0.476] diff [0.02   0.0196] corr 0.953\n1.0 rms [0.0997 0.1055] peak [0.351 0.409] diff [0.0075 0.0138] corr 0.951\n1.5 rms [0.0883 0.0917] peak [0.324 0.322] diff [0.0191 0.018 ] corr 0.957\n2.0 rms [0.1698 0.1572] peak [0.706 0.61 ] diff [0.0988 0.0818] corr 0.677\n2.5 rms [0.1631 0.1485] peak [0.667 0.613] diff [0.098  0.0815] corr 0.697\n3.0 rms [0.1439 0.1393] peak [0.683 0.589] diff [0.057 0.048] corr 0.817\n3.5 rms [0.1196 0.1067] peak [0.434 0.361] diff [0.0604 0.0506] corr 0.825\n4.0 rms [0.1601 0.1468] peak [0.673 0.571] diff [0.0673 0.0574] corr 0.715\n4.5 rms [0.1624 0.1446] peak [0.813 0.646] diff [0.0715 0.0601] corr 0.63\n5.0 rms [0.1337 0.1245] peak [0.711 0.685] diff [0.0506 0.0431] corr 0.754\n5.5 rms [0.1205 0.1027] peak [0.561 0.399] diff [0.0953 0.0788] corr 0.618\n6.0 rms [0.1537 0.1392] peak [0.66  0.537] diff [0.1014 0.0836] corr 0.668\n6.5 rms [0.135  0.1322] peak [0.679 0.572] diff [0.084  0.0707] corr 0.694\n7.0 rms [0.1429 0.12  ] peak [0.63  0.521] diff [0.0659 0.0561] corr 0.777\n7.5 rms [0.1176 0.0983] peak [0.475 0.362] diff [0.0699 0.0581] corr 0.705\n8.0 rms [0.1991 0.1645] peak [0.798 0.717] diff [0.1058 0.088 ] corr 0.699\n8.5 rms [0.1895 0.1627] peak [0.842 0.672] diff [0.1013 0.0842] corr 0.596\n9.0 rms [0.169  0.1441] peak [0.77  0.657] diff [0.0837 0.0691] corr 0.612\n9.5 rms [0.1366 0.1207] peak [0.67  0.539] diff [0.063  0.0525] corr 0.706\n10.0 rms [0.1662 0.1434] peak [0.655 0.616] diff [0.0758 0.0625] corr 0.827\n10.5 rms [0.1493 0.1333] peak [0.631 0.564] diff [0.0963 0.0817] corr 0.685\n11.0 rms [0.1603 0.1399] peak [0.827 0.598] diff [0.0777 0.0647] corr 0.691\n11.5 rms [0.1251 0.1132] peak [0.475 0.411] diff [0.0843 0.0692] corr 0.683\n12.0 rms [0.1377 0.1208] peak [0.533 0.574] diff [0.0769 0.0633] corr 0.675\n12.5 rms [0.1617 0.1404] peak [0.705 0.643] diff [0.0773 0.0641] corr 0.607\n13.0 rms [0.1366 0.1218] peak [0.662 0.543] diff [0.0471 0.0397] corr 0.799\n13.5 rms [0.1311 0.115 ] peak [0.478 0.457] diff [0.0702 0.0573] corr 0.698\n14.0 rms [0.1785 0.1549] peak [0.801 0.611] diff [0.0934 0.0772] corr 0.753\n14.5 rms [0.1431 0.1351] peak [0.66  0.641] diff [0.1027 0.0856] corr 0.665\n15.0 rms [0.1538 0.1411] peak [0.789 0.669] diff [0.1213 0.1019] corr 0.601\n15.5 rms [0.1301 0.1161] peak [0.682 0.518] diff [0.0952 0.0798] corr 0.618\n16.0 rms [0.2044 0.1779] peak [0.92  0.768] diff [0.1087 0.091 ] corr 0.673\n16.5 rms [0.1566 0.1459] peak [0.841 0.7  ] diff [0.0727 0.0606] corr 0.704\n17.0 rms [0.1431 0.1351] peak [0.744 0.656] diff [0.0957 0.0816] corr 0.71\n17.5 rms [0.1282 0.1172] peak [0.467 0.432] diff [0.0641 0.0529] corr 0.723\n18.0 rms [0.1659 0.1517] peak [0.71  0.581] diff [0.0492 0.0423] corr 0.798\n18.5 rms [0.1296 0.1194] peak [0.587 0.446] diff [0.0496 0.0415] corr 0.711\n19.0 rms [0.123  0.1144] peak [0.554 0.401] diff [0.0679 0.0568] corr 0.659\n19.5 rms [0.1314 0.1127] peak [0.636 0.505] diff [0.0543 0.0459] corr 0.72\n20.0 rms [0.1658 0.1539] peak [0.769 0.726] diff [0.0983 0.0824] corr 0.665\n20.5 rms [0.1499 0.133 ] peak [0.645 0.583] diff [0.1175 0.0983] corr 0.632\n21.0 rms [0.1527 0.1322] peak [0.826 0.68 ] diff [0.0995 0.0822] corr 0.701\n21.5 rms [0.1307 0.1162] peak [0.598 0.582] diff [0.0545 0.0455] corr 0.566\n22.0 rms [0.1668 0.1469] peak [0.802 0.608] diff [0.0531 0.0447] corr 0.664\n22.5 rms [0.1384 0.1324] peak [0.54  0.574] diff [0.0433 0.0366] corr 0.739\n23.0 rms [0.144  0.1234] peak [0.623 0.613] diff [0.0932 0.0774] corr 0.673\n23.5 rms [0.1082 0.093 ] peak [0.458 0.361] diff [0.0624 0.0517] corr 0.777\n24.0 rms [0.0268 0.0252] peak [0.137 0.134] diff [0.0012 0.0009] corr 0.982\n24.5 rms [0.0001 0.0001] peak [0.001 0.001] diff [0. 0.] corr 0.983\n25.0 rms [0. 0.] peak [0. 0.] diff [0. 0.] corr nan\n25.5 rms [0. 0.] peak [0. 0.] diff [0. 0.] corr nan\n",
+    "exit_code": 0,
+    "utc": 1794840503.941345
+  },
+  {
+    "step": 13,
+    "source_line": 24,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport importlib.util\nprint('matplotlib',bool(importlib.util.find_spec('matplotlib')))\nPY\"",
+    "output": "matplotlib False\n",
+    "exit_code": 0,
+    "utc": 1794840503.9666505
+  },
+  {
+    "step": 14,
+    "source_line": 25,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The damaged sections show heavy grain, color blotches, and rapid brightness changes; the protected frames provide a useful baseline. I’ll use motion-aware filtering to preserve the hands and the intended lighting changes. For audio, I have signal-analysis tools but no listening tool, so I’ll assess waveforms, spectra, and stereo relationships and state that limitation in the report.",
+    "exit_code": null,
+    "utc": 1794840544.2138524
+  },
+  {
+    "step": 15,
+    "source_line": 27,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/diagnostics.py <<'PY'\nimport numpy as np,cv2\nfrom scipy import signal,ndimage\nx=np.load('/workspace/work/video.npy',mmap_mode='r')\nfor i in [36,60,132,276,348,492]:cv2.imwrite(f'/workspace/work/frame{i}.png',x[i])\ny=np.load('/workspace/work/audio.npy');sr=48000\nfor n,(a,b) in enumerate([(0,26),(0,3),(2,8),(8,13),(13,19),(19,24)]):\n f,t,z=signal.stft(y[int(a*sr):int(b*sr),0],sr,nperseg=2048,noverlap=1536)\n db=20*np.log10(abs(z)+1e-7)\n # logarithmic frequency view\n freq=np.geomspace(40,18000,600)\n arr=np.array([np.interp(freq,f,db[:,k]) for k in range(len(t))]).T[::-1]\n arr=np.clip((arr+90)/65*255,0,255).astype('uint8');arr=cv2.applyColorMap(cv2.resize(arr,(1300,600)),cv2.COLORMAP_INFERNO)\n for hz in [50,100,200,400,800,1600,3200,6400,12800]:\n  j=int((1-np.log(hz/40)/np.log(18000/40))*599);cv2.line(arr,(0,j),(1300,j),(90,90,90),1);cv2.putText(arr,str(hz),(3,j-3),0,.4,(255,255,255),1)\n for tt in np.arange(a,b,.5 if b-a<10 else 1):\n  k=int((tt-a)/(b-a)*1300);cv2.putText(arr,str(round(tt,1)),(k,590),0,.4,(255,255,255),1)\n cv2.imwrite(f'/workspace/work/spec{n}.png',arr)\n# frame global per-channel stats and noise\nmeans=x.mean((1,2));np.save('/workspace/work/video_means.npy',means)\nfor sec in range(26):\n i=sec*24+12;im=x[i].astype('float32');smooth=cv2.GaussianBlur(im,(0,0),1)\n print('v',i,'mean',np.round(means[i],2),'highfreq',np.round(np.median(abs(im-smooth),(0,1))*1.4826,2))\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/diagnostics.py\"",
+    "output": "v 12 mean [61.97 60.46 81.91] highfreq [2.07 1.39 1.9 ]\nv 36 mean [59.99 59.25 78.73] highfreq [2.06 1.37 1.88]\nv 60 mean [64.22 67.84 82.72] highfreq [15.79 15.84 16.  ]\nv 84 mean [60.48 66.09 77.66] highfreq [15.59 15.65 15.93]\nv 108 mean [63.62 72.46 83.65] highfreq [15.37 15.37 15.73]\nv 132 mean [ 72.24  78.09 100.29] highfreq [15.43 15.36 15.49]\nv 156 mean [67.63 75.75 97.7 ] highfreq [14.87 14.88 14.93]\nv 180 mean [61.68 69.26 88.39] highfreq [14.91 15.01 15.09]\nv 204 mean [60.71 64.21 82.74] highfreq [15.1  15.13 15.29]\nv 228 mean [62.59 64.35 81.67] highfreq [15.41 15.44 15.54]\nv 252 mean [58.7  59.7  76.19] highfreq [15.29 15.38 15.48]\nv 276 mean [64.05 65.3  83.27] highfreq [1.66 1.02 1.35]\nv 300 mean [71.28 72.61 92.82] highfreq [15.13 15.19 15.24]\nv 324 mean [62.18 63.53 81.17] highfreq [15.01 15.12 15.32]\nv 348 mean [60.96 62.59 79.86] highfreq [15.   14.99 15.16]\nv 372 mean [73.47 78.17 98.61] highfreq [15.57 15.61 15.76]\nv 396 mean [69.47 74.39 94.1 ] highfreq [15.36 15.38 15.81]\nv 420 mean [60.47 64.   79.98] highfreq [15.54 15.57 15.89]\nv 444 mean [55.15 52.65 59.69] highfreq [15.84 15.71 15.88]\nv 468 mean [55.48 53.13 60.78] highfreq [15.74 15.64 15.7 ]\nv 492 mean [56.15 57.12 71.96] highfreq [15.31 15.4  15.52]\nv 516 mean [60.57 62.13 79.4 ] highfreq [15.3  15.28 15.41]\nv 540 mean [65.03 66.52 85.  ] highfreq [15.3  15.29 15.41]\nv 564 mean [66.33 71.65 90.3 ] highfreq [14.97 14.98 15.34]\nv 588 mean [64.9  69.98 88.15] highfreq [15.25 15.32 15.64]\nv 612 mean [62.4  63.75 83.54] highfreq [2.2  1.55 2.12]\n",
+    "exit_code": 0,
+    "utc": 1794840594.2265232
+  },
+  {
+    "step": 16,
+    "source_line": 30,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_diag.py <<'PY'\nimport numpy as np\nfrom scipy import signal,ndimage\nx=np.load('/workspace/work/audio.npy');sr=48000\nf,t,z=signal.stft(x.T,sr,nperseg=4096,noverlap=3072)\np=abs(z)**2\nfor a,b in [(0,2),(2,4),(4,8),(8,13),(13,19),(19,24)]:\n sel=(t>=a)&(t<b)\n pow=p[:,:,sel].mean(-1)\n print('\\\\nsegment',a,b)\n for lo,hi in [(0,100),(100,300),(300,1000),(1000,3000),(3000,8000),(8000,20000)]:\n  mask=(f>=lo)&(f<hi);s=z[:,mask,:][:,:,sel].reshape(2,-1)\n  print(lo,hi,'power',np.round(pow[:,mask].sum(1),6),'coherence',round(abs(np.mean(s[0]*s[1].conj()))/np.sqrt(np.mean(abs(s[0])**2)*np.mean(abs(s[1])**2)),3))\n mean=pow.mean(0);peaks=signal.find_peaks(10*np.log10(mean+1e-15),prominence=8)[0]\n print('peaks',[(round(f[k]),round(10*np.log10(mean[k]),1)) for k in sorted(peaks,key=lambda k:mean[k],reverse=True)[:30]])\n# runs near zero one channel only\nfor c in range(2):\n mask=(abs(x[:,c])<.000035)&(abs(x[:,1-c])>.002)\n spans=np.where(np.diff(np.r_[0,mask,0]))[0].reshape(-1,2)\n print('zero gaps',c,[(round(a/sr,5),round(b/sr,5)) for a,b in spans if b-a>8])\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_diag.py\"",
+    "output": "\nsegment 0 2\n0 100 power [0.000458 0.000458] coherence 1.0\n100 300 power [0.004954 0.003601] coherence 0.985\n300 1000 power [0.003414 0.004967] coherence 0.962\n1000 3000 power [0.00025 0.00042] coherence 0.967\n3000 8000 power [4.6e-05 6.6e-05] coherence 0.957\n8000 20000 power [3.2e-05 3.3e-05] coherence 0.854\npeaks [(258, -30.3), (105, -31.7), (387, -32.2), (223, -32.3), (328, -32.6), (656, -32.9), (785, -34.4), (164, -35.1), (586, -38.8), (879, -39.1), (445, -41.3), (1570, -43.5), (527, -43.8), (1312, -44.5), (1172, -44.6), (1758, -47.7), (984, -48.2), (2355, -48.4), (1980, -48.7), (2637, -49.8), (3141, -52.1), (3516, -55.4), (1102, -55.4), (3914, -55.5), (1652, -55.5), (3293, -56.3), (4699, -58.2), (4617, -58.8), (5273, -59.2), (5484, -60.1)]\n\nsegment 2 4\n0 100 power [0.003622 0.003154] coherence 0.985\n100 300 power [0.005728 0.004106] coherence 0.86\n300 1000 power [0.003373 0.004149] coherence 0.785\n1000 3000 power [0.000894 0.000834] coherence 0.509\n3000 8000 power [0.001636 0.001126] coherence 0.273\n8000 20000 power [0.001699 0.001167] coherence 0.256\npeaks [(59, -30.2), (258, -30.5), (176, -31.2), (328, -32.0), (656, -34.0), (527, -35.0), (703, -39.1), (1312, -43.2), (1043, -43.6), (879, -45.5), (2098, -48.0), (1980, -48.2), (2637, -51.4), (3293, -51.5), (14953, -55.0), (22242, -69.1)]\n\nsegment 4 8\n0 100 power [0.002537 0.002014] coherence 0.957\n100 300 power [0.00555  0.003822] coherence 0.793\n300 1000 power [0.003324 0.003675] coherence 0.741\n1000 3000 power [0.001112 0.000863] coherence 0.399\n3000 8000 power [0.000818 0.00057 ] coherence 0.264\n8000 20000 power [0.001682 0.001167] coherence 0.266\npeaks [(293, -31.5), (59, -32.0), (199, -33.4), (586, -34.5), (352, -34.8), (492, -35.0), (656, -38.9), (785, -39.6), (1172, -43.4), (14273, -55.0)]\n\nsegment 8 13\n0 100 power [0.00276  0.002196] coherence 0.924\n100 300 power [0.006849 0.004753] coherence 0.796\n300 1000 power [0.004949 0.004257] coherence 0.724\n1000 3000 power [0.001963 0.001343] coherence 0.349\n3000 8000 power [0.000843 0.000567] coherence 0.29\n8000 20000 power [0.002062 0.001418] coherence 0.257\npeaks [(258, -30.4), (656, -35.4), (586, -37.6), (785, -37.9), (879, -39.6)]\n\nsegment 13 19\n0 100 power [0.003301 0.002072] coherence 0.946\n100 300 power [0.005967 0.004087] coherence 0.817\n300 1000 power [0.003861 0.004794] coherence 0.768\n1000 3000 power [0.001313 0.001178] coherence 0.456\n3000 8000 power [0.000738 0.000531] coherence 0.297\n8000 20000 power [0.002076 0.001437] coherence 0.248\npeaks [(59, -30.7), (656, -36.5), (492, -36.6), (586, -36.9), (785, -37.7), (879, -39.0), (703, -40.6), (1043, -41.3), (3141, -51.7)]\n\nsegment 19 24\n0 100 power [0.002364 0.001969] coherence 0.959\n100 300 power [0.005506 0.003764] coherence 0.777\n300 1000 power [0.003313 0.003515] coherence 0.731\n1000 3000 power [0.001546 0.00115 ] coherence 0.38\n3000 8000 power [0.000658 0.000456] coherence 0.281\n8000 20000 power [0.001779 0.001231] coherence 0.253\npeaks [(94, -32.2), (586, -36.2), (656, -38.0), (703, -41.1), (879, -44.2)]\nzero gaps 0 []\nzero gaps 1 []\n",
+    "exit_code": 0,
+    "utc": 1794840673.2176766
+  },
+  {
+    "step": 17,
+    "source_line": 31,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/video_test.py <<'PY'\nimport cv2,numpy as np,time\nfrom scipy.ndimage import gaussian_filter1d,median_filter\ncv2.setNumThreads(2)\nx=np.load('/workspace/work/video.npy',mmap_mode='r');N,H,W,C=x.shape\nmeans=np.load('/workspace/work/video_means.npy')\nfor i in range(40,80):print(i,np.round(means[i],1))\n# representative denoising test: flow aligned temporal stack\nY,X=np.mgrid[:H,:W].astype(np.float32)\ndef restore(i,radius=3):\n t=time.time();ids=list(range(max(0,i-radius),min(N,i+radius+1)))\n arr=[x[j].astype(np.float32) for j in ids]\n guides=[cv2.GaussianBlur(a,(0,0),1.2) for a in arr]\n gs=[cv2.resize(cv2.cvtColor(np.uint8(np.clip(g,0,255)),cv2.COLOR_BGR2GRAY),(W//2,H//2)) for g in guides]\n target=arr[ids.index(i)];g=guides[ids.index(i)];gray=gs[ids.index(i)]\n aligned=[];weights=[]\n for j,a,gg,gr in zip(ids,arr,guides,gs):\n  if j==i:aligned.append(a);weights.append(np.ones((H,W),np.float32));continue\n  dis=cv2.DISOpticalFlow_create(cv2.DISOPTICAL_FLOW_PRESET_MEDIUM);flow=dis.calc(gray,gr,None)\n  flow=cv2.resize(flow,(W,H))*2\n  warp=cv2.remap(a,X+flow[:,:,0],Y+flow[:,:,1],cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)\n  wg=cv2.remap(gg,X+flow[:,:,0],Y+flow[:,:,1],cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)\n  # exposure-match only global additive/multiplicative from guide regression, robust dark pixels\n  diff=wg-g\n  mask=(g.mean(2)>25)&(g.mean(2)<210)&(np.max(abs(diff),2)<30)\n  ratio=np.median((wg[mask]+15)/(g[mask]+15),axis=0)\n  warp=(warp+15)/ratio-15;wg=(wg+15)/ratio-15\n  e=cv2.GaussianBlur(np.mean((wg-g)**2,axis=2),(0,0),1)\n  weight=np.exp(-np.maximum(e-24,0)/110)*(0.9**abs(j-i))\n  aligned.append(warp);weights.append(weight)\n result=np.sum(np.array(aligned)*np.array(weights)[...,None],axis=0)/np.sum(weights,axis=0)[...,None]\n # modest spatial chroma cleanup and residual grain NLM\n out=cv2.fastNlMeansDenoisingColored(np.uint8(np.clip(result,0,255)),None,3.8,5.5,7,21)\n print(i,'time',time.time()-t,'mad',np.mean(abs(out.astype(float)-target)))\n return out\nfor i in [60,132,204,348,456,564]:\n z=restore(i);cv2.imwrite(f'/workspace/work/test{i}.png',z)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/video_test.py\"",
+    "output": "40 [59.5 59.6 77.4]\n41 [59.5 59.7 77.3]\n42 [59.4 59.8 77.6]\n43 [59.5 60.  77.6]\n44 [59.5 60.3 77.6]\n45 [59.6 60.5 77.3]\n46 [59.5 60.7 77.3]\n47 [59.6 60.9 77.4]\n48 [59.8 61.2 78. ]\n49 [59.5 61.  77.6]\n50 [59.3 60.9 77.4]\n51 [59.2 61.  77. ]\n52 [59.9 61.9 77.7]\n53 [61.1 63.3 79.1]\n54 [62.7 65.1 81.2]\n55 [61.6 64.2 79.6]\n56 [58.2 61.  75.3]\n57 [56.4 59.1 72.9]\n58 [59.1 62.  76.1]\n59 [63.3 66.6 81.3]\n60 [64.2 67.8 82.7]\n61 [62.  65.7 80.1]\n62 [58.9 62.7 76.3]\n63 [58.6 62.7 75.8]\n64 [60.1 64.5 77.6]\n65 [62.  66.7 79.8]\n66 [62.9 67.9 80.9]\n67 [63.7 68.6 82.1]\n68 [63.  67.9 81.1]\n69 [60.1 64.9 77.6]\n70 [58.2 62.9 74.9]\n71 [60.  65.  77.1]\n72 [63.6 68.8 81.6]\n73 [65.6 70.9 84.4]\n74 [63.4 68.5 81.6]\n75 [59.8 64.7 77. ]\n76 [58.2 63.  74.9]\n77 [60.7 65.7 77.8]\n78 [63.2 68.5 81. ]\n79 [64.1 69.5 82.4]\n60 time 0.6646394729614258 mad 13.490349174063116\n132 time 0.4558279514312744 mad 13.206797029092701\n204 time 0.5251471996307373 mad 13.518386341222879\n348 time 1.0279216766357422 mad 12.824432938856015\n456 time 0.4608640670776367 mad 13.755000308185405\n564 time 0.43372631072998047 mad 13.02689842209073\n",
+    "exit_code": 0,
+    "utc": 1794840685.3353043
+  },
+  {
+    "step": 18,
+    "source_line": 32,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The first motion-aligned samples substantially reduce grain while retaining the controls and hand contours. Some color blotches remain on the moving sleeve, so I’m testing additional chroma cleanup. The audio spectra show broad noise and a strong low-frequency interference ridge; these need separate treatment to limit damage to musical notes and attacks.",
+    "exit_code": null,
+    "utc": 1794840758.6060073
+  },
+  {
+    "step": 19,
+    "source_line": 34,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_plots.py <<'PY'\nimport cv2,numpy as np\nfrom scipy import signal\nx=np.load('/workspace/work/audio.npy');sr=48000\nf,t,z=signal.stft(x[:,0],sr,nperseg=16384,noverlap=14336)\nfor n,(lo,hi,a,b) in enumerate([(0,250,0,26),(250,2500,0,26),(0,250,2,8),(500,4000,8,13),(20,120,2,24)]):\n p=20*np.log10(abs(z[(f>=lo)&(f<hi)][:,(t>=a)&(t<b)])+1e-8)\n im=cv2.applyColorMap(cv2.resize(np.clip((p[::-1]+85)/65*255,0,255).astype('uint8'),(1400,700)),cv2.COLORMAP_INFERNO)\n for v in np.linspace(lo,hi,11):\n  yy=int((1-(v-lo)/(hi-lo))*699);cv2.line(im,(0,yy),(1400,yy),(80,80,80));cv2.putText(im,str(round(v)),(0,max(15,yy-3)),0,.45,(255,255,255),1)\n for sec in np.arange(a,b,1):\n  xx=int((sec-a)/(b-a)*1400);cv2.putText(im,str(sec),(xx,690),0,.45,(255,255,255),1)\n cv2.imwrite(f'/workspace/work/linear_spec{n}.png',im)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_plots.py\ncp /workspace/work/video_test.py /workspace/work/video_test2.py\npython - <<'PY'\np='/workspace/work/video_test2.py'\ns=open(p).read().replace('radius=3','radius=5').replace('3.8,5.5','4.5,10.0').replace(\\\"test{i}.png\\\",\\\"testb{i}.png\\\").replace('[60,132,204,348,456,564]','[60,132,348,456]')\nopen(p,'w').write(s)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/video_test2.py\"",
+    "output": "40 [59.5 59.6 77.4]\n41 [59.5 59.7 77.3]\n42 [59.4 59.8 77.6]\n43 [59.5 60.  77.6]\n44 [59.5 60.3 77.6]\n45 [59.6 60.5 77.3]\n46 [59.5 60.7 77.3]\n47 [59.6 60.9 77.4]\n48 [59.8 61.2 78. ]\n49 [59.5 61.  77.6]\n50 [59.3 60.9 77.4]\n51 [59.2 61.  77. ]\n52 [59.9 61.9 77.7]\n53 [61.1 63.3 79.1]\n54 [62.7 65.1 81.2]\n55 [61.6 64.2 79.6]\n56 [58.2 61.  75.3]\n57 [56.4 59.1 72.9]\n58 [59.1 62.  76.1]\n59 [63.3 66.6 81.3]\n60 [64.2 67.8 82.7]\n61 [62.  65.7 80.1]\n62 [58.9 62.7 76.3]\n63 [58.6 62.7 75.8]\n64 [60.1 64.5 77.6]\n65 [62.  66.7 79.8]\n66 [62.9 67.9 80.9]\n67 [63.7 68.6 82.1]\n68 [63.  67.9 81.1]\n69 [60.1 64.9 77.6]\n70 [58.2 62.9 74.9]\n71 [60.  65.  77.1]\n72 [63.6 68.8 81.6]\n73 [65.6 70.9 84.4]\n74 [63.4 68.5 81.6]\n75 [59.8 64.7 77. ]\n76 [58.2 63.  74.9]\n77 [60.7 65.7 77.8]\n78 [63.2 68.5 81. ]\n79 [64.1 69.5 82.4]\n60 time 1.0538866519927979 mad 13.993475714990138\n132 time 0.7466845512390137 mad 13.733028229783038\n348 time 0.7248208522796631 mad 14.131293145956608\n456 time 0.6990067958831787 mad 14.15148083086785\n",
+    "exit_code": 0,
+    "utc": 1794840771.269436
+  },
+  {
+    "step": 20,
+    "source_line": 37,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"tail -4 /workspace/work/video_progress.txt\npython - <<'PY'\nimport time\nprint(time.time())\nPY\"",
+    "output": "48 elapsed 4.3 changed samples 456072\n72 elapsed 33.5 changed samples 14741810\n96 elapsed 62.9 changed samples 29243205\n1794840912.8578165\n",
+    "exit_code": 0,
+    "utc": 1794840912.87525
+  },
+  {
+    "step": 21,
+    "source_line": 39,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_prepare.py <<'PY'\nimport numpy as np,cv2,soundfile as sf\nfrom scipy import signal,ndimage,interpolate\nx=np.load('/workspace/work/audio.npy');sr=48000\n# diagnostic abrupt impulses and short channel deficits\nfor c in range(2):\n d=np.diff(x[:,c],n=2,prepend=[x[0,c],x[0,c]])\n scale=ndimage.uniform_filter1d(d*d,size=481)**.5\n score=abs(d)/(scale+.003)\n inds=signal.find_peaks(score,height=7,distance=240)[0]\n print('impulse candidate',c,[(round(k/sr,6),round(score[k],1),round(x[k,c],3)) for k in inds if 2<k/sr<24])\n# hum track on downsampled waveform\nxd=signal.resample_poly(x,1,24,axis=0);sd=2000\nf,t,z=signal.stft(xd.mean(1),sd,nperseg=1024,noverlap=984,nfft=8192)\nsel=(f>40)&(f<69);mag=abs(z[sel]);ff=f[sel]\nk=mag.argmax(0);ridge=ff[k]\nridge=ndimage.median_filter(ridge,size=7);ridge=ndimage.gaussian_filter1d(ridge,4)\n# phase demodulate and lowpass complex amplitude to subtract the continuous interference only\nfreq=np.interp(np.arange(len(xd))/sd,t,ridge)\nphase=np.cumsum(freq)*2*np.pi/sd\ncarrier=np.exp(1j*phase)\nremoved=np.zeros_like(xd)\nsos=signal.butter(3,2.4,fs=sd,output='sos')\nfor c in range(2):\n base=2*signal.sosfiltfilt(sos,xd[:,c]*carrier.conj())\n removed[:,c]=(base*carrier).real\nrem=signal.resample_poly(removed,24,1,axis=0)[:len(x)]\n# Fade in after first protected window and out before final protected window.\ntime=np.arange(len(x))/sr;w=np.clip((time-2)/.06,0,1)*np.clip((24-time)/.06,0,1)\ny=x-rem*w[:,None]\nnp.save('/workspace/work/dehum.npy',y);np.save('/workspace/work/hum.npy',rem*w[:,None]);np.save('/workspace/work/hum_freq.npy',np.c_[t,ridge])\nfor a,b in [(0,2),(2,8),(8,13),(13,19),(19,24)]:\n m=(time>=a)&(time<b);print('hum rms',a,b,np.sqrt(np.mean(rem[m]**2,0)))\nprint('freq sample',[(round(a,1),round(b,2)) for a,b in zip(t[::50],ridge[::50])])\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_prepare.py\"",
+    "output": "impulse candidate 0 []\nimpulse candidate 1 []\nhum rms 0 2 [0.01024553 0.01027903]\nhum rms 2 8 [0.04164137 0.03454556]\nhum rms 8 13 [0.04074448 0.031419  ]\nhum rms 13 19 [0.04684646 0.02893272]\nhum rms 19 24 [0.03349179 0.02908293]\nfreq sample [(0.0, 52.51), (1.0, 59.33), (2.0, 67.67), (3.0, 56.19), (4.0, 52.46), (5.0, 64.67), (6.0, 64.38), (7.0, 52.2), (8.0, 59.93), (9.0, 58.44), (10.0, 58.87), (11.0, 50.62), (12.0, 60.06), (13.0, 59.13), (14.0, 59.84), (15.0, 55.77), (16.0, 61.74), (17.0, 56.09), (18.0, 54.13), (19.0, 46.88), (20.0, 52.37), (21.0, 65.02), (22.0, 63.76), (23.0, 59.19), (24.0, 59.89), (25.0, 45.52), (26.0, 40.04)]\n",
+    "exit_code": 0,
+    "utc": 1794841052.731172
+  },
+  {
+    "step": 22,
+    "source_line": 41,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'tail -3 /workspace/work/video_progress.txt'",
+    "output": "312 elapsed 174.5 changed samples 144474939\n336 elapsed 185.9 changed samples 159032709\n360 elapsed 197.4 changed samples 173578595\n",
+    "exit_code": 0,
+    "utc": 1794841052.7316308
+  },
+  {
+    "step": 23,
+    "source_line": 42,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The full visual pass is running, with all three protected windows copied exactly and corrections packed for replay. I’m now refining the audio denoising: tracking the drifting low-frequency interference and estimating the changing noise floor while preserving musical attacks.",
+    "exit_code": null,
+    "utc": 1794841104.0188324
+  },
+  {
+    "step": 24,
+    "source_line": 44,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/hum_refine.py <<'PY'\nimport numpy as np\nfrom scipy import signal,ndimage\nx=np.load('/workspace/work/audio.npy');sr=48000;sd=2000\nxd=signal.resample_poly(x,1,24,axis=0)\nf,t,z=signal.stft(xd.mean(1),sd,nperseg=1024,noverlap=984,nfft=8192)\nsel=(f>40)&(f<64);ff=f[sel];p=abs(z[sel]);obs=np.log(p+1e-6)\nidx=np.where((t>=2)&(t<=24))[0];obs=obs[:,idx]\nK,T=obs.shape;dp=obs[:,0];prev=np.zeros((T,K),np.int16)\npenalty=10*(ff[:,None]-ff[None,:])**2\nfor k in range(1,T):\n cost=dp[:,None]-penalty\n prev[k]=cost.argmax(0);dp=obs[:,k]+cost.max(0)\npath=np.zeros(T,np.int16);path[-1]=dp.argmax()\nfor k in range(T-2,-1,-1):path[k]=prev[k+1,path[k+1]]\nridge=ndimage.gaussian_filter1d(ff[path],3)\nfreq=np.interp(np.arange(len(xd))/sd,t[idx],ridge)\nphase=np.cumsum(freq)*2*np.pi/sd;carrier=np.exp(1j*phase)\nremd=np.zeros_like(xd)\nsos=signal.butter(3,1.9,fs=sd,output='sos')\nfor c in range(2):\n base=2*signal.sosfiltfilt(sos,xd[:,c]*carrier.conj())\n remd[:,c]=(base*carrier).real\nrem=signal.resample_poly(remd,24,1,axis=0)[:len(x)]\ntime=np.arange(len(x))/sr;w=np.clip((time-2)/.035,0,1)*np.clip((24-time)/.035,0,1)\ny=x-rem*w[:,None]\nnp.save('/workspace/work/dehum.npy',y);np.save('/workspace/work/hum.npy',rem*w[:,None]);np.save('/workspace/work/hum_freq.npy',np.c_[t[idx],ridge])\nprint('hum freq',[(round(a,1),round(b,2)) for a,b in zip(t[idx][::50],ridge[::50])])\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/hum_refine.py\"",
+    "output": "hum freq [(2.0, 61.04), (3.0, 56.0), (4.0, 52.46), (5.0, 47.04), (6.0, 50.67), (7.0, 52.25), (8.0, 60.05), (9.0, 58.56), (10.0, 58.35), (11.0, 50.52), (12.0, 49.8), (13.0, 47.61), (14.0, 55.07), (15.0, 56.01), (16.0, 61.04), (17.0, 56.08), (18.0, 53.99), (19.0, 47.61), (20.0, 49.56), (21.0, 51.28), (22.0, 58.11), (23.0, 59.31)]\n",
+    "exit_code": 0,
+    "utc": 1794841197.728887
+  },
+  {
+    "step": 25,
+    "source_line": 45,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/restore_video.py <<'PY'\nimport cv2,numpy as np,time\nfrom scipy.ndimage import gaussian_filter1d\nfrom functools import lru_cache\ncv2.setNumThreads(2)\nx=np.load('/workspace/work/video.npy',mmap_mode='r');N,H,W,C=x.shape\nmeans=np.load('/workspace/work/video_means.npy')\nlum=means@np.array([.114,.587,.299]);trend=gaussian_filter1d(np.log(lum+1),2.2)\nexposure=np.clip(np.exp(trend-np.log(lum+1)),.88,1.12)\nprotected=lambda i:i<48 or 264<=i<288 or i>=600\n# Boundaries of the protected ranges stay untouched, and filtering tapers at the boundary.\nfor a,b in [(48,264),(288,600)]:\n for i in range(a,b):\n  ramp=min(1,(i-a+1)/5,(b-i)/5)\n  exposure[i]=1+(exposure[i]-1)*ramp\nY,X=np.mgrid[:H,:W].astype(np.float32)\n@lru_cache(maxsize=15)\ndef get(j):\n a=x[j].astype(np.float32)*exposure[j]\n g=cv2.GaussianBlur(a,(0,0),1.2)\n gr=cv2.resize(cv2.cvtColor(np.uint8(np.clip(g,0,255)),cv2.COLOR_BGR2GRAY),(W//2,H//2))\n return a,g,gr\nout=np.lib.format.open_memmap('/workspace/work/restored_video.npy',mode='w+',dtype='uint8',shape=x.shape)\nrepair=np.lib.format.open_memmap('/workspace/work/repair_video.npy',mode='w+',dtype='uint8',shape=x.shape)\nt0=time.time();changes=0\nfor i in range(N):\n if protected(i):out[i]=x[i];repair[i]=128;continue\n target,g,gray=get(i);acc=target.copy();den=np.ones((H,W),np.float32)\n for j in range(max(0,i-4),min(N,i+5)):\n  if j==i:continue\n  a,gg,gr=get(j)\n  dis=cv2.DISOpticalFlow_create(cv2.DISOPTICAL_FLOW_PRESET_MEDIUM)\n  flow=cv2.resize(dis.calc(gray,gr,None),(W,H))*2\n  mx=X+flow[:,:,0];my=Y+flow[:,:,1]\n  warp=cv2.remap(a,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)\n  wg=cv2.remap(gg,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)\n  mask=(g.mean(2)>25)&(g.mean(2)<210)&(np.max(abs(wg-g),2)<30)\n  ratio=np.median((wg[mask]+15)/(g[mask]+15),axis=0) if mask.sum()>100 else np.ones(3)\n  ratio=np.clip(ratio,.92,1.08)\n  warp=(warp+15)/ratio-15;wg=(wg+15)/ratio-15\n  e=cv2.GaussianBlur(np.mean((wg-g)**2,axis=2),(0,0),1)\n  weight=np.exp(-np.maximum(e-24,0)/110)*(.9**abs(j-i))\n  acc+=warp*weight[...,None];den+=weight\n result=np.uint8(np.clip(np.rint(acc/den[...,None]),0,255))\n result=cv2.fastNlMeansDenoisingColored(result,None,4.2,8,7,21)\n ycc=cv2.cvtColor(result,cv2.COLOR_BGR2YCrCb)\n for c in [1,2]:\n  ch=cv2.medianBlur(ycc[:,:,c],3)\n  ycc[:,:,c]=cv2.bilateralFilter(ch,11,12,4)\n result=cv2.cvtColor(ycc,cv2.COLOR_YCrCb2BGR)\n q=np.clip(np.rint((result.astype(np.float32)-x[i].astype(np.float32))/2),-128,127).astype(np.int16)\n repair[i]=np.uint8(q+128);out[i]=np.uint8(np.clip(x[i].astype(np.int16)+2*q,0,255))\n changes+=np.count_nonzero(q)\n if i%24==0:print(i,'elapsed',round(time.time()-t0,1),'changed samples',changes,flush=True)\nout.flush();repair.flush()\nnp.save('/workspace/work/exposure.npy',exposure)\nprint('done',time.time()-t0,changes,flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/restore_video.py > /workspace/work/video_progress.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794841197.7418745
+  },
+  {
+    "step": 26,
+    "source_line": 47,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"tail -3 /workspace/work/video_progress.txt\npython - <<'PY'\nimport time\nprint(time.time())\nPY\"",
+    "output": "552 elapsed 302.1 changed samples 289765004\n576 elapsed 321.3 changed samples 304243336\ndone 343.17815613746643 317769106\n1794841197.6114225\n",
+    "exit_code": 0,
+    "utc": 1794841197.7433367
+  },
+  {
+    "step": 27,
+    "source_line": 50,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport numpy as np,cv2\nx=np.load('/workspace/work/restored_video.npy',mmap_mode='r')\nfor i in [60,132,204,348,456,564]:cv2.imwrite(f'/workspace/work/final{i}.png',x[i])\nPY\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794841238.1805525
+  },
+  {
+    "step": 28,
+    "source_line": 51,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/encode_visual.py <<'PY'\nimport numpy as np,subprocess,time\nbase='/workspace/submission/'\ndef enc(src,dst):\n x=np.load(src,mmap_mode='r');p=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pixel_format','bgr24','-video_size','640x338','-framerate','24','-i','pipe:0','-an','-c:v','ffv1','-level','3','-coder','1','-context','1','-g','1','-pix_fmt','bgr0','-threads','2',base+dst],stdin=subprocess.PIPE)\n for frame in x:p.stdin.write(frame.tobytes())\n p.stdin.close();assert p.wait()==0\n print(dst,'done',flush=True)\nenc('/workspace/work/restored_video.npy','restored.mkv')\nenc('/workspace/work/repair_video.npy','repair.mkv')\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/encode_visual.py > /workspace/work/encode_progress.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794841731.9253201
+  },
+  {
+    "step": 29,
+    "source_line": 52,
+    "kind": "runtime_error",
+    "output": "{\"type\": \"error\", \"message\": \"Reconnecting... 1/5 (stream disconnected before completion: stream closed before response.completed)\"}",
+    "utc": 1794841732.1692603
+  },
+  {
+    "step": 30,
+    "source_line": 56,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /workspace/work/audio_progress.txt /workspace/work/encode_progress.txt'",
+    "output": "single elapsed 32.51861619949341 rms [0.10923555 0.10426364]\nrestored.mkv done\nrepair.mkv done\n",
+    "exit_code": 0,
+    "utc": 1794842039.9602642
+  },
+  {
+    "step": 31,
+    "source_line": 57,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_validate.py <<'PY'\nimport numpy as np\nfrom scipy import signal\nfrom audio_denoise import process,noise_est,stft\nrng=np.random.default_rng(26)\nx=np.load('/workspace/work/audio.npy')[:96000]\ny=np.load('/workspace/work/dehum.npy');z=stft(y[5*48000:7*48000]);N,nr=noise_est(z)\npsd=np.median(nr,axis=1)\nf=np.fft.rfftfreq(len(x),1/48000);fr=np.fft.rfftfreq(8192,1/48000)\nscale=np.sqrt(np.interp(f,fr,psd)*8192/1.5)\nu=rng.normal(size=len(x));v=rng.normal(size=len(x))\nu=np.fft.irfft(np.fft.rfft(u)*scale,n=len(x));v=np.fft.irfft(np.fft.rfft(v)*scale,n=len(x))\nnoise=np.c_[1.2*u,.26*u+np.sqrt(1-.26**2)*v]\nd=x+noise\nnp.save('/workspace/work/validation_noisy.npy',d)\nprint('input snr',10*np.log10(np.sum(x*x)/np.sum((d-x)**2)),flush=True)\nfor method in ['single','joint']:\n for alpha in [.65,.85,1.,1.2,1.5]:\n  out,_=process(d,method=method,alpha=alpha)\n  snr=10*np.log10(np.sum(x*x)/np.sum((out-x)**2))\n  zz=stft(out,2048,1024);zx=stft(x,2048,1024)\n  w=np.sqrt(abs(zx)+1e-5)\n  spec=np.sum(abs(20*np.log10((abs(zz)+1e-5)/(abs(zx)+1e-5)))*w)/w.sum()\n  print(method,alpha,'snr',round(snr,3),'spec',round(spec,3),'rms ratio',np.sqrt(np.sum(out*out)/np.sum(x*x)),flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_validate.py > /workspace/work/validation_results.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842085.0167372
+  },
+  {
+    "step": 32,
+    "source_line": 58,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The first complete visual pass is encoded, and I’m checking difficult motion frames for residual trails and color artifacts. For audio, I’m comparing denoising settings on a local test made from the protected opening plus estimated noise. This provides a fidelity check without access to a clean version of the damaged sections.",
+    "exit_code": null,
+    "utc": 1794842085.023177
+  },
+  {
+    "step": 33,
+    "source_line": 59,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_denoise.py <<'PY'\nimport numpy as np,time\nfrom scipy import signal,ndimage\nSR=48000\n\ndef stft(x,n=8192,hop=512):\n return signal.stft(x.T,SR,nperseg=n,noverlap=n-hop)[2]\ndef istft(z,n=8192,hop=512):\n return signal.istft(z,SR,nperseg=n,noverlap=n-hop)[1].T\n\ndef noise_est(z,n=8192,hop=512):\n p=abs(z)**2\n # Estimate smoothly colored, changing noise from interchannel difference.\n # The frequency median rejects isolated pitched components in that difference.\n side=abs(z[0]-z[1])**2\n side=ndimage.uniform_filter1d(side,15,axis=1,mode='nearest')\n side=ndimage.median_filter(side,size=(13,1),mode='nearest')\n side=ndimage.gaussian_filter(side,(3,3),mode='nearest')\n # Independent channel estimate, a cap where strongly panned notes dominate the difference.\n pp=ndimage.uniform_filter1d(p.mean(0),15,axis=1,mode='nearest')\n cap=ndimage.percentile_filter(pp,percentile=25,size=(31,1),mode='nearest')/0.8\n cap=ndimage.gaussian_filter(cap,(3,3),mode='nearest')\n nr=np.minimum(side/1.816,cap/1.22)\n nr=np.maximum(nr,1e-12)\n return np.array([1.44*nr,nr]),nr\n\ndef process(x,n=8192,hop=512,alpha=1.,method='joint',known_noise=None):\n z=stft(x,n,hop);p=abs(z)**2\n noise,nr=noise_est(z,n,hop) if known_noise is None else known_noise\n if method=='single':\n  ps=ndimage.gaussian_filter(p,(0,.65,1.1),mode='nearest')\n  xi=np.maximum(ps-alpha*noise,0)/(alpha*noise+1e-15)\n  gain=xi/(1+xi)\n  gain=np.maximum(gain,.035)\n  gain=ndimage.gaussian_filter(gain,(0,.45,.65),mode='nearest')\n  out=z*gain\n elif method=='joint':\n  # Real symmetric covariance preserves the dominant coherent pitched content.\n  a=ndimage.gaussian_filter(p[0],(.65,1.5),mode='nearest')\n  b=ndimage.gaussian_filter(p[1],(.65,1.5),mode='nearest')\n  c=ndimage.gaussian_filter((z[0]*z[1].conj()).real,(.65,1.5),mode='nearest')\n  n0=alpha*noise[0];n1=alpha*noise[1];nc=alpha*.312*nr\n  s0=np.maximum(a-n0,0);s1=np.maximum(b-n1,0)\n  sc=np.clip(c-nc,0,np.sqrt(s0*s1))\n  # Regularized multichannel Wiener solution Rs (Rs + Rn)\"'^-1.\n  aa=s0+n0;bb=s1+n1;cc=sc+nc\n  det=np.maximum(aa*bb-cc*cc,1e-24)\n  w00=(s0*bb-sc*cc)/det;w01=(sc*aa-s0*cc)/det\n  w10=(sc*bb-s1*cc)/det;w11=(s1*aa-sc*cc)/det\n  out=np.array([w00*z[0]+w01*z[1],w10*z[0]+w11*z[1]])\n  out=.97*out+.03*z\n return istft(out,n,hop)[:len(x)],(noise,nr)\n\nif __name__=='\"'__main__':\n import soundfile as sf,sys\n x=np.load('/workspace/work/dehum.npy')\n t=time.time()\n for method in ['single','joint']:\n  y,nz=process(x,method=method)\n  y[:96000]=x[:96000];y[1152000:]=x[1152000:]\n  np.save('/workspace/work/audio_'+method+'.npy',y)\n  sf.write('/workspace/work/audio_'+method+'.wav',y,48000,subtype='PCM_16')\n  print(method,'elapsed',time.time()-t,'rms',np.sqrt(np.mean(y*y,0)),flush=True)\n np.save('/workspace/work/noise_psd.npy',nz[0])\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_denoise.py > /workspace/work/audio_progress.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842085.0239344
+  },
+  {
+    "step": 34,
+    "source_line": 61,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport cv2,numpy as np\nx=np.load('/workspace/work/restored_video.npy',mmap_mode='r');o=np.load('/workspace/work/video.npy',mmap_mode='r')\nims=[]\nfor i in range(344,350):\n im=x[i].copy();cv2.putText(im,str(i),(5,20),0,.6,(255,255,255),1);ims.append(im[:240,:450])\ncv2.imwrite('/workspace/work/motion_sequence.jpg',np.vstack([np.hstack(ims[:3]),np.hstack(ims[3:])]))\nfor alpha in [.15,.25,.35]:\n for i in [204,348,456]:\n  z=x[i].astype('float32')+alpha*(x[i].astype('float32')-x[i-1].astype('float32'))\n  cv2.imwrite(f'/workspace/work/deghost{i}_{alpha}.png',np.uint8(np.clip(z,0,255)))\nPY\ncat /workspace/work/audio_progress.txt /workspace/work/validation_results.txt\"",
+    "output": "single elapsed 32.51861619949341 rms [0.10923555 0.10426364]\njoint elapsed 78.20609068870544 rms [0.11240875 0.10658535]\ninput snr 4.94768400248931\nsingle 0.65 snr 8.246 spec 9.893 rms ratio 1.0571498809824584\nsingle 0.85 snr 9.122 spec 9.321 rms ratio 1.0372792327348346\nsingle 1.0 snr 9.71 spec 8.955 rms ratio 1.0246985184807382\nsingle 1.2 snr 10.392 spec 8.558 rms ratio 1.0103612039207495\nsingle 1.5 snr 11.196 spec 8.149 rms ratio 0.9927586503839921\njoint 0.65 snr 7.967 spec 10.143 rms ratio 1.0713980729968413\njoint 0.85 snr 8.876 spec 9.557 rms ratio 1.0529573023711447\njoint 1.0 snr 9.519 spec 9.16 rms ratio 1.041212673277997\njoint 1.2 snr 10.306 spec 8.703 rms ratio 1.0279185497064889\njoint 1.5 snr 11.304 spec 8.192 rms ratio 1.0119645138747586\n",
+    "exit_code": 0,
+    "utc": 1794842087.814513
+  },
+  {
+    "step": 35,
+    "source_line": 63,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/chroma_test.py <<'PY'\nimport cv2,numpy as np\ncv2.setNumThreads(2)\nx=np.load('/workspace/work/restored_video.npy',mmap_mode='r')\ndef guided(I,p,r=5,eps=45):\n box=lambda z:cv2.boxFilter(z,-1,(2*r+1,2*r+1))\n mI=box(I);mp=box(p);cov=box(I*p)-mI*mp;var=box(I*I)-mI*mI\n a=cov/(var+eps);b=mp-a*mI\n return box(a)*I+box(b)\nfor i in [60,132,204,348,456,564]:\n f=x[i].copy()\n strong=cv2.fastNlMeansDenoisingColored(f,None,2,18,7,31)\n cv2.imwrite(f'/workspace/work/chroma_nlm{i}.png',strong)\n c=cv2.cvtColor(f,cv2.COLOR_BGR2YCrCb).astype('float32');I=c[:,:,0]\n for k in [1,2]:\n  q=guided(I,c[:,:,k])\n  c[:,:,k]=.15*c[:,:,k]+.85*q\n g=cv2.cvtColor(np.uint8(np.clip(c,0,255)),cv2.COLOR_YCrCb2BGR)\n cv2.imwrite(f'/workspace/work/chroma_guided{i}.png',g)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/chroma_test.py\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842162.629607
+  },
+  {
+    "step": 36,
+    "source_line": 65,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_validate2.py <<'PY'\nimport numpy as np\nfrom audio_denoise import process,noise_est,stft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy');noise=d-x\nnz=stft(noise);known=(np.broadcast_to(np.mean(abs(nz)**2,axis=2,keepdims=True),nz.shape).copy(),None)\nknown=(known[0],known[0][1])\nz=stft(d);estimated=noise_est(z)\nf=np.fft.rfftfreq(8192,1/48000)\nfor lo,hi in [(0,100),(100,300),(300,1000),(1000,3000),(3000,8000),(8000,24000)]:\n mask=(f>=lo)&(f<hi)\n print('noise estimate ratio',lo,hi,np.sum(estimated[0][:,mask])/np.sum(known[0][:,mask]),flush=True)\nfor method in ['single','joint']:\n for alpha in [1.5,2.,2.5,3.,4.]:\n  out,_=process(d,method=method,alpha=alpha)\n  snr=10*np.log10(np.sum(x*x)/np.sum((out-x)**2))\n  print(method,alpha,'snr',round(snr,3),'rms ratio',np.sqrt(np.sum(out*out)/np.sum(x*x)),flush=True)\n for alpha in [1,1.5]:\n  out,_=process(d,method=method,alpha=alpha,known_noise=known)\n  snr=10*np.log10(np.sum(x*x)/np.sum((out-x)**2))\n  print('known',method,alpha,'snr',round(snr,3),flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_validate2.py > /workspace/work/validation2_results.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842183.9862297
+  },
+  {
+    "step": 37,
+    "source_line": 67,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /workspace/work/validation2_results.txt'",
+    "output": "noise estimate ratio 0 100 0.47176877963081254\nnoise estimate ratio 100 300 0.7873861195935697\nnoise estimate ratio 300 1000 0.8301315221066413\nnoise estimate ratio 1000 3000 0.7933419854919456\nnoise estimate ratio 3000 8000 0.7786051058194381\nnoise estimate ratio 8000 24000 0.7742829285384826\nsingle 1.5 snr 11.196 rms ratio 0.9927586503839921\nsingle 2.0 snr 12.006 rms ratio 0.9701163398770704\nsingle 2.5 snr 12.314 rms ratio 0.9523536166454547\nsingle 3.0 snr 12.314 rms ratio 0.9373253914046361\nsingle 4.0 snr 11.898 rms ratio 0.911740352631863\nknown single 1 snr 10.76\nknown single 1.5 snr 12.14\njoint 1.5 snr 11.304 rms ratio 1.0119645138747586\njoint 2.0 snr 12.456 rms ratio 0.99243421730999\njoint 2.5 snr 13.038 rms ratio 0.9779358524192343\njoint 3.0 snr 13.223 rms ratio 0.9660955187973778\njoint 4.0 snr 12.989 rms ratio 0.9462958272318138\nknown joint 1 snr 10.755\nknown joint 1.5 snr 12.608\n",
+    "exit_code": 0,
+    "utc": 1794842183.9864202
+  },
+  {
+    "step": 38,
+    "source_line": 69,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_oracle_test.py <<'PY'\nimport numpy as np\nfrom scipy import ndimage\nfrom audio_denoise import process,stft,istft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy');n=d-x\nX=stft(x);D=stft(d);N=np.mean(abs(stft(n))**2,axis=2,keepdims=True)\nfor expo in [1,.5]:\n g=(abs(X)**2/(abs(X)**2+N))**expo\n y=istft(g*D)[:len(x)]\n print('oracle',expo,10*np.log10(np.sum(x*x)/np.sum((y-x)**2)))\ny,_=process(d,method='joint',alpha=3)\nY=stft(y);F=np.fft.rfftfreq(8192,1/48000)\nfor lo,hi in [(0,70),(70,100),(100,300),(300,1000),(1000,3000),(3000,8000),(8000,24000)]:\n m=(F>=lo)&(F<hi);print(lo,hi,'xpower',np.sum(abs(X[:,m])**2),'err',np.sum(abs(Y[:,m]-X[:,m])**2),'snr',10*np.log10(np.sum(abs(X[:,m])**2)/np.sum(abs(Y[:,m]-X[:,m])**2)))\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_oracle_test.py\"",
+    "output": "oracle 1 14.818063678071907\noracle 0.5 13.92114557696799\n0 70 xpower 0.08266240073926968 err 0.0007758682642711785 snr 20.275200261466807\n70 100 xpower 0.07074294258513045 err 0.0023417584574623833 snr 14.801410231356742\n100 300 xpower 1.6182477016121979 err 0.051722035207485306 snr 14.953693932904935\n300 1000 xpower 1.5748071068742708 err 0.07108079551978477 snr 13.454750863465051\n1000 3000 xpower 0.12584279475480567 err 0.016207189070630713 snr 8.901206561013668\n3000 8000 xpower 0.021206235864437307 err 0.007977033847090871 snr 4.246221527032958\n8000 24000 xpower 0.0163120345589783 err 0.016332620959997626 snr -0.005477503994436363\n",
+    "exit_code": 0,
+    "utc": 1794842237.5135114
+  },
+  {
+    "step": 39,
+    "source_line": 71,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport numpy as np,cv2\nx=np.load('/workspace/work/restored_video.npy',mmap_mode='r')\nfor i in [60,132,348]:\n f=x[i];s=cv2.imread(f'/workspace/work/chroma_nlm{i}.png');y=cv2.cvtColor(f,cv2.COLOR_BGR2YCrCb).astype(float);z=cv2.cvtColor(s,cv2.COLOR_BGR2YCrCb).astype(float)\n dist=np.sqrt((y[:,:,1]-128)**2+(y[:,:,2]-128)**2);dist=cv2.GaussianBlur(dist,(0,0),1.5)\n m=np.clip((26-dist)/14,0,1)\n y[:,:,1:]=y[:,:,1:]*(1-m[:,:,None])+z[:,:,1:]*m[:,:,None]\n out=cv2.cvtColor(np.uint8(np.clip(np.rint(y),0,255)),cv2.COLOR_YCrCb2BGR);cv2.imwrite(f'/workspace/work/chroma_mask{i}.png',out)\nPY\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842276.9487748
+  },
+  {
+    "step": 40,
+    "source_line": 74,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/audio_validate3.py <<'PY'\nimport numpy as np\nfrom scipy import signal\nfrom audio_denoise import process,stft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy')\nfor n in [4096,8192,16384]:\n for a in [1.5,2,2.5,3,4]:\n  y,_=process(d,n=n,method='joint',alpha=a)\n  snr=10*np.log10(np.sum(x*x)/np.sum((y-x)**2))\n  vals=[]\n  for sz in [512,2048,4096]:\n   X=stft(x,sz,sz//2);Y=stft(y,sz,sz//2);w=np.sqrt(abs(X)+1e-5);vals.append(np.sum(abs(20*np.log10((abs(Y)+1e-5)/(abs(X)+1e-5)))*w)/w.sum())\n  print(n,a,round(snr,3),'spec',round(np.mean(vals),3),flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_validate3.py > /workspace/work/validation3_results.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842437.9266086
+  },
+  {
+    "step": 41,
+    "source_line": 75,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The refined visual pass is reducing color mottling in low-saturation areas while preserving the saturated controls and lighting. Audio tests show that the initial filter leaves too much noise, so I’m testing stronger settings and different analysis-window lengths against the protected music. The final checks will cover decoded preview fidelity, duration, protected samples, and correction replay.",
+    "exit_code": null,
+    "utc": 1794842437.927607
+  },
+  {
+    "step": 42,
+    "source_line": 77,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/find_audio_events.py <<'PY'\nimport numpy as np,cv2\nfrom scipy import signal,ndimage\nx=np.load('/workspace/work/dehum.npy');sr=48000\nfor cutoff in [400,1000,3000]:\n sos=signal.butter(4,cutoff,fs=sr,output='sos');lp=signal.sosfiltfilt(sos,x,axis=0)\n E=ndimage.uniform_filter1d(lp*lp,241,axis=0)[::48]\n ratio=np.sqrt((E[:,0]+1e-5)/(E[:,1]+1e-5));trend=ndimage.median_filter(ratio,size=201)\n dev=ratio/trend\n for flag in [dev<.4,dev>2.5]:\n  spans=np.where(np.diff(np.r_[False,flag,False]))[0].reshape(-1,2)\n  print('events',cutoff,[(round(a/1000,4),round(b/1000,4),round(float(np.median(dev[a:b])),3)) for a,b in spans if b-a>=2 and a>2000 and b<24000])\n# short-time spectral flux, stereo consistency, residual outlier energy are retained for local diagnosis.\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/find_audio_events.py\ncat /workspace/work/validation3_results.txt\ntail -3 /workspace/work/chroma_progress.txt\"",
+    "output": "events 400 [(2.557, 2.561, 0.276), (4.18, 4.187, 0.231), (4.91, 4.913, 0.372), (5.516, 5.518, 0.305), (7.278, 7.284, 0.332), (7.405, 7.407, 0.363), (8.049, 8.051, 0.294), (8.303, 8.307, 0.331), (8.644, 8.646, 0.381), (8.891, 8.893, 0.374), (9.129, 9.131, 0.352), (9.659, 9.661, 0.34), (9.714, 9.716, 0.372), (10.337, 10.339, 0.324), (10.668, 10.67, 0.373), (12.732, 12.735, 0.336), (13.144, 13.147, 0.398), (14.093, 14.095, 0.391), (14.096, 14.098, 0.374), (14.186, 14.188, 0.374), (14.959, 14.961, 0.307), (15.169, 15.174, 0.316), (16.014, 16.016, 0.324), (16.256, 16.258, 0.337), (19.346, 19.352, 0.365), (19.408, 19.41, 0.373), (19.944, 19.946, 0.252), (20.639, 20.642, 0.369), (20.7, 20.703, 0.24), (20.878, 20.88, 0.369), (20.956, 20.958, 0.267), (21.262, 21.268, 0.307), (21.452, 21.454, 0.373), (21.818, 21.82, 0.301), (21.904, 21.906, 0.338), (22.307, 22.312, 0.305), (22.585, 22.587, 0.316), (22.598, 22.6, 0.285), (22.658, 22.66, 0.309)]\nevents 400 [(2.404, 2.407, 4.853), (2.443, 2.446, 2.754), (2.667, 2.671, 2.776), (3.375, 3.377, 3.078), (4.949, 4.951, 3.73), (5.089, 5.091, 2.93), (5.567, 5.569, 2.987), (6.71, 6.713, 2.769), (7.391, 7.403, 5.348), (9.406, 9.408, 2.677), (9.426, 9.428, 2.936), (9.508, 9.511, 2.647), (9.553, 9.555, 2.705), (10.749, 10.751, 3.482), (11.253, 11.256, 3.491), (12.738, 12.74, 3.014), (14.372, 14.377, 2.599), (15.097, 15.104, 4.179), (15.747, 15.75, 2.827), (16.438, 16.443, 2.853), (16.564, 16.569, 2.928), (19.436, 19.439, 2.81), (19.533, 19.535, 2.737), (20.939, 20.941, 2.694), (21.716, 21.72, 2.958), (22.152, 22.155, 2.815), (22.691, 22.693, 3.228)]\nevents 1000 [(4.181, 4.186, 0.273), (8.304, 8.306, 0.378), (9.659, 9.661, 0.381), (19.944, 19.946, 0.3)]\nevents 1000 [(7.391, 7.403, 6.004), (10.749, 10.751, 2.816)]\nevents 3000 [(4.181, 4.186, 0.367), (19.944, 19.946, 0.336)]\nevents 3000 [(7.391, 7.403, 5.616)]\n4096 1.5 10.763 spec 7.606\n4096 2 11.408 spec 7.606\n4096 2.5 11.549 spec 7.956\n4096 3 11.431 spec 8.42\n4096 4 10.855 spec 9.297\n8192 1.5 11.304 spec 7.886\n8192 2 12.456 spec 7.491\n8192 2.5 13.038 spec 7.454\n8192 3 13.223 spec 7.636\n8192 4 12.989 spec 8.235\n16384 1.5 11.018 spec 8.442\n16384 2 12.367 spec 7.863\n16384 2.5 13.248 spec 7.563\n16384 3 13.749 spec 7.483\n16384 4 14.035 spec 7.714\n240 81.2\n288 92.0\n336 111.5\n",
+    "exit_code": 0,
+    "utc": 1794842464.9139397
+  },
+  {
+    "step": 43,
+    "source_line": 79,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport time\nprint(time.time())\nPY\"",
+    "output": "1794842464.6026256\n",
+    "exit_code": 0,
+    "utc": 1794842464.9145718
+  },
+  {
+    "step": 44,
+    "source_line": 82,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'tail -3 /workspace/work/chroma_progress.txt'",
+    "output": "432 151.3\n480 170.6\n528 190.3\n",
+    "exit_code": 0,
+    "utc": 1794842508.3676152
+  },
+  {
+    "step": 45,
+    "source_line": 83,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\np='/workspace/work/audio_denoise.py'\ns=open(p).read().replace('out=.97*out+.03*z','out=.997*out+.003*z')\nopen('/workspace/work/audio_denoise_final.py','w').write(s)\nPY\ncat > /workspace/work/audio_quicktest.py <<'PY'\nimport numpy as np\nfrom audio_denoise_final import process,stft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy')\nfor n,a in [(8192,2.5),(8192,3),(16384,3),(16384,4)]:\n y,_=process(d,n=n,alpha=a,method='joint')\n vals=[]\n for sz in [512,2048,4096]:\n  X=stft(x,sz,sz//2);Y=stft(y,sz,sz//2);w=np.sqrt(abs(X)+1e-5);vals.append(np.sum(abs(20*np.log10((abs(Y)+1e-5)/(abs(X)+1e-5)))*w)/w.sum())\n print(n,a,10*np.log10(np.sum(x*x)/np.sum((y-x)**2)),np.mean(vals),flush=True)\n np.save(f'/workspace/work/valout{n}_{a}.npy',y)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/audio_quicktest.py > /workspace/work/quicktest_results.txt 2>&1\ncat /workspace/work/quicktest_results.txt\"",
+    "output": "8192 2.5 13.113393471266404 7.808957960109296\n8192 3 13.246749454367016 8.324204733274689\n16384 3 13.82145495949548 7.659273106114657\n16384 4 14.018340120657317 8.335199833520386\n",
+    "exit_code": 0,
+    "utc": 1794842554.7367187
+  },
+  {
+    "step": 46,
+    "source_line": 84,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/finalize_chroma.py <<'PY'\nimport numpy as np,cv2,time\ncv2.setNumThreads(2)\nx=np.load('/workspace/work/restored_video.npy',mmap_mode='r');orig=np.load('/workspace/work/video.npy',mmap_mode='r')\nout=np.lib.format.open_memmap('/workspace/work/restored_video_v2.npy',mode='w+',dtype='uint8',shape=x.shape)\nrp=np.lib.format.open_memmap('/workspace/work/repair_video_v2.npy',mode='w+',dtype='uint8',shape=x.shape)\nt=time.time()\nfor i in range(len(x)):\n if i<48 or 264<=i<288 or i>=600:out[i]=orig[i];rp[i]=128;continue\n f=x[i];s=cv2.fastNlMeansDenoisingColored(f,None,1,18,7,31)\n y=cv2.cvtColor(f,cv2.COLOR_BGR2YCrCb).astype(np.float32);z=cv2.cvtColor(s,cv2.COLOR_BGR2YCrCb).astype(np.float32)\n dist=cv2.GaussianBlur(np.sqrt((y[:,:,1]-128)**2+(y[:,:,2]-128)**2),(0,0),1.5)\n m=np.clip((26-dist)/14,0,1)\n y[:,:,1:]=y[:,:,1:]*(1-m[:,:,None])+z[:,:,1:]*m[:,:,None]\n res=cv2.cvtColor(np.uint8(np.clip(np.rint(y),0,255)),cv2.COLOR_YCrCb2BGR)\n q=np.clip(np.rint((res.astype(np.float32)-orig[i].astype(np.float32))/2),-128,127).astype(np.int16)\n rp[i]=np.uint8(q+128);out[i]=np.uint8(np.clip(orig[i].astype(np.int16)+2*q,0,255))\n if i%48==0:print(i,round(time.time()-t,1),flush=True)\nout.flush();rp.flush();print('done',time.time()-t,flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/finalize_chroma.py > /workspace/work/chroma_progress.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842554.73685
+  },
+  {
+    "step": 47,
+    "source_line": 85,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The visual refinement is nearly finished. Signal checks also found three short channel deficits that may be dropouts. I’ll verify them in the denoised output before using the opposite channel to repair them. The audio’s protected beginning and ending will be copied sample for sample.",
+    "exit_code": null,
+    "utc": 1794842586.8700001
+  },
+  {
+    "step": 48,
+    "source_line": 87,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat /workspace/work/quicktest_results.txt\ntail -3 /workspace/work/chroma_progress.txt\npython - <<'PY'\nimport time\nprint(time.time())\nPY\"",
+    "output": "8192 2.5 13.113393471266404 7.808957960109296\n8192 3 13.246749454367016 8.324204733274689\n16384 3 13.82145495949548 7.659273106114657\n16384 4 14.018340120657317 8.335199833520386\n528 190.3\n576 208.9\ndone 219.39349102973938\n1794842554.3646472\n",
+    "exit_code": 0,
+    "utc": 1794842586.8705769
+  },
+  {
+    "step": 49,
+    "source_line": 90,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport numpy as np,sys\nsys.path.insert(0,'/workspace/work');from audio_denoise import stft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy');a=np.load('/workspace/work/valout8192_2.5.npy');b=np.load('/workspace/work/valout16384_3.npy')\nfor mix in [.25,.5,.75]:\n for res in [0,.01,.02]:\n  y=(1-res)*(mix*b+(1-mix)*a)+res*d\n  vals=[]\n  for sz in [512,2048,4096]:\n   X=stft(x,sz,sz//2);Y=stft(y,sz,sz//2);w=np.sqrt(abs(X)+1e-5);vals.append(np.sum(abs(20*np.log10((abs(Y)+1e-5)/(abs(X)+1e-5)))*w)/w.sum())\n  print(mix,res,round(10*np.log10(np.sum(x*x)/np.sum((y-x)**2)),3),round(np.mean(vals),3))\nPY\"",
+    "output": "0.25 0 13.461 7.652\n0.25 0.01 13.433 7.528\n0.25 0.02 13.4 7.438\n0.5 0 13.706 7.59\n0.5 0.01 13.677 7.49\n0.5 0.02 13.642 7.417\n0.75 0 13.83 7.597\n0.75 0.01 13.802 7.51\n0.75 0.02 13.77 7.446\n",
+    "exit_code": 0,
+    "utc": 1794842588.6210938
+  },
+  {
+    "step": 50,
+    "source_line": 91,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\np='/workspace/work/encode_visual.py';s=open(p).read().replace('restored_video.npy','restored_video_v2.npy').replace('repair_video.npy','repair_video_v2.npy');open('/workspace/work/encode_visual_v2.py','w').write(s)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/encode_visual_v2.py > /workspace/work/encode_progress_v2.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842641.9958384
+  },
+  {
+    "step": 51,
+    "source_line": 95,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /workspace/work/encode_progress_v2.txt /workspace/work/final_audio_progress.txt'",
+    "output": "restored.mkv done\nrepair.mkv done\n0 6 elapsed 6.1\n4 10 elapsed 13.3\n8 14 elapsed 20.3\n12 18 elapsed 28.9\n16 22 elapsed 35.9\n20 26 elapsed 42.2\n",
+    "exit_code": 0,
+    "utc": 1794842688.6193354
+  },
+  {
+    "step": 52,
+    "source_line": 96,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/final_audio.py <<'PY'\nimport numpy as np,soundfile as sf,time\nfrom audio_denoise_final import process\nx=np.load('/workspace/work/dehum.npy');raw=np.load('/workspace/work/audio.npy');sr=48000\nout=np.zeros_like(x);total=np.zeros(len(x));t0=time.time()\n# Overlapping estimates avoid changes of processing at the analysis-block boundaries.\nfor a in np.arange(0,26,4):\n b=min(26,a+6);lo=max(0,a-.5);hi=min(26,b+.5)\n seg=x[int(lo*sr):int(hi*sr)]\n short,_=process(seg,n=8192,alpha=2.5,method='joint')\n long,_=process(seg,n=16384,alpha=3.,method='joint')\n yy=.6*long+.4*short\n # A small common residual avoids a hard spectral gate for weak percussive components.\n yy=.985*yy+.015*seg\n yy=yy[int((a-lo)*sr):int((b-lo)*sr)]\n win=np.ones(len(yy))\n if a>0:\n  nn=min(2*sr,len(win));win[:nn]=np.sin(np.linspace(0,np.pi/2,nn))**2\n if b<26:\n  nn=min(2*sr,len(win));win[-nn:]=np.cos(np.linspace(0,np.pi/2,nn))**2\n ia=int(a*sr);ib=ia+len(yy);out[ia:ib]+=win[:,None]*yy;total[ia:ib]+=win\n print(a,b,'elapsed',round(time.time()-t0,1),flush=True)\nout/=np.maximum(total[:,None],1e-12)\n# Verify short unilateral envelope deficits before using nearby stereo relationships.\nevents=[(4.179,4.189,0),(7.389,7.405,1),(19.942,19.949,0)]\nverified=[]\nfor a,b,c in events:\n ia=int(a*sr);ib=int(b*sr);nn=int(.06*sr)\n idx=np.r_[np.arange(max(0,ia-nn),ia),np.arange(ib,min(len(out),ib+nn))]\n ref=out[idx,1-c];dst=out[idx,c]\n gain=np.dot(ref,dst)/(np.dot(ref,ref)+1e-12);gain=np.clip(gain,.5,1.7)\n prediction=out[ia:ib,1-c]*gain\n expected=np.sqrt(np.mean(prediction**2));actual=np.sqrt(np.mean(out[ia:ib,c]**2))\n # Only deficits, never ordinary stereo differences or a new attack in one channel.\n if actual<.8*expected and expected>.015:\n  w=np.ones(ib-ia);fade=min(72,len(w)//3);w[:fade]=np.linspace(0,1,fade);w[-fade:]=np.linspace(1,0,fade)\n  out[ia:ib,c]=out[ia:ib,c]*(1-w)+prediction*w\n  verified.append([a,b,c,float(gain),float(actual/expected)])\n# Explicitly retain the contractual normal ranges, including original PCM quantization.\nout[:2*sr]=raw[:2*sr];out[24*sr:]=raw[24*sr:]\nassert out.shape==(1248000,2)\nassert np.isfinite(out).all()\nnp.save('/workspace/work/restored_audio_float.npy',out)\nsf.write('/workspace/submission/restored_audio.wav',out,sr,subtype='PCM_16')\nimport json\njson.dump({'repaired_deficits':verified,'peak':float(abs(out).max()),'rms':np.sqrt(np.mean(out*out,0)).tolist()},open('/workspace/work/audio_stats.json','w'),indent=2)\nprint('done',time.time()-t0,verified,flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/final_audio.py > /workspace/work/final_audio_progress.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842719.6901557
+  },
+  {
+    "step": 53,
+    "source_line": 98,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat /workspace/work/audio_stats.json /workspace/work/visual_checks_output.txt\npython - <<'PY'\nimport soundfile as sf,numpy as np,cv2\nfrom scipy import signal\nx,sr=sf.read('/workspace/submission/restored_audio.wav');y=np.load('/workspace/work/audio.npy')\nfor a,b in [(0,2),(2,8),(8,13),(13,19),(19,24),(24,26)]:\n aa=x[int(a*sr):int(b*sr)];bb=y[int(a*sr):int(b*sr)]\n print('audio',a,b,'rms_out',np.sqrt(np.mean(aa*aa,0)).round(5),'correlation_input',np.corrcoef(aa.ravel(),bb.ravel())[0,1],'peak',abs(aa).max(),'protected_maxdifference',abs(aa-bb).max() if a==0 or a==24 else None)\nf,t,z=signal.stft(x[:,0],sr,nperseg=2048,noverlap=1536);db=20*np.log10(abs(z)+1e-7);freq=np.geomspace(40,18000,600);arr=np.array([np.interp(freq,f,db[:,k]) for k in range(len(t))]).T[::-1];im=cv2.applyColorMap(cv2.resize(np.clip((arr+90)/65*255,0,255).astype('uint8'),(1300,600)),cv2.COLORMAP_INFERNO)\nfor hz in [50,100,200,400,800,1600,3200,6400,12800]:\n j=int((1-np.log(hz/40)/np.log(18000/40))*599);cv2.line(im,(0,j),(1300,j),(90,90,90),1);cv2.putText(im,str(hz),(3,j-3),0,.4,(255,255,255),1)\nfor sec in range(26):cv2.putText(im,str(sec),(int(sec/26*1300),590),0,.4,(255,255,255),1)\ncv2.imwrite('/workspace/work/restored_spec.png',im)\nPY\"",
+    "output": "{\n  \"repaired_deficits\": [\n    [\n      7.389,\n      7.405,\n      1,\n      0.7016131962763038,\n      0.6702898864665474\n    ]\n  ],\n  \"peak\": 0.4985107137580648,\n  \"rms\": [\n    0.09893751882411987,\n    0.09672207247675794\n  ]\n}{\n  \"frames\": 624,\n  \"changed_pixels\": 114131792,\n  \"changed_RGB_samples\": 317234902,\n  \"replay_max_error\": 0,\n  \"half_strength_midpoint_max_error\": 0.5,\n  \"protected_max_error\": 0,\n  \"blocks\": [\n    {\n      \"frames\": [\n        48,\n        144\n      ],\n      \"input_output_MAE_RGB_levels\": 13.532101105358317,\n      \"changed_pixels\": 20747285\n    },\n    {\n      \"frames\": [\n        144,\n        264\n      ],\n      \"input_output_MAE_RGB_levels\": 13.604098775990302,\n      \"changed_pixels\": 25935525\n    },\n    {\n      \"frames\": [\n        288,\n        432\n      ],\n      \"input_output_MAE_RGB_levels\": 14.424093988415652,\n      \"changed_pixels\": 31129162\n    },\n    {\n      \"frames\": [\n        432,\n        600\n      ],\n      \"input_output_MAE_RGB_levels\": 13.784180522168803,\n      \"changed_pixels\": 36319820\n    }\n  ]\n}\naudio 0 2 rms_out [0.11071 0.11305] correlation_input 0.9999999999999999 peak 0.475616455078125 protected_maxdifference 0.0\naudio 2 8 rms_out [0.10136 0.10041] correlation_input 0.8253462550837789 peak 0.450103759765625 protected_maxdifference None\naudio 8 13 rms_out [0.10771 0.09827] correlation_input 0.799833749025229 peak 0.49853515625 protected_maxdifference None\naudio 13 19 rms_out [0.10228 0.10395] correlation_input 0.8127832462090963 peak 0.483856201171875 protected_maxdifference None\naudio 19 24 rms_out [0.09718 0.09354] correlation_input 0.8185717491514529 peak 0.494140625 protected_maxdifference None\naudio 24 26 rms_out [0.01341 0.01259] correlation_input 1.0 peak 0.1365966796875 protected_maxdifference 0.0\n",
+    "exit_code": 0,
+    "utc": 1794842746.509799
+  },
+  {
+    "step": 54,
+    "source_line": 99,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/visual_checks.py <<'PY'\nimport numpy as np,cv2,json,time\ncv2.setNumThreads(2)\nx=np.load('/workspace/work/video.npy',mmap_mode='r');y=np.load('/workspace/work/restored_video_v2.npy',mmap_mode='r');r=np.load('/workspace/work/repair_video_v2.npy',mmap_mode='r')\nmetrics={'frames':624,'changed_pixels':0,'changed_RGB_samples':0,'replay_max_error':0,'half_strength_midpoint_max_error':0,'protected_max_error':0,'blocks':[]}\nfor i in range(624):\n a=x[i].astype(np.int16);b=y[i].astype(np.int16);q=r[i].astype(np.int16)-128\n replay=np.clip(a+2*q,0,255)\n metrics['replay_max_error']=max(metrics['replay_max_error'],int(abs(replay-b).max()))\n half=np.clip(a+q,0,255);mid=(a.astype(float)+b)/2\n metrics['half_strength_midpoint_max_error']=max(metrics['half_strength_midpoint_max_error'],float(abs(half-mid).max()))\n metrics['changed_pixels']+=int(np.any(a\"'!=b,axis=2).sum());metrics['\"'changed_RGB_samples']+=int((a\"'!=b).sum())\n if i<48 or 264<=i<288 or i>=600:metrics['\"'protected_max_error']=max(metrics['protected_max_error'],int(abs(a-b).max()))\nfor a,b in [(48,144),(144,264),(288,432),(432,600)]:\n metrics['blocks'].append({'frames':[a,b],'input_output_MAE_RGB_levels':float(np.mean(abs(x[a:b].astype(float)-y[a:b]))),'changed_pixels':int(np.any(x[a:b]\"'!=y[a:b],axis=3).sum())})\njson.dump(metrics,open('\"'/workspace/work/visual_checks.json','w'),indent=2)\nprint(json.dumps(metrics,indent=2),flush=True)\nidx=[0,36,60,96,132,168,204,240,276,312,348,384,420,456,492,528,564,612];thumbs=[]\nfor i in idx:\n f=cv2.resize(y[i],(384,203));cv2.putText(f,f'{i} / {i/24:.2f}s',(5,20),0,.5,(255,255,255),1);thumbs.append(f)\ncv2.imwrite('/workspace/work/restored_montage.jpg',np.vstack([np.hstack(thumbs[i:i+3]) for i in range(0,len(idx),3)]))\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/visual_checks.py > /workspace/work/visual_checks_output.txt 2>&1\nffmpeg -v error -y -i /workspace/submission/restored.mkv -an -c:v libx264 -preset slow -crf 13 -pix_fmt yuv444p -threads 2 -movflags +faststart /workspace/submission/preview.mp4\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842746.5099347
+  },
+  {
+    "step": 55,
+    "source_line": 100,
+    "kind": "agent_message",
+    "command": "",
+    "output": "The correction checks pass exactly: full-strength replay reproduces the master, the half-strength result is within half a code value of the midpoint, and every protected visual sample is unchanged. The refined audio file is ready for inspection. Only the 7.389–7.405-second right-channel deficit passed the repair check; the other candidates were left unchanged.",
+    "exit_code": null,
+    "utc": 1794842746.5102043
+  },
+  {
+    "step": 56,
+    "source_line": 103,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'ls -lh /workspace/submission\nffprobe -v error -show_entries stream=codec_name,pix_fmt,width,height,sample_rate,channels -show_entries format=duration -of json /workspace/submission/preview.mp4'",
+    "output": "total 405M\n-rwxrwxrwx 1 1000 1000 8.6M Nov 16 15:25 preview.mp4\n-rwxrwxrwx 1 1000 1000 239M Nov 16 15:23 repair.mkv\n-rwxrwxrwx 1 1000 1000 154M Nov 16 15:23 restored.mkv\n-rwxrwxrwx 1 1000 1000 4.8M Nov 16 15:24 restored_audio.wav\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"h264\",\n            \"width\": 640,\n            \"height\": 338,\n            \"pix_fmt\": \"yuv444p\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"26.000000\"\n    }\n}\n",
+    "exit_code": 0,
+    "utc": 1794842810.9246101
+  },
+  {
+    "step": 57,
+    "source_line": 104,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/long_test.py <<'PY'\nimport numpy as np\nfrom audio_denoise_final import process,stft\nx=np.load('/workspace/work/audio.npy')[:96000];d=np.load('/workspace/work/validation_noisy.npy')\nfor n,a in [(32768,3),(32768,4),(32768,5)]:\n y,_=process(d,n=n,alpha=a,method='joint');y=.985*y+.015*d\n vals=[]\n for sz in [512,2048,4096]:\n  X=stft(x,sz,sz//2);Y=stft(y,sz,sz//2);w=np.sqrt(abs(X)+1e-5);vals.append(np.sum(abs(20*np.log10((abs(Y)+1e-5)/(abs(X)+1e-5)))*w)/w.sum())\n print(n,a,round(10*np.log10(np.sum(x*x)/np.sum((y-x)**2)),3),round(np.mean(vals),3),flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/long_test.py\"",
+    "output": "32768 3 13.204 7.716\n32768 4 13.593 7.727\n32768 5 13.546 8.077\n",
+    "exit_code": 0,
+    "utc": 1794842877.3628654
+  },
+  {
+    "step": 58,
+    "source_line": 107,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/write_reports.py <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/workspace/submission')\ndef save(name,obj): (p/name).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\\\\n')\nstats=json.load(open('/workspace/work/visual_checks.json'))\nsave('project.json',{'version':'1.0','input':'input/damaged.mkv','operation':'add_signed8_correction','neutral':128,'step':2,'strength':1.0,'rounding':'nearest_even_then_clip_uint8','frame_map':list(range(624))})\nsave('report.json',{\n 'method':'CPU restoration in the supplied 8-bit display RGB convention. A short Gaussian temporal trend of global luminance corrects rapid brightness fluctuation without normalizing the longer warm sweep or cool darkening. Nine-frame neighborhoods are aligned to each current frame using dense optical flow on lightly filtered half-resolution guides. Warped samples are photometrically matched and combined with local residual-dependent weights to limit averaging across motion and occlusions. Modest spatial nonlocal filtering reduces remaining grain. Chroma median/bilateral filtering and a separate saturation-limited nonlocal chroma pass reduce colored blotches while retaining saturated controls and broad lighting colors. No resizing of the delivered frame, crop, replacement frame, synthesis or frame reordering is used. Protected frames bypass all processing. Final corrections are quantized to the contractual signed two-level step and the master is generated from those corrections. Changed image pixels: '+str(stats['changed_pixels'])+'; changed RGB samples: '+str(stats['changed_RGB_samples'])+'.',\n 'protected_ranges':[[0,48],[264,288],[600,624]],\n 'color_contract':'8bit displayRGB, same candidate transform; no linear/mastering reinterpretation',\n 'limitations':'There is no clean reference. Motion alignment cannot separate every injected trail from real exposure blur; some sleeve mottling, fine-edge softness and motion trails remain in the most damaged windows. Filtering is deliberately residual-weighted to limit cross-object mixing. Visual observations are from extracted native frames and montage comparisons, not a claim of clean-reference fidelity. Replay validates the editable correction representation, not reproduction of the original restoration algorithm.',\n 'checks':[\n {'frame':60,'observation':'Native-frame inspection: strong grain is reduced on the green wall, shirt and console while the grasp and colored controls remain visible.'},\n {'frame':132,'observation':'Warm sweep remains spatially visible; restoration does not apply a uniform exposure or white-balance normalization.'},\n {'frame':204,'observation':'Moving forearm and hand remain in the original frame position. Some source motion blur/trail is retained; no generated detail is substituted.'},\n {'frame':276,'observation':'All three protected ranges were checked sample by sample: maximum difference is 0. Full-strength correction replay maximum error is 0; half-strength midpoint error is at most 0.5 RGB level.'},\n {'frame':456,'observation':'Cooler, darker interval remains distinct from the warmer surrounding scene. Grain is reduced, with some fine-edge softness.'},\n {'frame':612,'observation':'Protected ending is copied exactly. All 624 frame mappings are identity; every damaged assessment block contains extensive actual pixel corrections.'}\n ]})\nsave('audio_report.json',{\n 'method':'Signal-based restoration only; no audio perception/listening tool was available. Inspected PCM waveforms, stereo statistics, short-time spectra and spectrograms. A continuity-regularized low-frequency spectral ridge tracks the continuous drifting interference; complex demodulation and a low-pass amplitude estimate remove that narrow component. Broad colored noise is estimated adaptively from the stereo difference, with frequency-median rejection of pitched components and a separate per-channel spectral-floor cap. Real symmetric multichannel Wiener filters combine 8192- and 16384-sample STFT analyses with 512-sample hops; overlapping analysis blocks and a small residual retain weak components and avoid hard spectral gates. Original complex phases and channel timing are retained. One verified short right-channel deficit at 7.389–7.405 s is crossfaded to an estimate from the opposite channel using the neighboring stereo gain. The original PCM samples are restored exactly over 0–2 and 24–26 s. No global normalization, resampling of the output timeline, music substitution, segment removal, or silence masking is used. Parameter sanity checks used only the provided protected opening with locally estimated synthetic noise, not a clean reference for damaged intervals.',\n 'limitations':'No actual listening was performed. The clean music and damage parameters are unavailable, so reference SNR, note-attack accuracy and complete recovery of nonlinear distortion cannot be certified. Spectral subtraction of overlapping noise and weak notes is ambiguous; some residual noise, altered weak overtones, transient softness and localized distortion may remain. The local validation experiment is a surrogate and is not a measurement of restoration quality against hidden clean audio.',\n 'checks':[\n {'start':0,'end':2,'observation':'Protected opening WAV samples match the input PCM exactly in both channels.'},\n {'start':2,'end':8,'observation':'Low-frequency interference was tracked continuously rather than removed with a broad fixed bass cut. The restored block retains nonzero music energy and its original sample positions.'},\n {'start':7.389,'end':7.405,'observation':'Only confirmed local channel deficit was repaired: right-channel level was 0.670 of the neighboring-stereo prediction; fitted right/left gain 0.702, with short edge crossfades.'},\n {'start':8,'end':13,'observation':'Spectrogram comparison shows a lower broad noise floor while pitched ridges and changing musical envelopes remain. No reference-fidelity or listening score is inferred.'},\n {'start':13,'end':24,'observation':'All later damaged intervals received the same adaptive processing. Stereo output is retained; no block was muted, omitted or shifted.'},\n {'start':24,'end':26,'observation':'Protected ending WAV samples match the input exactly, including its original decay and final zero samples. WAV format is 48000 Hz, stereo PCM16, exactly 1248000 sample frames.'}\n ]})\nsave('submission.json',{'version':'3.2-av-music-heavy','case_id':'26','files':{'master':'restored.mkv','repair':'repair.mkv','preview':'preview.mp4','project':'project.json','report':'report.json','audio':'restored_audio.wav','av_preview':'restored_av.mp4','audio_report':'audio_report.json'}})\nprint('reports written')\nPY\npython /workspace/work/write_reports.py\"",
+    "output": "reports written\n",
+    "exit_code": 0,
+    "utc": 1794842878.3171053
+  },
+  {
+    "step": 59,
+    "source_line": 108,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc 'ffmpeg -v error -y -i /workspace/submission/preview.mp4 -i /workspace/submission/restored_audio.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 512k -ar 48000 -ac 2 -movflags +faststart /workspace/submission/restored_av.mp4'",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842933.208862
+  },
+  {
+    "step": 60,
+    "source_line": 110,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/work/check_deliverables.py <<'PY'\nimport numpy as np,cv2,json,soundfile as sf,subprocess,hashlib\nfrom pathlib import Path\ncv2.setNumThreads(2);p=Path('/workspace/submission')\nmanifest=json.loads((p/'submission.json').read_text());assert manifest['version']=='3.2-av-music-heavy' and manifest['case_id']=='26'\nfor f in manifest['files'].values():assert not Path(f).is_absolute() and '..' not in Path(f).parts and (p/f).is_file()\ntry:\n import jsonschema\n for filename,schemafile in [('submission.json','output_schema.json'),('project.json','project_schema.json'),('report.json','report_schema.json')]:\n  jsonschema.validate(json.loads((p/filename).read_text()),json.load(open('/candidate/'+schemafile)))\n print('JSON schemas PASS',flush=True)\nexcept ImportError:print('jsonschema unavailable; checking required keys locally',flush=True)\ncaps=[cv2.VideoCapture(str(p/f)) for f in ['restored.mkv','repair.mkv','preview.mp4','restored_av.mp4']]\nx=np.load('/workspace/work/video.npy',mmap_mode='r');expected=np.load('/workspace/work/restored_video_v2.npy',mmap_mode='r')\nreplay_max=0;protected_max=0;preview_mae=[];preview_corr=[];av_frame_max=0;master_array_max=0;frames=0\nwhile True:\n r=[c.read() for c in caps]\n if not r[0][0]:assert not any(a for a,_ in r);break\n assert all(a for a,_ in r);m,repair,pr,av=[f for _,f in r];assert all(f.shape==(338,640,3) for _,f in r)\n orig=x[frames].astype(np.int16);q=repair.astype(np.int16)-128\n reconstructed=np.clip(orig+2*q,0,255)\n replay_max=max(replay_max,int(abs(reconstructed-m.astype(np.int16)).max()))\n master_array_max=max(master_array_max,int(abs(m.astype(np.int16)-expected[frames].astype(np.int16)).max()))\n if frames<48 or 264<=frames<288 or frames>=600:protected_max=max(protected_max,int(abs(orig-m.astype(np.int16)).max()))\n preview_mae.append(float(np.mean(abs(pr.astype(float)-m))/255))\n gray=[cv2.cvtColor(z,cv2.COLOR_BGR2GRAY).ravel() for z in [m,pr]];preview_corr.append(float(np.corrcoef(gray)[0,1]))\n av_frame_max=max(av_frame_max,int(abs(av.astype(np.int16)-pr.astype(np.int16)).max()))\n frames+=1\n assert frames<=624\nassert frames==624 and replay_max<=1 and protected_max==0 and master_array_max==0\nassert max(preview_mae)<=.025 and min(preview_corr)>=.97 and av_frame_max==0\nfor c in caps:c.release()\na,sr=sf.read(p/'restored_audio.wav');info=sf.info(p/'restored_audio.wav');raw,srr=sf.read('/candidate/input/music_damaged.wav')\nassert sr==48000 and a.shape==(1248000,2) and info.subtype=='PCM_16'\nassert np.array_equal(a[:96000],raw[:96000]) and np.array_equal(a[1152000:],raw[1152000:])\ndata=subprocess.check_output(['ffmpeg','-v','error','-i',str(p/'restored_av.mp4'),'-map','0:a:0','-f','f32le','-acodec','pcm_f32le','-'])\nb=np.frombuffer(data,dtype='<f4').reshape(-1,2);assert len(b)>=len(a)\nextra=len(b)-len(a);b=b[:len(a)]\nsnr=float(10*np.log10(np.sum(a*a)/np.sum((a-b)**2)));assert snr>=25\nprobes={}\nfor name in ['restored.mkv','repair.mkv','preview.mp4','restored_av.mp4']:\n probes[name]=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p/name)]))\n streams=probes[name]['streams'];vs=[s for s in streams if s['codec_type']=='video'];assert len(vs)==1\n v=vs[0];assert v['width']==640 and v['height']==338 and v['avg_frame_rate']=='24/1'\n if name.endswith('.mkv'):assert v['codec_name']=='ffv1' and v['pix_fmt'] in ['bgr0','rgb24','gbrp','bgr24'] and len(streams)==1\n elif name=='preview.mp4':assert v['codec_name']=='h264' and len(streams)==1\n else:assert v['codec_name']=='h264' and len(streams)==2 and any(s['codec_name']=='aac' for s in streams)\nresults={'frames':frames,'replay_max_error_RGB_levels':replay_max,'protected_visual_max_error_RGB_levels':protected_max,'encoded_master_to_processing_array_max_error':master_array_max,'preview_per_frame_MAE_max':max(preview_mae),'preview_per_frame_MAE_mean':float(np.mean(preview_mae)),'preview_grayscale_correlation_min':min(preview_corr),'av_preview_to_silent_preview_max_RGB_error':av_frame_max,'audio_sample_frames':len(a),'audio_sample_rate':sr,'audio_channels':2,'audio_subtype':info.subtype,'audio_protected_max_error':0,'AAC_preview_SNR_dB':snr,'AAC_decoder_padding_samples_trimmed_for_measurement':extra}\njson.dump(results,open('/workspace/work/delivery_checks.json','w'),indent=2)\nprint(json.dumps(results,indent=2),flush=True)\nprint('ALL DELIVERY CHECKS PASS',flush=True)\nPY\nOPENBLAS_NUM_THREADS=2 python /workspace/work/check_deliverables.py > /workspace/work/delivery_checks_output.txt 2>&1\"",
+    "output": "",
+    "exit_code": 0,
+    "utc": 1794842965.3996537
+  },
+  {
+    "step": 61,
+    "source_line": 112,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat /workspace/work/delivery_checks_output.txt\npython - <<'PY'\nimport time\nprint(time.time())\nPY\"",
+    "output": "JSON schemas PASS\n{\n  \"frames\": 624,\n  \"replay_max_error_RGB_levels\": 0,\n  \"protected_visual_max_error_RGB_levels\": 0,\n  \"encoded_master_to_processing_array_max_error\": 0,\n  \"preview_per_frame_MAE_max\": 0.008164121417797888,\n  \"preview_per_frame_MAE_mean\": 0.0062177537778975184,\n  \"preview_grayscale_correlation_min\": 0.9979940805444365,\n  \"av_preview_to_silent_preview_max_RGB_error\": 0,\n  \"audio_sample_frames\": 1248000,\n  \"audio_sample_rate\": 48000,\n  \"audio_channels\": 2,\n  \"audio_subtype\": \"PCM_16\",\n  \"audio_protected_max_error\": 0,\n  \"AAC_preview_SNR_dB\": 42.33483833242195,\n  \"AAC_decoder_padding_samples_trimmed_for_measurement\": 256\n}\nALL DELIVERY CHECKS PASS\n1794842965.0273843\n",
+    "exit_code": 0,
+    "utc": 1794843003.5896263
+  },
+  {
+    "step": 62,
+    "source_line": 113,
+    "kind": "agent_message",
+    "command": "",
+    "output": "All delivery checks passed. Both lossless videos have 624 frames, exact correction replay, and unchanged protected windows. The previews decode to the same video; maximum per-frame MAE to the master is 0.0082, below the 0.025 limit. The AAC preview measures 42.3 dB SNR against the submitted WAV, above the 25 dB requirement. I’m adding these results to the reports and checking the final package.",
+    "exit_code": null,
+    "utc": 1794843003.590521
+  },
+  {
+    "step": 63,
+    "source_line": 115,
+    "kind": "command_execution",
+    "command": "/usr/bin/bash -lc \"python - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/workspace/submission');m=json.load(open('/workspace/work/delivery_checks.json'))\nr=json.loads((p/'report.json').read_text())\nr['checks'][-1]['observation']='Protected ending is copied exactly. Verified all 624 decoded frames, identity mapping, lossless master/repair replay and actual corrections in every damaged block. H264 maximum per-frame RGB MAE to master '+format(m['preview_per_frame_MAE_max'],'.6f')+'; minimum grayscale correlation '+format(m['preview_grayscale_correlation_min'],'.6f')+'. Silent and AV preview pictures decode identically.'\n(p/'report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\\\\n')\na=json.loads((p/'audio_report.json').read_text())\na['checks'][-1]['observation']='Protected ending WAV samples match the input exactly, including original decay and final zeros. Verified stereo PCM16 WAV, 48000 Hz, exactly 1248000 sample frames. AAC decoded at the original zero time has '+format(m['AAC_preview_SNR_dB'],'.2f')+' dB SNR to the WAV over those sample frames; container trimming excludes decoder-only tail padding.'\n(p/'audio_report.json').write_text(json.dumps(a,ensure_ascii=False,indent=2)+'\\\\n')\nimport jsonschema\nfor fn,sch in [('submission.json','output_schema.json'),('project.json','project_schema.json'),('report.json','report_schema.json')]:\n jsonschema.validate(json.loads((p/fn).read_text()),json.load(open('/candidate/'+sch)))\nfor fn in sorted(p.iterdir()): print(fn.name,fn.stat().st_size)\nPY\nffprobe -v error -show_entries stream=index,codec_name,start_time,duration,nb_frames,sample_rate,channels -show_entries format=duration -of json /workspace/submission/restored_av.mp4\"",
+    "output": "audio_report.json 3317\npreview.mp4 8980358\nproject.json 5719\nrepair.mkv 249703793\nreport.json 3195\nrestored.mkv 160782846\nrestored_audio.wav 4992044\nrestored_av.mp4 10303037\nsubmission.json 335\n{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"start_time\": \"0.000000\",\n            \"duration\": \"26.000000\",\n            \"nb_frames\": \"624\"\n        },\n        {\n            \"index\": 1,\n            \"codec_name\": \"aac\",\n            \"sample_rate\": \"48000\",\n            \"channels\": 2,\n            \"start_time\": \"0.000000\",\n            \"duration\": \"26.000000\",\n            \"nb_frames\": \"1220\"\n        }\n    ],\n    \"format\": {\n        \"duration\": \"26.000000\"\n    }\n}\n",
+    "exit_code": 0,
+    "utc": 1794843003.848991
+  },
+  {
+    "step": 64,
+    "source_line": 116,
+    "kind": "agent_message",
+    "command": "",
+    "output": "Completed all deliverables in `/workspace/submission`.\n\n[submission.json](/workspace/submission/submission.json)\n\nVerified formats, timing, exact correction replay, protected regions, and preview fidelity. Audio assessment used signal analysis; no listening was performed.",
+    "exit_code": null,
+    "utc": 1794843031.6190073
+  },
+  {
+    "step": 65,
+    "source_line": 118,
+    "kind": "codex_exit",
+    "output": "{\"op\": \"event\", \"utc\": 1794843036.511929, \"event\": \"codex_exit\", \"returncode\": 0, \"elapsed_seconds\": 1952.9372242319996}",
+    "utc": 1794843036.511929
+  },
+  {
+    "step": 66,
+    "source_line": 119,
+    "kind": "namespace_exit",
+    "output": "{\"op\": \"event\", \"event\": \"namespace_exit\", \"case\": \"case_26_music\", \"returncode\": 0, \"timed_out\": false, \"utc\": 1794843036.5408688, \"elapsed_seconds\": 2620.115092754364}",
+    "utc": 1794843036.5408688
+  }
+]

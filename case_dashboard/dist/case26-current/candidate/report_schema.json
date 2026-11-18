@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "required": [
+    "method",
+    "protected_ranges",
+    "color_contract",
+    "limitations",
+    "checks"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 2400
+    },
+    "protected_ranges": {
+      "const": [
+        [
+          0,
+          48
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          600,
+          624
+        ]
+      ]
+    },
+    "color_contract": {
+      "const": "8bit displayRGB, same candidate transform; no linear/mastering reinterpretation"
+    },
+    "limitations": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 2000
+    },
+    "checks": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "frame",
+          "observation"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "frame": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 623
+          },
+          "observation": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 400
+          }
+        }
+      }
+    }
+  }
+}

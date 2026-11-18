@@ -1,0 +1,36 @@
+{
+  "method": "Signal-based restoration only; no audio perception/listening tool was available. Inspected PCM waveforms, stereo statistics, short-time spectra and spectrograms. A continuity-regularized low-frequency spectral ridge tracks the continuous drifting interference; complex demodulation and a low-pass amplitude estimate remove that narrow component. Broad colored noise is estimated adaptively from the stereo difference, with frequency-median rejection of pitched components and a separate per-channel spectral-floor cap. Real symmetric multichannel Wiener filters combine 8192- and 16384-sample STFT analyses with 512-sample hops; overlapping analysis blocks and a small residual retain weak components and avoid hard spectral gates. Original complex phases and channel timing are retained. One verified short right-channel deficit at 7.389–7.405 s is crossfaded to an estimate from the opposite channel using the neighboring stereo gain. The original PCM samples are restored exactly over 0–2 and 24–26 s. No global normalization, resampling of the output timeline, music substitution, segment removal, or silence masking is used. Parameter sanity checks used only the provided protected opening with locally estimated synthetic noise, not a clean reference for damaged intervals.",
+  "limitations": "No actual listening was performed. The clean music and damage parameters are unavailable, so reference SNR, note-attack accuracy and complete recovery of nonlinear distortion cannot be certified. Spectral subtraction of overlapping noise and weak notes is ambiguous; some residual noise, altered weak overtones, transient softness and localized distortion may remain. The local validation experiment is a surrogate and is not a measurement of restoration quality against hidden clean audio.",
+  "checks": [
+    {
+      "start": 0,
+      "end": 2,
+      "observation": "Protected opening WAV samples match the input PCM exactly in both channels."
+    },
+    {
+      "start": 2,
+      "end": 8,
+      "observation": "Low-frequency interference was tracked continuously rather than removed with a broad fixed bass cut. The restored block retains nonzero music energy and its original sample positions."
+    },
+    {
+      "start": 7.389,
+      "end": 7.405,
+      "observation": "Only confirmed local channel deficit was repaired: right-channel level was 0.670 of the neighboring-stereo prediction; fitted right/left gain 0.702, with short edge crossfades."
+    },
+    {
+      "start": 8,
+      "end": 13,
+      "observation": "Spectrogram comparison shows a lower broad noise floor while pitched ridges and changing musical envelopes remain. No reference-fidelity or listening score is inferred."
+    },
+    {
+      "start": 13,
+      "end": 24,
+      "observation": "All later damaged intervals received the same adaptive processing. Stereo output is retained; no block was muted, omitted or shifted."
+    },
+    {
+      "start": 24,
+      "end": 26,
+      "observation": "Protected ending WAV samples match the input exactly, including original decay and final zeros. Verified stereo PCM16 WAV, 48000 Hz, exactly 1248000 sample frames. AAC decoded at the original zero time has 42.33 dB SNR to the WAV over those sample frames; container trimming excludes decoder-only tail padding."
+    }
+  ]
+}
