@@ -1,0 +1,1532 @@
+{
+  "input": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1088,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 4,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "start_pts": 504,
+        "start_time": "0.041016",
+        "duration_ts": 49152,
+        "duration": "4.000000",
+        "bit_rate": "3761890",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "96",
+        "nb_read_frames": "96",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc62.11.100 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "D:\\omniALE\\case_code2video\\real_v2\\runs\\sol_xhigh_01\\candidate\\input\\reference.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.041016",
+      "duration": "4.000000",
+      "size": "1882967",
+      "bit_rate": "3765934",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.3.100"
+      }
+    }
+  },
+  "reference_sheets": [
+    "evidence/reference_all_1.jpg",
+    "evidence/reference_all_2.jpg",
+    "evidence/reference_all_3.jpg",
+    "evidence/reference_all_4.jpg"
+  ],
+  "outputs": {
+    "reconstruction": {
+      "exists": true,
+      "technical_pass": true,
+      "decoded_frames": 96,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1088,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 4,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 49152,
+            "duration": "4.000000",
+            "bit_rate": "2535288",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "96",
+            "nb_read_frames": "96",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\case_code2video\\real_v2\\runs\\sol_xhigh_01\\sealed\\submission\\reconstruction.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "4.000000",
+          "size": "1269552",
+          "bit_rate": "2539104",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      },
+      "all_frame_sheets": [
+        "evidence/reconstruction_all_1.jpg",
+        "evidence/reconstruction_all_2.jpg",
+        "evidence/reconstruction_all_3.jpg",
+        "evidence/reconstruction_all_4.jpg"
+      ],
+      "comparison": {
+        "diagnostic_only": "Pixel difference is NOT a score and includes requested revision changes. White background excluded through foreground union. No DTW.",
+        "frame_errors": [
+          {
+            "frame": 0,
+            "source_frame": 0,
+            "foreground_union_mae": 0
+          },
+          {
+            "frame": 1,
+            "source_frame": 1,
+            "foreground_union_mae": 0
+          },
+          {
+            "frame": 2,
+            "source_frame": 2,
+            "foreground_union_mae": 2.3359689712524414
+          },
+          {
+            "frame": 3,
+            "source_frame": 3,
+            "foreground_union_mae": 7.456051826477051
+          },
+          {
+            "frame": 4,
+            "source_frame": 4,
+            "foreground_union_mae": 9.114262580871582
+          },
+          {
+            "frame": 5,
+            "source_frame": 5,
+            "foreground_union_mae": 15.519344329833984
+          },
+          {
+            "frame": 6,
+            "source_frame": 6,
+            "foreground_union_mae": 9.021476745605469
+          },
+          {
+            "frame": 7,
+            "source_frame": 7,
+            "foreground_union_mae": 16.859783172607422
+          },
+          {
+            "frame": 8,
+            "source_frame": 8,
+            "foreground_union_mae": 9.769246101379395
+          },
+          {
+            "frame": 9,
+            "source_frame": 9,
+            "foreground_union_mae": 13.240692138671875
+          },
+          {
+            "frame": 10,
+            "source_frame": 10,
+            "foreground_union_mae": 17.63750648498535
+          },
+          {
+            "frame": 11,
+            "source_frame": 11,
+            "foreground_union_mae": 17.622520446777344
+          },
+          {
+            "frame": 12,
+            "source_frame": 12,
+            "foreground_union_mae": 27.00398063659668
+          },
+          {
+            "frame": 13,
+            "source_frame": 13,
+            "foreground_union_mae": 27.8187198638916
+          },
+          {
+            "frame": 14,
+            "source_frame": 14,
+            "foreground_union_mae": 32.18968200683594
+          },
+          {
+            "frame": 15,
+            "source_frame": 15,
+            "foreground_union_mae": 26.89061164855957
+          },
+          {
+            "frame": 16,
+            "source_frame": 16,
+            "foreground_union_mae": 30.4715576171875
+          },
+          {
+            "frame": 17,
+            "source_frame": 17,
+            "foreground_union_mae": 32.675209045410156
+          },
+          {
+            "frame": 18,
+            "source_frame": 18,
+            "foreground_union_mae": 27.17095947265625
+          },
+          {
+            "frame": 19,
+            "source_frame": 19,
+            "foreground_union_mae": 30.6604061126709
+          },
+          {
+            "frame": 20,
+            "source_frame": 20,
+            "foreground_union_mae": 29.038057327270508
+          },
+          {
+            "frame": 21,
+            "source_frame": 21,
+            "foreground_union_mae": 30.776472091674805
+          },
+          {
+            "frame": 22,
+            "source_frame": 22,
+            "foreground_union_mae": 27.135093688964844
+          },
+          {
+            "frame": 23,
+            "source_frame": 23,
+            "foreground_union_mae": 26.9320068359375
+          },
+          {
+            "frame": 24,
+            "source_frame": 24,
+            "foreground_union_mae": 20.634254455566406
+          },
+          {
+            "frame": 25,
+            "source_frame": 25,
+            "foreground_union_mae": 21.85674285888672
+          },
+          {
+            "frame": 26,
+            "source_frame": 26,
+            "foreground_union_mae": 23.53045082092285
+          },
+          {
+            "frame": 27,
+            "source_frame": 27,
+            "foreground_union_mae": 23.13703155517578
+          },
+          {
+            "frame": 28,
+            "source_frame": 28,
+            "foreground_union_mae": 24.88352394104004
+          },
+          {
+            "frame": 29,
+            "source_frame": 29,
+            "foreground_union_mae": 26.143171310424805
+          },
+          {
+            "frame": 30,
+            "source_frame": 30,
+            "foreground_union_mae": 24.414798736572266
+          },
+          {
+            "frame": 31,
+            "source_frame": 31,
+            "foreground_union_mae": 23.897571563720703
+          },
+          {
+            "frame": 32,
+            "source_frame": 32,
+            "foreground_union_mae": 24.231853485107422
+          },
+          {
+            "frame": 33,
+            "source_frame": 33,
+            "foreground_union_mae": 30.1948299407959
+          },
+          {
+            "frame": 34,
+            "source_frame": 34,
+            "foreground_union_mae": 34.0807991027832
+          },
+          {
+            "frame": 35,
+            "source_frame": 35,
+            "foreground_union_mae": 34.024322509765625
+          },
+          {
+            "frame": 36,
+            "source_frame": 36,
+            "foreground_union_mae": 30.20980453491211
+          },
+          {
+            "frame": 37,
+            "source_frame": 37,
+            "foreground_union_mae": 28.78334617614746
+          },
+          {
+            "frame": 38,
+            "source_frame": 38,
+            "foreground_union_mae": 27.35226821899414
+          },
+          {
+            "frame": 39,
+            "source_frame": 39,
+            "foreground_union_mae": 32.422306060791016
+          },
+          {
+            "frame": 40,
+            "source_frame": 40,
+            "foreground_union_mae": 27.004474639892578
+          },
+          {
+            "frame": 41,
+            "source_frame": 41,
+            "foreground_union_mae": 36.572967529296875
+          },
+          {
+            "frame": 42,
+            "source_frame": 42,
+            "foreground_union_mae": 27.601390838623047
+          },
+          {
+            "frame": 43,
+            "source_frame": 43,
+            "foreground_union_mae": 28.73801612854004
+          },
+          {
+            "frame": 44,
+            "source_frame": 44,
+            "foreground_union_mae": 22.67239761352539
+          },
+          {
+            "frame": 45,
+            "source_frame": 45,
+            "foreground_union_mae": 22.322071075439453
+          },
+          {
+            "frame": 46,
+            "source_frame": 46,
+            "foreground_union_mae": 20.693180084228516
+          },
+          {
+            "frame": 47,
+            "source_frame": 47,
+            "foreground_union_mae": 20.742395401000977
+          },
+          {
+            "frame": 48,
+            "source_frame": 48,
+            "foreground_union_mae": 21.443023681640625
+          },
+          {
+            "frame": 49,
+            "source_frame": 49,
+            "foreground_union_mae": 21.779340744018555
+          },
+          {
+            "frame": 50,
+            "source_frame": 50,
+            "foreground_union_mae": 21.8696231842041
+          },
+          {
+            "frame": 51,
+            "source_frame": 51,
+            "foreground_union_mae": 22.101436614990234
+          },
+          {
+            "frame": 52,
+            "source_frame": 52,
+            "foreground_union_mae": 22.5627498626709
+          },
+          {
+            "frame": 53,
+            "source_frame": 53,
+            "foreground_union_mae": 21.56124496459961
+          },
+          {
+            "frame": 54,
+            "source_frame": 54,
+            "foreground_union_mae": 19.97245216369629
+          },
+          {
+            "frame": 55,
+            "source_frame": 55,
+            "foreground_union_mae": 21.101924896240234
+          },
+          {
+            "frame": 56,
+            "source_frame": 56,
+            "foreground_union_mae": 22.050918579101562
+          },
+          {
+            "frame": 57,
+            "source_frame": 57,
+            "foreground_union_mae": 22.29230499267578
+          },
+          {
+            "frame": 58,
+            "source_frame": 58,
+            "foreground_union_mae": 22.442520141601562
+          },
+          {
+            "frame": 59,
+            "source_frame": 59,
+            "foreground_union_mae": 22.343307495117188
+          },
+          {
+            "frame": 60,
+            "source_frame": 60,
+            "foreground_union_mae": 22.1772403717041
+          },
+          {
+            "frame": 61,
+            "source_frame": 61,
+            "foreground_union_mae": 24.32349395751953
+          },
+          {
+            "frame": 62,
+            "source_frame": 62,
+            "foreground_union_mae": 29.678367614746094
+          },
+          {
+            "frame": 63,
+            "source_frame": 63,
+            "foreground_union_mae": 34.835540771484375
+          },
+          {
+            "frame": 64,
+            "source_frame": 64,
+            "foreground_union_mae": 36.71770477294922
+          },
+          {
+            "frame": 65,
+            "source_frame": 65,
+            "foreground_union_mae": 42.23757553100586
+          },
+          {
+            "frame": 66,
+            "source_frame": 66,
+            "foreground_union_mae": 41.40877914428711
+          },
+          {
+            "frame": 67,
+            "source_frame": 67,
+            "foreground_union_mae": 47.933990478515625
+          },
+          {
+            "frame": 68,
+            "source_frame": 68,
+            "foreground_union_mae": 49.126136779785156
+          },
+          {
+            "frame": 69,
+            "source_frame": 69,
+            "foreground_union_mae": 50.6682243347168
+          },
+          {
+            "frame": 70,
+            "source_frame": 70,
+            "foreground_union_mae": 47.97526168823242
+          },
+          {
+            "frame": 71,
+            "source_frame": 71,
+            "foreground_union_mae": 57.32297134399414
+          },
+          {
+            "frame": 72,
+            "source_frame": 72,
+            "foreground_union_mae": 54.56102752685547
+          },
+          {
+            "frame": 73,
+            "source_frame": 73,
+            "foreground_union_mae": 53.85604476928711
+          },
+          {
+            "frame": 74,
+            "source_frame": 74,
+            "foreground_union_mae": 53.93134689331055
+          },
+          {
+            "frame": 75,
+            "source_frame": 75,
+            "foreground_union_mae": 54.35737609863281
+          },
+          {
+            "frame": 76,
+            "source_frame": 76,
+            "foreground_union_mae": 51.90771484375
+          },
+          {
+            "frame": 77,
+            "source_frame": 77,
+            "foreground_union_mae": 55.55259704589844
+          },
+          {
+            "frame": 78,
+            "source_frame": 78,
+            "foreground_union_mae": 54.58032989501953
+          },
+          {
+            "frame": 79,
+            "source_frame": 79,
+            "foreground_union_mae": 54.719688415527344
+          },
+          {
+            "frame": 80,
+            "source_frame": 80,
+            "foreground_union_mae": 53.04814529418945
+          },
+          {
+            "frame": 81,
+            "source_frame": 81,
+            "foreground_union_mae": 53.779075622558594
+          },
+          {
+            "frame": 82,
+            "source_frame": 82,
+            "foreground_union_mae": 51.08049011230469
+          },
+          {
+            "frame": 83,
+            "source_frame": 83,
+            "foreground_union_mae": 48.72126770019531
+          },
+          {
+            "frame": 84,
+            "source_frame": 84,
+            "foreground_union_mae": 47.99443435668945
+          },
+          {
+            "frame": 85,
+            "source_frame": 85,
+            "foreground_union_mae": 50.84776306152344
+          },
+          {
+            "frame": 86,
+            "source_frame": 86,
+            "foreground_union_mae": 50.73057174682617
+          },
+          {
+            "frame": 87,
+            "source_frame": 87,
+            "foreground_union_mae": 52.75523376464844
+          },
+          {
+            "frame": 88,
+            "source_frame": 88,
+            "foreground_union_mae": 53.201717376708984
+          },
+          {
+            "frame": 89,
+            "source_frame": 89,
+            "foreground_union_mae": 53.44923782348633
+          },
+          {
+            "frame": 90,
+            "source_frame": 90,
+            "foreground_union_mae": 53.679569244384766
+          },
+          {
+            "frame": 91,
+            "source_frame": 91,
+            "foreground_union_mae": 54.4552116394043
+          },
+          {
+            "frame": 92,
+            "source_frame": 92,
+            "foreground_union_mae": 55.68907928466797
+          },
+          {
+            "frame": 93,
+            "source_frame": 93,
+            "foreground_union_mae": 55.82439041137695
+          },
+          {
+            "frame": 94,
+            "source_frame": 94,
+            "foreground_union_mae": 56.89189147949219
+          },
+          {
+            "frame": 95,
+            "source_frame": 95,
+            "foreground_union_mae": 59.52622604370117
+          }
+        ],
+        "comparison_files": [
+          "evidence/reconstruction_compare_000.jpg",
+          "evidence/reconstruction_compare_008.jpg",
+          "evidence/reconstruction_compare_017.jpg",
+          "evidence/reconstruction_compare_025.jpg",
+          "evidence/reconstruction_compare_034.jpg",
+          "evidence/reconstruction_compare_043.jpg",
+          "evidence/reconstruction_compare_051.jpg",
+          "evidence/reconstruction_compare_060.jpg",
+          "evidence/reconstruction_compare_069.jpg",
+          "evidence/reconstruction_compare_077.jpg",
+          "evidence/reconstruction_compare_086.jpg",
+          "evidence/reconstruction_compare_095.jpg"
+        ]
+      },
+      "sha256": "26a76511dedddc53fe3383e67350928e5a86dd4b16e4849d4a2215d73f6e28ac"
+    },
+    "revision": {
+      "exists": true,
+      "technical_pass": true,
+      "decoded_frames": 144,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1088,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 4,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 73728,
+            "duration": "6.000000",
+            "bit_rate": "2191764",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "144",
+            "nb_read_frames": "144",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\case_code2video\\real_v2\\runs\\sol_xhigh_01\\sealed\\submission\\revision.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "6.000000",
+          "size": "1646291",
+          "bit_rate": "2195054",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      },
+      "all_frame_sheets": [
+        "evidence/revision_all_1.jpg",
+        "evidence/revision_all_2.jpg",
+        "evidence/revision_all_3.jpg",
+        "evidence/revision_all_4.jpg",
+        "evidence/revision_all_5.jpg",
+        "evidence/revision_all_6.jpg"
+      ],
+      "comparison": {
+        "diagnostic_only": "Pixel difference is NOT a score and includes requested revision changes. White background excluded through foreground union. No DTW.",
+        "frame_errors": [
+          {
+            "frame": 0,
+            "source_frame": 0,
+            "foreground_union_mae": 0
+          },
+          {
+            "frame": 1,
+            "source_frame": 1,
+            "foreground_union_mae": 0
+          },
+          {
+            "frame": 2,
+            "source_frame": 2,
+            "foreground_union_mae": 2.3359689712524414
+          },
+          {
+            "frame": 3,
+            "source_frame": 3,
+            "foreground_union_mae": 7.456051826477051
+          },
+          {
+            "frame": 4,
+            "source_frame": 4,
+            "foreground_union_mae": 9.114262580871582
+          },
+          {
+            "frame": 5,
+            "source_frame": 5,
+            "foreground_union_mae": 15.519344329833984
+          },
+          {
+            "frame": 6,
+            "source_frame": 6,
+            "foreground_union_mae": 9.021476745605469
+          },
+          {
+            "frame": 7,
+            "source_frame": 7,
+            "foreground_union_mae": 16.859783172607422
+          },
+          {
+            "frame": 8,
+            "source_frame": 8,
+            "foreground_union_mae": 9.765856742858887
+          },
+          {
+            "frame": 9,
+            "source_frame": 9,
+            "foreground_union_mae": 13.233987808227539
+          },
+          {
+            "frame": 10,
+            "source_frame": 10,
+            "foreground_union_mae": 17.638214111328125
+          },
+          {
+            "frame": 11,
+            "source_frame": 11,
+            "foreground_union_mae": 17.619768142700195
+          },
+          {
+            "frame": 12,
+            "source_frame": 12,
+            "foreground_union_mae": 27.006921768188477
+          },
+          {
+            "frame": 13,
+            "source_frame": 13,
+            "foreground_union_mae": 27.812999725341797
+          },
+          {
+            "frame": 14,
+            "source_frame": 14,
+            "foreground_union_mae": 32.18902587890625
+          },
+          {
+            "frame": 15,
+            "source_frame": 15,
+            "foreground_union_mae": 26.88919448852539
+          },
+          {
+            "frame": 16,
+            "source_frame": 16,
+            "foreground_union_mae": 30.46961784362793
+          },
+          {
+            "frame": 17,
+            "source_frame": 17,
+            "foreground_union_mae": 32.676544189453125
+          },
+          {
+            "frame": 18,
+            "source_frame": 18,
+            "foreground_union_mae": 27.17122459411621
+          },
+          {
+            "frame": 19,
+            "source_frame": 19,
+            "foreground_union_mae": 30.65921401977539
+          },
+          {
+            "frame": 20,
+            "source_frame": 20,
+            "foreground_union_mae": 29.02701187133789
+          },
+          {
+            "frame": 21,
+            "source_frame": 21,
+            "foreground_union_mae": 30.77434730529785
+          },
+          {
+            "frame": 22,
+            "source_frame": 22,
+            "foreground_union_mae": 27.13312339782715
+          },
+          {
+            "frame": 23,
+            "source_frame": 23,
+            "foreground_union_mae": 26.929359436035156
+          },
+          {
+            "frame": 24,
+            "source_frame": 24,
+            "foreground_union_mae": 20.63009262084961
+          },
+          {
+            "frame": 25,
+            "source_frame": 25,
+            "foreground_union_mae": 21.853160858154297
+          },
+          {
+            "frame": 26,
+            "source_frame": 26,
+            "foreground_union_mae": 23.52596092224121
+          },
+          {
+            "frame": 27,
+            "source_frame": 27,
+            "foreground_union_mae": 23.1324462890625
+          },
+          {
+            "frame": 28,
+            "source_frame": 28,
+            "foreground_union_mae": 24.87948989868164
+          },
+          {
+            "frame": 29,
+            "source_frame": 29,
+            "foreground_union_mae": 26.13817596435547
+          },
+          {
+            "frame": 30,
+            "source_frame": 30,
+            "foreground_union_mae": 24.410554885864258
+          },
+          {
+            "frame": 31,
+            "source_frame": 31,
+            "foreground_union_mae": 23.894210815429688
+          },
+          {
+            "frame": 32,
+            "source_frame": 32,
+            "foreground_union_mae": 24.2257080078125
+          },
+          {
+            "frame": 33,
+            "source_frame": 33,
+            "foreground_union_mae": 30.191455841064453
+          },
+          {
+            "frame": 34,
+            "source_frame": 34,
+            "foreground_union_mae": 34.07422637939453
+          },
+          {
+            "frame": 35,
+            "source_frame": 35,
+            "foreground_union_mae": 34.01442337036133
+          },
+          {
+            "frame": 36,
+            "source_frame": 36,
+            "foreground_union_mae": 30.20880889892578
+          },
+          {
+            "frame": 37,
+            "source_frame": 37,
+            "foreground_union_mae": 29.564802169799805
+          },
+          {
+            "frame": 38,
+            "source_frame": 38,
+            "foreground_union_mae": 34.40406036376953
+          },
+          {
+            "frame": 39,
+            "source_frame": 39,
+            "foreground_union_mae": 45.32942199707031
+          },
+          {
+            "frame": 40,
+            "source_frame": 40,
+            "foreground_union_mae": 41.44871139526367
+          },
+          {
+            "frame": 41,
+            "source_frame": 41,
+            "foreground_union_mae": 51.9906120300293
+          },
+          {
+            "frame": 42,
+            "source_frame": 42,
+            "foreground_union_mae": 46.39159393310547
+          },
+          {
+            "frame": 43,
+            "source_frame": 42,
+            "foreground_union_mae": 48.98674392700195
+          },
+          {
+            "frame": 44,
+            "source_frame": 43,
+            "foreground_union_mae": 48.04514694213867
+          },
+          {
+            "frame": 45,
+            "source_frame": 44,
+            "foreground_union_mae": 43.95186996459961
+          },
+          {
+            "frame": 46,
+            "source_frame": 44,
+            "foreground_union_mae": 44.95606994628906
+          },
+          {
+            "frame": 47,
+            "source_frame": 45,
+            "foreground_union_mae": 46.545040130615234
+          },
+          {
+            "frame": 48,
+            "source_frame": 46,
+            "foreground_union_mae": 45.0125732421875
+          },
+          {
+            "frame": 49,
+            "source_frame": 46,
+            "foreground_union_mae": 46.239078521728516
+          },
+          {
+            "frame": 50,
+            "source_frame": 47,
+            "foreground_union_mae": 46.135292053222656
+          },
+          {
+            "frame": 51,
+            "source_frame": 48,
+            "foreground_union_mae": 45.18244934082031
+          },
+          {
+            "frame": 52,
+            "source_frame": 48,
+            "foreground_union_mae": 46.2004508972168
+          },
+          {
+            "frame": 53,
+            "source_frame": 49,
+            "foreground_union_mae": 45.66521453857422
+          },
+          {
+            "frame": 54,
+            "source_frame": 50,
+            "foreground_union_mae": 45.75621795654297
+          },
+          {
+            "frame": 55,
+            "source_frame": 50,
+            "foreground_union_mae": 47.1292724609375
+          },
+          {
+            "frame": 56,
+            "source_frame": 51,
+            "foreground_union_mae": 47.093299865722656
+          },
+          {
+            "frame": 57,
+            "source_frame": 52,
+            "foreground_union_mae": 47.94086456298828
+          },
+          {
+            "frame": 58,
+            "source_frame": 52,
+            "foreground_union_mae": 48.0399055480957
+          },
+          {
+            "frame": 59,
+            "source_frame": 53,
+            "foreground_union_mae": 46.90515899658203
+          },
+          {
+            "frame": 60,
+            "source_frame": 54,
+            "foreground_union_mae": 45.768123626708984
+          },
+          {
+            "frame": 61,
+            "source_frame": 54,
+            "foreground_union_mae": 46.29946517944336
+          },
+          {
+            "frame": 62,
+            "source_frame": 55,
+            "foreground_union_mae": 46.26786804199219
+          },
+          {
+            "frame": 63,
+            "source_frame": 56,
+            "foreground_union_mae": 46.60527038574219
+          },
+          {
+            "frame": 64,
+            "source_frame": 56,
+            "foreground_union_mae": 46.459678649902344
+          },
+          {
+            "frame": 65,
+            "source_frame": 57,
+            "foreground_union_mae": 46.47184753417969
+          },
+          {
+            "frame": 66,
+            "source_frame": 58,
+            "foreground_union_mae": 46.39622497558594
+          },
+          {
+            "frame": 67,
+            "source_frame": 58,
+            "foreground_union_mae": 46.326927185058594
+          },
+          {
+            "frame": 68,
+            "source_frame": 59,
+            "foreground_union_mae": 46.03125762939453
+          },
+          {
+            "frame": 69,
+            "source_frame": 60,
+            "foreground_union_mae": 45.97119903564453
+          },
+          {
+            "frame": 70,
+            "source_frame": 60,
+            "foreground_union_mae": 46.00300598144531
+          },
+          {
+            "frame": 71,
+            "source_frame": 61,
+            "foreground_union_mae": 46.62883377075195
+          },
+          {
+            "frame": 72,
+            "source_frame": 62,
+            "foreground_union_mae": 51.18351745605469
+          },
+          {
+            "frame": 73,
+            "source_frame": 62,
+            "foreground_union_mae": 52.75764465332031
+          },
+          {
+            "frame": 74,
+            "source_frame": 63,
+            "foreground_union_mae": 54.12935256958008
+          },
+          {
+            "frame": 75,
+            "source_frame": 64,
+            "foreground_union_mae": 54.48359298706055
+          },
+          {
+            "frame": 76,
+            "source_frame": 64,
+            "foreground_union_mae": 56.04817199707031
+          },
+          {
+            "frame": 77,
+            "source_frame": 65,
+            "foreground_union_mae": 57.538150787353516
+          },
+          {
+            "frame": 78,
+            "source_frame": 66,
+            "foreground_union_mae": 55.93010330200195
+          },
+          {
+            "frame": 79,
+            "source_frame": 66,
+            "foreground_union_mae": 58.54848861694336
+          },
+          {
+            "frame": 80,
+            "source_frame": 67,
+            "foreground_union_mae": 60.97373580932617
+          },
+          {
+            "frame": 81,
+            "source_frame": 67,
+            "foreground_union_mae": 60.57780838012695
+          },
+          {
+            "frame": 82,
+            "source_frame": 68,
+            "foreground_union_mae": 60.72684097290039
+          },
+          {
+            "frame": 83,
+            "source_frame": 68,
+            "foreground_union_mae": 62.38296890258789
+          },
+          {
+            "frame": 84,
+            "source_frame": 69,
+            "foreground_union_mae": 61.91643524169922
+          },
+          {
+            "frame": 85,
+            "source_frame": 69,
+            "foreground_union_mae": 58.67940902709961
+          },
+          {
+            "frame": 86,
+            "source_frame": 70,
+            "foreground_union_mae": 58.70310592651367
+          },
+          {
+            "frame": 87,
+            "source_frame": 70,
+            "foreground_union_mae": 61.7370491027832
+          },
+          {
+            "frame": 88,
+            "source_frame": 71,
+            "foreground_union_mae": 64.31676483154297
+          },
+          {
+            "frame": 89,
+            "source_frame": 71,
+            "foreground_union_mae": 61.90986251831055
+          },
+          {
+            "frame": 90,
+            "source_frame": 72,
+            "foreground_union_mae": 58.32757568359375
+          },
+          {
+            "frame": 91,
+            "source_frame": 72,
+            "foreground_union_mae": 56.36112594604492
+          },
+          {
+            "frame": 92,
+            "source_frame": 73,
+            "foreground_union_mae": 56.776912689208984
+          },
+          {
+            "frame": 93,
+            "source_frame": 73,
+            "foreground_union_mae": 55.8478889465332
+          },
+          {
+            "frame": 94,
+            "source_frame": 74,
+            "foreground_union_mae": 56.331085205078125
+          },
+          {
+            "frame": 95,
+            "source_frame": 74,
+            "foreground_union_mae": 58.96514892578125
+          },
+          {
+            "frame": 96,
+            "source_frame": 75,
+            "foreground_union_mae": 56.600318908691406
+          },
+          {
+            "frame": 97,
+            "source_frame": 75,
+            "foreground_union_mae": 54.85346603393555
+          },
+          {
+            "frame": 98,
+            "source_frame": 76,
+            "foreground_union_mae": 54.057498931884766
+          },
+          {
+            "frame": 99,
+            "source_frame": 76,
+            "foreground_union_mae": 53.555179595947266
+          },
+          {
+            "frame": 100,
+            "source_frame": 77,
+            "foreground_union_mae": 57.92072677612305
+          },
+          {
+            "frame": 101,
+            "source_frame": 77,
+            "foreground_union_mae": 57.46971130371094
+          },
+          {
+            "frame": 102,
+            "source_frame": 78,
+            "foreground_union_mae": 56.815189361572266
+          },
+          {
+            "frame": 103,
+            "source_frame": 78,
+            "foreground_union_mae": 55.945701599121094
+          },
+          {
+            "frame": 104,
+            "source_frame": 79,
+            "foreground_union_mae": 56.64790344238281
+          },
+          {
+            "frame": 105,
+            "source_frame": 79,
+            "foreground_union_mae": 55.793216705322266
+          },
+          {
+            "frame": 106,
+            "source_frame": 80,
+            "foreground_union_mae": 54.913047790527344
+          },
+          {
+            "frame": 107,
+            "source_frame": 80,
+            "foreground_union_mae": 54.2913932800293
+          },
+          {
+            "frame": 108,
+            "source_frame": 81,
+            "foreground_union_mae": 55.510597229003906
+          },
+          {
+            "frame": 109,
+            "source_frame": 81,
+            "foreground_union_mae": 54.30349349975586
+          },
+          {
+            "frame": 110,
+            "source_frame": 82,
+            "foreground_union_mae": 52.772239685058594
+          },
+          {
+            "frame": 111,
+            "source_frame": 82,
+            "foreground_union_mae": 51.72831726074219
+          },
+          {
+            "frame": 112,
+            "source_frame": 83,
+            "foreground_union_mae": 50.48593521118164
+          },
+          {
+            "frame": 113,
+            "source_frame": 83,
+            "foreground_union_mae": 50.002685546875
+          },
+          {
+            "frame": 114,
+            "source_frame": 84,
+            "foreground_union_mae": 49.76127243041992
+          },
+          {
+            "frame": 115,
+            "source_frame": 84,
+            "foreground_union_mae": 49.404335021972656
+          },
+          {
+            "frame": 116,
+            "source_frame": 85,
+            "foreground_union_mae": 51.758697509765625
+          },
+          {
+            "frame": 117,
+            "source_frame": 85,
+            "foreground_union_mae": 51.72824478149414
+          },
+          {
+            "frame": 118,
+            "source_frame": 86,
+            "foreground_union_mae": 51.64918518066406
+          },
+          {
+            "frame": 119,
+            "source_frame": 86,
+            "foreground_union_mae": 51.66730880737305
+          },
+          {
+            "frame": 120,
+            "source_frame": 87,
+            "foreground_union_mae": 54.10844802856445
+          },
+          {
+            "frame": 121,
+            "source_frame": 87,
+            "foreground_union_mae": 54.501705169677734
+          },
+          {
+            "frame": 122,
+            "source_frame": 88,
+            "foreground_union_mae": 54.41205978393555
+          },
+          {
+            "frame": 123,
+            "source_frame": 88,
+            "foreground_union_mae": 54.52254104614258
+          },
+          {
+            "frame": 124,
+            "source_frame": 89,
+            "foreground_union_mae": 54.70469284057617
+          },
+          {
+            "frame": 125,
+            "source_frame": 89,
+            "foreground_union_mae": 54.69498825073242
+          },
+          {
+            "frame": 126,
+            "source_frame": 90,
+            "foreground_union_mae": 54.897361755371094
+          },
+          {
+            "frame": 127,
+            "source_frame": 90,
+            "foreground_union_mae": 55.04308319091797
+          },
+          {
+            "frame": 128,
+            "source_frame": 90,
+            "foreground_union_mae": 55.29656982421875
+          },
+          {
+            "frame": 129,
+            "source_frame": 91,
+            "foreground_union_mae": 55.79130172729492
+          },
+          {
+            "frame": 130,
+            "source_frame": 91,
+            "foreground_union_mae": 56.09733963012695
+          },
+          {
+            "frame": 131,
+            "source_frame": 91,
+            "foreground_union_mae": 56.517906188964844
+          },
+          {
+            "frame": 132,
+            "source_frame": 92,
+            "foreground_union_mae": 56.94492721557617
+          },
+          {
+            "frame": 133,
+            "source_frame": 92,
+            "foreground_union_mae": 57.42937088012695
+          },
+          {
+            "frame": 134,
+            "source_frame": 92,
+            "foreground_union_mae": 56.935020446777344
+          },
+          {
+            "frame": 135,
+            "source_frame": 93,
+            "foreground_union_mae": 57.369632720947266
+          },
+          {
+            "frame": 136,
+            "source_frame": 93,
+            "foreground_union_mae": 57.67827224731445
+          },
+          {
+            "frame": 137,
+            "source_frame": 93,
+            "foreground_union_mae": 58.209510803222656
+          },
+          {
+            "frame": 138,
+            "source_frame": 94,
+            "foreground_union_mae": 58.366825103759766
+          },
+          {
+            "frame": 139,
+            "source_frame": 94,
+            "foreground_union_mae": 58.818885803222656
+          },
+          {
+            "frame": 140,
+            "source_frame": 94,
+            "foreground_union_mae": 59.400001525878906
+          },
+          {
+            "frame": 141,
+            "source_frame": 95,
+            "foreground_union_mae": 60.54583740234375
+          },
+          {
+            "frame": 142,
+            "source_frame": 95,
+            "foreground_union_mae": 60.42924880981445
+          },
+          {
+            "frame": 143,
+            "source_frame": 95,
+            "foreground_union_mae": 60.42689895629883
+          }
+        ],
+        "comparison_files": [
+          "evidence/revision_compare_000.jpg",
+          "evidence/revision_compare_013.jpg",
+          "evidence/revision_compare_026.jpg",
+          "evidence/revision_compare_039.jpg",
+          "evidence/revision_compare_052.jpg",
+          "evidence/revision_compare_065.jpg",
+          "evidence/revision_compare_078.jpg",
+          "evidence/revision_compare_091.jpg",
+          "evidence/revision_compare_104.jpg",
+          "evidence/revision_compare_117.jpg",
+          "evidence/revision_compare_130.jpg",
+          "evidence/revision_compare_143.jpg"
+        ]
+      },
+      "sha256": "b8ab36761e3f92e21146c2ff695085f2650945ea333ef565185a24fb85cab1c0"
+    }
+  }
+}

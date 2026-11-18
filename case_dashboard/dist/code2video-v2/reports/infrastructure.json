@@ -1,0 +1,203 @@
+{
+  "sessions": [
+    {
+      "session": "attempt01",
+      "completed": 41,
+      "elapsed_seconds": 3000.538255929947,
+      "model_exit_code": 1,
+      "errors": [
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        },
+        {
+          "http_status": 200,
+          "error": {
+            "code": "gateway_concurrency_limit",
+            "message": "Concurrency limit exceeded for account, please retry later"
+          }
+        }
+      ],
+      "credential": "original credential"
+    },
+    {
+      "session": "recovery01",
+      "completed": 0,
+      "elapsed_seconds": 41.79266142845154,
+      "model_exit_code": 1,
+      "errors": [
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        },
+        {
+          "http_status": 503,
+          "error": null
+        }
+      ],
+      "credential": "original credential"
+    },
+    {
+      "session": "recovery02",
+      "completed": 49,
+      "elapsed_seconds": 2069.838747739792,
+      "model_exit_code": 0,
+      "errors": [],
+      "credential": "user replacement credential"
+    }
+  ],
+  "cumulative_session_seconds": 5112.16966509819,
+  "no_task_time_limit": true,
+  "recovery_policy": "Same frozen task and ordinary workspace; fresh model context after infrastructure failure; no evaluator feedback. Not an uninterrupted single session.",
+  "postprocess_event": "Model exited normally; final answer sealed and hash-matched. Disk full interrupted status writing; status restored from complete run.json. Duplicate scratch directories moved to C:/Users/ASUS/AppData/Local/Temp/code2video_archive without deleting their contents."
+}

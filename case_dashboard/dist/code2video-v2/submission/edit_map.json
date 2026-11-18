@@ -1,0 +1,287 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "background": "#FFFFFF"
+  },
+  "project": "project/scene.py",
+  "reconstruction": {
+    "duration_s": 4,
+    "frames": 96,
+    "path_text": "TOGETHER"
+  },
+  "revision": {
+    "duration_s": 6,
+    "frames": 144,
+    "config": "project/revision.json"
+  },
+  "time_map": {
+    "implementation": "Scene.source_time() in project/scene.py; output seconds map to source seconds by piecewise linear interpolation",
+    "source_s": [
+      0,
+      1.75,
+      2.75,
+      3.75,
+      4
+    ],
+    "output_s": [
+      0,
+      1.75,
+      3.25,
+      5.25,
+      6
+    ],
+    "boundary": "Frames sample i/24 with i < frame_count; source 4.00 is an interval boundary, never an additional input frame."
+  },
+  "objects": {
+    "print-slices": {
+      "file": "project/print_stage.py",
+      "source_interval_s": [
+        0.083333,
+        2.18
+      ],
+      "pieces": {
+        "right-half-circle": {
+          "center": [
+            1080,
+            540
+          ],
+          "radius": 266,
+          "stroke": 90,
+          "crop_origin": [
+            1084,
+            616
+          ],
+          "expanded_selection": [
+            1084,
+            183,
+            414,
+            714
+          ]
+        },
+        "center-negative-card": [
+          819,
+          180,
+          250,
+          455
+        ],
+        "left-negative-card": [
+          532,
+          446,
+          271,
+          452
+        ],
+        "lower-diagonal": [
+          819,
+          635,
+          250,
+          215
+        ],
+        "top-horizontal-swatches": [
+          351,
+          210,
+          357,
+          221
+        ],
+        "green-fade": [
+          723,
+          64,
+          80,
+          281
+        ],
+        "orange-blue-swatch": [
+          819,
+          64,
+          250,
+          101
+        ],
+        "pink-chips": [
+          1084,
+          913,
+          420,
+          149
+        ],
+        "registration-centers": [
+          [
+            517,
+            540
+          ],
+          [
+            1498,
+            539
+          ]
+        ]
+      },
+      "representation": "Editable paths, gradients, masks, dot circles, rectangles and independent crop/opacity/position curves. Grain is a seeded procedural static tile."
+    },
+    "ui-colored-tube": {
+      "files": [
+        "project/geometry.py: RIGHT",
+        "project/ui_stage.py: tube(), colored_stroke()"
+      ],
+      "source_interval_s": [
+        1.041667,
+        3.15
+      ],
+      "geometry": "Continuous cubic path from [758,583] through bottom/right circular arc to [938,317], radius approximately 266, outer width 90",
+      "revision_material_interval_s": [
+        1.52,
+        3.15
+      ],
+      "parameter": "ui_gradient",
+      "shading": "Arc-distance color interpolation, translucent outer edge, pale volume, saturated groove, multi-profile raised slider and tangent-following highlights. Glass uses a clipped blur of the revised tube colors.",
+      "preserved_colors": "Print graphics before UI material formation, porcelain rail, magenta rail LED, UI switch, stickers and illustration palette."
+    },
+    "porcelain-rail": {
+      "file": "project/ui_stage.py: left_rail()",
+      "path": "project/geometry.py: LEFT",
+      "source_interval_s": [
+        1.52,
+        3.14
+      ],
+      "nominal_bounds": [
+        519,
+        338,
+        547,
+        515
+      ],
+      "parts": [
+        "soft cast shadow",
+        "nested bevel cross-sections with a soft highlight",
+        "inset groove",
+        "magenta LED",
+        "traveling circular knob",
+        "early ruler ticks"
+      ]
+    },
+    "glass-and-controls": {
+      "file": "project/ui_stage.py: controls()",
+      "source_interval_s": [
+        1.61,
+        3.08
+      ],
+      "nominal_panel": [
+        1218,
+        470,
+        254,
+        259
+      ],
+      "parts": [
+        "blue selection",
+        "green eight-handle selection",
+        "play button",
+        "plus button",
+        "radial ticks",
+        "crop tool",
+        "speech tile",
+        "wireframe icon",
+        "orange grid",
+        "blue bubble",
+        "lime pill",
+        "frosted pane",
+        "two independent switches"
+      ]
+    },
+    "cursor-blue": {
+      "identity": "The cyan/blue triangular cursor inside the right side of the logo in ui_identity.png, NOT the blue circular play button",
+      "file": "project/ui_stage.py: pointer('blue', t)",
+      "trajectory": "project/cursor_tracks.json: blue",
+      "nominal_tip_at_source_2_25_s": [
+        1040,
+        594
+      ],
+      "source_visibility_s": [
+        1.6,
+        2.791667
+      ],
+      "revision_rule": "blue_t = source_time(output_time - cursor_delay_s); visibility, transform and trajectory all evaluate at blue_t",
+      "default_delay_s": 0.25,
+      "default_output_delay_frames": 6,
+      "layer": "Above illustration rear objects, below foreground lettering ribbons and paper curls. No rectangular pixel region is moved."
+    },
+    "cursor-green": {
+      "file": "project/ui_stage.py: pointer('green', t)",
+      "trajectory": "project/cursor_tracks.json: green",
+      "time": "base mapped source time; no local delay"
+    },
+    "cursor-orange": {
+      "file": "project/ui_stage.py: pointer('orange', t)",
+      "trajectory": "project/cursor_tracks.json: orange",
+      "time": "base mapped source time; no local delay"
+    },
+    "illustrated-ribbons": {
+      "file": "project/illustration_stage.py: front()",
+      "geometry": [
+        "project/geometry.py: LEFT_ILL",
+        "project/geometry.py: RIGHT"
+      ],
+      "source_interval_s": [
+        2.57,
+        4
+      ],
+      "representation": "Separately growing curved ink ribbons with rounded advancing caps, black offset ink, hot pink/red fills, editable warped letter outlines and a tapered left tail",
+      "parameter": "path_text",
+      "layout": "Four occurrences on independent curved paths. Each glyph outline bends with the local tangent and normal. Revised lower-left words start 85 arc units from the pointed end to retain legibility; the original TOGETHER starts at 16. Glyphs reflow according to the public word, without a screen-space caption.",
+      "alternate_monochrome": "The growing upper-right black/white segment also uses path_text and is composited behind feather, lime, flower and crown stickers. A separate colored curled tab travels over it."
+    },
+    "illustration-stickers": {
+      "file": "project/assets/illustration.svg",
+      "animation": "project/illustration_stage.py: obj(), back(), front(), peels()",
+      "source_interval_s": [
+        2.53,
+        4
+      ],
+      "ids": [
+        "red_petals",
+        "right_lime",
+        "yellow_fan",
+        "lavender_blob",
+        "top_feather",
+        "crown",
+        "magenta_body",
+        "apple",
+        "left_star",
+        "left_curl",
+        "rolled_paper",
+        "pastel_plus",
+        "link_badge",
+        "pencil",
+        "mushroom",
+        "flower_sticker",
+        "right_leaf",
+        "right_arrow",
+        "eye_sticker",
+        "orbit",
+        "bottom_star",
+        "green_spark",
+        "tiny_spark",
+        "small_link",
+        "little_tiles",
+        "white_spark_top",
+        "white_spark_bottom"
+      ],
+      "motion": "Each sticker has separate appearance, scale, rotation, translation and unfurl transform. Late crown, mushroom, flower, sparks, apple and arrow folds are individual transforms. Broad curled sheet fronts, the colored tab, small warm flower and print bars have independent geometric animations."
+    }
+  },
+  "compositing_back_to_front": [
+    "white canvas",
+    "individual print cards, halftones and guides",
+    "colored UI tube",
+    "porcelain rail and its knob",
+    "UI selections, rear bubbles, orange grid, glass, switches, speech tile",
+    "green and orange cursor objects",
+    "monochrome upper-right ribbon patch; individual rear illustration stickers and petal masses",
+    "independently retimed cyan cursor",
+    "foreground illustration ink ribbons and curved glyphs",
+    "apple sticker, link badge and white sparks",
+    "animated paper curl surfaces"
+  ],
+  "static_resources": {
+    "project/assets/illustration.svg": "Manually authored vector paths; no embedded source imagery",
+    "project/assets/lettering.json": "Manually authored puffy glyph paths; remaining alphabet uses bundled font outlines",
+    "project/assets/paper_grain.png": "Procedurally seeded 256x256 noise tile",
+    "project/assets/DejaVuSans-Bold.ttf": "Bundled fallback outline source and print-stage Aa lettering",
+    "project/cursor_tracks.json": "Only geometric cursor trajectory measurements, no image samples"
+  }
+}
