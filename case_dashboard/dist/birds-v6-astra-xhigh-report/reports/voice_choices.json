@@ -1,0 +1,388 @@
+{
+  "astra": {
+    "summary": "模型自行选择并安装 edge-tts，在 Python 中调用网络语音服务，编写制作脚本完成配音与混音。",
+    "package": "edge-tts",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "delivered_audio_verified": true,
+    "voice_names_basis": "封存提交文件中的明确音色字符串；选型过程另见调用证据。",
+    "host_tts_helper_provided": false,
+    "computer_use_for_synthesis": false,
+    "evidence": [
+      {
+        "sequence": 14,
+        "purpose": "自行安装语音库",
+        "command": "/usr/bin/bash -lc \"python3 /workspace/submission/audit.py 'Install edge-tts Mandarin neural speech client and dependencies' python3 -m pip install --target /workspace/site-packages edge-tts\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Collecting edge-tts\n  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)\nCollecting aiohttp<4.0.0,>=3.8.0 (from edge-tts)\n  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)\nCollecting certifi>=2023.11.17 (from edge-tts)\n  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)\nCollecting tabulate<1.0.0,>=0.4.4 (from edge-tts)\n  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)\nCollecting typing-extensions<5.0.0,>=4.1.0 (from edge-tts)\n  Downloading typing_extensions-4.16.0-py3-none-any\n…\nx86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)\nDownloading tabulate-0.10.0-py3-none-any.whl (39 kB)\nDownloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\nDownloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)\nDownloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)\nDownloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)\nDownloading attrs-26.1.0-py3-none-any.whl (67 kB)\nDownloading certifi-2026.10.23-py3-none-any.whl (135 kB)\nDownloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)\nDownloading idna-3.20-py3-none-any.whl (69 kB)\nDownloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)\nInstalling collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts\n\nSuccessfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 20,
+        "purpose": "自行调用语音服务",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport asyncio,os,time,sys\nimport edge_tts\nsys.path.insert(0,'/workspace/submission');from audit import record\nasync def main():\n st=time.time()\n try:\n  comm=edge_tts.Communicate('先听一听，藏在枝叶间的鸟鸣。',voice='zh-CN-XiaoxiaoNeural',rate='-5%',proxy=os.environ['HTTPS_PROXY'])\n  await comm.save('/workspace/scratch/voice_test.mp3')\n  record('tts_test','Test Xiaoxiao Mandarin neural voice at -5 percent natural synthesis rate',st,result='success',input='Self-authored text only; no source audio/video uploaded',proxy='HTTPS_PROXY')\n  print('Speech generated')\n except Exception as e:\n  record('tts_test','Test Xiaoxiao Mandarin neural voice',st,result='failure',error=str(e));print(type(e).__name__,str(e))\nasyncio.run(main())\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Speech generated\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 69,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json\np=[\n {'id':'s3a','segment':3,'start':78.0,'text':'枝头这只小鸟，暂定为柳纹霸鹟。'},\n {'id':'s3b','segment':3,'start':84.0,'text':'它胸腹浅淡，翅上有浅色翼斑，眼圈很不明显。'},\n {'id':'s3c','segment':3,'start':94.0,'text':'抬头张嘴时，短促的鸣唱也随之出现。'},\n {'id':'s4a','segment':4,'start':105.0,'text':'芦苇深处的歌者，暂定为长嘴沼泽鹪鹩。'},\n {'id':'s4b','segment':4,'start':111.7,'text':'短短的鸣声接连出现，夹着快速的颤音。'},\n {'id':'s4c','segment':4,'start':118.0,'text':'鸟体被挡住了，单凭画面还不能确认。'},\n {'id':'s5a','segment':5,'start':129.0,'text':'这是黑脚信天翁，通体暗褐，嘴也偏深色。'},\n {'id':'s5b','segment':5,'start':138.0,'text':'成鸟低下头，与绒羽蓬松的幼鸟接触喙部。'},\n {'id':'s5c','segment':5,'start':149.0,'text':'这种互动很像喂食，但食物是否传递，画面并不清楚。'},\n {'id':'s6a','segment':6,'start':163.0,'text':'白头、深色背翼，这是黑背信天翁。'},\n {'id':'s6b','segment':6,'start':170.0,'text':'它们相对站立，抬头伸颈，还交替展开翅膀。'},\n {'id':'s6c','segment':6,'start':178.2,'text':'这些仪式化动作，是信天翁求偶展示的一部分。'}]\nopen('/workspace/submission/narration_plan.json','w').write(json.dumps(p,ensure_ascii=False,indent=2))\nPY\npython3 /workspace/submission/synthesize.py /workspace/submission/narration_plan.json\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "s3a generated\ns3b generated\ns3c generated\ns4a generated\ns4b generated\ns4c generated\ns5a generated\ns5b generated\ns5c generated\ns6a generated\ns6b generated\ns6c generated\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 81,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json\np='/workspace/submission/narration_plan.json';a=json.load(open(p))\nfor x in a:\n if x['id']=='s5c':x['text']='这是亲鸟与幼鸟的互动，是否传递食物，还看不清。';x['start']=146.0\n if x['id']=='s6c':x['text']='鸣叫与短促的喙部碰击声，伴着这场求偶展示。';x['start']=178.0\na.append({'id':'s5d','segment':5,'start':153.0,'text':'背景里，还有连续的尖细鸣叫。'})\na.sort(key=lambda x:x['start']);open(p,'w').write(json.dumps(a,ensure_ascii=False,indent=2))\nPY\npython3 /workspace/submission/synthesize.py /workspace/submission/narration_plan.json\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "s3a cached\ns3b cached\ns3c cached\ns4a cached\ns4b cached\ns4c cached\ns5a cached\ns5b cached\ns5c generated\ns5d generated\ns6a cached\ns6b cached\ns6c generated\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 93,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport sys,json,time\nsys.path.insert(0,'/workspace/submission');from audit import record\np=json.load(open('/workspace/scratch/phases.json'))\nrecord('code_development','Write synthesis implementation, timing metadata, subtitles and gain-only timeline mixing/encoding script',p['mixing_implementation_start'],scripts=['synthesize.py','render.py'],note='Measured wall-clock phase includes identification research and independent downloads in parallel. No post-synthesis speech time stretching.')\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 102,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json\nf='/workspace/submission/narration_plan.json';p=json.load(open(f))\np=[x for x in p if x['segment'] not in (1,2)]\np.extend([\n {'id':'s1a','segment':1,'start':6.0,'text':'这只褐色的小鸟，暂定为新疆歌鸲，也就是夜莺。'},\n {'id':'s1b','segment':1,'start':13.0,'text':'它背部棕褐，喉部较浅，细长的尾巴向后伸出。'},\n {'id':'s1c','segment':1,'start':27.0,'text':'原声里，重复的短哨音和较粗的叫声交替出现。'},\n {'id':'s1d','segment':1,'start':36.0,'text':'近照中看不到鸣叫动作，原声也不能直接归给这只鸟。'},\n {'id':'s2a','segment':2,'start':50.0,'text':'灌丛里的叫声，也暂定来自新疆歌鸲。'},\n {'id':'s2b','segment':2,'start':56.0,'text':'短哨音一声接一声，中间穿插更快的音节。'},\n {'id':'s2c','segment':2,'start':64.0,'text':'枝叶挡住了鸟体，因此这里主要依据声音判断。'}])\nfor x in p:\n if x['id']=='s5c':x['text']='这种喙部互动很像喂食，是否传递食物，还看不清。'\np.sort(key=lambda x:x['start']);open(f,'w').write(json.dumps(p,ensure_ascii=False,indent=2))\nPY\npython3 /workspace/submission/synthesize.py /workspace/submission/narration_plan.json\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "s1a generated\ns1b generated\ns1c generated\ns1d generated\ns2a generated\ns2b generated\ns2c generated\ns3a cached\ns3b cached\ns3c cached\ns4a cached\ns4b cached\ns4c cached\ns5a cached\ns5b cached\ns5c generated\ns5d cached\ns6a cached\ns6b cached\ns6c cached\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 124,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport importlib.metadata as m,json,subprocess\npackages=['edge-tts','aiohttp','numpy','scipy','Pillow','requests','certifi','tabulate','typing_extensions','aiohappyeyeballs','aiosignal','attrs','frozenlist','multidict','propcache','yarl','idna']\nd={p:m.version(p) for p in packages}\nopen('/workspace/submission/python_versions.json','w').write(json.dumps(d,indent=2))\nopen('/workspace/submission/requirements.txt','w').write('\\\\n'.join(p+'=='+d[p] for p in ['edge-tts','aiohttp','numpy','scipy','Pillow','requests'])+'\\\\n')\nprint(json.dumps(d,indent=2))\nr=subprocess.run(['ffmpeg','-version'],capture_output=True,text=True);print(r.stdout.splitlines()[0])\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "{\n  \"edge-tts\": \"7.3.1\",\n  \"aiohttp\": \"3.14.5\",\n  \"numpy\": \"1.26.4\",\n  \"scipy\": \"1.11.4\",\n  \"Pillow\": \"10.2.0\",\n  \"requests\": \"2.31.0\",\n  \"certifi\": \"2026.10.23\",\n  \"tabulate\": \"0.10.0\",\n  \"typing_extensions\": \"4.16.0\",\n  \"aiohappyeyeballs\": \"2.7.1\",\n  \"aiosignal\": \"1.4.0\",\n  \"attrs\": \"26.1.0\",\n  \"frozenlist\": \"1.8.0\",\n  \"multidict\": \"7.2.1\",\n  \"propcache\": \"0.5.4\",\n  \"yarl\": \"1.25.1\",\n  \"idna\": \"3.20\"\n}\nffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 128,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json\np=json.load(open('/workspace/submission/research_log.json'))\nprint('Events:',len(p['events']),'Elapsed:',p['total_elapsed_seconds'])\nfor e in p['events']:\n if e['kind'] in ['command','tts_test'] and any(t in e['label'].lower() for t in ['install','font','encode','test']):\n  print(e['label'],e['elapsed_seconds'],e.get('returncode',e.get('result')))\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Events: 175 Elapsed: 2100.604\nInstall edge-tts Mandarin neural speech client and dependencies 53.093 0\nTest Xiaoxiao Mandarin neural voice at -5 percent natural synthesis rate 2.044 success\nDownload Noto Sans CJK SC regular font through environment proxy 45.865 22\nInstall Chinese subtitle font from distribution package 0.079 100\nDownload independent distribution Chinese font package 59.995 28\nResume slow Chinese font package download from same allowed URL 402.084 0\nExtract Chinese font package locally 2.302 0\nEncode full video timeline with burned Chinese captions 23.492 0\nMeasure final encoded audio integrated loudness and true peak 5.145 0\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      },
+      {
+        "sequence": 132,
+        "purpose": "运行或检查自编制作脚本",
+        "command": "/usr/bin/bash -lc \"python3 - <<'PY'\nimport json,time,sys,shutil\nfrom pathlib import Path\nsys.path.insert(0,'/workspace/submission');from audit import record\nroot=Path('/workspace/submission')\nlog=json.load(open(root/'research_log.json'))\nstart=next(e['start_unix'] for e in log['events'] if e['label']=='First render inspected at representative timestamps')\nrecord('work_phase','Final identification cross-check, evidence writing, delivery verification and dependency documentation',start,note='Existing independent species pages/photos used as references only. No external identification models, source tracing, subagents, or input media uploads. Front four identifications retained as tentative; two albatross identifications high confidence.')\nrecord('delivery','All required files and audit/reproduction materials complete',time.time(),files=['final.mp4','narration.wav','subtitles.srt','segments.json','research_log.json','synthesize.py','DEPENDENCIES.md'],verification='Full video decoded successfully; six chapters, exact zero narration in every declared >=2-second window; source timing preserved; 20 subtitle cues; -1.85 dBTP encoded peak.',limitations='No native listening tool, therefore no auditory audition claim. Identification uncertainties explicitly stated.')\nshutil.rmtree(root/'__pycache__',ignore_errors=True)\nlog=json.load(open(root/'research_log.json'))\nprint('Total actual wall-clock seconds:',log['total_elapsed_seconds'])\nprint('Files:')\nfor p in sorted(root.iterdir()):\n if p.is_file() and not p.name.startswith('.'):print(p.name,p.stat().st_size)\nPY\"",
+        "exit_code": 0,
+        "status": "completed",
+        "output_excerpt": "Total actual wall-clock seconds: 2333.493\nFiles:\nDEPENDENCIES.md 5623\nanalyze_audio.py 2047\naudit.py 1559\ndeliverable_manifest.json 511\nfinal.mp4 59601285\nnarration.wav 17804844\nnarration_plan.json 2720\npython_versions.json 407\nrender.py 7058\nrequirements.txt 92\nresearch.py 2529\nresearch_log.json 84235\nsegments.json 17089\nsubtitles.srt 1839\nsynthesize.py 2319\ntts_metadata.json 32417\nvalidation.json 7779\nverify.py 3756\nwrite_segments.py 10297\n",
+        "full_output_in": "astra/tool_trajectory.json"
+      }
+    ],
+    "implementation_files": [
+      {
+        "path": "results/astra/DEPENDENCIES.md",
+        "sha256": "bec77222915c67bbb0dc3060cdc3ea5cae91010cb21e85bfdae2d40f6d773ed1",
+        "relevant_lines": [
+          {
+            "line": 7,
+            "text": "- 客户端：`edge-tts 7.3.1`，由 pip 安装到 `/workspace/site-packages`。"
+          },
+          {
+            "line": 8,
+            "text": "- 服务：Microsoft Edge 在线神经语音合成，音色 `zh-CN-XiaoxiaoNeural`。"
+          },
+          {
+            "line": 18,
+            "text": "`requirements.txt` 列出直接 Python 依赖的实际版本；`python_versions.json` 另保存 TTS 客户端及其依赖的实际版本。NumPy、SciPy、Pillow、Requests 为环境预置，实际新增下载的是 edge-tts 与其依赖。"
+          }
+        ]
+      },
+      {
+        "path": "results/astra/python_versions.json",
+        "sha256": "7568b632e0176dc1943ba4412e552aa32c50c5a49df2f5206e6c79a6de9b504b",
+        "relevant_lines": [
+          {
+            "line": 2,
+            "text": "  \"edge-tts\": \"7.3.1\","
+          }
+        ]
+      },
+      {
+        "path": "results/astra/requirements.txt",
+        "sha256": "832010ee9381a625a02f98deb35267a221530eb80c7d49b92ad52ec1d0cbb93b",
+        "relevant_lines": [
+          {
+            "line": 1,
+            "text": "edge-tts==7.3.1"
+          }
+        ]
+      },
+      {
+        "path": "results/astra/research_log.json",
+        "sha256": "84cd69741e6a51ce5ec32d73792893e05efb48bc7e0f29e7e730e9f400ea22db",
+        "relevant_lines": [
+          {
+            "line": 4,
+            "text": "  \"restrictions\": \"No subagents, recognition models, source tracing, or media uploads. Network uses environment HTTP proxy.\","
+          },
+          {
+            "line": 8,
+            "text": "      \"label\": \"Read full TASK.md, chapter boundaries, technical stream properties, proxy variables and installed library/font availability\","
+          },
+          {
+            "line": 52,
+            "text": "      \"label\": \"Install edge-tts Mandarin neural speech client and dependencies\","
+          },
+          {
+            "line": 63,
+            "text": "        \"edge-tts\""
+          },
+          {
+            "line": 116,
+            "text": "      \"proxy\": \"HTTPS_PROXY\""
+          },
+          {
+            "line": 142,
+            "text": "      \"label\": \"Download Noto Sans CJK SC regular font through environment proxy\","
+          },
+          {
+            "line": 169,
+            "text": "      \"label\": \"Choose successful edge-tts Xiaoxiao synthesis; analyze difficult identifications using independent descriptions\","
+          },
+          {
+            "line": 173,
+            "text": "      \"reason\": \"Neural Mandarin, stable voice, successful HTTPS proxy synthesis. No auditory audition possible; inspect durations, waveform, loudness and clipping instead.\""
+          },
+          {
+            "line": 878,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 880,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 915,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 917,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 952,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 954,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 989,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 991,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1026,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1028,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1063,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1065,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1100,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1102,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1137,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1139,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1174,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1176,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1211,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1213,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1248,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1250,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1285,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1287,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1458,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1460,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1495,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1497,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1532,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1534,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1789,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1791,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1826,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1828,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1863,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1865,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1900,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1902,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1937,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1939,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 1974,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 1976,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 2011,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 2013,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          },
+          {
+            "line": 2048,
+            "text": "      \"voice\": \"zh-CN-XiaoxiaoNeural\","
+          },
+          {
+            "line": 2050,
+            "text": "      \"proxy_environment\": \"HTTPS_PROXY\","
+          }
+        ]
+      },
+      {
+        "path": "results/astra/synthesize.py",
+        "sha256": "31064a4291656094a5e7a5624f9ed2109918af2f61f87b01b7d0a27a1b18c115",
+        "relevant_lines": [
+          {
+            "line": 1,
+            "text": "\"\"\"Generate ONLY self-authored Mandarin text via Edge neural TTS through HTTP proxy."
+          },
+          {
+            "line": 7,
+            "text": "import edge_tts"
+          },
+          {
+            "line": 10,
+            "text": "VOICE='zh-CN-XiaoxiaoNeural'"
+          },
+          {
+            "line": 22,
+            "text": "        speech=edge_tts.Communicate(item['text'],voice=VOICE,rate=RATE,"
+          },
+          {
+            "line": 23,
+            "text": "            boundary='WordBoundary',proxy=os.environ['HTTPS_PROXY'],"
+          },
+          {
+            "line": 35,
+            "text": "            rate=RATE,proxy_environment='HTTPS_PROXY',bytes=mp3.stat().st_size,"
+          }
+        ]
+      }
+    ],
+    "narration_sha256": "6e3e37871f7146313ffd1fcaf9464aa50a47fb18f698df1330325b6b6ddd15e4",
+    "scope": "是否有可解码且各章非静音解说来自实际媒体检查；听感得分另见独立Judge。HTTPS日志不证明逐次服务调用成功。"
+  }
+}

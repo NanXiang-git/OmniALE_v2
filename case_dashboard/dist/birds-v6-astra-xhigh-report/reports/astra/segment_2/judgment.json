@@ -1,0 +1,240 @@
+{
+  "segment": 2,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "灌丛里的叫声，也暂定来自新疆歌鸲。短哨音一声接一声，中间穿插更快的音节。枝叶挡住了鸟体，因此这里主要依据声音判断。",
+    "speech_spans": [
+      {
+        "start": 4.08,
+        "end": 7.36,
+        "text": "灌丛里的叫声，也暂定来自新疆歌鸲。"
+      },
+      {
+        "start": 9.92,
+        "end": 13.76,
+        "text": "短哨音一声接一声，中间穿插更快的音节。"
+      },
+      {
+        "start": 17.84,
+        "end": 22.08,
+        "text": "枝叶挡住了鸟体，因此这里主要依据声音判断。"
+      }
+    ],
+    "background": "持续的多种鸟类鸣叫和啁啾声",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.5,
+      "reason": "声音带有明显的AI合成感，语调平直缺乏自然的情感起伏和呼吸停顿。",
+      "times": [
+        4.2,
+        18.6
+      ]
+    },
+    "timbre": {
+      "score": 0.5,
+      "reason": "音色虽然清晰但显得单薄且机械，缺乏真人发声的质感和共鸣。",
+      "times": [
+        4.2,
+        18.6
+      ]
+    },
+    "clarity": {
+      "score": 0.75,
+      "reason": "发音非常标准清晰，没有吞音或模糊的情况，易于听懂。",
+      "times": [
+        4.2,
+        18.6
+      ]
+    },
+    "pacing": {
+      "score": 0.5,
+      "reason": "语速均匀但略显生硬，句子之间的停顿不自然，有典型的机器朗读节奏。",
+      "times": [
+        4.2,
+        18.6
+      ]
+    },
+    "balance": {
+      "score": 0.75,
+      "reason": "人声与背景鸟鸣声的比例基本合适，鸟鸣声作为环境音没有严重干扰解说内容的听取。",
+      "times": [
+        0.0,
+        26.9
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "可以清晰地听到真实的鸟类鸣叫声，包括短促的哨音和连续的啁啾声，背景动物声保留完好。",
+      "times": [
+        0.0,
+        3.5,
+        7.5,
+        14.5,
+        22.5,
+        26.9
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 3.5,
+        "reason": "纯背景鸟鸣声窗口"
+      },
+      {
+        "start": 7.5,
+        "end": 10.5,
+        "reason": "纯背景鸟鸣声窗口"
+      },
+      {
+        "start": 14.5,
+        "end": 18.5,
+        "reason": "纯背景鸟鸣声窗口"
+      },
+      {
+        "start": 22.5,
+        "end": 26.9,
+        "reason": "纯背景鸟鸣声窗口"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "新疆歌鸲",
+    "I_reason": "在00:04-00:07的旁白中，实际说出的是“新疆歌鸲”，与真值“四川蝗莺”不符，属于明确的物种错误。",
+    "F": {
+      "score": 0.2,
+      "reason": "事实准确性极低。旁白将物种错误地鉴定为“新疆歌鸲”。虽然对声音特征的描述（短哨音一声接一声，中间穿插更快的音节）符合该片段听到的音频特征，且承认了视觉受限（枝叶挡住鸟体），但核心物种结论完全错误。",
+      "times": [
+        4.08,
+        9.92,
+        17.84
+      ]
+    },
+    "E": {
+      "score": 0.5,
+      "reason": "视听证据对应程度中等。旁白描述的“短哨音一声接一声”确实能在背景音中找到对应的听觉证据；提到的“枝叶挡住了鸟体”也与画面中茂密灌丛遮挡主体的视觉情况相符。然而，由于最终得出的物种结论（新疆歌鸲）是错误的，导致整体解说未能正确反映本片的真实对象。",
+      "times": [
+        4.08,
+        9.92,
+        17.84
+      ]
+    },
+    "claims": [
+      {
+        "claim": "灌丛里的叫声，也暂定来自新疆歌鸲。",
+        "supported": false,
+        "reason": "物种名称错误，实际应为四川蝗莺。"
+      },
+      {
+        "claim": "短哨音一声接一声，中间穿插更快的音节。",
+        "supported": true,
+        "reason": "准确描述了音频中持续且有节奏的鸣叫特征。"
+      },
+      {
+        "claim": "枝叶挡住了鸟体，因此这里主要依据声音判断。",
+        "supported": true,
+        "reason": "符合视频画面中鸟类被茂密植被遮挡、难以通过形态辨认的实际情况。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 0.9,
+      "reason": "字幕已实际烧录在画面底部，文字内容与独立转写完全一致。字体清晰可读，位于黑色留边区域内，未遮挡主要鸟体或枝叶细节。",
+      "times": [
+        {
+          "start": 50.063,
+          "end": 53.693,
+          "text": "灌丛里的叫声，也暂定来自新疆歌鸲。"
+        },
+        {
+          "start": 56.063,
+          "end": 60.167,
+          "text": "短哨音一声接一声，中间穿插更快的音节。"
+        },
+        {
+          "start": 64.063,
+          "end": 68.512,
+          "text": "枝叶挡住了鸟体，因此这里主要依据声音判断。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面高度对应。字幕出现时（如movie 52.75s, 57.21s等），画面均展示茂密灌丛及交错枝叶，符合旁白描述的“枝叶挡住鸟体”、“依据声音判断”的情境，图文匹配准确。",
+      "times": [
+        {
+          "start": 50.063,
+          "end": 53.693,
+          "text": "灌丛里的叫声，也暂定来自新疆歌鸲。"
+        },
+        {
+          "start": 56.063,
+          "end": 60.167,
+          "text": "短哨音一声接一声，中间穿插更快的音节。"
+        },
+        {
+          "start": 64.063,
+          "end": 68.512,
+          "text": "枝叶挡住了鸟体，因此这里主要依据声音判断。"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 46.067,
+        "end": 50.167,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 53.567,
+        "end": 56.167,
+        "matched_original_seconds": 2
+      },
+      {
+        "start": 60.067,
+        "end": 64.167,
+        "matched_original_seconds": 3
+      },
+      {
+        "start": 68.417,
+        "end": 72.8,
+        "matched_original_seconds": 3
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 3.5,
+        "reason": "纯背景鸟鸣声窗口"
+      },
+      {
+        "start": 7.5,
+        "end": 10.5,
+        "reason": "纯背景鸟鸣声窗口"
+      },
+      {
+        "start": 14.5,
+        "end": 18.5,
+        "reason": "纯背景鸟鸣声窗口"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 13,
+    "compared_seconds": 25
+  }
+}

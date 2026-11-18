@@ -1,0 +1,94 @@
+{
+  "version": "v6-astra-xhigh-unlimited",
+  "parent": "v6-luna-xhigh",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "time_budget_seconds": null,
+  "time_limit_enforced": false,
+  "changes": [
+    "authorized model substitution",
+    "fresh experiment storage and reporting labels"
+  ],
+  "checks": {
+    "candidate/TASK.md": {
+      "sha256": "9063f267f16c406155d7a6f2709ec379cb09c9cbac963e21da5c85a470d9583d",
+      "identical_to_luna_xhigh": true
+    },
+    "candidate/birds_source.mp4": {
+      "sha256": "f72bafdc520233d255118192789a7eff694e295be4217dad404f7e98469354ce",
+      "identical_to_luna_xhigh": true
+    },
+    "candidate/chapters.json": {
+      "sha256": "fc25db98479483cedd7380a3c02eba6b2eaa38845ffb8321bd9b29099aa46252",
+      "identical_to_luna_xhigh": true
+    },
+    "evaluator/rubric.json": {
+      "sha256": "513793d7967d96fd50606aba5e58da5f05985d2a179d1b5811fe1015c874cb80",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/common.py": {
+      "sha256": "6213e5ede5cec0d070a40b39f4ec8512375edae4dde2e76279a660059bb12b2b",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/audio_client.py": {
+      "sha256": "353b9a11459e1f8b18c1958516d32895cdb52e627d00136ceb3dc7a00bae0aaf",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/evaluate.py": {
+      "sha256": "94a50643e5e0f6c909fb331a267b632818478efee43bb8deac1c53d1ae8752b4",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/evaluate_checked.py": {
+      "sha256": "418867f392d877974195ab572dae0f2674e908802ee6a4a78e64f992a01bf3a5",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/media_checks.py": {
+      "sha256": "a62c472efc9b41b6122e8f9dc258a0744f75ebc3cbfc356fec82e2a01c82b225",
+      "identical_to_luna_xhigh": true
+    },
+    "tools/supplemental_review.py": {
+      "sha256": "f5dfba01f79269ce7da22a62f82ce4b5075973f042b20d91a39c1c325994949c",
+      "identical_to_luna_xhigh": true
+    },
+    "private/network_policy.json": {
+      "sha256": "a1e7bf2c55ce97bd487669432cb691bdcf1bd395c8bf74adda618a2f381f496f",
+      "identical_to_luna_xhigh": true
+    },
+    "run/orchestrator/linux_launcher.py": {
+      "sha256": "de826c644d8a8c264ff46212595b7c2d857c638d7c92dce598790158f3a88cce",
+      "identical_to_luna_xhigh": true
+    },
+    "run/orchestrator/inspected_proxy.py": {
+      "sha256": "840aa412590993440efd1ffb3d0b44ec2a931443ce3f56d8c1ca0441fad591d7",
+      "identical_to_luna_xhigh": true
+    },
+    "run/orchestrator/source_guard.py": {
+      "sha256": "4b2ea640cbed274eb4c805648f9d636f9b63284574f6850845ad51d29e5fe258",
+      "identical_to_luna_xhigh": true
+    },
+    "run/environment/runtime/prompt.txt": {
+      "sha256": "e9c540b20dcd32a3ba561e8ab04f9e23c5cb21f19202031fe40ff923bed083f7",
+      "identical_to_luna_xhigh": true
+    },
+    "run/environment/runtime/ca-bundle.pem": {
+      "sha256": "b913c14c243a4b71715fc6db4745bdf6e7dd490aba6eb8c75ef3d51b947f3fe7",
+      "identical_to_luna_xhigh": true
+    },
+    "run/environment/input_manifests.json": {
+      "sha256": "3069ae64c113f6f73731e002a5486fbd00b6b6411753ab74a13ae92442eb974f",
+      "identical_to_luna_xhigh": true
+    }
+  },
+  "base_environment_identical_files": 514,
+  "authorized_task_diff_only": true,
+  "task_diff": [],
+  "same_task_bytes": true,
+  "same_prompt_bytes": true,
+  "fresh_solver_workspace": true,
+  "old_results_preserved": true,
+  "comparison_limit": "Same configured conditions as Luna xhigh unlimited; live service timing and model sampling may vary. Timed high runs are different conditions.",
+  "credential": "Reuse user-supplied Luna credential if authorized model access preflight succeeds; no secrets in solver.",
+  "transport_timeouts": "Same per-request connection/read-inactivity guards, no total deadline.",
+  "status": "formal_run_and_scoring_complete",
+  "user_model_selection": "User explicitly chose gpt-6-astra after gpt-6.2-astra access failed."
+}

@@ -1,0 +1,2072 @@
+{
+  "scope": "Exact URL events from formal proxy records. Approved response is a return decision, not proof that the solver read/understood every byte. Infra passthrough URLs are not visible.",
+  "urls": [
+    {
+      "url": "https://api.github.com/repos/openai/plugins",
+      "events": [
+        {
+          "utc": 1794976338.4400086,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976338.7583747,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 5854
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "451ddc1ac41120915f30371f99d75a242bdc05bec3c52314a660c20e8851a7e3"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+      "events": [
+        {
+          "utc": 1794976338.4544184,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976338.6173086,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+      "events": [
+        {
+          "utc": 1794976338.8010423,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976339.1029665,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 326
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "3e4238a6482080228e56af3b1dfaec6b73a04279ec78a0c563f0f6097a7b7f8f"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://api.github.com/repos/openai/plugins/zipball/985fff07dcefa03e40e8664e24363d10b2bacd44",
+      "events": [
+        {
+          "utc": 1794976339.1418688,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976339.5089164,
+          "action": "http_response_inspected",
+          "status": 302,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 0
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://codeload.github.com/openai/plugins/legacy.zip/985fff07dcefa03e40e8664e24363d10b2bacd44",
+      "events": [
+        {
+          "utc": 1794976339.9131134,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976350.5233738,
+          "action": "http_response_inspected",
+          "status": 429,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 82
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+      "events": [
+        {
+          "utc": 1794976350.670812,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976365.8341582,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+      "events": [
+        {
+          "utc": 1794976393.6341887,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976393.7935607,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976453.4842646,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976468.660829,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976513.5181007,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976513.6653898,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976573.5303738,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976588.7071118,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976633.5238678,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976648.7125392,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976693.487232,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976693.6261606,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976753.5767527,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976768.7191312,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976813.4844968,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976813.6334946,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976873.4881618,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976888.6737897,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976933.5153766,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976948.6510127,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794976993.5271406,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977008.684217,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977053.5213027,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977053.6587384,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977113.5486908,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977128.6855557,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977173.5127044,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977188.6786988,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977233.536614,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977248.6757436,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977293.5692449,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977293.7440805,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977353.5398889,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977353.705739,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977413.5091686,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977413.6737037,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977473.5481846,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977488.7262363,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977533.5073411,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977548.673241,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977593.5559063,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977593.696732,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977653.5508373,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977668.751571,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977713.4869847,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977728.6963115,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977773.5318959,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977773.638842,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977833.5606472,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977833.7056916,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977893.53163,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977908.693258,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794977953.5515769,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977953.7237256,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978013.5467334,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978013.7427819,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978073.5272436,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978088.6931553,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978133.5718138,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978148.760772,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978193.5755405,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978193.7118766,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978253.5656493,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978253.7445629,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978313.5580091,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978313.7011745,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978373.5637383,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978388.764694,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978433.5438113,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978448.710814,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978493.5914404,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978508.7687237,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978553.5521388,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978553.714963,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978613.5372415,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978613.6818237,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978673.570802,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978673.7289908,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+        },
+        {
+          "utc": 1794978688.9820962,
+          "action": "http_request"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.google.com/search?q=brown+bird+long+curved+bill+plain+brown+underparts+warbler",
+      "events": [
+        {
+          "utc": 1794976419.2664514,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976539.3797858,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=brown+bird+long+curved+bill+plain+brown+underparts+warbler (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x73efc72191f0>, 'C"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+      "events": [
+        {
+          "utc": 1794976531.1006744,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976576.6001356,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ReadTimeout: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=45)"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bing.com/search?q=great+reed+warbler+nightingale+identification+brown+bill",
+      "events": [
+        {
+          "utc": 1794976531.377624,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976531.6242886,
+          "action": "http_response_inspected",
+          "status": 302,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 202
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "4d4a933215e50337141c3df5777fd7a4c2f7bba10e828c691ed42753f7f30eb6"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://cn.bing.com/search?q=great+reed+warbler+nightingale+identification+brown+bill",
+      "events": [
+        {
+          "utc": 1794976531.8766382,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976532.2230053,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 102952
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "73379d1784c3ed622eaa35a2f678e4e980138d65d74df8ab806392dfb5a96851"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+      "events": [
+        {
+          "utc": 1794976532.5012004,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976537.0506804,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 551218
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "f2aa5a1faddae5d8cca2c19482fcbb709fb5b2cd65a9d45a96ed7d9d804b9ca1"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+      "events": [
+        {
+          "utc": 1794976586.6333418,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976589.2081099,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 271657
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "6ef742f2d9da12a7745dfb467a971fa2906e3ed29e6f7034ba9f8062c9e00a65"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+      "events": [
+        {
+          "utc": 1794976586.6544437,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976590.7826757,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 358831
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "730a43f3b5b50ec056f5e1cae843b0eee70141fe48cd0fca15e4da080e4a2e1c"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/great-reed-warbler",
+      "events": [
+        {
+          "utc": 1794976586.6776168,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976590.3348048,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 223774
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "b1bbcd6c71efd87e680e5e39be006d673cf3be7239b64225dbf101f25f38e087"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.birdguides.com/species-guide/ioc/acrocephalus-arundinaceus",
+      "events": [
+        {
+          "utc": 1794976586.895073,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976587.1742222,
+          "action": "http_response_inspected",
+          "status": 403,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 5463
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "abfffa9cd2415606f9043aeade20c02ed043678ef9a219325cae73356556305c"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22great%20reed%20warbler%22%20song%20identification",
+      "events": [
+        {
+          "utc": 1794976622.0179415,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976637.0569322,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=%22great%20reed%20warbler%22%20song%20identification (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x73efc7219a90>, 'Con"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+      "events": [
+        {
+          "utc": 1794976647.4275603,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976648.9915073,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 286126
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "8b5464adf3292b162ca4ca5589df58a2dd2752569f861b79ddfa7a513d589212"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+      "events": [
+        {
+          "utc": 1794976647.4902093,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976653.6942196,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 269622
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "76b24320fabb5a585191b5f2c34a0d1132a9b83805759e406da67bb632cf9322"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/marsh-wren",
+      "events": [
+        {
+          "utc": 1794976647.5231001,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976649.2626152,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 278249
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "5364331057c1606b209bce05840f1a535c9a21262442eeefac96b57e377920b1"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/understanding-birds/birdfacts/great-reed-warbler",
+      "events": [
+        {
+          "utc": 1794976647.9668577,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976649.3339932,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 434
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "dd5704e010d3c5ffc30ae645d802c557391a4bb78f2f6b4ef4b904003db49458"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/great-reed-warbler",
+      "events": [
+        {
+          "utc": 1794976649.706724,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976651.4032342,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 167367
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "b6c594348eb5b3a7768dc010114066224c8e48d3078f2f8c373ff16cec8a438e"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-cetti-warbler.html",
+      "events": [
+        {
+          "utc": 1794976687.103466,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976688.842956,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 18163
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "8a36c2f2037dd2630e81972cbddbbe073c3e2b24a58b5fdb201c8a1524e0cad8"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-thick-billed-warbler.html",
+      "events": [
+        {
+          "utc": 1794976722.256962,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976724.42195,
+          "action": "http_response_inspected",
+          "status": 404,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 196
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-common-nightingale.html",
+      "events": [
+        {
+          "utc": 1794976722.3264818,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976724.0654955,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 19239
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "55561d124f42b4541f3607ff0ca5dfb045c01ddbcd30252aa25c4b406a87eb29"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-great-reed-warbler.html",
+      "events": [
+        {
+          "utc": 1794976722.3470566,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976723.4931855,
+          "action": "http_response_inspected",
+          "status": 404,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 196
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/understanding-birds/birdfacts/nightingale",
+      "events": [
+        {
+          "utc": 1794976784.3934925,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976785.719985,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 406
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "b988970673ea5a316ee85095c96756fa6718f7fab1b5a730c5e541f2af5daae2"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/understanding-birds/birdfacts/thick-billed-warbler",
+      "events": [
+        {
+          "utc": 1794976784.4186056,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976785.7919128,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 442
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "cf26f72407881b845f68dd1b3d2d542530e65f8ddee64f40cabdf25f26f514c3"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/nightingale",
+      "events": [
+        {
+          "utc": 1794976786.4186149,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976788.4115689,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 239549
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "6b0faa1ca37bb8d81d1e69a8a3e2e7b1c1856b6d0fa6acbe8caedebb896915ec"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/learn/about-birds/birdfacts/thick-billed-warbler",
+      "events": [
+        {
+          "utc": 1794976786.4663281,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976789.0554972,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 161664
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "398272ba08f1dc23d3ea5b5f672fa98b9378a55a173db53a7a5c0625cc903fc1"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/passeriformes/cettiides/bouscarle-de-cetti/bouscarle-de-cetti-jlb2.jpg",
+      "events": [
+        {
+          "utc": 1794976810.86073,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976816.820402,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 50834
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "c3e1c2ba173551f6b383603a24d4a9161b4e2b4814cef2913deb02b2884bba75"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/passeriformes/muscicapides/rossignol-philomele/rossignol-philomele-jlb1.jpg",
+      "events": [
+        {
+          "utc": 1794976810.8769934,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976812.3963933,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 37426
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "164357a1c144405950791d625fdb7c2b0b82ef6d3964bb144b7a4cf5ca841f9e"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/nightingale",
+      "events": [
+        {
+          "utc": 1794976894.5357409,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976899.5722125,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 561513
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "f32a5c20affe5d44e9c9778538d21bf2e0e851ac795c6a0c221f1eef410a96af"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/nightingale/",
+      "events": [
+        {
+          "utc": 1794976895.816124,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976896.909666,
+          "action": "http_response_inspected",
+          "status": 404,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 240
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "530ab4b7ef87edaff4f321bbc50c3495b360154f72bf5ba849c3c1b04f31cc54"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bto.org/sites/default/files/birdfacts/00394-Great-Reed-Warbler-Toby-Carter.jpg",
+      "events": [
+        {
+          "utc": 1794976928.5315416,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976929.8407004,
+          "action": "http_response_inspected",
+          "status": 404,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 247
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "53ed4516aa87f6bf3cd5153dfad92a86bc7bf4efe21cd07073bc98f4d603ef4a"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22Arundinax%20aedon%22%20identification&setlang=en",
+      "events": [
+        {
+          "utc": 1794976967.5964527,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976967.8497818,
+          "action": "http_response_inspected",
+          "status": 302,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 201
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "4d5191a361f5d91e99aff052e7802506794aa73850e4a9fd0c1102cd80a9ccfd"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://cn.bing.com/search?q=%22Arundinax%20aedon%22%20identification&setlang=en",
+      "events": [
+        {
+          "utc": 1794976968.2423658,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976968.6043568,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 102566
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "bc5a53650650cbb955af8257bf98ae3614ffca5ba37a27d57eab01d4eb4cfe16"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22nightingale%22%20%22alarm%22%20%22spectrogram%22&setlang=en",
+      "events": [
+        {
+          "utc": 1794976968.6698318,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976968.929247,
+          "action": "http_response_inspected",
+          "status": 302,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 212
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "f3abef3e30139a5dc621e3e0286d325e6d97ce3f2ba0cd79f34a053b494941ab"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://cn.bing.com/search?q=%22nightingale%22%20%22alarm%22%20%22spectrogram%22&setlang=en",
+      "events": [
+        {
+          "utc": 1794976969.0963097,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976969.4816356,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 104470
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "83eb273ac8ad42671b18bd88763bdf7142e88566a96adb064b7ee4182dc0c35b"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.british-birdsongs.uk/cettis-warbler/",
+      "events": [
+        {
+          "utc": 1794976970.438714,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976972.6853049,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 43444
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "038a649a0bff6f71ccb17ef6a0c02e69624f5497c8f926ef999f01587b4a8fd7"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.british-birdsongs.uk/nightingale/",
+      "events": [
+        {
+          "utc": 1794976970.60981,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794976974.003118,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 38968
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "827ec09bfaab6ff887c54c8776cf2ded052117dbd92dff447122cc1d2c791d59"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.british-birdsongs.uk/birdmedia/857/nightingale-call-1544.mp3",
+      "events": [
+        {
+          "utc": 1794977044.6766489,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977134.529495,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 2108603
+        },
+        {
+          "utc": 1794977134.5481777,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2417)"
+        },
+        {
+          "utc": 1794977141.3368907,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977220.5566163,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 2108603
+        },
+        {
+          "utc": 1794977220.5863273,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "SSLEOFError: EOF occurred in violation of protocol (_ssl.c:2417)"
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "0c593624f77d4bc02b4b2271e1e3b030496b2935470b01cbe212f964a57598f7"
+      ],
+      "audio_overlap": {
+        "sha256": "0c593624f77d4bc02b4b2271e1e3b030496b2935470b01cbe212f964a57598f7",
+        "urls": [
+          "https://www.british-birdsongs.uk/birdmedia/857/nightingale-call-1544.mp3"
+        ],
+        "duration": 52.645375,
+        "tested": true,
+        "best_by_chapter": [
+          {
+            "max_absolute_correlation": 0.15113150400909584,
+            "reference_second": 45.0,
+            "chapter_second": 8.4535
+          },
+          {
+            "max_absolute_correlation": 0.09078317318140856,
+            "reference_second": 2.0,
+            "chapter_second": 21.377125
+          },
+          {
+            "max_absolute_correlation": 0.44034728630408987,
+            "reference_second": 10.0,
+            "chapter_second": 10.560625
+          },
+          {
+            "max_absolute_correlation": 0.21403007401584362,
+            "reference_second": 26.0,
+            "chapter_second": 6.56025
+          },
+          {
+            "max_absolute_correlation": 0.5334648364675512,
+            "reference_second": 34.0,
+            "chapter_second": 32.4675
+          },
+          {
+            "max_absolute_correlation": 0.2188682264942317,
+            "reference_second": 10.0,
+            "chapter_second": 17.158
+          }
+        ],
+        "possible_overlap": false
+      }
+    },
+    {
+      "url": "https://www.british-birdsongs.uk/birdmedia/858/cettis-warbler-call-3792.mp3",
+      "events": [
+        {
+          "utc": 1794977044.7012317,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977072.1151812,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 782208
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "c2e8071709b8371e926effdfb844b5192fcff0b0a71188d522460ac76baeba86"
+      ],
+      "audio_overlap": {
+        "sha256": "c2e8071709b8371e926effdfb844b5192fcff0b0a71188d522460ac76baeba86",
+        "urls": [
+          "https://www.british-birdsongs.uk/birdmedia/858/cettis-warbler-call-3792.mp3"
+        ],
+        "duration": 32.592,
+        "tested": true,
+        "best_by_chapter": [
+          {
+            "max_absolute_correlation": 0.22604232166492383,
+            "reference_second": 3.0,
+            "chapter_second": 14.169875
+          },
+          {
+            "max_absolute_correlation": 0.212139227305695,
+            "reference_second": 13.0,
+            "chapter_second": 4.29325
+          },
+          {
+            "max_absolute_correlation": 0.20016179968056025,
+            "reference_second": 14.0,
+            "chapter_second": 20.733375
+          },
+          {
+            "max_absolute_correlation": 0.22809060310716273,
+            "reference_second": 14.0,
+            "chapter_second": 12.532875
+          },
+          {
+            "max_absolute_correlation": 0.14831114130931577,
+            "reference_second": 16.0,
+            "chapter_second": 32.435375
+          },
+          {
+            "max_absolute_correlation": 0.15206065404254282,
+            "reference_second": 16.0,
+            "chapter_second": 24.38225
+          }
+        ],
+        "possible_overlap": false
+      }
+    },
+    {
+      "url": "https://www.bird-sounds.net/marsh-wren/",
+      "events": [
+        {
+          "utc": 1794977194.4947326,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977196.558954,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 27275
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "88084a767743f04afde53b772a6f4a9ecfa7bd15b9b10f88990d281ba31f642d"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/willow-flycatcher/",
+      "events": [
+        {
+          "utc": 1794977194.519863,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977198.5328946,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 35439
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "977914c982f9505ec0e448cdf9c824d67d6facc0cef9fc17912e089cc4574b7f"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/alder-flycatcher/",
+      "events": [
+        {
+          "utc": 1794977194.5436265,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977196.8210888,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 35300
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "074efb88ad66e8d25723f657df3d6c5594742d67886de3ed1416a0813b56e1c2"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/birdmedia/235/alder-flycatcher-call-song-855.mp3",
+      "events": [
+        {
+          "utc": 1794977281.2009065,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977321.2148678,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 1179899
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "0d58e99e32ddab2b56e6a15d9597253d5f7b7a7fd178a4d223394049fbd95379"
+      ],
+      "audio_overlap": {
+        "sha256": "0d58e99e32ddab2b56e6a15d9597253d5f7b7a7fd178a4d223394049fbd95379",
+        "urls": [
+          "https://www.bird-sounds.net/birdmedia/235/alder-flycatcher-call-song-855.mp3"
+        ],
+        "duration": 73.74375,
+        "tested": true,
+        "best_by_chapter": [
+          {
+            "max_absolute_correlation": 0.19534414866731015,
+            "reference_second": 59.0,
+            "chapter_second": 14.164375
+          },
+          {
+            "max_absolute_correlation": 0.289935633249587,
+            "reference_second": 8.0,
+            "chapter_second": 17.036125
+          },
+          {
+            "max_absolute_correlation": 0.31365428440229576,
+            "reference_second": 37.0,
+            "chapter_second": 6.316375
+          },
+          {
+            "max_absolute_correlation": 0.2906554625138313,
+            "reference_second": 27.0,
+            "chapter_second": 0.03125
+          },
+          {
+            "max_absolute_correlation": 0.33298777909222727,
+            "reference_second": 37.0,
+            "chapter_second": 32.469875
+          },
+          {
+            "max_absolute_correlation": 0.26936461858784927,
+            "reference_second": 8.0,
+            "chapter_second": 4.659
+          }
+        ],
+        "possible_overlap": false
+      }
+    },
+    {
+      "url": "https://www.bird-sounds.net/birdmedia/775/willow-flycatcher-call-song-1391.mp3",
+      "events": [
+        {
+          "utc": 1794977281.24884,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977306.8555322,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 1048241
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "e3c80f5b4865a3d8b102806ad675d9783da4cf30f7960d57e6bcbddf5a611d4f"
+      ],
+      "audio_overlap": {
+        "sha256": "e3c80f5b4865a3d8b102806ad675d9783da4cf30f7960d57e6bcbddf5a611d4f",
+        "urls": [
+          "https://www.bird-sounds.net/birdmedia/775/willow-flycatcher-call-song-1391.mp3"
+        ],
+        "duration": 43.67675,
+        "tested": true,
+        "best_by_chapter": [
+          {
+            "max_absolute_correlation": 0.09806286749144325,
+            "reference_second": 40.0,
+            "chapter_second": 13.775625
+          },
+          {
+            "max_absolute_correlation": 0.22523970564903578,
+            "reference_second": 38.0,
+            "chapter_second": 4.2005
+          },
+          {
+            "max_absolute_correlation": 0.27782851392222957,
+            "reference_second": 35.0,
+            "chapter_second": 8.732375
+          },
+          {
+            "max_absolute_correlation": 0.283356490125981,
+            "reference_second": 16.0,
+            "chapter_second": 6.98275
+          },
+          {
+            "max_absolute_correlation": 0.3066585664115353,
+            "reference_second": 36.0,
+            "chapter_second": 17.92875
+          },
+          {
+            "max_absolute_correlation": 0.1973942834835173,
+            "reference_second": 8.0,
+            "chapter_second": 7.469375
+          }
+        ],
+        "possible_overlap": false
+      }
+    },
+    {
+      "url": "https://www.bird-sounds.net/birdmedia/550/marsh-wren-call-song-1167.mp3",
+      "events": [
+        {
+          "utc": 1794977281.3018582,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977372.0320039,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ValueError: Response exceeds inspection bound"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.british-birdsongs.uk/birdmedia/857/nightingale-alarm-1545.mp3",
+      "events": [
+        {
+          "utc": 1794977281.3295808,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977371.4494238,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ValueError: Response exceeds inspection bound"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/least-flycatcher/",
+      "events": [
+        {
+          "utc": 1794977612.6225255,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977615.3107278,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 35336
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "34c5712393d12bbf3bdfb462c6a50d1d69a7a2e8ec84a144d8f2322e04ee60aa"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/acadian-flycatcher/",
+      "events": [
+        {
+          "utc": 1794977612.6700199,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977615.0699518,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 35468
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "7b8aa5c7a58a2b3af5aaf5f0e321d0804b0a737282e0ab786d554d99873c69a2"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://singaporebirds.com/species/thick-billed-warbler/",
+      "events": [
+        {
+          "utc": 1794977612.9814842,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977613.442271,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 0
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/passeriformes/muscicapides/rossignol-philomele/rossignol-philomele-jmf.jpg",
+      "events": [
+        {
+          "utc": 1794977613.3821483,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977619.3697546,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 50401
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "e5675eda10a5022d673baaf326c513590dd712763bbab704b2bf70f3274b164e"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://singaporebirds.com/species/thick-billed-warbler",
+      "events": [
+        {
+          "utc": 1794977613.6900396,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977614.2551434,
+          "action": "http_response_inspected",
+          "status": 404,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 16401
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "7e401e954dcdc2be47662831eb81ea3793f8e26f67e5148edd170b8c22e67f5b"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.bird-sounds.net/birdmedia/233/acadian-flycatcher-call-song-853.mp3",
+      "events": [
+        {
+          "utc": 1794977713.715725,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977743.468146,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 608298
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "dfad29630906ab74decc563c83ecee31a4276e7d3450d43ee0eeb2daf5c43f49"
+      ],
+      "audio_overlap": {
+        "sha256": "dfad29630906ab74decc563c83ecee31a4276e7d3450d43ee0eeb2daf5c43f49",
+        "urls": [
+          "https://www.bird-sounds.net/birdmedia/233/acadian-flycatcher-call-song-853.mp3"
+        ],
+        "duration": 35.270875,
+        "tested": true,
+        "best_by_chapter": [
+          {
+            "max_absolute_correlation": 0.14441587855588206,
+            "reference_second": 32.0,
+            "chapter_second": 42.94975
+          },
+          {
+            "max_absolute_correlation": 0.16337860814846256,
+            "reference_second": 30.0,
+            "chapter_second": 17.24825
+          },
+          {
+            "max_absolute_correlation": 0.16830087340944525,
+            "reference_second": 13.0,
+            "chapter_second": 3.693125
+          },
+          {
+            "max_absolute_correlation": 0.137439972314115,
+            "reference_second": 22.0,
+            "chapter_second": 12.225875
+          },
+          {
+            "max_absolute_correlation": 0.12370767480586614,
+            "reference_second": 13.0,
+            "chapter_second": 24.9475
+          },
+          {
+            "max_absolute_correlation": 0.1439740506239374,
+            "reference_second": 30.0,
+            "chapter_second": 24.55525
+          }
+        ],
+        "possible_overlap": false
+      }
+    },
+    {
+      "url": "https://www.bird-sounds.net/birdmedia/520/least-flycatcher-call-song-1137.mp3",
+      "events": [
+        {
+          "utc": 1794977713.7573543,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794977805.1755517,
+          "action": "inspection_failed_closed",
+          "delivered_bytes": 0,
+          "error": "ValueError: Response exceeds inspection bound"
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/common.nightingale.html",
+      "events": [
+        {
+          "utc": 1794978052.005028,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978053.136074,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 306
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "8bc121366e70d0e2bc8d7179fa7846a4985f3015cfe3f3e44bfdead81d4e4d4e"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/thick-billed.warbler.html",
+      "events": [
+        {
+          "utc": 1794978052.0575893,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978053.195244,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 308
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "29d3463c6dbb9b8f78f8240131988719760b72d63ce19d38b132d44931a3357c"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/japanese.bush.warbler.html",
+      "events": [
+        {
+          "utc": 1794978052.0883472,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978053.2180114,
+          "action": "http_response_inspected",
+          "status": 301,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 309
+        }
+      ],
+      "approved_response": false,
+      "blocked": false,
+      "hashes": [
+        "1981e6abf76ce490a43488f5ab685f106a85ac76e9cf56cd834af90d5577c3fe"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/en/oiseaux/thick-billed.warbler.html",
+      "events": [
+        {
+          "utc": 1794978054.6557922,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978056.5073416,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 87488
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "9704272f44cab666d5e67d383c3cbc47e40bdcacb4e3bb709080ebaf9b090246"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/en/oiseaux/common.nightingale.html",
+      "events": [
+        {
+          "utc": 1794978054.712449,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978056.9136832,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 107567
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "8ab20c74e8ee6841c35918ad445d52ea66b365eba3dfaf973a8b1205579d67af"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/en/oiseaux/japanese.bush.warbler.html",
+      "events": [
+        {
+          "utc": 1794978054.744076,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978056.5404644,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 63169
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "73f77a9f427f649e06790ec1bf28fe6f58b413044ff00c5e77e2112ee98e263c"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/gil.vaillant/images/id/rousserolle.a.gros.bec.giva.1p.jpg",
+      "events": [
+        {
+          "utc": 1794978428.4497275,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978429.8250687,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 28191
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "bd840a649e61944873d30ebab30ed2cc3fe2de6bbbd2927b7a2e5960c19da6fe"
+      ],
+      "audio_overlap": null
+    },
+    {
+      "url": "https://www.oiseaux.net/photos/franck.ambrosini/images/id/bouscarle.chanteuse.fram.1p.jpg",
+      "events": [
+        {
+          "utc": 1794978428.478777,
+          "action": "http_request"
+        },
+        {
+          "utc": 1794978429.9260042,
+          "action": "http_response_inspected",
+          "status": 200,
+          "blocked": false,
+          "reason": null,
+          "delivered_bytes": 19952
+        }
+      ],
+      "approved_response": true,
+      "blocked": false,
+      "hashes": [
+        "22860bdcaed8e411cd983747c417c7eac836b6f9df87b7dc135ed219a98e333e"
+      ],
+      "audio_overlap": null
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "segment": 3,
+  "error": null,
+  "blind": {
+    "audio_access": true,
+    "mandarin_speech": true,
+    "transcript": "枝头这只小鸟暂定为柳纹霸鹟。它胸腹浅淡，翅上有浅色翼斑，眼圈很不明显。抬头张嘴时，短促的鸣唱也随之出现。",
+    "speech_spans": [
+      {
+        "start": 5.28,
+        "end": 7.92,
+        "text": "枝头这只小鸟暂定为柳纹霸鹟。"
+      },
+      {
+        "start": 10.64,
+        "end": 14.88,
+        "text": "它胸腹浅淡，翅上有浅色翼斑，眼圈很不明显。"
+      },
+      {
+        "start": 20.32,
+        "end": 24.0,
+        "text": "抬头张嘴时，短促的鸣唱也随之出现。"
+      }
+    ],
+    "background": "持续的鸟鸣声和轻微的户外环境音（如风声、树叶沙沙声）。",
+    "limitations": []
+  },
+  "quality": {
+    "audio_access": true,
+    "audible_mandarin": true,
+    "original_audio_present": true,
+    "naturalness": {
+      "score": 0.75,
+      "reason": "整体语调平稳，但缺乏真人解说时自然的呼吸起伏和情感波动，带有轻微的合成感。",
+      "times": [
+        6.4,
+        13.8
+      ]
+    },
+    "timbre": {
+      "score": 0.75,
+      "reason": "音色清晰明亮，但在高频部分略显单薄，长时间听有轻微的机械感。",
+      "times": [
+        6.4,
+        13.8
+      ]
+    },
+    "clarity": {
+      "score": 1.0,
+      "reason": "发音非常标准，咬字清晰，每个词都能轻松听懂，没有含糊不清的地方。",
+      "times": [
+        6.4,
+        13.8
+      ]
+    },
+    "pacing": {
+      "score": 0.75,
+      "reason": "语速适中，但句间停顿显得过于均匀和刻意，不够自然流畅。",
+      "times": [
+        6.4,
+        13.8
+      ]
+    },
+    "balance": {
+      "score": 1.0,
+      "reason": "人声与背景鸟鸣声比例恰当，鸟叫声作为环境音很好地衬托了氛围，完全不影响对解说内容的理解。",
+      "times": [
+        0.0,
+        27.9
+      ]
+    },
+    "preservation": {
+      "score": 1.0,
+      "reason": "背景中可以清晰听到真实的鸟类鸣叫声，且声音特征随画面中鸟的动作有所变化，保留了良好的现场感。",
+      "times": [
+        0.0,
+        27.9
+      ]
+    },
+    "listening_windows": [
+      {
+        "start": 0.0,
+        "end": 6.4,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      },
+      {
+        "start": 13.8,
+        "end": 21.4,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      },
+      {
+        "start": 25.0,
+        "end": 27.9,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      }
+    ],
+    "limitations": []
+  },
+  "body": {
+    "I": 0,
+    "spoken_species": "柳纹霸鹟",
+    "I_reason": "在00:05-00:08处，旁白明确说出“暂定为柳纹霸鹟”，与真值“桤木纹霸鹟”不符，属于物种识别错误。",
+    "F": {
+      "score": 0.3,
+      "reason": "形态描述（胸腹浅淡、翅上有浅色翼斑、眼圈不明显）基本符合该属鸟类的普遍特征，但将物种错认为“柳纹霸鹟”是核心事实错误；行为描述“抬头张嘴时短促鸣唱出现”缺乏画面证据支持。",
+      "times": [
+        "00:10-00:14"
+      ]
+    },
+    "E": {
+      "score": 0.2,
+      "reason": "视觉证据仅显示一只小型鸟停在树枝上，具有灰橄榄色头背和浅色翼纹，这与旁白描述的形态部分吻合。然而，旁白提到的“抬头张嘴鸣唱”在提供的静态帧或常规观察中无法得到确凿的视听同步证明（真值也指出无证据证明捕虫/喂食/求偶成功，且声音归属不确定）。因此，解说中的行为断言超出了当前视听证据的支持范围。",
+      "times": [
+        "00:20-00:24"
+      ]
+    },
+    "claims": [
+      {
+        "claim": "枝头这只小鸟暂定为柳纹霸鹟",
+        "supported": false,
+        "reason": "真值为桤木纹霸鹟，旁白说成了柳纹霸鹟，物种名称错误。"
+      },
+      {
+        "claim": "它胸腹浅淡，翅上有浅色翼斑，眼圈很不明显",
+        "supported": true,
+        "reason": "画面中可见鸟的喉胸部颜色较浅，翅膀上有明显的浅色条纹（翼斑），且眼部周围没有显著的白色眼圈，符合Empidonax属的一般特征及本种描述。"
+      },
+      {
+        "claim": "抬头张嘴时，短促的鸣唱也随之出现",
+        "supported": null,
+        "reason": "虽然音频中有鸟鸣声，但无法从现有证据确认画面中的特定个体正在发声，也无法确认其动作（抬头张嘴）与声音的精确同步关系，存在声音归属的不确定性。"
+      }
+    ]
+  },
+  "visual": {
+    "subtitles": {
+      "score": 1.0,
+      "reason": "字幕已实际烧录在画面底部，字体清晰可读。字幕内容与提供的独立转写文本完全一致（仅标点略有差异），且未遮挡主要鸟体。",
+      "times": [
+        {
+          "start": 78.063,
+          "end": 81.314,
+          "text": "枝头这只小鸟，暂定为柳纹霸鹟。"
+        },
+        {
+          "start": 84.063,
+          "end": 88.711,
+          "text": "它胸腹浅淡，翅上有浅色翼斑，眼圈很不明显。"
+        },
+        {
+          "start": 94.063,
+          "end": 97.944,
+          "text": "抬头张嘴时，短促的鸣唱也随之出现。"
+        }
+      ]
+    },
+    "timing": {
+      "score": 1.0,
+      "reason": "解说时机与当前章节画面对应准确。例如，当旁白提到“抬头张嘴”时（约94-97秒），对应的拼图帧（movie 96.00s）中鸟儿确实呈现出仰头张嘴的姿态；描述外貌特征时画面也稳定展示了该鸟类。",
+      "times": [
+        {
+          "start": 78.063,
+          "end": 81.314,
+          "label": "介绍物种暂定名，画面展示停栖状态"
+        },
+        {
+          "start": 84.063,
+          "end": 88.711,
+          "label": "描述胸腹及翅膀特征，画面细节吻合"
+        },
+        {
+          "start": 94.063,
+          "end": 97.944,
+          "label": "描述鸣唱动作，画面同步展示抬头张嘴姿态"
+        }
+      ]
+    }
+  },
+  "window": {
+    "verified": true,
+    "windows": [
+      {
+        "start": 72.8,
+        "end": 78.2,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 81.2,
+        "end": 84.15,
+        "matched_original_seconds": 2
+      },
+      {
+        "start": 88.6,
+        "end": 94.15,
+        "matched_original_seconds": 5
+      },
+      {
+        "start": 97.85,
+        "end": 100.767,
+        "matched_original_seconds": 2
+      }
+    ],
+    "reason": ">=2s independent narration silence with at least one full second of source correlation; judge also checks actual final speech/background.",
+    "judge_windows": [
+      {
+        "start": 0.0,
+        "end": 6.4,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      },
+      {
+        "start": 13.8,
+        "end": 21.4,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      },
+      {
+        "start": 25.0,
+        "end": 27.9,
+        "reason": "只有清晰的真实鸟鸣声，无人声"
+      }
+    ],
+    "passed": true
+  },
+  "provenance": {
+    "matched_seconds": 15,
+    "compared_seconds": 27
+  }
+}

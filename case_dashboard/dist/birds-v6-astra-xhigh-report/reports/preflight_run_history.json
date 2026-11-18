@@ -1,0 +1,78 @@
+{
+  "formal_attempts": 1,
+  "reports": {
+    "generic_preflight": {
+      "case": "generic_preflight",
+      "source_case": "generic_preflight",
+      "mode": "tools",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794976244.5728445,
+      "host_end_unix": 1794976259.9131773,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "generic_preflight",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794976259.8622906,
+        "elapsed_seconds": 12.766631841659546
+      }
+    },
+    "deadline_preflight": {
+      "case": "deadline_preflight",
+      "source_case": "deadline_preflight",
+      "mode": "wallcheck",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794976271.381706,
+      "host_end_unix": 1794976274.1153765,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "deadline_preflight",
+        "returncode": -9,
+        "timed_out": true,
+        "utc": 1794976274.1944404,
+        "elapsed_seconds": 2.0340540409088135
+      }
+    },
+    "unbounded_preflight": {
+      "case": "unbounded_preflight",
+      "source_case": "unbounded_preflight",
+      "mode": "unboundedcheck",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794976271.3816369,
+      "host_end_unix": 1794976275.3095026,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "unbounded_preflight",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794976275.3959038,
+        "elapsed_seconds": 3.231785297393799
+      }
+    },
+    "model_preflight_user_credential": {
+      "case": "model_preflight_user_credential",
+      "source_case": "model_preflight_user_credential",
+      "mode": "smoke",
+      "host_process_returncode": 0,
+      "host_start_unix": 1794976244.5728538,
+      "host_end_unix": 1794976261.1403427,
+      "grading": "not_run",
+      "termination": {
+        "op": "event",
+        "event": "namespace_exit",
+        "case": "model_preflight_user_credential",
+        "returncode": 0,
+        "timed_out": false,
+        "utc": 1794976261.0979414,
+        "elapsed_seconds": 14.002420902252197
+      }
+    }
+  },
+  "note": "All selected-model preflights passed first attempt. Separate unavailable 6.2 access attempt retained in model_selection.json; user explicitly selected gpt-6-astra."
+}

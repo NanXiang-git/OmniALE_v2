@@ -1,0 +1,80 @@
+{
+  "formal_score": 24.8514,
+  "body": [
+    33.333333333333336,
+    33.333333333333336
+  ],
+  "raw_weighted_quality": 0.7455416666666667,
+  "effective_quality": [
+    0.7455416666666668,
+    0.7455416666666668
+  ],
+  "all_chapters_audible_mandarin_false": false,
+  "scored_chapters": 2,
+  "text_label_matches": 2,
+  "text_label_method": "Exact case-insensitive Latin names against frozen truth, descriptive only.",
+  "rows": [
+    {
+      "segment": 1,
+      "submitted_chinese": "新疆歌鸲（夜莺；暂定）",
+      "submitted_latin": "Luscinia megarhynchos",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:06-00:10的旁白中，讲述者明确将物种说为“新疆歌鸲”，与真值“四川蝗莺”不符。"
+    },
+    {
+      "segment": 2,
+      "submitted_chinese": "新疆歌鸲（夜莺；暂定）",
+      "submitted_latin": "Luscinia megarhynchos",
+      "expected_chinese": "四川蝗莺",
+      "expected_latin": "Locustella chengi",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:04-00:07的旁白中，实际说出的是“新疆歌鸲”，与真值“四川蝗莺”不符，属于明确的物种错误。"
+    },
+    {
+      "segment": 3,
+      "submitted_chinese": "柳纹霸鹟（暂定）",
+      "submitted_latin": "Empidonax traillii",
+      "expected_chinese": "桤木纹霸鹟",
+      "expected_latin": "Empidonax alnorum",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:05-00:08处，旁白明确说出“暂定为柳纹霸鹟”，与真值“桤木纹霸鹟”不符，属于物种识别错误。"
+    },
+    {
+      "segment": 4,
+      "submitted_chinese": "长嘴沼泽鹪鹩（暂定）",
+      "submitted_latin": "Cistothorus palustris",
+      "expected_chinese": "弗吉尼亚秧鸡",
+      "expected_latin": "Rallus limicola",
+      "exact_latin_match": false,
+      "scored_I": 0,
+      "scoring_reason": "在00:04-00:08的旁白中，实际说出的物种为“长嘴沼泽鹪鹩”，与真值“弗吉尼亚秧鸡”完全不符。"
+    },
+    {
+      "segment": 5,
+      "submitted_chinese": "黑脚信天翁",
+      "submitted_latin": "Phoebastria nigripes",
+      "expected_chinese": "黑脚信天翁",
+      "expected_latin": "Phoebastria nigripes",
+      "exact_latin_match": true,
+      "scored_I": 1,
+      "scoring_reason": "在00:05-00:09的旁白中，明确说出了“这是黑脚信天翁”，与真值完全一致。"
+    },
+    {
+      "segment": 6,
+      "submitted_chinese": "黑背信天翁",
+      "submitted_latin": "Phoebastria immutabilis",
+      "expected_chinese": "莱桑信天翁",
+      "expected_latin": "Phoebastria immutabilis",
+      "exact_latin_match": true,
+      "scored_I": 1,
+      "scoring_reason": "在04.8-07.9秒，旁白明确说出“这是黑背信天翁”。“黑背信天翁”是莱桑信天翁（Laysan Albatross）的合法别名，且发音清晰无歧义，符合物种识别标准。"
+    }
+  ],
+  "explanation": "文字学名精确匹配 2/6；成片视听计分识别达标 2/6。文字标签核对仅供解释，不替代冻结评分器对实际旁白的判断。",
+  "formal_reviewed_result_sha256": "4f6339fcb08931c0706449abb062af4ac0cfb06ba92d8653efc9d7264cfd9f57"
+}

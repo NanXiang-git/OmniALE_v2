@@ -1,0 +1,36 @@
+{
+  "initial_requested_model": "gpt-6.2-astra",
+  "access_preflight": {
+    "checks": [
+      {
+        "credential_label": "luna_user",
+        "model_requested": "gpt-6.2-astra",
+        "reasoning_effort": "xhigh",
+        "started_unix": 1794976159.9429207,
+        "model_list_status": 200,
+        "astra_model_ids": [
+          "gpt-6-astra"
+        ],
+        "exact_model_listed": false
+      },
+      {
+        "credential_label": "prior_sol",
+        "model_requested": "gpt-6.2-astra",
+        "reasoning_effort": "xhigh",
+        "started_unix": 1794976160.417395,
+        "model_list_status": 200,
+        "astra_model_ids": [
+          "gpt-6-astra"
+        ],
+        "exact_model_listed": false,
+        "request_status": 404,
+        "error_body": "{\"error\":{\"message\":\"Model \\\"gpt-6.2-astra\\\" is not supported by any configured account in this group\",\"type\":\"model_not_found\"}}"
+      }
+    ],
+    "formal_run_started": false
+  },
+  "user_authorized_model": "gpt-6-astra",
+  "effort": "xhigh",
+  "total_time_limit": null,
+  "formal_attempts_before_selection": 0
+}

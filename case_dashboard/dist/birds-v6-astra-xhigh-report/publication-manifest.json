@@ -1,0 +1,629 @@
+{
+  "files": [
+    {
+      "path": "candidate/TASK.md",
+      "bytes": 8655,
+      "sha256": "9063f267f16c406155d7a6f2709ec379cb09c9cbac963e21da5c85a470d9583d",
+      "storage": "repository",
+      "deployed_sha256": "9063f267f16c406155d7a6f2709ec379cb09c9cbac963e21da5c85a470d9583d",
+      "deployed_bytes": 8655
+    },
+    {
+      "path": "candidate/birds_source.mp4",
+      "bytes": 62605681,
+      "sha256": "f72bafdc520233d255118192789a7eff694e295be4217dad404f7e98469354ce",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v3-assets-20261116/f72bafdc520233d25511-birds_source.mp4",
+      "preview": "web-media/f72bafdc520233d25511.mp4"
+    },
+    {
+      "path": "candidate/chapters.json",
+      "bytes": 570,
+      "sha256": "fc25db98479483cedd7380a3c02eba6b2eaa38845ffb8321bd9b29099aa46252",
+      "storage": "repository",
+      "deployed_sha256": "fc25db98479483cedd7380a3c02eba6b2eaa38845ffb8321bd9b29099aa46252",
+      "deployed_bytes": 570
+    },
+    {
+      "path": "candidate_package.zip",
+      "bytes": 62435985,
+      "sha256": "9a53f9bd14008fccf0809cd3396acaba75e83ade3fa57eb583b2109502d8919b",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-astra-xhigh-assets-20261118/9a53f9bd14008fccf080-candidate_package.zip"
+    },
+    {
+      "path": "evaluator/rubric.json",
+      "bytes": 1403,
+      "sha256": "513793d7967d96fd50606aba5e58da5f05985d2a179d1b5811fe1015c874cb80",
+      "storage": "repository",
+      "deployed_sha256": "513793d7967d96fd50606aba5e58da5f05985d2a179d1b5811fe1015c874cb80",
+      "deployed_bytes": 1403
+    },
+    {
+      "path": "frozen_manifest.json",
+      "bytes": 107202,
+      "sha256": "764069f7e5894f37b23e7dded5be1e3036cf03371ed8165799d7e8c5dfdc4daf",
+      "storage": "repository",
+      "deployed_sha256": "764069f7e5894f37b23e7dded5be1e3036cf03371ed8165799d7e8c5dfdc4daf",
+      "deployed_bytes": 107202
+    },
+    {
+      "path": "reports/SUMMARY.json",
+      "bytes": 1163,
+      "sha256": "4521561418c63635ea355d9bc3f724620cac52e25a80fec140448dd620b5d5f0",
+      "storage": "repository",
+      "deployed_sha256": "4521561418c63635ea355d9bc3f724620cac52e25a80fec140448dd620b5d5f0",
+      "deployed_bytes": 1163
+    },
+    {
+      "path": "reports/SUMMARY.md",
+      "bytes": 848,
+      "sha256": "be47370a8d2a9ee3e0282bff06c78514a0194a855e62e847b380c9810cafea8d",
+      "storage": "repository",
+      "deployed_sha256": "be47370a8d2a9ee3e0282bff06c78514a0194a855e62e847b380c9810cafea8d",
+      "deployed_bytes": 848
+    },
+    {
+      "path": "reports/all_reference_audio_overlap.json",
+      "bytes": 8818,
+      "sha256": "5da2941c5acdeddab1974f7d45f76b222afdccf905b17a6c282c5e09479e54a1",
+      "storage": "repository",
+      "deployed_sha256": "5da2941c5acdeddab1974f7d45f76b222afdccf905b17a6c282c5e09479e54a1",
+      "deployed_bytes": 8818
+    },
+    {
+      "path": "reports/astra/api_audit.jsonl",
+      "bytes": 1780326,
+      "sha256": "17fe521c507433ea4724fc17573aa130c9978239a6d50082f5745c87598e0c14",
+      "storage": "repository",
+      "deployed_sha256": "17fe521c507433ea4724fc17573aa130c9978239a6d50082f5745c87598e0c14",
+      "deployed_bytes": 1780326
+    },
+    {
+      "path": "reports/astra/audit.json",
+      "bytes": 37909,
+      "sha256": "920e398965d98079b4bc1d42c9564071e6fa1f0b2ccabee865ad0f92448d4e7f",
+      "storage": "repository",
+      "deployed_sha256": "920e398965d98079b4bc1d42c9564071e6fa1f0b2ccabee865ad0f92448d4e7f",
+      "deployed_bytes": 37909
+    },
+    {
+      "path": "reports/astra/network_trajectory.json",
+      "bytes": 126397,
+      "sha256": "c854cc172b69769f3185fc570475f856b79dea3efb0dd18557f2367a241c6dff",
+      "storage": "repository",
+      "deployed_sha256": "c854cc172b69769f3185fc570475f856b79dea3efb0dd18557f2367a241c6dff",
+      "deployed_bytes": 126397
+    },
+    {
+      "path": "reports/astra/raw_events.jsonl",
+      "bytes": 427019,
+      "sha256": "08c73846d7e518b8ced81ac2e429cf6e7445ca7daf944dffeda4c10abda76be7",
+      "storage": "repository",
+      "deployed_sha256": "08c73846d7e518b8ced81ac2e429cf6e7445ca7daf944dffeda4c10abda76be7",
+      "deployed_bytes": 427019
+    },
+    {
+      "path": "reports/astra/result.json",
+      "bytes": 64820,
+      "sha256": "2f1ed3a9706eb30f6aec70694bd40644ed309de8731542ad6580462924ade9ce",
+      "storage": "repository",
+      "deployed_sha256": "2f1ed3a9706eb30f6aec70694bd40644ed309de8731542ad6580462924ade9ce",
+      "deployed_bytes": 64820
+    },
+    {
+      "path": "reports/astra/reviewed_result.json",
+      "bytes": 65659,
+      "sha256": "4f6339fcb08931c0706449abb062af4ac0cfb06ba92d8653efc9d7264cfd9f57",
+      "storage": "repository",
+      "deployed_sha256": "4f6339fcb08931c0706449abb062af4ac0cfb06ba92d8653efc9d7264cfd9f57",
+      "deployed_bytes": 65659
+    },
+    {
+      "path": "reports/astra/segment_1/actual_final.wav",
+      "bytes": 2211278,
+      "sha256": "a82e926f6647f68c9bb94b9f572a60280ecc27dbc5b0e5038fa55df41b52d1ed",
+      "storage": "repository",
+      "deployed_sha256": "a82e926f6647f68c9bb94b9f572a60280ecc27dbc5b0e5038fa55df41b52d1ed",
+      "deployed_bytes": 2211278
+    },
+    {
+      "path": "reports/astra/segment_1/contact.jpg",
+      "bytes": 485948,
+      "sha256": "9c06c83939fa92cbca24a94f3c5493257493201ca81ea01260245aa2da52939e",
+      "storage": "repository",
+      "deployed_sha256": "9c06c83939fa92cbca24a94f3c5493257493201ca81ea01260245aa2da52939e",
+      "deployed_bytes": 485948
+    },
+    {
+      "path": "reports/astra/segment_1/judgment.json",
+      "bytes": 8565,
+      "sha256": "7a9241586635e2c56d068cd86878069044f1869f1df7df9c25e681ce583d7903",
+      "storage": "repository",
+      "deployed_sha256": "7a9241586635e2c56d068cd86878069044f1869f1df7df9c25e681ce583d7903",
+      "deployed_bytes": 8565
+    },
+    {
+      "path": "reports/astra/segment_2/actual_final.wav",
+      "bytes": 1283278,
+      "sha256": "2022a3e51fc78024a3980f4a0ade4330c54d2507098473e844a3b506b250e8c5",
+      "storage": "repository",
+      "deployed_sha256": "2022a3e51fc78024a3980f4a0ade4330c54d2507098473e844a3b506b250e8c5",
+      "deployed_bytes": 1283278
+    },
+    {
+      "path": "reports/astra/segment_2/contact.jpg",
+      "bytes": 850972,
+      "sha256": "df7291beda1d5226b1bd839b35bf52ecc2a201cfc4399ed3806fab71a2af1b7b",
+      "storage": "repository",
+      "deployed_sha256": "df7291beda1d5226b1bd839b35bf52ecc2a201cfc4399ed3806fab71a2af1b7b",
+      "deployed_bytes": 850972
+    },
+    {
+      "path": "reports/astra/segment_2/judgment.json",
+      "bytes": 7362,
+      "sha256": "58f58dfafebf215b29a4266451f786f50892b7077dba75f66112591747f2433c",
+      "storage": "repository",
+      "deployed_sha256": "58f58dfafebf215b29a4266451f786f50892b7077dba75f66112591747f2433c",
+      "deployed_bytes": 7362
+    },
+    {
+      "path": "reports/astra/segment_3/actual_final.wav",
+      "bytes": 1342478,
+      "sha256": "1e5fa949983539e422bbc622c924ca77d318008784bc55b2838c9a64f229f1ab",
+      "storage": "repository",
+      "deployed_sha256": "1e5fa949983539e422bbc622c924ca77d318008784bc55b2838c9a64f229f1ab",
+      "deployed_bytes": 1342478
+    },
+    {
+      "path": "reports/astra/segment_3/contact.jpg",
+      "bytes": 260938,
+      "sha256": "02a24a1b60cc4ea50a855fd515b39058ecb251c5b4625eccd638383365e271fb",
+      "storage": "repository",
+      "deployed_sha256": "02a24a1b60cc4ea50a855fd515b39058ecb251c5b4625eccd638383365e271fb",
+      "deployed_bytes": 260938
+    },
+    {
+      "path": "reports/astra/segment_3/judgment.json",
+      "bytes": 7588,
+      "sha256": "b65ee4cdaddace54dfaff9ca5ddd45cd00f0d128b2f6b9269f939c94b6660372",
+      "storage": "repository",
+      "deployed_sha256": "b65ee4cdaddace54dfaff9ca5ddd45cd00f0d128b2f6b9269f939c94b6660372",
+      "deployed_bytes": 7588
+    },
+    {
+      "path": "reports/astra/segment_4/actual_final.wav",
+      "bytes": 1113678,
+      "sha256": "eaf86be1e2fb496fe2357348f357e106d9f11b00e5c910b15f38ee66a60df2c0",
+      "storage": "repository",
+      "deployed_sha256": "eaf86be1e2fb496fe2357348f357e106d9f11b00e5c910b15f38ee66a60df2c0",
+      "deployed_bytes": 1113678
+    },
+    {
+      "path": "reports/astra/segment_4/contact.jpg",
+      "bytes": 272393,
+      "sha256": "16db507785a5fd2c4516292681d266d06d13c4c1189c229b1ba0cb96ecb9ee94",
+      "storage": "repository",
+      "deployed_sha256": "16db507785a5fd2c4516292681d266d06d13c4c1189c229b1ba0cb96ecb9ee94",
+      "deployed_bytes": 272393
+    },
+    {
+      "path": "reports/astra/segment_4/judgment.json",
+      "bytes": 6887,
+      "sha256": "7f178fff8fb0441102c63d83accc991129109671d3d3ff8be2ca2d6cbc33e4b3",
+      "storage": "repository",
+      "deployed_sha256": "7f178fff8fb0441102c63d83accc991129109671d3d3ff8be2ca2d6cbc33e4b3",
+      "deployed_bytes": 6887
+    },
+    {
+      "path": "reports/astra/segment_5/actual_final.wav",
+      "bytes": 1656078,
+      "sha256": "3e53eac2bd00d5b8085e0b8f82d2a8248d71b98844567372e2d53e5dc6d63a99",
+      "storage": "repository",
+      "deployed_sha256": "3e53eac2bd00d5b8085e0b8f82d2a8248d71b98844567372e2d53e5dc6d63a99",
+      "deployed_bytes": 1656078
+    },
+    {
+      "path": "reports/astra/segment_5/contact.jpg",
+      "bytes": 419100,
+      "sha256": "f5b14ce8c76672a2c9f059dc2889be0719730a6b60e9c0ed8db0ab6c41bdfbbd",
+      "storage": "repository",
+      "deployed_sha256": "f5b14ce8c76672a2c9f059dc2889be0719730a6b60e9c0ed8db0ab6c41bdfbbd",
+      "deployed_bytes": 419100
+    },
+    {
+      "path": "reports/astra/segment_5/judgment.json",
+      "bytes": 8240,
+      "sha256": "385b4a768ba856b9321985785f34dd34a818fefdd356f959d0609860d891da34",
+      "storage": "repository",
+      "deployed_sha256": "385b4a768ba856b9321985785f34dd34a818fefdd356f959d0609860d891da34",
+      "deployed_bytes": 8240
+    },
+    {
+      "path": "reports/astra/segment_6/actual_final.wav",
+      "bytes": 1296078,
+      "sha256": "a9382be3f610599a0f78eb46d8987b6de4488b86783782e0a0010fbebf3cb3ea",
+      "storage": "repository",
+      "deployed_sha256": "a9382be3f610599a0f78eb46d8987b6de4488b86783782e0a0010fbebf3cb3ea",
+      "deployed_bytes": 1296078
+    },
+    {
+      "path": "reports/astra/segment_6/contact.jpg",
+      "bytes": 508978,
+      "sha256": "8b6d14fc5826649e7e77584ed3616ad25bca730be338d0b9638c46a2da81eb67",
+      "storage": "repository",
+      "deployed_sha256": "8b6d14fc5826649e7e77584ed3616ad25bca730be338d0b9638c46a2da81eb67",
+      "deployed_bytes": 508978
+    },
+    {
+      "path": "reports/astra/segment_6/judgment.json",
+      "bytes": 8374,
+      "sha256": "f463366766781622e97ce10e081eb74df5b934e9348bff58c8764c626b51a794",
+      "storage": "repository",
+      "deployed_sha256": "f463366766781622e97ce10e081eb74df5b934e9348bff58c8764c626b51a794",
+      "deployed_bytes": 8374
+    },
+    {
+      "path": "reports/astra/service_trajectory.json",
+      "bytes": 3415754,
+      "sha256": "708c73cb219abf10a4ef7ff22864cc454b5dd5da7061d87499962a6c33d138c5",
+      "storage": "repository",
+      "deployed_sha256": "708c73cb219abf10a4ef7ff22864cc454b5dd5da7061d87499962a6c33d138c5",
+      "deployed_bytes": 3415754
+    },
+    {
+      "path": "reports/astra/supplemental_review.json",
+      "bytes": 416,
+      "sha256": "58abef90423564b0f53bcbb1f756f7b91e8c1d46d343bd9b84f1a1c101a89f45",
+      "storage": "repository",
+      "deployed_sha256": "58abef90423564b0f53bcbb1f756f7b91e8c1d46d343bd9b84f1a1c101a89f45",
+      "deployed_bytes": 416
+    },
+    {
+      "path": "reports/astra/tool_trajectory.json",
+      "bytes": 338592,
+      "sha256": "50214793f837ced78c40669eacb7aee2662b98ac52664744058032c3e00e68ff",
+      "storage": "repository",
+      "deployed_sha256": "50214793f837ced78c40669eacb7aee2662b98ac52664744058032c3e00e68ff",
+      "deployed_bytes": 338592
+    },
+    {
+      "path": "reports/astra_submission.zip",
+      "bytes": 66102690,
+      "sha256": "b87a30af96ef4c4d05c118df0d994006ab4d32323e70631fd63cb2a80044de37",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-astra-xhigh-assets-20261118/b87a30af96ef4c4d05c1-astra_submission.zip"
+    },
+    {
+      "path": "reports/browser_qa_limit.json",
+      "bytes": 220,
+      "sha256": "5132cda013ed1c43a049ab6cf55df5fd3ecedd496aba2703e52a03b40e351718",
+      "storage": "repository",
+      "deployed_sha256": "5132cda013ed1c43a049ab6cf55df5fd3ecedd496aba2703e52a03b40e351718",
+      "deployed_bytes": 220
+    },
+    {
+      "path": "reports/comparability.json",
+      "bytes": 4098,
+      "sha256": "08dd8fe65712968e436fbd7981c84b51153a3adb6a1749c80c3a135f03beb8e4",
+      "storage": "repository",
+      "deployed_sha256": "08dd8fe65712968e436fbd7981c84b51153a3adb6a1749c80c3a135f03beb8e4",
+      "deployed_bytes": 4098
+    },
+    {
+      "path": "reports/controls.json",
+      "bytes": 1171,
+      "sha256": "3919d9d259d969c80f28257747ff834346dad70ccd5c7d626684d5b5af21997c",
+      "storage": "repository",
+      "deployed_sha256": "3919d9d259d969c80f28257747ff834346dad70ccd5c7d626684d5b5af21997c",
+      "deployed_bytes": 1171
+    },
+    {
+      "path": "reports/dashboard_links.json",
+      "bytes": 2374,
+      "sha256": "faffe3763388929d8163f01360a6c35f5b90e1740ab3a90053dcf60add4cb706",
+      "storage": "repository",
+      "deployed_sha256": "198c4c52b1280827c0e6d510ead48d578f6f4d50080d8c288a03e558d6f2f15c",
+      "deployed_bytes": 2330
+    },
+    {
+      "path": "reports/dashboard_qa.json",
+      "bytes": 213,
+      "sha256": "03795e4c99952e4ff6b27394b4870d650da96839aff35883952b42c426f04231",
+      "storage": "repository",
+      "deployed_sha256": "4c5082172877b8fa2e3b9e95bc9ac087136fb474a08a4fb6eef9a8c41cf85b77",
+      "deployed_bytes": 213
+    },
+    {
+      "path": "reports/delivery_explanation.json",
+      "bytes": 3462,
+      "sha256": "f59978d1bd69947e6f5d4f7b0bc64ce01eeea357a870ffd7c38c2c0538a56cce",
+      "storage": "repository",
+      "deployed_sha256": "f59978d1bd69947e6f5d4f7b0bc64ce01eeea357a870ffd7c38c2c0538a56cce",
+      "deployed_bytes": 3462
+    },
+    {
+      "path": "reports/final_acceptance.json",
+      "bytes": 2629,
+      "sha256": "2aae448c1b9cf6c1f24ac9aa10f6403ae5dd17bfeba7e1bae467002b04263ab8",
+      "storage": "repository",
+      "deployed_sha256": "2aae448c1b9cf6c1f24ac9aa10f6403ae5dd17bfeba7e1bae467002b04263ab8",
+      "deployed_bytes": 2629
+    },
+    {
+      "path": "reports/index.html",
+      "bytes": 2462189,
+      "sha256": "f23289015bdd18050bd8f6df763a138fc7db5adf197bbb761882fcb52a1cde65",
+      "storage": "repository",
+      "deployed_sha256": "0c40e425d023444832e9c2d588af5a96ce0b1638eebef767cee7157f6e71d7c5",
+      "deployed_bytes": 2464197
+    },
+    {
+      "path": "reports/model_selection.json",
+      "bytes": 1131,
+      "sha256": "9d521bd434fa75b52ecc54dd21125476a9a7a3c069d8c6b3612db49a28391382",
+      "storage": "repository",
+      "deployed_sha256": "9d521bd434fa75b52ecc54dd21125476a9a7a3c069d8c6b3612db49a28391382",
+      "deployed_bytes": 1131
+    },
+    {
+      "path": "reports/preflight_run_history.json",
+      "bytes": 2562,
+      "sha256": "48d3481927f2b43bdf70891aa30ab41fcb3910d507ca395a5ab3ae64104642a9",
+      "storage": "repository",
+      "deployed_sha256": "48d3481927f2b43bdf70891aa30ab41fcb3910d507ca395a5ab3ae64104642a9",
+      "deployed_bytes": 2562
+    },
+    {
+      "path": "reports/previous_v5_summary.json",
+      "bytes": 897,
+      "sha256": "137874894a9303d5701360066cdf1359163a40419a96a8ae61550c642fa13d72",
+      "storage": "repository",
+      "deployed_sha256": "137874894a9303d5701360066cdf1359163a40419a96a8ae61550c642fa13d72",
+      "deployed_bytes": 897
+    },
+    {
+      "path": "reports/prior_source_overlap/confirmed_XC238544.json",
+      "bytes": 3367,
+      "sha256": "1a9c26cdc3c70615a7b3a9900ae13792f73a32c12c9e07f1fd5d8aaf59d6987a",
+      "storage": "repository",
+      "deployed_sha256": "1a9c26cdc3c70615a7b3a9900ae13792f73a32c12c9e07f1fd5d8aaf59d6987a",
+      "deployed_bytes": 3367
+    },
+    {
+      "path": "reports/prior_source_overlap/original_video_confirmation.json",
+      "bytes": 381,
+      "sha256": "a366250468a8ab6294db37b932bb8810cd2c28e5f23dd2d3bb4eface0c513d59",
+      "storage": "repository",
+      "deployed_sha256": "a366250468a8ab6294db37b932bb8810cd2c28e5f23dd2d3bb4eface0c513d59",
+      "deployed_bytes": 381
+    },
+    {
+      "path": "reports/reference_inventory.html",
+      "bytes": 97156,
+      "sha256": "bb6bf3f447e9ff61f5fdec09f7127632015aff8e2063960dc7adef97c8eced30",
+      "storage": "repository",
+      "deployed_sha256": "bb6bf3f447e9ff61f5fdec09f7127632015aff8e2063960dc7adef97c8eced30",
+      "deployed_bytes": 97156
+    },
+    {
+      "path": "reports/reference_inventory.json",
+      "bytes": 63114,
+      "sha256": "c10e8dc3d94bcc1a031c468696b4405b1e2273afa55be115a6927e33a0660ec5",
+      "storage": "repository",
+      "deployed_sha256": "c10e8dc3d94bcc1a031c468696b4405b1e2273afa55be115a6927e33a0660ec5",
+      "deployed_bytes": 63114
+    },
+    {
+      "path": "reports/rerun_policy.json",
+      "bytes": 271,
+      "sha256": "a02efe947bc8f3c994fb64337634d3b0e9c761247316a0efb0914606d2fd3be1",
+      "storage": "repository",
+      "deployed_sha256": "a02efe947bc8f3c994fb64337634d3b0e9c761247316a0efb0914606d2fd3be1",
+      "deployed_bytes": 271
+    },
+    {
+      "path": "reports/source_delivery_audit.json",
+      "bytes": 33614,
+      "sha256": "c9f68c4185a320815a1db9c151adade2c39d325ca794b251493d191e4f5628b7",
+      "storage": "repository",
+      "deployed_sha256": "c9f68c4185a320815a1db9c151adade2c39d325ca794b251493d191e4f5628b7",
+      "deployed_bytes": 33614
+    },
+    {
+      "path": "reports/source_guard_controls.json",
+      "bytes": 4850,
+      "sha256": "07cd4cb93c2f8f120b40187a478fd2fe2c8902f79f43f2621f6e33e52a69d947",
+      "storage": "repository",
+      "deployed_sha256": "07cd4cb93c2f8f120b40187a478fd2fe2c8902f79f43f2621f6e33e52a69d947",
+      "deployed_bytes": 4850
+    },
+    {
+      "path": "reports/tts_transport_control.json",
+      "bytes": 558,
+      "sha256": "d3bc03fb9bcd3819843e684f8699aec95798f3c5144d9b73299dbd7635e4487c",
+      "storage": "repository",
+      "deployed_sha256": "d3bc03fb9bcd3819843e684f8699aec95798f3c5144d9b73299dbd7635e4487c",
+      "deployed_bytes": 558
+    },
+    {
+      "path": "reports/version_change.json",
+      "bytes": 3971,
+      "sha256": "349f59aba83f5f34cb37d6f6f3adde264474a3201ecb6e99db1c2a9bf9cc3065",
+      "storage": "repository",
+      "deployed_sha256": "349f59aba83f5f34cb37d6f6f3adde264474a3201ecb6e99db1c2a9bf9cc3065",
+      "deployed_bytes": 3971
+    },
+    {
+      "path": "reports/voice_choices.json",
+      "bytes": 24662,
+      "sha256": "72260eb0b5312df3ab70d7ee2f7efc1a2a1c054cceccf352730c0f50527fa191",
+      "storage": "repository",
+      "deployed_sha256": "72260eb0b5312df3ab70d7ee2f7efc1a2a1c054cceccf352730c0f50527fa191",
+      "deployed_bytes": 24662
+    },
+    {
+      "path": "results/astra/.audit.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage": "repository",
+      "deployed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "deployed_bytes": 0
+    },
+    {
+      "path": "results/astra/DEPENDENCIES.md",
+      "bytes": 5623,
+      "sha256": "bec77222915c67bbb0dc3060cdc3ea5cae91010cb21e85bfdae2d40f6d773ed1",
+      "storage": "repository",
+      "deployed_sha256": "bec77222915c67bbb0dc3060cdc3ea5cae91010cb21e85bfdae2d40f6d773ed1",
+      "deployed_bytes": 5623
+    },
+    {
+      "path": "results/astra/analyze_audio.py",
+      "bytes": 2047,
+      "sha256": "6ab7b2acb9a3fdd0767c18932ac1475a6ae04551d54344216410cb4ced637c00",
+      "storage": "repository",
+      "deployed_sha256": "6ab7b2acb9a3fdd0767c18932ac1475a6ae04551d54344216410cb4ced637c00",
+      "deployed_bytes": 2047
+    },
+    {
+      "path": "results/astra/audit.py",
+      "bytes": 1559,
+      "sha256": "ac1b1f2fcfff36b8befedbe7134d0e5f0c419d146bfded8d19b67569c10bd1eb",
+      "storage": "repository",
+      "deployed_sha256": "ac1b1f2fcfff36b8befedbe7134d0e5f0c419d146bfded8d19b67569c10bd1eb",
+      "deployed_bytes": 1559
+    },
+    {
+      "path": "results/astra/deliverable_manifest.json",
+      "bytes": 511,
+      "sha256": "399593e5b183ee229ff277d96f1d9e7015e806bc94589ffe391fcd733372dc69",
+      "storage": "repository",
+      "deployed_sha256": "399593e5b183ee229ff277d96f1d9e7015e806bc94589ffe391fcd733372dc69",
+      "deployed_bytes": 511
+    },
+    {
+      "path": "results/astra/final.mp4",
+      "bytes": 59601285,
+      "sha256": "b65038e366ce796d078ce6dd6cb8ded4b7fe77bd292f9dc5bdd4a6fbbee9e9f8",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-astra-xhigh-assets-20261118/b65038e366ce796d078c-final.mp4",
+      "preview": "web-media/b65038e366ce796d078c.mp4"
+    },
+    {
+      "path": "results/astra/narration.wav",
+      "bytes": 17804844,
+      "sha256": "6e3e37871f7146313ffd1fcaf9464aa50a47fb18f698df1330325b6b6ddd15e4",
+      "storage": "release",
+      "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-astra-xhigh-assets-20261118/6e3e37871f7146313ffd-narration.wav"
+    },
+    {
+      "path": "results/astra/narration_plan.json",
+      "bytes": 2720,
+      "sha256": "e2535411acf97bfc47e99fcd583177caf53e0dcdea433d9e34741a339ea4529c",
+      "storage": "repository",
+      "deployed_sha256": "e2535411acf97bfc47e99fcd583177caf53e0dcdea433d9e34741a339ea4529c",
+      "deployed_bytes": 2720
+    },
+    {
+      "path": "results/astra/python_versions.json",
+      "bytes": 407,
+      "sha256": "7568b632e0176dc1943ba4412e552aa32c50c5a49df2f5206e6c79a6de9b504b",
+      "storage": "repository",
+      "deployed_sha256": "7568b632e0176dc1943ba4412e552aa32c50c5a49df2f5206e6c79a6de9b504b",
+      "deployed_bytes": 407
+    },
+    {
+      "path": "results/astra/render.py",
+      "bytes": 7058,
+      "sha256": "58936ffe6fcabb9fec6ea532d169089f322051a1ff9ef316f82075ea50da4b37",
+      "storage": "repository",
+      "deployed_sha256": "58936ffe6fcabb9fec6ea532d169089f322051a1ff9ef316f82075ea50da4b37",
+      "deployed_bytes": 7058
+    },
+    {
+      "path": "results/astra/requirements.txt",
+      "bytes": 92,
+      "sha256": "832010ee9381a625a02f98deb35267a221530eb80c7d49b92ad52ec1d0cbb93b",
+      "storage": "repository",
+      "deployed_sha256": "832010ee9381a625a02f98deb35267a221530eb80c7d49b92ad52ec1d0cbb93b",
+      "deployed_bytes": 92
+    },
+    {
+      "path": "results/astra/research.py",
+      "bytes": 2529,
+      "sha256": "ffee53eefb0213bf07877176e4d8649ad88f40c60fe6ec4c34c74b23d65cbf5f",
+      "storage": "repository",
+      "deployed_sha256": "ffee53eefb0213bf07877176e4d8649ad88f40c60fe6ec4c34c74b23d65cbf5f",
+      "deployed_bytes": 2529
+    },
+    {
+      "path": "results/astra/research_log.json",
+      "bytes": 84235,
+      "sha256": "84cd69741e6a51ce5ec32d73792893e05efb48bc7e0f29e7e730e9f400ea22db",
+      "storage": "repository",
+      "deployed_sha256": "84cd69741e6a51ce5ec32d73792893e05efb48bc7e0f29e7e730e9f400ea22db",
+      "deployed_bytes": 84235
+    },
+    {
+      "path": "results/astra/segments.json",
+      "bytes": 17089,
+      "sha256": "2be8ffb0f48608b0f999bb5d3907444d2348889fcaeae4549d409c8fbb934752",
+      "storage": "repository",
+      "deployed_sha256": "2be8ffb0f48608b0f999bb5d3907444d2348889fcaeae4549d409c8fbb934752",
+      "deployed_bytes": 17089
+    },
+    {
+      "path": "results/astra/subtitles.srt",
+      "bytes": 1839,
+      "sha256": "8bf2878b7b4ecec09cc552c625b337a7716240cf5a565e8629a906c5bfb8399f",
+      "storage": "repository",
+      "deployed_sha256": "8bf2878b7b4ecec09cc552c625b337a7716240cf5a565e8629a906c5bfb8399f",
+      "deployed_bytes": 1839
+    },
+    {
+      "path": "results/astra/synthesize.py",
+      "bytes": 2319,
+      "sha256": "31064a4291656094a5e7a5624f9ed2109918af2f61f87b01b7d0a27a1b18c115",
+      "storage": "repository",
+      "deployed_sha256": "31064a4291656094a5e7a5624f9ed2109918af2f61f87b01b7d0a27a1b18c115",
+      "deployed_bytes": 2319
+    },
+    {
+      "path": "results/astra/tts_metadata.json",
+      "bytes": 32417,
+      "sha256": "8e89d6096f6454b8d335ba02293a8a013117543a3e16941216021a9ba9cc5ce1",
+      "storage": "repository",
+      "deployed_sha256": "8e89d6096f6454b8d335ba02293a8a013117543a3e16941216021a9ba9cc5ce1",
+      "deployed_bytes": 32417
+    },
+    {
+      "path": "results/astra/validation.json",
+      "bytes": 7779,
+      "sha256": "22f19887a5d642c7bfe7548b52bfd6ba299fff697eb4d7373928c302484f655d",
+      "storage": "repository",
+      "deployed_sha256": "22f19887a5d642c7bfe7548b52bfd6ba299fff697eb4d7373928c302484f655d",
+      "deployed_bytes": 7779
+    },
+    {
+      "path": "results/astra/verify.py",
+      "bytes": 3756,
+      "sha256": "b1aeedcebd01da0996abeca2328eceaf45570a3d6f95fdd71ae7b4c663ddc8c4",
+      "storage": "repository",
+      "deployed_sha256": "b1aeedcebd01da0996abeca2328eceaf45570a3d6f95fdd71ae7b4c663ddc8c4",
+      "deployed_bytes": 3756
+    },
+    {
+      "path": "results/astra/write_segments.py",
+      "bytes": 10297,
+      "sha256": "ab9661af56db360fb062590fe84d1c40f663af030d27483232a7b829bc50fcc0",
+      "storage": "repository",
+      "deployed_sha256": "ab9661af56db360fb062590fe84d1c40f663af030d27483232a7b829bc50fcc0",
+      "deployed_bytes": 10297
+    }
+  ],
+  "secret_scan": "passed",
+  "scope": "Public task, sealed xhigh/unlimited Astra answers and linked audit evidence only.",
+  "release": "https://github.com/NanXiang-git/OmniALE_v2/releases/tag/birds-v6-astra-xhigh-assets-20261118",
+  "previews_only_for_browsing": true
+}
