@@ -38,7 +38,8 @@ def build():
 if(!d.cases.some(x=>x.key===c.key))d.cases.push(c);
 const report='birds-v3-report/reports/index.html';
 function content(){return '<section class="note-card"><h2>六段鸟类科普 · Sol / Luna</h2><p>Sol 23.6521；Luna 25.2222。均识别正确2/6段，Codex + high，60分钟封顶。</p><p><a class="button primary" href="'+report+'">完整实验看板 ↗</a> <a class="button" href="'+report+'#tools">工具调用 ↗</a> <a class="button" href="'+report+'#network">实际联网轨迹 ↗</a></p></section>'}
-window.OmniResults=Object.freeze({...o,overview(cases,records,target){o.overview(cases.filter(x=>x.key!==c.key),records,target);target.insertAdjacentHTML('afterbegin',content())},render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="六段鸟类实验：成片、分数与调用证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
+(window.OMNIALE_BIRDS_SECTIONS ||= {})['v3']={content,report};
+window.OmniResults=Object.freeze({...o,render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="六段鸟类实验：成片、分数与调用证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
 document.addEventListener('DOMContentLoaded',()=>{const n=document.querySelector('[data-view="packages"] .nav-count');if(n)n.textContent=d.cases.length;});})();'''.replace('PAYLOAD',js(c))
     (OUT/'integration.js').write_text(overlay,encoding='utf8')
     p=BASE/'dist/index.html';s=p.read_text(encoding='utf8')

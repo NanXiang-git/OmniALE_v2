@@ -31,7 +31,8 @@ const old=d.cases.find(x=>x.key==='task-birds-v3');if(old){old.title='鸟类科�
 const oldV4=d.cases.find(x=>x.key==='task-birds-v4');if(oldV4){oldV4.versionLabel='V4 · 已确认同源素材暴露';oldV4.summary+=' 审计补充：Sol 曾读取与第一章同源的 XC238544，历史分数保留，不代表无泄漏识别成绩。';}
 const report='birds-v5-report/reports/index.html';
 function content(){return '<section class="note-card"><h2>V5 · 精确拦截同源素材</h2><p>'+c.resultSummary+'</p><p>精确拦截 XC238544 和已知 Flickr 原素材；仍由模型自主制作配音，安装和重试计入60分钟。V4 Sol 已确认接触同源音频；V4 分数保留，但不作为无泄漏成绩。</p><p><a class="button primary" href="'+report+'">新实验完整看板 ↗</a> <a class="button" href="'+report+'#tools">工具调用 ↗</a> <a class="button" href="'+report+'#network">联网轨迹 ↗</a> <a class="button" href="birds-v4-report/reports/index.html">V4历史结果（有同源素材暴露） ↗</a> <a class="button" href="birds-v3-report/reports/index.html">V3历史结果 ↗</a></p></section>'}
-window.OmniResults=Object.freeze({...o,overview(cases,records,target){o.overview(cases.filter(x=>x.key!==c.key),records,target);target.insertAdjacentHTML('afterbegin',content())},render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="V5自主配音实验与证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
+(window.OMNIALE_BIRDS_SECTIONS ||= {})['v5']={content,report};
+window.OmniResults=Object.freeze({...o,render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="V5自主配音实验与证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
 document.addEventListener('DOMContentLoaded',()=>{const n=document.querySelector('[data-view="packages"] .nav-count');if(n)n.textContent=d.cases.length;});})();'''.replace('PAYLOAD',js(c))
     (OUT/'integration.js').write_text(overlay,encoding='utf8')
     index=BASE/'dist/index.html';text=index.read_text(encoding='utf8')

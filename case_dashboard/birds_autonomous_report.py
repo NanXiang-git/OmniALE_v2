@@ -30,7 +30,8 @@ def build():
 const old=d.cases.find(x=>x.key==='task-birds-v3');if(old){old.title='鸟类科普 V3 · 预置固定音色';old.versionLabel='V3 预置配音 · 历史条件';}
 const report='birds-v4-report/reports/index.html';
 function content(){return '<section class="note-card"><h2>V4 · 模型自主配音</h2><p>'+c.resultSummary+'</p><p>无预制配音或检索脚本，工具、音色与代码由模型选择；安装和失败重试计入60分钟。</p><p><a class="button primary" href="'+report+'">新实验完整看板 ↗</a> <a class="button" href="'+report+'#tools">工具调用 ↗</a> <a class="button" href="'+report+'#network">联网轨迹 ↗</a> <a class="button" href="birds-v3-report/reports/index.html">V3预置配音历史结果 ↗</a></p></section>'}
-window.OmniResults=Object.freeze({...o,overview(cases,records,target){o.overview(cases.filter(x=>x.key!==c.key),records,target);target.insertAdjacentHTML('afterbegin',content())},render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="V4自主配音实验与证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
+(window.OMNIALE_BIRDS_SECTIONS ||= {})['v4']={content,report};
+window.OmniResults=Object.freeze({...o,render(x,r,target){if(x.key!==c.key)return o.render(x,r,target);target.innerHTML=content()+'<iframe title="V4自主配音实验与证据" src="'+report+'" style="width:100%;height:1400px;border:0" allow="fullscreen"></iframe>'}});
 document.addEventListener('DOMContentLoaded',()=>{const n=document.querySelector('[data-view="packages"] .nav-count');if(n)n.textContent=d.cases.length;});})();'''.replace('PAYLOAD',js(c))
     (OUT/'integration.js').write_text(overlay,encoding='utf8')
     index=BASE/'dist/index.html';text=index.read_text(encoding='utf8')
