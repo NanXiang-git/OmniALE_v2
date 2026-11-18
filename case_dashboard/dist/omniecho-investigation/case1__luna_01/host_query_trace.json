@@ -1,0 +1,36 @@
+[
+  {
+    "sequence": 1,
+    "time_utc": "2026-11-18T07:57:30.552962+00:00",
+    "action": "create",
+    "task_id": "case1",
+    "demo": false,
+    "initial_station": null
+  },
+  {
+    "sequence": 2,
+    "time_utc": "2026-11-18T08:00:20.060454+00:00",
+    "action": "export_evidence",
+    "evidence_id": "Ee463ebd1e9274d9f",
+    "start_s": 0,
+    "end_s": 37.333,
+    "path": "evidence/Ee463ebd1e9274d9f.mkv",
+    "sha256": "7c4b7d7deeb5a4781af57ea38f718578364ec0503bc2ff1cf7da7aff62db38d5",
+    "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+    "preview_path": "evidence/Ee463ebd1e9274d9f_preview.mp4",
+    "preview_sha256": "2e44c3aedb378864f9453d7fe8774df4d4307ebb92e8e3d347b7c87bd7453d8d",
+    "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+  },
+  {
+    "sequence": 3,
+    "time_utc": "2026-11-18T08:09:51.202221+00:00",
+    "action": "validate_submission",
+    "valid": true
+  },
+  {
+    "sequence": 4,
+    "time_utc": "2026-11-18T08:10:07.140122+00:00",
+    "action": "submit",
+    "status": "sealed_format_valid_pending_manual_review"
+  }
+]

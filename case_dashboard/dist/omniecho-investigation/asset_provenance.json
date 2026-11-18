@@ -1,0 +1,1811 @@
+{
+  "dataset": "PKU-VaLuE-Lab/OmniEchoBench",
+  "revision": "5c85a02fd612f22c26c62f2fad883a46c4685213",
+  "originals": [
+    {
+      "path": "private/assets/incident.mp4",
+      "source_path": "OmniEchoBench-QA/videos/vid_0095.mp4",
+      "source_url": "https://huggingface.co/datasets/PKU-VaLuE-Lab/OmniEchoBench/resolve/5c85a02fd612f22c26c62f2fad883a46c4685213/OmniEchoBench-QA/videos/vid_0095.mp4",
+      "download_url": "https://hf-mirror.com/datasets/PKU-VaLuE-Lab/OmniEchoBench/resolve/5c85a02fd612f22c26c62f2fad883a46c4685213/OmniEchoBench-QA/videos/vid_0095.mp4",
+      "revision": "5c85a02fd612f22c26c62f2fad883a46c4685213",
+      "sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+      "expected_lfs_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+      "bytes": 25386557,
+      "acquisition": "verified_local_original",
+      "full_decode_passed": true,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mpeg4",
+            "codec_long_name": "MPEG-4 part 2",
+            "profile": "Simple Profile",
+            "codec_type": "video",
+            "codec_tag_string": "mp4v",
+            "codec_tag": "0x7634706d",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 1,
+            "chroma_location": "left",
+            "refs": 1,
+            "quarter_sample": "false",
+            "divx_packed": "false",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 573440,
+            "duration": "37.333333",
+            "bit_rate": "5165154",
+            "nb_frames": "1120",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 4,
+            "channel_layout": "4.0",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1791984,
+            "duration": "37.333000",
+            "bit_rate": "267377",
+            "nb_frames": "1751",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\private\\assets\\incident.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "37.333333",
+          "size": "25386557",
+          "bit_rate": "5439976",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2mp41",
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      }
+    }
+  ],
+  "review_derivatives": [
+    {
+      "path": "dashboard/assets/incident_preview.mp4",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\incident_preview.mp4",
+      "derived_from": "private/assets/incident.mp4",
+      "sha256": "95cdc0b7ea2c26e59f16516bc4d7bf55db0d6fb3b99e18069979bbbdb104bc34",
+      "bytes": 4259030,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-vf",
+        "scale=1280:-2",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "fast",
+        "-crf",
+        "23",
+        "-pix_fmt",
+        "yuv420p",
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "160k",
+        "-movflags",
+        "+faststart"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1280,
+            "height": 720,
+            "coded_width": 1280,
+            "coded_height": 720,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 31,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 573440,
+            "duration": "37.333333",
+            "bit_rate": "742611",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1120",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc62.11.100 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1791984,
+            "duration": "37.333000",
+            "bit_rate": "160830",
+            "nb_frames": "1751",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\incident_preview.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "37.333333",
+          "size": "4259030",
+          "bit_rate": "912649",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/incident_poster.jpg",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\incident_poster.jpg",
+      "derived_from": "private/assets/incident.mp4",
+      "sha256": "e458d46f07eeaedad315b4a2bc9638c1383be26d3134b2b16fab8d0feec78bbc",
+      "bytes": 53763,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-ss",
+        "4",
+        "-frames:v",
+        "1",
+        "-vf",
+        "scale=1280:-2",
+        "-q:v",
+        "3",
+        "-update",
+        "1"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mjpeg",
+            "codec_long_name": "Motion JPEG",
+            "profile": "Baseline",
+            "codec_type": "video",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "width": 1280,
+            "height": 720,
+            "coded_width": 1280,
+            "coded_height": 720,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuvj420p",
+            "level": -99,
+            "color_range": "pc",
+            "color_space": "bt470bg",
+            "chroma_location": "center",
+            "refs": 1,
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "time_base": "1/25",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1,
+            "duration": "0.040000",
+            "bits_per_raw_sample": "8",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\incident_poster.jpg",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "image2",
+          "format_long_name": "image2 sequence",
+          "start_time": "0.000000",
+          "duration": "0.040000",
+          "size": "53763",
+          "bit_rate": "10752600",
+          "probe_score": 50
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M01.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M01.mp3",
+      "derived_from": "private/assets/stations/M01.wav",
+      "sha256": "ffde6b652fdccc8603384faf6abecd30b2350164af1c1366bb448d0529aed285",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M01.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M02.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M02.mp3",
+      "derived_from": "private/assets/stations/M02.wav",
+      "sha256": "7367d1707138ae249d30a90de640d490efb78fc7b62693fd3ef3270569454d4b",
+      "bytes": 602924,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 424667124,
+            "duration": "30.092625",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M02.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.092625",
+          "size": "602924",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M03.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M03.mp3",
+      "derived_from": "private/assets/stations/M03.wav",
+      "sha256": "5d00cffbdfec2bdaf1d77f4ab7f6b7d3337099af92c5a93ce7d79fb2f5e47407",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M03.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M04.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M04.mp3",
+      "derived_from": "private/assets/stations/M04.wav",
+      "sha256": "a95091c8de5566e1349f77f57e0be6494ccc3e10582e9c4a5f6c0ac9b6dfbe80",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M04.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M05.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M05.mp3",
+      "derived_from": "private/assets/stations/M05.wav",
+      "sha256": "142c17f615265d26644e1912d7505a4c83b83316f152f3599482d8b697719656",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M05.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M06.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M06.mp3",
+      "derived_from": "private/assets/stations/M06.wav",
+      "sha256": "c894b3e5167f81725f350feceb2613469bec03f0072984ea90cadd367db101a8",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M06.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M07.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M07.mp3",
+      "derived_from": "private/assets/stations/M07.wav",
+      "sha256": "502acbecd83dfec4b8a7af017202a947ffc768cc235aaf57ec4302af705794ed",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M07.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M08.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M08.mp3",
+      "derived_from": "private/assets/stations/M08.wav",
+      "sha256": "804ae3645789deb242d9bb7fa0dedda73ec8480011128910929b8ca99d827c9d",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M08.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M09.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M09.mp3",
+      "derived_from": "private/assets/stations/M09.wav",
+      "sha256": "07f3ec898302e4b357afb41e3ff645d909375f1bf9788c29115f8374120ec6bb",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M09.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M10.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M10.mp3",
+      "derived_from": "private/assets/stations/M10.wav",
+      "sha256": "b2589349ae2d266e2402f6e64bec795669dd65082e106ada1295b11dfd28310b",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M10.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M11.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M11.mp3",
+      "derived_from": "private/assets/stations/M11.wav",
+      "sha256": "176bab32c59691cf48a9496629f04ebc0a5cb8518672c5334510e2dee3e4b6c6",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M11.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M12.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M12.mp3",
+      "derived_from": "private/assets/stations/M12.wav",
+      "sha256": "7f2e08ac77e2d05568f389d53de0dfdf01d6e71f8edbe8d96dd1d74ca870353c",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M12.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M13.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M13.mp3",
+      "derived_from": "private/assets/stations/M13.wav",
+      "sha256": "fae67706773c250191282cb8cf937a41464b20abdcaa0cf9c0a52e727b414895",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M13.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M14.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M14.mp3",
+      "derived_from": "private/assets/stations/M14.wav",
+      "sha256": "b9c10755b97f37916fa6d7a5b5a6df5bb42d87e34af219c6c5a77c8ce1e86431",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M14.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M15.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M15.mp3",
+      "derived_from": "private/assets/stations/M15.wav",
+      "sha256": "05ad44cf4bf0a1a3f5b60cfcce48b233078735afe3666302d04c4b6ac908b693",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M15.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/station_M16.mp3",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M16.mp3",
+      "derived_from": "private/assets/stations/M16.wav",
+      "sha256": "3b01754beb6a91232508fc01f0cd4c662721d98ddf97b72b2c60ae41f4077d53",
+      "bytes": 611084,
+      "full_decode_passed": true,
+      "ffmpeg_options": [
+        "-af",
+        "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "160k"
+      ],
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/14112000",
+            "start_pts": 324870,
+            "start_time": "0.023021",
+            "duration_ts": 430416000,
+            "duration": "30.500000",
+            "bit_rate": "160000",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "encoder": "Lavc62.11"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\station_M16.mp3",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mp3",
+          "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+          "start_time": "0.023021",
+          "duration": "30.500000",
+          "size": "611084",
+          "bit_rate": "160284",
+          "probe_score": 51,
+          "tags": {
+            "encoder": "Lavf62.3.100"
+          }
+        }
+      },
+      "for_review_only": true
+    },
+    {
+      "path": "dashboard/assets/map.png",
+      "absolute_path": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\map.png",
+      "derived_from": "private/assets/map.png",
+      "sha256": "20e387e9f2eedce624c099ada7a47567d94e5e2470f33e64b16a4bb61a8f37d7",
+      "bytes": 841800,
+      "transformation": "none: byte-identical copy",
+      "for_review_only": true,
+      "full_decode_passed": true,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "png",
+            "codec_long_name": "PNG (Portable Network Graphics) image",
+            "codec_type": "video",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "width": 767,
+            "height": 1400,
+            "coded_width": 767,
+            "coded_height": 1400,
+            "has_b_frames": 0,
+            "pix_fmt": "rgb24",
+            "level": -99,
+            "color_range": "pc",
+            "color_space": "gbr",
+            "refs": 1,
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "time_base": "1/25",
+            "disposition": {
+              "default": 0,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\omniecho_agent_cases_v1\\dashboard\\assets\\map.png",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "png_pipe",
+          "format_long_name": "piped png sequence",
+          "size": "841800",
+          "probe_score": 99
+        }
+      }
+    }
+  ],
+  "preview_audio_formula": "pan=stereo|c0=0.5*c0+0.25*c1+0.25*c3|c1=0.5*c0-0.25*c1+0.25*c3",
+  "model_inference_run": false,
+  "grading_run": false,
+  "upstream_channel_reference": "research/2609.23407/upstream/EVALUATION.md:75"
+}

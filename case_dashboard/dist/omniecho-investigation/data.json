@@ -1,0 +1,1430 @@
+{
+  "case": {
+    "key": "task-omniecho-investigation",
+    "caseId": "OMNIECHO-1",
+    "title": "多声源事件调查与证据报告 · 开发试跑",
+    "summary": "37.33 秒真实四通道视频，三个声源；自主分析、导出证据、制作可追溯报告并封存。Sol 61.11 / Luna 33.33；单样本开发结果。",
+    "versionLabel": "OmniEcho V1 · 开发试跑",
+    "status": "packaged",
+    "maturity": "development-pilot",
+    "category": "多声源调查",
+    "directory": "omniecho_agent_cases_v1/candidate/case1",
+    "main": "incident.mp4",
+    "poster": "omniecho-investigation/incident_poster.jpg",
+    "files": [
+      {
+        "name": "ATTRIBUTION.md",
+        "path": "ATTRIBUTION.md",
+        "url": "omniecho-investigation/candidate/ATTRIBUTION.md",
+        "bytes": 369,
+        "kind": "document",
+        "text": "素材和事实标注：PKU-VaLuE-Lab/OmniEchoBench。来源 https://huggingface.co/datasets/PKU-VaLuE-Lab/OmniEchoBench ，代码 https://github.com/PKU-VaLuE-Lab/OmniEcho 。上游 README 声明 CC BY-NC-SA 4.0，限非商业研究；HF license 元数据未完整填写。新增任务协议与原作者评分分开标识。精确实例映射由出题宿主持有。\n",
+        "meta": {}
+      },
+      {
+        "name": "coverage_manifest.json",
+        "path": "coverage_manifest.json",
+        "url": "omniecho-investigation/candidate/coverage_manifest.json",
+        "bytes": 10369,
+        "kind": "document",
+        "text": "{\n  \"task_id\": \"case1\",\n  \"duration_s\": 37.333333,\n  \"sources\": [\n    {\n      \"source_id\": \"S1\",\n      \"description\": \"alarm ringing\",\n      \"label\": \"报警声\"\n    },\n    {\n      \"source_id\": \"S2\",\n      \"description\": \"rustling plastic\",\n      \"label\": \"塑料摩擦声\"\n    },\n    {\n      \"source_id\": \"S3\",\n      \"description\": \"jingling keys\",\n      \"label\": \"钥匙声\"\n    }\n  ],\n  \"coordinate_frames\": {\n    \"camera-body\": \"当前镜头朝向为前\",\n    \"world\": \"相机初始朝向为 +X，左为 +Y\",\n    \"camera\": \"相机自身转动\",\n    \"mixed\": \"相机转动与声源绕相机运动的一致性\"\n  },\n  \"records\": [\n    {\n      \"record_id\": \"C01\",\n      \"source_id\": \"camera\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.0,\n        18.0\n      ],\n      \"coordinate_frame\": \"camera\",\n      \"required_fields\": [\n        \"turn_direction\",\n        \"turn_degrees\"\n      ],\n      \"requests\": [\n        \"Between t=0.0 and t=18.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?\"\n      ]\n    },\n    {\n      \"record_id\": \"C02\",\n      \"source_id\": \"camera\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"camera\",\n      \"required_fields\": [\n        \"turn_direction\",\n        \"turn_degrees\"\n      ],\n      \"requests\": [\n        \"Between t=0.5 and t=37.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?\"\n      ]\n    },\n    {\n      \"record_id\": \"C03\",\n      \"source_id\": \"S1\",\n      \"time_s\": 9.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\"\n      ],\n      \"requests\": [\n        \"At t=9.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C04\",\n      \"source_id\": \"S1\",\n      \"time_s\": 9.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\",\n        \"distance_m\"\n      ],\n      \"requests\": [\n        \"At t=9.5 s, give the position of the source of an alarm ringing sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m').\"\n      ]\n    },\n    {\n      \"record_id\": \"C05\",\n      \"source_id\": \"S1\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"mixed\",\n      \"required_fields\": [\n        \"same_turn_direction\"\n      ],\n      \"requests\": [\n        \"Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of an alarm ringing sound travels around the camera?\"\n      ]\n    },\n    {\n      \"record_id\": \"C06\",\n      \"source_id\": \"S1\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        10.0\n      ],\n      \"coordinate_frame\": \"world\",\n      \"required_fields\": [\n        \"motion_direction\"\n      ],\n      \"requests\": [\n        \"In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of an alarm ringing sound from t=0.5 to t=10.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C07\",\n      \"source_id\": \"S1\",\n      \"time_s\": 8.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"turn_direction\",\n        \"turn_degrees\"\n      ],\n      \"requests\": [\n        \"At t=8.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of an alarm ringing sound becomes centred in its view (body azimuth 0)?\"\n      ]\n    },\n    {\n      \"record_id\": \"C08\",\n      \"source_id\": \"S1\",\n      \"time_s\": 2.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\"\n      ],\n      \"requests\": [\n        \"At t=2.5 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C09\",\n      \"source_id\": \"S2\",\n      \"time_s\": 13.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\"\n      ],\n      \"requests\": [\n        \"At t=13.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C10\",\n      \"source_id\": \"S2\",\n      \"time_s\": 21.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\",\n        \"distance_m\"\n      ],\n      \"requests\": [\n        \"At t=21.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m').\"\n      ]\n    },\n    {\n      \"record_id\": \"C11\",\n      \"source_id\": \"S2\",\n      \"time_s\": null,\n      \"interval_s\": [\n        12.0,\n        21.0\n      ],\n      \"coordinate_frame\": \"world\",\n      \"required_fields\": [\n        \"motion_direction\"\n      ],\n      \"requests\": [\n        \"In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of a rustling plastic sound from t=12.0 to t=21.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C12\",\n      \"source_id\": \"S2\",\n      \"time_s\": 12.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"turn_direction\",\n        \"turn_degrees\"\n      ],\n      \"requests\": [\n        \"At t=12.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a rustling plastic sound becomes centred in its view (body azimuth 0)?\"\n      ]\n    },\n    {\n      \"record_id\": \"C13\",\n      \"source_id\": \"S2\",\n      \"time_s\": 16.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\",\n        \"distance_m\"\n      ],\n      \"requests\": [\n        \"At t=16.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\",\n        \"At t=16.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m').\"\n      ]\n    },\n    {\n      \"record_id\": \"C14\",\n      \"source_id\": \"S3\",\n      \"time_s\": 25.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\"\n      ],\n      \"requests\": [\n        \"At t=25.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a jingling keys sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.\"\n      ]\n    },\n    {\n      \"record_id\": \"C15\",\n      \"source_id\": \"S3\",\n      \"time_s\": 27.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"direction\",\n        \"distance_m\"\n      ],\n      \"requests\": [\n        \"At t=27.5 s, give the position of the source of a jingling keys sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m').\"\n      ]\n    },\n    {\n      \"record_id\": \"C16\",\n      \"source_id\": \"S3\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"mixed\",\n      \"required_fields\": [\n        \"same_turn_direction\"\n      ],\n      \"requests\": [\n        \"Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of a jingling keys sound travels around the camera?\"\n      ]\n    },\n    {\n      \"record_id\": \"C17\",\n      \"source_id\": \"S3\",\n      \"time_s\": 34.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"required_fields\": [\n        \"turn_direction\",\n        \"turn_degrees\"\n      ],\n      \"requests\": [\n        \"At t=34.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a jingling keys sound becomes centred in its view (body azimuth 0)?\"\n      ]\n    }\n  ]\n}\n",
+        "meta": {}
+      },
+      {
+        "name": "evidence_manifest.template.json",
+        "path": "evidence_manifest.template.json",
+        "url": "omniecho-investigation/candidate/evidence_manifest.template.json",
+        "bytes": 24,
+        "kind": "document",
+        "text": "{\n  \"evidence\": []\n}\n",
+        "meta": {}
+      },
+      {
+        "name": "findings.schema.json",
+        "path": "findings.schema.json",
+        "url": "omniecho-investigation/candidate/findings.schema.json",
+        "bytes": 28787,
+        "kind": "document",
+        "text": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"type\": \"object\",\n  \"required\": [\n    \"findings\"\n  ],\n  \"additionalProperties\": false,\n  \"properties\": {\n    \"findings\": {\n      \"type\": \"array\",\n      \"minItems\": 17,\n      \"maxItems\": 17,\n      \"items\": {\n        \"oneOf\": [\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C01\"\n              },\n              \"source_id\": {\n                \"const\": \"camera\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  0.0,\n                  18.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera\"\n              },\n              \"turn_direction\": {\n                \"enum\": [\n                  \"left\",\n                  \"right\",\n                  \"unknown\"\n                ]\n              },\n              \"turn_degrees\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0,\n                    \"maximum\": 360\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"turn_direction\",\n              \"turn_degrees\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C02\"\n              },\n              \"source_id\": {\n                \"const\": \"camera\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  0.5,\n                  37.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera\"\n              },\n              \"turn_direction\": {\n                \"enum\": [\n                  \"left\",\n                  \"right\",\n                  \"unknown\"\n                ]\n              },\n              \"turn_degrees\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0,\n                    \"maximum\": 360\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"turn_direction\",\n              \"turn_degrees\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C03\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": 9.0\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C04\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": 9.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"distance_m\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"distance_m\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C05\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  0.5,\n                  37.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"mixed\"\n              },\n              \"same_turn_direction\": {\n                \"enum\": [\n                  \"yes\",\n                  \"no\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"same_turn_direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C06\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  0.5,\n                  10.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"world\"\n              },\n              \"motion_direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"motion_direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C07\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": 8.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"turn_direction\": {\n                \"enum\": [\n                  \"left\",\n                  \"right\",\n                  \"unknown\"\n                ]\n              },\n              \"turn_degrees\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0,\n                    \"maximum\": 360\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"turn_direction\",\n              \"turn_degrees\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C08\"\n              },\n              \"source_id\": {\n                \"const\": \"S1\"\n              },\n              \"time_s\": {\n                \"const\": 2.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C09\"\n              },\n              \"source_id\": {\n                \"const\": \"S2\"\n              },\n              \"time_s\": {\n                \"const\": 13.0\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C10\"\n              },\n              \"source_id\": {\n                \"const\": \"S2\"\n              },\n              \"time_s\": {\n                \"const\": 21.0\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"distance_m\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"distance_m\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C11\"\n              },\n              \"source_id\": {\n                \"const\": \"S2\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  12.0,\n                  21.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"world\"\n              },\n              \"motion_direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"motion_direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C12\"\n              },\n              \"source_id\": {\n                \"const\": \"S2\"\n              },\n              \"time_s\": {\n                \"const\": 12.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"turn_direction\": {\n                \"enum\": [\n                  \"left\",\n                  \"right\",\n                  \"unknown\"\n                ]\n              },\n              \"turn_degrees\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0,\n                    \"maximum\": 360\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"turn_direction\",\n              \"turn_degrees\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C13\"\n              },\n              \"source_id\": {\n                \"const\": \"S2\"\n              },\n              \"time_s\": {\n                \"const\": 16.0\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"distance_m\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"distance_m\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C14\"\n              },\n              \"source_id\": {\n                \"const\": \"S3\"\n              },\n              \"time_s\": {\n                \"const\": 25.0\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C15\"\n              },\n              \"source_id\": {\n                \"const\": \"S3\"\n              },\n              \"time_s\": {\n                \"const\": 27.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"direction\": {\n                \"enum\": [\n                  \"front\",\n                  \"front-left\",\n                  \"left\",\n                  \"back-left\",\n                  \"back\",\n                  \"back-right\",\n                  \"right\",\n                  \"front-right\",\n                  \"unknown\"\n                ]\n              },\n              \"distance_m\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"direction\",\n              \"distance_m\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C16\"\n              },\n              \"source_id\": {\n                \"const\": \"S3\"\n              },\n              \"time_s\": {\n                \"const\": null\n              },\n              \"interval_s\": {\n                \"const\": [\n                  0.5,\n                  37.0\n                ]\n              },\n              \"coordinate_frame\": {\n                \"const\": \"mixed\"\n              },\n              \"same_turn_direction\": {\n                \"enum\": [\n                  \"yes\",\n                  \"no\",\n                  \"unknown\"\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"same_turn_direction\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          },\n          {\n            \"type\": \"object\",\n            \"properties\": {\n              \"record_id\": {\n                \"const\": \"C17\"\n              },\n              \"source_id\": {\n                \"const\": \"S3\"\n              },\n              \"time_s\": {\n                \"const\": 34.5\n              },\n              \"interval_s\": {\n                \"const\": null\n              },\n              \"coordinate_frame\": {\n                \"const\": \"camera-body\"\n              },\n              \"turn_direction\": {\n                \"enum\": [\n                  \"left\",\n                  \"right\",\n                  \"unknown\"\n                ]\n              },\n              \"turn_degrees\": {\n                \"anyOf\": [\n                  {\n                    \"type\": \"number\",\n                    \"minimum\": 0,\n                    \"maximum\": 360\n                  },\n                  {\n                    \"const\": \"unknown\"\n                  }\n                ]\n              },\n              \"evidence_ids\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"type\": \"string\"\n                },\n                \"minItems\": 1\n              },\n              \"report_anchor\": {\n                \"type\": \"string\",\n                \"pattern\": \"^[A-Za-z][A-Za-z0-9_-]*$\"\n              }\n            },\n            \"required\": [\n              \"record_id\",\n              \"source_id\",\n              \"time_s\",\n              \"interval_s\",\n              \"coordinate_frame\",\n              \"turn_direction\",\n              \"turn_degrees\",\n              \"evidence_ids\",\n              \"report_anchor\"\n            ],\n            \"additionalProperties\": false\n          }\n        ]\n      }\n    }\n  }\n}\n",
+        "meta": {}
+      },
+      {
+        "name": "findings.template.json",
+        "path": "findings.template.json",
+        "url": "omniecho-investigation/candidate/findings.template.json",
+        "bytes": 4775,
+        "kind": "document",
+        "text": "{\n  \"findings\": [\n    {\n      \"record_id\": \"C01\",\n      \"source_id\": \"camera\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.0,\n        18.0\n      ],\n      \"coordinate_frame\": \"camera\",\n      \"turn_direction\": \"unknown\",\n      \"turn_degrees\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C01\"\n    },\n    {\n      \"record_id\": \"C02\",\n      \"source_id\": \"camera\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"camera\",\n      \"turn_direction\": \"unknown\",\n      \"turn_degrees\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C02\"\n    },\n    {\n      \"record_id\": \"C03\",\n      \"source_id\": \"S1\",\n      \"time_s\": 9.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C03\"\n    },\n    {\n      \"record_id\": \"C04\",\n      \"source_id\": \"S1\",\n      \"time_s\": 9.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"distance_m\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C04\"\n    },\n    {\n      \"record_id\": \"C05\",\n      \"source_id\": \"S1\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"mixed\",\n      \"same_turn_direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C05\"\n    },\n    {\n      \"record_id\": \"C06\",\n      \"source_id\": \"S1\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        10.0\n      ],\n      \"coordinate_frame\": \"world\",\n      \"motion_direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C06\"\n    },\n    {\n      \"record_id\": \"C07\",\n      \"source_id\": \"S1\",\n      \"time_s\": 8.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"turn_direction\": \"unknown\",\n      \"turn_degrees\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C07\"\n    },\n    {\n      \"record_id\": \"C08\",\n      \"source_id\": \"S1\",\n      \"time_s\": 2.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C08\"\n    },\n    {\n      \"record_id\": \"C09\",\n      \"source_id\": \"S2\",\n      \"time_s\": 13.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C09\"\n    },\n    {\n      \"record_id\": \"C10\",\n      \"source_id\": \"S2\",\n      \"time_s\": 21.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"distance_m\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C10\"\n    },\n    {\n      \"record_id\": \"C11\",\n      \"source_id\": \"S2\",\n      \"time_s\": null,\n      \"interval_s\": [\n        12.0,\n        21.0\n      ],\n      \"coordinate_frame\": \"world\",\n      \"motion_direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C11\"\n    },\n    {\n      \"record_id\": \"C12\",\n      \"source_id\": \"S2\",\n      \"time_s\": 12.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"turn_direction\": \"unknown\",\n      \"turn_degrees\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C12\"\n    },\n    {\n      \"record_id\": \"C13\",\n      \"source_id\": \"S2\",\n      \"time_s\": 16.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"distance_m\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C13\"\n    },\n    {\n      \"record_id\": \"C14\",\n      \"source_id\": \"S3\",\n      \"time_s\": 25.0,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C14\"\n    },\n    {\n      \"record_id\": \"C15\",\n      \"source_id\": \"S3\",\n      \"time_s\": 27.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"direction\": \"unknown\",\n      \"distance_m\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C15\"\n    },\n    {\n      \"record_id\": \"C16\",\n      \"source_id\": \"S3\",\n      \"time_s\": null,\n      \"interval_s\": [\n        0.5,\n        37.0\n      ],\n      \"coordinate_frame\": \"mixed\",\n      \"same_turn_direction\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C16\"\n    },\n    {\n      \"record_id\": \"C17\",\n      \"source_id\": \"S3\",\n      \"time_s\": 34.5,\n      \"interval_s\": null,\n      \"coordinate_frame\": \"camera-body\",\n      \"turn_direction\": \"unknown\",\n      \"turn_degrees\": \"unknown\",\n      \"evidence_ids\": [],\n      \"report_anchor\": \"C17\"\n    }\n  ]\n}\n",
+        "meta": {}
+      },
+      {
+        "name": "incident.mp4",
+        "path": "incident.mp4",
+        "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/71d0ddbff4b2c53ead6c-incident.mp4",
+        "bytes": 25386557,
+        "kind": "video",
+        "text": null,
+        "meta": {
+          "duration": 37.333333,
+          "width": 1920,
+          "height": 1080
+        },
+        "preview": "omniecho-investigation/incident_preview.mp4",
+        "poster": "omniecho-investigation/incident_poster.jpg"
+      },
+      {
+        "name": "package_manifest.json",
+        "path": "package_manifest.json",
+        "url": "omniecho-investigation/candidate/package_manifest.json",
+        "bytes": 1718,
+        "kind": "document",
+        "text": "{\n  \"task_id\": \"case1\",\n  \"files\": [\n    {\n      \"path\": \"ATTRIBUTION.md\",\n      \"sha256\": \"4de0044f9e42fd1612147d264d65183d8d8e1343ddffbb170237d8d483373756\",\n      \"bytes\": 369\n    },\n    {\n      \"path\": \"coverage_manifest.json\",\n      \"sha256\": \"6984cd2ad5434d0c330f658f71d847c68132984a081f1a756e1717231bc082b1\",\n      \"bytes\": 10369\n    },\n    {\n      \"path\": \"evidence_manifest.template.json\",\n      \"sha256\": \"e1b8f4ac6c0adc63bf02003c8c14c67bc6079b91181d777a73a78383fa7d33b3\",\n      \"bytes\": 24\n    },\n    {\n      \"path\": \"findings.schema.json\",\n      \"sha256\": \"8a2ffa9652d4c11db82ba39e8832cb0ae469e9fc290ab4e1e9eae1259774577e\",\n      \"bytes\": 28787\n    },\n    {\n      \"path\": \"findings.template.json\",\n      \"sha256\": \"0920251548cdd8e56f70d6d58732a9e176d8f946f45976edbda1fc0f3ffe2dab\",\n      \"bytes\": 4775\n    },\n    {\n      \"path\": \"incident.mp4\",\n      \"sha256\": \"71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd\",\n      \"bytes\": 25386557\n    },\n    {\n      \"path\": \"RUN_ENV.md\",\n      \"sha256\": \"f293da0d3f22cafda1d88e30992cf1c4e724557c1f79581fcbb99c0c27911e73\",\n      \"bytes\": 2018\n    },\n    {\n      \"path\": \"SCORING.md\",\n      \"sha256\": \"e20621bed7a145a528f1d0dd7d6efa5ebc90c6c1fd9afb28da1e173889f9b23e\",\n      \"bytes\": 1411\n    },\n    {\n      \"path\": \"TASK.md\",\n      \"sha256\": \"ba492388ae7514b4059ba75f11c60637410997c5ce84e42263b3beef71223b04\",\n      \"bytes\": 2392\n    },\n    {\n      \"path\": \"TOOLS.md\",\n      \"sha256\": \"7c7a27365e3212416dd3907a9557a41f232625db807343e8b2c9f31ac83bf480\",\n      \"bytes\": 1426\n    }\n  ],\n  \"contains_gold\": false,\n  \"track\": \"development pilot tool-assisted audio\",\n  \"run_environment_added\": true\n}",
+        "meta": {}
+      },
+      {
+        "name": "RUN_ENV.md",
+        "path": "RUN_ENV.md",
+        "url": "omniecho-investigation/candidate/RUN_ENV.md",
+        "bytes": 2018,
+        "kind": "document",
+        "text": "# 本轮运行适配（两模型完全相同）\n\n开发试跑；xhigh，35分钟墙钟。WSL/bubblewrap 禁网，模型服务仅经宿主代理。/candidate 只读；/workspace 为独立工作区；交付文件写 /workspace/submission。原音频用本地信号处理工具分析，支持 numpy/scipy/soundfile/Pillow/FFmpeg，不是原生音频输入轨道。无其他模型、ASR 服务或联网检索。\n\n工具通过宿主管道调用，不需要 session_id：\n```\npython /runtime/tools/task_tool.py list_stations\npython /runtime/tools/task_tool.py listen_at '{\"station_id\":\"M01\"}'\npython /runtime/tools/task_tool.py record_observation '{\"receipt_id\":\"<实际回执>\",\"direction\":\"unknown\",\"distance_m\":\"unknown\"}'\npython /runtime/tools/task_tool.py finalize_location '{\"candidate\":\"<单个字母>\",\"evidence_ids\":[\"<实际回执>\"]}'\npython /runtime/tools/task_tool.py export_evidence '{\"start_s\":0,\"end_s\":1}'\npython /runtime/tools/task_tool.py validate_submission\npython /runtime/tools/task_tool.py submit\n```\n初始回执见 /workspace/session.json。Case 3 已交付录音会由宿主复制到 /workspace/submission/evidence/Mxx.wav；只有已解锁点可见。Case 1 export_evidence 生成四通道 MKV 与浏览器预览 MP4，返回完整回执；不要篡改它们。\n\n为了可复核报告与结构化结论一致性，请从最终 JSON 渲染报告，并把同一完整 JSON 对象嵌入报告的 `<script type=\"application/json\" id=\"structured-findings\">…</script>`。显示文本必须与 JSON 相同；嵌入匹配并不豁免散文事实冲突。报告需离线、有声源/时间（或录音回执）索引、可播放证据和下载原件链接。\n\nCase 3 selected_location.png 在原图上圈出你选择的 A/B/C/D，保持原场景内容；location_report.html 明确展示该图。所有观察以宿主冻结记录为准。可生成双声道浏览副本，但保留原四通道。失败/未知照实记录，不枚举候选。submit 是封存操作，不返回正误。\n",
+        "meta": {}
+      },
+      {
+        "name": "SCORING.md",
+        "path": "SCORING.md",
+        "url": "omniecho-investigation/candidate/SCORING.md",
+        "bytes": 1411,
+        "kind": "document",
+        "text": "# 评分设计（本次未执行）\n\n上游事实规则：完整八方向严格相等；转动方向正确且角度绝对误差≤45°；方位＋距离须方向正确且距离绝对误差≤2m；yes/no 精确匹配；地图字母精确匹配。遗漏、unknown 不从分母删除。\n\nCase 1：冻结18个原子事实，F=正确数/18；E=正确且有合格来源/时间证据的事实数/正确数（无正确项时0）；D=报告打开、JSON有效、证据解码、引用闭合、报告与JSON一致五项通过比例。S1=100F(0.70+0.20E+0.10D)。建议通过线S1≥80,F≥0.8,E≥0.9,D=1，每个声源至少一条正确可回放结论；缺报告/证据则任务未完成。\n\nCase 3：G=最终字母精确正确；M为收到录音数（含初始）；E=冻结观察方向与距离均正确且回执合法的数量/M；q为额外成功解锁数，B=4，U=1-q/B。S3=100G(0.80+0.15E+0.05U)。错位置主分0；用满预算正确可达95。须实际定案提交、预算合规、交付物有效。\n\nF与地图G沿用原标注；Case 3观察真值从原NAV坐标派生，不冒充原QA。E/D/U、组合权重与通过线是新增设计，尚未校准。只核验来源/时间并不等于人工语义听审；任意报告散文一致性不能宣称已全自动核验。正式评测前需校准派生坐标与音频方向、验证任务可辨性。当前工具只做格式验证，不含评分器。\n",
+        "meta": {}
+      },
+      {
+        "name": "TASK.md",
+        "path": "TASK.md",
+        "url": "omniecho-investigation/candidate/TASK.md",
+        "bytes": 2392,
+        "kind": "document",
+        "text": "# 多声源事件调查与证据报告\n\n你是视听材料调查员。调查 incident.mp4 中的报警、塑料摩擦和钥匙声，为复核者交付可播放、可追溯的证据档案。coverage_manifest.json 给出必须覆盖的检查记录及待填字段，按声源和时间组织你的调查。\n\n自主选择分析顺序、重听/抽帧、空间分析和证据片段；通过 export_evidence 导出原声证据。必须提交 report.html、findings.json、evidence_manifest.json 以及 evidence/ 下的实际证据文件。报告按 findings.json 渲染可判分字段，每条报告结论有对应 record_id 锚点和可播放证据。最终调用 validate_submission，再 submit 封存；这两个操作均不返回正确性。\n\n## 字段与证据\n方向用 front/front-left/left/back-left/back/back-right/right/front-right。turn_direction 为 left/right；turn_degrees 是非负角度；same_turn_direction 是 yes/no；距离单位米。依 findings.schema.json 填写全部检查记录，record_id 不得重复。\n\nevidence_manifest.json 的 evidence 数组放 export_evidence 返回的完整回执，包含 evidence_id、start_s、end_s、path、sha256、source_sha256。findings.evidence_ids 引用这些 evidence_id。时刻检查片段需覆盖时刻前后各 0.25 秒（到媒体边界时截断）；区间检查需完整覆盖原区间。一个片段可支撑多条结论，无需重复复制。此上下文长度是新增格式约定，不是语义标注。\n\n原四通道证据采用 MKV＋FFV1＋PCM，可用本地 FFmpeg 解码；工具另给浏览器双声道 MP4 预览。报告同时提供原件链接与可播放预览，并注明预览混音。证据只证明来源与时间覆盖，不能替代方向事实正确性。\n\n## 执行环境与输入边界\n正式推理禁用公网检索，模型服务通过宿主代理调用。允许 Python/FFmpeg 等本地工具。只挂载本题 candidate 目录与会话工作区；不得挂载出题看板、private、research 或其他会话目录。题包本身不是 OS 沙箱，正式跑题前必须由 runner 实施网络/文件系统隔离。原四通道素材用于分析；看板双声道有损预览只供人工理解。\n\nunknown 允许，但相应事实不得分。不得枚举候选；不得伪造回执、修改原媒体内容或查询隐藏答案。模板为空白骨架，未达到提交要求。\n",
+        "meta": {}
+      },
+      {
+        "name": "TOOLS.md",
+        "path": "TOOLS.md",
+        "url": "omniecho-investigation/candidate/TOOLS.md",
+        "bytes": 1426,
+        "kind": "document",
+        "text": "# 宿主工具契约 v1\n\n由宿主创建唯一会话并提供 session_id 和服务地址。所有 API 返回 JSON，错误不改变预算。POST /api/<tool>，JSON 含 session_id。工具名：list_stations、listen_at（station_id）、record_observation（receipt_id,direction,distance_m,candidate_belief 可选）、finalize_location（candidate,evidence_ids）、export_evidence（start_s,end_s）、validate_submission、submit。\n\nlisten_at 返回原四通道的受控 URL /media/<session_id>/<station_id>.wav、回执和剩余预算；工具已把完整录音交付会话目录。record_observation 返回是否修订，所有记录由宿主保存，下一次新查询或定案冻结原观察。\n\nexport_evidence 仅 Case 1，返回 evidence 回执与预览文件地址，实际写入会话 workspace/evidence。模型将交付物写到同一 workspace。validate_submission 仅检查结构、文件、证据出处、冻结观察及报告锚点等，不给事实反馈；submit 在通过后复制到独立 sealed 并生成 SHA256 清单，后续修改工作区不影响封存版本。宿主保存 query_trace.jsonl。\n\n本地作者服务含创建/重置演示会话及查看真值能力，禁止向 Solver 暴露。正式模式 --solver-session SESSION_ID 仅服务已由宿主创建的一个会话，不能创建/重置会话、读看板或其他会话。正式启动仍需独立 OS 沙箱与禁网 runner。\n",
+        "meta": {}
+      }
+    ],
+    "task": "# 多声源事件调查与证据报告\n\n你是视听材料调查员。调查 incident.mp4 中的报警、塑料摩擦和钥匙声，为复核者交付可播放、可追溯的证据档案。coverage_manifest.json 给出必须覆盖的检查记录及待填字段，按声源和时间组织你的调查。\n\n自主选择分析顺序、重听/抽帧、空间分析和证据片段；通过 export_evidence 导出原声证据。必须提交 report.html、findings.json、evidence_manifest.json 以及 evidence/ 下的实际证据文件。报告按 findings.json 渲染可判分字段，每条报告结论有对应 record_id 锚点和可播放证据。最终调用 validate_submission，再 submit 封存；这两个操作均不返回正确性。\n\n## 字段与证据\n方向用 front/front-left/left/back-left/back/back-right/right/front-right。turn_direction 为 left/right；turn_degrees 是非负角度；same_turn_direction 是 yes/no；距离单位米。依 findings.schema.json 填写全部检查记录，record_id 不得重复。\n\nevidence_manifest.json 的 evidence 数组放 export_evidence 返回的完整回执，包含 evidence_id、start_s、end_s、path、sha256、source_sha256。findings.evidence_ids 引用这些 evidence_id。时刻检查片段需覆盖时刻前后各 0.25 秒（到媒体边界时截断）；区间检查需完整覆盖原区间。一个片段可支撑多条结论，无需重复复制。此上下文长度是新增格式约定，不是语义标注。\n\n原四通道证据采用 MKV＋FFV1＋PCM，可用本地 FFmpeg 解码；工具另给浏览器双声道 MP4 预览。报告同时提供原件链接与可播放预览，并注明预览混音。证据只证明来源与时间覆盖，不能替代方向事实正确性。\n\n## 执行环境与输入边界\n正式推理禁用公网检索，模型服务通过宿主代理调用。允许 Python/FFmpeg 等本地工具。只挂载本题 candidate 目录与会话工作区；不得挂载出题看板、private、research 或其他会话目录。题包本身不是 OS 沙箱，正式跑题前必须由 runner 实施网络/文件系统隔离。原四通道素材用于分析；看板双声道有损预览只供人工理解。\n\nunknown 允许，但相应事实不得分。不得枚举候选；不得伪造回执、修改原媒体内容或查询隐藏答案。模板为空白骨架，未达到提交要求。\n",
+    "contract": "> 以下保留冻结前的评分设计原文，其中“本次未执行”是制题时的历史状态；两模型现已完成开发试跑，结果见“作答结果”。本入口仅对应 Case 1，原文中的 Case 3 不属于本题。\n\n# 评分设计（本次未执行）\n\n上游事实规则：完整八方向严格相等；转动方向正确且角度绝对误差≤45°；方位＋距离须方向正确且距离绝对误差≤2m；yes/no 精确匹配；地图字母精确匹配。遗漏、unknown 不从分母删除。\n\nCase 1：冻结18个原子事实，F=正确数/18；E=正确且有合格来源/时间证据的事实数/正确数（无正确项时0）；D=报告打开、JSON有效、证据解码、引用闭合、报告与JSON一致五项通过比例。S1=100F(0.70+0.20E+0.10D)。建议通过线S1≥80,F≥0.8,E≥0.9,D=1，每个声源至少一条正确可回放结论；缺报告/证据则任务未完成。\n\nCase 3：G=最终字母精确正确；M为收到录音数（含初始）；E=冻结观察方向与距离均正确且回执合法的数量/M；q为额外成功解锁数，B=4，U=1-q/B。S3=100G(0.80+0.15E+0.05U)。错位置主分0；用满预算正确可达95。须实际定案提交、预算合规、交付物有效。\n\nF与地图G沿用原标注；Case 3观察真值从原NAV坐标派生，不冒充原QA。E/D/U、组合权重与通过线是新增设计，尚未校准。只核验来源/时间并不等于人工语义听审；任意报告散文一致性不能宣称已全自动核验。正式评测前需校准派生坐标与音频方向、验证任务可辨性。当前工具只做格式验证，不含评分器。\n",
+    "delivery": [
+      "report.html 可播放证据报告",
+      "findings.json · 17 条检查记录 / 18 个事实",
+      "evidence_manifest.json · 导出回执",
+      "evidence/ · 原四通道与双声道预览"
+    ],
+    "resultCount": 2,
+    "resultSummary": "开发试跑 · Sol 61.11 / Luna 33.33 · 均未通过"
+  },
+  "models": [
+    {
+      "key": "case1__sol_01",
+      "model": "gpt-6.1-sol",
+      "grade": {
+        "name": "case1__sol_01",
+        "case": "case1",
+        "model": "gpt-6.1-sol",
+        "classification": "development pilot",
+        "infrastructure_valid": true,
+        "submitted": true,
+        "elapsed_seconds": 1627.9047529697418,
+        "token_usage": {
+          "input_tokens": 2322565,
+          "output_tokens": 29582,
+          "total_tokens": 2352147
+        },
+        "manual_review": {
+          "status": "complete",
+          "reviewer": "root assistant",
+          "method": "HTML source inspection; every visible result table field compared with findings.json; actual local-reference checks and FFmpeg evidence decode; browser rendering unavailable",
+          "report_structurally_viewable": true,
+          "report_facts_consistent": true,
+          "notes": [
+            "All 17 record sections render final JSON values consistently.",
+            "Four actual host exports: complete timeline and three source-associated intervals; four-channel originals and browser MP4 previews retained.",
+            "Per-record video fragment times are expressed relative to exported clip start.",
+            "Report states distance and physical grid-scale assumptions; no extra claims treated as gold.",
+            "Browser rendering/playback not exercised; scoring uses structural and decoded-media verification."
+          ]
+        },
+        "limitations": [
+          "Single development instance; not benchmark-level comparison",
+          "Audio processed via local tools, not native audio-model input"
+        ],
+        "score": 61.1111,
+        "F": 0.6111111111111112,
+        "E": 1.0,
+        "D": 1.0,
+        "original_fact_correct": 11,
+        "original_fact_total": 18,
+        "delivery": {
+          "report_openable": true,
+          "json_valid": true,
+          "evidence_decodable": true,
+          "references_closed": true,
+          "report_json_consistent": true
+        },
+        "task_pass": false,
+        "atoms": [
+          {
+            "atom_id": "F01",
+            "record_id": "C01",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 32
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 90
+          },
+          {
+            "atom_id": "F02",
+            "record_id": "C02",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 32
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 91
+          },
+          {
+            "atom_id": "F03",
+            "record_id": "C03",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front-left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 92
+          },
+          {
+            "atom_id": "F04",
+            "record_id": "C04",
+            "source_id": "S1",
+            "category": "localization3d",
+            "reference": {
+              "direction": "front",
+              "distance_m": 4.5
+            },
+            "prediction": {
+              "direction": "front-left",
+              "distance_m": 4
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 93
+          },
+          {
+            "atom_id": "F05",
+            "record_id": "C05",
+            "source_id": "S1",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "yes"
+            },
+            "prediction": {
+              "same_turn_direction": "yes"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 94
+          },
+          {
+            "atom_id": "F06",
+            "record_id": "C06",
+            "source_id": "S1",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "right"
+            },
+            "prediction": {
+              "motion_direction": "right"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 95
+          },
+          {
+            "atom_id": "F07",
+            "record_id": "C07",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 11.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 30
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 96
+          },
+          {
+            "atom_id": "F08",
+            "record_id": "C08",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 97
+          },
+          {
+            "atom_id": "F09",
+            "record_id": "C09",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 98
+          },
+          {
+            "atom_id": "F10",
+            "record_id": "C10",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.0
+            },
+            "prediction": {
+              "direction": "left",
+              "distance_m": 4.5
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 99
+          },
+          {
+            "atom_id": "F11",
+            "record_id": "C11",
+            "source_id": "S2",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "left"
+            },
+            "prediction": {
+              "motion_direction": "front"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 100
+          },
+          {
+            "atom_id": "F12",
+            "record_id": "C12",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 125.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 115
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 101
+          },
+          {
+            "atom_id": "F13",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 102
+          },
+          {
+            "atom_id": "F14",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 2.6
+            },
+            "prediction": {
+              "direction": "left",
+              "distance_m": 4
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 103
+          },
+          {
+            "atom_id": "F15",
+            "record_id": "C14",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "back-left"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 104
+          },
+          {
+            "atom_id": "F16",
+            "record_id": "C15",
+            "source_id": "S3",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.2
+            },
+            "prediction": {
+              "direction": "back-left",
+              "distance_m": 4
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 105
+          },
+          {
+            "atom_id": "F17",
+            "record_id": "C16",
+            "source_id": "S3",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "no"
+            },
+            "prediction": {
+              "same_turn_direction": "no"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 106
+          },
+          {
+            "atom_id": "F18",
+            "record_id": "C17",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 147.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 140
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 108
+          }
+        ],
+        "breakdown": {
+          "camera_rotation": {
+            "correct": 4,
+            "total": 4
+          },
+          "direction": {
+            "correct": 5,
+            "total": 8
+          },
+          "localization3d": {
+            "correct": 1,
+            "total": 4
+          },
+          "motion": {
+            "correct": 1,
+            "total": 2
+          }
+        },
+        "review_complete": true
+      },
+      "effort": "xhigh",
+      "seconds": 1627.9047529697418,
+      "exports": [
+        {
+          "evidence_id": "Eaf5286d3f13c40c4",
+          "start_s": 0,
+          "end_s": 37.333333,
+          "path": "evidence/Eaf5286d3f13c40c4.mkv",
+          "sha256": "2503327a55653b3b043037c8df11f2d87cd4387530afa46b8132770c77fa0d80",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/Eaf5286d3f13c40c4_preview.mp4",
+          "preview_sha256": "187a7df2b7fba0066cbfb2222923bc2e360a9b223b47e30399cbb14927e62384",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        },
+        {
+          "evidence_id": "E736373124dbb4125",
+          "start_s": 0,
+          "end_s": 11.5,
+          "path": "evidence/E736373124dbb4125.mkv",
+          "sha256": "c0181c7a75047b7fb3ae1c355c3b5fb14090558b56fb6f3e089c7d6a4df65751",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/E736373124dbb4125_preview.mp4",
+          "preview_sha256": "7a938a0788b67a4a54ff2937c47ec743953454b01814fc1bdc215cef48b4cfd5",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        },
+        {
+          "evidence_id": "Ec3554e97ebc548ea",
+          "start_s": 11.5,
+          "end_s": 22.25,
+          "path": "evidence/Ec3554e97ebc548ea.mkv",
+          "sha256": "92175f1e5d43b238c98442100cb54fe982c7f94cd7b03e24dfdb54fb10d209bd",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/Ec3554e97ebc548ea_preview.mp4",
+          "preview_sha256": "57373a0f98a60c3eb5cc3d4de9cceec23143fd5e40ea394b70dcc1e093af4f5e",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        },
+        {
+          "evidence_id": "Ec5b5d7d616aa4a05",
+          "start_s": 22,
+          "end_s": 37.333333,
+          "path": "evidence/Ec5b5d7d616aa4a05.mkv",
+          "sha256": "1c86d29543c6531de714d66e5410282ca93eee58926e6df7e826fac02d523b9d",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/Ec5b5d7d616aa4a05_preview.mp4",
+          "preview_sha256": "e5d29b22e55d10fd26f3f83346e9abc53bb5d3ea5034ca93aab387ed3a975e83",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        }
+      ],
+      "apiCalls": 34,
+      "apiErrors": 0,
+      "isolation": {
+        "input_readable": true,
+        "input_readonly": true,
+        "submission_writable": true,
+        "host_paths_hidden": true,
+        "credential_absent": true,
+        "network_blocked": true,
+        "no_network_interfaces": true,
+        "no_default_route": true,
+        "visible_process_count": 2,
+        "pid_namespace_small": true
+      },
+      "links": {
+        "grade": "omniecho-investigation/case1__sol_01/grade.json",
+        "run": "omniecho-investigation/case1__sol_01/run.json",
+        "review": "omniecho-investigation/case1__sol_01/manual_review.json",
+        "trace": "omniecho-investigation/case1__sol_01/host_query_trace.json",
+        "final": "omniecho-investigation/case1__sol_01/final_message.txt",
+        "report": "omniecho-investigation/case1__sol_01/report.html"
+      },
+      "artifacts": [
+        {
+          "name": "analysis/bearing_measurements.csv",
+          "url": "omniecho-investigation/case1__sol_01/analysis/bearing_measurements.csv",
+          "bytes": 4608
+        },
+        {
+          "name": "analysis/bearing_plot.png",
+          "url": "omniecho-investigation/case1__sol_01/analysis/bearing_plot.png",
+          "bytes": 40155
+        },
+        {
+          "name": "analysis/decode_checks.json",
+          "url": "omniecho-investigation/case1__sol_01/analysis/decode_checks.json",
+          "bytes": 698
+        },
+        {
+          "name": "analysis/grid_calib.npz",
+          "url": "omniecho-investigation/case1__sol_01/analysis/grid_calib.npz",
+          "bytes": 2148
+        },
+        {
+          "name": "analysis/grid_calib10.npz",
+          "url": "omniecho-investigation/case1__sol_01/analysis/grid_calib10.npz",
+          "bytes": 2148
+        },
+        {
+          "name": "analysis/grid_geometry.py",
+          "url": "omniecho-investigation/case1__sol_01/analysis/grid_geometry.py",
+          "bytes": 2673
+        },
+        {
+          "name": "analysis/measure_audio.py",
+          "url": "omniecho-investigation/case1__sol_01/analysis/measure_audio.py",
+          "bytes": 1494
+        },
+        {
+          "name": "analysis/README.txt",
+          "url": "omniecho-investigation/case1__sol_01/analysis/README.txt",
+          "bytes": 1123
+        },
+        {
+          "name": "analysis/receipt_alarm.json",
+          "url": "omniecho-investigation/case1__sol_01/analysis/receipt_alarm.json",
+          "bytes": 3178
+        },
+        {
+          "name": "analysis/receipt_keys.json",
+          "url": "omniecho-investigation/case1__sol_01/analysis/receipt_keys.json",
+          "bytes": 5380
+        },
+        {
+          "name": "analysis/receipt_plastic.json",
+          "url": "omniecho-investigation/case1__sol_01/analysis/receipt_plastic.json",
+          "bytes": 4278
+        },
+        {
+          "name": "analysis/spatial.py",
+          "url": "omniecho-investigation/case1__sol_01/analysis/spatial.py",
+          "bytes": 950
+        },
+        {
+          "name": "analysis/spec.png",
+          "url": "omniecho-investigation/case1__sol_01/analysis/spec.png",
+          "bytes": 1304939
+        },
+        {
+          "name": "analysis/subtract_ambient.py",
+          "url": "omniecho-investigation/case1__sol_01/analysis/subtract_ambient.py",
+          "bytes": 875
+        },
+        {
+          "name": "analysis/t0.jpg",
+          "url": "omniecho-investigation/case1__sol_01/analysis/t0.jpg",
+          "bytes": 58544
+        },
+        {
+          "name": "analysis/t18.jpg",
+          "url": "omniecho-investigation/case1__sol_01/analysis/t18.jpg",
+          "bytes": 47231
+        },
+        {
+          "name": "analysis/t37.jpg",
+          "url": "omniecho-investigation/case1__sol_01/analysis/t37.jpg",
+          "bytes": 45484
+        },
+        {
+          "name": "analysis/validation_receipt.json",
+          "url": "omniecho-investigation/case1__sol_01/analysis/validation_receipt.json",
+          "bytes": 5246
+        },
+        {
+          "name": "ATTRIBUTION.md",
+          "url": "omniecho-investigation/case1__sol_01/ATTRIBUTION.md",
+          "bytes": 369
+        },
+        {
+          "name": "evidence/E736373124dbb4125.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/c0181c7a75047b7fb3ae-E736373124dbb4125.mkv",
+          "bytes": 170433746
+        },
+        {
+          "name": "evidence/E736373124dbb4125_preview.mp4",
+          "url": "omniecho-investigation/case1__sol_01/evidence/E736373124dbb4125_preview.mp4",
+          "bytes": 889258
+        },
+        {
+          "name": "evidence/Eaf5286d3f13c40c4.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/2503327a55653b3b0430-Eaf5286d3f13c40c4.mkv",
+          "bytes": 561563116
+        },
+        {
+          "name": "evidence/Eaf5286d3f13c40c4_preview.mp4",
+          "url": "omniecho-investigation/case1__sol_01/evidence/Eaf5286d3f13c40c4_preview.mp4",
+          "bytes": 1973883
+        },
+        {
+          "name": "evidence/Ec3554e97ebc548ea.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/92175f1e5d43b238c984-Ec3554e97ebc548ea.mkv",
+          "bytes": 165396573
+        },
+        {
+          "name": "evidence/Ec3554e97ebc548ea_preview.mp4",
+          "url": "omniecho-investigation/case1__sol_01/evidence/Ec3554e97ebc548ea_preview.mp4",
+          "bytes": 503258
+        },
+        {
+          "name": "evidence/Ec5b5d7d616aa4a05.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/1c86d29543c6531de714-Ec5b5d7d616aa4a05.mkv",
+          "bytes": 229882394
+        },
+        {
+          "name": "evidence/Ec5b5d7d616aa4a05_preview.mp4",
+          "url": "omniecho-investigation/case1__sol_01/evidence/Ec5b5d7d616aa4a05_preview.mp4",
+          "bytes": 626165
+        },
+        {
+          "name": "evidence_manifest.json",
+          "url": "omniecho-investigation/case1__sol_01/evidence_manifest.json",
+          "bytes": 2285
+        },
+        {
+          "name": "findings.json",
+          "url": "omniecho-investigation/case1__sol_01/findings.json",
+          "bytes": 5078
+        },
+        {
+          "name": "query_trace.jsonl",
+          "url": "omniecho-investigation/case1__sol_01/query_trace.jsonl",
+          "bytes": 2886
+        },
+        {
+          "name": "report.html",
+          "url": "omniecho-investigation/case1__sol_01/report.html",
+          "bytes": 33348
+        },
+        {
+          "name": "validation.json",
+          "url": "omniecho-investigation/case1__sol_01/validation.json",
+          "bytes": 5359
+        }
+      ]
+    },
+    {
+      "key": "case1__luna_01",
+      "model": "gpt-6-luna",
+      "grade": {
+        "name": "case1__luna_01",
+        "case": "case1",
+        "model": "gpt-6-luna",
+        "classification": "development pilot",
+        "infrastructure_valid": true,
+        "submitted": true,
+        "elapsed_seconds": 794.8080806732178,
+        "token_usage": {
+          "input_tokens": 653280,
+          "output_tokens": 36279,
+          "total_tokens": 689559
+        },
+        "manual_review": {
+          "status": "complete",
+          "reviewer": "root assistant",
+          "method": "HTML source inspection and all 17 visible record JSON blocks compared with findings.json; local links and media decoded; browser rendering unavailable",
+          "report_structurally_viewable": true,
+          "report_facts_consistent": true,
+          "notes": [
+            "Report is a static table by source/time with audio playback and per-record seek buttons.",
+            "All 17 visible record data blocks match final JSON exactly.",
+            "One full-length exported original clip used for all records; traceability is temporal coverage, not independent semantic verification.",
+            "Uses audio element for MP4 soundtrack with original video file download; browser rendering/playback not exercised."
+          ]
+        },
+        "limitations": [
+          "Single development instance; not benchmark-level comparison",
+          "Audio processed via local tools, not native audio-model input"
+        ],
+        "score": 33.3333,
+        "F": 0.3333333333333333,
+        "E": 1.0,
+        "D": 1.0,
+        "original_fact_correct": 6,
+        "original_fact_total": 18,
+        "delivery": {
+          "report_openable": true,
+          "json_valid": true,
+          "evidence_decodable": true,
+          "references_closed": true,
+          "report_json_consistent": true
+        },
+        "task_pass": false,
+        "atoms": [
+          {
+            "atom_id": "F01",
+            "record_id": "C01",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 18
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 90
+          },
+          {
+            "atom_id": "F02",
+            "record_id": "C02",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 18
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 91
+          },
+          {
+            "atom_id": "F03",
+            "record_id": "C03",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 92
+          },
+          {
+            "atom_id": "F04",
+            "record_id": "C04",
+            "source_id": "S1",
+            "category": "localization3d",
+            "reference": {
+              "direction": "front",
+              "distance_m": 4.5
+            },
+            "prediction": {
+              "direction": "front-left",
+              "distance_m": 3.0
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 93
+          },
+          {
+            "atom_id": "F05",
+            "record_id": "C05",
+            "source_id": "S1",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "yes"
+            },
+            "prediction": {
+              "same_turn_direction": "no"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 94
+          },
+          {
+            "atom_id": "F06",
+            "record_id": "C06",
+            "source_id": "S1",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "right"
+            },
+            "prediction": {
+              "motion_direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 95
+          },
+          {
+            "atom_id": "F07",
+            "record_id": "C07",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 11.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 16
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 96
+          },
+          {
+            "atom_id": "F08",
+            "record_id": "C08",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 97
+          },
+          {
+            "atom_id": "F09",
+            "record_id": "C09",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 98
+          },
+          {
+            "atom_id": "F10",
+            "record_id": "C10",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.0
+            },
+            "prediction": {
+              "direction": "front-left",
+              "distance_m": 3.0
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 99
+          },
+          {
+            "atom_id": "F11",
+            "record_id": "C11",
+            "source_id": "S2",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "left"
+            },
+            "prediction": {
+              "motion_direction": "front-right"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 100
+          },
+          {
+            "atom_id": "F12",
+            "record_id": "C12",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 125.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 80
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 101
+          },
+          {
+            "atom_id": "F13",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 102
+          },
+          {
+            "atom_id": "F14",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 2.6
+            },
+            "prediction": {
+              "direction": "left",
+              "distance_m": 3.0
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 103
+          },
+          {
+            "atom_id": "F15",
+            "record_id": "C14",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "left"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 104
+          },
+          {
+            "atom_id": "F16",
+            "record_id": "C15",
+            "source_id": "S3",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.2
+            },
+            "prediction": {
+              "direction": "front-left",
+              "distance_m": 3.0
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 105
+          },
+          {
+            "atom_id": "F17",
+            "record_id": "C16",
+            "source_id": "S3",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "no"
+            },
+            "prediction": {
+              "same_turn_direction": "yes"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 106
+          },
+          {
+            "atom_id": "F18",
+            "record_id": "C17",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 147.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 66
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 108
+          }
+        ],
+        "breakdown": {
+          "camera_rotation": {
+            "correct": 2,
+            "total": 4
+          },
+          "direction": {
+            "correct": 4,
+            "total": 8
+          },
+          "localization3d": {
+            "correct": 0,
+            "total": 4
+          },
+          "motion": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "review_complete": true
+      },
+      "effort": "xhigh",
+      "seconds": 794.8080806732178,
+      "exports": [
+        {
+          "evidence_id": "Ee463ebd1e9274d9f",
+          "start_s": 0,
+          "end_s": 37.333,
+          "path": "evidence/Ee463ebd1e9274d9f.mkv",
+          "sha256": "7c4b7d7deeb5a4781af57ea38f718578364ec0503bc2ff1cf7da7aff62db38d5",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/Ee463ebd1e9274d9f_preview.mp4",
+          "preview_sha256": "2e44c3aedb378864f9453d7fe8774df4d4307ebb92e8e3d347b7c87bd7453d8d",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        }
+      ],
+      "apiCalls": 15,
+      "apiErrors": 0,
+      "isolation": {
+        "input_readable": true,
+        "input_readonly": true,
+        "submission_writable": true,
+        "host_paths_hidden": true,
+        "credential_absent": true,
+        "network_blocked": true,
+        "no_network_interfaces": true,
+        "no_default_route": true,
+        "visible_process_count": 2,
+        "pid_namespace_small": true
+      },
+      "links": {
+        "grade": "omniecho-investigation/case1__luna_01/grade.json",
+        "run": "omniecho-investigation/case1__luna_01/run.json",
+        "review": "omniecho-investigation/case1__luna_01/manual_review.json",
+        "trace": "omniecho-investigation/case1__luna_01/host_query_trace.json",
+        "final": "omniecho-investigation/case1__luna_01/final_message.txt",
+        "report": "omniecho-investigation/case1__luna_01/report.html"
+      },
+      "artifacts": [
+        {
+          "name": "evidence/Ee463ebd1e9274d9f.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv",
+          "bytes": 561562988
+        },
+        {
+          "name": "evidence/Ee463ebd1e9274d9f_preview.mp4",
+          "url": "omniecho-investigation/case1__luna_01/evidence/Ee463ebd1e9274d9f_preview.mp4",
+          "bytes": 1973861
+        },
+        {
+          "name": "evidence_manifest.json",
+          "url": "omniecho-investigation/case1__luna_01/evidence_manifest.json",
+          "bytes": 587
+        },
+        {
+          "name": "findings.json",
+          "url": "omniecho-investigation/case1__luna_01/findings.json",
+          "bytes": 4737
+        },
+        {
+          "name": "query_trace.jsonl",
+          "url": "omniecho-investigation/case1__luna_01/query_trace.jsonl",
+          "bytes": 990
+        },
+        {
+          "name": "report.html",
+          "url": "omniecho-investigation/case1__luna_01/report.html",
+          "bytes": 33432
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "task_id": "case1",
+    "duration_s": 37.333333,
+    "sources": [
+      {
+        "source_id": "S1",
+        "description": "alarm ringing",
+        "label": "报警声"
+      },
+      {
+        "source_id": "S2",
+        "description": "rustling plastic",
+        "label": "塑料摩擦声"
+      },
+      {
+        "source_id": "S3",
+        "description": "jingling keys",
+        "label": "钥匙声"
+      }
+    ],
+    "coordinate_frames": {
+      "camera-body": "当前镜头朝向为前",
+      "world": "相机初始朝向为 +X，左为 +Y",
+      "camera": "相机自身转动",
+      "mixed": "相机转动与声源绕相机运动的一致性"
+    },
+    "records": [
+      {
+        "record_id": "C01",
+        "source_id": "camera",
+        "time_s": null,
+        "interval_s": [
+          0.0,
+          18.0
+        ],
+        "coordinate_frame": "camera",
+        "required_fields": [
+          "turn_direction",
+          "turn_degrees"
+        ],
+        "requests": [
+          "Between t=0.0 and t=18.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?"
+        ]
+      },
+      {
+        "record_id": "C02",
+        "source_id": "camera",
+        "time_s": null,
+        "interval_s": [
+          0.5,
+          37.0
+        ],
+        "coordinate_frame": "camera",
+        "required_fields": [
+          "turn_direction",
+          "turn_degrees"
+        ],
+        "requests": [
+          "Between t=0.5 and t=37.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?"
+        ]
+      },
+      {
+        "record_id": "C03",
+        "source_id": "S1",
+        "time_s": 9.0,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction"
+        ],
+        "requests": [
+          "At t=9.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C04",
+        "source_id": "S1",
+        "time_s": 9.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction",
+          "distance_m"
+        ],
+        "requests": [
+          "At t=9.5 s, give the position of the source of an alarm ringing sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+        ]
+      },
+      {
+        "record_id": "C05",
+        "source_id": "S1",
+        "time_s": null,
+        "interval_s": [
+          0.5,
+          37.0
+        ],
+        "coordinate_frame": "mixed",
+        "required_fields": [
+          "same_turn_direction"
+        ],
+        "requests": [
+          "Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of an alarm ringing sound travels around the camera?"
+        ]
+      },
+      {
+        "record_id": "C06",
+        "source_id": "S1",
+        "time_s": null,
+        "interval_s": [
+          0.5,
+          10.0
+        ],
+        "coordinate_frame": "world",
+        "required_fields": [
+          "motion_direction"
+        ],
+        "requests": [
+          "In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of an alarm ringing sound from t=0.5 to t=10.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C07",
+        "source_id": "S1",
+        "time_s": 8.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "turn_direction",
+          "turn_degrees"
+        ],
+        "requests": [
+          "At t=8.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of an alarm ringing sound becomes centred in its view (body azimuth 0)?"
+        ]
+      },
+      {
+        "record_id": "C08",
+        "source_id": "S1",
+        "time_s": 2.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction"
+        ],
+        "requests": [
+          "At t=2.5 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C09",
+        "source_id": "S2",
+        "time_s": 13.0,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction"
+        ],
+        "requests": [
+          "At t=13.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C10",
+        "source_id": "S2",
+        "time_s": 21.0,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction",
+          "distance_m"
+        ],
+        "requests": [
+          "At t=21.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+        ]
+      },
+      {
+        "record_id": "C11",
+        "source_id": "S2",
+        "time_s": null,
+        "interval_s": [
+          12.0,
+          21.0
+        ],
+        "coordinate_frame": "world",
+        "required_fields": [
+          "motion_direction"
+        ],
+        "requests": [
+          "In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of a rustling plastic sound from t=12.0 to t=21.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C12",
+        "source_id": "S2",
+        "time_s": 12.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "turn_direction",
+          "turn_degrees"
+        ],
+        "requests": [
+          "At t=12.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a rustling plastic sound becomes centred in its view (body azimuth 0)?"
+        ]
+      },
+      {
+        "record_id": "C13",
+        "source_id": "S2",
+        "time_s": 16.0,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction",
+          "distance_m"
+        ],
+        "requests": [
+          "At t=16.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.",
+          "At t=16.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+        ]
+      },
+      {
+        "record_id": "C14",
+        "source_id": "S3",
+        "time_s": 25.0,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction"
+        ],
+        "requests": [
+          "At t=25.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a jingling keys sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+        ]
+      },
+      {
+        "record_id": "C15",
+        "source_id": "S3",
+        "time_s": 27.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "direction",
+          "distance_m"
+        ],
+        "requests": [
+          "At t=27.5 s, give the position of the source of a jingling keys sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+        ]
+      },
+      {
+        "record_id": "C16",
+        "source_id": "S3",
+        "time_s": null,
+        "interval_s": [
+          0.5,
+          37.0
+        ],
+        "coordinate_frame": "mixed",
+        "required_fields": [
+          "same_turn_direction"
+        ],
+        "requests": [
+          "Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of a jingling keys sound travels around the camera?"
+        ]
+      },
+      {
+        "record_id": "C17",
+        "source_id": "S3",
+        "time_s": 34.5,
+        "interval_s": null,
+        "coordinate_frame": "camera-body",
+        "required_fields": [
+          "turn_direction",
+          "turn_degrees"
+        ],
+        "requests": [
+          "At t=34.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a jingling keys sound becomes centred in its view (body azimuth 0)?"
+        ]
+      }
+    ]
+  }
+}

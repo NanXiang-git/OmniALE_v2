@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniEcho Incident Investigation</title>
+<style>
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #202927; background: #f4f6f4; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.45; }
+main { max-width: 1200px; margin: 0 auto; padding: 28px 20px 48px; }
+header { border-bottom: 2px solid #236c5b; padding-bottom: 16px; }
+h1 { margin: 0 0 5px; font-size: 25px; font-weight: 650; }
+.sub { color: #59645f; margin: 0; font-size: 14px; }
+section { margin-top: 22px; }
+h2 { font-size: 17px; margin: 0 0 10px; }
+.evidence { display: grid; grid-template-columns: minmax(260px, 1fr) auto; gap: 12px 24px; align-items: center; border-bottom: 1px solid #cbd4cf; padding: 0 0 16px; }
+a { color: #155f50; }
+a:hover { color: #0a3e35; }
+a.button-link { display: inline-block; border: 1px solid #59746b; border-radius: 4px; padding: 7px 10px; text-decoration: none; font-size: 13px; }
+a.button-link + a.button-link { margin-left: 6px; }
+audio { width: 100%; max-width: 620px; }
+.note { font-size: 12px; color: #59645f; margin: 4px 0 0; }
+.index { display: flex; gap: 10px 26px; flex-wrap: wrap; padding: 10px 0 15px; border-bottom: 1px solid #cbd4cf; }
+.index-group { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.index-group strong { font-size: 13px; }
+.index-group a { font-size: 12px; text-decoration: none; border-bottom: 1px solid #9eaea6; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: #e8eeea; color: #34433d; font-size: 12px; text-align: left; }
+th, td { border-bottom: 1px solid #ccd5d0; padding: 10px 9px; vertical-align: top; }
+.record-id { font-weight: 700; white-space: nowrap; }
+td small { display: block; margin-top: 3px; color: #66716c; font-size: 11px; }
+td code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; white-space: normal; }
+details { margin-top: 6px; }
+summary { color: #4f635a; cursor: pointer; font-size: 11px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #edf1ee; border: 1px solid #d2dad5; border-radius: 3px; padding: 9px; font: 11px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.play { border: 1px solid #236c5b; color: #164a3e; background: #fff; border-radius: 4px; padding: 5px 9px; font-size: 12px; cursor: pointer; }
+.play:hover { background: #e8f2ed; }
+#structured-view { margin-top: 20px; }
+@media (max-width: 720px) { main { padding: 18px 12px 36px; } .evidence { grid-template-columns: 1fr; } table { min-width: 840px; } }
+</style>
+</head>
+<body><p>网页副本仅重写大型原件下载地址；<a href="report.original.txt">冻结 HTML 原文</a>保持不变。空间证据原件见 Releases，视频预览仅供浏览。</p>
+<main>
+<header>
+  <h1>OmniEcho Incident Investigation</h1>
+  <p class="sub">37.333 seconds · 3 sound sources · 17 required checks</p>
+</header>
+<section aria-labelledby="evidence-heading">
+  <h2 id="evidence-heading">Evidence</h2>
+  <div class="evidence">
+    <div>
+      <audio id="evidence-player" controls preload="metadata" src="evidence/Ee463ebd1e9274d9f_preview.mp4">Audio playback is unavailable in this browser.</audio>
+      <p class="note">Browser playback is the lossy simplified stereo preview. The original four-channel recording is available as MKV.</p>
+    </div>
+    <div>
+      <a class="button-link" href="evidence/Ee463ebd1e9274d9f_preview.mp4" download>Download stereo preview</a>
+      <a class="button-link" href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv" download>Download original 4-channel MKV</a>
+    </div>
+  </div>
+</section>
+<section aria-labelledby="index-heading">
+  <h2 id="index-heading">Record index</h2>
+  <nav class="index" aria-label="Findings by source"><div class="index-group"><strong>Camera</strong><a href="#rec-C01">C01</a><a href="#rec-C02">C02</a></div><div class="index-group"><strong>Alarm ringing</strong><a href="#rec-C03">C03</a><a href="#rec-C04">C04</a><a href="#rec-C05">C05</a><a href="#rec-C06">C06</a><a href="#rec-C07">C07</a><a href="#rec-C08">C08</a></div><div class="index-group"><strong>Rustling plastic</strong><a href="#rec-C09">C09</a><a href="#rec-C10">C10</a><a href="#rec-C11">C11</a><a href="#rec-C12">C12</a><a href="#rec-C13">C13</a></div><div class="index-group"><strong>Jingling keys</strong><a href="#rec-C14">C14</a><a href="#rec-C15">C15</a><a href="#rec-C16">C16</a><a href="#rec-C17">C17</a></div></nav>
+</section>
+<section aria-labelledby="findings-heading">
+  <h2 id="findings-heading">Findings</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Record</th><th>Source / frame</th><th>Time</th><th>Finding</th><th>Evidence</th></tr></thead>
+      <tbody><tr id="rec-C01">
+      <td class="record-id"><a href="#rec-C01">C01</a></td>
+      <td><strong>Camera</strong><small>camera · camera</small></td>
+      <td>0-18 s</td>
+      <td><code>{&quot;turn_direction&quot;: &quot;right&quot;, &quot;turn_degrees&quot;: 18}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C01&quot;,
+  &quot;source_id&quot;: &quot;camera&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    0.0,
+    18.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;camera&quot;,
+  &quot;turn_direction&quot;: &quot;right&quot;,
+  &quot;turn_degrees&quot;: 18,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C01&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="0.000" aria-label="Play C01 evidence from 0.00 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C02">
+      <td class="record-id"><a href="#rec-C02">C02</a></td>
+      <td><strong>Camera</strong><small>camera · camera</small></td>
+      <td>0.5-37 s</td>
+      <td><code>{&quot;turn_direction&quot;: &quot;right&quot;, &quot;turn_degrees&quot;: 18}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C02&quot;,
+  &quot;source_id&quot;: &quot;camera&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    0.5,
+    37.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;camera&quot;,
+  &quot;turn_direction&quot;: &quot;right&quot;,
+  &quot;turn_degrees&quot;: 18,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C02&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="0.500" aria-label="Play C02 evidence from 0.50 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C03">
+      <td class="record-id"><a href="#rec-C03">C03</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · camera-body</small></td>
+      <td>9 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;front&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C03&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: 9.0,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;front&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C03&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="8.750" aria-label="Play C03 evidence from 8.75 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C04">
+      <td class="record-id"><a href="#rec-C04">C04</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · camera-body</small></td>
+      <td>9.5 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;front-left&quot;, &quot;distance_m&quot;: 3.0}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C04&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: 9.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;front-left&quot;,
+  &quot;distance_m&quot;: 3.0,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C04&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="9.250" aria-label="Play C04 evidence from 9.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C05">
+      <td class="record-id"><a href="#rec-C05">C05</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · mixed</small></td>
+      <td>0.5-37 s</td>
+      <td><code>{&quot;same_turn_direction&quot;: &quot;no&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C05&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    0.5,
+    37.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;mixed&quot;,
+  &quot;same_turn_direction&quot;: &quot;no&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C05&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="0.500" aria-label="Play C05 evidence from 0.50 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C06">
+      <td class="record-id"><a href="#rec-C06">C06</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · world</small></td>
+      <td>0.5-10 s</td>
+      <td><code>{&quot;motion_direction&quot;: &quot;left&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C06&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    0.5,
+    10.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;world&quot;,
+  &quot;motion_direction&quot;: &quot;left&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C06&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="0.500" aria-label="Play C06 evidence from 0.50 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C07">
+      <td class="record-id"><a href="#rec-C07">C07</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · camera-body</small></td>
+      <td>8.5 s (point check)</td>
+      <td><code>{&quot;turn_direction&quot;: &quot;left&quot;, &quot;turn_degrees&quot;: 16}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C07&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: 8.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;turn_direction&quot;: &quot;left&quot;,
+  &quot;turn_degrees&quot;: 16,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C07&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="8.250" aria-label="Play C07 evidence from 8.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C08">
+      <td class="record-id"><a href="#rec-C08">C08</a></td>
+      <td><strong>Alarm ringing</strong><small>S1 · camera-body</small></td>
+      <td>2.5 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;front&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C08&quot;,
+  &quot;source_id&quot;: &quot;S1&quot;,
+  &quot;time_s&quot;: 2.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;front&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C08&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="2.250" aria-label="Play C08 evidence from 2.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C09">
+      <td class="record-id"><a href="#rec-C09">C09</a></td>
+      <td><strong>Rustling plastic</strong><small>S2 · camera-body</small></td>
+      <td>13 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;left&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C09&quot;,
+  &quot;source_id&quot;: &quot;S2&quot;,
+  &quot;time_s&quot;: 13.0,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;left&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C09&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="12.750" aria-label="Play C09 evidence from 12.75 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C10">
+      <td class="record-id"><a href="#rec-C10">C10</a></td>
+      <td><strong>Rustling plastic</strong><small>S2 · camera-body</small></td>
+      <td>21 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;front-left&quot;, &quot;distance_m&quot;: 3.0}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C10&quot;,
+  &quot;source_id&quot;: &quot;S2&quot;,
+  &quot;time_s&quot;: 21.0,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;front-left&quot;,
+  &quot;distance_m&quot;: 3.0,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C10&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="20.750" aria-label="Play C10 evidence from 20.75 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C11">
+      <td class="record-id"><a href="#rec-C11">C11</a></td>
+      <td><strong>Rustling plastic</strong><small>S2 · world</small></td>
+      <td>12-21 s</td>
+      <td><code>{&quot;motion_direction&quot;: &quot;front-right&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C11&quot;,
+  &quot;source_id&quot;: &quot;S2&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    12.0,
+    21.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;world&quot;,
+  &quot;motion_direction&quot;: &quot;front-right&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C11&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="12.000" aria-label="Play C11 evidence from 12.00 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C12">
+      <td class="record-id"><a href="#rec-C12">C12</a></td>
+      <td><strong>Rustling plastic</strong><small>S2 · camera-body</small></td>
+      <td>12.5 s (point check)</td>
+      <td><code>{&quot;turn_direction&quot;: &quot;left&quot;, &quot;turn_degrees&quot;: 80}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C12&quot;,
+  &quot;source_id&quot;: &quot;S2&quot;,
+  &quot;time_s&quot;: 12.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;turn_direction&quot;: &quot;left&quot;,
+  &quot;turn_degrees&quot;: 80,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C12&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="12.250" aria-label="Play C12 evidence from 12.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C13">
+      <td class="record-id"><a href="#rec-C13">C13</a></td>
+      <td><strong>Rustling plastic</strong><small>S2 · camera-body</small></td>
+      <td>16 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;left&quot;, &quot;distance_m&quot;: 3.0}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C13&quot;,
+  &quot;source_id&quot;: &quot;S2&quot;,
+  &quot;time_s&quot;: 16.0,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;left&quot;,
+  &quot;distance_m&quot;: 3.0,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C13&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="15.750" aria-label="Play C13 evidence from 15.75 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C14">
+      <td class="record-id"><a href="#rec-C14">C14</a></td>
+      <td><strong>Jingling keys</strong><small>S3 · camera-body</small></td>
+      <td>25 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;left&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C14&quot;,
+  &quot;source_id&quot;: &quot;S3&quot;,
+  &quot;time_s&quot;: 25.0,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;left&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C14&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="24.750" aria-label="Play C14 evidence from 24.75 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C15">
+      <td class="record-id"><a href="#rec-C15">C15</a></td>
+      <td><strong>Jingling keys</strong><small>S3 · camera-body</small></td>
+      <td>27.5 s (point check)</td>
+      <td><code>{&quot;direction&quot;: &quot;front-left&quot;, &quot;distance_m&quot;: 3.0}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C15&quot;,
+  &quot;source_id&quot;: &quot;S3&quot;,
+  &quot;time_s&quot;: 27.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;direction&quot;: &quot;front-left&quot;,
+  &quot;distance_m&quot;: 3.0,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C15&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="27.250" aria-label="Play C15 evidence from 27.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C16">
+      <td class="record-id"><a href="#rec-C16">C16</a></td>
+      <td><strong>Jingling keys</strong><small>S3 · mixed</small></td>
+      <td>0.5-37 s</td>
+      <td><code>{&quot;same_turn_direction&quot;: &quot;yes&quot;}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C16&quot;,
+  &quot;source_id&quot;: &quot;S3&quot;,
+  &quot;time_s&quot;: null,
+  &quot;interval_s&quot;: [
+    0.5,
+    37.0
+  ],
+  &quot;coordinate_frame&quot;: &quot;mixed&quot;,
+  &quot;same_turn_direction&quot;: &quot;yes&quot;,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C16&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="0.500" aria-label="Play C16 evidence from 0.50 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr><tr id="rec-C17">
+      <td class="record-id"><a href="#rec-C17">C17</a></td>
+      <td><strong>Jingling keys</strong><small>S3 · camera-body</small></td>
+      <td>34.5 s (point check)</td>
+      <td><code>{&quot;turn_direction&quot;: &quot;left&quot;, &quot;turn_degrees&quot;: 66}</code><details><summary>Record data</summary><pre>{
+  &quot;record_id&quot;: &quot;C17&quot;,
+  &quot;source_id&quot;: &quot;S3&quot;,
+  &quot;time_s&quot;: 34.5,
+  &quot;interval_s&quot;: null,
+  &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+  &quot;turn_direction&quot;: &quot;left&quot;,
+  &quot;turn_degrees&quot;: 66,
+  &quot;evidence_ids&quot;: [
+    &quot;Ee463ebd1e9274d9f&quot;
+  ],
+  &quot;report_anchor&quot;: &quot;rec-C17&quot;
+}</pre></details></td>
+      <td><button class="play" type="button" data-start="34.250" aria-label="Play C17 evidence from 34.25 seconds">Play</button><small><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/7c4b7d7deeb5a4781af5-Ee463ebd1e9274d9f.mkv">Ee463ebd1e9274d9f · original</a></small></td>
+    </tr></tbody>
+    </table>
+  </div>
+</section>
+<section id="structured-view">
+  <h2>Structured findings</h2>
+  <details><summary>Show complete JSON</summary><pre>{
+  &quot;findings&quot;: [
+    {
+      &quot;record_id&quot;: &quot;C01&quot;,
+      &quot;source_id&quot;: &quot;camera&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [0.0, 18.0],
+      &quot;coordinate_frame&quot;: &quot;camera&quot;,
+      &quot;turn_direction&quot;: &quot;right&quot;,
+      &quot;turn_degrees&quot;: 18,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C01&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C02&quot;,
+      &quot;source_id&quot;: &quot;camera&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [0.5, 37.0],
+      &quot;coordinate_frame&quot;: &quot;camera&quot;,
+      &quot;turn_direction&quot;: &quot;right&quot;,
+      &quot;turn_degrees&quot;: 18,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C02&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C03&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: 9.0,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;front&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C03&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C04&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: 9.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;front-left&quot;,
+      &quot;distance_m&quot;: 3.0,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C04&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C05&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [0.5, 37.0],
+      &quot;coordinate_frame&quot;: &quot;mixed&quot;,
+      &quot;same_turn_direction&quot;: &quot;no&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C05&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C06&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [0.5, 10.0],
+      &quot;coordinate_frame&quot;: &quot;world&quot;,
+      &quot;motion_direction&quot;: &quot;left&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C06&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C07&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: 8.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;turn_direction&quot;: &quot;left&quot;,
+      &quot;turn_degrees&quot;: 16,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C07&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C08&quot;,
+      &quot;source_id&quot;: &quot;S1&quot;,
+      &quot;time_s&quot;: 2.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;front&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C08&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C09&quot;,
+      &quot;source_id&quot;: &quot;S2&quot;,
+      &quot;time_s&quot;: 13.0,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;left&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C09&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C10&quot;,
+      &quot;source_id&quot;: &quot;S2&quot;,
+      &quot;time_s&quot;: 21.0,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;front-left&quot;,
+      &quot;distance_m&quot;: 3.0,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C10&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C11&quot;,
+      &quot;source_id&quot;: &quot;S2&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [12.0, 21.0],
+      &quot;coordinate_frame&quot;: &quot;world&quot;,
+      &quot;motion_direction&quot;: &quot;front-right&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C11&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C12&quot;,
+      &quot;source_id&quot;: &quot;S2&quot;,
+      &quot;time_s&quot;: 12.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;turn_direction&quot;: &quot;left&quot;,
+      &quot;turn_degrees&quot;: 80,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C12&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C13&quot;,
+      &quot;source_id&quot;: &quot;S2&quot;,
+      &quot;time_s&quot;: 16.0,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;left&quot;,
+      &quot;distance_m&quot;: 3.0,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C13&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C14&quot;,
+      &quot;source_id&quot;: &quot;S3&quot;,
+      &quot;time_s&quot;: 25.0,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;left&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C14&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C15&quot;,
+      &quot;source_id&quot;: &quot;S3&quot;,
+      &quot;time_s&quot;: 27.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;direction&quot;: &quot;front-left&quot;,
+      &quot;distance_m&quot;: 3.0,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C15&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C16&quot;,
+      &quot;source_id&quot;: &quot;S3&quot;,
+      &quot;time_s&quot;: null,
+      &quot;interval_s&quot;: [0.5, 37.0],
+      &quot;coordinate_frame&quot;: &quot;mixed&quot;,
+      &quot;same_turn_direction&quot;: &quot;yes&quot;,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C16&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;C17&quot;,
+      &quot;source_id&quot;: &quot;S3&quot;,
+      &quot;time_s&quot;: 34.5,
+      &quot;interval_s&quot;: null,
+      &quot;coordinate_frame&quot;: &quot;camera-body&quot;,
+      &quot;turn_direction&quot;: &quot;left&quot;,
+      &quot;turn_degrees&quot;: 66,
+      &quot;evidence_ids&quot;: [&quot;Ee463ebd1e9274d9f&quot;],
+      &quot;report_anchor&quot;: &quot;rec-C17&quot;
+    }
+  ]
+}</pre></details>
+</section>
+</main>
+<script type="application/json" id="structured-findings">
+{
+  "findings": [
+    {
+      "record_id": "C01",
+      "source_id": "camera",
+      "time_s": null,
+      "interval_s": [0.0, 18.0],
+      "coordinate_frame": "camera",
+      "turn_direction": "right",
+      "turn_degrees": 18,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C01"
+    },
+    {
+      "record_id": "C02",
+      "source_id": "camera",
+      "time_s": null,
+      "interval_s": [0.5, 37.0],
+      "coordinate_frame": "camera",
+      "turn_direction": "right",
+      "turn_degrees": 18,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C02"
+    },
+    {
+      "record_id": "C03",
+      "source_id": "S1",
+      "time_s": 9.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "front",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C03"
+    },
+    {
+      "record_id": "C04",
+      "source_id": "S1",
+      "time_s": 9.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "front-left",
+      "distance_m": 3.0,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C04"
+    },
+    {
+      "record_id": "C05",
+      "source_id": "S1",
+      "time_s": null,
+      "interval_s": [0.5, 37.0],
+      "coordinate_frame": "mixed",
+      "same_turn_direction": "no",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C05"
+    },
+    {
+      "record_id": "C06",
+      "source_id": "S1",
+      "time_s": null,
+      "interval_s": [0.5, 10.0],
+      "coordinate_frame": "world",
+      "motion_direction": "left",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C06"
+    },
+    {
+      "record_id": "C07",
+      "source_id": "S1",
+      "time_s": 8.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "turn_direction": "left",
+      "turn_degrees": 16,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C07"
+    },
+    {
+      "record_id": "C08",
+      "source_id": "S1",
+      "time_s": 2.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "front",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C08"
+    },
+    {
+      "record_id": "C09",
+      "source_id": "S2",
+      "time_s": 13.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "left",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C09"
+    },
+    {
+      "record_id": "C10",
+      "source_id": "S2",
+      "time_s": 21.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "front-left",
+      "distance_m": 3.0,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C10"
+    },
+    {
+      "record_id": "C11",
+      "source_id": "S2",
+      "time_s": null,
+      "interval_s": [12.0, 21.0],
+      "coordinate_frame": "world",
+      "motion_direction": "front-right",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C11"
+    },
+    {
+      "record_id": "C12",
+      "source_id": "S2",
+      "time_s": 12.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "turn_direction": "left",
+      "turn_degrees": 80,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C12"
+    },
+    {
+      "record_id": "C13",
+      "source_id": "S2",
+      "time_s": 16.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "left",
+      "distance_m": 3.0,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C13"
+    },
+    {
+      "record_id": "C14",
+      "source_id": "S3",
+      "time_s": 25.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "left",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C14"
+    },
+    {
+      "record_id": "C15",
+      "source_id": "S3",
+      "time_s": 27.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "direction": "front-left",
+      "distance_m": 3.0,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C15"
+    },
+    {
+      "record_id": "C16",
+      "source_id": "S3",
+      "time_s": null,
+      "interval_s": [0.5, 37.0],
+      "coordinate_frame": "mixed",
+      "same_turn_direction": "yes",
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C16"
+    },
+    {
+      "record_id": "C17",
+      "source_id": "S3",
+      "time_s": 34.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "turn_direction": "left",
+      "turn_degrees": 66,
+      "evidence_ids": ["Ee463ebd1e9274d9f"],
+      "report_anchor": "rec-C17"
+    }
+  ]
+}
+</script>
+<script>
+const player = document.getElementById('evidence-player');
+document.querySelectorAll('button.play').forEach((button) => {
+  button.addEventListener('click', () => {
+    player.currentTime = Number(button.dataset.start);
+    player.play();
+  });
+});
+</script>
+</body>
+</html>

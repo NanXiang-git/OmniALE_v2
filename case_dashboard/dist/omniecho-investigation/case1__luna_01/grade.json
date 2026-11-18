@@ -1,0 +1,354 @@
+{
+  "name": "case1__luna_01",
+  "case": "case1",
+  "model": "gpt-6-luna",
+  "classification": "development pilot",
+  "infrastructure_valid": true,
+  "submitted": true,
+  "elapsed_seconds": 794.8080806732178,
+  "token_usage": {
+    "input_tokens": 653280,
+    "output_tokens": 36279,
+    "total_tokens": 689559
+  },
+  "manual_review": {
+    "status": "complete",
+    "reviewer": "root assistant",
+    "method": "HTML source inspection and all 17 visible record JSON blocks compared with findings.json; local links and media decoded; browser rendering unavailable",
+    "report_structurally_viewable": true,
+    "report_facts_consistent": true,
+    "notes": [
+      "Report is a static table by source/time with audio playback and per-record seek buttons.",
+      "All 17 visible record data blocks match final JSON exactly.",
+      "One full-length exported original clip used for all records; traceability is temporal coverage, not independent semantic verification.",
+      "Uses audio element for MP4 soundtrack with original video file download; browser rendering/playback not exercised."
+    ]
+  },
+  "limitations": [
+    "Single development instance; not benchmark-level comparison",
+    "Audio processed via local tools, not native audio-model input"
+  ],
+  "score": 33.3333,
+  "F": 0.3333333333333333,
+  "E": 1.0,
+  "D": 1.0,
+  "original_fact_correct": 6,
+  "original_fact_total": 18,
+  "delivery": {
+    "report_openable": true,
+    "json_valid": true,
+    "evidence_decodable": true,
+    "references_closed": true,
+    "report_json_consistent": true
+  },
+  "task_pass": false,
+  "atoms": [
+    {
+      "atom_id": "F01",
+      "record_id": "C01",
+      "source_id": "camera",
+      "category": "camera_rotation",
+      "reference": {
+        "turn_direction": "right",
+        "turn_degrees": 35.0
+      },
+      "prediction": {
+        "turn_direction": "right",
+        "turn_degrees": 18
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 90
+    },
+    {
+      "atom_id": "F02",
+      "record_id": "C02",
+      "source_id": "camera",
+      "category": "camera_rotation",
+      "reference": {
+        "turn_direction": "right",
+        "turn_degrees": 35.0
+      },
+      "prediction": {
+        "turn_direction": "right",
+        "turn_degrees": 18
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 91
+    },
+    {
+      "atom_id": "F03",
+      "record_id": "C03",
+      "source_id": "S1",
+      "category": "direction",
+      "reference": {
+        "direction": "front"
+      },
+      "prediction": {
+        "direction": "front"
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 92
+    },
+    {
+      "atom_id": "F04",
+      "record_id": "C04",
+      "source_id": "S1",
+      "category": "localization3d",
+      "reference": {
+        "direction": "front",
+        "distance_m": 4.5
+      },
+      "prediction": {
+        "direction": "front-left",
+        "distance_m": 3.0
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 93
+    },
+    {
+      "atom_id": "F05",
+      "record_id": "C05",
+      "source_id": "S1",
+      "category": "camera_rotation",
+      "reference": {
+        "same_turn_direction": "yes"
+      },
+      "prediction": {
+        "same_turn_direction": "no"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 94
+    },
+    {
+      "atom_id": "F06",
+      "record_id": "C06",
+      "source_id": "S1",
+      "category": "motion",
+      "reference": {
+        "motion_direction": "right"
+      },
+      "prediction": {
+        "motion_direction": "left"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 95
+    },
+    {
+      "atom_id": "F07",
+      "record_id": "C07",
+      "source_id": "S1",
+      "category": "direction",
+      "reference": {
+        "turn_direction": "left",
+        "turn_degrees": 11.0
+      },
+      "prediction": {
+        "turn_direction": "left",
+        "turn_degrees": 16
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 96
+    },
+    {
+      "atom_id": "F08",
+      "record_id": "C08",
+      "source_id": "S1",
+      "category": "direction",
+      "reference": {
+        "direction": "front"
+      },
+      "prediction": {
+        "direction": "front"
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 97
+    },
+    {
+      "atom_id": "F09",
+      "record_id": "C09",
+      "source_id": "S2",
+      "category": "direction",
+      "reference": {
+        "direction": "back-left"
+      },
+      "prediction": {
+        "direction": "left"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 98
+    },
+    {
+      "atom_id": "F10",
+      "record_id": "C10",
+      "source_id": "S2",
+      "category": "localization3d",
+      "reference": {
+        "direction": "back-left",
+        "distance_m": 4.0
+      },
+      "prediction": {
+        "direction": "front-left",
+        "distance_m": 3.0
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 99
+    },
+    {
+      "atom_id": "F11",
+      "record_id": "C11",
+      "source_id": "S2",
+      "category": "motion",
+      "reference": {
+        "motion_direction": "left"
+      },
+      "prediction": {
+        "motion_direction": "front-right"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 100
+    },
+    {
+      "atom_id": "F12",
+      "record_id": "C12",
+      "source_id": "S2",
+      "category": "direction",
+      "reference": {
+        "turn_direction": "left",
+        "turn_degrees": 125.0
+      },
+      "prediction": {
+        "turn_direction": "left",
+        "turn_degrees": 80
+      },
+      "correct": true,
+      "traceable_evidence": true,
+      "original_jsonl_line": 101
+    },
+    {
+      "atom_id": "F13",
+      "record_id": "C13",
+      "source_id": "S2",
+      "category": "direction",
+      "reference": {
+        "direction": "back-left"
+      },
+      "prediction": {
+        "direction": "left"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 102
+    },
+    {
+      "atom_id": "F14",
+      "record_id": "C13",
+      "source_id": "S2",
+      "category": "localization3d",
+      "reference": {
+        "direction": "back-left",
+        "distance_m": 2.6
+      },
+      "prediction": {
+        "direction": "left",
+        "distance_m": 3.0
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 103
+    },
+    {
+      "atom_id": "F15",
+      "record_id": "C14",
+      "source_id": "S3",
+      "category": "direction",
+      "reference": {
+        "direction": "back-left"
+      },
+      "prediction": {
+        "direction": "left"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 104
+    },
+    {
+      "atom_id": "F16",
+      "record_id": "C15",
+      "source_id": "S3",
+      "category": "localization3d",
+      "reference": {
+        "direction": "back-left",
+        "distance_m": 4.2
+      },
+      "prediction": {
+        "direction": "front-left",
+        "distance_m": 3.0
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 105
+    },
+    {
+      "atom_id": "F17",
+      "record_id": "C16",
+      "source_id": "S3",
+      "category": "camera_rotation",
+      "reference": {
+        "same_turn_direction": "no"
+      },
+      "prediction": {
+        "same_turn_direction": "yes"
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 106
+    },
+    {
+      "atom_id": "F18",
+      "record_id": "C17",
+      "source_id": "S3",
+      "category": "direction",
+      "reference": {
+        "turn_direction": "left",
+        "turn_degrees": 147.0
+      },
+      "prediction": {
+        "turn_direction": "left",
+        "turn_degrees": 66
+      },
+      "correct": false,
+      "traceable_evidence": true,
+      "original_jsonl_line": 108
+    }
+  ],
+  "breakdown": {
+    "camera_rotation": {
+      "correct": 2,
+      "total": 4
+    },
+    "direction": {
+      "correct": 4,
+      "total": 8
+    },
+    "localization3d": {
+      "correct": 0,
+      "total": 4
+    },
+    "motion": {
+      "correct": 0,
+      "total": 2
+    }
+  },
+  "review_complete": true
+}
