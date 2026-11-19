@@ -1,0 +1,278 @@
+{
+  "task_id": "case1",
+  "duration_s": 37.333333,
+  "sources": [
+    {
+      "source_id": "S1",
+      "description": "alarm ringing",
+      "label": "报警声"
+    },
+    {
+      "source_id": "S2",
+      "description": "rustling plastic",
+      "label": "塑料摩擦声"
+    },
+    {
+      "source_id": "S3",
+      "description": "jingling keys",
+      "label": "钥匙声"
+    }
+  ],
+  "coordinate_frames": {
+    "camera-body": "当前镜头朝向为前",
+    "world": "相机初始朝向为 +X，左为 +Y",
+    "camera": "相机自身转动",
+    "mixed": "相机转动与声源绕相机运动的一致性"
+  },
+  "records": [
+    {
+      "record_id": "C01",
+      "source_id": "camera",
+      "time_s": null,
+      "interval_s": [
+        0.0,
+        18.0
+      ],
+      "coordinate_frame": "camera",
+      "required_fields": [
+        "turn_direction",
+        "turn_degrees"
+      ],
+      "requests": [
+        "Between t=0.0 and t=18.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?"
+      ]
+    },
+    {
+      "record_id": "C02",
+      "source_id": "camera",
+      "time_s": null,
+      "interval_s": [
+        0.5,
+        37.0
+      ],
+      "coordinate_frame": "camera",
+      "required_fields": [
+        "turn_direction",
+        "turn_degrees"
+      ],
+      "requests": [
+        "Between t=0.5 and t=37.0 s, by how many degrees and in which direction (left or right) did the camera rotate about its vertical axis?"
+      ]
+    },
+    {
+      "record_id": "C03",
+      "source_id": "S1",
+      "time_s": 9.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction"
+      ],
+      "requests": [
+        "At t=9.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C04",
+      "source_id": "S1",
+      "time_s": 9.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction",
+        "distance_m"
+      ],
+      "requests": [
+        "At t=9.5 s, give the position of the source of an alarm ringing sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+      ]
+    },
+    {
+      "record_id": "C05",
+      "source_id": "S1",
+      "time_s": null,
+      "interval_s": [
+        0.5,
+        37.0
+      ],
+      "coordinate_frame": "mixed",
+      "required_fields": [
+        "same_turn_direction"
+      ],
+      "requests": [
+        "Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of an alarm ringing sound travels around the camera?"
+      ]
+    },
+    {
+      "record_id": "C06",
+      "source_id": "S1",
+      "time_s": null,
+      "interval_s": [
+        0.5,
+        10.0
+      ],
+      "coordinate_frame": "world",
+      "required_fields": [
+        "motion_direction"
+      ],
+      "requests": [
+        "In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of an alarm ringing sound from t=0.5 to t=10.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C07",
+      "source_id": "S1",
+      "time_s": 8.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "turn_direction",
+        "turn_degrees"
+      ],
+      "requests": [
+        "At t=8.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of an alarm ringing sound becomes centred in its view (body azimuth 0)?"
+      ]
+    },
+    {
+      "record_id": "C08",
+      "source_id": "S1",
+      "time_s": 2.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction"
+      ],
+      "requests": [
+        "At t=2.5 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of an alarm ringing sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C09",
+      "source_id": "S2",
+      "time_s": 13.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction"
+      ],
+      "requests": [
+        "At t=13.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C10",
+      "source_id": "S2",
+      "time_s": 21.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction",
+        "distance_m"
+      ],
+      "requests": [
+        "At t=21.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+      ]
+    },
+    {
+      "record_id": "C11",
+      "source_id": "S2",
+      "time_s": null,
+      "interval_s": [
+        12.0,
+        21.0
+      ],
+      "coordinate_frame": "world",
+      "required_fields": [
+        "motion_direction"
+      ],
+      "requests": [
+        "In the WORLD frame (fixed to the camera's initial heading; X = front, Y = left), what is the overall direction of travel of the source of a rustling plastic sound from t=12.0 to t=21.0 s? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C12",
+      "source_id": "S2",
+      "time_s": 12.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "turn_direction",
+        "turn_degrees"
+      ],
+      "requests": [
+        "At t=12.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a rustling plastic sound becomes centred in its view (body azimuth 0)?"
+      ]
+    },
+    {
+      "record_id": "C13",
+      "source_id": "S2",
+      "time_s": 16.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction",
+        "distance_m"
+      ],
+      "requests": [
+        "At t=16.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a rustling plastic sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right.",
+        "At t=16.0 s, give the position of the source of a rustling plastic sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+      ]
+    },
+    {
+      "record_id": "C14",
+      "source_id": "S3",
+      "time_s": 25.0,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction"
+      ],
+      "requests": [
+        "At t=25.0 s, in the CAMERA-BODY frame (relative to where the camera is currently pointing), in which approximate direction is the source of a jingling keys sound? Answer with one of: directly ahead / ahead and to the left / directly to the left / behind and to the left / directly behind / behind and to the right / directly to the right / ahead and to the right."
+      ]
+    },
+    {
+      "record_id": "C15",
+      "source_id": "S3",
+      "time_s": 27.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "direction",
+        "distance_m"
+      ],
+      "requests": [
+        "At t=27.5 s, give the position of the source of a jingling keys sound in the CAMERA-BODY frame (relative to where the camera is currently pointing) as an approximate direction plus a distance in metres (e.g. 'ahead and to the right, about 2 m')."
+      ]
+    },
+    {
+      "record_id": "C16",
+      "source_id": "S3",
+      "time_s": null,
+      "interval_s": [
+        0.5,
+        37.0
+      ],
+      "coordinate_frame": "mixed",
+      "required_fields": [
+        "same_turn_direction"
+      ],
+      "requests": [
+        "Between t=0.5 and t=37.0 s, does the camera turn in the same overall direction (left or right) that the source of a jingling keys sound travels around the camera?"
+      ]
+    },
+    {
+      "record_id": "C17",
+      "source_id": "S3",
+      "time_s": 34.5,
+      "interval_s": null,
+      "coordinate_frame": "camera-body",
+      "required_fields": [
+        "turn_direction",
+        "turn_degrees"
+      ],
+      "requests": [
+        "At t=34.5 s, by how many degrees and in which direction must the camera rotate (left or right, about the vertical axis) so that the source of a jingling keys sound becomes centred in its view (body azimuth 0)?"
+      ]
+    }
+  ]
+}

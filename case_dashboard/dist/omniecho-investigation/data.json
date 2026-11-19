@@ -3,7 +3,7 @@
     "key": "task-omniecho-investigation",
     "caseId": "OMNIECHO-1",
     "title": "多声源事件调查与证据报告 · 开发试跑",
-    "summary": "37.33 秒真实四通道视频，三个声源；自主分析、导出证据、制作可追溯报告并封存。Sol 61.11 / Luna 33.33；单样本开发结果。",
+    "summary": "37.33 秒真实四通道视频，三个声源；自主分析、导出证据、制作可追溯报告并封存。gpt-6.1-sol 61.11 / gpt-6-luna 33.33 / gpt-6-astra 77.78；单样本开发结果。",
     "versionLabel": "OmniEcho V1 · 开发试跑",
     "status": "packaged",
     "maturity": "development-pilot",
@@ -119,15 +119,15 @@
       }
     ],
     "task": "# 多声源事件调查与证据报告\n\n你是视听材料调查员。调查 incident.mp4 中的报警、塑料摩擦和钥匙声，为复核者交付可播放、可追溯的证据档案。coverage_manifest.json 给出必须覆盖的检查记录及待填字段，按声源和时间组织你的调查。\n\n自主选择分析顺序、重听/抽帧、空间分析和证据片段；通过 export_evidence 导出原声证据。必须提交 report.html、findings.json、evidence_manifest.json 以及 evidence/ 下的实际证据文件。报告按 findings.json 渲染可判分字段，每条报告结论有对应 record_id 锚点和可播放证据。最终调用 validate_submission，再 submit 封存；这两个操作均不返回正确性。\n\n## 字段与证据\n方向用 front/front-left/left/back-left/back/back-right/right/front-right。turn_direction 为 left/right；turn_degrees 是非负角度；same_turn_direction 是 yes/no；距离单位米。依 findings.schema.json 填写全部检查记录，record_id 不得重复。\n\nevidence_manifest.json 的 evidence 数组放 export_evidence 返回的完整回执，包含 evidence_id、start_s、end_s、path、sha256、source_sha256。findings.evidence_ids 引用这些 evidence_id。时刻检查片段需覆盖时刻前后各 0.25 秒（到媒体边界时截断）；区间检查需完整覆盖原区间。一个片段可支撑多条结论，无需重复复制。此上下文长度是新增格式约定，不是语义标注。\n\n原四通道证据采用 MKV＋FFV1＋PCM，可用本地 FFmpeg 解码；工具另给浏览器双声道 MP4 预览。报告同时提供原件链接与可播放预览，并注明预览混音。证据只证明来源与时间覆盖，不能替代方向事实正确性。\n\n## 执行环境与输入边界\n正式推理禁用公网检索，模型服务通过宿主代理调用。允许 Python/FFmpeg 等本地工具。只挂载本题 candidate 目录与会话工作区；不得挂载出题看板、private、research 或其他会话目录。题包本身不是 OS 沙箱，正式跑题前必须由 runner 实施网络/文件系统隔离。原四通道素材用于分析；看板双声道有损预览只供人工理解。\n\nunknown 允许，但相应事实不得分。不得枚举候选；不得伪造回执、修改原媒体内容或查询隐藏答案。模板为空白骨架，未达到提交要求。\n",
-    "contract": "> 以下保留冻结前的评分设计原文，其中“本次未执行”是制题时的历史状态；两模型现已完成开发试跑，结果见“作答结果”。本入口仅对应 Case 1，原文中的 Case 3 不属于本题。\n\n# 评分设计（本次未执行）\n\n上游事实规则：完整八方向严格相等；转动方向正确且角度绝对误差≤45°；方位＋距离须方向正确且距离绝对误差≤2m；yes/no 精确匹配；地图字母精确匹配。遗漏、unknown 不从分母删除。\n\nCase 1：冻结18个原子事实，F=正确数/18；E=正确且有合格来源/时间证据的事实数/正确数（无正确项时0）；D=报告打开、JSON有效、证据解码、引用闭合、报告与JSON一致五项通过比例。S1=100F(0.70+0.20E+0.10D)。建议通过线S1≥80,F≥0.8,E≥0.9,D=1，每个声源至少一条正确可回放结论；缺报告/证据则任务未完成。\n\nCase 3：G=最终字母精确正确；M为收到录音数（含初始）；E=冻结观察方向与距离均正确且回执合法的数量/M；q为额外成功解锁数，B=4，U=1-q/B。S3=100G(0.80+0.15E+0.05U)。错位置主分0；用满预算正确可达95。须实际定案提交、预算合规、交付物有效。\n\nF与地图G沿用原标注；Case 3观察真值从原NAV坐标派生，不冒充原QA。E/D/U、组合权重与通过线是新增设计，尚未校准。只核验来源/时间并不等于人工语义听审；任意报告散文一致性不能宣称已全自动核验。正式评测前需校准派生坐标与音频方向、验证任务可辨性。当前工具只做格式验证，不含评分器。\n",
+    "contract": "> 以下保留冻结前的评分设计原文，其中“本次未执行”是制题时的历史状态；已有模型完成开发试跑，结果见“作答结果”。本入口仅对应 Case 1，原文中的 Case 3 不属于本题。\n\n# 评分设计（本次未执行）\n\n上游事实规则：完整八方向严格相等；转动方向正确且角度绝对误差≤45°；方位＋距离须方向正确且距离绝对误差≤2m；yes/no 精确匹配；地图字母精确匹配。遗漏、unknown 不从分母删除。\n\nCase 1：冻结18个原子事实，F=正确数/18；E=正确且有合格来源/时间证据的事实数/正确数（无正确项时0）；D=报告打开、JSON有效、证据解码、引用闭合、报告与JSON一致五项通过比例。S1=100F(0.70+0.20E+0.10D)。建议通过线S1≥80,F≥0.8,E≥0.9,D=1，每个声源至少一条正确可回放结论；缺报告/证据则任务未完成。\n\nCase 3：G=最终字母精确正确；M为收到录音数（含初始）；E=冻结观察方向与距离均正确且回执合法的数量/M；q为额外成功解锁数，B=4，U=1-q/B。S3=100G(0.80+0.15E+0.05U)。错位置主分0；用满预算正确可达95。须实际定案提交、预算合规、交付物有效。\n\nF与地图G沿用原标注；Case 3观察真值从原NAV坐标派生，不冒充原QA。E/D/U、组合权重与通过线是新增设计，尚未校准。只核验来源/时间并不等于人工语义听审；任意报告散文一致性不能宣称已全自动核验。正式评测前需校准派生坐标与音频方向、验证任务可辨性。当前工具只做格式验证，不含评分器。\n",
     "delivery": [
       "report.html 可播放证据报告",
       "findings.json · 17 条检查记录 / 18 个事实",
       "evidence_manifest.json · 导出回执",
       "evidence/ · 原四通道与双声道预览"
     ],
-    "resultCount": 2,
-    "resultSummary": "开发试跑 · Sol 61.11 / Luna 33.33 · 均未通过"
+    "resultCount": 3,
+    "resultSummary": "开发试跑 · gpt-6.1-sol 61.11 / gpt-6-luna 33.33 / gpt-6-astra 77.78"
   },
   "models": [
     {
@@ -719,7 +719,8 @@
           "url": "omniecho-investigation/case1__sol_01/validation.json",
           "bytes": 5359
         }
-      ]
+      ],
+      "timeBudget": "35 分钟上限"
     },
     {
       "key": "case1__luna_01",
@@ -1146,7 +1147,589 @@
           "url": "omniecho-investigation/case1__luna_01/report.html",
           "bytes": 33432
         }
-      ]
+      ],
+      "timeBudget": "35 分钟上限"
+    },
+    {
+      "key": "case1__astra_xhigh_unlimited_20261119_newkey",
+      "model": "gpt-6-astra",
+      "grade": {
+        "name": "case1__astra_xhigh_unlimited_20261119_newkey",
+        "case": "case1",
+        "model": "gpt-6-astra",
+        "classification": "development pilot",
+        "infrastructure_valid": true,
+        "submitted": true,
+        "elapsed_seconds": 1172.5215337276459,
+        "token_usage": {
+          "input_tokens": 2794167,
+          "output_tokens": 32468,
+          "total_tokens": 2826635
+        },
+        "manual_review": {
+          "status": "complete",
+          "reviewer": "root assistant",
+          "method": "HTML source and all 17 visible result tables compared with findings.json; local references and sealed manifest hashes verified; frozen grader decodes all evidence. Edge access was unavailable, so browser playback is not claimed.",
+          "report_structurally_viewable": true,
+          "report_facts_consistent": true,
+          "browser_playback_verified": false,
+          "visible_record_fields_checked": 17,
+          "frozen_files_checked": 35,
+          "notes": [
+            "Report includes all 17 anchored records, static visible fact fields and structured-findings JSON.",
+            "One full-timeline host export covers all records; record-specific preview fragments and playback controls locate relevant intervals.",
+            "Distance estimates are explicitly low-confidence and uncalibrated; report uncertainty does not change deterministic fact scoring.",
+            "Receipt provenance and interval coverage do not certify semantic support; E and D retain original frozen definitions."
+          ]
+        },
+        "limitations": [
+          "Single development instance; not benchmark-level comparison",
+          "Audio processed via local tools, not native audio-model input"
+        ],
+        "score": 77.7778,
+        "F": 0.7777777777777778,
+        "E": 1.0,
+        "D": 1.0,
+        "original_fact_correct": 14,
+        "original_fact_total": 18,
+        "delivery": {
+          "report_openable": true,
+          "json_valid": true,
+          "evidence_decodable": true,
+          "references_closed": true,
+          "report_json_consistent": true
+        },
+        "task_pass": false,
+        "atoms": [
+          {
+            "atom_id": "F01",
+            "record_id": "C01",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 30
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 90
+          },
+          {
+            "atom_id": "F02",
+            "record_id": "C02",
+            "source_id": "camera",
+            "category": "camera_rotation",
+            "reference": {
+              "turn_direction": "right",
+              "turn_degrees": 35.0
+            },
+            "prediction": {
+              "turn_direction": "right",
+              "turn_degrees": 30
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 91
+          },
+          {
+            "atom_id": "F03",
+            "record_id": "C03",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 92
+          },
+          {
+            "atom_id": "F04",
+            "record_id": "C04",
+            "source_id": "S1",
+            "category": "localization3d",
+            "reference": {
+              "direction": "front",
+              "distance_m": 4.5
+            },
+            "prediction": {
+              "direction": "front-left",
+              "distance_m": 4
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 93
+          },
+          {
+            "atom_id": "F05",
+            "record_id": "C05",
+            "source_id": "S1",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "yes"
+            },
+            "prediction": {
+              "same_turn_direction": "yes"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 94
+          },
+          {
+            "atom_id": "F06",
+            "record_id": "C06",
+            "source_id": "S1",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "right"
+            },
+            "prediction": {
+              "motion_direction": "front-right"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 95
+          },
+          {
+            "atom_id": "F07",
+            "record_id": "C07",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 11.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 20
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 96
+          },
+          {
+            "atom_id": "F08",
+            "record_id": "C08",
+            "source_id": "S1",
+            "category": "direction",
+            "reference": {
+              "direction": "front"
+            },
+            "prediction": {
+              "direction": "front"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 97
+          },
+          {
+            "atom_id": "F09",
+            "record_id": "C09",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "back-left"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 98
+          },
+          {
+            "atom_id": "F10",
+            "record_id": "C10",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.0
+            },
+            "prediction": {
+              "direction": "left",
+              "distance_m": 4
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 99
+          },
+          {
+            "atom_id": "F11",
+            "record_id": "C11",
+            "source_id": "S2",
+            "category": "motion",
+            "reference": {
+              "motion_direction": "left"
+            },
+            "prediction": {
+              "motion_direction": "front"
+            },
+            "correct": false,
+            "traceable_evidence": true,
+            "original_jsonl_line": 100
+          },
+          {
+            "atom_id": "F12",
+            "record_id": "C12",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 125.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 125
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 101
+          },
+          {
+            "atom_id": "F13",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "back-left"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 102
+          },
+          {
+            "atom_id": "F14",
+            "record_id": "C13",
+            "source_id": "S2",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 2.6
+            },
+            "prediction": {
+              "direction": "back-left",
+              "distance_m": 4
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 103
+          },
+          {
+            "atom_id": "F15",
+            "record_id": "C14",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "direction": "back-left"
+            },
+            "prediction": {
+              "direction": "back-left"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 104
+          },
+          {
+            "atom_id": "F16",
+            "record_id": "C15",
+            "source_id": "S3",
+            "category": "localization3d",
+            "reference": {
+              "direction": "back-left",
+              "distance_m": 4.2
+            },
+            "prediction": {
+              "direction": "back-left",
+              "distance_m": 4
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 105
+          },
+          {
+            "atom_id": "F17",
+            "record_id": "C16",
+            "source_id": "S3",
+            "category": "camera_rotation",
+            "reference": {
+              "same_turn_direction": "no"
+            },
+            "prediction": {
+              "same_turn_direction": "no"
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 106
+          },
+          {
+            "atom_id": "F18",
+            "record_id": "C17",
+            "source_id": "S3",
+            "category": "direction",
+            "reference": {
+              "turn_direction": "left",
+              "turn_degrees": 147.0
+            },
+            "prediction": {
+              "turn_direction": "left",
+              "turn_degrees": 145
+            },
+            "correct": true,
+            "traceable_evidence": true,
+            "original_jsonl_line": 108
+          }
+        ],
+        "breakdown": {
+          "camera_rotation": {
+            "correct": 4,
+            "total": 4
+          },
+          "direction": {
+            "correct": 8,
+            "total": 8
+          },
+          "localization3d": {
+            "correct": 2,
+            "total": 4
+          },
+          "motion": {
+            "correct": 0,
+            "total": 2
+          }
+        },
+        "review_complete": true
+      },
+      "effort": "xhigh",
+      "seconds": 1172.5215337276459,
+      "exports": [
+        {
+          "evidence_id": "E5d3506f851304c41",
+          "start_s": 0,
+          "end_s": 37.333333,
+          "path": "evidence/E5d3506f851304c41.mkv",
+          "sha256": "78abef16262a703c499c6646c9b65bb4eecb56b11120ece6688b8961f89ac65b",
+          "source_sha256": "71d0ddbff4b2c53ead6c93c52f2da8a68d9d628fadfd191402b7d7780b3068fd",
+          "preview_path": "evidence/E5d3506f851304c41_preview.mp4",
+          "preview_sha256": "187a7df2b7fba0066cbfb2222923bc2e360a9b223b47e30399cbb14927e62384",
+          "preview_note": "lossy simplified stereo; original multichannel evidence is MKV"
+        }
+      ],
+      "apiCalls": 38,
+      "apiErrors": 0,
+      "isolation": {
+        "input_readable": true,
+        "input_readonly": true,
+        "submission_writable": true,
+        "host_paths_hidden": true,
+        "credential_absent": true,
+        "network_blocked": true,
+        "no_network_interfaces": true,
+        "no_default_route": true,
+        "visible_process_count": 2,
+        "pid_namespace_small": true
+      },
+      "links": {
+        "grade": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/grade.json",
+        "run": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/run.json",
+        "review": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/manual_review.json",
+        "trace": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/host_query_trace.jsonl",
+        "final": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/final_message.txt",
+        "report": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/report.html"
+      },
+      "artifacts": [
+        {
+          "name": "analysis/audio_stats.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/audio_stats.py",
+          "bytes": 1354
+        },
+        {
+          "name": "analysis/channel_statistics.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/channel_statistics.json",
+          "bytes": 7488
+        },
+        {
+          "name": "analysis/check_submission.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/check_submission.py",
+          "bytes": 2925
+        },
+        {
+          "name": "analysis/coverage_manifest.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/coverage_manifest.json",
+          "bytes": 10369
+        },
+        {
+          "name": "analysis/diffuse_fit.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/diffuse_fit.json",
+          "bytes": 14161
+        },
+        {
+          "name": "analysis/diffuse_fit.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/diffuse_fit.py",
+          "bytes": 1399
+        },
+        {
+          "name": "analysis/doa_histogram.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/doa_histogram.jpg",
+          "bytes": 254423
+        },
+        {
+          "name": "analysis/exact_contact.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/exact_contact.jpg",
+          "bytes": 211371
+        },
+        {
+          "name": "analysis/export_receipt.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/export_receipt.json",
+          "bytes": 2095
+        },
+        {
+          "name": "analysis/findings.schema.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/findings.schema.json",
+          "bytes": 28787
+        },
+        {
+          "name": "analysis/frame_0.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/frame_0.jpg",
+          "bytes": 115920
+        },
+        {
+          "name": "analysis/frame_18.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/frame_18.jpg",
+          "bytes": 132610
+        },
+        {
+          "name": "analysis/geometry.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/geometry.json",
+          "bytes": 3165
+        },
+        {
+          "name": "analysis/geometry.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/geometry.py",
+          "bytes": 2668
+        },
+        {
+          "name": "analysis/grid0.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/grid0.jpg",
+          "bytes": 78066
+        },
+        {
+          "name": "analysis/grid1.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/grid1.jpg",
+          "bytes": 66990
+        },
+        {
+          "name": "analysis/intensity.jpg",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/intensity.jpg",
+          "bytes": 142565
+        },
+        {
+          "name": "analysis/intensity.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/intensity.json",
+          "bytes": 197061
+        },
+        {
+          "name": "analysis/intensity.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/intensity.py",
+          "bytes": 1947
+        },
+        {
+          "name": "analysis/local_validation.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/local_validation.json",
+          "bytes": 418
+        },
+        {
+          "name": "analysis/method_and_uncertainty.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/method_and_uncertainty.json",
+          "bytes": 4885
+        },
+        {
+          "name": "analysis/robust_direction.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/robust_direction.json",
+          "bytes": 41777
+        },
+        {
+          "name": "analysis/robust_direction.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/robust_direction.py",
+          "bytes": 1351
+        },
+        {
+          "name": "analysis/source_tracks.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/source_tracks.json",
+          "bytes": 260901
+        },
+        {
+          "name": "analysis/source_tracks.py",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/source_tracks.py",
+          "bytes": 1425
+        },
+        {
+          "name": "analysis/spectrogram.png",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/analysis/spectrogram.png",
+          "bytes": 806126
+        },
+        {
+          "name": "ATTRIBUTION.md",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/ATTRIBUTION.md",
+          "bytes": 369
+        },
+        {
+          "name": "evidence/E5d3506f851304c41.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/untagged-d3f4a41459b93c68de60/78abef16262a703c499c-E5d3506f851304c41.mkv",
+          "bytes": 561563116
+        },
+        {
+          "name": "evidence/E5d3506f851304c41_preview.mp4",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/evidence/E5d3506f851304c41_preview.mp4",
+          "bytes": 1973883
+        },
+        {
+          "name": "evidence_manifest.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/evidence_manifest.json",
+          "bytes": 590
+        },
+        {
+          "name": "findings.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/findings.json",
+          "bytes": 5088
+        },
+        {
+          "name": "host_validation.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/host_validation.json",
+          "bytes": 1962
+        },
+        {
+          "name": "query_trace.jsonl",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/query_trace.jsonl",
+          "bytes": 993
+        },
+        {
+          "name": "README.txt",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/README.txt",
+          "bytes": 962
+        },
+        {
+          "name": "report.html",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/report.html",
+          "bytes": 33257
+        },
+        {
+          "name": "submission_receipt.json",
+          "url": "omniecho-investigation/case1__astra_xhigh_unlimited_20261119_newkey/submission_receipt.json",
+          "bytes": 0
+        }
+      ],
+      "timeBudget": "不限时"
     }
   ],
   "coverage": {

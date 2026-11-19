@@ -1,0 +1,67 @@
+{
+  "reference_media_mounted": false,
+  "solver_scratch_mounted": false,
+  "renders": [
+    {
+      "name": "reconstruction",
+      "returncode": 0,
+      "elapsed_seconds": 10.096617698669434,
+      "exists": true
+    },
+    {
+      "name": "revision",
+      "returncode": 0,
+      "elapsed_seconds": 10.409579992294312,
+      "exists": true
+    },
+    {
+      "name": "variant",
+      "returncode": 0,
+      "elapsed_seconds": 8.127896785736084,
+      "exists": true
+    },
+    {
+      "name": "delay0",
+      "returncode": 0,
+      "elapsed_seconds": 8.695775747299194,
+      "exists": true
+    }
+  ],
+  "sealed_vs_independent": [
+    {
+      "name": "reconstruction",
+      "decoded_frames": 96,
+      "decoded_pixels_identical": true
+    },
+    {
+      "name": "revision",
+      "decoded_frames": 144,
+      "decoded_pixels_identical": true
+    }
+  ],
+  "variant_config": {
+    "path_text": "MAKE MORE",
+    "ui_gradient": [
+      "#7C3AED",
+      "#FB923C"
+    ],
+    "cursor_delay_s": 0,
+    "time_map": {
+      "source_s": [
+        0,
+        1.75,
+        2.75,
+        3.75,
+        4
+      ],
+      "output_s": [
+        0,
+        1.75,
+        3.25,
+        5.25,
+        6
+      ]
+    }
+  },
+  "variant_video_differs": true
+}

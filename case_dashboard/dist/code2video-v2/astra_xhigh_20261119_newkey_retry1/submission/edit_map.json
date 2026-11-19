@@ -1,0 +1,689 @@
+{
+  "coordinate_system": {
+    "width": 1920,
+    "height": 1080,
+    "origin": "top-left",
+    "fps": 24
+  },
+  "shared_project": "project/scene.py",
+  "reference_media_used_by_renderer": false,
+  "time": {
+    "implementation": "project/scene.py: source_time and frame_state",
+    "revision_source_s": [
+      0,
+      1.75,
+      2.75,
+      3.75,
+      4
+    ],
+    "revision_output_s": [
+      0,
+      1.75,
+      3.25,
+      5.25,
+      6
+    ],
+    "output_anchor_frames": [
+      0,
+      42,
+      78,
+      126,
+      144
+    ],
+    "end_boundary": "Output frame 144 and source frame 96 are exclusive boundaries, not rendered frames.",
+    "sampling": "The print layout is held on even source frames. Illustration poses are held on odd source frames from 61 onward. UI motion is continuous. All are evaluated after the piecewise linear time map."
+  },
+  "parameters": {
+    "path_text": {
+      "location": "project/lettering.py:text_on_path; project/illustration.py:render_art",
+      "scope": [
+        "left upper arc",
+        "right lower arc",
+        "monochrome upper arc revealed in the final handoff"
+      ],
+      "reconstruction": "TOGETHER",
+      "revision": "CREATE ON",
+      "limits": "6\u201310 uppercase letters/spaces",
+      "behavior": "Recompute letter advances and warp complete editable glyph contours to the curve. The original word is not rendered in revision mode."
+    },
+    "ui_gradient": {
+      "location": "project/ui.py:pink_tube,grey_tube,glass_panel",
+      "scope": [
+        "right tube carrier and center groove",
+        "travelling rounded sleeve",
+        "left glass track neon groove",
+        "refracted tube color through the glass panel"
+      ],
+      "revision": [
+        "#2563EB",
+        "#22D3EE"
+      ],
+      "retained": "White and grey track body, highlights, shadows, control colors, construction and illustration colors."
+    },
+    "cursor_delay_s": {
+      "location": "project/scene.py:frame_state,project/ui.py:draw_cursor",
+      "object_id": "cursor_blue",
+      "formula": "blue_source_s = base_time_map(output_s - cursor_delay_s); no delay on any other object",
+      "revision": 0.25,
+      "limits": [
+        0,
+        0.35
+      ],
+      "screen_identity_at_source_2_25_s": {
+        "tip": [
+          1041,
+          596
+        ],
+        "approx_bounds": [
+          1040,
+          594,
+          1100,
+          652
+        ]
+      },
+      "layer": "After UI controls, before the independently unfolding illustration and its paper curls. Occlusion is recomputed at output time."
+    }
+  },
+  "ui_objects": [
+    {
+      "id": "cursor_blue",
+      "editable": "project/ui.py:cursor_state(blue)",
+      "color": "#127BF1",
+      "source_visible_range_approx_s": [
+        1.5833,
+        2.875
+      ],
+      "layer": 70
+    },
+    {
+      "id": "cursor_green",
+      "editable": "project/ui.py:cursor_state(green)",
+      "layer": 70,
+      "delay": 0
+    },
+    {
+      "id": "cursor_orange",
+      "editable": "project/ui.py:cursor_state(orange)",
+      "layer": 70,
+      "delay": 0
+    },
+    {
+      "id": "grey_track",
+      "editable": "project/geometry.py:LEFT; project/ui.py:grey_tube",
+      "layer": 20
+    },
+    {
+      "id": "pink_or_blue_tube",
+      "editable": "project/geometry.py:RIGHT; project/ui.py:pink_tube",
+      "layer": 10
+    },
+    {
+      "id": "glass_panel",
+      "editable": "project/ui.py:glass_panel",
+      "approx_bounds": [
+        1217,
+        470,
+        1472,
+        729
+      ],
+      "layer": 50
+    },
+    {
+      "id": "wireframe_tile_and_orbs",
+      "editable": "project/ui.py:extras",
+      "layer": 40
+    },
+    {
+      "id": "selection_guides",
+      "editable": "project/ui.py:ui_guides",
+      "layer": 30
+    },
+    {
+      "id": "speech_bubble",
+      "editable": "project/ui.py:speech",
+      "layer": 60
+    }
+  ],
+  "construction": {
+    "file": "project/layout.py",
+    "elements": [
+      "progressively cropped right ring",
+      "central inverse logo strip",
+      "left inverse tile",
+      "halftone fields",
+      "two color-card rows",
+      "top gradient swatches",
+      "five bottom pink tints",
+      "Aa outlined badge",
+      "registration targets",
+      "selection handles",
+      "paragraph rules",
+      "cyan construction guides"
+    ]
+  },
+  "illustration_objects": [
+    {
+      "id": "red_scalloped_flower",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1220,
+        729
+      ],
+      "bounds": [
+        1017.5625,
+        557.75390625,
+        1494.5546875,
+        917.1328125
+      ],
+      "layer": 0,
+      "source_entrance_frame": 67,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 1
+    },
+    {
+      "id": "lower_lime_burst",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1245,
+        911
+      ],
+      "bounds": [
+        1181.0,
+        861.0,
+        1313.0,
+        990.0
+      ],
+      "layer": 0,
+      "source_entrance_frame": 75,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 1
+    },
+    {
+      "id": "lime_crown",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1017,
+        300
+      ],
+      "bounds": [
+        841.0,
+        82.0,
+        1175.0,
+        341.0
+      ],
+      "layer": 0,
+      "source_entrance_frame": 74,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 2
+    },
+    {
+      "id": "lightning_leaf",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1040,
+        379
+      ],
+      "bounds": [
+        765.0,
+        277.0,
+        1192.0,
+        507.0
+      ],
+      "layer": 1,
+      "source_entrance_frame": 72,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 2
+    },
+    {
+      "id": "right_lime_leaf",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1242,
+        504
+      ],
+      "bounds": [
+        1166.0,
+        397.625,
+        1356.875,
+        585.0
+      ],
+      "layer": 1,
+      "source_entrance_frame": 70,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 1
+    },
+    {
+      "id": "left_magenta_star",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        492,
+        665
+      ],
+      "bounds": [
+        383.0,
+        548.0,
+        606.0,
+        768.0
+      ],
+      "layer": 1,
+      "source_entrance_frame": 73,
+      "source_entrance_duration_frames": 2,
+      "editable_paths": 1
+    },
+    {
+      "id": "pencil",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        595,
+        356
+      ],
+      "bounds": [
+        487.0,
+        257.80078125,
+        721.4453125,
+        451.0
+      ],
+      "layer": 2,
+      "source_entrance_frame": 79,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 8
+    },
+    {
+      "id": "camera_capsule",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        548,
+        751
+      ],
+      "bounds": [
+        451.3671875,
+        666.90234375,
+        657.04296875,
+        852.76171875
+      ],
+      "layer": 2,
+      "source_entrance_frame": 75,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 5
+    },
+    {
+      "id": "yellow_plus",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        526,
+        695
+      ],
+      "bounds": [
+        464.109375,
+        636.375,
+        590.75390625,
+        758.0078125
+      ],
+      "layer": 3,
+      "source_entrance_frame": 74,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 1
+    },
+    {
+      "id": "seal_chain",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        650,
+        846
+      ],
+      "bounds": [
+        584.0,
+        786.0,
+        720.0,
+        920.0
+      ],
+      "layer": 2,
+      "source_entrance_frame": 73,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 2
+    },
+    {
+      "id": "yellow_feather",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        822,
+        770
+      ],
+      "bounds": [
+        677.125,
+        659.92578125,
+        1001.8515625,
+        949.0078125
+      ],
+      "layer": 3,
+      "source_entrance_frame": 62,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 1
+    },
+    {
+      "id": "inner_green_leaf",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        901,
+        709
+      ],
+      "bounds": [
+        845.46875,
+        588.9140625,
+        1001.7578125,
+        837.875
+      ],
+      "layer": 2,
+      "source_entrance_frame": 62,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 1
+    },
+    {
+      "id": "lavender_inner",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        712,
+        570
+      ],
+      "bounds": [
+        551.953125,
+        420.828125,
+        843.53515625,
+        727.7265625
+      ],
+      "layer": 4,
+      "source_entrance_frame": 66,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 1
+    },
+    {
+      "id": "pink_center_blob",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1132,
+        643
+      ],
+      "bounds": [
+        939.60546875,
+        487.73828125,
+        1321.95703125,
+        772.78125
+      ],
+      "layer": 5,
+      "source_entrance_frame": 65,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 1
+    },
+    {
+      "id": "blue_orb",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1170,
+        565
+      ],
+      "bounds": [
+        1070.79296875,
+        465.1171875,
+        1326.0,
+        665.02734375
+      ],
+      "layer": 6,
+      "source_entrance_frame": 73,
+      "source_entrance_duration_frames": 2,
+      "editable_paths": 2
+    },
+    {
+      "id": "mushroom_cap",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1235,
+        169
+      ],
+      "bounds": [
+        1151.18359375,
+        86.10546875,
+        1310.49609375,
+        241.38671875
+      ],
+      "layer": 5,
+      "source_entrance_frame": 78,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 4
+    },
+    {
+      "id": "upper_lime_flower",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1334,
+        268
+      ],
+      "bounds": [
+        1238.65625,
+        187.80078125,
+        1429.56640625,
+        335.2890625
+      ],
+      "layer": 5,
+      "source_entrance_frame": 76,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 2
+    },
+    {
+      "id": "aqua_star",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1392,
+        190
+      ],
+      "bounds": [
+        1340.0,
+        143.0,
+        1439.0,
+        228.0
+      ],
+      "layer": 4,
+      "source_entrance_frame": 80,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 1
+    },
+    {
+      "id": "cherry_and_stem",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1450,
+        346
+      ],
+      "bounds": [
+        1386.890625,
+        288.92578125,
+        1563.0,
+        407.6875
+      ],
+      "layer": 5,
+      "source_entrance_frame": 77,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 3
+    },
+    {
+      "id": "right_arrow",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1468,
+        438
+      ],
+      "bounds": [
+        1394.0,
+        348.0,
+        1543.0,
+        514.0
+      ],
+      "layer": 6,
+      "source_entrance_frame": 79,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 2
+    },
+    {
+      "id": "eye_coin",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1442,
+        636
+      ],
+      "bounds": [
+        1344.9140625,
+        537.640625,
+        1537.05859375,
+        727.5078125
+      ],
+      "layer": 9,
+      "source_entrance_frame": 77,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 5
+    },
+    {
+      "id": "left_ribbon",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        423,
+        508
+      ],
+      "bounds": [
+        307.265625,
+        441.20703125,
+        526.3125,
+        563.5625
+      ],
+      "layer": 4,
+      "source_entrance_frame": 79,
+      "source_entrance_duration_frames": 3,
+      "editable_paths": 1
+    },
+    {
+      "id": "bottom_orbit",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1360,
+        829
+      ],
+      "bounds": [
+        1247.0,
+        704.0,
+        1520.37890625,
+        908.16015625
+      ],
+      "layer": 3,
+      "source_entrance_frame": 74,
+      "source_entrance_duration_frames": 4,
+      "editable_paths": 6
+    },
+    {
+      "id": "lower_curl",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        471,
+        882
+      ],
+      "bounds": [
+        437.6015625,
+        840.28125,
+        524.96875,
+        952.6875
+      ],
+      "layer": 5,
+      "source_entrance_frame": 80,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 1
+    },
+    {
+      "id": "green_diamond",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        415,
+        825
+      ],
+      "bounds": [
+        382.0,
+        785.0,
+        449.0,
+        860.0
+      ],
+      "layer": 4,
+      "source_entrance_frame": 80,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 1
+    },
+    {
+      "id": "pink_top_spark",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        1007,
+        99
+      ],
+      "bounds": [
+        977.0,
+        70.0,
+        1035.0,
+        126.0
+      ],
+      "layer": 7,
+      "source_entrance_frame": 86,
+      "source_entrance_duration_frames": 6,
+      "editable_paths": 1
+    },
+    {
+      "id": "lower_confetti",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        363,
+        849
+      ],
+      "bounds": [
+        307.0,
+        806.94140625,
+        425.12890625,
+        878.0
+      ],
+      "layer": 5,
+      "source_entrance_frame": 84,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 3
+    },
+    {
+      "id": "white_lower_spark",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        768,
+        750
+      ],
+      "bounds": [
+        707.0,
+        693.0,
+        832.0,
+        803.0
+      ],
+      "layer": 10,
+      "source_entrance_frame": 77,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 1
+    },
+    {
+      "id": "white_top_spark",
+      "file": "project/illustration.py:OBJECTS",
+      "pivot": [
+        915,
+        267
+      ],
+      "bounds": [
+        827.0,
+        180.0,
+        973.0,
+        334.0
+      ],
+      "layer": 8,
+      "source_entrance_frame": 80,
+      "source_entrance_duration_frames": 5,
+      "editable_paths": 1
+    }
+  ],
+  "illustration_order": "Back ornaments and fills in layer order; lettered logo ribbons; shaded paper curls; foreground coin and white sparkles; final monochrome handoff. Each ornament retains its own geometry, pivot and entrance timing."
+}

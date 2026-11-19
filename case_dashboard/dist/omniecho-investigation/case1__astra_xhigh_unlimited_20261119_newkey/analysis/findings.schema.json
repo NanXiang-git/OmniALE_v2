@@ -1,0 +1,1043 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "findings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "type": "array",
+      "minItems": 17,
+      "maxItems": 17,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C01"
+              },
+              "source_id": {
+                "const": "camera"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  0.0,
+                  18.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "camera"
+              },
+              "turn_direction": {
+                "enum": [
+                  "left",
+                  "right",
+                  "unknown"
+                ]
+              },
+              "turn_degrees": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "turn_direction",
+              "turn_degrees",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C02"
+              },
+              "source_id": {
+                "const": "camera"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  0.5,
+                  37.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "camera"
+              },
+              "turn_direction": {
+                "enum": [
+                  "left",
+                  "right",
+                  "unknown"
+                ]
+              },
+              "turn_degrees": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "turn_direction",
+              "turn_degrees",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C03"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": 9.0
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C04"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": 9.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "distance_m": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "distance_m",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C05"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  0.5,
+                  37.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "mixed"
+              },
+              "same_turn_direction": {
+                "enum": [
+                  "yes",
+                  "no",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "same_turn_direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C06"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  0.5,
+                  10.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "world"
+              },
+              "motion_direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "motion_direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C07"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": 8.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "turn_direction": {
+                "enum": [
+                  "left",
+                  "right",
+                  "unknown"
+                ]
+              },
+              "turn_degrees": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "turn_direction",
+              "turn_degrees",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C08"
+              },
+              "source_id": {
+                "const": "S1"
+              },
+              "time_s": {
+                "const": 2.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C09"
+              },
+              "source_id": {
+                "const": "S2"
+              },
+              "time_s": {
+                "const": 13.0
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C10"
+              },
+              "source_id": {
+                "const": "S2"
+              },
+              "time_s": {
+                "const": 21.0
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "distance_m": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "distance_m",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C11"
+              },
+              "source_id": {
+                "const": "S2"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  12.0,
+                  21.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "world"
+              },
+              "motion_direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "motion_direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C12"
+              },
+              "source_id": {
+                "const": "S2"
+              },
+              "time_s": {
+                "const": 12.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "turn_direction": {
+                "enum": [
+                  "left",
+                  "right",
+                  "unknown"
+                ]
+              },
+              "turn_degrees": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "turn_direction",
+              "turn_degrees",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C13"
+              },
+              "source_id": {
+                "const": "S2"
+              },
+              "time_s": {
+                "const": 16.0
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "distance_m": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "distance_m",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C14"
+              },
+              "source_id": {
+                "const": "S3"
+              },
+              "time_s": {
+                "const": 25.0
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C15"
+              },
+              "source_id": {
+                "const": "S3"
+              },
+              "time_s": {
+                "const": 27.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "direction": {
+                "enum": [
+                  "front",
+                  "front-left",
+                  "left",
+                  "back-left",
+                  "back",
+                  "back-right",
+                  "right",
+                  "front-right",
+                  "unknown"
+                ]
+              },
+              "distance_m": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "direction",
+              "distance_m",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C16"
+              },
+              "source_id": {
+                "const": "S3"
+              },
+              "time_s": {
+                "const": null
+              },
+              "interval_s": {
+                "const": [
+                  0.5,
+                  37.0
+                ]
+              },
+              "coordinate_frame": {
+                "const": "mixed"
+              },
+              "same_turn_direction": {
+                "enum": [
+                  "yes",
+                  "no",
+                  "unknown"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "same_turn_direction",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "record_id": {
+                "const": "C17"
+              },
+              "source_id": {
+                "const": "S3"
+              },
+              "time_s": {
+                "const": 34.5
+              },
+              "interval_s": {
+                "const": null
+              },
+              "coordinate_frame": {
+                "const": "camera-body"
+              },
+              "turn_direction": {
+                "enum": [
+                  "left",
+                  "right",
+                  "unknown"
+                ]
+              },
+              "turn_degrees": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 360
+                  },
+                  {
+                    "const": "unknown"
+                  }
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "report_anchor": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+              }
+            },
+            "required": [
+              "record_id",
+              "source_id",
+              "time_s",
+              "interval_s",
+              "coordinate_frame",
+              "turn_direction",
+              "turn_degrees",
+              "evidence_ids",
+              "report_anchor"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  }
+}

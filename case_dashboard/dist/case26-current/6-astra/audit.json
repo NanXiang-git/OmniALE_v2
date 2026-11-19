@@ -1,0 +1,62 @@
+{
+  "utc": 1795062327.0017045,
+  "integrity_passed": true,
+  "integrity_failures": [],
+  "frozen_files_checked": 54,
+  "sealed_files": 9,
+  "solver_model_and_effort_verified": true,
+  "solver_model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "deadline": {
+    "start_unix": 1795057233.4690452,
+    "deadline_unix": null,
+    "wall_clock_seconds": null,
+    "unlimited": true,
+    "mode": "official"
+  },
+  "unlimited_verified": true,
+  "api_calls": 52,
+  "api_failed": 0,
+  "completed_commands": 49,
+  "failed_commands": 2,
+  "elapsed_seconds": 2689.3936610221863,
+  "timed_out": false,
+  "host_returncode": 0,
+  "same_inputs": {
+    "checked_unix": 1795062327.0026083,
+    "original_frozen_files_unchanged": true,
+    "files_checked": 16,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "wall_clock_seconds": null,
+    "input_manifest_identical": true,
+    "checks": {
+      "CREDITS.md": true,
+      "input/damaged.mkv": true,
+      "input/damaged_av.mkv": true,
+      "input/music_damaged.wav": true,
+      "input/previous_attempt.mp4": true,
+      "input/SOURCES.md": true,
+      "output_schema.json": true,
+      "project_schema.json": true,
+      "public_rules.json": true,
+      "replay.py": true,
+      "report_schema.json": true,
+      "TASK.md": true,
+      "tools_manifest.json": true,
+      "version.json": true,
+      "visual_rules_v3.json": true,
+      "VISUAL_TASK_V3.md": true
+    },
+    "note": "Compared this run input hashes directly to the original freeze; inherited environment/comparability.json describes prior setup and is not used as model identity evidence."
+  },
+  "score": {
+    "formal_total": 61.4148,
+    "visual_points": 46.04488,
+    "audio_points_verified": 15.36987944949448,
+    "pending": [],
+    "accepted": false,
+    "hard_failures": [],
+    "critical_failures": []
+  }
+}

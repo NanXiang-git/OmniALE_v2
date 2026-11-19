@@ -7,8 +7,8 @@
     "directory": "case26_av_music_v2/case_26/candidate",
     "resultKey": "task-05",
     "experimentStatus": "completed",
-    "resultCount": 2,
-    "resultSummary": "6-luna 32.9005 · 6.1-sol 49.7870",
+    "resultCount": 3,
+    "resultSummary": "6-astra 61.4148 · 6-luna 32.9005 · 6.1-sol 49.7870",
     "main": "input/damaged_av.mkv",
     "files": [
       {
@@ -143,12 +143,12 @@
         "text": "# Case26｜保留局部光变与手部细节的弱光修复（加重损伤版v3）\r\n\r\n修复26秒控制台手部实拍的受控退化：更明显的暗部颗粒、局部彩色斑噪和横向噪声、运动拖尾与异常快速闪动。制作方有意加入了移动暖色扫光与较慢的冷暗变化，这些须保留。previous_attempt.mp4是存在过度平滑、残影及光变压平问题的旧尝试，不能直接作为目标。\r\n\r\n输入damaged.mkv是权威RGB8母版：640×338、24fps、624帧、无声音。源动作来自真实拍摄，光变与退化由出题人施加，不声称自然相机故障或原片灯光设计。三段正常保护窗为帧[0,48)、[264,288)、[600,624)，应保持原有质感与颜色。其余区段均应有实际改善，不能只修静态背景。\r\n\r\n交付submission.json，索引restored.mkv、preview.mp4、repair.mkv、project.json、report.json。两条MKV均FFV1、RGB8、624帧、同尺寸和帧率、无声音；预览为H264 MP4，必须来自交付母版。报告说明方法/限制与最多6条自查证据，不得据模型名称宣称保真。\r\n\r\nrepair.mkv是可编辑修订层，每通道128代表不改，实际修订量为2×(像素−128)。project按schema记录输入、强度1.0和逐帧映射。通过replay.py可对原输入加修订层重建母版，每RGB样本容许1级量化差；把强度改为0或0.5应分别得到原片或中间修订。该合同用于重放结果、交接和调整强度，不等同证明你原本的降噪算法可复现。允许使用任何本地传统/专业/模型工具制作修订，评测不执行提交者任意代码。\r\n\r\n保留所有源动作、帧序、画幅和色彩约定；不裁切、镜像、换帧、生成不同手指/物件、叠字幕或统一消除所有曝光变化。不要以缩小后放大或整幅强模糊掩盖噪声。\r\n\r\n自动60分：交付5、修订层重放5、分段改善15、运动细节15、时序5、光变10、正常保护5。judge40分：动作证据15、实际修复质量15、光变意图10，均为核心条目。指标区域从真值固定生成，逐段/逐帧验收；总分≥80且无硬失败/核心失败才通过。无独立judge时正式总分待定。精确门槛、锚点和公式见public_rules.json。\r\n\r\n\r\n## 本次实验版本与预算\r\n\r\n本题版本为v3，submission.json的version必须为\"3.0\"。独立答题墙钟上限60分钟，包含分析、工具运行、处理、导出和自检。提前结束立即封存，到时终止全部子进程。只允许访问公开题包和自己的工作目录，无外网检索、下载、参考答案或评分反馈。\r\n\r\n有意的暖色移动扫光位于4–10秒，较慢偏冷变暗位于17–21秒；它们属于需要保留的画面效果。正常保护窗为0–2秒、11–12秒、25–26秒（区间右端不含）。各受损区段必须实际改善，同时保留真实动作和自然运动模糊。不要把正常灯光变化全部拉平。\r\n\r\nprevious_attempt.mp4是对本版受损输入做强空间/时间平滑与曝光压平得到的失败示范，不是修复目标。数据含受控合成损伤，不声称是真实摄影机故障。公开数值评分规则与v2相同；跨版本分数不可直接视为同题条件下的能力提升或下降。\r\n"
       }
     ],
-    "task": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n",
-    "contract": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n",
+    "task": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna、Astra 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n",
+    "contract": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna、Astra 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n",
     "outputs": [
       {
         "title": "联合修复交付与评分",
-        "text": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n"
+        "text": "# Case26｜弱光画面与复杂音乐联合修复 v2\r\n\r\n修复26秒弱光画面和受损音乐。视频沿用v3，不增加新画面损伤；音乐为独立新编器乐，与画面语义无关。input/damaged_av.mkv含受损音画；input/damaged.mkv和input/music_damaged.wav为无损分离版。\r\n\r\n画面合同、保护窗、修订层重放和报告schema详见VISUAL_TASK_V3.md。音频可能有时变有色噪声、漂移窄带干扰、不同形态爆音、单声道短缺口和局部非线性失真，可能相互重叠。自行定位损伤，保留真实音符、节奏、拨弦/打击乐起音、弱音、衰减和立体声。0–2秒与24–26秒为正常音频保护段。不得换曲、静音掩盖、删段、错移、变速或下载原曲替换。\r\n\r\n## 交付\r\n\r\nsubmission/submission.json: version=\"3.2-av-music-heavy\", case_id=\"26\"，files必须有：master=restored.mkv（无声FFV1 RGB8视觉母版）、repair=repair.mkv（无声修订层）、preview=preview.mp4（无声H264预览）、project=project.json、report=report.json、audio=restored_audio.wav（48kHz双声道PCM16，1248000采样帧）、av_preview=restored_av.mp4（同一画面H264和同一音频AAC）、audio_report=audio_report.json（method、limitations、checks，各检查含start/end/observation）。路径相对submission，不能使用外部路径或链接。视频640×338、24fps、624帧。音画预览对无损音轨SNR≥25dB，对母版逐帧MAE≤0.025。\r\n\r\n## 评分与环境\r\n\r\n总分100，视觉70、听觉30。视觉0.7×C×(客观40＋视觉评审60)，C=min(交付完成度,重放完成度)。视觉裁判GPT-6.1-sol/high，使用v3最终量表与完整逐帧对照证据。\r\n\r\n音频：相对改善6＋绝对波形保真6＋频谱保真6＋真实音乐起音2＋损伤事件恢复1＋立体声1＋正常段保护2＋实际听评6。格式/时长/同步为硬门槛，不加分。较差窗口参与汇总，不能以少数容易片段掩盖未修复片段。真值预先固定的音符起音与损伤事件用于局部测量；具体公式和阈值公开于public_rules.json。听评有相同音频对照，不通过则待复核。总分≥80、视觉≥42、音频≥18且没有硬/核心失败才通过。\r\n\r\n原配置：GPT-6.1-sol/high、60分钟墙钟，含所有分析、工具、导出和自检。仅可访问/candidate和/workspace；无外网、干净参考、损伤参数、其他答卷或评测反馈。用实际工具观察媒体，不得声称未进行的试听。按截止时间交付全部文件。\r\n\n\n## 当前看板的实验设置\n\n本页每个模型只显示最新一次有封存答卷的已评分实验。原题中的 Sol/high/60分钟是原实验配置；Luna、Astra 使用 xhigh、不限时的运行覆盖设置。各自预算、实际用时和成绩见“作答结果”。\n"
       }
     ],
     "delivery": [
@@ -159,6 +159,944 @@
     ]
   },
   "models": [
+    {
+      "key": "6-astra",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "budget": null,
+      "seconds": 2689.3936610221863,
+      "ended": 1795059922.7328005,
+      "date": "2026-11-19 11:45",
+      "run": "run_20261119_astra_xhigh_unlimited_newkey",
+      "harness": "Codex CLI 0.163.0",
+      "score": {
+        "version": "3.2-av-music-heavy",
+        "submission_binding": {
+          "master": "fd632744f531abcee96b16237aa41a67c8e4940ac62efb8b0fbf02b70d478a1b",
+          "repair": "dbe44eb86fa1ec84c2bef6774eff86cc60d3ddd0df861f50b53b9406b285a5c2",
+          "preview": "bf4565d55e6b781671e9b68303a9729260f2a6155d602f22584af4851ff0a1fa",
+          "project": "27d604c1bdcea13cb6eedfd18841e292bf336e8ecf1ba89f62b66c8eadbdffe8",
+          "report": "585dd0723f324f92e3c00dabddc1ef7ae2aba82a40a174937041ce010da629b6",
+          "audio": "f6a3c04df9e0e18238c3050dc4ce48ee915e3ac266c80030e4cca8d4f2e2652b",
+          "av_preview": "44cda296219a9207dbd5898b44b3bc1ea83a838b7ba774fab93716c825384d25",
+          "audio_report": "7d49e6e0351184eb55327b26c7624266ed85a4cb6d63c830ae6a12ba1d3e7a8d"
+        },
+        "rubric_sha256": "3ebd45224617ae25e1f0e8724cc9287dcf7d511b8ba3153aceada2444c52ca07",
+        "visual_points": 46.04488,
+        "visual_max": 70,
+        "audio_points_verified": 15.36987944949448,
+        "audio_max": 30,
+        "formal_total": 61.4148,
+        "pending": [],
+        "hard_failures": [],
+        "critical_failures": [],
+        "accepted": false,
+        "audio_automatic": {
+          "hard_failures": [],
+          "automatic_total": 11.36987944949448,
+          "automatic_scores": {
+            "relative_improvement": 3.1070213691364907,
+            "absolute_waveform": 1.1295261688557887,
+            "spectral_fidelity": 2.3935161457991088,
+            "musical_onsets": 1.6365772264308962,
+            "damage_events": 0.18568021837206572,
+            "stereo_preservation": 0.9175583209001297,
+            "normal_protection": 2
+          },
+          "metrics": {
+            "blocks": [
+              {
+                "start": 2,
+                "end": 8,
+                "input_snr_db": 1.70595726960207,
+                "output_snr_db": 9.39186311655655,
+                "improvement_db": 7.68590584695448,
+                "spectral_distance_db": 7.520643740002508
+              },
+              {
+                "start": 8,
+                "end": 13,
+                "input_snr_db": 0.6756401641251961,
+                "output_snr_db": 8.742347724114296,
+                "improvement_db": 8.0667075599891,
+                "spectral_distance_db": 7.540795292099879
+              },
+              {
+                "start": 13,
+                "end": 19,
+                "input_snr_db": 1.2302043520151988,
+                "output_snr_db": 9.581319068967083,
+                "improvement_db": 8.351114716951884,
+                "spectral_distance_db": 7.257908931789561
+              },
+              {
+                "start": 19,
+                "end": 24,
+                "input_snr_db": 1.3325121890924416,
+                "output_snr_db": 8.756750816774334,
+                "improvement_db": 7.424238627681892,
+                "spectral_distance_db": 7.605210247764415
+              }
+            ],
+            "protected_snr_db": [
+              130.97544939202766,
+              112.28136867589191
+            ],
+            "correlation": 0.942925881545979,
+            "onset_relative_errors": [
+              0.0706594198105817,
+              0.1477263069079254,
+              0.12191004271489456,
+              0.14203722648466593,
+              0.08316252180558192,
+              0.07603424071235128,
+              0.13662918003657348,
+              0.09185624664503708,
+              0.1030116861329801,
+              0.16284795983714873,
+              0.09155724650489165,
+              0.09908066891350811,
+              0.07731381731328743,
+              0.1167710880531462,
+              0.1155134119037618,
+              0.11269878200759517,
+              0.1621193602731977,
+              0.16581361619341514,
+              0.14445842148053717,
+              0.2834888252660753,
+              0.17614619033182724,
+              0.07712390515915026,
+              0.07475576472451331,
+              0.1434092043291597,
+              0.07898207853302551,
+              0.06998595795426335,
+              0.10932597886023966,
+              0.06988671482737437,
+              0.07752333232339605,
+              0.09845980821728673,
+              0.08435946870889156,
+              0.09665117799996395,
+              0.09759228264737374,
+              0.10252630347885298,
+              0.09413377399314421,
+              0.10496103387815671,
+              0.1348911953094537,
+              0.08886011533703832,
+              0.06606148839564238,
+              0.10257675685634955,
+              0.04994091238517356,
+              0.07668623624557831,
+              0.054377330084504315,
+              0.1204752568344832,
+              0.13448079345395314,
+              0.1299003929709487,
+              0.09311710085069244,
+              0.07580610228209496,
+              0.12539334882318776,
+              0.2644029709572767,
+              0.19972167262225415,
+              0.20327361598766505,
+              0.18302579004131603,
+              0.12319207767806375,
+              0.13234085212117921,
+              0.11260356794240105,
+              0.09580861475870203,
+              0.0653134113880966,
+              0.07925036887463525,
+              0.0685545825109712,
+              0.05848894730544549,
+              0.11477806833043902,
+              0.06595827955651579,
+              0.07132876288734828,
+              0.1460046104281627,
+              0.15145906254078487,
+              0.09074890254216776,
+              0.07790551547908374,
+              0.08546261364880817,
+              0.14145035580066004,
+              0.09884617222137093,
+              0.08907876143619625,
+              0.07522434457795617,
+              0.06685021158818547,
+              0.12443804062356467,
+              0.10517977312428109,
+              0.06330181258918738,
+              0.0635666215933347,
+              0.07214230445946632,
+              0.13973470176643177,
+              0.07108687128355132,
+              0.1855374390192008,
+              0.14816086951506488,
+              0.18070108886009734,
+              0.23226035199779851,
+              0.20246878232936086,
+              0.38993918801792327,
+              0.09439615008499776,
+              0.10281383286747232,
+              0.165283218406358,
+              0.11338807447103529,
+              0.0825830545211662,
+              0.05747813188341668,
+              0.09536889453187551,
+              0.09859957087804641,
+              0.07788793076163356,
+              0.13840000354607554,
+              0.15339549517861176,
+              0.14393572552354109,
+              0.2744802485437815,
+              0.1758434242961455,
+              0.1012313926013831,
+              0.06547467703277855,
+              0.12263684618934036,
+              0.09930092705925216,
+              0.08985682550530728,
+              0.14936439103988228,
+              0.040759404382236374,
+              0.04586658098163352
+            ],
+            "event_windows": [
+              {
+                "kind": "variable_click",
+                "start": 3.17,
+                "end": 3.170945,
+                "snr_db": 12.418180620703543
+              },
+              {
+                "kind": "variable_click",
+                "start": 4.508,
+                "end": 4.51097,
+                "snr_db": 6.280119014673665
+              },
+              {
+                "kind": "variable_click",
+                "start": 6.23,
+                "end": 6.236750000000001,
+                "snr_db": 9.555512995800997
+              },
+              {
+                "kind": "variable_click",
+                "start": 7.75,
+                "end": 7.751485,
+                "snr_db": 7.513684131000009
+              },
+              {
+                "kind": "variable_click",
+                "start": 9.139,
+                "end": 9.149799999999999,
+                "snr_db": 7.285769506840744
+              },
+              {
+                "kind": "variable_click",
+                "start": 10.52,
+                "end": 10.524049999999999,
+                "snr_db": 9.849631481959356
+              },
+              {
+                "kind": "variable_click",
+                "start": 12.87,
+                "end": 12.884849999999998,
+                "snr_db": 10.933884725791208
+              },
+              {
+                "kind": "variable_click",
+                "start": 14.004,
+                "end": 14.004945,
+                "snr_db": 11.778994456206004
+              },
+              {
+                "kind": "variable_click",
+                "start": 15.39,
+                "end": 15.39297,
+                "snr_db": 8.951692001626576
+              },
+              {
+                "kind": "variable_click",
+                "start": 17.251,
+                "end": 17.25775,
+                "snr_db": 8.026344563365958
+              },
+              {
+                "kind": "variable_click",
+                "start": 18.64,
+                "end": 18.641485,
+                "snr_db": 10.765496297886779
+              },
+              {
+                "kind": "variable_click",
+                "start": 20.17,
+                "end": 20.1808,
+                "snr_db": 9.335539344700074
+              },
+              {
+                "kind": "variable_click",
+                "start": 21.753,
+                "end": 21.75705,
+                "snr_db": 6.344550416309406
+              },
+              {
+                "kind": "variable_click",
+                "start": 23.16,
+                "end": 23.17485,
+                "snr_db": 10.271191733398716
+              },
+              {
+                "kind": "short_gap",
+                "start": 4.18,
+                "end": 4.1880999999999995,
+                "snr_db": 9.944920229836876
+              },
+              {
+                "kind": "short_gap",
+                "start": 7.39,
+                "end": 7.40485,
+                "snr_db": 9.460907246277827
+              },
+              {
+                "kind": "short_gap",
+                "start": 10.83,
+                "end": 10.8408,
+                "snr_db": 7.586952872393111
+              },
+              {
+                "kind": "short_gap",
+                "start": 13.62,
+                "end": 13.64025,
+                "snr_db": 7.172418190016562
+              },
+              {
+                "kind": "short_gap",
+                "start": 16.16,
+                "end": 16.16675,
+                "snr_db": 8.16024422808492
+              },
+              {
+                "kind": "short_gap",
+                "start": 19.38,
+                "end": 19.4043,
+                "snr_db": 3.087600286685582
+              },
+              {
+                "kind": "short_gap",
+                "start": 22.09,
+                "end": 22.102149999999998,
+                "snr_db": 7.253105775105162
+              },
+              {
+                "kind": "asymmetric_clipping",
+                "start": 5.3,
+                "end": 6.4,
+                "snr_db": 8.37005056762054
+              },
+              {
+                "kind": "asymmetric_clipping",
+                "start": 11.7,
+                "end": 12.8,
+                "snr_db": 7.823706649179284
+              },
+              {
+                "kind": "asymmetric_clipping",
+                "start": 18.3,
+                "end": 19.5,
+                "snr_db": 8.53509034094843
+              },
+              {
+                "kind": "asymmetric_clipping",
+                "start": 21.5,
+                "end": 22.4,
+                "snr_db": 7.238037093187529
+              }
+            ],
+            "stereo_errors": [
+              0.022360650961383146,
+              0.031612071395158044,
+              0.005559027624394536,
+              0.027127417210283084,
+              0.025855594942279927,
+              0.008795912808951156,
+              0.026459716452204095,
+              0.02368239061669648,
+              0.032427642292669125,
+              0.02371782190647758,
+              0.014445366470537718,
+              0.01477696004513933,
+              0.03966762914841243,
+              0.0424218751911858,
+              0.03473796451005523,
+              0.015703865843764205,
+              0.017115152570432477,
+              0.024536880234159585,
+              0.032900528757230124,
+              0.029601752033872556,
+              0.0344476812804234,
+              0.03462628283810185,
+              0.0303019263869777,
+              0.02911641481610803,
+              0.01522530413473326,
+              0.02440756759520666,
+              0.0249750680074078,
+              0.02792362808455982,
+              0.0339450307316015,
+              0.0360843559208775,
+              0.032681486491979564,
+              0.025528994354582994,
+              0.02397121868941305,
+              0.017747535946470733,
+              0.044939821186645613,
+              0.04345094297768269,
+              0.026976789636933906,
+              0.021573544890532606,
+              0.031108124282261885,
+              0.050396254528857556,
+              0.030116610810753404,
+              0.013013062364039697,
+              0.015578759093318491,
+              0.004929857942338614
+            ],
+            "sample_frames": 1248000,
+            "sample_rate": 48000,
+            "channels": 2,
+            "av_preview_audio_snr_db": 41.53966015822846
+          }
+        },
+        "audio_judge": {
+          "musical_content": {
+            "rating": 1,
+            "verified": true,
+            "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+            "evidence": [
+              {
+                "source_interval": [
+                  0,
+                  6
+                ],
+                "finding": "The same melodic phrase and rhythmic structure as R are clearly present and intact throughout."
+              },
+              {
+                "source_interval": [
+                  6,
+                  12
+                ],
+                "finding": "The melody, rhythm, and note sequence are fully preserved and clearly identifiable against R."
+              },
+              {
+                "source_interval": [
+                  12,
+                  18
+                ],
+                "finding": "The melodic line, rhythm, and phrasing match Reference R exactly—same note sequence, same timing, same dynamics."
+              },
+              {
+                "source_interval": [
+                  18,
+                  24
+                ],
+                "finding": "The full melodic line and chordal accompaniment of the source interval are intact and clearly identifiable; no notes are missing or altered."
+              },
+              {
+                "source_interval": [
+                  24,
+                  26
+                ],
+                "finding": "Same piano note, same pitch, same duration and decay as R."
+              }
+            ]
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "verified": true,
+            "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+            "evidence": [
+              {
+                "source_interval": [
+                  0,
+                  6
+                ],
+                "finding": "The base timbre matches R, but additional sustained harmonic layers or textural elements are audible that were not present in the reference, slightly altering the overall tonal character."
+              },
+              {
+                "source_interval": [
+                  6,
+                  12
+                ],
+                "finding": "Slight timbral shift is perceptible—possibly a subtle change in reverb tail or spectral balance compared to R's drier, more direct character—but the core instrument identity remains."
+              },
+              {
+                "source_interval": [
+                  12,
+                  18
+                ],
+                "finding": "The bright, clean synthesized bell/music-box timbre is identical to R with no detectable alteration in spectral character."
+              },
+              {
+                "source_interval": [
+                  18,
+                  24
+                ],
+                "finding": "The crisp, dry bell/music-box timbre of R is replaced by a reverberant, diffuse quality with an elevated noise floor, softening attack transients and reducing clarity of individual voices."
+              },
+              {
+                "source_interval": [
+                  24,
+                  26
+                ],
+                "finding": "Identical harmonic spectrum and attack character to R; no tonal shift or filtering evident."
+              }
+            ]
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "verified": true,
+            "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+            "evidence": [
+              {
+                "source_interval": [
+                  0,
+                  6
+                ],
+                "finding": "Added harmonic/textural elements not present in R represent localized deviations from the reference, though they do not obscure the core content."
+              },
+              {
+                "source_interval": [
+                  6,
+                  12
+                ],
+                "finding": "No severe artifacts, but a faint residual processing difference (minor spectral smearing or level fluctuation) is detectable relative to R's clean synthesis."
+              },
+              {
+                "source_interval": [
+                  12,
+                  18
+                ],
+                "finding": "No additional noise, distortion, clicks, or other artifacts are audible beyond what is present in the reference itself."
+              },
+              {
+                "source_interval": [
+                  18,
+                  24
+                ],
+                "finding": "Added reverb tail and ambient hiss not present in R constitute new artifacts, though they do not fully mask the signal."
+              },
+              {
+                "source_interval": [
+                  24,
+                  26
+                ],
+                "finding": "No clicks, pops, distortion, or noise floor changes relative to R."
+              }
+            ]
+          }
+        },
+        "visual": {
+          "version": "2.0",
+          "case_id": "26",
+          "binding": {
+            "master": "fd632744f531abcee96b16237aa41a67c8e4940ac62efb8b0fbf02b70d478a1b",
+            "repair": "dbe44eb86fa1ec84c2bef6774eff86cc60d3ddd0df861f50b53b9406b285a5c2",
+            "preview": "bf4565d55e6b781671e9b68303a9729260f2a6155d602f22584af4851ff0a1fa",
+            "project": "27d604c1bdcea13cb6eedfd18841e292bf336e8ecf1ba89f62b66c8eadbdffe8",
+            "report": "585dd0723f324f92e3c00dabddc1ef7ae2aba82a40a174937041ce010da629b6"
+          },
+          "automatic_scores": {
+            "restoration": 12,
+            "motion_detail": 10.894656379636444,
+            "temporal": 4,
+            "lighting": 4.883726076646284,
+            "protected": 4
+          },
+          "judge_scores": {
+            "motion_evidence": 11.25,
+            "restoration_quality": 11.25,
+            "lighting_intent": 7.5
+          },
+          "metrics": {
+            "master": {
+              "width": 640,
+              "height": 338,
+              "fps": 24,
+              "codec": "ffv1",
+              "audio": []
+            },
+            "repair": {
+              "maximum_sample_error": 0,
+              "strength0_max_error": 0,
+              "strength_half_max_midpoint_error": 0.5,
+              "changed_channel_samples": 317517076
+            },
+            "preview": {
+              "maximum_frame_mae": 0.009854167699813843,
+              "minimum_frame_correlation": 0.9989101787057293
+            },
+            "frames_checked": 624,
+            "block_psnr_gain_db": [
+              11.261150521250338,
+              9.575660966725032,
+              8.943457909454564,
+              12.878696918611212
+            ],
+            "motion_mae": 0.018561505143458442,
+            "gradient_relative_error": 0.128515547743125,
+            "gradient_ratio": 0.9035834779968575,
+            "temporal_residual": 0.005125566383473178,
+            "maximum_frozen_run": 0,
+            "protected_maximum_frame_mae": 0,
+            "intent_projection_gains": [
+              0.9533426742100843,
+              1.0420640771487675
+            ],
+            "light_maximum_frame_tile_mae": 0.011569753289222717
+          },
+          "hard_failures": [],
+          "critical_failures": [],
+          "environment_errors": [],
+          "pending_automatic": [],
+          "pending_judge": [],
+          "pending_points": 0,
+          "verified_subtotal": 65.7784,
+          "formal_total": 65.7784,
+          "accepted": false,
+          "evidence_rubric_sha256": "3970e81ca3bae71b5bbce11b8fd0a915df32056cbe208e89cab9cb2f9f61133f",
+          "rubric_sha256": "4facb7bf7892fd5cbb3d3a074461bd0ba8ce7748322aa340b65e8b594592696b",
+          "scoring_version": "final-quality-coefficient-1",
+          "compliance": {
+            "delivery": 1,
+            "repair_replay": 1,
+            "coefficient": 1,
+            "formula": "min(delivery,repair_replay)"
+          },
+          "quality_weights": {
+            "automatic": {
+              "restoration": 12,
+              "motion_detail": 12,
+              "temporal": 4,
+              "lighting": 8,
+              "protected": 4
+            },
+            "judge": {
+              "motion_evidence": 22.5,
+              "restoration_quality": 22.5,
+              "lighting_intent": 15
+            }
+          },
+          "quality_subtotal": 65.77838245628273,
+          "aggregation_note": "Final weights only. Raw metrics, submission binding and verified visual decisions unchanged. Evidence rubric hash preserves the original observation provenance."
+        }
+      },
+      "links": {
+        "score": "case26-current/6-astra/score.json",
+        "audit": "case26-current/6-astra/audit.json",
+        "report": "case26-current/6-astra/RUN_REPORT.md",
+        "settings": "case26-current/6-astra/experiment_settings.json",
+        "trace": "case26-current/6-astra/trace.json"
+      },
+      "media": "case26-current/6-astra/preview.mp4",
+      "audio": "case26-current/6-astra/submission/restored_audio.wav",
+      "artifacts": [
+        {
+          "name": "audio_report.json",
+          "bytes": 3881,
+          "url": "case26-current/6-astra/submission/audio_report.json"
+        },
+        {
+          "name": "preview.mp4",
+          "bytes": 6719005,
+          "url": "case26-current/6-astra/submission/preview.mp4"
+        },
+        {
+          "name": "project.json",
+          "bytes": 5718,
+          "url": "case26-current/6-astra/submission/project.json"
+        },
+        {
+          "name": "repair.mkv",
+          "bytes": 232848520,
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/untagged-d3f4a41459b93c68de60/dbe44eb86fa1ec84c2be-repair.mkv"
+        },
+        {
+          "name": "report.json",
+          "bytes": 3496,
+          "url": "case26-current/6-astra/submission/report.json"
+        },
+        {
+          "name": "restored.mkv",
+          "bytes": 151491128,
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/untagged-d3f4a41459b93c68de60/fd632744f531abcee96b-restored.mkv"
+        },
+        {
+          "name": "restored_audio.wav",
+          "bytes": 4992044,
+          "url": "case26-current/6-astra/submission/restored_audio.wav"
+        },
+        {
+          "name": "restored_av.mp4",
+          "bytes": 8026776,
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/untagged-d3f4a41459b93c68de60/44cda296219a9207dbd5-restored_av.mp4"
+        },
+        {
+          "name": "submission.json",
+          "bytes": 335,
+          "url": "case26-current/6-astra/submission/submission.json"
+        }
+      ],
+      "visualJudge": {
+        "motion_evidence": {
+          "rating": 0.5,
+          "verified": true,
+          "evidence": [
+            {
+              "chunk": "直接连续图片 [192,204)，OUTPUT_master / TRUSTED_TARGET",
+              "source_time": "8.000000–8.458333s",
+              "reason": "直接对照连续图片，手臂向左伸出、经过瓶前并接近画面左缘的轨迹及遮挡顺序对应目标。8.083333–8.250000s输出的手指、袖口和前臂边缘存在比目标更宽的暗色拖抹及散影，袖口缝线分离度下降；目标已有方向性运动模糊，扣分依据是输出额外的轮廓扩散。"
+            },
+            {
+              "chunk": "直接连续图片 [348,360)，OUTPUT_master / TRUSTED_TARGET",
+              "source_time": "14.500000–14.958333s",
+              "reason": "直接图片显示手离开左侧器件并向右回撤，瓶身和斜置面板依次露出，主要松开与收臂过程得到保留，器件没有随手误移。14.541667–14.750000s输出指缘及袖口有较宽的半透明残影和纹理混合，目标中的运动轮廓相对集中。"
+            },
+            {
+              "chunk": "直接连续图片 [456,468)，OUTPUT_master / TRUSTED_TARGET",
+              "source_time": "19.000000–19.458333s",
+              "reason": "直接图片中手指持续接触圆顶状器件，手腕与袖口的小幅调整跟随目标，未见接触关系突变。输出指缘、指间暗缝和袖口褶皱更软，袖面细纹被平滑；目标同期动作也很小，不能把这种低运动状态判为冻结。"
+            },
+            {
+              "chunk": "直接连续图片 [552,564)，OUTPUT_master / TRUSTED_TARGET",
+              "source_time": "23.000000–23.458333s",
+              "reason": "直接图片确认回撤手臂逐步露出瓶子和中央面板，随后手在右下方继续屈伸，动作进程连续，物件相对关系对应。23.000000–23.208333s输出移动手部及袖口比目标更粗糙、弥散，带浅残影；目标自身的真实运动模糊不单独计为缺陷。"
+            },
+            {
+              "chunk": "已核实记录引用：MASTER_TARGET_INPUT_0072、MASTER_TARGET_INPUT_0096",
+              "source_time": "3.791667–4.333333s",
+              "reason": "逐帧核实记录记载，手指从上方旋钮展开、移离并向右下撤回的先后顺序与目标一致，后方圆形器件随遮挡解除而显露；同时记录了输出撤手区域额外的颗粒碎边和残留轮廓。这支持主要动作正确但局部边缘修复不充分。"
+            },
+            {
+              "chunk": "已核实记录引用：MASTER_TARGET_INPUT_0408、MASTER_TARGET_INPUT_0432、MASTER_TARGET_INPUT_0456、MASTER_TARGET_INPUT_0528",
+              "source_time": "17.000000–19.958333s；22.833333–22.958333s",
+              "reason": "重点运动时段的已核实记录支持伸手、接触、指姿调整及回撤起始方向均跟随目标，未记录明确新增或丢失的动作；多处记录指间分隔含混、袖口额外软化或旧位置残影。这里引用记录补充直接图片未覆盖的时段，不声称本轮直接看到了这些完整序列。"
+            },
+            {
+              "chunk": "已核实记录引用：MASTER_TARGET_INPUT_0000至MASTER_TARGET_INPUT_0600的26个母版窗口",
+              "source_time": "0.000000–25.958333s",
+              "reason": "全时间线母版记录总体支持手部运动、器件布局及缓慢构图位移对应目标，未报告明确的动作替换、物件关系改变或明显冻结。保护段外观保持较好，处理段反复出现手指与袖口的额外软化。其余26个预览/旧版窗口仅作辅助参照，旧版自身的严重拖影不归入母版缺陷。"
+            }
+          ],
+          "reason": "证据足以按冻结量表判为0.5：主要动作、接触至松开过程、遮挡顺序、器件关系和镜头位移总体得到保留，未见支持0分的明确动作或物件关系改变、明显冻结或伪造。但四组直接连续图片及全片已核实记录均显示，处理段手指、袖口和移动前臂存在相对目标额外的软化、拖抹、浅重影及纹理损失，达不到1分要求的轮廓与细节可信连续。已将目标固有运动模糊与输出额外瑕疵区分；被遮挡或出框的逐指接触细节不作推断，这些局部限制不妨碍依据已确认瑕疵作出0.5分判断。"
+        },
+        "restoration_quality": {
+          "rating": 0.5,
+          "verified": true,
+          "evidence": [
+            {
+              "chunk": "MASTER_TARGET_INPUT_0072",
+              "source_time": "3.000000–3.458333s",
+              "reason": "直接连续图片观察：相对受损输入，输出显著减少绿色背景、衣袖和设备暗部的密集明暗及彩色颗粒，旋钮阵列、线缆和瓶标主体仍可辨。相对目标，袖面细褶、面板细线和小元件边缘变软，说明存在实际降噪收益，也有细节代价。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0192",
+              "source_time": "8.000000–8.458333s",
+              "reason": "直接连续图片观察：伸手过程中，目标本身有方向性运动模糊；输出在8.083333–8.250000s还保留更宽的半透明暗影、颗粒散边及袖口轮廓扩散，超过目标原有模糊。运动趋缓后主体轮廓重新集中，但袖缝和布料层次仍较软，拖影控制不充分。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0336",
+              "source_time": "14.500000–14.958333s",
+              "reason": "直接连续图片观察：撤手时输出有可辨认的旧位置淡影和多层手指、袖口轮廓，14.541667–14.750000s尤为明显；目标同刻的运动轮廓更集中。袖面还存在宽块状紫灰、偏绿色斑驳。噪声已明显降低，但纹理自然度和运动边缘尚未达到目标。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0552",
+              "source_time": "23.000000–23.458333s",
+              "reason": "直接连续图片观察：输出显著压低输入颗粒，保留瓶身、书页叠层、控制器外框等结构；快速撤手仍有额外颗粒化和拖散边缘，随后小幅手指变化继续可见。表现为降噪后残留局部运动缺陷，并非整幅严重模糊。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0288、MASTER_TARGET_INPUT_0312、MASTER_TARGET_INPUT_0360、MASTER_TARGET_INPUT_0384",
+              "source_time": "12.000000–16.958333s",
+              "reason": "引用已核实逐帧记录：空间彩噪受损时段的细颗粒明显减少，但袖面持续残留宽尺度绿紫色斑，部分斑块随帧变化；袖口织纹、静态旋钮、瓶标和印刷细线也被平滑。缺陷跨越多个窗口，不能仅解释为真实运动模糊。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0408、MASTER_TARGET_INPUT_0432、MASTER_TARGET_INPUT_0456、MASTER_TARGET_INPUT_0480",
+              "source_time": "17.000000–20.958333s",
+              "reason": "引用已核实逐帧记录：冷暗及重点运动窗口中，暗袖、桌面和背景的密集彩噪持续下降；移动指缘、袖口仍额外软化，袖面存在低频块状明暗，静态细边也弱于目标。支持全长有稳定改善，同时仍有残噪和纹理损失。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0000、MASTER_TARGET_INPUT_0024、MASTER_TARGET_INPUT_0264、MASTER_TARGET_INPUT_0600",
+              "source_time": "0.000000–1.958333s；11.000000–11.958333s；25.000000–25.958333s",
+              "reason": "引用已核实逐帧记录：保护段内输出与目标、输入目视接近，未见明显新增修复伪影。这些未受损片段仅支持外观保持，不计作降噪或去拖影增益，也不据此声称像素完全一致。"
+            }
+          ],
+          "reason": "综合覆盖全片的52窗已核实记录与本次四段直接连续图片，母版在受损区确有持续、明显的暗部及色度降噪收益，主要物件结构仍保留，整体符合0.5档。不能给1：多个运动窗口仍有超过目标原有运动模糊的短暂残影，12–17s及后续暗袖还存在色斑和低对比纹理平滑，软化也影响静态细节。未判0，是因为证据显示明确的净改善，尚未达到以严重整幅模糊或严重持续拖尾替代原损伤的程度。旧尝试较差不作为抬高母版评分的依据；现有证据足以完成本项判断。"
+        },
+        "lighting_intent": {
+          "rating": 0.5,
+          "verified": true,
+          "evidence": [
+            {
+              "chunk": "MASTER_TARGET_INPUT_0096–MASTER_TARGET_INPUT_0240",
+              "source_time": "4.000000–10.958333s",
+              "reason": "引用已核实逐帧记录：暖扫光时段各窗保留了设备、桌面及手臂上相应的暖色区域与粉红反光，未记录明显照明错位、冷暖反转或新增整幅突闪；但部分高光变淡，手臂局部偏暗、偏灰，光色层次和边界较目标减弱。"
+            },
+            {
+              "chunk": "direct_sequence_[180,188)",
+              "source_time": "7.500000–7.791667s",
+              "reason": "直接连续图片观察：输出保留目标中桌面与手部附近的暖黄受光、中央设备粉红亮带及蓝紫衣袖的空间区分，相邻帧没有明显整幅亮暗交替；输出局部受光过渡更弥散，明暗分离弱于目标。"
+            },
+            {
+              "chunk": "direct_sequence_[408,416)",
+              "source_time": "17.000000–17.291667s",
+              "reason": "直接连续图片观察：冷暗变化起始处，输出仍保留绿色背景、粉红设备受光和偏紫衣袖的位置关系，没有突发色彩反转；但上方旋钮区、瓶标及设备亮部较目标灰暗，粉红与绿色的鲜明程度下降。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0408–MASTER_TARGET_INPUT_0504",
+              "source_time": "17.000000–21.958333s",
+              "reason": "引用已核实逐帧记录：冷暗时段保留低照度、偏冷的画面状态，20秒后段的总体回亮趋势也与目标对应，未被拉平成恒定亮度；局部袖面明暗被宽块状平滑改变，不能视为光照形态完全匹配。"
+            },
+            {
+              "chunk": "direct_sequence_[456,464) / direct_sequence_[500,508)",
+              "source_time": "19.000000–19.291667s；20.833333–21.125000s",
+              "reason": "直接连续图片观察：19秒片段保持目标的蓝紫冷暗袖面与粉紫上缘光，20.833秒后的手部、桌面和设备外观已较冷暗片段回亮，21秒边界没有明显亮度断跳；输出袖面呈较宽的明暗色块，局部光色渐变不如目标自然。"
+            },
+            {
+              "chunk": "MASTER_TARGET_INPUT_0288 / MASTER_TARGET_INPUT_0312 / MASTER_TARGET_INPUT_0336 / MASTER_TARGET_INPUT_0384",
+              "source_time": "12.000000–16.958333s",
+              "reason": "引用已核实逐帧记录：主要粉红、绿色照明区域仍在对应位置，但多窗持续出现色彩偏灰、局部暗沉及袖面绿紫斑驳，部分斑块随帧变化。这些差异支持局部亮度与色彩仍需修整，尚不足以认定为新增明显高频闪烁。"
+            },
+            {
+              "chunk": "direct_sequence_[260,272) / direct_sequence_[594,606)",
+              "source_time": "10.833333–11.291667s；24.750000–25.208333s",
+              "reason": "直接连续图片观察：跨入11秒与25秒保护窗时，背景绿色、设备粉红受光及桌面反光连续，未见明显亮度或色调突跳。修复侧存在较软、较平淡的局部外观，但这两处没有显示明显光照接缝。"
+            }
+          ],
+          "reason": "综合全片已核实记录与直接连续关键图片，移动暖扫光和缓慢冷暗变化的主要空间配色、变化方向及总体节奏均得到保留，额外帧间扰动有所收敛，未见足以对应0分的光变抹除、明显错位、颜色意图反转或新增强闪。直接跨界图片也支持11秒、25秒处的光照连续性。但暖光局部变淡、冷暗段亮部压低，以及12–17秒附近的灰暗和色斑改变了目标的局部光色层次，符合“两种意图保持，但局部亮度／色彩或接缝尚需修整”的0.5分锚点，不能评为完整自然的1分。未直接展示的边界仅依据已核实记录综合判断，不宣称所有接缝或细微高频闪动均已完全排除。"
+        }
+      },
+      "audioJudge": {
+        "musical_content": {
+          "rating": 1,
+          "verified": true,
+          "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+          "evidence": [
+            {
+              "source_interval": [
+                0,
+                6
+              ],
+              "finding": "The same melodic phrase and rhythmic structure as R are clearly present and intact throughout."
+            },
+            {
+              "source_interval": [
+                6,
+                12
+              ],
+              "finding": "The melody, rhythm, and note sequence are fully preserved and clearly identifiable against R."
+            },
+            {
+              "source_interval": [
+                12,
+                18
+              ],
+              "finding": "The melodic line, rhythm, and phrasing match Reference R exactly—same note sequence, same timing, same dynamics."
+            },
+            {
+              "source_interval": [
+                18,
+                24
+              ],
+              "finding": "The full melodic line and chordal accompaniment of the source interval are intact and clearly identifiable; no notes are missing or altered."
+            },
+            {
+              "source_interval": [
+                24,
+                26
+              ],
+              "finding": "Same piano note, same pitch, same duration and decay as R."
+            }
+          ]
+        },
+        "timbre_detail": {
+          "rating": 0.5,
+          "verified": true,
+          "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+          "evidence": [
+            {
+              "source_interval": [
+                0,
+                6
+              ],
+              "finding": "The base timbre matches R, but additional sustained harmonic layers or textural elements are audible that were not present in the reference, slightly altering the overall tonal character."
+            },
+            {
+              "source_interval": [
+                6,
+                12
+              ],
+              "finding": "Slight timbral shift is perceptible—possibly a subtle change in reverb tail or spectral balance compared to R's drier, more direct character—but the core instrument identity remains."
+            },
+            {
+              "source_interval": [
+                12,
+                18
+              ],
+              "finding": "The bright, clean synthesized bell/music-box timbre is identical to R with no detectable alteration in spectral character."
+            },
+            {
+              "source_interval": [
+                18,
+                24
+              ],
+              "finding": "The crisp, dry bell/music-box timbre of R is replaced by a reverberant, diffuse quality with an elevated noise floor, softening attack transients and reducing clarity of individual voices."
+            },
+            {
+              "source_interval": [
+                24,
+                26
+              ],
+              "finding": "Identical harmonic spectrum and attack character to R; no tonal shift or filtering evident."
+            }
+          ]
+        },
+        "audible_artifacts": {
+          "rating": 0.5,
+          "verified": true,
+          "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+          "evidence": [
+            {
+              "source_interval": [
+                0,
+                6
+              ],
+              "finding": "Added harmonic/textural elements not present in R represent localized deviations from the reference, though they do not obscure the core content."
+            },
+            {
+              "source_interval": [
+                6,
+                12
+              ],
+              "finding": "No severe artifacts, but a faint residual processing difference (minor spectral smearing or level fluctuation) is detectable relative to R's clean synthesis."
+            },
+            {
+              "source_interval": [
+                12,
+                18
+              ],
+              "finding": "No additional noise, distortion, clicks, or other artifacts are audible beyond what is present in the reference itself."
+            },
+            {
+              "source_interval": [
+                18,
+                24
+              ],
+              "finding": "Added reverb tail and ambient hiss not present in R constitute new artifacts, though they do not fully mask the signal."
+            },
+            {
+              "source_interval": [
+                24,
+                26
+              ],
+              "finding": "No clicks, pops, distortion, or noise floor changes relative to R."
+            }
+          ]
+        }
+      },
+      "commands": 49,
+      "apiFailed": 0,
+      "sealedFiles": 9
+    },
     {
       "key": "6-luna",
       "model": "gpt-6-luna",

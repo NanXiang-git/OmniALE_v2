@@ -1,0 +1,1 @@
+素材和事实标注：PKU-VaLuE-Lab/OmniEchoBench。来源 https://huggingface.co/datasets/PKU-VaLuE-Lab/OmniEchoBench ，代码 https://github.com/PKU-VaLuE-Lab/OmniEcho 。上游 README 声明 CC BY-NC-SA 4.0，限非商业研究；HF license 元数据未完整填写。新增任务协议与原作者评分分开标识。精确实例映射由出题宿主持有。

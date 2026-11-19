@@ -1,0 +1,79 @@
+{
+  "method": "Local FFmpeg decoding and Python signal analysis only; no native audio-model listening, ASR, outside sources, or other models.",
+  "source_channel_interpretation": "Decoded channel order treated as first-order Ambisonics W,Y,Z,X. This is a signal-based interpretation; the MP4 labels only a generic 4.0 layout.",
+  "azimuth_convention": "atan2(real(W*conj(Y)),real(W*conj(X))); positive left. Correlated time-frequency components used to reduce diffuse/reverberant bias.",
+  "window": "2048 samples at 48000 Hz, hop 512; event-centered integration and nearby windows; modal direction with coherence threshold sensitivity.",
+  "camera": "Ground grid manually selected from actual frames; planar homography and shared focal-length fit. Yaw change approximately 29.7 degrees right.",
+  "distance_limit": "No microphone sensitivity, source acoustic power, source height, or source-specific visual association is supplied. All distance_m = 4 values are low-confidence scene-scale estimates, not measured or independently calibrated ranges. They may be wrong.",
+  "motion_limit": "World travel estimates use estimated body direction and camera rotation. Radial travel is weakly constrained. Silent portions do not reveal source trajectories.",
+  "records": {
+    "C01": {
+      "confidence": "较高",
+      "rationale": "地面胶带网格的投影变化支持相机向右转。两个平面单应矩阵的共同内参拟合给出约 29.7°；取整为 30°。"
+    },
+    "C02": {
+      "confidence": "较高",
+      "rationale": "0.5 s 的视角与起始视角相近；后段地面网格基本不再改变。全段累计右转约 30°。"
+    },
+    "C03": {
+      "confidence": "中等",
+      "rationale": "报警时段中较一致的时频方向分量位于左偏约 19°，按八方向最近扇区归入 front。靠近 front/front-left 分界，反射会影响分箱。"
+    },
+    "C04": {
+      "confidence": "方向中等；距离低",
+      "rationale": "9.5 s 的中频相干分量约左偏 23–25°，归入 front-left。distance_m 是低置信度场景尺度估计，非标定测距。"
+    },
+    "C05": {
+      "confidence": "中低",
+      "rationale": "以报警可检测时段估计相对方位，再扣除相机约 30° 右转；声源世界方位总体略向右变化，故选择 yes。无声段没有额外轨迹信息。"
+    },
+    "C06": {
+      "confidence": "低",
+      "rationale": "扣除相机转动后，报警方位从接近初始正前方变为略偏右；结合中频能量总体减弱，估计位移为 front-right。声源输出功率未标定，径向分量不确定。"
+    },
+    "C07": {
+      "confidence": "中等",
+      "rationale": "8.5 s 的主要相干分量约左偏 17–21°，所需对中转动取 left、20°。"
+    },
+    "C08": {
+      "confidence": "较高",
+      "rationale": "2.5 s 的主要中频方向峰接近 0°，归入 front。"
+    },
+    "C09": {
+      "confidence": "中等",
+      "rationale": "塑料时段的中频相干峰主要位于左后侧；13 s 附近跨窗口的主要分量约 117–135°，归入 back-left。"
+    },
+    "C10": {
+      "confidence": "方向中低；距离低",
+      "rationale": "21 s 附近的中频整体方向较早段更接近左侧，估计为 left。频带间存在差异。distance_m 是低置信度场景尺度估计，非标定测距。"
+    },
+    "C11": {
+      "confidence": "中低",
+      "rationale": "相机在该区间基本稳定；塑料声方向由左后侧向左侧变化。按近似相同范围判断，世界坐标中的总体位移为 front；距离变化未能独立标定。"
+    },
+    "C12": {
+      "confidence": "中等",
+      "rationale": "12.5 s 的相干方向峰随频带和窗口约在左侧 120–140°；对中角采用 125°。"
+    },
+    "C13": {
+      "confidence": "方向中低；距离低",
+      "rationale": "16 s 的方向分量有较大分散；1.5–3 kHz 的相干峰及较窄中频带支持左后侧，选择 back-left。靠近 left/back-left 分界。distance_m 是低置信度场景尺度估计，非标定测距。"
+    },
+    "C14": {
+      "confidence": "较高",
+      "rationale": "25 s 的中频相干方向峰约 129–133°，归入 back-left。"
+    },
+    "C15": {
+      "confidence": "方向较高；距离低",
+      "rationale": "27.5 s 的中频相干方向峰约 135–141°，归入 back-left。distance_m 是低置信度场景尺度估计，非标定测距。"
+    },
+    "C16": {
+      "confidence": "中低",
+      "rationale": "钥匙可检测时段中主要方位峰总体向左变化，而相机全段总体右转，因此选择 no。首尾变化较小，且无声段不能提供额外轨迹信息。"
+    },
+    "C17": {
+      "confidence": "较高",
+      "rationale": "34.5 s 的 1–3 kHz 相干峰约 147–149°，邻近频带也支持左后侧；对中角采用 left、145°。"
+    }
+  }
+}

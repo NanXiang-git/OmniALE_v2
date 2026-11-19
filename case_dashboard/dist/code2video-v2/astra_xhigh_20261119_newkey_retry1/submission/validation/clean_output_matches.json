@@ -1,0 +1,40 @@
+{
+  "note": "Encoded deliverables compared against newly evaluated frames from the submitted code; differences are H.264 and 4:2:0 quantization.",
+  "checks": [
+    {
+      "mode": "reconstruction",
+      "frame": 16,
+      "mean_absolute_rgb_error_due_to_encoding": 0.5277893518518518
+    },
+    {
+      "mode": "reconstruction",
+      "frame": 61,
+      "mean_absolute_rgb_error_due_to_encoding": 0.4903837127057613
+    },
+    {
+      "mode": "reconstruction",
+      "frame": 75,
+      "mean_absolute_rgb_error_due_to_encoding": 0.9092454346707819
+    },
+    {
+      "mode": "revision",
+      "frame": 66,
+      "mean_absolute_rgb_error_due_to_encoding": 0.4534204603909465
+    },
+    {
+      "mode": "revision",
+      "frame": 84,
+      "mean_absolute_rgb_error_due_to_encoding": 0.679629308127572
+    },
+    {
+      "mode": "revision",
+      "frame": 114,
+      "mean_absolute_rgb_error_due_to_encoding": 1.1888626864711933
+    },
+    {
+      "mode": "revision",
+      "frame": 143,
+      "mean_absolute_rgb_error_due_to_encoding": 1.227587287808642
+    }
+  ]
+}

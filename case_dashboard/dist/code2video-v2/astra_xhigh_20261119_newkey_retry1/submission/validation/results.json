@@ -1,0 +1,502 @@
+{
+  "format": {
+    "reconstruction": {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "96",
+      "duration": "4.000000",
+      "stream_count": 1
+    },
+    "revision": {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "144",
+      "duration": "6.000000",
+      "stream_count": 1
+    },
+    "variant": {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "144",
+      "duration": "6.000000",
+      "stream_count": 1
+    }
+  },
+  "decoded_frames": {
+    "reconstruction": 96,
+    "revision": 144,
+    "variant": 144
+  },
+  "anchor_checks": [
+    {
+      "output_s": 0,
+      "expected_source_s": 0,
+      "evaluated_source_s": 0.0,
+      "source_right_boundary_only": false
+    },
+    {
+      "output_s": 1.75,
+      "expected_source_s": 1.75,
+      "evaluated_source_s": 1.75,
+      "source_right_boundary_only": false
+    },
+    {
+      "output_s": 3.25,
+      "expected_source_s": 2.75,
+      "evaluated_source_s": 2.75,
+      "source_right_boundary_only": false
+    },
+    {
+      "output_s": 5.25,
+      "expected_source_s": 3.75,
+      "evaluated_source_s": 3.75,
+      "source_right_boundary_only": false
+    },
+    {
+      "output_s": 6,
+      "expected_source_s": 4,
+      "evaluated_source_s": 4.0,
+      "source_right_boundary_only": true
+    }
+  ],
+  "blue_cursor_pixel_check": {
+    "intended_delay_output_frames": 6,
+    "observable_pairs": 29,
+    "max_tip_error_px": 1.4142135623730951,
+    "observations": [
+      {
+        "output_frame": 47,
+        "zero_delay_control_frame": 41,
+        "encoded_tip_xy": [
+          588,
+          600
+        ],
+        "control_tip_xy": [
+          588,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 48,
+        "zero_delay_control_frame": 42,
+        "encoded_tip_xy": [
+          614,
+          600
+        ],
+        "control_tip_xy": [
+          613,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 49,
+        "zero_delay_control_frame": 43,
+        "encoded_tip_xy": [
+          673,
+          599
+        ],
+        "control_tip_xy": [
+          673,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 50,
+        "zero_delay_control_frame": 44,
+        "encoded_tip_xy": [
+          734,
+          599
+        ],
+        "control_tip_xy": [
+          734,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 52,
+        "zero_delay_control_frame": 46,
+        "encoded_tip_xy": [
+          832,
+          600
+        ],
+        "control_tip_xy": [
+          831,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 53,
+        "zero_delay_control_frame": 47,
+        "encoded_tip_xy": [
+          868,
+          599
+        ],
+        "control_tip_xy": [
+          867,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 54,
+        "zero_delay_control_frame": 48,
+        "encoded_tip_xy": [
+          904,
+          599
+        ],
+        "control_tip_xy": [
+          904,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 55,
+        "zero_delay_control_frame": 49,
+        "encoded_tip_xy": [
+          924,
+          600
+        ],
+        "control_tip_xy": [
+          924,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 56,
+        "zero_delay_control_frame": 50,
+        "encoded_tip_xy": [
+          944,
+          599
+        ],
+        "control_tip_xy": [
+          944,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 57,
+        "zero_delay_control_frame": 51,
+        "encoded_tip_xy": [
+          965,
+          599
+        ],
+        "control_tip_xy": [
+          965,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 58,
+        "zero_delay_control_frame": 52,
+        "encoded_tip_xy": [
+          978,
+          599
+        ],
+        "control_tip_xy": [
+          977,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 59,
+        "zero_delay_control_frame": 53,
+        "encoded_tip_xy": [
+          990,
+          600
+        ],
+        "control_tip_xy": [
+          990,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 60,
+        "zero_delay_control_frame": 54,
+        "encoded_tip_xy": [
+          1003,
+          599
+        ],
+        "control_tip_xy": [
+          1003,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 61,
+        "zero_delay_control_frame": 55,
+        "encoded_tip_xy": [
+          1012,
+          600
+        ],
+        "control_tip_xy": [
+          1011,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 62,
+        "zero_delay_control_frame": 56,
+        "encoded_tip_xy": [
+          1020,
+          600
+        ],
+        "control_tip_xy": [
+          1020,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 63,
+        "zero_delay_control_frame": 57,
+        "encoded_tip_xy": [
+          1029,
+          599
+        ],
+        "control_tip_xy": [
+          1029,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 64,
+        "zero_delay_control_frame": 58,
+        "encoded_tip_xy": [
+          1034,
+          600
+        ],
+        "control_tip_xy": [
+          1034,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 65,
+        "zero_delay_control_frame": 59,
+        "encoded_tip_xy": [
+          1040,
+          600
+        ],
+        "control_tip_xy": [
+          1039,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 66,
+        "zero_delay_control_frame": 60,
+        "encoded_tip_xy": [
+          1045,
+          599
+        ],
+        "control_tip_xy": [
+          1045,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 67,
+        "zero_delay_control_frame": 61,
+        "encoded_tip_xy": [
+          1048,
+          599
+        ],
+        "control_tip_xy": [
+          1048,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 68,
+        "zero_delay_control_frame": 62,
+        "encoded_tip_xy": [
+          1052,
+          600
+        ],
+        "control_tip_xy": [
+          1051,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 69,
+        "zero_delay_control_frame": 63,
+        "encoded_tip_xy": [
+          1055,
+          599
+        ],
+        "control_tip_xy": [
+          1055,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 70,
+        "zero_delay_control_frame": 64,
+        "encoded_tip_xy": [
+          1056,
+          599
+        ],
+        "control_tip_xy": [
+          1056,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 71,
+        "zero_delay_control_frame": 65,
+        "encoded_tip_xy": [
+          1058,
+          600
+        ],
+        "control_tip_xy": [
+          1057,
+          599
+        ],
+        "tip_error_px": 1.4142135623730951
+      },
+      {
+        "output_frame": 72,
+        "zero_delay_control_frame": 66,
+        "encoded_tip_xy": [
+          1059,
+          599
+        ],
+        "control_tip_xy": [
+          1059,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 73,
+        "zero_delay_control_frame": 67,
+        "encoded_tip_xy": [
+          1059,
+          599
+        ],
+        "control_tip_xy": [
+          1058,
+          599
+        ],
+        "tip_error_px": 1.0
+      },
+      {
+        "output_frame": 74,
+        "zero_delay_control_frame": 68,
+        "encoded_tip_xy": [
+          1058,
+          599
+        ],
+        "control_tip_xy": [
+          1058,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 75,
+        "zero_delay_control_frame": 69,
+        "encoded_tip_xy": [
+          1058,
+          599
+        ],
+        "control_tip_xy": [
+          1058,
+          599
+        ],
+        "tip_error_px": 0.0
+      },
+      {
+        "output_frame": 76,
+        "zero_delay_control_frame": 70,
+        "encoded_tip_xy": [
+          1058,
+          599
+        ],
+        "control_tip_xy": [
+          1057,
+          599
+        ],
+        "tip_error_px": 1.0
+      }
+    ],
+    "occlusion_note": "Only uniquely identified, unoccluded arrow silhouettes are measured; absence after illustration overlap is not treated as a detection failure."
+  },
+  "delay_only_pixel_change": {
+    "output_frame": 52,
+    "changed_pixels": 2526,
+    "change_bounds_xyxy": [
+      826,
+      594,
+      1032,
+      652
+    ],
+    "non_blue_control_states_identical": true
+  },
+  "text_variant_pixel_check": {
+    "output_s": 4.75,
+    "changed_pixels": 36535,
+    "changed_pixels_outside_lettered_arcs": 0,
+    "variant_path_text": "DESIGN ON"
+  },
+  "material_isolation": {
+    "illustration_output_s": 4.75,
+    "changed_pixels_when_only_ui_gradient_changes": 0
+  },
+  "reference_comparison": {
+    "frames": 96,
+    "sheets": [
+      "reference_comparison_1.jpg",
+      "reference_comparison_2.jpg",
+      "reference_comparison_3.jpg",
+      "reference_comparison_4.jpg"
+    ],
+    "metrics": "Descriptive pixel and silhouette measures only. They are not an acceptance score."
+  },
+  "project_sha256": {
+    "project/__init__.py": "04590cc8479aff1ded042f3a77de0570905da3d89b80dfd9913a242b5c57b7ea",
+    "project/assets/aa_outline.json": "2398e64959df8fe9e4a142faf0aa02f9a3c42da20b0165daf1cc212c85926d1e",
+    "project/geometry.py": "fe42b574a65bb864de5c4ceeeca0de4555cc513d473db794206fb9a64a3c15d2",
+    "project/graphics.py": "2792eb9e7f2bf1ce80abd174d6e7a994a986bb15e6c10659091f0e6d7fe2c97f",
+    "project/illustration.py": "33042eca6816ba9fa424d0778ce1eb7163bca1bf109a75c8665b060a3032ef0c",
+    "project/layout.py": "27d4d6b47d7bcbb0aec11b2e49d19fb1963c83db7976e59488fb1529a9ffe1d6",
+    "project/lettering.py": "fa0bbea179d575e2b22d9f1f191f1f6cf480929d8e1a75b18b9f8990299f6a3b",
+    "project/reconstruction.json": "d50a59dc10f88585d44af0ee072ff90d00e62e3ba23bfdda8d6c7e7b6bbc5a11",
+    "project/revision.json": "5a4cf2b79634f683a7263ca6d4c58e32f341e676af7f600a25e6b802ff5c8663",
+    "project/scene.py": "28533aac93c0e710334bd78b3b07249ffe342121d1bc9296ca71f937321642c7",
+    "project/ui.py": "4caec1e205071047393b41e3c12ff31b8fb2a394666438abdd9085afb612ecbf",
+    "project/validate.py": "6543e426c6c9ad6cf5780bab6f283872de146fb928983e2fd0078e29032718cf",
+    "project/variant.json": "56220acddb4686f566677c6f3b7fff6e1404b73701644b5c83cfc7f8695f0af9"
+  }
+}

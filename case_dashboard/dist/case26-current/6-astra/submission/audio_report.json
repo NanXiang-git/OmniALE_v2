@@ -1,0 +1,46 @@
+{
+  "method": "Inspected the actual PCM waveform, multi-resolution STFT spectra, channel energy, and local interchannel prediction residuals. Tracked the continuous drifting low-frequency interference ridge and subtracted a slowly varying coherent sinusoidal estimate, down-weighting percussion during amplitude estimation. Estimated time-varying colored noise from inter-harmonic spectral percentiles. Applied a stereo covariance Wiener filter in 8192-sample windows, preserving complex channel relationships rather than forcing mono. Recovered measured broadband attack excess through a second, 1024-sample analysis using observed rhythmic attacks and strong simultaneous non-grid excess. Repaired the isolated left-channel pulse at 12.8685-12.8805 s and right-channel loss at 7.382-7.412 s with short local interchannel transfer estimates and tapered joins. Kept original sample positions, duration, and gain scale; applied no global loudness normalization. Source PCM samples in 0-2 s and 24-26 s were restored exactly; boundary fades lie inside the damaged interval. Wrote 48000 Hz stereo PCM16, then encoded the AV preview from this same WAV using AAC.",
+  "limitations": "No audio perception/listening tool was available, and no listening assessment is claimed. There was no clean reference. Spectral and waveform observations establish processing and preservation checks, not a ground-truth restoration score. Residual low-level colored noise, uncertain weak partials, and local nonlinear distortion remain possible; spectral suppression may attenuate notes buried under the strongest noise. Only strongly supported isolated channel defects received explicit local reconstruction. The reported upper-band reductions include any music in that band and are not SNR improvements against a clean target.",
+  "checks": [
+    {
+      "start": 0,
+      "end": 2,
+      "observation": "Protected PCM16 samples match the damaged-input WAV bit for bit. The normal introduction supplied observable harmonic and percussion structure for diagnostic checks."
+    },
+    {
+      "start": 2,
+      "end": 8,
+      "observation": "Input/output spectra show reduction of the drifting low-frequency ridge and broadband contamination. Mean 7-18 kHz power is reduced by 12.45 dB. Musical spectral tracks and timed attacks remain present."
+    },
+    {
+      "start": 7.382,
+      "end": 7.412,
+      "observation": "Waveform and interchannel diagnostics identified a short right-channel attenuation. Reconstructed only this channel from a locally fitted transfer of the simultaneous surviving channel, with tapered edges."
+    },
+    {
+      "start": 8,
+      "end": 13,
+      "observation": "Mean 7-18 kHz power reduction is 12.83 dB. The isolated left-channel pulse near 12.871 s was inspected and locally repaired over 12.8685-12.8805 s."
+    },
+    {
+      "start": 13,
+      "end": 19,
+      "observation": "Mean 7-18 kHz power reduction is 12.61 dB. Harmonic trajectories and broadband attack positions remain visible in the output spectrogram; no timing edits were applied."
+    },
+    {
+      "start": 19,
+      "end": 24,
+      "observation": "Mean 7-18 kHz power reduction is 12.35 dB. Both channels retain nonidentical signals and the original decay into the protected ending."
+    },
+    {
+      "start": 24,
+      "end": 26,
+      "observation": "Protected PCM16 samples match the input bit for bit, including its original decay and silent tail. No additional silence was inserted."
+    },
+    {
+      "start": 0,
+      "end": 26,
+      "observation": "WAV verified: 48000 Hz, two channels, PCM16, exactly 1248000 sample frames. Peak magnitude 0.544464; no clipping or nonfinite samples. AAC comparison without delay/gain fitting: 41.54 dB SNR (worst checked block 35.48 dB). AV audio/video both start at 0 and last 26 s; decoded AV video is identical to preview.mp4."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "method": "Processed the authoritative decoded 8-bit RGB frames at their native 640x338 resolution and original 24 fps. Estimated rapid global exposure changes from robust optical-flow-aligned frame ratios and smoothed only the rapid component (three-frame Gaussian scale), retaining the spatial warm sweep and slower cool darkening. Used bidirectional DIS motion alignment, robust weighted fusion over nearby frames, mild luminance/chroma nonlocal denoising, and residual horizontal-band suppression. The visibly blotched middle section received a wider, motion-aligned chroma estimate and luminance-guided color smoothing. Applied a small, bounded inverse temporal-mixing correction at moving edges to reduce trailing copies. All three protected windows bypass processing. No cropping, rescaling of output pixels, frame substitution, or generated objects. Packed signed corrections with neutral 128 and step 2; the delivered master is the exact clipped reconstruction from the quantized layer. Actual changed pixels: 114118193 of 134983680; changed RGB samples: 317517076. H264 preview was encoded from this master; the AV file copies that same video stream.",
+  "protected_ranges": [
+    [
+      0,
+      48
+    ],
+    [
+      264,
+      288
+    ],
+    [
+      600,
+      624
+    ]
+  ],
+  "color_contract": "8bit displayRGB, same candidate transform; no linear/mastering reinterpretation",
+  "limitations": "No clean reference was available. Visual inspection used actual native frames and full-duration contact sheets, supported by all-frame numerical checks. Some broad color mottling remains on the sleeve in the strongest damaged interval, and fast finger motion still has softness and faint residual trailing. Conservative motion rejection can leave grain at occlusions; temporal fusion can soften fine low-contrast texture. These are restoration limitations, not claims of reference-equivalent detail. The correction layer reproduces and adjusts the delivered result; it does not reproduce the original denoising algorithm.",
+  "checks": [
+    {
+      "frame": 47,
+      "observation": "All 96 protected frames in [0,48), [264,288), and [600,624) are pixel-exact to the input, with neutral correction values. First and middle protected boundaries were inspected."
+    },
+    {
+      "frame": 144,
+      "observation": "Native-frame comparison shows substantially reduced grain around the bottle, keyboard, and sleeve. Warm illumination remains spatially visible over the 4-10 s sweep; exposure was not globally flattened."
+    },
+    {
+      "frame": 240,
+      "observation": "The moving hand, cuff, bottle, and control relationships remain in the same source coordinates. Fine grain is reduced; genuine motion softness and some trailing remain."
+    },
+    {
+      "frame": 348,
+      "observation": "Wide temporal chroma fusion reduces the large green/purple blotches on the sleeve. Some mottling and soft finger edges remain, as seen in the inspected native output."
+    },
+    {
+      "frame": 456,
+      "observation": "The slow cool/dark interval remains visible around 17-21 s. All 624 source positions are represented, with no identical consecutive output frames and no frame reordering."
+    },
+    {
+      "frame": 623,
+      "observation": "Full decode: 624 frames, 640x338, 24 fps, silent FFV1 RGB master/layer. Replay max error 0; supplied replay.py at 0.5 max midpoint error 0.5. H264 worst frame RGB MAE 0.009854; minimum grayscale correlation 0.997974."
+    }
+  ]
+}

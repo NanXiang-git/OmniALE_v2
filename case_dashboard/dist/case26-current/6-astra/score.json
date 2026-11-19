@@ -1,0 +1,612 @@
+{
+  "version": "3.2-av-music-heavy",
+  "submission_binding": {
+    "master": "fd632744f531abcee96b16237aa41a67c8e4940ac62efb8b0fbf02b70d478a1b",
+    "repair": "dbe44eb86fa1ec84c2bef6774eff86cc60d3ddd0df861f50b53b9406b285a5c2",
+    "preview": "bf4565d55e6b781671e9b68303a9729260f2a6155d602f22584af4851ff0a1fa",
+    "project": "27d604c1bdcea13cb6eedfd18841e292bf336e8ecf1ba89f62b66c8eadbdffe8",
+    "report": "585dd0723f324f92e3c00dabddc1ef7ae2aba82a40a174937041ce010da629b6",
+    "audio": "f6a3c04df9e0e18238c3050dc4ce48ee915e3ac266c80030e4cca8d4f2e2652b",
+    "av_preview": "44cda296219a9207dbd5898b44b3bc1ea83a838b7ba774fab93716c825384d25",
+    "audio_report": "7d49e6e0351184eb55327b26c7624266ed85a4cb6d63c830ae6a12ba1d3e7a8d"
+  },
+  "rubric_sha256": "3ebd45224617ae25e1f0e8724cc9287dcf7d511b8ba3153aceada2444c52ca07",
+  "visual_points": 46.04488,
+  "visual_max": 70,
+  "audio_points_verified": 15.36987944949448,
+  "audio_max": 30,
+  "formal_total": 61.4148,
+  "pending": [],
+  "hard_failures": [],
+  "critical_failures": [],
+  "accepted": false,
+  "audio_automatic": {
+    "hard_failures": [],
+    "automatic_total": 11.36987944949448,
+    "automatic_scores": {
+      "relative_improvement": 3.1070213691364907,
+      "absolute_waveform": 1.1295261688557887,
+      "spectral_fidelity": 2.3935161457991088,
+      "musical_onsets": 1.6365772264308962,
+      "damage_events": 0.18568021837206572,
+      "stereo_preservation": 0.9175583209001297,
+      "normal_protection": 2.0
+    },
+    "metrics": {
+      "blocks": [
+        {
+          "start": 2,
+          "end": 8,
+          "input_snr_db": 1.70595726960207,
+          "output_snr_db": 9.39186311655655,
+          "improvement_db": 7.68590584695448,
+          "spectral_distance_db": 7.520643740002508
+        },
+        {
+          "start": 8,
+          "end": 13,
+          "input_snr_db": 0.6756401641251961,
+          "output_snr_db": 8.742347724114296,
+          "improvement_db": 8.0667075599891,
+          "spectral_distance_db": 7.540795292099879
+        },
+        {
+          "start": 13,
+          "end": 19,
+          "input_snr_db": 1.2302043520151988,
+          "output_snr_db": 9.581319068967083,
+          "improvement_db": 8.351114716951884,
+          "spectral_distance_db": 7.257908931789561
+        },
+        {
+          "start": 19,
+          "end": 24,
+          "input_snr_db": 1.3325121890924416,
+          "output_snr_db": 8.756750816774334,
+          "improvement_db": 7.424238627681892,
+          "spectral_distance_db": 7.605210247764415
+        }
+      ],
+      "protected_snr_db": [
+        130.97544939202766,
+        112.28136867589191
+      ],
+      "correlation": 0.942925881545979,
+      "onset_relative_errors": [
+        0.0706594198105817,
+        0.1477263069079254,
+        0.12191004271489456,
+        0.14203722648466593,
+        0.08316252180558192,
+        0.07603424071235128,
+        0.13662918003657348,
+        0.09185624664503708,
+        0.1030116861329801,
+        0.16284795983714873,
+        0.09155724650489165,
+        0.09908066891350811,
+        0.07731381731328743,
+        0.1167710880531462,
+        0.1155134119037618,
+        0.11269878200759517,
+        0.1621193602731977,
+        0.16581361619341514,
+        0.14445842148053717,
+        0.2834888252660753,
+        0.17614619033182724,
+        0.07712390515915026,
+        0.07475576472451331,
+        0.1434092043291597,
+        0.07898207853302551,
+        0.06998595795426335,
+        0.10932597886023966,
+        0.06988671482737437,
+        0.07752333232339605,
+        0.09845980821728673,
+        0.08435946870889156,
+        0.09665117799996395,
+        0.09759228264737374,
+        0.10252630347885298,
+        0.09413377399314421,
+        0.10496103387815671,
+        0.1348911953094537,
+        0.08886011533703832,
+        0.06606148839564238,
+        0.10257675685634955,
+        0.04994091238517356,
+        0.07668623624557831,
+        0.054377330084504315,
+        0.1204752568344832,
+        0.13448079345395314,
+        0.1299003929709487,
+        0.09311710085069244,
+        0.07580610228209496,
+        0.12539334882318776,
+        0.2644029709572767,
+        0.19972167262225415,
+        0.20327361598766505,
+        0.18302579004131603,
+        0.12319207767806375,
+        0.13234085212117921,
+        0.11260356794240105,
+        0.09580861475870203,
+        0.0653134113880966,
+        0.07925036887463525,
+        0.0685545825109712,
+        0.05848894730544549,
+        0.11477806833043902,
+        0.06595827955651579,
+        0.07132876288734828,
+        0.1460046104281627,
+        0.15145906254078487,
+        0.09074890254216776,
+        0.07790551547908374,
+        0.08546261364880817,
+        0.14145035580066004,
+        0.09884617222137093,
+        0.08907876143619625,
+        0.07522434457795617,
+        0.06685021158818547,
+        0.12443804062356467,
+        0.10517977312428109,
+        0.06330181258918738,
+        0.0635666215933347,
+        0.07214230445946632,
+        0.13973470176643177,
+        0.07108687128355132,
+        0.1855374390192008,
+        0.14816086951506488,
+        0.18070108886009734,
+        0.23226035199779851,
+        0.20246878232936086,
+        0.38993918801792327,
+        0.09439615008499776,
+        0.10281383286747232,
+        0.165283218406358,
+        0.11338807447103529,
+        0.0825830545211662,
+        0.05747813188341668,
+        0.09536889453187551,
+        0.09859957087804641,
+        0.07788793076163356,
+        0.13840000354607554,
+        0.15339549517861176,
+        0.14393572552354109,
+        0.2744802485437815,
+        0.1758434242961455,
+        0.1012313926013831,
+        0.06547467703277855,
+        0.12263684618934036,
+        0.09930092705925216,
+        0.08985682550530728,
+        0.14936439103988228,
+        0.040759404382236374,
+        0.04586658098163352
+      ],
+      "event_windows": [
+        {
+          "kind": "variable_click",
+          "start": 3.17,
+          "end": 3.170945,
+          "snr_db": 12.418180620703543
+        },
+        {
+          "kind": "variable_click",
+          "start": 4.508,
+          "end": 4.51097,
+          "snr_db": 6.280119014673665
+        },
+        {
+          "kind": "variable_click",
+          "start": 6.23,
+          "end": 6.236750000000001,
+          "snr_db": 9.555512995800997
+        },
+        {
+          "kind": "variable_click",
+          "start": 7.75,
+          "end": 7.751485,
+          "snr_db": 7.513684131000009
+        },
+        {
+          "kind": "variable_click",
+          "start": 9.139,
+          "end": 9.149799999999999,
+          "snr_db": 7.285769506840744
+        },
+        {
+          "kind": "variable_click",
+          "start": 10.52,
+          "end": 10.524049999999999,
+          "snr_db": 9.849631481959356
+        },
+        {
+          "kind": "variable_click",
+          "start": 12.87,
+          "end": 12.884849999999998,
+          "snr_db": 10.933884725791208
+        },
+        {
+          "kind": "variable_click",
+          "start": 14.004,
+          "end": 14.004945,
+          "snr_db": 11.778994456206004
+        },
+        {
+          "kind": "variable_click",
+          "start": 15.39,
+          "end": 15.39297,
+          "snr_db": 8.951692001626576
+        },
+        {
+          "kind": "variable_click",
+          "start": 17.251,
+          "end": 17.25775,
+          "snr_db": 8.026344563365958
+        },
+        {
+          "kind": "variable_click",
+          "start": 18.64,
+          "end": 18.641485,
+          "snr_db": 10.765496297886779
+        },
+        {
+          "kind": "variable_click",
+          "start": 20.17,
+          "end": 20.1808,
+          "snr_db": 9.335539344700074
+        },
+        {
+          "kind": "variable_click",
+          "start": 21.753,
+          "end": 21.75705,
+          "snr_db": 6.344550416309406
+        },
+        {
+          "kind": "variable_click",
+          "start": 23.16,
+          "end": 23.17485,
+          "snr_db": 10.271191733398716
+        },
+        {
+          "kind": "short_gap",
+          "start": 4.18,
+          "end": 4.1880999999999995,
+          "snr_db": 9.944920229836876
+        },
+        {
+          "kind": "short_gap",
+          "start": 7.39,
+          "end": 7.40485,
+          "snr_db": 9.460907246277827
+        },
+        {
+          "kind": "short_gap",
+          "start": 10.83,
+          "end": 10.8408,
+          "snr_db": 7.586952872393111
+        },
+        {
+          "kind": "short_gap",
+          "start": 13.62,
+          "end": 13.64025,
+          "snr_db": 7.172418190016562
+        },
+        {
+          "kind": "short_gap",
+          "start": 16.16,
+          "end": 16.16675,
+          "snr_db": 8.16024422808492
+        },
+        {
+          "kind": "short_gap",
+          "start": 19.38,
+          "end": 19.4043,
+          "snr_db": 3.087600286685582
+        },
+        {
+          "kind": "short_gap",
+          "start": 22.09,
+          "end": 22.102149999999998,
+          "snr_db": 7.253105775105162
+        },
+        {
+          "kind": "asymmetric_clipping",
+          "start": 5.3,
+          "end": 6.4,
+          "snr_db": 8.37005056762054
+        },
+        {
+          "kind": "asymmetric_clipping",
+          "start": 11.7,
+          "end": 12.8,
+          "snr_db": 7.823706649179284
+        },
+        {
+          "kind": "asymmetric_clipping",
+          "start": 18.3,
+          "end": 19.5,
+          "snr_db": 8.53509034094843
+        },
+        {
+          "kind": "asymmetric_clipping",
+          "start": 21.5,
+          "end": 22.4,
+          "snr_db": 7.238037093187529
+        }
+      ],
+      "stereo_errors": [
+        0.022360650961383146,
+        0.031612071395158044,
+        0.005559027624394536,
+        0.027127417210283084,
+        0.025855594942279927,
+        0.008795912808951156,
+        0.026459716452204095,
+        0.02368239061669648,
+        0.032427642292669125,
+        0.02371782190647758,
+        0.014445366470537718,
+        0.01477696004513933,
+        0.03966762914841243,
+        0.0424218751911858,
+        0.03473796451005523,
+        0.015703865843764205,
+        0.017115152570432477,
+        0.024536880234159585,
+        0.032900528757230124,
+        0.029601752033872556,
+        0.0344476812804234,
+        0.03462628283810185,
+        0.0303019263869777,
+        0.02911641481610803,
+        0.01522530413473326,
+        0.02440756759520666,
+        0.0249750680074078,
+        0.02792362808455982,
+        0.0339450307316015,
+        0.0360843559208775,
+        0.032681486491979564,
+        0.025528994354582994,
+        0.02397121868941305,
+        0.017747535946470733,
+        0.044939821186645613,
+        0.04345094297768269,
+        0.026976789636933906,
+        0.021573544890532606,
+        0.031108124282261885,
+        0.050396254528857556,
+        0.030116610810753404,
+        0.013013062364039697,
+        0.015578759093318491,
+        0.004929857942338614
+      ],
+      "sample_frames": 1248000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "av_preview_audio_snr_db": 41.53966015822846
+    }
+  },
+  "audio_judge": {
+    "musical_content": {
+      "rating": 1,
+      "verified": true,
+      "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+      "evidence": [
+        {
+          "source_interval": [
+            0,
+            6
+          ],
+          "finding": "The same melodic phrase and rhythmic structure as R are clearly present and intact throughout."
+        },
+        {
+          "source_interval": [
+            6,
+            12
+          ],
+          "finding": "The melody, rhythm, and note sequence are fully preserved and clearly identifiable against R."
+        },
+        {
+          "source_interval": [
+            12,
+            18
+          ],
+          "finding": "The melodic line, rhythm, and phrasing match Reference R exactly—same note sequence, same timing, same dynamics."
+        },
+        {
+          "source_interval": [
+            18,
+            24
+          ],
+          "finding": "The full melodic line and chordal accompaniment of the source interval are intact and clearly identifiable; no notes are missing or altered."
+        },
+        {
+          "source_interval": [
+            24,
+            26
+          ],
+          "finding": "Same piano note, same pitch, same duration and decay as R."
+        }
+      ]
+    },
+    "timbre_detail": {
+      "rating": 0.5,
+      "verified": true,
+      "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+      "evidence": [
+        {
+          "source_interval": [
+            0,
+            6
+          ],
+          "finding": "The base timbre matches R, but additional sustained harmonic layers or textural elements are audible that were not present in the reference, slightly altering the overall tonal character."
+        },
+        {
+          "source_interval": [
+            6,
+            12
+          ],
+          "finding": "Slight timbral shift is perceptible—possibly a subtle change in reverb tail or spectral balance compared to R's drier, more direct character—but the core instrument identity remains."
+        },
+        {
+          "source_interval": [
+            12,
+            18
+          ],
+          "finding": "The bright, clean synthesized bell/music-box timbre is identical to R with no detectable alteration in spectral character."
+        },
+        {
+          "source_interval": [
+            18,
+            24
+          ],
+          "finding": "The crisp, dry bell/music-box timbre of R is replaced by a reverberant, diffuse quality with an elevated noise floor, softening attack transients and reducing clarity of individual voices."
+        },
+        {
+          "source_interval": [
+            24,
+            26
+          ],
+          "finding": "Identical harmonic spectrum and attack character to R; no tonal shift or filtering evident."
+        }
+      ]
+    },
+    "audible_artifacts": {
+      "rating": 0.5,
+      "verified": true,
+      "reason": "Minimum of four predeclared actual-media window ratings; protected control passed.",
+      "evidence": [
+        {
+          "source_interval": [
+            0,
+            6
+          ],
+          "finding": "Added harmonic/textural elements not present in R represent localized deviations from the reference, though they do not obscure the core content."
+        },
+        {
+          "source_interval": [
+            6,
+            12
+          ],
+          "finding": "No severe artifacts, but a faint residual processing difference (minor spectral smearing or level fluctuation) is detectable relative to R's clean synthesis."
+        },
+        {
+          "source_interval": [
+            12,
+            18
+          ],
+          "finding": "No additional noise, distortion, clicks, or other artifacts are audible beyond what is present in the reference itself."
+        },
+        {
+          "source_interval": [
+            18,
+            24
+          ],
+          "finding": "Added reverb tail and ambient hiss not present in R constitute new artifacts, though they do not fully mask the signal."
+        },
+        {
+          "source_interval": [
+            24,
+            26
+          ],
+          "finding": "No clicks, pops, distortion, or noise floor changes relative to R."
+        }
+      ]
+    }
+  },
+  "visual": {
+    "version": "2.0",
+    "case_id": "26",
+    "binding": {
+      "master": "fd632744f531abcee96b16237aa41a67c8e4940ac62efb8b0fbf02b70d478a1b",
+      "repair": "dbe44eb86fa1ec84c2bef6774eff86cc60d3ddd0df861f50b53b9406b285a5c2",
+      "preview": "bf4565d55e6b781671e9b68303a9729260f2a6155d602f22584af4851ff0a1fa",
+      "project": "27d604c1bdcea13cb6eedfd18841e292bf336e8ecf1ba89f62b66c8eadbdffe8",
+      "report": "585dd0723f324f92e3c00dabddc1ef7ae2aba82a40a174937041ce010da629b6"
+    },
+    "automatic_scores": {
+      "restoration": 12.0,
+      "motion_detail": 10.894656379636444,
+      "temporal": 4.0,
+      "lighting": 4.883726076646284,
+      "protected": 4.0
+    },
+    "judge_scores": {
+      "motion_evidence": 11.25,
+      "restoration_quality": 11.25,
+      "lighting_intent": 7.5
+    },
+    "metrics": {
+      "master": {
+        "width": 640,
+        "height": 338,
+        "fps": 24.0,
+        "codec": "ffv1",
+        "audio": []
+      },
+      "repair": {
+        "maximum_sample_error": 0,
+        "strength0_max_error": 0,
+        "strength_half_max_midpoint_error": 0.5,
+        "changed_channel_samples": 317517076
+      },
+      "preview": {
+        "maximum_frame_mae": 0.009854167699813843,
+        "minimum_frame_correlation": 0.9989101787057293
+      },
+      "frames_checked": 624,
+      "block_psnr_gain_db": [
+        11.261150521250338,
+        9.575660966725032,
+        8.943457909454564,
+        12.878696918611212
+      ],
+      "motion_mae": 0.018561505143458442,
+      "gradient_relative_error": 0.128515547743125,
+      "gradient_ratio": 0.9035834779968575,
+      "temporal_residual": 0.005125566383473178,
+      "maximum_frozen_run": 0,
+      "protected_maximum_frame_mae": 0.0,
+      "intent_projection_gains": [
+        0.9533426742100843,
+        1.0420640771487675
+      ],
+      "light_maximum_frame_tile_mae": 0.011569753289222717
+    },
+    "hard_failures": [],
+    "critical_failures": [],
+    "environment_errors": [],
+    "pending_automatic": [],
+    "pending_judge": [],
+    "pending_points": 0,
+    "verified_subtotal": 65.7784,
+    "formal_total": 65.7784,
+    "accepted": false,
+    "evidence_rubric_sha256": "3970e81ca3bae71b5bbce11b8fd0a915df32056cbe208e89cab9cb2f9f61133f",
+    "rubric_sha256": "4facb7bf7892fd5cbb3d3a074461bd0ba8ce7748322aa340b65e8b594592696b",
+    "scoring_version": "final-quality-coefficient-1",
+    "compliance": {
+      "delivery": 1.0,
+      "repair_replay": 1.0,
+      "coefficient": 1.0,
+      "formula": "min(delivery,repair_replay)"
+    },
+    "quality_weights": {
+      "automatic": {
+        "restoration": 12,
+        "motion_detail": 12,
+        "temporal": 4,
+        "lighting": 8,
+        "protected": 4
+      },
+      "judge": {
+        "motion_evidence": 22.5,
+        "restoration_quality": 22.5,
+        "lighting_intent": 15
+      }
+    },
+    "quality_subtotal": 65.77838245628273,
+    "aggregation_note": "Final weights only. Raw metrics, submission binding and verified visual decisions unchanged. Evidence rubric hash preserves the original observation provenance."
+  }
+}
