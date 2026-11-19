@@ -1,0 +1,722 @@
+{
+  "baseline": {
+    "score": 39.348,
+    "score_interval": [
+      39.348,
+      39.348
+    ],
+    "body": [
+      49.53333333333333,
+      49.53333333333333
+    ],
+    "quality": [
+      0.794375,
+      0.794375
+    ],
+    "status": "failed",
+    "correct_chapters": 3,
+    "minutes": 43.2781486749649,
+    "timed_out": false,
+    "api_failed_requests": 1,
+    "blacklist_domain_connections": 0,
+    "gates": {
+      "可播放成片": true,
+      "每章有可懂中文解说": true,
+      "每章保留真实原声": true,
+      "每章至少2秒原声窗口": true,
+      "全部章节完整且时长合规": true,
+      "四件交付有效": true
+    },
+    "model_verified": true,
+    "high_verified": true,
+    "sealed_answers_unchanged": true,
+    "frozen_files_unchanged": true,
+    "source_delivery_audit_passed": true,
+    "blocked_responses": 0
+  },
+  "repeat01": {
+    "score": 25.8611,
+    "score_interval": [
+      25.8611,
+      25.8611
+    ],
+    "body": [
+      33.333333333333336,
+      33.333333333333336
+    ],
+    "quality": [
+      0.7758333333333334,
+      0.7758333333333334
+    ],
+    "correct_chapters": 2,
+    "minutes": 17.4109602133433,
+    "timed_out": false,
+    "gates": {
+      "可播放成片": true,
+      "每章有可懂中文解说": true,
+      "每章保留真实原声": true,
+      "每章至少2秒原声窗口": true,
+      "全部章节完整且时长合规": true,
+      "四件交付有效": true
+    },
+    "api_requests": 35,
+    "model_verified": true,
+    "high_verified": true
+  },
+  "repeat02": {
+    "score": 26.9847,
+    "score_interval": [
+      26.9847,
+      26.9847
+    ],
+    "body": [
+      33.333333333333336,
+      33.333333333333336
+    ],
+    "quality": [
+      0.8095416666666666,
+      0.8095416666666666
+    ],
+    "correct_chapters": 2,
+    "minutes": 31.632059999306996,
+    "timed_out": false,
+    "gates": {
+      "可播放成片": true,
+      "每章有可懂中文解说": true,
+      "每章保留真实原声": true,
+      "每章至少2秒原声窗口": true,
+      "全部章节完整且时长合规": true,
+      "四件交付有效": true
+    },
+    "api_requests": 62,
+    "model_verified": true,
+    "high_verified": true
+  },
+  "difference_repeat02_minus_repeat01": 1.1236,
+  "relaxed_mean": 26.4229,
+  "network_repeat01": {
+    "ebird.org": {
+      "attempt": 4,
+      "successful_response": 4
+    },
+    "wikipedia.org": {
+      "attempt": 3,
+      "blocked_or_failed": 3
+    }
+  },
+  "network_repeat02": {
+    "ebird.org": {
+      "attempt": 9,
+      "successful_response": 9
+    },
+    "fws.gov": {
+      "attempt": 2,
+      "successful_response": 2
+    },
+    "wikipedia.org": {
+      "blocked_or_failed": 1
+    }
+  },
+  "chapters": [
+    {
+      "segment": 1,
+      "repeat01": {
+        "segment": 1,
+        "I": 0,
+        "F": 0.3,
+        "E": 0.9,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.7175,
+          0.7175
+        ],
+        "groups": {
+          "H": [
+            0.625,
+            0.625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.75,
+            "clarity": 0.75,
+            "pacing": 0.5
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在音频00:05.28处，旁白明确说出“这是宽尾树莺”，与真值“四川蝗莺”不符，属于物种识别错误。"
+      },
+      "repeat02": {
+        "segment": 1,
+        "I": 0,
+        "F": 0.3,
+        "E": 0.6,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.6737500000000001,
+          0.6737500000000001
+        ],
+        "groups": {
+          "H": [
+            0.5625,
+            0.5625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.5,
+            "clarity": 0.75,
+            "pacing": 0.5
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:04-00:08的音频中，旁白明确说出“我暂定为巨嘴短翅莺”，与真值物种“四川蝗莺”不符，属于物种识别错误。"
+      }
+    },
+    {
+      "segment": 2,
+      "repeat01": {
+        "segment": 2,
+        "I": 0,
+        "F": 0.0,
+        "E": 0.5,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.86375,
+          0.86375
+        ],
+        "groups": {
+          "H": [
+            0.8125,
+            0.8125
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            0.9500000000000001,
+            0.9500000000000001
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 0.75,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 0.9,
+            "timing": 0.9,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在4.16-8.08秒的音频中，旁白明确说出“暂定为宽尾树莺”，与真值“四川蝗莺”不符。"
+      },
+      "repeat02": {
+        "segment": 2,
+        "I": 0,
+        "F": 0.2,
+        "E": 0.5,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.86375,
+          0.86375
+        ],
+        "groups": {
+          "H": [
+            0.8125,
+            0.8125
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            0.9500000000000001,
+            0.9500000000000001
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 0.75,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 0.9,
+            "timing": 0.9,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:04-00:07的音频中，旁白明确说出“这段也暂按巨嘴短翅莺来判断”，实际说出的物种为“巨嘴短翅莺”，与真值“四川蝗莺”不符，故得分为0。"
+      }
+    },
+    {
+      "segment": 3,
+      "repeat01": {
+        "segment": 3,
+        "I": 0,
+        "F": 0.2,
+        "E": 0.3,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.7175,
+          0.7175
+        ],
+        "groups": {
+          "H": [
+            0.625,
+            0.625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.75,
+            "clarity": 0.75,
+            "pacing": 0.5
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:05-00:07的音频中，旁白明确说出“暂定为柳纹霸鹟”，与真值“桤木纹霸鹟”不符，属于枚举了错误的物种名称。"
+      },
+      "repeat02": {
+        "segment": 3,
+        "I": 0,
+        "F": 0.25,
+        "E": 0.75,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.86475,
+          0.86475
+        ],
+        "groups": {
+          "H": [
+            0.8125,
+            0.8125
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            0.9600000000000001,
+            0.9600000000000001
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 0.75,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 0.9,
+            "timing": 0.95,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在 00:03-00:06 期间，旁白明确说出“我把它暂定为柳纹霸鹟”，实际说出的物种名称与真值“桤木纹霸鹟”不符，属于说错物种。"
+      }
+    },
+    {
+      "segment": 4,
+      "repeat01": {
+        "segment": 4,
+        "I": 0,
+        "F": 0.0,
+        "E": 0.5,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.86875,
+          0.86875
+        ],
+        "groups": {
+          "H": [
+            0.8125,
+            0.8125
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 0.75,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在音频4.32秒至6.08秒处，旁白明确说出“这里暂定为芦苇莺”，与真值“弗吉尼亚秧鸡”不符。"
+      },
+      "repeat02": {
+        "segment": 4,
+        "I": 0,
+        "F": 0.0,
+        "E": 0.5,
+        "body_interval": [
+          0.0,
+          0.0
+        ],
+        "quality_interval": [
+          0.9125,
+          0.9125
+        ],
+        "groups": {
+          "H": [
+            0.875,
+            0.875
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 1.0,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在3.48-7.24秒的旁白中，讲述者明确将物种暂定识别为“长嘴沼泽鹪鹩”，与真值“弗吉尼亚秧鸡”不符。"
+      }
+    },
+    {
+      "segment": 5,
+      "repeat01": {
+        "segment": 5,
+        "I": 1,
+        "F": 1.0,
+        "E": 1.0,
+        "body_interval": [
+          16.666666666666668,
+          16.666666666666668
+        ],
+        "quality_interval": [
+          0.74375,
+          0.74375
+        ],
+        "groups": {
+          "H": [
+            0.6625,
+            0.6625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.5,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:04-00:07的旁白中，明确说出了“黑脚信天翁”，与真值完全一致。"
+      },
+      "repeat02": {
+        "segment": 5,
+        "I": 1,
+        "F": 1.0,
+        "E": 1.0,
+        "body_interval": [
+          16.666666666666668,
+          16.666666666666668
+        ],
+        "quality_interval": [
+          0.86875,
+          0.86875
+        ],
+        "groups": {
+          "H": [
+            0.8125,
+            0.8125
+          ],
+          "A": [
+            1.0,
+            1.0
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.75,
+            "timbre": 0.75,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 1.0,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:04至00:09期间，旁白明确说出“这是黑脚信天翁”，发音清晰准确，符合物种识别标准。"
+      }
+    },
+    {
+      "segment": 6,
+      "repeat01": {
+        "segment": 6,
+        "I": 1,
+        "F": 1.0,
+        "E": 1.0,
+        "body_interval": [
+          16.666666666666668,
+          16.666666666666668
+        ],
+        "quality_interval": [
+          0.74375,
+          0.74375
+        ],
+        "groups": {
+          "H": [
+            0.6625,
+            0.6625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.5,
+            "clarity": 1.0,
+            "pacing": 0.75
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:05.68-00:07.44处，旁白明确说出“这是黑背信天翁”。“黑背信天翁”是真值中列出的合法别名，且发音清晰无歧义。"
+      },
+      "repeat02": {
+        "segment": 6,
+        "I": 1,
+        "F": 1.0,
+        "E": 1.0,
+        "body_interval": [
+          16.666666666666668,
+          16.666666666666668
+        ],
+        "quality_interval": [
+          0.6737500000000001,
+          0.6737500000000001
+        ],
+        "groups": {
+          "H": [
+            0.5625,
+            0.5625
+          ],
+          "A": [
+            0.9000000000000001,
+            0.9000000000000001
+          ],
+          "D": [
+            1.0,
+            1.0
+          ]
+        },
+        "rates": {
+          "H": {
+            "naturalness": 0.5,
+            "timbre": 0.5,
+            "clarity": 0.75,
+            "pacing": 0.5
+          },
+          "A": {
+            "preservation": 1.0,
+            "balance": 0.75,
+            "window": 1.0
+          },
+          "D": {
+            "integrity": 1.0,
+            "subtitles": 1.0,
+            "timing": 1.0,
+            "delivery": 1.0
+          }
+        },
+        "I_reason": "在00:03.68-00:04.50处，旁白明确说出“这是黑背信天翁”，该名称属于真值中的合法别名（aliases），且发音清晰可辨。"
+      }
+    }
+  ],
+  "limitations": [
+    "Both relaxed attempts have identical configured task, model, effort, time policy, network rules and evaluator. Live services and sampling can vary.",
+    "The original baseline has a 60-minute cap; both repeats are unlimited.",
+    "Two repeats are descriptive evidence, not a reliable estimate of the network-policy effect.",
+    "All attempts are retained; no best-of selection."
+  ]
+}

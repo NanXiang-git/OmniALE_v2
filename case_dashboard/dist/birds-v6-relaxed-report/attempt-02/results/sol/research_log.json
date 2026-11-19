@@ -1,0 +1,1079 @@
+{
+  "task_started_unix": 1795078907.963255,
+  "task_started_utc": "2026-11-19T09:01:47.963255+00:00",
+  "notes": [
+    "已完整阅读 TASK.md；不调用识别模型或子代理；仅用本地帧和采样分析输入。无原生听音工具，不能声称亲耳听过。",
+    "所有联网均经环境代理；网页正文与机器人检查/拦截页分别记录。搜索引擎返回无关词条，未用作物种证据。",
+    "访问 Audubon Marsh Wren 页面遇到 source-material policy 拦截，立即放弃；未更换该素材网址、编码或镜像，也未获取任何录音。Oiseaux物种页仅阅读文字，未取图或录音；未尝试核查原素材来源。"
+  ],
+  "events": [
+    {
+      "stage": "本地视频抽帧与原声提取",
+      "start_unix": 1795078943.894617,
+      "end_unix": 1795078962.5710557,
+      "elapsed_seconds": 18.67643928527832
+    },
+    {
+      "stage": "本地视频抽帧与原声提取",
+      "start_unix": 1795079036.888563,
+      "end_unix": 1795079054.6983347,
+      "elapsed_seconds": 17.80977201461792
+    },
+    {
+      "stage": "独立鸟类资料访问",
+      "url": "https://www.allaboutbirds.org/guide/Eastern_Phoebe/id",
+      "start_unix": 1795079100.4988902,
+      "status": 403,
+      "final_url": "https://www.allaboutbirds.org/guide/Eastern_Phoebe/id",
+      "sha256": "e3d4597a925f83974228b8e17221cb98c9daa708457775a2887da780d13f1aa4",
+      "end_unix": 1795079101.7212317,
+      "elapsed_seconds": 1.222341775894165
+    },
+    {
+      "stage": "独立鸟类资料访问",
+      "url": "https://www.allaboutbirds.org/guide/Eastern_Wood-Pewee/id",
+      "start_unix": 1795079101.7348971,
+      "status": 403,
+      "final_url": "https://www.allaboutbirds.org/guide/Eastern_Wood-Pewee/id",
+      "sha256": "a34b99c5d1f5463a707d8823d68e164847ad22d17d4a29d8607b20e250f6c864",
+      "end_unix": 1795079102.5876098,
+      "elapsed_seconds": 0.852712869644165
+    },
+    {
+      "stage": "独立鸟类资料访问",
+      "url": "https://www.allaboutbirds.org/guide/Black-footed_Albatross/id",
+      "start_unix": 1795079102.6134732,
+      "status": 403,
+      "final_url": "https://www.allaboutbirds.org/guide/Black-footed_Albatross/id",
+      "sha256": "4599ce7a7801ca9ff85563d37b84ec28a663dfc4c5dc62563b70dd251f3eb568",
+      "end_unix": 1795079103.2186272,
+      "elapsed_seconds": 0.6051547527313232
+    },
+    {
+      "stage": "独立鸟类资料访问",
+      "url": "https://www.allaboutbirds.org/guide/Laysan_Albatross/id",
+      "start_unix": 1795079103.2281144,
+      "status": 403,
+      "final_url": "https://www.allaboutbirds.org/guide/Laysan_Albatross/id",
+      "sha256": "b9378276e6a391e5a8219d6125dc7bbfae24d59b24214dde1cb4144701e0b85e",
+      "end_unix": 1795079104.0278683,
+      "elapsed_seconds": 0.7997543811798096
+    },
+    {
+      "stage": "独立鸟类资料访问",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+      "start_unix": 1795079104.0584402,
+      "status": 200,
+      "final_url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+      "sha256": "0aad38a22843a5e5c61f747f9b0a646c443697a06d91a91b33d337766b690345",
+      "end_unix": 1795079113.639011,
+      "elapsed_seconds": 9.58057165145874
+    },
+    {
+      "stage": "直接读取PCM并以scipy计算声谱",
+      "start_unix": 1795079134.12584,
+      "end_unix": 1795079137.5342374,
+      "elapsed_seconds": 3.408397674560547
+    },
+    {
+      "stage": "音轨采样、六章声谱及密集抽帧",
+      "start_unix": 1795079138.281023,
+      "end_unix": 1795079147.1917036,
+      "elapsed_seconds": 8.910681009292603
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://www.google.com/search?q=brown+bush+warbler+song+description",
+      "start_unix": 1795079195.0538058,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Read timed out. (read timeout=30)",
+      "end_unix": 1795079225.3502667,
+      "elapsed_seconds": 30.296461582183838
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://www.google.com/search?q=russet+bush+warbler+song+description",
+      "start_unix": 1795079225.3900409,
+      "error": "HTTPSConnectionPool(host='www.google.com', port=443): Read timed out. (read timeout=30)",
+      "end_unix": 1795079256.213848,
+      "elapsed_seconds": 30.82380771636963
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/savis-warbler",
+      "start_unix": 1795079256.2548192,
+      "status": 200,
+      "final_url": "https://www.rspb.org.uk/birds-and-wildlife/savis-warbler",
+      "sha256": "698ef8545e082d7e311664cf0f68ba6fb8ac96f7e741ac0a2cf3a61ee63440aa",
+      "end_unix": 1795079262.9281545,
+      "elapsed_seconds": 6.673335790634155
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://ebird.org/species/easpho",
+      "start_unix": 1795079262.938536,
+      "status": 200,
+      "final_url": "https://ebird.org/species/easpho",
+      "sha256": "bfe58d503969373d14a59cc7743bad6bc31c9a9aff4e402bb852e237b0002f9c",
+      "end_unix": 1795079265.9486136,
+      "elapsed_seconds": 3.010077953338623,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://ebird.org/species/bkfalb",
+      "start_unix": 1795079265.962919,
+      "status": 200,
+      "final_url": "https://ebird.org/species/bkfalb",
+      "sha256": "c65da96083eaa3256e7140bf5b0377c20f3d916beb02f028225a90c5f5eefb4c",
+      "end_unix": 1795079267.662669,
+      "elapsed_seconds": 1.6997504234313965,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立资料查询",
+      "url": "https://ebird.org/species/layalb",
+      "start_unix": 1795079267.6748679,
+      "status": 200,
+      "final_url": "https://ebird.org/species/layalb",
+      "sha256": "ef5d29982f484254dcd23b63fbbf2f713e4ab3430135123e4a86244e37f897c4",
+      "end_unix": 1795079269.4376616,
+      "elapsed_seconds": 1.762794017791748,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/brbwar1",
+      "start_unix": 1795079281.0271058,
+      "status": 200,
+      "final_url": "https://ebird.org/species/brbwar1",
+      "sha256": "3d87f7c1d1c319b072ee27982be0f97f3ef383a17206fdc4548ea2af4d6d7201",
+      "end_unix": 1795079282.5339756,
+      "elapsed_seconds": 1.5068697929382324,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/rubwar1",
+      "start_unix": 1795079281.0282485,
+      "status": 200,
+      "final_url": "https://ebird.org/species/rubwar1",
+      "sha256": "93b0d3ca5079f0618676a7d1de5b45a7cece4bed842568a9aef900a7476b5872",
+      "end_unix": 1795079282.6081302,
+      "elapsed_seconds": 1.5798819065093994,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/cetwar1",
+      "start_unix": 1795079281.0289447,
+      "status": 200,
+      "final_url": "https://ebird.org/species/cetwar1",
+      "sha256": "5cc47ac3bfe9640f88f7d46031ba83a1da78fb4eb80542db4a0600dc8f1899fd",
+      "end_unix": 1795079282.6290689,
+      "elapsed_seconds": 1.6001243591308594,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/wilfly",
+      "start_unix": 1795079281.029393,
+      "status": 200,
+      "final_url": "https://ebird.org/species/wilfly",
+      "sha256": "d219e4d4de4fbcd26eaff356e4b761314e4c98f91af13f3da2d6ed5ff18a5771",
+      "end_unix": 1795079282.5630481,
+      "elapsed_seconds": 1.5336554050445557,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/aldfly",
+      "start_unix": 1795079282.534055,
+      "status": 200,
+      "final_url": "https://ebird.org/species/aldfly",
+      "sha256": "f64eef196757d52c7297b27f4a00194408cbd4ba87c1148eeee6e3dcfc50245a",
+      "end_unix": 1795079283.9541404,
+      "elapsed_seconds": 1.4200856685638428,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://ebird.org/species/marwre",
+      "start_unix": 1795079282.5630915,
+      "status": 200,
+      "final_url": "https://ebird.org/species/marwre",
+      "sha256": "28faf05684cf02832050cbd774e66baa087cc32649a7e4aadd58f6184055f23e",
+      "end_unix": 1795079283.7218552,
+      "elapsed_seconds": 1.1587638854980469,
+      "usable": false,
+      "note": "仅返回Anubis机器人检查页，未阅读物种正文。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/sedge-warbler",
+      "start_unix": 1795079282.608193,
+      "status": 200,
+      "final_url": "https://www.rspb.org.uk/birds-and-wildlife/sedge-warbler",
+      "sha256": "df678316e887a1aafb3677390d5ebb760637349a328a8337b266ca2272aa7b06",
+      "end_unix": 1795079285.4103768,
+      "elapsed_seconds": 2.8021838665008545
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://singaporebirds.com/species/brown-bush-warbler/",
+      "start_unix": 1795079336.3655186,
+      "status": 404,
+      "final_url": "https://singaporebirds.com/species/brown-bush-warbler",
+      "sha256": "10e239abd067973332b9074fdba7da4dd7e76a9106b29e4793797fc86279affe",
+      "end_unix": 1795079339.1362004,
+      "elapsed_seconds": 2.770681858062744
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler/",
+      "start_unix": 1795079336.3664138,
+      "status": 404,
+      "final_url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler",
+      "sha256": "cb1b784a0b2932d8b9135d758b32f9fda51aabff458b5b930e009ba569a679de",
+      "end_unix": 1795079342.3101027,
+      "elapsed_seconds": 5.9436891078948975
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.birdguides.com/species-guide/ioc/locustella-luteoventris",
+      "start_unix": 1795079336.3668814,
+      "status": 403,
+      "final_url": "https://www.birdguides.com/species-guide/ioc/locustella-luteoventris",
+      "sha256": "e56e727987c357bc7ca5c547be63ebeb2e27cecd2230d76233c84fd40f646a46",
+      "end_unix": 1795079337.174425,
+      "elapsed_seconds": 0.8075437545776367
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.bing.com/search?q=Brown+bush+warbler+song+description",
+      "start_unix": 1795079336.3673022,
+      "status": 200,
+      "final_url": "https://cn.bing.com/search?q=Brown+bush+warbler+song+description",
+      "sha256": "485e6943c8106f19c4fdc32d96350359a4fa0aa5565033a0b0908029192007d3",
+      "end_unix": 1795079337.887829,
+      "elapsed_seconds": 1.5205271244049072
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+      "start_unix": 1795079337.1744678,
+      "status": 200,
+      "final_url": "https://cn.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+      "sha256": "3eb6ab5e26067a694e5838ee072597f112895003ca72a042378b52f1745ebc66",
+      "end_unix": 1795079338.430923,
+      "elapsed_seconds": 1.2564551830291748
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.fws.gov/species/black-footed-albatross-phoebastria-nigripes",
+      "start_unix": 1795079337.8878856,
+      "status": 200,
+      "final_url": "https://www.fws.gov/species/black-footed-albatross-phoebastria-nigripes",
+      "sha256": "5a3c802a9070e9c54807a2291c30707ced9bf58017f0b8a746ccf2538438ec25",
+      "end_unix": 1795079340.9807775,
+      "elapsed_seconds": 3.0928924083709717
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.fws.gov/species/laysan-albatross-phoebastria-immutabilis",
+      "start_unix": 1795079338.4310744,
+      "status": 200,
+      "final_url": "https://www.fws.gov/species/laysan-albatross-phoebastria-immutabilis",
+      "sha256": "1d9fe597e5da88791c094fc945521c9d36866688336b6cbad96eff7823c441ef",
+      "end_unix": 1795079341.842161,
+      "elapsed_seconds": 3.4110870361328125
+    },
+    {
+      "stage": "独立物种检索",
+      "query": "\"Locustella luteoventris\" song",
+      "start_unix": 1795079383.3323355,
+      "url": "https://cn.bing.com/search?q=%22Locustella+luteoventris%22+song",
+      "status": 200,
+      "sha256": "75f0a4f51dc61940a9d8d690cb66f6f6a3a2fcc476b0f5ed48406c753c64e9a9",
+      "end_unix": 1795079384.3183804,
+      "elapsed_seconds": 0.9860451221466064
+    },
+    {
+      "stage": "独立物种检索",
+      "query": "\"棕褐短翅蝗莺\" 鸣声",
+      "start_unix": 1795079384.3249245,
+      "url": "https://cn.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+      "status": 200,
+      "sha256": "14eba4c282c4b2ee4738f202e3d3b6a203712c5861f9ae4c10ac8c00a67d62eb",
+      "end_unix": 1795079385.3623395,
+      "elapsed_seconds": 1.0374152660369873
+    },
+    {
+      "stage": "独立物种检索",
+      "query": "\"柳纹霸鹟\" 鸣声",
+      "start_unix": 1795079385.3756597,
+      "url": "https://cn.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+      "status": 200,
+      "sha256": "e17c6d34b6df80930a0b432abd94dab0ad82a4672a64a63ae44aeb16af582be8",
+      "end_unix": 1795079386.5367928,
+      "elapsed_seconds": 1.1611332893371582
+    },
+    {
+      "stage": "独立物种检索",
+      "query": "\"Willow Flycatcher\" fitz-bew",
+      "start_unix": 1795079386.5442405,
+      "url": "https://cn.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+      "status": 200,
+      "sha256": "d3f00920d61dc18091927691261cf2494851f144f78b031e3ceaecc8660dfd15",
+      "end_unix": 1795079387.5898046,
+      "elapsed_seconds": 1.0455646514892578
+    },
+    {
+      "stage": "独立物种检索",
+      "query": "\"Alder Flycatcher\" song",
+      "start_unix": 1795079387.6023211,
+      "url": "https://cn.bing.com/search?q=%22Alder+Flycatcher%22+song",
+      "status": 200,
+      "sha256": "e1b85b2932b3c00773b20f3382563530daa8f3ad5732d98b335adaca75ec7450",
+      "end_unix": 1795079388.6537697,
+      "elapsed_seconds": 1.0514488220214844
+    },
+    {
+      "stage": "配音工具选择及依赖首次安装调试",
+      "start_utc": "2026-11-19T09:03:23Z",
+      "end_unix": 1795079450.1714988,
+      "elapsed_seconds": 447.1714987754822,
+      "description": "首次同时选择edge-tts、matplotlib、requests、beautifulsoup4。下载耗时较长且会更新系统科学计算依赖，主动中止；已改用scipy和Pillow生成声谱，随后仅安装edge-tts及其依赖。"
+    },
+    {
+      "stage": "维基候选页访问失败",
+      "url": "https://en.wikipedia.org/wiki/Russet_bush_warbler",
+      "start_unix": 1795079049,
+      "error": "代理CONNECT返回403；未读取正文，未使用该资料。"
+    },
+    {
+      "stage": "字体首次下载失败",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/Variable/TTF/Subset/NotoSansSC-VF.ttf",
+      "start_utc": "2026-11-19T09:08:00Z",
+      "elapsed_seconds": 46,
+      "error": "返回82字节source-material policy拦截信息，放弃该字体。改选独立Debian文泉驿字体包。"
+    },
+    {
+      "stage": "脚本调试",
+      "description": "最初inspect.py与Python标准库inspect同名，造成numpy导入失败；改名extract_frames.py并删除该脚本缓存。matplotlib未安装完成，改为scipy+Pillow绘图。"
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.oiseaux.net/birds/long-billed.bush.warbler.html",
+      "start_unix": 1795079495.1431506,
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/long-billed.bush.warbler.html",
+      "sha256": "64062d0cf7c16ba4b9f204b186e015b10484b7b141c51e8a17d4a5546876b555",
+      "end_unix": 1795079500.0062742,
+      "elapsed_seconds": 4.863123655319214
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.oiseaux.net/birds/brown.bush.warbler.html",
+      "start_unix": 1795079495.1435049,
+      "status": 200,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/brown.bush.warbler.html",
+      "sha256": "cb127e8592cff4dacd8cb197337f1f146bd5bcc8e8eda3e97406ce2830ebfea9",
+      "end_unix": 1795079501.301022,
+      "elapsed_seconds": 6.157517433166504
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.oiseaux.net/birds/brownish-flanked.bush.warbler.html",
+      "start_unix": 1795079495.143672,
+      "status": 404,
+      "final_url": "https://www.oiseaux.net/en/oiseaux/brownish-flanked.bush.warbler.html",
+      "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+      "end_unix": 1795079499.1935785,
+      "elapsed_seconds": 4.0499067306518555
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+      "start_unix": 1795079495.1438346,
+      "status": 200,
+      "final_url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+      "sha256": "73abbcdd4ef9dcd4cdb952550a4957fc666735c3d958e9ed6b5ef9a406bee599",
+      "end_unix": 1795079497.9782825,
+      "elapsed_seconds": 2.8344480991363525
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+      "start_unix": 1795079497.9783776,
+      "status": 200,
+      "final_url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+      "sha256": "5ffb7abf7ddef7d7bd5e384b495d3d21db7ef2b59ca5404dbc259e9a3b77ecd1",
+      "end_unix": 1795079501.1418054,
+      "elapsed_seconds": 3.1634280681610107
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.audubon.org/field-guide/bird/marsh-wren",
+      "start_unix": 1795079499.1936238,
+      "status": 403,
+      "final_url": "https://www.audubon.org/field-guide/bird/marsh-wren",
+      "sha256": "9cd4cf9302730492289d66373bb73c0502528f4b15e8ca9a7e97a81775012387",
+      "end_unix": 1795079514.5760455,
+      "elapsed_seconds": 15.38242220878601
+    },
+    {
+      "stage": "独立候选物种资料",
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+      "start_unix": 1795079500.0063636,
+      "status": 200,
+      "final_url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+      "sha256": "b37ab63b23670a15d766da10dd6a7877d125792e89427c4d5b678b30db48ceeb",
+      "end_unix": 1795079504.7943618,
+      "elapsed_seconds": 4.787998199462891
+    },
+    {
+      "stage": "普通话配音接口试合成",
+      "start_unix": 1795079519.7278118,
+      "tool": "edge-tts",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "proxy": "http://127.0.0.1:8899",
+      "success": true,
+      "end_unix": 1795079523.5300941,
+      "elapsed_seconds": 3.8022828102111816
+    },
+    {
+      "stage": "独立柳纹霸鹟资料中的参考声音链接核验",
+      "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+      "status": 200,
+      "start_unix": 1795079553.8465102,
+      "end_unix": 1795079558.0622432,
+      "elapsed_seconds": 4.215734004974365
+    },
+    {
+      "stage": "TTS调用重试",
+      "index": 0,
+      "attempt": 0,
+      "error": "NoAudioReceived('No audio was received. Please verify that your parameters are correct.')",
+      "unix": 1795079704.380626
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 0,
+      "segment": 1,
+      "text": "这只棕褐色的小鸟，我暂定为巨嘴短翅莺。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079699.3609905,
+      "end_unix": 1795079708.1114492,
+      "elapsed_seconds": 8.75045919418335,
+      "duration_seconds": 4.584,
+      "mp3_sha256": "7722c16cd9d249256a1657cf6793ab615c71a2df9b876bd1e61d689c315e03cf"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 1,
+      "segment": 1,
+      "text": "注意它较长、略向下弯的嘴，还有细长的尾羽。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079708.1423502,
+      "end_unix": 1795079710.376698,
+      "elapsed_seconds": 2.2343480587005615,
+      "duration_seconds": 4.896,
+      "mp3_sha256": "110823abe6648a906ae4550ae41c3fe916a14ef0b71eebdfbd54a907386a7660"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 2,
+      "segment": 1,
+      "text": "喉部偏浅，翅膀短，身上的花纹很不显眼。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079710.3850605,
+      "end_unix": 1795079712.6654327,
+      "elapsed_seconds": 2.280372142791748,
+      "duration_seconds": 4.68,
+      "mp3_sha256": "bfbd98ce03381883a2ba6138d04a661cd5267b421f6eb2e60902d65c50f2e2da"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 3,
+      "segment": 1,
+      "text": "这里是静态近照，不能把录音里的每一声都归给它。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079712.6815765,
+      "end_unix": 1795079715.2898417,
+      "elapsed_seconds": 2.6082653999328613,
+      "duration_seconds": 5.232,
+      "mp3_sha256": "8476064f82e3f4bcf0190c2f01b7fb4e653a5990ec8b1ee87a2b771cfabb0f2c"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 4,
+      "segment": 2,
+      "text": "这段也暂按巨嘴短翅莺来判断。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079715.3189254,
+      "end_unix": 1795079717.7698388,
+      "elapsed_seconds": 2.450913429260254,
+      "duration_seconds": 3.552,
+      "mp3_sha256": "9bdc580136f40088b60596bb8c7b7ffef63fea4ff3d35810ef8ee0e4fc292f78"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 5,
+      "segment": 2,
+      "text": "短促的鸣声重复出现，鸟却藏在密叶后面。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079717.782843,
+      "end_unix": 1795079720.4299264,
+      "elapsed_seconds": 2.6470835208892822,
+      "duration_seconds": 4.68,
+      "mp3_sha256": "ff9e996da50e87ff9719c76771586ea1661aa8a1f971e414434d4172fc531bb6"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 6,
+      "segment": 2,
+      "text": "看不清嘴部，声音与个体的对应仍有不确定。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079720.4432805,
+      "end_unix": 1795079723.010684,
+      "elapsed_seconds": 2.567403793334961,
+      "duration_seconds": 4.632,
+      "mp3_sha256": "2a6ef55e27f3caecf9379e1fbc7870fc19c477a5a978558c75e0f2e5f5c27cd9"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 7,
+      "segment": 3,
+      "text": "我把它暂定为柳纹霸鹟，浅眼圈并不醒目。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079723.0233233,
+      "end_unix": 1795079726.023226,
+      "elapsed_seconds": 2.9999029636383057,
+      "duration_seconds": 4.416,
+      "mp3_sha256": "708282fef24158b2200300d8bba55c741cf52f9070b1593e721db66db828a34e"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 8,
+      "segment": 3,
+      "text": "它停在裸枝上，转头张望，嘴巴也不时张开。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079726.0905097,
+      "end_unix": 1795079728.6982002,
+      "elapsed_seconds": 2.6076908111572266,
+      "duration_seconds": 4.92,
+      "mp3_sha256": "c517b7cf23f0f98869f6c62658300110008752051e2057b739e0b0336bcdd1ee"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 9,
+      "segment": 3,
+      "text": "这类小鸟常从枝头出击捕虫，片中主要是在停栖。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079728.712174,
+      "end_unix": 1795079731.4722502,
+      "elapsed_seconds": 2.7600762844085693,
+      "duration_seconds": 5.472,
+      "mp3_sha256": "c93f660fabb23d2532a050756f4baa7b0633d287d88b41a02ca166bc8fc606ac"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 10,
+      "segment": 4,
+      "text": "芦苇间这只小鸟，暂定为长嘴沼泽鹪鹩。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079731.5092854,
+      "end_unix": 1795079734.3329442,
+      "elapsed_seconds": 2.8236589431762695,
+      "duration_seconds": 4.632,
+      "mp3_sha256": "dd9f2ba052efa017b6b0da22b673eba600836eda89e62a012fd7c0958ebad6c1"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 11,
+      "segment": 4,
+      "text": "浅色眉纹和较深的头顶，时隐时现。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079734.3444405,
+      "end_unix": 1795079739.07974,
+      "elapsed_seconds": 4.735300064086914,
+      "duration_seconds": 4.224,
+      "mp3_sha256": "53cbe3df39f5b99fec9789d4b09a53272c729ebff99dd225961d7de4a69f2624"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 12,
+      "segment": 4,
+      "text": "急促的鸣唱不断换句，但嘴部始终看不清。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079739.089488,
+      "end_unix": 1795079742.2141745,
+      "elapsed_seconds": 3.1246867179870605,
+      "duration_seconds": 4.656,
+      "mp3_sha256": "db396c3f8e68f979247268a72f990e87d1aa0bd96eb177206eb3f08556224d72"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 13,
+      "segment": 5,
+      "text": "这是黑脚信天翁。蓬松的褐色绒羽，说明它还是雏鸟。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079742.26671,
+      "end_unix": 1795079745.2540917,
+      "elapsed_seconds": 2.987381935119629,
+      "duration_seconds": 6.12,
+      "mp3_sha256": "a6cc8b557958760f366ac7d63c6588d8ae2590740273bc08132ff3f9a68776df"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 14,
+      "segment": 5,
+      "text": "成鸟靠近后，雏鸟把嘴伸向成鸟的嘴边，接受喂食。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079745.2828941,
+      "end_unix": 1795079748.288798,
+      "elapsed_seconds": 3.00590443611145,
+      "duration_seconds": 5.928,
+      "mp3_sha256": "a946d197de24a08260ce0b97bd0f4a8c10fa5fd8a4e0868903cfe62ffd4b3cd1"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 15,
+      "segment": 5,
+      "text": "群落里还有别的鸟，鸣声未必都来自这一对。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079748.3202202,
+      "end_unix": 1795079752.4226465,
+      "elapsed_seconds": 4.102426767349243,
+      "duration_seconds": 4.512,
+      "mp3_sha256": "afee4b849f32cb9980cafb4da6f5a2d0e38214284969f037ffc9ed270fcf2012"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 16,
+      "segment": 6,
+      "text": "这是白背信天翁，白色头颈与深色背翼对比鲜明。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079752.4344978,
+      "end_unix": 1795079755.4749606,
+      "elapsed_seconds": 3.0404629707336426,
+      "duration_seconds": 5.592,
+      "mp3_sha256": "b4153852981e2c1b3cdb90028dc96bf7544d4988b84e89e17785c7bbae81946d"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 17,
+      "segment": 6,
+      "text": "它们面对面点头、仰头、碰嘴，展示求偶的舞步。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079755.4901392,
+      "end_unix": 1795079758.1850808,
+      "elapsed_seconds": 2.694941997528076,
+      "duration_seconds": 5.4,
+      "mp3_sha256": "5ca3b69ca704a43202cd7ece1a9f779d652aa4afbbf08edf55d83ba44523e2e9"
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 18,
+      "segment": 6,
+      "text": "短叫和敲嘴声交织。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079758.198247,
+      "end_unix": 1795079760.9874,
+      "elapsed_seconds": 2.7891533374786377,
+      "duration_seconds": 2.592,
+      "mp3_sha256": "2fcb8b56872c3b90d0f58f33f63d00f2316071aca4e48bfb26df34163699bdab"
+    },
+    {
+      "stage": "全部普通话旁白合成",
+      "start_unix": 1795079699.3609872,
+      "end_unix": 1795079761.010838,
+      "elapsed_seconds": 61.64985132217407
+    },
+    {
+      "stage": "旁白对齐、字幕生成、原声动态避让及混音",
+      "start_unix": 1795079776.7374742,
+      "end_unix": 1795079779.0170934,
+      "elapsed_seconds": 2.2796196937561035,
+      "narration_peak": 0.7200000000000001,
+      "mix_peak": 0.9400000000000001,
+      "source_chapter_gains": [
+        0.7,
+        2.0,
+        1.3,
+        5.0,
+        6.0,
+        1.3
+      ],
+      "speech_source_multiplier": 0.27,
+      "music": false,
+      "speed_change": false
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 16,
+      "segment": 6,
+      "text": "这是黑背信天翁，白色头颈与深色背翼对比鲜明。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795079925.4276705,
+      "end_unix": 1795079928.888795,
+      "elapsed_seconds": 3.461124897003174,
+      "duration_seconds": 5.688,
+      "mp3_sha256": "811709f5c53bdfab432209b6b41ef3f5cd04bc9a50f44591068d7fa9601d5efb"
+    },
+    {
+      "stage": "普通话旁白合成批次",
+      "start_unix": 1795079925.3988118,
+      "end_unix": 1795079928.9423964,
+      "elapsed_seconds": 3.5435853004455566
+    },
+    {
+      "stage": "旁白对齐、字幕生成、原声动态避让及混音",
+      "start_unix": 1795079930.1757805,
+      "end_unix": 1795079932.801652,
+      "elapsed_seconds": 2.6258721351623535,
+      "narration_peak": 0.7200000000000001,
+      "mix_peak": 0.9400000000000001,
+      "source_chapter_gains": [
+        0.7,
+        2.0,
+        1.3,
+        5.0,
+        6.0,
+        1.3
+      ],
+      "speech_source_multiplier": 0.27,
+      "music": false,
+      "speed_change": false
+    },
+    {
+      "stage": "最终H264视频编码及AAC封装",
+      "start_unix": 1795079971.458731,
+      "end_unix": 1795079991.6763642,
+      "elapsed_seconds": 20.217633962631226
+    },
+    {
+      "stage": "仅配音所需依赖安装完成",
+      "start_unix": 1795079450.1714988,
+      "end_unix": 1795079513.7325242,
+      "elapsed_seconds": 63.56102538108826,
+      "description": "起点为首次安装中止后记录点，紧接重试安装；终点为实际RECORD写入时间。最终版本清单见requirements-tts.txt。"
+    },
+    {
+      "stage": "自撰旁白、排时与制作代码编写",
+      "start_unix": 1795079450.1714988,
+      "end_unix": 1795079699.3609872,
+      "elapsed_seconds": 249.1894884109497,
+      "description": "包括与候选资料核验及TTS试合成并行的实际墙钟区间。"
+    },
+    {
+      "stage": "独立文泉驿字体包下载",
+      "url": "https://deb.debian.org/debian/pool/main/f/fonts-wqy-zenhei/fonts-wqy-zenhei_0.9.45-8_all.deb",
+      "initial_attempt_timeout_seconds": 90,
+      "initial_attempt_bytes": 1141700,
+      "resume_start_utc": "2026-11-19T09:11:38Z",
+      "resume_end_unix": 1795079785.2221024,
+      "resume_elapsed_seconds": 287.22210240364075,
+      "bytes": 7478908,
+      "description": "对同一允许网址续传完成并用dpkg-deb解包；没有改用受阻字体的镜像。"
+    },
+    {
+      "stage": "中文名复核与重合成",
+      "description": "第六章英文/学名为Laysan Albatross/Phoebastria immutabilis，修正早期文稿白背信天翁笔误为标准名黑背信天翁。仅重合成第16号句，随后重新生成旁白轨、字幕和混音；实际合成耗时另有逐句事件。",
+      "unix": 1795080032.0407376
+    },
+    {
+      "stage": "最终交付自动校验及全时间线画面相似度比较",
+      "start_unix": 1795080185.540781,
+      "end_unix": 1795080192.0084589,
+      "elapsed_seconds": 6.4676783084869385,
+      "passed": true,
+      "central_frame_ssim": 0.994349
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 3,
+      "segment": 1,
+      "text": "短促的鸣声反复出现；静态近照无法核对发声个体。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795080227.9197867,
+      "end_unix": 1795080232.9345546,
+      "elapsed_seconds": 5.014768123626709,
+      "duration_seconds": 5.88,
+      "mp3_sha256": "bb7df7100ef796b1fdca3476139ca7f45483bb6179abfcac3b2b650bef49ffeb"
+    },
+    {
+      "stage": "普通话旁白合成批次",
+      "start_unix": 1795080227.9150445,
+      "end_unix": 1795080232.9636998,
+      "elapsed_seconds": 5.04865574836731
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 8,
+      "segment": 3,
+      "text": "它停在裸枝上，时而张嘴，短促的鸣唱分句出现。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795080240.7731981,
+      "end_unix": 1795080244.0316517,
+      "elapsed_seconds": 3.2584543228149414,
+      "duration_seconds": 5.232,
+      "mp3_sha256": "0bcace1e555328d1cef4af0fa7663cbf6fb6497a79e04db73eed0fc9a6ab4c89"
+    },
+    {
+      "stage": "普通话旁白合成批次",
+      "start_unix": 1795080240.752483,
+      "end_unix": 1795080244.1098847,
+      "elapsed_seconds": 3.3574025630950928
+    },
+    {
+      "stage": "旁白逐句实际合成",
+      "index": 15,
+      "segment": 5,
+      "text": "短促的叫声夹在背景里，未必都来自这一对。",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-6%",
+      "start_unix": 1795080250.6185617,
+      "end_unix": 1795080253.2579298,
+      "elapsed_seconds": 2.6393680572509766,
+      "duration_seconds": 4.68,
+      "mp3_sha256": "6afb4a4a42070673b6557d7017ae77500f46530d452453a285a9e75058dbbea4"
+    },
+    {
+      "stage": "普通话旁白合成批次",
+      "start_unix": 1795080250.5995994,
+      "end_unix": 1795080253.3129644,
+      "elapsed_seconds": 2.7133657932281494
+    },
+    {
+      "stage": "旁白对齐、字幕生成、原声动态避让及混音",
+      "start_unix": 1795080254.7454603,
+      "end_unix": 1795080257.5301688,
+      "elapsed_seconds": 2.7847092151641846,
+      "narration_peak": 0.7200000000000001,
+      "mix_peak": 0.9400000000000001,
+      "source_chapter_gains": [
+        0.7,
+        2.0,
+        1.3,
+        5.0,
+        6.0,
+        1.3
+      ],
+      "speech_source_multiplier": 0.27,
+      "music": false,
+      "speed_change": false
+    },
+    {
+      "stage": "旁白对齐、字幕生成、原声动态避让及混音",
+      "start_unix": 1795080272.0094864,
+      "end_unix": 1795080274.0072443,
+      "elapsed_seconds": 1.997758388519287,
+      "narration_peak": 0.54,
+      "final_headroom_gain": 0.75,
+      "mix_peak": 0.7050000000000001,
+      "source_chapter_gains": [
+        0.7,
+        2.0,
+        1.3,
+        5.0,
+        6.0,
+        1.3
+      ],
+      "speech_source_multiplier": 0.27,
+      "music": false,
+      "speed_change": false
+    },
+    {
+      "stage": "最终H264视频编码及AAC封装",
+      "start_unix": 1795080258.673614,
+      "end_unix": 1795080279.9489467,
+      "elapsed_seconds": 21.275333642959595
+    },
+    {
+      "stage": "最终H264视频编码及AAC封装",
+      "start_unix": 1795080274.6390948,
+      "end_unix": 1795080296.7229836,
+      "elapsed_seconds": 22.08388900756836
+    },
+    {
+      "stage": "最终交付自动校验及全时间线画面相似度比较",
+      "start_unix": 1795080297.1239982,
+      "end_unix": 1795080304.4768546,
+      "elapsed_seconds": 7.3528571128845215,
+      "passed": true,
+      "central_frame_ssim": 0.994275
+    },
+    {
+      "stage": "校验脚本调试及帧率时间网格核对",
+      "description": "首次误假设输入也有5564帧，实际输入5559帧且视频起始PTS为0.021029秒。修正为分别核验输入和输出帧数。直接各自归零PTS比较的SSIM为0.948642；按原时间戳将输入规范为30fps再比较，SSIM为0.994349。编码日志dup=6、drop=0，未改变播放速度。",
+      "recorded_unix": 1795080770.94349,
+      "measured_operations": {
+        "first_failed_assertion_tool_seconds": 0.830269291,
+        "initial_all_frame_comparison_ffmpeg_seconds_approx": 4.4,
+        "fps_normalized_comparison_ffmpeg_seconds_approx": 3.91
+      },
+      "timing_note": "保留工具实际返回的运行时间与FFmpeg报告的速度换算近似值；未单独采点的思考调试不伪造秒级时长，计入总墙钟时间。"
+    },
+    {
+      "stage": "逐章声音类型复核及三句修订",
+      "description": "补充第一章短促重复声、第三章分句鸣唱、第五章背景短叫的实际旁白描述。仅重新合成索引3、8、15，自然语速未改变；逐句合成时间已有记录。",
+      "unix": 1795080417.4175854
+    },
+    {
+      "stage": "AAC重建峰值检测与电平修正",
+      "pre_revision_integrated_LUFS": -14.3,
+      "pre_revision_true_peak_dBTP": 0.38,
+      "description": "未亲耳评价。loudnorm只用于测量，未采用动态归一化输出；为避免AAC重建峰值超零，独立旁白与混音均使用相同0.75倍总体电平留量，然后重新编码。最终测量结果另存。",
+      "unix": 1795080417.4175868
+    },
+    {
+      "stage": "校验与重编码交叠的调试记录",
+      "description": "此前修订批次的校验碰到新一轮成片重写，退出失败；未将该次失败结果作交付结论。最终批次在全部合成和混音完成后顺序重编码、全片校验和响度测量，validation.json以最终批次为准。",
+      "unix": 1795080417.4175873
+    },
+    {
+      "stage": "最终H264视频编码及AAC封装",
+      "start_unix": 1795080546.1034093,
+      "end_unix": 1795080568.0277557,
+      "elapsed_seconds": 21.924346685409546
+    },
+    {
+      "stage": "最终交付自动校验及全时间线画面相似度比较",
+      "start_unix": 1795080618.3373728,
+      "end_unix": 1795080625.2782776,
+      "elapsed_seconds": 6.9409050941467285,
+      "passed": true,
+      "central_frame_ssim": 0.994349
+    },
+    {
+      "stage": "最终严格解码、AAC响度测量与交付文件哈希核验",
+      "start_unix": 1795080618.3373728,
+      "end_unix": 1795080770.94349,
+      "elapsed_seconds": 152.60611724853516,
+      "final_integrated_LUFS": -16.83,
+      "final_true_peak_dBTP": -2.58,
+      "strict_decode": true,
+      "description": "修复前曾因并行编码写同一路径造成封装损坏；现已在无其他编码进程时，独立临时文件编码后原子替换，并从头严格解码全片。未使用损坏文件的异常响度值（-30.23 LUFS/+15.85 dBTP）。最终严格解码和响度测量均成功、音视频帧合法。"
+    }
+  ],
+  "phase_observation": {
+    "start_unix": 1795078932.662267,
+    "end_unix": 1795079450.1714988,
+    "elapsed_seconds": 517.5092318058014,
+    "description": "完整读题、工具选择、抽帧观察、候选判断、采样声谱和独立资料尝试；含与安装并行的时间。"
+  },
+  "log_initialized_unix": 1795078932.662267,
+  "completed_unix": 1795080770.94349,
+  "completed_utc": "2026-11-19T09:32:50.943490+00:00",
+  "total_elapsed_seconds": 1862.9802350997925,
+  "timing_policy": "实际墙钟区间与time.time()采点；安装、观察、检索可并行，阶段耗时不相加。最初未逐项采点的调试注明限制，全部包含在起止总耗时中。无总作答时限。",
+  "final_validation": {
+    "passed": true,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": "30/1",
+    "frames": 5564,
+    "input_frames": 5559,
+    "input_format_seconds": 185.504,
+    "final_format_seconds": 185.466667,
+    "narration_seconds": 185.46666666666667,
+    "narration_sample_rate": 48000,
+    "narration_dtype": "int16",
+    "narration_peak_dbfs": -5.3524782404855245,
+    "all_nonnarrated_samples_exact_zero": true,
+    "sentences": 19,
+    "chapters": [
+      {
+        "segment": 1,
+        "longest_declared_original_window_seconds": 8.8,
+        "narration_seconds": 20.04
+      },
+      {
+        "segment": 2,
+        "longest_declared_original_window_seconds": 3.6999999999999957,
+        "narration_seconds": 12.863999999999999
+      },
+      {
+        "segment": 3,
+        "longest_declared_original_window_seconds": 3.6999999999999886,
+        "narration_seconds": 15.120000000000001
+      },
+      {
+        "segment": 4,
+        "longest_declared_original_window_seconds": 2.950000000000003,
+        "narration_seconds": 13.512
+      },
+      {
+        "segment": 5,
+        "longest_declared_original_window_seconds": 5.599999999999994,
+        "narration_seconds": 16.728
+      },
+      {
+        "segment": 6,
+        "longest_declared_original_window_seconds": 5.900000000000006,
+        "narration_seconds": 13.68
+      }
+    ],
+    "full_timeline_central_image_ssim": 0.994349,
+    "subjective_audio_listening_performed": false,
+    "elapsed_seconds": 5.50032639503479,
+    "files": {
+      "final.mp4": {
+        "bytes": 54048082,
+        "sha256": "c8639ce6fae7839e72fde2a7eb6407787c0cffd40e7a5d8a74a035aeaaa122f9"
+      },
+      "narration.wav": {
+        "bytes": 17804844,
+        "sha256": "262db6b2c9da2611e3060243657da909e8d9cbccf628646cc916e9be90ffa67a"
+      },
+      "subtitles.srt": {
+        "bytes": 1768,
+        "sha256": "27c854690ef3c00e4af8030bec7f3e0f8e28f7972994c9ac0ea5f35d1850e0b6"
+      },
+      "segments.json": {
+        "bytes": 15198,
+        "sha256": "c276752f92a8594a5aa3eece8a171bdfe1788427068eb848c9c3c085cf77412d"
+      }
+    }
+  },
+  "final_loudness": {
+    "LUFS": -16.83,
+    "dBTP": -2.58
+  }
+}

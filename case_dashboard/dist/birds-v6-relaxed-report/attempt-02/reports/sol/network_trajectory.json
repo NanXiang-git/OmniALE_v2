@@ -1,0 +1,3764 @@
+[
+  {
+    "utc": 1795078915.1163263,
+    "action": "connect_request",
+    "connection_id": 1795078915106468195,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078915.2592976,
+    "action": "connect_request",
+    "connection_id": 1795078915080351249,
+    "host": "github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078915.2875977,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078915106468195,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1795078915.298685,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078915.3587945,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078915080351249,
+    "host": "github.com"
+  },
+  {
+    "utc": 1795078915.4433875,
+    "action": "connect_request",
+    "connection_id": 1795078915434559074,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078915.449845,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/featured?platform=codex",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795078915.625615,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078915434559074,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1795078915.640896,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078915.9731212,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 5854,
+    "sha256": "29719344d7ea55b6f9180dffa6942e398f3bcc5351ee30daa0fbda9c22cc7b2a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5854
+  },
+  {
+    "utc": 1795078915.9913962,
+    "action": "connect_request",
+    "connection_id": 1795078915981987478,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078916.0075612,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078915981987478,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1795078916.0255914,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078916.3773465,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/git/ref/heads/main",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 326,
+    "sha256": "a9884c0a71bd5549192e40331ca33622fb8ca932d2f24fb4ba81a040f1e72d2b",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 326
+  },
+  {
+    "utc": 1795078916.4044783,
+    "action": "connect_request",
+    "connection_id": 1795078916392370501,
+    "host": "api.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078916.4282558,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078916392370501,
+    "host": "api.github.com"
+  },
+  {
+    "utc": 1795078916.4716434,
+    "action": "http_request",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/981b02c0c44058b595f3b4180002c3ae3c806d40",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078916.8144252,
+    "action": "http_response_inspected",
+    "host": "api.github.com",
+    "url": "https://api.github.com/repos/openai/plugins/zipball/981b02c0c44058b595f3b4180002c3ae3c806d40",
+    "status": 302,
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": "https://codeload.github.com/openai/plugins/legacy.zip/981b02c0c44058b595f3b4180002c3ae3c806d40",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795078916.8460176,
+    "action": "connect_request",
+    "connection_id": 1795078916835375887,
+    "host": "codeload.github.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078917.1241283,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078916835375887,
+    "host": "codeload.github.com"
+  },
+  {
+    "utc": 1795078917.1474571,
+    "action": "http_request",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/981b02c0c44058b595f3b4180002c3ae3c806d40",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078927.6079133,
+    "action": "http_response_inspected",
+    "host": "codeload.github.com",
+    "url": "https://codeload.github.com/openai/plugins/legacy.zip/981b02c0c44058b595f3b4180002c3ae3c806d40",
+    "status": 429,
+    "content_type": "text/plain",
+    "bytes": 82,
+    "sha256": "72407ef106e6ef64e9371bd1f84e44ec51e1c753664ea5737510f209e74d1c96",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 82
+  },
+  {
+    "utc": 1795078927.6755319,
+    "action": "connect_request",
+    "connection_id": 1795078927661010725,
+    "host": "chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078927.6998608,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078927661010725,
+    "host": "chatgpt.com"
+  },
+  {
+    "utc": 1795078927.7219234,
+    "action": "http_request",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "method": "GET"
+  },
+  {
+    "utc": 1795078943.3712893,
+    "action": "inspection_failed_closed",
+    "host": "chatgpt.com",
+    "url": "https://chatgpt.com/backend-api/plugins/export/curated",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795078970.8894584,
+    "action": "connect_request",
+    "connection_id": 1795078970873672000,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795078971.0657504,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795078970873672000,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795078971.0935993,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795078971.2729447,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079025.3876882,
+    "action": "connect_request",
+    "connection_id": 1795079025361201475,
+    "host": "pypi.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079025.482227,
+    "action": "connect_established",
+    "connection_id": 1795079025361201475,
+    "host": "pypi.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079026.781741,
+    "action": "connect_request",
+    "connection_id": 1795079026768136263,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079026.8840818,
+    "action": "connect_established",
+    "connection_id": 1795079026768136263,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079031.6262052,
+    "action": "connect_request",
+    "connection_id": 1795079031615063876,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079031.6501236,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079031615063876,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079031.672295,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079031.8413587,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079051.0231519,
+    "action": "blocked_or_failed",
+    "host": "en.wikipedia.org",
+    "error": "ValueError: Non-public destination"
+  },
+  {
+    "utc": 1795079092.1196415,
+    "action": "connect_request",
+    "connection_id": 1795079092098532713,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079092.1387699,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079092098532713,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079092.1567595,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079092.319573,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079101.077387,
+    "action": "connect_request",
+    "connection_id": 1795079100549698293,
+    "host": "www.allaboutbirds.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079101.3621209,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079100549698293,
+    "host": "www.allaboutbirds.org"
+  },
+  {
+    "utc": 1795079101.3866796,
+    "action": "http_request",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Eastern_Phoebe/id",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079101.7039483,
+    "action": "http_response_inspected",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Eastern_Phoebe/id",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5665,
+    "sha256": "e3d4597a925f83974228b8e17221cb98c9daa708457775a2887da780d13f1aa4",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5665
+  },
+  {
+    "utc": 1795079101.7512941,
+    "action": "connect_request",
+    "connection_id": 1795079101742939647,
+    "host": "www.allaboutbirds.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079102.2086864,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079101742939647,
+    "host": "www.allaboutbirds.org"
+  },
+  {
+    "utc": 1795079102.2371461,
+    "action": "http_request",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Eastern_Wood-Pewee/id",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079102.564311,
+    "action": "http_response_inspected",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Eastern_Wood-Pewee/id",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5665,
+    "sha256": "a34b99c5d1f5463a707d8823d68e164847ad22d17d4a29d8607b20e250f6c864",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5665
+  },
+  {
+    "utc": 1795079102.6320264,
+    "action": "connect_request",
+    "connection_id": 1795079102623211655,
+    "host": "www.allaboutbirds.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079102.8757012,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079102623211655,
+    "host": "www.allaboutbirds.org"
+  },
+  {
+    "utc": 1795079102.896147,
+    "action": "http_request",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Black-footed_Albatross/id",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079103.202954,
+    "action": "http_response_inspected",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Black-footed_Albatross/id",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5665,
+    "sha256": "4599ce7a7801ca9ff85563d37b84ec28a663dfc4c5dc62563b70dd251f3eb568",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5665
+  },
+  {
+    "utc": 1795079103.247245,
+    "action": "connect_request",
+    "connection_id": 1795079103237484692,
+    "host": "www.allaboutbirds.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079103.6639616,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079103237484692,
+    "host": "www.allaboutbirds.org"
+  },
+  {
+    "utc": 1795079103.6960962,
+    "action": "http_request",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Laysan_Albatross/id",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079104.0096786,
+    "action": "http_response_inspected",
+    "host": "www.allaboutbirds.org",
+    "url": "https://www.allaboutbirds.org/guide/Laysan_Albatross/id",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5665,
+    "sha256": "b9378276e6a391e5a8219d6125dc7bbfae24d59b24214dde1cb4144701e0b85e",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5665
+  },
+  {
+    "utc": 1795079105.5943491,
+    "action": "connect_request",
+    "connection_id": 1795079104071667059,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079106.110583,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079104071667059,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1795079106.1370134,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079113.598461,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 551218,
+    "sha256": "0aad38a22843a5e5c61f747f9b0a646c443697a06d91a91b33d337766b690345",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 551218
+  },
+  {
+    "utc": 1795079153.039903,
+    "action": "connect_request",
+    "connection_id": 1795079153011327875,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079153.0694582,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079153011327875,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079153.0922766,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079153.2663405,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079172.0232055,
+    "action": "connection_closed",
+    "connection_id": 1795079025361201475,
+    "host": "pypi.org",
+    "sent_bytes": 19433,
+    "received_bytes": 5086882
+  },
+  {
+    "utc": 1795079195.1281238,
+    "action": "connect_request",
+    "connection_id": 1795079195099219850,
+    "host": "www.google.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079195.326909,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079195099219850,
+    "host": "www.google.com"
+  },
+  {
+    "utc": 1795079195.3538473,
+    "action": "http_request",
+    "host": "www.google.com",
+    "url": "https://www.google.com/search?q=brown+bush+warbler+song+description",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079213.98778,
+    "action": "connect_request",
+    "connection_id": 1795079213965549159,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079214.0554435,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079213965549159,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079214.0819867,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079214.2827635,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079225.4450448,
+    "action": "connect_request",
+    "connection_id": 1795079225415306997,
+    "host": "www.google.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079225.7224703,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079225415306997,
+    "host": "www.google.com"
+  },
+  {
+    "utc": 1795079225.9055452,
+    "action": "http_request",
+    "host": "www.google.com",
+    "url": "https://www.google.com/search?q=russet+bush+warbler+song+description",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079257.7389872,
+    "action": "connect_request",
+    "connection_id": 1795079256278651075,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079258.2447505,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079256278651075,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1795079258.2761738,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/savis-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079262.888249,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/savis-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 276646,
+    "sha256": "698ef8545e082d7e311664cf0f68ba6fb8ac96f7e741ac0a2cf3a61ee63440aa",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 276646
+  },
+  {
+    "utc": 1795079264.426775,
+    "action": "connect_request",
+    "connection_id": 1795079262946084118,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079264.621501,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079262946084118,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079264.6458197,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/easpho",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079265.927195,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/easpho",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8977,
+    "sha256": "bfe58d503969373d14a59cc7743bad6bc31c9a9aff4e402bb852e237b0002f9c",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8977
+  },
+  {
+    "utc": 1795079265.9888654,
+    "action": "connect_request",
+    "connection_id": 1795079265978643790,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079266.3305795,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079265978643790,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079266.3642545,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/bkfalb",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079267.6444118,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/bkfalb",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8625,
+    "sha256": "c65da96083eaa3256e7140bf5b0377c20f3d916beb02f028225a90c5f5eefb4c",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8625
+  },
+  {
+    "utc": 1795079267.6928606,
+    "action": "connect_request",
+    "connection_id": 1795079267682026211,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079268.0402,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079267682026211,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079268.1112669,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/layalb",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079269.4260552,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/layalb",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8734,
+    "sha256": "ef5d29982f484254dcd23b63fbbf2f713e4ab3430135123e4a86244e37f897c4",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8734
+  },
+  {
+    "utc": 1795079274.9425726,
+    "action": "connect_request",
+    "connection_id": 1795079274930090608,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079274.9768128,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079274930090608,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079275.0015645,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079281.0525358,
+    "action": "connect_request",
+    "connection_id": 1795079281039147184,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079281.0720503,
+    "action": "connect_request",
+    "connection_id": 1795079281039583896,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079281.092881,
+    "action": "connect_request",
+    "connection_id": 1795079281039988455,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079281.1133356,
+    "action": "connect_request",
+    "connection_id": 1795079281040349704,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079281.133378,
+    "action": "connect_request",
+    "connection_id": 1795079281084316604,
+    "host": "raw.githubusercontent.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079281.1791925,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079281039147184,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079281.2001297,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/brbwar1",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079281.221425,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079281039583896,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079281.2308173,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079281039988455,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079281.2512183,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079281040349704,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079281.272009,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/rubwar1",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079281.2923167,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/wilfly",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079281.316072,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/cetwar1",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079281.4678557,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079281084316604,
+    "host": "raw.githubusercontent.com"
+  },
+  {
+    "utc": 1795079281.4954393,
+    "action": "http_request",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/Variable/TTF/Subset/NotoSansSC-VF.ttf",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079282.5270612,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/brbwar1",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8443,
+    "sha256": "3d87f7c1d1c319b072ee27982be0f97f3ef383a17206fdc4548ea2af4d6d7201",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8443
+  },
+  {
+    "utc": 1795079282.5592592,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/wilfly",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8877,
+    "sha256": "d219e4d4de4fbcd26eaff356e4b761314e4c98f91af13f3da2d6ed5ff18a5771",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8877
+  },
+  {
+    "utc": 1795079282.5813584,
+    "action": "connect_request",
+    "connection_id": 1795079282543721276,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079282.60462,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/rubwar1",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8575,
+    "sha256": "93b0d3ca5079f0618676a7d1de5b45a7cece4bed842568a9aef900a7476b5872",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8575
+  },
+  {
+    "utc": 1795079282.6261299,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/cetwar1",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8901,
+    "sha256": "5cc47ac3bfe9640f88f7d46031ba83a1da78fb4eb80542db4a0600dc8f1899fd",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8901
+  },
+  {
+    "utc": 1795079282.643932,
+    "action": "connect_request",
+    "connection_id": 1795079282569259432,
+    "host": "ebird.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079282.6638408,
+    "action": "connect_request",
+    "connection_id": 1795079282612684425,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079282.6907265,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079282543721276,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079282.7097504,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/aldfly",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079282.7507684,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079282569259432,
+    "host": "ebird.org"
+  },
+  {
+    "utc": 1795079282.7721262,
+    "action": "http_request",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/marwre",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079282.795219,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079282612684425,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1795079282.8171406,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/sedge-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079283.7147465,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/marwre",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 7770,
+    "sha256": "28faf05684cf02832050cbd774e66baa087cc32649a7e4aadd58f6184055f23e",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 7770
+  },
+  {
+    "utc": 1795079283.942112,
+    "action": "http_response_inspected",
+    "host": "ebird.org",
+    "url": "https://ebird.org/species/aldfly",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 8448,
+    "sha256": "f64eef196757d52c7297b27f4a00194408cbd4ba87c1148eeee6e3dcfc50245a",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 8448
+  },
+  {
+    "utc": 1795079285.3799515,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/sedge-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 545022,
+    "sha256": "df678316e887a1aafb3677390d5ebb760637349a328a8337b266ca2272aa7b06",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 545022
+  },
+  {
+    "utc": 1795079290.1530972,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079316.9467192,
+    "action": "inspection_failed_closed",
+    "host": "www.google.com",
+    "url": "https://www.google.com/search?q=brown+bush+warbler+song+description",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=brown+bush+warbler+song+description (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x778090093ad0>, 'Connection to www.google",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079327.3880947,
+    "action": "inspection_failed_closed",
+    "host": "raw.githubusercontent.com",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/Variable/TTF/Subset/NotoSansSC-VF.ttf",
+    "error": "ReadTimeout: HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=45)",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079335.4546316,
+    "action": "connect_request",
+    "connection_id": 1795079335439905025,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079335.5134838,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079335439905025,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079335.5378866,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079336.443985,
+    "action": "connect_request",
+    "connection_id": 1795079336381957441,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079336.6664093,
+    "action": "connect_request",
+    "connection_id": 1795079336382714248,
+    "host": "www.birdguides.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079336.752929,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079336381957441,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079336.7787056,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=Brown+bush+warbler+song+description",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079336.853056,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079336382714248,
+    "host": "www.birdguides.com"
+  },
+  {
+    "utc": 1795079336.8790588,
+    "action": "http_request",
+    "host": "www.birdguides.com",
+    "url": "https://www.birdguides.com/species-guide/ioc/locustella-luteoventris",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079337.010367,
+    "action": "connect_request",
+    "connection_id": 1795079336382886620,
+    "host": "singaporebirds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.0358725,
+    "action": "connect_request",
+    "connection_id": 1795079336382796547,
+    "host": "singaporebirds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.0601964,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=Brown+bush+warbler+song+description",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 181,
+    "sha256": "dcb91748ca25ef99d66e7d768345a1a0774aaf378f020f882619f524f2a36ef1",
+    "location": "https://cn.bing.com/search?q=Brown+bush+warbler+song+description",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 181
+  },
+  {
+    "utc": 1795079337.0841427,
+    "action": "connect_request",
+    "connection_id": 1795079337071625703,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.1716547,
+    "action": "http_response_inspected",
+    "host": "www.birdguides.com",
+    "url": "https://www.birdguides.com/species-guide/ioc/locustella-luteoventris",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5457,
+    "sha256": "e56e727987c357bc7ca5c547be63ebeb2e27cecd2230d76233c84fd40f646a46",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 5457
+  },
+  {
+    "utc": 1795079337.1924405,
+    "action": "connect_request",
+    "connection_id": 1795079337179561207,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.217551,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079336382886620,
+    "host": "singaporebirds.com"
+  },
+  {
+    "utc": 1795079337.2362652,
+    "action": "http_request",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brown-bush-warbler/",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079337.2620184,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079336382796547,
+    "host": "singaporebirds.com"
+  },
+  {
+    "utc": 1795079337.2978492,
+    "action": "http_request",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler/",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079337.3661034,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337071625703,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079337.3934681,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=Brown+bush+warbler+song+description",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079337.4217844,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337179561207,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079337.4563935,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079337.7476058,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 177,
+    "sha256": "ed1ede00fa08cb61e20d66b62c85ccabd8466b416150475e89873835ad7605d1",
+    "location": "https://cn.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 177
+  },
+  {
+    "utc": 1795079337.78501,
+    "action": "connect_request",
+    "connection_id": 1795079337772661495,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.8123033,
+    "action": "http_response_inspected",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler/",
+    "status": 301,
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": "/species/brownish-flanked-bush-warbler",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079337.834399,
+    "action": "http_response_inspected",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brown-bush-warbler/",
+    "status": 301,
+    "content_type": "application/octet-stream",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "location": "/species/brown-bush-warbler",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079337.856746,
+    "action": "connect_request",
+    "connection_id": 1795079337824208402,
+    "host": "singaporebirds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.8779063,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=Brown+bush+warbler+song+description",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 104947,
+    "sha256": "485e6943c8106f19c4fdc32d96350359a4fa0aa5565033a0b0908029192007d3",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 104947
+  },
+  {
+    "utc": 1795079337.8976076,
+    "action": "connect_request",
+    "connection_id": 1795079337845453897,
+    "host": "singaporebirds.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079337.9852145,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337772661495,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079338.0064268,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079338.1270933,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337824208402,
+    "host": "singaporebirds.com"
+  },
+  {
+    "utc": 1795079338.1579392,
+    "action": "http_request",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079338.26645,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337845453897,
+    "host": "singaporebirds.com"
+  },
+  {
+    "utc": 1795079338.2971568,
+    "action": "http_request",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brown-bush-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079338.410215,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=Willow+flycatcher+song+fitz+bew",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 103127,
+    "sha256": "3eb6ab5e26067a694e5838ee072597f112895003ca72a042378b52f1745ebc66",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 103127
+  },
+  {
+    "utc": 1795079338.9811654,
+    "action": "connect_request",
+    "connection_id": 1795079337893798129,
+    "host": "www.fws.gov",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079339.0041451,
+    "action": "connect_request",
+    "connection_id": 1795079338452953784,
+    "host": "www.fws.gov",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079339.1325748,
+    "action": "http_response_inspected",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brown-bush-warbler",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 16397,
+    "sha256": "10e239abd067973332b9074fdba7da4dd7e76a9106b29e4793797fc86279affe",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 16397
+  },
+  {
+    "utc": 1795079339.2082865,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079337893798129,
+    "host": "www.fws.gov"
+  },
+  {
+    "utc": 1795079339.2247047,
+    "action": "http_request",
+    "host": "www.fws.gov",
+    "url": "https://www.fws.gov/species/black-footed-albatross-phoebastria-nigripes",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079339.245952,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079338452953784,
+    "host": "www.fws.gov"
+  },
+  {
+    "utc": 1795079339.269528,
+    "action": "http_request",
+    "host": "www.fws.gov",
+    "url": "https://www.fws.gov/species/laysan-albatross-phoebastria-immutabilis",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079340.9448493,
+    "action": "http_response_inspected",
+    "host": "www.fws.gov",
+    "url": "https://www.fws.gov/species/black-footed-albatross-phoebastria-nigripes",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 150375,
+    "sha256": "5a3c802a9070e9c54807a2291c30707ced9bf58017f0b8a746ccf2538438ec25",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 150375
+  },
+  {
+    "utc": 1795079341.8169303,
+    "action": "http_response_inspected",
+    "host": "www.fws.gov",
+    "url": "https://www.fws.gov/species/laysan-albatross-phoebastria-immutabilis",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 156735,
+    "sha256": "1d9fe597e5da88791c094fc945521c9d36866688336b6cbad96eff7823c441ef",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 156735
+  },
+  {
+    "utc": 1795079342.2991898,
+    "action": "http_response_inspected",
+    "host": "singaporebirds.com",
+    "url": "https://singaporebirds.com/species/brownish-flanked-bush-warbler",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 16419,
+    "sha256": "cb1b784a0b2932d8b9135d758b32f9fda51aabff458b5b930e009ba569a679de",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 16419
+  },
+  {
+    "utc": 1795079347.4926665,
+    "action": "inspection_failed_closed",
+    "host": "www.google.com",
+    "url": "https://www.google.com/search?q=russet+bush+warbler+song+description",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.google.com', port=443): Max retries exceeded with url: /search?q=russet+bush+warbler+song+description (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7780900858b0>, 'Connection to www.googl",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079350.7818565,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079353.6873612,
+    "action": "connect_request",
+    "connection_id": 1795079352452000009,
+    "host": "deb.debian.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079354.896024,
+    "action": "connect_established",
+    "connection_id": 1795079352452000009,
+    "host": "deb.debian.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079383.3512282,
+    "action": "connect_request",
+    "connection_id": 1795079383341860306,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079383.486852,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079383341860306,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079383.5050607,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Locustella+luteoventris%22+song",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079383.760671,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Locustella+luteoventris%22+song",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 180,
+    "sha256": "9ef3e8fab8693384ce7508b489f234a3ccb552d38079de50400c162ce49435d0",
+    "location": "https://cn.bing.com/search?q=%22Locustella+luteoventris%22+song",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 180
+  },
+  {
+    "utc": 1795079383.7775216,
+    "action": "connect_request",
+    "connection_id": 1795079383769160661,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079383.8911786,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079383769160661,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079383.922277,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Locustella+luteoventris%22+song",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079384.3045886,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Locustella+luteoventris%22+song",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 101788,
+    "sha256": "75f0a4f51dc61940a9d8d690cb66f6f6a3a2fcc476b0f5ed48406c753c64e9a9",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 101788
+  },
+  {
+    "utc": 1795079384.3377976,
+    "action": "connect_request",
+    "connection_id": 1795079384329847264,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079384.456581,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079384329847264,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079384.4826407,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079384.7825372,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 225,
+    "sha256": "4b0ae75ed29d8b284db93ae239c134e4fbcd1e60afa50907e659253407d22fdf",
+    "location": "https://cn.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 225
+  },
+  {
+    "utc": 1795079384.81215,
+    "action": "connect_request",
+    "connection_id": 1795079384793246061,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079384.9430857,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079384793246061,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079384.9613314,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079385.340128,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22%E6%A3%95%E8%A4%90%E7%9F%AD%E7%BF%85%E8%9D%97%E8%8E%BA%22+%E9%B8%A3%E5%A3%B0",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 104503,
+    "sha256": "14eba4c282c4b2ee4738f202e3d3b6a203712c5861f9ae4c10ac8c00a67d62eb",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 104503
+  },
+  {
+    "utc": 1795079385.4072793,
+    "action": "connect_request",
+    "connection_id": 1795079385383207282,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079385.574835,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079385383207282,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079385.5938585,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079385.8503935,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 207,
+    "sha256": "d7a617fd2645e8e81611807e0febed1eb261640df401c21f154c373ee521cf98",
+    "location": "https://cn.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 207
+  },
+  {
+    "utc": 1795079385.8725293,
+    "action": "connect_request",
+    "connection_id": 1795079385861334518,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079386.118,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079385861334518,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079386.1399925,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079386.5161743,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22%E6%9F%B3%E7%BA%B9%E9%9C%B8%E9%B9%9F%22+%E9%B8%A3%E5%A3%B0",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 104356,
+    "sha256": "e17c6d34b6df80930a0b432abd94dab0ad82a4672a64a63ae44aeb16af582be8",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 104356
+  },
+  {
+    "utc": 1795079386.5631735,
+    "action": "connect_request",
+    "connection_id": 1795079386550274818,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079386.7042181,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079386550274818,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079386.7209845,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079386.9923575,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 178,
+    "sha256": "c9189c7ae1b9a4bc979ab02f198a66bb1f6a47627748780f1c8cfa500b23acb4",
+    "location": "https://cn.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 178
+  },
+  {
+    "utc": 1795079387.0114121,
+    "action": "connect_request",
+    "connection_id": 1795079387001246049,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079387.137293,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079387001246049,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079387.1547842,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079387.571192,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Willow+Flycatcher%22+fitz-bew",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 103999,
+    "sha256": "d3f00920d61dc18091927691261cf2494851f144f78b031e3ceaecc8660dfd15",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 103999
+  },
+  {
+    "utc": 1795079387.6151533,
+    "action": "connect_request",
+    "connection_id": 1795079387608215045,
+    "host": "www.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079387.7611613,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079387608215045,
+    "host": "www.bing.com"
+  },
+  {
+    "utc": 1795079387.7802913,
+    "action": "http_request",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Alder+Flycatcher%22+song",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079388.0642357,
+    "action": "http_response_inspected",
+    "host": "www.bing.com",
+    "url": "https://www.bing.com/search?q=%22Alder+Flycatcher%22+song",
+    "status": 302,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 173,
+    "sha256": "714f4bf845854efc180a087b7eef6588bc348f27a566ac1f31d8985060dc0faa",
+    "location": "https://cn.bing.com/search?q=%22Alder+Flycatcher%22+song",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 173
+  },
+  {
+    "utc": 1795079388.0997963,
+    "action": "connect_request",
+    "connection_id": 1795079388073320795,
+    "host": "cn.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079388.2293975,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079388073320795,
+    "host": "cn.bing.com"
+  },
+  {
+    "utc": 1795079388.253955,
+    "action": "http_request",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Alder+Flycatcher%22+song",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079388.6268766,
+    "action": "http_response_inspected",
+    "host": "cn.bing.com",
+    "url": "https://cn.bing.com/search?q=%22Alder+Flycatcher%22+song",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 103892,
+    "sha256": "e1b85b2932b3c00773b20f3382563530daa8f3ad5732d98b335adaca75ec7450",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 103892
+  },
+  {
+    "utc": 1795079396.7244594,
+    "action": "connect_request",
+    "connection_id": 1795079396700012825,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079396.7961502,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079396700012825,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079396.8196921,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079411.9927025,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079442.9159727,
+    "action": "connection_closed",
+    "connection_id": 1795079352452000009,
+    "host": "deb.debian.org",
+    "sent_bytes": 835,
+    "received_bytes": 1168307
+  },
+  {
+    "utc": 1795079447.6722722,
+    "action": "connection_closed",
+    "connection_id": 1795079026768136263,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 36797,
+    "received_bytes": 41673649
+  },
+  {
+    "utc": 1795079457.6314435,
+    "action": "connect_request",
+    "connection_id": 1795079457608085462,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079457.69989,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079457608085462,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079457.7244372,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079457.8955142,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079479.8092895,
+    "action": "connect_request",
+    "connection_id": 1795079478910953728,
+    "host": "files.pythonhosted.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079479.9077199,
+    "action": "connect_established",
+    "connection_id": 1795079478910953728,
+    "host": "files.pythonhosted.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079495.2003071,
+    "action": "connect_request",
+    "connection_id": 1795079495151285021,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079495.4158943,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079495151285021,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1795079495.4349725,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079496.155001,
+    "action": "connect_request",
+    "connection_id": 1795079495330769754,
+    "host": "deb.debian.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079496.3386366,
+    "action": "connect_established",
+    "connection_id": 1795079495330769754,
+    "host": "deb.debian.org",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079496.3830543,
+    "action": "connect_request",
+    "connection_id": 1795079495150779127,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079496.405611,
+    "action": "connect_request",
+    "connection_id": 1795079495151619135,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079496.4263058,
+    "action": "connect_request",
+    "connection_id": 1795079495152944281,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079496.6225936,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079495150779127,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079496.6421573,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079495151619135,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079496.6622505,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/brownish-flanked.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079496.6822271,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079495152944281,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079496.7060025,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/brown.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079496.7299054,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/long-billed.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079497.8077867,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/brownish-flanked.bush.warbler.html",
+    "status": 301,
+    "content_type": "text/html; charset=iso-8859-1",
+    "bytes": 317,
+    "sha256": "1af98eb12fc189218f5c12d98192024f103603ef9471c329ee4e7d6232f5f850",
+    "location": "https://www.oiseaux.net/en/oiseaux/brownish-flanked.bush.warbler.html",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 317
+  },
+  {
+    "utc": 1795079497.8410044,
+    "action": "connect_request",
+    "connection_id": 1795079497828592785,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079497.862349,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/brown.bush.warbler.html",
+    "status": 301,
+    "content_type": "text/html; charset=iso-8859-1",
+    "bytes": 306,
+    "sha256": "59264b1bdd0255271856ed88b7945924d6cb344691c8e30ce926861c8e69c78a",
+    "location": "https://www.oiseaux.net/en/oiseaux/brown.bush.warbler.html",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 306
+  },
+  {
+    "utc": 1795079497.8867898,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/birds/long-billed.bush.warbler.html",
+    "status": 301,
+    "content_type": "text/html; charset=iso-8859-1",
+    "bytes": 312,
+    "sha256": "f989dc92bad3db491496f025d94311bc4eafd63ee02024182fb98a2af996ce78",
+    "location": "https://www.oiseaux.net/en/oiseaux/long-billed.bush.warbler.html",
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 312
+  },
+  {
+    "utc": 1795079497.9040394,
+    "action": "connect_request",
+    "connection_id": 1795079497869912622,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079497.924046,
+    "action": "connect_request",
+    "connection_id": 1795079497892315087,
+    "host": "www.oiseaux.net",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079497.9489527,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 271657,
+    "sha256": "73abbcdd4ef9dcd4cdb952550a4957fc666735c3d958e9ed6b5ef9a406bee599",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 271657
+  },
+  {
+    "utc": 1795079497.992355,
+    "action": "connect_request",
+    "connection_id": 1795079497983470437,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079498.0119689,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079497828592785,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079498.0347505,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/brownish-flanked.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079498.0714025,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079497869912622,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079498.0946095,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/brown.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079498.1171856,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079497892315087,
+    "host": "www.oiseaux.net"
+  },
+  {
+    "utc": 1795079498.139933,
+    "action": "http_request",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/long-billed.bush.warbler.html",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079498.1610727,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079497983470437,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1795079498.1826518,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079499.1867518,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/brownish-flanked.bush.warbler.html",
+    "status": 404,
+    "content_type": "text/html; charset=iso-8859-1",
+    "bytes": 236,
+    "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 236
+  },
+  {
+    "utc": 1795079499.2113144,
+    "action": "connect_request",
+    "connection_id": 1795079499199957125,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079499.522509,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079499199957125,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1795079499.548271,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/marsh-wren",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079499.9810846,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/long-billed.bush.warbler.html",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 44620,
+    "sha256": "64062d0cf7c16ba4b9f204b186e015b10484b7b141c51e8a17d4a5546876b555",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 44620
+  },
+  {
+    "utc": 1795079500.0188985,
+    "action": "connect_request",
+    "connection_id": 1795079500012226759,
+    "host": "www.rspb.org.uk",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079500.301537,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079500012226759,
+    "host": "www.rspb.org.uk"
+  },
+  {
+    "utc": 1795079500.3286514,
+    "action": "http_request",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079501.1009378,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 263604,
+    "sha256": "5ffb7abf7ddef7d7bd5e384b495d3d21db7ef2b59ca5404dbc259e9a3b77ecd1",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 263604
+  },
+  {
+    "utc": 1795079501.2828555,
+    "action": "http_response_inspected",
+    "host": "www.oiseaux.net",
+    "url": "https://www.oiseaux.net/en/oiseaux/brown.bush.warbler.html",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 60593,
+    "sha256": "cb127e8592cff4dacd8cb197337f1f146bd5bcc8e8eda3e97406ce2830ebfea9",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 60593
+  },
+  {
+    "utc": 1795079504.7567015,
+    "action": "http_response_inspected",
+    "host": "www.rspb.org.uk",
+    "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 358831,
+    "sha256": "b37ab63b23670a15d766da10dd6a7877d125792e89427c4d5b678b30db48ceeb",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 358831
+  },
+  {
+    "utc": 1795079514.1816545,
+    "action": "connection_closed",
+    "connection_id": 1795079478910953728,
+    "host": "files.pythonhosted.org",
+    "sent_bytes": 1300,
+    "received_bytes": 255585
+  },
+  {
+    "utc": 1795079514.5728743,
+    "action": "inspection_failed_closed",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/marsh-wren",
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='www.audubon.org', port=443): Max retries exceeded with url: /field-guide/bird/marsh-wren (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7780900ad3a0>, 'Connection to www.audubon.org timed out.",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079517.6175513,
+    "action": "connect_request",
+    "connection_id": 1795079517607594654,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079517.6650946,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079517607594654,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079517.6894684,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079520.5048347,
+    "action": "connect_request",
+    "connection_id": 1795079519751787879,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079520.6522284,
+    "action": "connect_established",
+    "connection_id": 1795079519751787879,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079523.5296564,
+    "action": "connection_closed",
+    "connection_id": 1795079519751787879,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2915,
+    "received_bytes": 57364
+  },
+  {
+    "utc": 1795079523.5609012,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079533.3841267,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079553.874214,
+    "action": "connect_request",
+    "connection_id": 1795079553851406871,
+    "host": "www.audubon.org",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079554.3359241,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079553851406871,
+    "host": "www.audubon.org"
+  },
+  {
+    "utc": 1795079554.3640554,
+    "action": "http_request",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "method": "GET"
+  },
+  {
+    "utc": 1795079557.9177673,
+    "action": "http_response_inspected",
+    "host": "www.audubon.org",
+    "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 271657,
+    "sha256": "73abbcdd4ef9dcd4cdb952550a4957fc666735c3d958e9ed6b5ef9a406bee599",
+    "location": null,
+    "audio_check": null,
+    "blocked": false,
+    "reason": null,
+    "delivered_bytes": 271657
+  },
+  {
+    "utc": 1795079578.7545955,
+    "action": "connect_request",
+    "connection_id": 1795079578726163536,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079578.794735,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079578726163536,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079578.8195076,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079578.9621594,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079639.6406448,
+    "action": "connect_request",
+    "connection_id": 1795079639609544738,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079639.7156775,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079639609544738,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079639.7461135,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079654.9169183,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079700.1045508,
+    "action": "connect_request",
+    "connection_id": 1795079699388650782,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079700.1331072,
+    "action": "connect_request",
+    "connection_id": 1795079700106622080,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079700.2006338,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079700106622080,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079700.2262096,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079700.262532,
+    "action": "connect_established",
+    "connection_id": 1795079699388650782,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079701.4002414,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079704.3311467,
+    "action": "connection_closed",
+    "connection_id": 1795079699388650782,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2858,
+    "received_bytes": 8421
+  },
+  {
+    "utc": 1795079704.3694997,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079705.4272084,
+    "action": "connect_request",
+    "connection_id": 1795079705419258953,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079705.559738,
+    "action": "connect_established",
+    "connection_id": 1795079705419258953,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079707.576899,
+    "action": "connection_closed",
+    "connection_id": 1795079705419258953,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2888,
+    "received_bytes": 47558
+  },
+  {
+    "utc": 1795079707.6036086,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079708.1773508,
+    "action": "connect_request",
+    "connection_id": 1795079708161672728,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079708.3446279,
+    "action": "connect_established",
+    "connection_id": 1795079708161672728,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079710.2749872,
+    "action": "connection_closed",
+    "connection_id": 1795079708161672728,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2894,
+    "received_bytes": 49745
+  },
+  {
+    "utc": 1795079710.29525,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079710.3996353,
+    "action": "connect_request",
+    "connection_id": 1795079710390866388,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079710.5327065,
+    "action": "connect_established",
+    "connection_id": 1795079710390866388,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079712.523292,
+    "action": "connection_closed",
+    "connection_id": 1795079710390866388,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2888,
+    "received_bytes": 47330
+  },
+  {
+    "utc": 1795079712.551727,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079712.701226,
+    "action": "connect_request",
+    "connection_id": 1795079712693037396,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079712.8780808,
+    "action": "connect_established",
+    "connection_id": 1795079712693037396,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079715.1065118,
+    "action": "connection_closed",
+    "connection_id": 1795079712693037396,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2900,
+    "received_bytes": 53040
+  },
+  {
+    "utc": 1795079715.1348686,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079715.3434603,
+    "action": "connect_request",
+    "connection_id": 1795079715332575343,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079715.4779649,
+    "action": "connect_established",
+    "connection_id": 1795079715332575343,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079717.534486,
+    "action": "connection_closed",
+    "connection_id": 1795079715332575343,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2873,
+    "received_bytes": 39148
+  },
+  {
+    "utc": 1795079717.5627074,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079717.8039181,
+    "action": "connect_request",
+    "connection_id": 1795079717787000316,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079718.0014575,
+    "action": "connect_established",
+    "connection_id": 1795079717787000316,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079720.3354502,
+    "action": "connection_closed",
+    "connection_id": 1795079717787000316,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2888,
+    "received_bytes": 47333
+  },
+  {
+    "utc": 1795079720.355486,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079720.4558084,
+    "action": "connect_request",
+    "connection_id": 1795079720447375161,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079720.6040986,
+    "action": "connect_established",
+    "connection_id": 1795079720447375161,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079722.914904,
+    "action": "connection_closed",
+    "connection_id": 1795079720447375161,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2891,
+    "received_bytes": 47448
+  },
+  {
+    "utc": 1795079722.934217,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079723.043184,
+    "action": "connect_request",
+    "connection_id": 1795079723027262216,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079723.2296429,
+    "action": "connect_established",
+    "connection_id": 1795079723027262216,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079725.7348452,
+    "action": "connection_closed",
+    "connection_id": 1795079723027262216,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2888,
+    "received_bytes": 45435
+  },
+  {
+    "utc": 1795079725.762127,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079726.1281211,
+    "action": "connect_request",
+    "connection_id": 1795079726108726513,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079726.273678,
+    "action": "connect_established",
+    "connection_id": 1795079726108726513,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079728.4788973,
+    "action": "connection_closed",
+    "connection_id": 1795079726108726513,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2891,
+    "received_bytes": 49085
+  },
+  {
+    "utc": 1795079728.5033193,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079728.7269971,
+    "action": "connect_request",
+    "connection_id": 1795079728718754457,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079728.8604317,
+    "action": "connect_established",
+    "connection_id": 1795079728718754457,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079731.292728,
+    "action": "connection_closed",
+    "connection_id": 1795079728718754457,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2897,
+    "received_bytes": 54790
+  },
+  {
+    "utc": 1795079731.323812,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079731.545913,
+    "action": "connect_request",
+    "connection_id": 1795079731523283329,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079731.7351623,
+    "action": "connect_established",
+    "connection_id": 1795079731523283329,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079734.1140378,
+    "action": "connection_closed",
+    "connection_id": 1795079731523283329,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2885,
+    "received_bytes": 46641
+  },
+  {
+    "utc": 1795079734.141129,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079734.3578064,
+    "action": "connect_request",
+    "connection_id": 1795079734349610239,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079734.5469887,
+    "action": "connect_established",
+    "connection_id": 1795079734349610239,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079738.960819,
+    "action": "connection_closed",
+    "connection_id": 1795079734349610239,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2879,
+    "received_bytes": 42918
+  },
+  {
+    "utc": 1795079738.9858491,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079739.1119,
+    "action": "connect_request",
+    "connection_id": 1795079739097517929,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079739.2540772,
+    "action": "connect_established",
+    "connection_id": 1795079739097517929,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079741.9602218,
+    "action": "connection_closed",
+    "connection_id": 1795079739097517929,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2888,
+    "received_bytes": 47589
+  },
+  {
+    "utc": 1795079741.9845066,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079742.32303,
+    "action": "connect_request",
+    "connection_id": 1795079742286689858,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079742.5094657,
+    "action": "connect_established",
+    "connection_id": 1795079742286689858,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079745.0270233,
+    "action": "connection_closed",
+    "connection_id": 1795079742286689858,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2903,
+    "received_bytes": 58657
+  },
+  {
+    "utc": 1795079745.0513794,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079745.319601,
+    "action": "connect_request",
+    "connection_id": 1795079745298204279,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079745.501385,
+    "action": "connect_established",
+    "connection_id": 1795079745298204279,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079748.115618,
+    "action": "connection_closed",
+    "connection_id": 1795079745298204279,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2900,
+    "received_bytes": 57749
+  },
+  {
+    "utc": 1795079748.1393752,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079748.3389096,
+    "action": "connect_request",
+    "connection_id": 1795079748327712641,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079748.5177298,
+    "action": "connect_established",
+    "connection_id": 1795079748327712641,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079752.3197317,
+    "action": "connection_closed",
+    "connection_id": 1795079748327712641,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2891,
+    "received_bytes": 46173
+  },
+  {
+    "utc": 1795079752.340446,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079752.4557815,
+    "action": "connect_request",
+    "connection_id": 1795079752439679400,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079752.621547,
+    "action": "connect_established",
+    "connection_id": 1795079752439679400,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079755.2784655,
+    "action": "connection_closed",
+    "connection_id": 1795079752439679400,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2897,
+    "received_bytes": 53662
+  },
+  {
+    "utc": 1795079755.314286,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079755.5029774,
+    "action": "connect_request",
+    "connection_id": 1795079755495012108,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079755.6358886,
+    "action": "connect_established",
+    "connection_id": 1795079755495012108,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079757.97687,
+    "action": "connection_closed",
+    "connection_id": 1795079755495012108,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2897,
+    "received_bytes": 51791
+  },
+  {
+    "utc": 1795079758.0016625,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079758.212714,
+    "action": "connect_request",
+    "connection_id": 1795079758203821782,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079758.3449988,
+    "action": "connect_established",
+    "connection_id": 1795079758203821782,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079760.7283862,
+    "action": "connection_closed",
+    "connection_id": 1795079758203821782,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2858,
+    "received_bytes": 29294
+  },
+  {
+    "utc": 1795079760.7523215,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079760.9626954,
+    "action": "connect_request",
+    "connection_id": 1795079760949449740,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079760.995789,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079760949449740,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079761.015586,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079776.6080604,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079785.2125902,
+    "action": "connection_closed",
+    "connection_id": 1795079495330769754,
+    "host": "deb.debian.org",
+    "sent_bytes": 882,
+    "received_bytes": 6460637
+  },
+  {
+    "utc": 1795079821.8782213,
+    "action": "connect_request",
+    "connection_id": 1795079821857161740,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079821.9350593,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079821857161740,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079821.95923,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079837.6289313,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795079925.5457332,
+    "action": "connect_request",
+    "connection_id": 1795079925453945584,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079925.731468,
+    "action": "connect_established",
+    "connection_id": 1795079925453945584,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795079928.362758,
+    "action": "connection_closed",
+    "connection_id": 1795079925453945584,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2897,
+    "received_bytes": 55195
+  },
+  {
+    "utc": 1795079928.3844466,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795079943.9460125,
+    "action": "connect_request",
+    "connection_id": 1795079943906046377,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795079944.0062299,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795079943906046377,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795079944.0300024,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795079959.2079194,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080004.9120398,
+    "action": "connect_request",
+    "connection_id": 1795080004879007797,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080004.9648876,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080004879007797,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080004.990463,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080005.1559985,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080065.3750691,
+    "action": "connect_request",
+    "connection_id": 1795080065348912760,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080065.4242873,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080065348912760,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080065.4502053,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080081.390834,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080126.5729342,
+    "action": "connect_request",
+    "connection_id": 1795080126549584129,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080126.6446435,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080126549584129,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080126.6728451,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080126.836866,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080187.5465183,
+    "action": "connect_request",
+    "connection_id": 1795080187537366621,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080187.56931,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080187537366621,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080187.5890095,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080187.7396665,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080228.6419308,
+    "action": "connect_request",
+    "connection_id": 1795080227928455932,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080229.1858432,
+    "action": "connect_established",
+    "connection_id": 1795080227928455932,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795080232.781002,
+    "action": "connection_closed",
+    "connection_id": 1795080227928455932,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2900,
+    "received_bytes": 56105
+  },
+  {
+    "utc": 1795080232.805935,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795080240.823864,
+    "action": "connect_request",
+    "connection_id": 1795080240809342139,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080241.3544252,
+    "action": "connect_established",
+    "connection_id": 1795080240809342139,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795080243.721051,
+    "action": "connection_closed",
+    "connection_id": 1795080240809342139,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2897,
+    "received_bytes": 52231
+  },
+  {
+    "utc": 1795080243.7470553,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795080248.5508506,
+    "action": "connect_request",
+    "connection_id": 1795080248534232769,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080248.608559,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080248534232769,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080248.6405025,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080248.7987146,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080250.6587114,
+    "action": "connect_request",
+    "connection_id": 1795080250644621864,
+    "host": "speech.platform.bing.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080250.7950845,
+    "action": "connect_established",
+    "connection_id": 1795080250644621864,
+    "host": "speech.platform.bing.com",
+    "encrypted": true,
+    "inspection": "infrastructure_passthrough"
+  },
+  {
+    "utc": 1795080252.9891043,
+    "action": "connection_closed",
+    "connection_id": 1795080250644621864,
+    "host": "speech.platform.bing.com",
+    "sent_bytes": 2891,
+    "received_bytes": 47737
+  },
+  {
+    "utc": 1795080253.0114086,
+    "action": "blocked_or_failed",
+    "host": "speech.platform.bing.com",
+    "error": "ConnectionResetError: [Errno 104] Connection reset by peer"
+  },
+  {
+    "utc": 1795080309.101708,
+    "action": "connect_request",
+    "connection_id": 1795080309075816606,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080309.1401858,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080309075816606,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080309.1628275,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080309.3243775,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080370.0466726,
+    "action": "connect_request",
+    "connection_id": 1795080370028933477,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080370.0901155,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080370028933477,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080370.1152327,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080370.2416875,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080431.0557473,
+    "action": "connect_request",
+    "connection_id": 1795080431035373111,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080431.0969012,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080431035373111,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080431.1189578,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080431.2787218,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080491.686077,
+    "action": "connect_request",
+    "connection_id": 1795080491665387578,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080491.7208452,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080491665387578,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080491.7463799,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080507.404946,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080552.6864643,
+    "action": "connect_request",
+    "connection_id": 1795080552663583563,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080552.7089143,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080552663583563,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080552.7278795,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080568.4544525,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080613.801599,
+    "action": "connect_request",
+    "connection_id": 1795080613756607072,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080613.8672652,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080613756607072,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080613.8973756,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080614.070604,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080674.7806253,
+    "action": "connect_request",
+    "connection_id": 1795080674758043847,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080674.8426132,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080674758043847,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080674.8734236,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080690.0588808,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080735.8027465,
+    "action": "connect_request",
+    "connection_id": 1795080735787924907,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080735.8701959,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080735787924907,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080735.895505,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  },
+  {
+    "utc": 1795080736.0448782,
+    "action": "inspection_failed_closed",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+    "delivered_bytes": 0
+  },
+  {
+    "utc": 1795080795.805651,
+    "action": "connect_request",
+    "connection_id": 1795080795795262437,
+    "host": "ab.chatgpt.com",
+    "method": "CONNECT",
+    "port": 443
+  },
+  {
+    "utc": 1795080795.8282607,
+    "action": "tls_inspection_ready",
+    "connection_id": 1795080795795262437,
+    "host": "ab.chatgpt.com"
+  },
+  {
+    "utc": 1795080795.8517234,
+    "action": "http_request",
+    "host": "ab.chatgpt.com",
+    "url": "https://ab.chatgpt.com/otlp/v1/metrics",
+    "method": "POST"
+  }
+]

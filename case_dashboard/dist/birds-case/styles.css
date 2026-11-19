@@ -1,4 +1,5 @@
 .birds-case { min-width: 0; }
+.birds-case .scroll { overflow-x: auto; }
 .birds-picker { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; font-weight: 600; }
 .birds-picker select { max-width: 100%; padding: 10px 36px 10px 12px; border: 1px solid var(--line, #ddd); border-radius: 8px; background: white; color: inherit; font: inherit; }
 .birds-case .note-card { margin: 16px 0; }

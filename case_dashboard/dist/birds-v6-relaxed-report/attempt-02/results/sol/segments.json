@@ -1,0 +1,404 @@
+{
+  "audio_analysis_method": "无原生听音工具，未亲耳听输入或合成配音。用ffmpeg提取原始48kHz双声道PCM，实际读取采样计算RMS、峰值，以scipy.signal.spectrogram(1024点FFT、768点重叠)生成0–12kHz声谱；观察脉冲间隔、音高、谐波与宽带瞬态，并与密集抽帧中的开嘴/接触动作核对。声谱无法代替完整听感，部分声音归属及相似种区分存在限制；没有调用识别模型或子代理，没有向外部服务上传输入视频、图片或原音轨。TTS仅接收本脚本自撰旁白文字。",
+  "identification_policy": "单一暂定识别，不枚举多个候选碰答案；前四章保留不确定性。第一章原片本来就是静态图像，输出保留其全部原始帧及时间线。",
+  "timeline_duration": 185.4666666666667,
+  "narration_voice": {
+    "tool": "edge-tts 7.3.1",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "locale": "zh-CN",
+    "rate": "-6%",
+    "time_stretch": false,
+    "subjective_listening_checked": false
+  },
+  "segments": [
+    {
+      "chinese_name": "巨嘴短翅莺（暂定）",
+      "english_name": "Long-billed Bush Warbler",
+      "scientific_name": "Locustella major",
+      "confidence": 78,
+      "visual_evidence": [
+        {
+          "start": 0,
+          "end": 46.066667,
+          "description": "原片这一章本身是静态近照：棕褐色上体，喉部较浅，尾羽较长且呈阶梯状；嘴较粗长、端部略下弯；没有明显宽眉纹或强烈背部纵纹。鸟被手托住，无法从这张图推断野外活动。较长的嘴是暂定巨嘴短翅莺的主要形态依据。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 0.5,
+          "end": 14.5,
+          "description": "PCM声谱中约2–3千赫的短脉冲以间隔序列重复，并有上方谐波。只能称为录音中的短促鸟声，静图没有嘴部同步证据，无法保证来自画中个体。"
+        },
+        {
+          "start": 18,
+          "end": 25.5,
+          "description": "出现约5.5–7千赫的较高频短声串，音型与前部不同；不据此虚构换鸟、求偶或警戒原因。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 18,
+          "end": 26.8
+        },
+        {
+          "start": 40,
+          "end": 45.8
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.oiseaux.net/en/oiseaux/long-billed.bush.warbler.html",
+          "supports": "英文名、Locustella major学名和中文旧名巨嘴短翅莺的对应关系。只阅读物种页文字；未访问图片或页面所列录音，不将参考录音的类型当成输入音轨的事实。"
+        }
+      ],
+      "segment": 1,
+      "start": 0,
+      "end": 46.066667,
+      "narration": [
+        {
+          "start": 4.603208,
+          "end": 8.486166,
+          "text": "这只棕褐色的小鸟，我暂定为巨嘴短翅莺。"
+        },
+        {
+          "start": 11.903208000000001,
+          "end": 16.065457000000002,
+          "text": "注意它较长、略向下弯的嘴，还有细长的尾羽。"
+        },
+        {
+          "start": 27.303207999999998,
+          "end": 31.265957999999998,
+          "text": "喉部偏浅，翅膀短，身上的花纹很不显眼。"
+        },
+        {
+          "start": 34.403208,
+          "end": 39.562791,
+          "text": "短促的鸣声反复出现；静态近照无法核对发声个体。"
+        }
+      ]
+    },
+    {
+      "chinese_name": "巨嘴短翅莺（暂定，低置信度）",
+      "english_name": "Long-billed Bush Warbler",
+      "scientific_name": "Locustella major",
+      "confidence": 55,
+      "visual_evidence": [
+        {
+          "start": 46.066667,
+          "end": 72.8,
+          "description": "画面为浓密灌丛，枝叶交错。密集抽帧仍无法得到可用的完整鸟体、嘴形或眼眉特征；不声称看见开嘴或确认性别。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 46.5,
+          "end": 48.2,
+          "description": "约2.7–3.2千赫有短促音节，上方有弱谐波。"
+        },
+        {
+          "start": 52,
+          "end": 59.3,
+          "description": "同类短促音节约半秒到一秒间隔反复出现，之后有停歇；与第一章较低频短声段在音高、单音重复方式上相近。结合暂定候选作单一低置信判断，不能排除相似鸟种。没有亲耳辨听，也没有嘴部同步，因此这章的物种和个体归属均不牢靠。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 46.1,
+          "end": 49.8
+        },
+        {
+          "start": 70.1,
+          "end": 72.75
+        }
+      ],
+      "sources": [],
+      "segment": 2,
+      "start": 46.066667,
+      "end": 72.8,
+      "narration": [
+        {
+          "start": 50.303208000000005,
+          "end": 53.135624,
+          "text": "这段也暂按巨嘴短翅莺来判断。"
+        },
+        {
+          "start": 55.903208,
+          "end": 59.865956999999995,
+          "text": "短促的鸣声重复出现，鸟却藏在密叶后面。"
+        },
+        {
+          "start": 65.103208,
+          "end": 69.01279099999999,
+          "text": "看不清嘴部，声音与个体的对应仍有不确定。"
+        }
+      ]
+    },
+    {
+      "chinese_name": "柳纹霸鹟（暂定）",
+      "english_name": "Willow Flycatcher",
+      "scientific_name": "Empidonax traillii",
+      "confidence": 78,
+      "visual_evidence": [
+        {
+          "start": 75,
+          "end": 83.5,
+          "description": "小型霸鹟体形，头背灰橄榄褐色，白喉和浅腹，胸侧较灰；眼圈很弱，宽扁的嘴下嘴偏橙黄，翼侧见浅边。停在裸露的斜枝上并转头。外形不能独自可靠区分柳纹霸鹟与桤木纹霸鹟。"
+        },
+        {
+          "start": 76.8,
+          "end": 77.1,
+          "description": "76.8–76.95秒头仰起、嘴张开，77.1秒闭嘴；80.9–81.05秒再见张嘴，81.2秒闭合。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 76.7,
+          "end": 77.4,
+          "description": "张嘴时段附近出现起始陡峭的短促上升宽带音和后续较低音成分。约81.0、89.2和94.4秒有近似重复音型，形态、分句及淡眼圈共同倾向柳纹霸鹟。受限于无法听音，未声称亲耳辨出拟声词；与近似种的区分保留不确定性。"
+        },
+        {
+          "start": 88.4,
+          "end": 92.1,
+          "description": "保留原声，可见主要短音与背景其它细小音同时存在，并不把所有背景声归于枝上的鸟。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 72.85,
+          "end": 75.7
+        },
+        {
+          "start": 88.4,
+          "end": 92.1
+        },
+        {
+          "start": 98.4,
+          "end": 100.7
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+          "supports": "柳纹霸鹟与桤木纹霸鹟外形极近，柳纹霸鹟通常眼圈更弱；鸣唱描述为wheezy fitz-bew；从停栖处飞出捕虫是一般觅食方式。旁白明确片中主要是停栖，未说拍到了捕虫。"
+        },
+        {
+          "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+          "supports": "近似种桤木纹霸鹟也有灰绿上体、白喉和较大嘴，可靠区分依赖声音，其歌声描述与柳纹霸鹟不同；因此降低仅凭画面判断的置信度。"
+        }
+      ],
+      "segment": 3,
+      "start": 72.8,
+      "end": 100.766667,
+      "narration": [
+        {
+          "start": 76.103208,
+          "end": 79.813291,
+          "text": "我把它暂定为柳纹霸鹟，浅眼圈并不醒目。"
+        },
+        {
+          "start": 83.103208,
+          "end": 87.611166,
+          "text": "它停在裸枝上，时而张嘴，短促的鸣唱分句出现。"
+        },
+        {
+          "start": 92.603208,
+          "end": 97.377125,
+          "text": "这类小鸟常从枝头出击捕虫，片中主要是在停栖。"
+        }
+      ]
+    },
+    {
+      "chinese_name": "长嘴沼泽鹪鹩（暂定）",
+      "english_name": "Marsh Wren",
+      "scientific_name": "Cistothorus palustris",
+      "confidence": 76,
+      "visual_evidence": [
+        {
+          "start": 105.7,
+          "end": 113.5,
+          "description": "小鸟在竖直的密集苇茎后方，身体大部被挡，摄影焦点经常落在前景苇茎，无法精确判断足部抓握和背纹。"
+        },
+        {
+          "start": 114.5,
+          "end": 123.7,
+          "description": "右半部偶露头脸，头顶较暗，有浅色眉线，侧脸和喉较浅，上体偏暖褐。密集苇丛、深色头顶与浅眉及复杂鸣声共同支持暂定长嘴沼泽鹪鹩，但不虚构看清整个鸟体。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 105,
+          "end": 117.7,
+          "description": "声谱约2–7千赫有密集变调、快速脉冲与短句交替；是复杂的鸣唱型声段，而非单一长哨音。嘴被挡且不清晰，无法逐声对到画中个体，也不宣称捕捉到警戒或求偶原因。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 100.85,
+          "end": 103.8
+        },
+        {
+          "start": 115.7,
+          "end": 117.7
+        }
+      ],
+      "sources": [],
+      "segment": 4,
+      "start": 100.766667,
+      "end": 123.966667,
+      "narration": [
+        {
+          "start": 104.20320799999999,
+          "end": 108.11279099999999,
+          "text": "芦苇间这只小鸟，暂定为长嘴沼泽鹪鹩。"
+        },
+        {
+          "start": 111.103208,
+          "end": 114.613832,
+          "text": "浅色眉纹和较深的头顶，时隐时现。"
+        },
+        {
+          "start": 118.103208,
+          "end": 122.039374,
+          "text": "急促的鸣唱不断换句，但嘴部始终看不清。"
+        }
+      ]
+    },
+    {
+      "chinese_name": "黑脚信天翁",
+      "english_name": "Black-footed Albatross",
+      "scientific_name": "Phoebastria nigripes",
+      "confidence": 99,
+      "visual_evidence": [
+        {
+          "start": 124,
+          "end": 136.6,
+          "description": "前景雏鸟披褐色蓬松绒羽，嘴粗长、末端钩曲，反复张嘴。单凭幼鸟的绒羽色不足以和其它信天翁区分。"
+        },
+        {
+          "start": 138.7,
+          "end": 153.8,
+          "description": "近旁成鸟全身深褐，嘴基周围偏白，嘴钩明显；可据成鸟羽色识别黑脚信天翁。成鸟与雏鸟嘴对嘴接触，雏鸟把嘴伸向成鸟口部，是接受喂食的可见动作。未判断成鸟性别或食物种类。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 124.3,
+          "end": 135.8,
+          "description": "约3–5千赫有短小的调频声与谐波；135秒附近有更密集的瞬态。雏鸟张嘴和背景鸟群同时存在，无法把每个短声单独分配。"
+        },
+        {
+          "start": 145.4,
+          "end": 151,
+          "description": "保留喂食接触附近的现场声，有背景窄带短声与轻微宽带声音；不把未分离的声音当作成鸟反刍声或某种食物的声音。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 124.1,
+          "end": 127.7
+        },
+        {
+          "start": 145.4,
+          "end": 151
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.fws.gov/species/black-footed-albatross-phoebastria-nigripes",
+          "supports": "黑脚信天翁成鸟大部深褐，嘴基与眼下有白色，嘴大；英文和学名对应。以成鸟特征辅助确认雏鸟所在场景的物种。"
+        }
+      ],
+      "segment": 5,
+      "start": 123.966667,
+      "end": 158.466667,
+      "narration": [
+        {
+          "start": 128.103208,
+          "end": 133.505332,
+          "text": "这是黑脚信天翁。蓬松的褐色绒羽，说明它还是雏鸟。"
+        },
+        {
+          "start": 139.103208,
+          "end": 144.315957,
+          "text": "成鸟靠近后，雏鸟把嘴伸向成鸟的嘴边，接受喂食。"
+        },
+        {
+          "start": 151.603208,
+          "end": 155.579249,
+          "text": "短促的叫声夹在背景里，未必都来自这一对。"
+        }
+      ]
+    },
+    {
+      "chinese_name": "黑背信天翁",
+      "english_name": "Laysan Albatross",
+      "scientific_name": "Phoebastria immutabilis",
+      "confidence": 99,
+      "visual_evidence": [
+        {
+          "start": 158.6,
+          "end": 166.5,
+          "description": "成鸟头颈与腹部白色，背翼深色，眼周有深色斑影；嘴浅色带钩端。两只面对面，一方低头、另一方张嘴。"
+        },
+        {
+          "start": 168,
+          "end": 180.5,
+          "description": "双鸟交替低头、仰头、凑嘴与振翼；175–178秒面对面长嘴接近，属于信天翁求偶展示动作组合。不能仅由这些动作确定雌雄，也不能确认已配成固定伴侣。"
+        }
+      ],
+      "audio_evidence": [
+        {
+          "start": 161,
+          "end": 172.8,
+          "description": "声谱中低频有带谐波的较长叫声，夹有短促宽带脉冲串；随双鸟互动，具有叫声和快速敲嘴类声音交织的证据。周围为群落，不能把全段每个音都分配给这两只。"
+        },
+        {
+          "start": 174.7,
+          "end": 183.9,
+          "description": "仰头和凑嘴动作附近仍有谐波叫声、短促节律及宽带瞬态。敲嘴声音为结合动作和脉冲形态的类型判断，未亲耳监听，也不把其说成发声器官产生的鸟鸣。"
+        }
+      ],
+      "original_sound_windows": [
+        {
+          "start": 158.6,
+          "end": 161.7
+        },
+        {
+          "start": 168.1,
+          "end": 174.0
+        },
+        {
+          "start": 180.3,
+          "end": 181.7,
+          "additional_short_window": true
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.fws.gov/species/laysan-albatross-phoebastria-immutabilis",
+          "supports": "Laysan Albatross与Phoebastria immutabilis的名称对应。此页未提供详细行为正文，动作描述来自本地画面，不借此页声称读到求偶行为细节。"
+        }
+      ],
+      "segment": 6,
+      "start": 158.466667,
+      "end": 185.466667,
+      "narration": [
+        {
+          "start": 162.103208,
+          "end": 167.063333,
+          "text": "这是黑背信天翁，白色头颈与深色背翼对比鲜明。"
+        },
+        {
+          "start": 174.603208,
+          "end": 179.297374,
+          "text": "它们面对面点头、仰头、碰嘴，展示求偶的舞步。"
+        },
+        {
+          "start": 182.103208,
+          "end": 183.978208,
+          "text": "短叫和敲嘴声交织。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "updated_unix": 1795078381.1999056,
+  "scope": "Formal birds run only; preflight excluded",
+  "semantics": "Successful response means gateway approved a 2xx response before writing it; not proof the model read or used it. Redirects, failed requests and blocked source responses are counted separately.",
+  "domains": {
+    "ebird.org": {
+      "attempt": 4,
+      "successful_response": 4
+    },
+    "wikipedia.org": {
+      "attempt": 3,
+      "blocked_or_failed": 3
+    }
+  },
+  "records": [
+    {
+      "utc": 1795077330.6801128,
+      "action": "http_request",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Eurasian_reed_warbler",
+      "method": "GET",
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077330.7451477,
+      "action": "http_request",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Cetti%27s_warbler",
+      "method": "GET",
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077330.7693083,
+      "action": "http_request",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Common_nightingale",
+      "method": "GET",
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077345.6998389,
+      "action": "inspection_failed_closed",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Eurasian_reed_warbler",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='en.wikipedia.org', port=443): Max retries exceeded with url: /wiki/Eurasian_reed_warbler (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7b6abd9b39e0>, 'Connection to en.wikipedia.org timed out",
+      "delivered_bytes": 0,
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "blocked_or_failed"
+    },
+    {
+      "utc": 1795077345.7649052,
+      "action": "inspection_failed_closed",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Cetti%27s_warbler",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='en.wikipedia.org', port=443): Max retries exceeded with url: /wiki/Cetti%27s_warbler (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7b6abd9d4890>, 'Connection to en.wikipedia.org timed out. (c",
+      "delivered_bytes": 0,
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "blocked_or_failed"
+    },
+    {
+      "utc": 1795077345.7894602,
+      "action": "inspection_failed_closed",
+      "host": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Common_nightingale",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='en.wikipedia.org', port=443): Max retries exceeded with url: /wiki/Common_nightingale (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7b6abd9d4e30>, 'Connection to en.wikipedia.org timed out. (",
+      "delivered_bytes": 0,
+      "originally_blocked_domain": "wikipedia.org",
+      "now_permitted_domain": true,
+      "category": "blocked_or_failed"
+    },
+    {
+      "utc": 1795077398.4888146,
+      "action": "http_request",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/cetwar1",
+      "method": "GET",
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077399.7459524,
+      "action": "http_response_inspected",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/cetwar1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8901,
+      "sha256": "4b5c432ab00afa63b0ae4346344a44eafa671454347531091648185dfa36f6f4",
+      "location": null,
+      "audio_check": null,
+      "blocked": false,
+      "reason": null,
+      "delivered_bytes": 8901,
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "successful_response"
+    },
+    {
+      "utc": 1795077399.9608157,
+      "action": "http_request",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/eurwar1",
+      "method": "GET",
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077401.2247212,
+      "action": "http_response_inspected",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/eurwar1",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8907,
+      "sha256": "3c3b636266e94ebfdb386338e796da6b97fd5bf6c8ce0c6d4955ed0a7c60de74",
+      "location": null,
+      "audio_check": null,
+      "blocked": false,
+      "reason": null,
+      "delivered_bytes": 8907,
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "successful_response"
+    },
+    {
+      "utc": 1795077401.3854077,
+      "action": "http_request",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/bkfalb",
+      "method": "GET",
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077402.6313074,
+      "action": "http_response_inspected",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/bkfalb",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8625,
+      "sha256": "57fe79deb547ec7068398180e1d542b48a1c311324f940037f433053458836c1",
+      "location": null,
+      "audio_check": null,
+      "blocked": false,
+      "reason": null,
+      "delivered_bytes": 8625,
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "successful_response"
+    },
+    {
+      "utc": 1795077402.7262454,
+      "action": "http_request",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/layalb",
+      "method": "GET",
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "attempt"
+    },
+    {
+      "utc": 1795077403.9684246,
+      "action": "http_response_inspected",
+      "host": "ebird.org",
+      "url": "https://ebird.org/species/layalb",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8734,
+      "sha256": "a1c38e4922bab24a4e4937226c305bd0b211a4fc304267bf3da960377e07e294",
+      "location": null,
+      "audio_check": null,
+      "blocked": false,
+      "reason": null,
+      "delivered_bytes": 8734,
+      "originally_blocked_domain": "ebird.org",
+      "now_permitted_domain": true,
+      "category": "successful_response"
+    }
+  ]
+}

@@ -1,0 +1,760 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "harness": "Codex 0.163.0",
+  "limit_seconds": null,
+  "time_limit_enforced": false,
+  "elapsed_seconds": 1044.6576128005981,
+  "timed_out": false,
+  "returned_models": [
+    "gpt-6.1-sol"
+  ],
+  "model_verified": true,
+  "all_requests_high": true,
+  "api_requests": 35,
+  "api_failures": [],
+  "api_error_seconds": 0,
+  "normal_codex_exit": true,
+  "infrastructure_interrupted": false,
+  "submission_matches_sealed": true,
+  "frozen_files_unchanged": true,
+  "blacklist_actual_accesses": [],
+  "successful_connected_domains": [
+    "api.github.com",
+    "ebird.org",
+    "files.pythonhosted.org",
+    "pypi.org",
+    "raw.githubusercontent.com",
+    "speech.platform.bing.com",
+    "www.audubon.org",
+    "www.rspb.org.uk"
+  ],
+  "isolation_checks": [
+    {
+      "input_readable": true,
+      "input_readonly": true,
+      "submission_writable": true,
+      "host_paths_hidden": true,
+      "credential_absent": true,
+      "network_blocked": true,
+      "visible_process_count": 2,
+      "pid_namespace_small": true
+    }
+  ],
+  "audio_capacity": "Codex仅命令与图片工具；输入鸟声分析方法以模型实际操作为准。Judge独立获得实际音频。",
+  "tts_condition": "No preset TTS helper, package, service or voice. Solver chooses and implements without a total time limit.",
+  "network_includes_runtime_background_connections": true,
+  "network_audit_limit": "Research HTTP/HTTPS: exact URLs, response status, hashes and content guard decisions recorded; speech/package infrastructure remains encrypted passthrough. Unknown derivatives, heavily transformed and sub-two-second excerpts are not fully excluded.",
+  "segments": [
+    {
+      "segment": 1,
+      "answer": {
+        "chinese_name": "宽尾树莺",
+        "english_name": "Cetti's Warbler",
+        "scientific_name": "Cettia cetti",
+        "confidence": 90,
+        "visual_evidence": [
+          {
+            "start": 0.3,
+            "end": 44.5,
+            "description": "近景鸟由手指托持；上体暖棕褐，喉部灰白，眼上有弱浅色纹，嘴细长，翅短而圆，尾宽而有明显层次。所抽取各时点外观几乎不变，未见张嘴发声，不把音轨当作手中个体的同步鸣叫。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 0.5,
+            "end": 4.8,
+            "description": "原始PCM声谱可见约每0.5至0.6秒一个的强短音，约2.5至3千赫的能量团及较高谐波；属反复的短叫声结构。未直接听音，无法确认与静态近景个体的对应。"
+          },
+          {
+            "start": 17.6,
+            "end": 24.8,
+            "description": "约5.5至7千赫出现另一组密集重复音节，与前面较低短音形成明显结构变化。保守称成串高音，不把所有声源都定位为宽尾树莺。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 0.2,
+            "end": 5.0
+          },
+          {
+            "start": 17.0,
+            "end": 24.5
+          },
+          {
+            "start": 32.4,
+            "end": 35.5
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+            "supports": "独立图鉴文字：体型较敦实、短翅、丰满圆尾，常隐于灌丛和高草，鸣唱为响亮的爆发短句；帮助外形判断与一般习性介绍，不用于声源定位。"
+          }
+        ],
+        "segment": 1,
+        "start": 0,
+        "end": 46.066667,
+        "narration": [
+          {
+            "start": 5.2,
+            "end": 11.752,
+            "text": "这是宽尾树莺。背部棕褐，喉部偏白，翅短，尾巴宽圆。"
+          },
+          {
+            "start": 25.0,
+            "end": 31.984,
+            "text": "它常藏在浓密的植被里。这里的近景中，并没有看见它张嘴鸣叫。"
+          },
+          {
+            "start": 35.8,
+            "end": 44.032,
+            "text": "原声中，重复的短音与成串的高音交替出现，但不能认定都来自画面中的个体。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+          "supports": "独立图鉴文字：体型较敦实、短翅、丰满圆尾，常隐于灌丛和高草，鸣唱为响亮的爆发短句；帮助外形判断与一般习性介绍，不用于声源定位。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "84a193204dda0379c602a6aefd439cfe85322e059ee17bd87ccd9bd6257972df"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 0.3,
+          "end": 44.5,
+          "timestamp_within_chapter": true,
+          "description": "近景鸟由手指托持；上体暖棕褐，喉部灰白，眼上有弱浅色纹，嘴细长，翅短而圆，尾宽而有明显层次。所抽取各时点外观几乎不变，未见张嘴发声，不把音轨当作手中个体的同步鸣叫。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 0.5,
+          "end": 4.8,
+          "timestamp_within_chapter": true,
+          "description": "原始PCM声谱可见约每0.5至0.6秒一个的强短音，约2.5至3千赫的能量团及较高谐波；属反复的短叫声结构。未直接听音，无法确认与静态近景个体的对应。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 17.6,
+          "end": 24.8,
+          "timestamp_within_chapter": true,
+          "description": "约5.5至7千赫出现另一组密集重复音节，与前面较低短音形成明显结构变化。保守称成串高音，不把所有声源都定位为宽尾树莺。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "answer": {
+        "chinese_name": "宽尾树莺（暂定）",
+        "english_name": "Cetti's Warbler (tentative)",
+        "scientific_name": "Cettia cetti",
+        "confidence": 78,
+        "visual_evidence": [
+          {
+            "start": 46.2,
+            "end": 72.5,
+            "description": "镜头主要为浓密灌丛、交错细枝与草叶；未能稳定辨清鸟体或辨种外形，因此该章主要依据音节结构作单一暂定判断。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 46.35,
+            "end": 49.5,
+            "description": "声谱呈数个间隔较开的短音后接一串上扬、重复的密集音节。其爆发短句结构支持宽尾树莺的暂定判断，但没有可见发声个体可供确认。"
+          },
+          {
+            "start": 52.2,
+            "end": 59.4,
+            "description": "较强短音连续重复后停止；原声中还叠加较细的频率线和环境底声，不能将整段所有声音认作同一只鸟。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 46.3,
+            "end": 50.0
+          },
+          {
+            "start": 55.3,
+            "end": 61.2
+          },
+          {
+            "start": 70.1,
+            "end": 72.5
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+            "supports": "独立图鉴对隐蔽于灌丛的习性和爆发式响亮鸣唱的文字介绍；不构成隐蔽个体的外形确认。"
+          }
+        ],
+        "segment": 2,
+        "start": 46.066667,
+        "end": 72.8,
+        "narration": [
+          {
+            "start": 50.2,
+            "end": 54.952,
+            "text": "灌丛里这串突出的鸣唱，也暂定为宽尾树莺。"
+          },
+          {
+            "start": 61.5,
+            "end": 69.708,
+            "text": "几个短音接着密集重复，随后停顿。鸟藏在枝叶后，画面没有给出清楚的外形。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler",
+          "supports": "独立图鉴对隐蔽于灌丛的习性和爆发式响亮鸣唱的文字介绍；不构成隐蔽个体的外形确认。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "84a193204dda0379c602a6aefd439cfe85322e059ee17bd87ccd9bd6257972df"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 46.2,
+          "end": 72.5,
+          "timestamp_within_chapter": true,
+          "description": "镜头主要为浓密灌丛、交错细枝与草叶；未能稳定辨清鸟体或辨种外形，因此该章主要依据音节结构作单一暂定判断。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 46.35,
+          "end": 49.5,
+          "timestamp_within_chapter": true,
+          "description": "声谱呈数个间隔较开的短音后接一串上扬、重复的密集音节。其爆发短句结构支持宽尾树莺的暂定判断，但没有可见发声个体可供确认。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 52.2,
+          "end": 59.4,
+          "timestamp_within_chapter": true,
+          "description": "较强短音连续重复后停止；原声中还叠加较细的频率线和环境底声，不能将整段所有声音认作同一只鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 3,
+      "answer": {
+        "chinese_name": "柳纹霸鹟（暂定）",
+        "english_name": "Willow Flycatcher (tentative)",
+        "scientific_name": "Empidonax traillii",
+        "confidence": 85,
+        "visual_evidence": [
+          {
+            "start": 74.0,
+            "end": 98.8,
+            "description": "小型鸟停在裸露斜枝上，头背灰褐略带橄榄色，喉白、腹浅，翼上淡色条纹，眼圈细弱，嘴基较宽，下嘴偏浅；尾下垂，反复转头。"
+          },
+          {
+            "start": 76.6,
+            "end": 77.3,
+            "description": "逐帧核对76.95秒可见抬嘴张口，随后合拢，与同段短歌时间邻近；80.9秒附近也见张口动作。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 76.85,
+            "end": 77.35,
+            "description": "局部STFT显示一个较粗糙的短起音，后接约2.6至4.8千赫先升后落的弧形音节，组成紧凑两段式短歌。80.9至81.4秒等处重复近似结构，支持柳纹霸鹟的fitz-bew型歌；相似纹霸鹟外形难分，故仍暂定。"
+          },
+          {
+            "start": 88.8,
+            "end": 90.1,
+            "description": "无旁白窗口中保留另一相似短歌，背景还有细弱其他频率轨迹；不把背景所有音节都归为主体鸟。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 73.0,
+            "end": 77.9
+          },
+          {
+            "start": 86.6,
+            "end": 91.7
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+            "supports": "柳纹霸鹟与桤木纹霸鹟外形极近似，眼圈往往更弱，辨别主要靠声音；柳纹歌为fitz-bew。"
+          },
+          {
+            "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+            "supports": "独立相似种对比：桤木纹霸鹟歌声为fee-bee-o，外形不足以安全区分；据此保留暂定措辞。"
+          }
+        ],
+        "segment": 3,
+        "start": 72.8,
+        "end": 100.766667,
+        "narration": [
+          {
+            "start": 78.1,
+            "end": 86.164,
+            "text": "枝头这只，暂定为柳纹霸鹟。留意浅色喉部、淡淡的翼斑，还有细细的眼圈。"
+          },
+          {
+            "start": 92.0,
+            "end": 99.92,
+            "text": "它不时转头、张嘴。短促的两段式鸣唱，比相似的外形更有辨识价值。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/willow-flycatcher",
+          "supports": "柳纹霸鹟与桤木纹霸鹟外形极近似，眼圈往往更弱，辨别主要靠声音；柳纹歌为fitz-bew。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "b3c26a9320111e1cf1342c6676405fb8d131853d297b1488889b24102e688efd"
+          ]
+        },
+        {
+          "url": "https://www.audubon.org/field-guide/bird/alder-flycatcher",
+          "supports": "独立相似种对比：桤木纹霸鹟歌声为fee-bee-o，外形不足以安全区分；据此保留暂定措辞。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "5ffb7abf7ddef7d7bd5e384b495d3d21db7ef2b59ca5404dbc259e9a3b77ecd1"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 74.0,
+          "end": 98.8,
+          "timestamp_within_chapter": true,
+          "description": "小型鸟停在裸露斜枝上，头背灰褐略带橄榄色，喉白、腹浅，翼上淡色条纹，眼圈细弱，嘴基较宽，下嘴偏浅；尾下垂，反复转头。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 76.6,
+          "end": 77.3,
+          "timestamp_within_chapter": true,
+          "description": "逐帧核对76.95秒可见抬嘴张口，随后合拢，与同段短歌时间邻近；80.9秒附近也见张口动作。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 76.85,
+          "end": 77.35,
+          "timestamp_within_chapter": true,
+          "description": "局部STFT显示一个较粗糙的短起音，后接约2.6至4.8千赫先升后落的弧形音节，组成紧凑两段式短歌。80.9至81.4秒等处重复近似结构，支持柳纹霸鹟的fitz-bew型歌；相似纹霸鹟外形难分，故仍暂定。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 88.8,
+          "end": 90.1,
+          "timestamp_within_chapter": true,
+          "description": "无旁白窗口中保留另一相似短歌，背景还有细弱其他频率轨迹；不把背景所有音节都归为主体鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 4,
+      "answer": {
+        "chinese_name": "芦苇莺（暂定）",
+        "english_name": "Eurasian Reed Warbler (tentative)",
+        "scientific_name": "Acrocephalus scirpaceus",
+        "confidence": 61,
+        "visual_evidence": [
+          {
+            "start": 100.95,
+            "end": 123.7,
+            "description": "前景为密集直立芦苇和叶片，焦点、遮挡使鸟体无法可靠解析；没有据此声称看见捕食、筑巢或清楚的种级羽色。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 101.2,
+            "end": 112.9,
+            "description": "原始音轨总体较轻；提高显示动态范围后，声谱可见约2至7千赫的多种短音、弯曲扫频及粗糙音群，连成变化较多的鸣唱。苇丛场景与持续多变短语支持暂定芦苇莺，无法排除近似种。"
+          },
+          {
+            "start": 120.0,
+            "end": 123.7,
+            "description": "后段仍有短音群及扫频音节，保留为无旁白原声窗口。鸟被遮挡，具体发声位置不能确认。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 100.95,
+            "end": 104.8
+          },
+          {
+            "start": 113.1,
+            "end": 115.35
+          },
+          {
+            "start": 120.0,
+            "end": 123.75
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+            "supports": "独立物种名Acrocephalus scirpaceus和无纵纹、上体暖棕下体米色等一般描述；因片中遮挡，未将这些参考羽色描述冒充已观察事实。"
+          }
+        ],
+        "segment": 4,
+        "start": 100.766667,
+        "end": 123.966667,
+        "narration": [
+          {
+            "start": 105.0,
+            "end": 112.704,
+            "text": "这里暂定为芦苇莺。它常在苇丛中活动，但这次，鸟体被叶片挡住了。"
+          },
+          {
+            "start": 115.6,
+            "end": 119.656,
+            "text": "连续变化的鸣唱，是主要的辨认线索。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.rspb.org.uk/birds-and-wildlife/reed-warbler",
+          "supports": "独立物种名Acrocephalus scirpaceus和无纵纹、上体暖棕下体米色等一般描述；因片中遮挡，未将这些参考羽色描述冒充已观察事实。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "e9aae74255ff9576052ca8903c76af4a31ef07d22b6299600499dd92afd929a7"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 100.95,
+          "end": 123.7,
+          "timestamp_within_chapter": true,
+          "description": "前景为密集直立芦苇和叶片，焦点、遮挡使鸟体无法可靠解析；没有据此声称看见捕食、筑巢或清楚的种级羽色。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 101.2,
+          "end": 112.9,
+          "timestamp_within_chapter": true,
+          "description": "原始音轨总体较轻；提高显示动态范围后，声谱可见约2至7千赫的多种短音、弯曲扫频及粗糙音群，连成变化较多的鸣唱。苇丛场景与持续多变短语支持暂定芦苇莺，无法排除近似种。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 120.0,
+          "end": 123.7,
+          "timestamp_within_chapter": true,
+          "description": "后段仍有短音群及扫频音节，保留为无旁白原声窗口。鸟被遮挡，具体发声位置不能确认。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 5,
+      "answer": {
+        "chinese_name": "黑脚信天翁",
+        "english_name": "Black-footed Albatross",
+        "scientific_name": "Phoebastria nigripes",
+        "confidence": 98,
+        "visual_evidence": [
+          {
+            "start": 124.2,
+            "end": 131.9,
+            "description": "褐色绒羽雏鸟坐在地面，伸颈张嘴，嘴端弯钩可见。"
+          },
+          {
+            "start": 132.2,
+            "end": 145.5,
+            "description": "旁边出现通体暗褐的成鸟，嘴为暗灰，嘴基和眼下附近颜色略浅；符合黑脚信天翁外形。"
+          },
+          {
+            "start": 146.0,
+            "end": 157.8,
+            "description": "成鸟俯身，嘴与雏鸟张开的嘴相接、伸入，符合喂雏过程；未见可辨认的具体食物，不指认食物种类。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 124.3,
+            "end": 136.7,
+            "description": "低幅原声经增益后，声谱显示多次约3至5千赫较细的上扬、下落叫声轨迹，间有短促宽频信号；雏鸟同段多次张口，但群落背景存在其他鸟，无法逐一断言每声都来自此雏鸟。"
+          },
+          {
+            "start": 146.5,
+            "end": 150.8,
+            "description": "嘴部接触过程保留无旁白窗口，原有细弱叫声与环境声仍在原时间位置。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 124.2,
+            "end": 128.1
+          },
+          {
+            "start": 146.6,
+            "end": 150.8
+          },
+          {
+            "start": 155.9,
+            "end": 158.25
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+            "supports": "成鸟暗褐、暗嘴暗足、嘴基带白；双亲反刍喂雏；繁殖地会有多种鸣叫与喙部敲击声。片中具体食物和逐声归属未据参考推定。"
+          }
+        ],
+        "segment": 5,
+        "start": 123.966667,
+        "end": 158.466667,
+        "narration": [
+          {
+            "start": 128.3,
+            "end": 136.388,
+            "text": "黑脚信天翁的雏鸟，披着褐色绒羽，张着嘴。原声中有接连的尖细叫声。"
+          },
+          {
+            "start": 139.0,
+            "end": 146.2,
+            "text": "成鸟也是暗褐色，嘴基周围略浅。现在，它正低头靠近雏鸟。"
+          },
+          {
+            "start": 151.0,
+            "end": 155.56,
+            "text": "嘴部接触符合喂雏行为，但看不清食物。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/black-footed-albatross",
+          "supports": "成鸟暗褐、暗嘴暗足、嘴基带白；双亲反刍喂雏；繁殖地会有多种鸣叫与喙部敲击声。片中具体食物和逐声归属未据参考推定。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "45111a39c3724dfe9246e3654b7350441e748d2e809630dcd1e02733cac5a345"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 124.2,
+          "end": 131.9,
+          "timestamp_within_chapter": true,
+          "description": "褐色绒羽雏鸟坐在地面，伸颈张嘴，嘴端弯钩可见。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 132.2,
+          "end": 145.5,
+          "timestamp_within_chapter": true,
+          "description": "旁边出现通体暗褐的成鸟，嘴为暗灰，嘴基和眼下附近颜色略浅；符合黑脚信天翁外形。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 146.0,
+          "end": 157.8,
+          "timestamp_within_chapter": true,
+          "description": "成鸟俯身，嘴与雏鸟张开的嘴相接、伸入，符合喂雏过程；未见可辨认的具体食物，不指认食物种类。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 124.3,
+          "end": 136.7,
+          "timestamp_within_chapter": true,
+          "description": "低幅原声经增益后，声谱显示多次约3至5千赫较细的上扬、下落叫声轨迹，间有短促宽频信号；雏鸟同段多次张口，但群落背景存在其他鸟，无法逐一断言每声都来自此雏鸟。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 146.5,
+          "end": 150.8,
+          "timestamp_within_chapter": true,
+          "description": "嘴部接触过程保留无旁白窗口，原有细弱叫声与环境声仍在原时间位置。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    },
+    {
+      "segment": 6,
+      "answer": {
+        "chinese_name": "黑背信天翁",
+        "english_name": "Laysan Albatross",
+        "scientific_name": "Phoebastria immutabilis",
+        "confidence": 99,
+        "visual_evidence": [
+          {
+            "start": 158.7,
+            "end": 170.2,
+            "description": "前景成鸟头、颈、腹白，背部和上翼深色，眼周深色，嘴浅而端部带钩；两鸟面对面，伸颈、低头并快速转动头部。"
+          },
+          {
+            "start": 173.0,
+            "end": 184.8,
+            "description": "两鸟交替仰头举嘴，靠近彼此嘴部并点动；背景为多只成鸟和绒羽雏鸟，符合繁殖群中仪式化求偶展示，而非据此判断性别或配对成功。"
+          }
+        ],
+        "audio_evidence": [
+          {
+            "start": 158.8,
+            "end": 164.0,
+            "description": "声谱可见持续谐波带与短促宽频脉冲交替，体现较长叫声与短促敲击类声音；与画面开嘴、伸颈和快速喙动作同段出现，支持旁白对鸣叫及喙击声的描述。"
+          },
+          {
+            "start": 170.6,
+            "end": 174.1,
+            "description": "原声窗口内仍有周期性音与脉冲；群落里有多只鸟，不能逐声确认由前景哪只发出。未亲耳核听。"
+          }
+        ],
+        "original_sound_windows": [
+          {
+            "start": 158.7,
+            "end": 164.0
+          },
+          {
+            "start": 170.6,
+            "end": 174.1
+          },
+          {
+            "start": 182.0,
+            "end": 185.3
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+            "supports": "背、上翼暗色，身体主要白色；复杂求偶舞含低头、摆头和举嘴向上等仪式动作。说明行为类型，不推断个体性别或繁殖结果。"
+          }
+        ],
+        "segment": 6,
+        "start": 158.466667,
+        "end": 185.466667,
+        "narration": [
+          {
+            "start": 164.2,
+            "end": 170.176,
+            "text": "这是黑背信天翁，白色的头颈与深色背翅，对比鲜明。"
+          },
+          {
+            "start": 174.3,
+            "end": 181.62,
+            "text": "伸颈、仰头、相互点嘴，伴着叫声和喙击声，这是它们的求偶展示。"
+          }
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://www.audubon.org/field-guide/bird/laysan-albatross",
+          "supports": "背、上翼暗色，身体主要白色；复杂求偶舞含低头、摆头和举嘴向上等仪式动作。说明行为类型，不推断个体性别或繁殖结果。",
+          "domain_connection_verified": true,
+          "verified_successful_body_fetch": true,
+          "content_support": "not_independently_verified",
+          "verification_note": "Exact URL delivered response verified",
+          "archive": null,
+          "response_sha256": [
+            "c110111ac4cb544b0d4cd05ae2d53995a266494d5ab9499f82a563d5b15432d6"
+          ]
+        }
+      ],
+      "evidence_timestamp_checks": [
+        {
+          "modality": "visual_evidence",
+          "start": 158.7,
+          "end": 170.2,
+          "timestamp_within_chapter": true,
+          "description": "前景成鸟头、颈、腹白，背部和上翼深色，眼周深色，嘴浅而端部带钩；两鸟面对面，伸颈、低头并快速转动头部。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "visual_evidence",
+          "start": 173.0,
+          "end": 184.8,
+          "timestamp_within_chapter": true,
+          "description": "两鸟交替仰头举嘴，靠近彼此嘴部并点动；背景为多只成鸟和绒羽雏鸟，符合繁殖群中仪式化求偶展示，而非据此判断性别或配对成功。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 158.8,
+          "end": 164.0,
+          "timestamp_within_chapter": true,
+          "description": "声谱可见持续谐波带与短促宽频脉冲交替，体现较长叫声与短促敲击类声音；与画面开嘴、伸颈和快速喙动作同段出现，支持旁白对鸣叫及喙击声的描述。",
+          "note": "时间合法不证明所述内容正确。"
+        },
+        {
+          "modality": "audio_evidence",
+          "start": 170.6,
+          "end": 174.1,
+          "timestamp_within_chapter": true,
+          "description": "原声窗口内仍有周期性音与脉冲；群落里有多只鸟，不能逐声确认由前景哪只发出。未亲耳核听。",
+          "note": "时间合法不证明所述内容正确。"
+        }
+      ]
+    }
+  ],
+  "run_termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "birds",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1795078244.2561648,
+    "elapsed_seconds": 1044.6576128005981
+  },
+  "source_guard": {
+    "blocked_responses": [],
+    "delivered_research_responses": 13,
+    "known_material_delivered": false,
+    "inspection_failures": 22,
+    "policy": "Research HTTPS paths and complete responses inspected before delivery; infrastructure passthrough hosts separately labelled.",
+    "post_run_source_audit_passed": null,
+    "return_log_semantics": "The gateway logs approval before writing the response body; this is not proof of full client receipt. See matching tool output."
+  }
+}

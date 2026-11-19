@@ -1,0 +1,111 @@
+{
+  "baseline": {
+    "score": 39.348,
+    "score_interval": [
+      39.348,
+      39.348
+    ],
+    "body": [
+      49.53333333333333,
+      49.53333333333333
+    ],
+    "quality": [
+      0.794375,
+      0.794375
+    ],
+    "status": "failed",
+    "correct_chapters": 3,
+    "minutes": 43.2781486749649,
+    "timed_out": false,
+    "api_failed_requests": 1,
+    "blacklist_domain_connections": 0,
+    "gates": {
+      "可播放成片": true,
+      "每章有可懂中文解说": true,
+      "每章保留真实原声": true,
+      "每章至少2秒原声窗口": true,
+      "全部章节完整且时长合规": true,
+      "四件交付有效": true
+    },
+    "model_verified": true,
+    "high_verified": true,
+    "sealed_answers_unchanged": true,
+    "frozen_files_unchanged": true,
+    "source_delivery_audit_passed": true,
+    "blocked_responses": 0
+  },
+  "attempts": [
+    {
+      "id": "sol_relaxed_1",
+      "folder": "birds-v6-relaxed-report/attempt-01",
+      "label": "Sol · high · 放宽限制第 1 次 · 不限时",
+      "score": 25.8611,
+      "score_interval": [
+        25.8611,
+        25.8611
+      ],
+      "body": [
+        33.333333333333336,
+        33.333333333333336
+      ],
+      "quality": [
+        0.7758333333333334,
+        0.7758333333333334
+      ],
+      "correct_chapters": 2,
+      "minutes": 17.4109602133433,
+      "timed_out": false,
+      "gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": true,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "api_requests": 35,
+      "model_verified": true,
+      "high_verified": true
+    },
+    {
+      "id": "sol_relaxed_2",
+      "folder": "birds-v6-relaxed-report/attempt-02",
+      "label": "Sol · high · 放宽限制第 2 次 · 不限时",
+      "score": 26.9847,
+      "score_interval": [
+        26.9847,
+        26.9847
+      ],
+      "body": [
+        33.333333333333336,
+        33.333333333333336
+      ],
+      "quality": [
+        0.8095416666666666,
+        0.8095416666666666
+      ],
+      "correct_chapters": 2,
+      "minutes": 31.632059999306996,
+      "timed_out": false,
+      "gates": {
+        "可播放成片": true,
+        "每章有可懂中文解说": true,
+        "每章保留真实原声": true,
+        "每章至少2秒原声窗口": true,
+        "全部章节完整且时长合规": true,
+        "四件交付有效": true
+      },
+      "api_requests": 62,
+      "model_verified": true,
+      "high_verified": true
+    }
+  ],
+  "truth": [
+    "四川蝗莺",
+    "四川蝗莺",
+    "桤木纹霸鹟",
+    "弗吉尼亚秧鸡",
+    "黑脚信天翁",
+    "莱桑信天翁"
+  ]
+}

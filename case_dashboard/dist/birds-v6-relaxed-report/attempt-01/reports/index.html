@@ -1,0 +1,1860 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>V6 Sol high · 放宽网站限制 · 第 1 次</title><link rel="stylesheet" href="../style.css"><main><p><a href="../../reports/index.html">← 三轮对照</a> · <a href="../../../index.html#task-birds/results/v6-relaxed">返回总看板</a></p><h1>V6 Sol high · 放宽网站限制 · 第 1 次</h1><nav><a href="#film">成片</a><a href="#scores">扣分明细</a><a href="#network">联网轨迹</a><a href="#tools">运行轨迹</a><a href="#task">本轮题面</a></nav><section class="card"><div class="score">25.8611 / 100</div><p>识别 2/6 · 实际 17.41 分钟 · 不限总时长 · 全部硬性交付要求通过 · 总分不足 80，未通过。</p><p>B = 33.3333；Q = 0.775833；S = B × Q。</p></section><p class="muted">在线播放为压缩浏览副本；下载链接提供封存原件。原始哈希见 <a href="../../publication-manifest.json">发布清单</a>。</p><h2 id="film">成片与交付</h2><video controls playsinline preload="none" src="../../web-media/1290c81828d93072e885.mp4"></video><p class="links"><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-sol-relaxed-assets-20261119/1290c81828d93072e885-final.mp4">下载原始成片</a><a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/birds-v6-sol-relaxed-assets-20261119/69aa32f3e3a20cfcab5c-narration.wav">独立旁白 WAV</a><a href="../results/sol/subtitles.srt">字幕</a><a href="../results/sol/segments.json">物种与证据 JSON</a></p><h2 id="scores">逐章识别与扣分依据</h2><p>六章等权；物种必须在实际旁白中说对。说错物种，该章内容分为 0；下列评语来自冻结评分器的实际音视频评审。</p><div class="scroll"><table><thead><tr><th>章节</th><th>正确物种</th><th>模型答案</th><th>判定</th><th>内容分</th><th>识别判据</th></tr></thead><tbody><tr><td><button data-seek="0">第 1 章 ▶</button></td><td>四川蝗莺</td><td>宽尾树莺</td><td>✗ 错误</td><td>0.0000 / 16.6667</td><td>在音频00:05.28处，旁白明确说出“这是宽尾树莺”，与真值“四川蝗莺”不符，属于物种识别错误。</td></tr><tr><td><button data-seek="46.066667">第 2 章 ▶</button></td><td>四川蝗莺</td><td>宽尾树莺（暂定）</td><td>✗ 错误</td><td>0.0000 / 16.6667</td><td>在4.16-8.08秒的音频中，旁白明确说出“暂定为宽尾树莺”，与真值“四川蝗莺”不符。</td></tr><tr><td><button data-seek="72.8">第 3 章 ▶</button></td><td>桤木纹霸鹟</td><td>柳纹霸鹟（暂定）</td><td>✗ 错误</td><td>0.0000 / 16.6667</td><td>在00:05-00:07的音频中，旁白明确说出“暂定为柳纹霸鹟”，与真值“桤木纹霸鹟”不符，属于枚举了错误的物种名称。</td></tr><tr><td><button data-seek="100.766667">第 4 章 ▶</button></td><td>弗吉尼亚秧鸡</td><td>芦苇莺（暂定）</td><td>✗ 错误</td><td>0.0000 / 16.6667</td><td>在音频4.32秒至6.08秒处，旁白明确说出“这里暂定为芦苇莺”，与真值“弗吉尼亚秧鸡”不符。</td></tr><tr><td><button data-seek="123.966667">第 5 章 ▶</button></td><td>黑脚信天翁</td><td>黑脚信天翁</td><td>✓ 正确</td><td>16.6667 / 16.6667</td><td>在00:04-00:07的旁白中，明确说出了“黑脚信天翁”，与真值完全一致。</td></tr><tr><td><button data-seek="158.466667">第 6 章 ▶</button></td><td>莱桑信天翁</td><td>黑背信天翁</td><td>✓ 正确</td><td>16.6667 / 16.6667</td><td>在00:05.68-00:07.44处，旁白明确说出“这是黑背信天翁”。“黑背信天翁”是真值中列出的合法别名，且发音清晰无歧义。</td></tr></tbody></table></div><h2>声音、原声与交付质量</h2><p>Q = 0.70H + 0.20A + 0.10D。H：自然韵律 35%、音色 25%、清晰度 25%、语速停顿 15%；A：原声保留 40%、平衡 40%、原声窗口 20%；D：画面完整 40%、字幕 30%、解说时机 20%、有效交付 10%。F/E 即使有分，识别错误章仍不获得内容分。</p><details><summary>第 1 章 · H 0.625 / A 0.900 / D 1.000 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>0.3</td><td>由于物种名称完全错误（将四川蝗莺说成宽尾树莺），导致核心事实不成立。但旁白对画面中鸟类的形态描述（背部棕褐、喉部偏白、翅短、尾巴宽圆）以及行为状态（藏在植被里、近景未见张嘴鸣叫）是准确的，且对声音归属的谨慎态度符合科学逻辑。</td><td>[{&#x27;start&#x27;: 7.12, &#x27;end&#x27;: 10.96, &#x27;text&#x27;: &#x27;背部棕褐，喉部偏白，翅短，尾巴宽圆。&#x27;}, {&#x27;start&#x27;: 25.04, &#x27;end&#x27;: 31.36, &#x27;text&#x27;: &#x27;它常藏在浓密的植被里，这里的近景中并没有看见它张嘴鸣叫。&#x27;}]</td></tr><tr><td>视听证据对应</td><td>0.9</td><td>视听证据对应程度很高。旁白准确描述了视觉画面中的鸟类特征和动作限制（未张嘴），并客观分析了背景音（重复短音与高音交替），同时明确指出不能认定声音来自画面个体，体现了严谨的证据边界意识。唯一的缺陷是物种定名错误。</td><td>[{&#x27;start&#x27;: 35.92, &#x27;end&#x27;: 43.44, &#x27;text&#x27;: &#x27;原声中重复的短音与成串的高音交替出现，但不能认定都来自画面中的个体。&#x27;}]</td></tr><tr><td>自然韵律</td><td>0.5</td><td>女声解说带有明显的AI合成感，语调平直缺乏情感起伏，句间停顿略显生硬。</td><td>[6.48, 31.2]</td></tr><tr><td>音色舒适</td><td>0.75</td><td>音色清晰稳定，无杂音或破音，但整体听感偏机械，不够自然。</td><td>[6.48, 31.2]</td></tr><tr><td>发音清晰</td><td>0.75</td><td>发音字正腔圆，清晰度很高，即使在有背景鸟鸣的情况下也能轻松听懂。</td><td>[6.48, 31.2]</td></tr><tr><td>语速停顿</td><td>0.5</td><td>语速均匀，但断句和停顿模式具有典型的机器朗读特征，缺乏人类说话的自然节奏。</td><td>[6.48, 31.2]</td></tr><tr><td>原声保留</td><td>1.0</td><td>保留了非常清晰、真实的鸟类鸣叫声（如短促的唧唧声和高频颤音），环境音细节丰富。</td><td>[0.0, 6.48, 31.2, 45.0]</td></tr><tr><td>混音平衡</td><td>0.75</td><td>人声与背景鸟鸣的音量比例基本合适，人声突出，但在某些高频鸟鸣出现时略有竞争感。</td><td>[6.48, 31.2]</td></tr><tr><td>字幕</td><td>1.0</td><td>字幕已实际烧录，位于画面下方黑边区域，清晰可读且未遮挡鸟类主体。字幕内容与独立转写完全一致，时间戳与语音片段高度吻合（如5.3s开始显示“这是宽尾树莺。”）。</td><td>[{&#x27;start&#x27;: 5.3, &#x27;end&#x27;: 7.226, &#x27;text&#x27;: &#x27;这是宽尾树莺。&#x27;}, {&#x27;start&#x27;: 7.226, &#x27;end&#x27;: 11.687, &#x27;text&#x27;: &#x27;背部棕褐，喉部偏白，翅短，尾巴宽圆。&#x27;}, {&#x27;start&#x27;: 25.1, &#x27;end&#x27;: 27.684, &#x27;text&#x27;: &#x27;它常藏在浓密的植被里。&#x27;}, {&#x27;start&#x27;: 27.684, &#x27;end&#x27;: 31.921, &#x27;text&#x27;: &#x27;这里的近景中，并没有看见它张嘴鸣叫。&#x27;}, {&#x27;start&#x27;: 35.9, &#x27;end&#x27;: 40.51, &#x27;text&#x27;: &#x27;原声中，重复的短音与成串的高音交替出现，&#x27;}, {&#x27;start&#x27;: 40.51, &#x27;end&#x27;: 44.021, &#x27;text&#x27;: &#x27;但不能认定都来自画面中的个体。&#x27;}]</td></tr><tr><td>解说时机</td><td>1.0</td><td>解说时机与当前章节画面内容对应准确。例如在展示鸟体特征时（约7-11秒），旁白描述其外貌；在讨论声音来源时（约35-44秒），虽然画面仍为静态特写，但解说词明确指出了“原声”与画面的关系，符合逻辑。抽样帧覆盖了主要的时间节点，未见明显错位。</td><td>[]</td></tr></tbody></table></div></details><details><summary>第 2 章 · H 0.812 / A 1.000 / D 0.950 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>0.0</td><td>旁白将物种错误地鉴定为“宽尾树莺”。此外，描述其鸣唱特征为“几个短音接着密集重复，随后停顿”，这与实际听到的持续、有节奏的单音节颤音（类似昆虫鸣叫）不符，存在事实性错误。</td><td>[&#x27;00:04.16 - 00:08.08&#x27;, &#x27;00:15.37 - 00:22.97&#x27;]</td></tr><tr><td>视听证据对应</td><td>0.5</td><td>旁白提到“鸟藏在枝叶后，画面没有给出清楚的外形”，这部分准确对应了视觉证据（茂密灌丛且无法可靠辨认鸟体）。但其对声音特征的听觉描述与实际音频严重脱节。</td><td>[&#x27;00:15.37 - 00:22.97&#x27;]</td></tr><tr><td>自然韵律</td><td>0.75</td><td>整体流畅，但带有轻微的合成感，语调起伏不够自然，缺乏真人解说的生动气息。</td><td>[4.32, 16.08]</td></tr><tr><td>音色舒适</td><td>0.75</td><td>音色清晰稳定，但略显单薄，有典型的AI配音质感，不够饱满圆润。</td><td>[4.32, 16.08]</td></tr><tr><td>发音清晰</td><td>1.0</td><td>发音非常标准清晰，字正腔圆，没有任何含糊不清的地方。</td><td>[4.32, 16.08]</td></tr><tr><td>语速停顿</td><td>0.75</td><td>语速适中，但句间停顿略显生硬和刻意，节奏感不如真人自然。</td><td>[4.32, 16.08]</td></tr><tr><td>原声保留</td><td>1.0</td><td>可以清晰地听到真实的鸟类鸣叫声，包括短促的啁啾和连续的鸣唱，背景动物声保留完整且真实。</td><td>[0.0, 26.96]</td></tr><tr><td>混音平衡</td><td>1.0</td><td>人声与背景鸟鸣声比例协调，鸟叫声作为环境音很好地衬托了解说，没有干扰语音的清晰度。</td><td>[0.0, 26.96]</td></tr><tr><td>字幕</td><td>0.9</td><td>字幕已实际烧录，文字内容与提供的独立转写完全一致。虽然部分帧（如movie 52.62s）的字幕因背景树叶杂乱导致对比度较低、略显模糊，但整体处于可读状态；且字幕位置固定在画面底部边缘或黑边区域，未遮挡任何主要鸟体特征。</td><td>[{&#x27;start&#x27;: 48.29, &#x27;end&#x27;: 57.21, &#x27;text&#x27;: &#x27;灌丛里这串突出的鸣唱，也暂定为宽尾树莺。&#x27;}, {&#x27;start&#x27;: 61.68, &#x27;end&#x27;: 63.5, &#x27;text&#x27;: &#x27;几个短音接着密集重复，随后停顿。&#x27;}, {&#x27;start&#x27;: 66.12, &#x27;end&#x27;: 67.53, &#x27;text&#x27;: &#x27;鸟藏在枝叶后，画面没有给出清楚的外形。&#x27;}]</td></tr><tr><td>解说时机</td><td>0.9</td><td>解说时机与当前章节画面高度对应。SRT时间轴显示的字幕出现时段（约50-70秒），在拼图抽样的对应时间点（movie 52.62s - 67.53s）均可见相应字幕叠加。画面内容为茂密的灌木丛和交错的枝叶，这与解说词中描述的“灌丛”、“鸟藏在枝叶后”的视觉场景完全吻合，实现了视听同步。</td><td>[{&#x27;start&#x27;: 50.3, &#x27;end&#x27;: 54.934, &#x27;text&#x27;: &#x27;灌丛里这串突出的鸣唱，也暂定为宽尾树莺。&#x27;}, {&#x27;start&#x27;: 61.6, &#x27;end&#x27;: 65.395, &#x27;text&#x27;: &#x27;几个短音接着密集重复，随后停顿。&#x27;}, {&#x27;start&#x27;: 65.395, &#x27;end&#x27;: 69.658, &#x27;text&#x27;: &#x27;鸟藏在枝叶后，画面没有给出清楚的外形。&#x27;}]</td></tr></tbody></table></div></details><details><summary>第 3 章 · H 0.625 / A 0.900 / D 1.000 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>0.2</td><td>虽然物种识别错误，但描述的形态特征（浅色喉部、淡淡的翼斑、细细的眼圈）和行为（不时转头、张嘴）符合纹霸鹟属（Empidonax）鸟类的普遍特征，且指出其鸣唱具有辨识价值的科普逻辑是正确的。</td><td>[&#x27;00:08-00:12&#x27;, &#x27;00:19-00:26&#x27;]</td></tr><tr><td>视听证据对应</td><td>0.3</td><td>解说词中的形态描述（如浅色喉部、翼斑等）与画面中鸟类的视觉特征基本对应；但提到的“两段式鸣唱”在当前提供的背景音轨中无法清晰分辨出该特定鸟种的专属叫声，声音与画面个体的归属关系缺乏确凿证据。</td><td>[&#x27;00:08-00:12&#x27;, &#x27;00:19-00:26&#x27;]</td></tr><tr><td>自然韵律</td><td>0.5</td><td>声音带有明显的AI合成感，语调平铺直叙，缺乏真人解说时的自然起伏和情感变化。</td><td>[6.3, 12.4, 19.8]</td></tr><tr><td>音色舒适</td><td>0.75</td><td>音色本身比较清晰稳定，没有刺耳的杂音或电流声，但能听出轻微的机械感。</td><td>[6.3, 12.4, 19.8]</td></tr><tr><td>发音清晰</td><td>0.75</td><td>发音非常标准，字正腔圆，每个词都听得很清楚，但由于是合成音，略显生硬。</td><td>[6.3, 12.4, 19.8]</td></tr><tr><td>语速停顿</td><td>0.5</td><td>语速均匀，但在句子之间的停顿显得刻意且不自然，有典型的机器朗读节奏感。</td><td>[6.3, 12.4, 19.8]</td></tr><tr><td>原声保留</td><td>1.0</td><td>背景中保留了丰富且真实的鸟类鸣叫声，环境音细节完整，没有被过度降噪处理。</td><td>[0.0, 27.0]</td></tr><tr><td>混音平衡</td><td>0.75</td><td>人声与背景的鸟鸣声比例适中，鸟叫声虽然清晰可闻，但没有严重干扰到对解说内容的理解。</td><td>[0.0, 27.0]</td></tr><tr><td>字幕</td><td>1.0</td><td>字幕已实际烧录，位于画面底部安全区域（黑色留边内），清晰可读且未遮挡鸟类主体。字幕内容与提供的独立转写文本完全一致，准确描述了鸟类的特征（浅色喉部、翼斑等）和行为。</td><td>[{&#x27;start&#x27;: 78.2, &#x27;end&#x27;: 81.376, &#x27;text&#x27;: &#x27;枝头这只，暂定为柳纹霸鹟。&#x27;}, {&#x27;start&#x27;: 81.376, &#x27;end&#x27;: 86.1, &#x27;text&#x27;: &#x27;留意浅色喉部、淡淡的翼斑，还有细细的眼圈。&#x27;}, {&#x27;start&#x27;: 92.1, &#x27;end&#x27;: 94.553, &#x27;text&#x27;: &#x27;它不时转头、张嘴。&#x27;}, {&#x27;start&#x27;: 94.553, &#x27;end&#x27;: 99.868, &#x27;text&#x27;: &#x27;短促的两段式鸣唱，比相似的外形更有辨识价值。&#x27;}]</td></tr><tr><td>解说时机</td><td>1.0</td><td>解说时机与当前章节画面高度对应。当旁白提到“浅色喉部”、“淡淡翼斑”时，画面中的鸟类姿态正好展示了这些特征；当旁白描述“转头、张嘴”动作时，对应的帧（如movie 89.11s）确实捕捉到了鸟儿仰头张嘴的瞬间，实现了视听同步。</td><td>[{&#x27;start&#x27;: 78.2, &#x27;end&#x27;: 81.376, &#x27;label&#x27;: &#x27;引入物种名称，画面展示全貌&#x27;}, {&#x27;start&#x27;: 81.376, &#x27;end&#x27;: 86.1, &#x27;label&#x27;: &#x27;描述形态细节，画面配合侧身特写&#x27;}, {&#x27;start&#x27;: 92.1, &#x27;end&#x27;: 94.553, &#x27;label&#x27;: &#x27;描述动态行为，画面精准匹配张嘴/转头动作&#x27;}, {&#x27;start&#x27;: 94.553, &#x27;end&#x27;: 99.868, &#x27;label&#x27;: &#x27;总结辨识点，画面持续跟随目标&#x27;}]</td></tr></tbody></table></div></details><details><summary>第 4 章 · H 0.812 / A 1.000 / D 1.000 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>0.0</td><td>存在严重事实错误：旁白将物种鉴定为“芦苇莺”，而实际应为“弗吉尼亚秧鸡”。此外，“常在苇丛中活动”的描述更符合芦苇莺的习性，对于弗吉尼亚秧鸡而言不准确。</td><td>[[4.32, 6.08], [6.72, 11.2]]</td></tr><tr><td>视听证据对应</td><td>0.5</td><td>部分视听证据对应准确：“鸟体被叶片挡住了”（6.72-11.2s）符合画面中失焦且无法可靠辨认鸟体的情况；“连续变化的鸣唱是主要的辨认线索”（15.04-18.24s）符合背景中持续的高频鸟鸣和间歇性啁啾声。但整体因物种识别错误导致证据链断裂。</td><td>[[6.72, 11.2], [15.04, 18.24]]</td></tr><tr><td>自然韵律</td><td>0.75</td><td>女声解说整体流畅，但语调略显平淡，缺乏真实人类在自然交流中的情感起伏和呼吸感，带有轻微的合成/AI配音痕迹。</td><td>[4.32, 18.6]</td></tr><tr><td>音色舒适</td><td>0.75</td><td>音色清晰稳定，没有明显的电流声或失真，但质感上偏向标准的TTS（文本转语音）声音，不够生动自然。</td><td>[4.32, 18.6]</td></tr><tr><td>发音清晰</td><td>1.0</td><td>发音非常标准清晰，字正腔圆，没有任何含糊不清的地方，易于理解。</td><td>[4.32, 18.6]</td></tr><tr><td>语速停顿</td><td>0.75</td><td>语速适中，停顿位置符合语法逻辑，但节奏过于均匀刻板，缺少真人说话时的轻重缓急变化。</td><td>[4.32, 18.6]</td></tr><tr><td>原声保留</td><td>1.0</td><td>可以清晰地听到真实的鸟类鸣叫声，包括短促的啁啾和连续的婉转啼鸣，保留了丰富的自然环境细节。</td><td>[0.0, 23.96]</td></tr><tr><td>混音平衡</td><td>1.0</td><td>人声与背景鸟鸣声的混音比例恰当，人声突出且清晰，背景音作为环境衬托没有干扰到主体语音。</td><td>[4.32, 18.6]</td></tr><tr><td>字幕</td><td>1.0</td><td>字幕已实际烧录于画面底部黑边区域，清晰可读且未遮挡任何主体内容。字幕文本与提供的独立转写完全一致（仅增加了符合阅读习惯的标点）。</td><td>[{&#x27;start&#x27;: 105.1, &#x27;end&#x27;: 107.434, &#x27;text&#x27;: &#x27;这里暂定为芦苇莺。&#x27;}, {&#x27;start&#x27;: 107.434, &#x27;end&#x27;: 112.632, &#x27;text&#x27;: &#x27;它常在苇丛中活动，但这次，鸟体被叶片挡住了。&#x27;}, {&#x27;start&#x27;: 115.7, &#x27;end&#x27;: 119.637, &#x27;text&#x27;: &#x27;连续变化的鸣唱，是主要的辨认线索。&#x27;}]</td></tr><tr><td>解说时机</td><td>1.0</td><td>解说时机与当前章节画面高度对应。SRT时间轴显示的字幕出现时段（约105s-119s）内，抽样的成片帧（movie 106.27s至118.17s）均展示了失焦的湿地茎叶背景，这与旁白中提到的“鸟体被叶片挡住”、“以鸣唱为线索”的描述逻辑相符，实现了视听信息的同步。</td><td>[{&#x27;start&#x27;: 105.1, &#x27;end&#x27;: 107.434, &#x27;text&#x27;: &#x27;这里暂定为芦苇莺。&#x27;}, {&#x27;start&#x27;: 107.434, &#x27;end&#x27;: 112.632, &#x27;text&#x27;: &#x27;它常在苇丛中活动，但这次，鸟体被叶片挡住了。&#x27;}, {&#x27;start&#x27;: 115.7, &#x27;end&#x27;: 119.637, &#x27;text&#x27;: &#x27;连续变化的鸣唱，是主要的辨认线索。&#x27;}]</td></tr></tbody></table></div></details><details><summary>第 5 章 · H 0.662 / A 0.900 / D 1.000 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>1.0</td><td>旁白对画面内容的描述（雏鸟披褐色绒羽张嘴、成鸟暗褐色且嘴基略浅、低头靠近并发生嘴部接触）以及听觉观察（接连的尖细叫声）均准确无误。同时，旁白严谨地指出“看不清食物”，符合实际视听证据的限制，没有过度推断。</td><td>[&#x27;00:04-00:07&#x27;, &#x27;00:08-00:11&#x27;, &#x27;00:14-00:17&#x27;, &#x27;00:18-00:21&#x27;, &#x27;00:26-00:30&#x27;]</td></tr><tr><td>视听证据对应</td><td>1.0</td><td>解说内容与本片视听证据高度对应。旁白描述的视觉特征（如羽毛颜色、动作）和听觉特征（高频叫声）都能在视频中找到直接支撑；对于无法确认的细节（如具体食物），旁白也如实说明了不确定性，做到了言出有据。</td><td>[&#x27;00:04-00:07&#x27;, &#x27;00:08-00:11&#x27;, &#x27;00:14-00:17&#x27;, &#x27;00:18-00:21&#x27;, &#x27;00:26-00:30&#x27;]</td></tr><tr><td>自然韵律</td><td>0.5</td><td>人声语调平淡，缺乏自然的情感起伏和重音变化，带有明显的机械感和合成痕迹。</td><td>[4.6, 21.8]</td></tr><tr><td>音色舒适</td><td>0.5</td><td>音色略显干瘪单薄，不够饱满圆润，具有典型的AI配音质感。</td><td>[4.6, 21.8]</td></tr><tr><td>发音清晰</td><td>1.0</td><td>发音非常清晰准确，字正腔圆，完全没有被背景鸟叫声干扰，易于听辨。</td><td>[4.6, 21.8]</td></tr><tr><td>语速停顿</td><td>0.75</td><td>语速均匀适中，句间停顿符合逻辑，但整体节奏略显刻板，缺乏真人解说的呼吸感。</td><td>[4.6, 21.8]</td></tr><tr><td>原声保留</td><td>1.0</td><td>真实保留了丰富的背景动物声音，包括清晰的雏鸟乞食尖细叫声和成鸟的低沉鸣叫，环境音细节完整。</td><td>[0.0, 34.0]</td></tr><tr><td>混音平衡</td><td>0.75</td><td>人声与背景鸟叫声的音量比例基本合理，人声处于主导地位，但在某些高频鸟叫出现时略显拥挤。</td><td>[4.6, 34.0]</td></tr><tr><td>字幕</td><td>1.0</td><td>字幕已实际烧录，清晰可读且未遮挡鸟类主体。经核对，所有抽样的字幕文本均与独立转写内容完全一致。</td><td>[{&#x27;start&#x27;: 128.4, &#x27;end&#x27;: 133.182, &#x27;text&#x27;: &#x27;黑脚信天翁的雏鸟，披着褐色绒羽，张着嘴。&#x27;}, {&#x27;start&#x27;: 133.182, &#x27;end&#x27;: 136.313, &#x27;text&#x27;: &#x27;原声中有接连的尖细叫声。&#x27;}, {&#x27;start&#x27;: 139.1, &#x27;end&#x27;: 142.908, &#x27;text&#x27;: &#x27;成鸟也是暗褐色，嘴基周围略浅。&#x27;}, {&#x27;start&#x27;: 142.908, &#x27;end&#x27;: 146.145, &#x27;text&#x27;: &#x27;现在，它正低头靠近雏鸟。&#x27;}, {&#x27;start&#x27;: 151.1, &#x27;end&#x27;: 155.55, &#x27;text&#x27;: &#x27;嘴部接触符合喂雏行为，但看不清食物。&#x27;}]</td></tr><tr><td>解说时机</td><td>1.0</td><td>解说时机与画面动作高度同步：描述‘张嘴’时幼鸟正处于该状态；描述‘成鸟接近/低头’时画面正好展示成鸟入画并俯身；描述‘嘴部接触’时画面准确呈现了喙对喙的喂食互动瞬间。</td><td>[{&#x27;start&#x27;: 128.4, &#x27;end&#x27;: 133.182, &#x27;event&#x27;: &#x27;幼鸟张嘴特写&#x27;}, {&#x27;start&#x27;: 139.1, &#x27;end&#x27;: 146.145, &#x27;event&#x27;: &#x27;成鸟进入画面并向幼鸟低头&#x27;}, {&#x27;start&#x27;: 151.1, &#x27;end&#x27;: 155.55, &#x27;event&#x27;: &#x27;成鸟与幼鸟进行喙部接触的喂食行为&#x27;}]</td></tr></tbody></table></div></details><details><summary>第 6 章 · H 0.662 / A 0.900 / D 1.000 · 查看全部分项与扣分</summary><div class="scroll"><table><thead><tr><th>指标</th><th>得分（0–1）</th><th>评审依据 / 扣分原因</th><th>章内秒数</th></tr></thead><tbody><tr><td>事实准确性</td><td>1.0</td><td>解说内容准确描述了该物种的外观特征（白头颈、深色背翅）以及求偶行为（伸颈、仰头、相互点嘴），与视觉画面和生物学事实完全相符。</td><td>[&#x27;00:05.68-00:10.72&#x27;, &#x27;00:15.92-00:22.48&#x27;]</td></tr><tr><td>视听证据对应</td><td>1.0</td><td>视听证据高度对应：旁白提到的外观特征在视频开头清晰可见；描述的“伸颈、仰头、相互点嘴”动作与视频中两只鸟的互动完美同步；提到的“叫声和喙击声”也能在背景音中听到对应的清脆敲击声和鸣叫声。</td><td>[&#x27;00:00.00-00:10.72&#x27;, &#x27;00:15.92-00:22.48&#x27;]</td></tr><tr><td>自然韵律</td><td>0.5</td><td>声音带有明显的AI合成感，语调平直缺乏自然的情感起伏和呼吸停顿，听起来像机器人在朗读。</td><td>[6.4, 11.2, 16.8, 23.2]</td></tr><tr><td>音色舒适</td><td>0.5</td><td>音色虽然清晰，但过于均匀和扁平，缺乏真人发声时的共鸣变化和质感，机械感较强。</td><td>[6.4, 11.2, 16.8, 23.2]</td></tr><tr><td>发音清晰</td><td>1.0</td><td>发音非常标准，字正腔圆，每个字的咬字都极其清晰，没有任何模糊或吞音现象。</td><td>[6.4, 11.2, 16.8, 23.2]</td></tr><tr><td>语速停顿</td><td>0.75</td><td>语速适中且整体流畅，但在句子内部的断句略显生硬，停顿的节奏不够自然。</td><td>[6.4, 11.2, 16.8, 23.2]</td></tr><tr><td>原声保留</td><td>1.0</td><td>保留了非常真实且丰富的背景动物声音，可以清晰听到多种鸟类的高频啾啾声以及类似水禽的低沉叫声，环境音细节完整。</td><td>[0.0, 27.0]</td></tr><tr><td>混音平衡</td><td>0.75</td><td>人声与背景鸟鸣声的音量比例基本协调，人声能够被听清，但背景鸟叫声（尤其是高频部分）偶尔会显得略微突出，对听觉有轻微干扰。</td><td>[6.4, 11.2, 16.8, 23.2]</td></tr><tr><td>字幕</td><td>1.0</td><td>字幕已正确烧录，清晰可读且未遮挡鸟类主体。字幕内容与旁白转写完全一致（仅标点微调），时间轴与语音片段精确对应。</td><td>[{&#x27;start&#x27;: 164.3, &#x27;end&#x27;: 170.158, &#x27;text&#x27;: &#x27;这是黑背信天翁，白色的头颈与深色背翅，对比鲜明。&#x27;}, {&#x27;start&#x27;: 174.4, &#x27;end&#x27;: 179.131, &#x27;text&#x27;: &#x27;伸颈、仰头、相互点嘴，伴着叫声和喙击声，&#x27;}, {&#x27;start&#x27;: 179.131, &#x27;end&#x27;: 181.613, &#x27;text&#x27;: &#x27;这是它们的求偶展示。&#x27;}]</td></tr><tr><td>解说时机</td><td>1.0</td><td>解说时机与画面内容高度同步。第一段介绍外貌时画面展示了白头深翅的特征；第二段描述“伸颈、仰头、相互点嘴”动作时，画面中的双鸟正进行相应的求偶互动行为。</td><td>[{&#x27;start&#x27;: 164.3, &#x27;end&#x27;: 170.158, &#x27;label&#x27;: &#x27;介绍黑背信天翁外貌特征&#x27;}, {&#x27;start&#x27;: 174.4, &#x27;end&#x27;: 181.613, &#x27;label&#x27;: &#x27;描述并展示求偶互动行为&#x27;}]</td></tr></tbody></table></div></details><p><a href="sol/reviewed_result.json">完整评分 JSON</a> · <a href="sol/technical.json">硬性要求与技术检查</a></p><h2 id="network">原黑名单网站的实际访问</h2><div class="scroll"><table><thead><tr><th>域名</th><th>请求</th><th>成功响应</th><th>重定向</th><th>HTTP错误</th><th>素材拦截</th><th>其他失败</th></tr></thead><tbody><tr><td>ebird.org</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>wikipedia.org</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td></tr></tbody></table></div><p>成功响应表示网关批准交付 2xx，不单独证明模型完整阅读或用于推理。YouTube 未记录访问。Wikipedia 已从整站黑名单移除，但两轮均未获得正文：第一轮上游连接超时；第二轮解析结果含非公网地址。网关统一返回 403，不能据此认定命中了素材黑名单。</p><div class="scroll"><table><thead><tr><th>结果</th><th>网址 / 主机</th><th>HTTP</th><th>原因</th></tr></thead><tbody><tr><td>blocked_or_failed</td><td>https://en.wikipedia.org/wiki/Eurasian_reed_warbler</td><td>—</td><td>ConnectTimeout: HTTPSConnectionPool(host=&#x27;en.wikipedia.org&#x27;, port=443): Max retries exceeded with url: /wiki/Eurasian_reed_warbler (Caused by ConnectTimeoutError(&lt;urllib3.connection.HTTPSConnection object at 0x7b6abd9b39e0&gt;, &#x27;Connection to en.wikipedia.org timed out</td></tr><tr><td>blocked_or_failed</td><td>https://en.wikipedia.org/wiki/Cetti%27s_warbler</td><td>—</td><td>ConnectTimeout: HTTPSConnectionPool(host=&#x27;en.wikipedia.org&#x27;, port=443): Max retries exceeded with url: /wiki/Cetti%27s_warbler (Caused by ConnectTimeoutError(&lt;urllib3.connection.HTTPSConnection object at 0x7b6abd9d4890&gt;, &#x27;Connection to en.wikipedia.org timed out. (c</td></tr><tr><td>blocked_or_failed</td><td>https://en.wikipedia.org/wiki/Common_nightingale</td><td>—</td><td>ConnectTimeout: HTTPSConnectionPool(host=&#x27;en.wikipedia.org&#x27;, port=443): Max retries exceeded with url: /wiki/Common_nightingale (Caused by ConnectTimeoutError(&lt;urllib3.connection.HTTPSConnection object at 0x7b6abd9d4e30&gt;, &#x27;Connection to en.wikipedia.org timed out. (</td></tr><tr><td>successful_response</td><td>https://ebird.org/species/cetwar1</td><td>200</td><td>—</td></tr><tr><td>successful_response</td><td>https://ebird.org/species/eurwar1</td><td>200</td><td>—</td></tr><tr><td>successful_response</td><td>https://ebird.org/species/bkfalb</td><td>200</td><td>—</td></tr><tr><td>successful_response</td><td>https://ebird.org/species/layalb</td><td>200</td><td>—</td></tr></tbody></table></div><p class="links"><a href="original_blacklist_accesses.json">原黑名单访问记录</a><a href="sol/network_trajectory.json">完整网络轨迹</a><a href="../results/sol/research_log.json">模型研究日志</a></p><h2 id="tools">运行轨迹</h2><details><summary>1 · agent_message · </summary><pre>我会先完整阅读任务与环境说明，再按六段要求完成旁白、字幕、剪辑和混音，并记录实际工具选择与各阶段用时。
+</pre><pre></pre></details><details><summary>2 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;cat /candidate/TASK.md&#x27;</pre><pre># 鸟类科普短片：识别、中文旁白与原声混音
+
+你是一名自然纪录片制作助手。将 `birds_source.mp4` 制作成可以直接播放的中文鸟类科普短片。
+视频包含六段鸟类的观察记录。片段边界见 `chapters.json`，不提供鸟名答案。
+
+## 工作要求
+
+1. 综合画面与原始音轨识别每段鸟类。介绍中文名，并根据可观察证据说明行为及声音类型。
+   `segments.json` 中另写英文名、拉丁学名、置信度和识别依据；英文和拉丁名不必念出。
+   不确定时可以保守表述并解释，不得伪造声音来源、因果关系或未出现的动作。
+2. 为每段制作符合人类听感的普通话科普解说：音色舒适稳定、发音清楚、语调自然、语速适中、停顿合理，不得机械朗读、刺耳失真或用不自然的变速赶时长。允许TTS，但是否自然以实际声音评价。必须实际合成语音并混入成片，
+   不能只交文稿、字幕、静音或蜂鸣声。配音方案、工具、音色及调用代码由你自主选择和实现，不提供预制配音脚本。
+3. 旁白应与画面同步，先观察后解说，避免全程朗读。每段至少留一处不少于 2 秒的
+   无旁白原声窗口，尽量选择明显鸟声或展示行为处，使观众能听见动物自身的声音。
+4. 保留原始音轨。允许合理降音量、淡入淡出和动态避让，但不允许替换、复制、移动、
+   合成鸟叫冒充原声。关键鸣叫应可辨，旁白也应清楚；不加背景音乐。
+5. 保留全部六段画面的顺序、内容、速度与整体时间线。允许等比例缩放、正常转码和字幕；
+   不得删段、加速、倒放、冻结或用图片替代。输出时长与输入差异不超过 0.5 秒。
+6. 输出一份同步中文字幕，并将字幕烧录在最终视频中。字幕不得遮挡主要鸟体，
+   文字必须对应实际说出的旁白，不要用字幕补充旁白未说的物种答案。
+7. 不要求介绍保护等级、拍摄地点或来源；没有可靠依据时不要添加。
+
+## 联网规则
+
+可以按观察到的形态、行为、声音或候选物种，查询独立鸟类资料。
+允许在 YouTube、Macaulay Library、Cornell、eBird、Wikipedia、Wikidata、Wikimedia Foundation 和 FWS 查询与题目原素材无关的独立资料；不按这些网站整站封禁。仍禁止搜索、访问、下载、引用下列数据集、镜像和实验答案域名及全部子域名：
+
+- `dearkitty1.wordpress.com`
+- `wikimedia.org`
+- `picryl.com`
+- `getarchive.net`
+- `archive.org`
+- `nanxiang-git.github.io`
+
+此外禁止访问、下载或引用以下特定素材及其所有下载地址、直链、嵌入副本、缓存和转载版本：
+- Macaulay Library 素材编号 `201977041`、`352463391`。
+- YouTube 视频编号 `xFV9lcvgMWQ`，包括短链接、嵌入、缩略图及媒体直链。
+- `https://xeno-canto.org/238544`（包括 `/download`、声谱及音频直链）。
+- `https://www.flickr.com/photos/usfwsnortheast/7245581374` 及对应 `video_download.gne?id=7245581374`。
+遇到网关阻止或疑似同源素材，应放弃该资料，不得更换域名、编码或剪辑形式绕过。其他合法独立参考录音仍可使用。
+联网网关会在交付响应前检查网址、重定向、已知素材标记及音频同源匹配，并记录实际网址、状态和响应哈希；含受限素材的页面也可能被拦截。
+
+不得访问本实验公开报告、历史答卷及其仓库副本来获取答案。
+禁止用文件元数据、原始文件名、来源水印、反向搜图或音视频指纹寻找原始题目素材与答案。
+不得通过镜像、网页缓存、翻译代理、转存网站或其他模型绕过限制。
+使用通用联网环境自行检索、访问资料和安装依赖；必须遵守上述限制与禁止溯源规则。搜索摘要若暴露受限原素材或现成答案，也不得使用。
+参考资料只能辅助识别，不能把参考资料中的声音描述写成自己在视频里观察到的事实。
+
+## 通用实验环境
+
+已提供 Linux、Python 3、pip、ffmpeg、ffprobe、curl，以及 numpy、scipy、Pillow 等通用库。可自行安装其他依赖、编写代码并选择语音方案；不指定配音包、服务商或音色。
+联网通过 HTTP_PROXY / HTTPS_PROXY / ALL_PROXY 指定的标准代理，支持 HTTP、HTTPS CONNECT 和加密 WebSocket。curl、pip 等可读取环境变量；自行使用的库若不自动读取，应按其文档设置代理。直接公网连接不可用，不能绕过代理。
+可使用无需额外付费或自带可用授权的方案；本实验不提供商业语音服务密钥，不得使用宿主或其他实验的凭据。两组条件一致。
+依赖安装位置为 /workspace/site-packages（已加入 PYTHONPATH），或在工作目录创建自己的环境；预置 pip 可用 python3 -m pip 调用。中间产物放 /workspace/scratch。
+软件选择、依赖下载、代码编写、调试和音频生成全程计时记录，但不设总作答时限。宿主不替你完成配音或混音，不允许请求宿主代写或代调用。
+命令行模型没有直接听音工具时，应实际读取音频采样、查看声谱并结合动作核验，在 segments.json 如实说明限制，不能声称亲耳听过。不要调用其他识别模型代答；允许语音合成工具生成你自己撰写的解说。
+
+## 必须交付到 /workspace/submission
+
+- `final.mp4`：H.264 + AAC，1280×720 或更高、30 fps，六段完整，中文旁白、原声、烧录中文字幕。
+- `narration.wav`：与成片时间线完全对齐的独立旁白轨，空白处为静音，48 kHz PCM。
+- `subtitles.srt`：UTF-8，实际旁白对应字幕，与烧录字幕一致。
+- `segments.json`：以下结构，时间使用完整成片的秒数。
+
+```json
+{
+  &quot;audio_analysis_method&quot;: &quot;实际采用的音轨分析方式与限制&quot;,
+  &quot;segments&quot;: [{
+    &quot;segment&quot;: 1, &quot;start&quot;: 0, &quot;end&quot;: 27,
+    &quot;chinese_name&quot;: &quot;识别结果&quot;, &quot;english_name&quot;: &quot;识别结果&quot;, &quot;scientific_name&quot;: &quot;识别结果&quot;,
+    &quot;confidence&quot;: 90,
+    &quot;visual_evidence&quot;: [{&quot;start&quot;: 1, &quot;end&quot;: 3, &quot;description&quot;: &quot;实际观察&quot;}],
+    &quot;audio_evidence&quot;: [{&quot;start&quot;: 4, &quot;end&quot;: 6, &quot;description&quot;: &quot;实际证据与声音归属限制&quot;}],
+    &quot;narration&quot;: [{&quot;start&quot;: 7, &quot;end&quot;: 12, &quot;text&quot;: &quot;实际旁白&quot;}],
+    &quot;original_sound_windows&quot;: [{&quot;start&quot;: 4, &quot;end&quot;: 6}],
+    &quot;sources&quot;: [{&quot;url&quot;: &quot;真实访问的允许网址&quot;, &quot;supports&quot;: &quot;辅助判断的事实&quot;}]
+  }]
+}
+```
+
+示例时间仅说明字段；以 `chapters.json` 的实际边界为准。
+如果未成功使用网络资料，`sources` 写空数组，不编造引用。
+
+## 评分规则
+
+最终分 S = 主体分 B × 质量系数 Q。
+
+六段等权，每段主体分最高100/6（约16.67）。该段在实际旁白中识别错误、未给出物种或只在字幕/JSON写对时，该段主体分为0；不会因此清零其他正确片段。允许标准别名、明确的单一暂定识别；纯音频转写的同音字差异不作物种识别错误，不接受枚举候选碰答案。
+B = (100/6) × Σ I_i × (0.40 + 0.32F_i + 0.28E_i)。I_i=物种识别正确1/否则0；F_i=科普事实准确性；E_i=解说与实际视听证据对应程度，F/E范围0–1。不要把一般物种习性说成片中发生的事件。视野不清时如实说明可得对应证据分。
+
+Q = 0.70H + 0.20A + 0.10D，所有子项0–1，各章等权：
+- H：自然韵律35%、音色舒适25%、发音清晰25%、语速停顿15%。重视实际人类听感。
+- A：原声保留40%、混音平衡40%、至少2秒无旁白且有原声窗口20%。
+- D：画面完整40%、字幕同步与可读30%、解说时机20%、交付有效10%。
+
+全片无可播放成片或没有可懂中文旁白，Q=0。缺章、改速、时长误差超过0.5秒、缺少必需交付、任一章无中文解说或无原声窗口、替换伪造原声，均为硬性要求不通过。分数与硬性要求分开展示；通过需S≥80且全部门槛通过。评审无法判断时标记待评，不默认为满分。
+
+只评实际成片，不用文稿、字幕或JSON代替声音证据。六段不保证六个不同物种。短章节可以简洁介绍，不能为了长篇科普挤掉原声窗口。
+
+## 实验约束与审计
+
+不设总作答时限，/workspace/DEADLINE.json 中截止时间为 null；完成后自行交卷。禁止子代理、其他识别模型、上传素材、推断遮挡文字或追溯素材来源。研究工具返回的文字也可能包含第三方派生信息，发现原素材或现成答案应停止使用并记录。网页访问失败或仅见搜索摘要，不得声称已经阅读正文。
+segments.json 的sources写实际使用网址及支持的具体事实；另建议交research_log.json记录查询、访问失败及放弃的来源。宿主独立保存实际联网轨迹并核实引用。
+</pre></details><details><summary>3 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;cat /workspace/DEADLINE.json&#x27;</pre><pre>{&quot;start_unix&quot;: 1795077199.598553, &quot;deadline_unix&quot;: null, &quot;wall_clock_seconds&quot;: null, &quot;time_limit_enforced&quot;: false, &quot;mode&quot;: &quot;official&quot;}</pre></details><details><summary>4 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;ls -la /candidate /workspace &amp;&amp; cat /candidate/chapters.json &amp;&amp; find /workspace /candidate -name AGENTS.md -print&#x27;</pre><pre>/candidate:
+total 61153
+drwxrwxrwx  1 1000 1000      512 Nov 16 02:20 .
+drwxr-xr-x 12 1000 1000      300 Nov 19 08:33 ..
+-rwxrwxrwx  1 1000 1000     8907 Nov 19 08:28 TASK.md
+-rwxrwxrwx  1 1000 1000 62605681 Nov 15 14:13 birds_source.mp4
+-rwxrwxrwx  1 1000 1000      570 Nov 15 14:14 chapters.json
+
+/workspace:
+total 0
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 .
+drwxr-xr-x 12 1000 1000 300 Nov 19 08:33 ..
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 .cache
+-rwxrwxrwx  1 1000 1000 134 Nov 19 08:33 DEADLINE.json
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 codex_home
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 home
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 scratch
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 site-packages
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 submission
+drwxrwxrwx  1 1000 1000 512 Nov 19 08:33 tmp
+{
+
+  &quot;duration&quot;: 185.4666666666667,
+
+  &quot;segments&quot;: [
+
+    {
+
+      &quot;segment&quot;: 1,
+
+      &quot;start&quot;: 0,
+
+      &quot;end&quot;: 46.066667
+
+    },
+
+    {
+
+      &quot;segment&quot;: 2,
+
+      &quot;start&quot;: 46.066667,
+
+      &quot;end&quot;: 72.8
+
+    },
+
+    {
+
+      &quot;segment&quot;: 3,
+
+      &quot;start&quot;: 72.8,
+
+      &quot;end&quot;: 100.766667
+
+    },
+
+    {
+
+      &quot;segment&quot;: 4,
+
+      &quot;start&quot;: 100.766667,
+
+      &quot;end&quot;: 123.966667
+
+    },
+
+    {
+
+      &quot;segment&quot;: 5,
+
+      &quot;start&quot;: 123.966667,
+
+      &quot;end&quot;: 158.466667
+
+    },
+
+    {
+
+      &quot;segment&quot;: 6,
+
+      &quot;start&quot;: 158.466667,
+
+      &quot;end&quot;: 185.466667
+
+    }
+
+  ]
+
+}</pre></details><details><summary>5 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import os, shutil, importlib.util, time
+print(&#x27;UTC&#x27;,time.strftime(&#x27;%Y-%m-%dT%H:%M:%SZ&#x27;,time.gmtime()))
+print(&#x27;proxy variables present&#x27;, [k for k in [&#x27;HTTP_PROXY&#x27;,&#x27;HTTPS_PROXY&#x27;,&#x27;ALL_PROXY&#x27;] if os.environ.get(k)])
+for x in [&#x27;edge_tts&#x27;,&#x27;numpy&#x27;,&#x27;scipy&#x27;,&#x27;PIL&#x27;,&#x27;matplotlib&#x27;,&#x27;requests&#x27;,&#x27;aiohttp&#x27;]: print(x, bool(importlib.util.find_spec(x)))
+for x in [&#x27;ffmpeg&#x27;,&#x27;ffprobe&#x27;,&#x27;espeak&#x27;,&#x27;espeak-ng&#x27;]: print(x,shutil.which(x))
+PY&quot;</pre><pre>UTC 2026-11-19T08:33:39Z
+proxy variables present [&#x27;HTTP_PROXY&#x27;, &#x27;HTTPS_PROXY&#x27;, &#x27;ALL_PROXY&#x27;]
+edge_tts False
+numpy True
+scipy True
+PIL True
+matplotlib False
+requests True
+aiohttp False
+ffmpeg /usr/bin/ffmpeg
+ffprobe /usr/bin/ffprobe
+espeak None
+espeak-ng /usr/bin/espeak-ng
+</pre></details><details><summary>6 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;mkdir -p /workspace/scratch/frames /workspace/submission &amp;&amp; ffprobe -v error -show_entries format=duration:stream=index,codec_name,codec_type,width,height,r_frame_rate,sample_rate,channels -of json /candidate/birds_source.mp4&#x27;</pre><pre>{
+    &quot;programs&quot;: [
+
+    ],
+    &quot;streams&quot;: [
+        {
+            &quot;index&quot;: 0,
+            &quot;codec_name&quot;: &quot;h264&quot;,
+            &quot;codec_type&quot;: &quot;video&quot;,
+            &quot;width&quot;: 1280,
+            &quot;height&quot;: 720,
+            &quot;r_frame_rate&quot;: &quot;30/1&quot;
+        },
+        {
+            &quot;index&quot;: 1,
+            &quot;codec_name&quot;: &quot;aac&quot;,
+            &quot;codec_type&quot;: &quot;audio&quot;,
+            &quot;sample_rate&quot;: &quot;48000&quot;,
+            &quot;channels&quot;: 2,
+            &quot;r_frame_rate&quot;: &quot;0/0&quot;
+        }
+    ],
+    &quot;format&quot;: {
+        &quot;duration&quot;: &quot;185.504000&quot;
+    }
+}
+</pre></details><details><summary>7 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+import json,time
+p=Path(&#x27;/workspace/submission/research_log.json&#x27;)
+p.write_text(json.dumps({&#x27;task_started_unix&#x27;:1795077199.598553,&#x27;time_limit&#x27;:None,&#x27;policy&#x27;:{&#x27;no_subagents&#x27;:True,&#x27;no_other_recognition_models&#x27;:True,&#x27;no_material_uploaded&#x27;:True,&#x27;network&#x27;:&#x27;environment HTTP(S) proxy only&#x27;},&#x27;events&#x27;:[{&#x27;start_utc&#x27;:&#x27;2026-11-19T08:33:19Z&#x27;,&#x27;end_utc&#x27;:time.strftime(&#x27;%Y-%m-%dT%H:%M:%SZ&#x27;,time.gmtime()),&#x27;activity&#x27;:&#x27;Read complete task, chapter boundaries, deadline and inspect software environment&#x27;,&#x27;result&#x27;:&#x27;Six chapters, total 185.466667 s. No native audio-listening tool exposed. Will inspect PCM and spectrograms honestly.&#x27;}]},ensure_ascii=False,indent=2))
+PY
+ffmpeg -v error -i /candidate/birds_source.mp4 -vf fps=1/4,scale=480:-1 /workspace/scratch/frames/frame_%03d.jpg
+ffmpeg -v error -i /candidate/birds_source.mp4 -vn -ac 1 -ar 24000 -c:a pcm_s16le /workspace/scratch/original_mono.wav&quot;</pre><pre></pre></details><details><summary>8 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image,ImageDraw
+from pathlib import Path
+f=list(sorted(Path(&#x27;/workspace/scratch/frames&#x27;).glob(&#x27;*.jpg&#x27;)))
+for k in range(0,len(f),12):
+ chunk=f[k:k+12]; out=Image.new(&#x27;RGB&#x27;,(480*3,295*4),&#x27;#222222&#x27;); d=ImageDraw.Draw(out)
+ for j,p in enumerate(chunk):
+  im=Image.open(p); x=(j%3)*480;y=(j//3)*295;out.paste(im,(x,y));d.text((x+8,y+272),f&#x27;t = {(k+j)*4+2:.1f} s&#x27;,fill=&#x27;white&#x27;)
+ out.save(f&#x27;/workspace/scratch/contact_{k//12}.jpg&#x27;)
+PY&quot;</pre><pre></pre></details><details><summary>9 · agent_message · </summary><pre>六段时间线已确认，总长约 185.47 秒。环境没有可直接听音的工具，我会读取原始音频采样、查看声谱并核对画面动作；交付文件中会明确这一限制，不声称亲耳听过。配音将由我撰写并通过语音合成生成，外部服务只接收旁白文字。
+</pre><pre></pre></details><details><summary>10 · command_execution · failed</summary><pre>/usr/bin/bash -lc &#x27;python3 -m pip install --target /workspace/site-packages edge-tts matplotlib&#x27;</pre><pre>Collecting edge-tts
+  Downloading edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting aiohttp&lt;4.0.0,&gt;=3.8.0 (from edge-tts)
+  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting certifi&gt;=2023.11.17 (from edge-tts)
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting tabulate&lt;1.0.0,&gt;=0.4.4 (from edge-tts)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting typing-extensions&lt;5.0.0,&gt;=4.1.0 (from edge-tts)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting aiohappyeyeballs&gt;=2.5.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal&gt;=1.4.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs&gt;=17.3.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist&gt;=1.1.1 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict&lt;8.0,&gt;=4.5 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading multidict-7.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting propcache&gt;=0.2.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting yarl&lt;2.0,&gt;=1.25.1 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Collecting idna&gt;=2.0 (from yarl&lt;2.0,&gt;=1.25.1-&gt;aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting contourpy&gt;=1.0.1 (from matplotlib)
+  Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting cycler&gt;=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+</pre></details><details><summary>11 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/inspect_media.py &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+import subprocess,json
+import numpy as np
+from scipy.io import wavfile
+from scipy.signal import stft
+from PIL import Image,ImageDraw
+sr,x=wavfile.read(&#x27;/workspace/scratch/original_mono.wav&#x27;);x=x.astype(float)/32768
+chap=json.load(open(&#x27;/candidate/chapters.json&#x27;))[&#x27;segments&#x27;]
+for s in chap:
+ a,b=s[&#x27;start&#x27;],s[&#x27;end&#x27;];y=x[int(a*sr):int(b*sr)]
+ f,t,z=stft(y,sr,nperseg=512,noverlap=400)
+ sel=(f&gt;=200)&amp;(f&lt;=10000);db=20*np.log10(np.maximum(abs(z[sel]),1e-7));val=np.clip((db+80)/60,0,1)
+ # light intensity, time horizontal; 200-10000 Hz
+ im=Image.fromarray(np.uint8(val[::-1]*255)).convert(&#x27;RGB&#x27;).resize((1500,480))
+ canvas=Image.new(&#x27;RGB&#x27;,(1580,560),&#x27;#171717&#x27;);canvas.paste(im,(60,30));d=ImageDraw.Draw(canvas)
+ for tt in np.arange(np.ceil(a),b,2):
+  xx=60+int((tt-a)/(b-a)*1500);d.line((xx,30,xx,510),fill=&#x27;#444444&#x27;);d.text((xx,517),str(round(tt,1)),fill=&#x27;white&#x27;)
+ for hz in [1000,3000,5000,7000,9000]:
+  yy=30+int((10000-hz)/9800*480);d.text((2,yy),str(hz),fill=&#x27;white&#x27;)
+ d.text((60,5),f&#x27;Segment {s[\&quot;segment\&quot;]} original audio | absolute seconds | Hz&#x27;,fill=&#x27;white&#x27;)
+ canvas.save(f&#x27;/workspace/scratch/spec_{s[\&quot;segment\&quot;]}.png&#x27;)
+ print(s[&#x27;segment&#x27;],&#x27;rms db&#x27;,round(20*np.log10(np.sqrt(np.mean(y*y))+1e-10),2),&#x27;peak&#x27;,round(np.max(abs(y)),3))
+for tt in [4,76,90,102,106,110,114,118,122,128,138,150,164,180]:
+ subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-ss&#x27;,str(tt),&#x27;-i&#x27;,&#x27;/candidate/birds_source.mp4&#x27;,&#x27;-frames:v&#x27;,&#x27;1&#x27;,&#x27;-y&#x27;,f&#x27;/workspace/scratch/frames/hi_{tt}.jpg&#x27;],check=True)
+PY
+python3 /workspace/scratch/inspect_media.py&quot;</pre><pre>1 rms db -16.9 peak 1.0
+2 rms db -30.33 peak 0.242
+3 rms db -23.15 peak 1.0
+4 rms db -44.39 peak 0.275
+5 rms db -42.13 peak 0.192
+6 rms db -25.08 peak 0.404
+</pre></details><details><summary>12 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import importlib.util
+print(&#x27;bs4 available&#x27;,bool(importlib.util.find_spec(&#x27;bs4&#x27;)))
+PY&quot;</pre><pre>bs4 available True
+</pre></details><details><summary>13 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;python3 -m pip install --target /workspace/site-packages edge-tts --disable-pip-version-check&#x27;</pre><pre>Collecting edge-tts
+  Using cached edge_tts-7.3.1-py3-none-any.whl.metadata (6.1 kB)
+Collecting aiohttp&lt;4.0.0,&gt;=3.8.0 (from edge-tts)
+  Using cached aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting certifi&gt;=2023.11.17 (from edge-tts)
+  Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting tabulate&lt;1.0.0,&gt;=0.4.4 (from edge-tts)
+  Using cached tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting typing-extensions&lt;5.0.0,&gt;=4.1.0 (from edge-tts)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting aiohappyeyeballs&gt;=2.5.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal&gt;=1.4.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs&gt;=17.3.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist&gt;=1.1.1 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict&lt;8.0,&gt;=4.5 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached multidict-7.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting propcache&gt;=0.2.0 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting yarl&lt;2.0,&gt;=1.25.1 (from aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Collecting idna&gt;=2.0 (from yarl&lt;2.0,&gt;=1.25.1-&gt;aiohttp&lt;4.0.0,&gt;=3.8.0-&gt;edge-tts)
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Downloading edge_tts-7.3.1-py3-none-any.whl (38 kB)
+Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 153.6 kB/s  0:00:11
+Downloading multidict-7.2.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (516 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)
+Installing collected packages: typing-extensions, tabulate, propcache, multidict, idna, frozenlist, certifi, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, edge-tts
+
+Successfully installed aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 attrs-26.1.0 certifi-2026.10.23 edge-tts-7.3.1 frozenlist-1.8.0 idna-3.20 multidict-7.2.1 propcache-0.5.4 tabulate-0.10.0 typing-extensions-4.16.0 yarl-1.25.1
+</pre></details><details><summary>14 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/research.py &lt;&lt;&#x27;PY&#x27;
+import requests,time,json,os,re,concurrent.futures
+from pathlib import Path
+LOG=Path(&#x27;/workspace/submission/research_log.json&#x27;)
+def event(d):
+ v=json.loads(LOG.read_text());v[&#x27;events&#x27;].append(d);LOG.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+urls=[
+&#x27;https://www.allaboutbirds.org/guide/Willow_Flycatcher/sounds&#x27;,
+&#x27;https://www.allaboutbirds.org/guide/Alder_Flycatcher/sounds&#x27;,
+&#x27;https://www.allaboutbirds.org/guide/Black-footed_Albatross/id&#x27;,
+&#x27;https://www.allaboutbirds.org/guide/Laysan_Albatross/lifehistory&#x27;,
+&#x27;https://en.wikipedia.org/wiki/Cetti%27s_warbler&#x27;,
+&#x27;https://en.wikipedia.org/wiki/Common_nightingale&#x27;,
+&#x27;https://en.wikipedia.org/wiki/Eurasian_reed_warbler&#x27;,
+&#x27;https://www.allaboutbirds.org/guide/Marsh_Wren/sounds&#x27;]
+def run(url):
+ st=time.time()
+ try:
+  r=requests.get(url,timeout=35);status=r.status_code
+  # Parse text locally; do not follow any media or page links.
+  from bs4 import BeautifulSoup
+  soup=BeautifulSoup(r.text,&#x27;html.parser&#x27;)
+  for e in soup([&#x27;script&#x27;,&#x27;style&#x27;,&#x27;nav&#x27;,&#x27;footer&#x27;,&#x27;header&#x27;]):e.decompose()
+  txt=soup.get_text(&#x27; &#x27;,strip=True)
+  slug=url.split(&#x27;/&#x27;)[-2]+&#x27;_&#x27;+url.split(&#x27;/&#x27;)[-1];Path(&#x27;/workspace/scratch/ref_&#x27;+slug+&#x27;.txt&#x27;).write_text(txt)
+  return {&#x27;activity&#x27;:&#x27;Independent bird reference page request&#x27;,&#x27;url&#x27;:url,&#x27;final_url&#x27;:r.url,&#x27;status&#x27;:status,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;text_file&#x27;:&#x27;ref_&#x27;+slug+&#x27;.txt&#x27;,&#x27;excerpt&#x27;:txt[:160]}
+ except Exception as e:return {&#x27;activity&#x27;:&#x27;Independent bird reference page request&#x27;,&#x27;url&#x27;:url,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;error&#x27;:str(e)}
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+ for d in ex.map(run,urls):event(d);print(json.dumps(d,ensure_ascii=False))
+PY
+python3 /workspace/scratch/research.py&quot;</pre><pre>{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.allaboutbirds.org/guide/Willow_Flycatcher/sounds&quot;, &quot;final_url&quot;: &quot;https://www.allaboutbirds.org/guide/Willow_Flycatcher/sounds&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077328.4493651, &quot;elapsed_seconds&quot;: 1.4839744567871094, &quot;text_file&quot;: &quot;ref_Willow_Flycatcher_sounds.txt&quot;, &quot;excerpt&quot;: &quot;Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access allaboutbirds.org Why have I been blocked? This we&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.allaboutbirds.org/guide/Alder_Flycatcher/sounds&quot;, &quot;final_url&quot;: &quot;https://www.allaboutbirds.org/guide/Alder_Flycatcher/sounds&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077328.4501147, &quot;elapsed_seconds&quot;: 1.4801199436187744, &quot;text_file&quot;: &quot;ref_Alder_Flycatcher_sounds.txt&quot;, &quot;excerpt&quot;: &quot;Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access allaboutbirds.org Why have I been blocked? This we&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.allaboutbirds.org/guide/Black-footed_Albatross/id&quot;, &quot;final_url&quot;: &quot;https://www.allaboutbirds.org/guide/Black-footed_Albatross/id&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077328.4507165, &quot;elapsed_seconds&quot;: 1.479886531829834, &quot;text_file&quot;: &quot;ref_Black-footed_Albatross_id.txt&quot;, &quot;excerpt&quot;: &quot;Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access allaboutbirds.org Why have I been blocked? This we&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.allaboutbirds.org/guide/Laysan_Albatross/lifehistory&quot;, &quot;final_url&quot;: &quot;https://www.allaboutbirds.org/guide/Laysan_Albatross/lifehistory&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077328.4510586, &quot;elapsed_seconds&quot;: 1.4794096946716309, &quot;text_file&quot;: &quot;ref_Laysan_Albatross_lifehistory.txt&quot;, &quot;excerpt&quot;: &quot;Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access allaboutbirds.org Why have I been blocked? This we&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://en.wikipedia.org/wiki/Cetti%27s_warbler&quot;, &quot;final_url&quot;: &quot;https://en.wikipedia.org/wiki/Cetti%27s_warbler&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077329.9303048, &quot;elapsed_seconds&quot;: 15.84550166130066, &quot;text_file&quot;: &quot;ref_wiki_Cetti%27s_warbler.txt&quot;, &quot;excerpt&quot;: &quot;Access denied by source-material policy. Choose a different independent reference.&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://en.wikipedia.org/wiki/Common_nightingale&quot;, &quot;final_url&quot;: &quot;https://en.wikipedia.org/wiki/Common_nightingale&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077329.9305265, &quot;elapsed_seconds&quot;: 15.864627838134766, &quot;text_file&quot;: &quot;ref_wiki_Common_nightingale.txt&quot;, &quot;excerpt&quot;: &quot;Access denied by source-material policy. Choose a different independent reference.&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://en.wikipedia.org/wiki/Eurasian_reed_warbler&quot;, &quot;final_url&quot;: &quot;https://en.wikipedia.org/wiki/Eurasian_reed_warbler&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077329.9306417, &quot;elapsed_seconds&quot;: 15.785213470458984, &quot;text_file&quot;: &quot;ref_wiki_Eurasian_reed_warbler.txt&quot;, &quot;excerpt&quot;: &quot;Access denied by source-material policy. Choose a different independent reference.&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.allaboutbirds.org/guide/Marsh_Wren/sounds&quot;, &quot;final_url&quot;: &quot;https://www.allaboutbirds.org/guide/Marsh_Wren/sounds&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077329.9333992, &quot;elapsed_seconds&quot;: 0.5692234039306641, &quot;text_file&quot;: &quot;ref_Marsh_Wren_sounds.txt&quot;, &quot;excerpt&quot;: &quot;Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access allaboutbirds.org Why have I been blocked? This we&quot;}
+</pre></details><details><summary>15 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import numpy as np
+from scipy.io import wavfile
+from scipy.signal import stft
+from PIL import Image,ImageDraw
+sr,x=wavfile.read(&#x27;/workspace/scratch/original_mono.wav&#x27;);x=x.astype(float)/32768
+for a,b,name in [(76.5,77.5,&#x27;fly1&#x27;),(80.6,81.6,&#x27;fly2&#x27;),(46.1,50,&#x27;bush&#x27;),(0,5,&#x27;first&#x27;),(105,113,&#x27;reed&#x27;)]:
+ f,t,z=stft(x[int(a*sr):int(b*sr)],sr,nperseg=1024,noverlap=950)
+ m=(f&lt;10000)&amp;(f&gt;100);db=20*np.log10(np.maximum(abs(z[m]),1e-9));lo=-95 if name==&#x27;reed&#x27; else -75
+ val=np.clip((db-lo)/60,0,1)
+ im=Image.fromarray(np.uint8(val[::-1]*255)).convert(&#x27;RGB&#x27;).resize((1400,600));out=Image.new(&#x27;RGB&#x27;,(1460,660),&#x27;#222222&#x27;);out.paste(im,(55,25));d=ImageDraw.Draw(out)
+ for tt in np.linspace(a,b,9):
+  xx=55+int((tt-a)/(b-a)*1400);d.text((xx,630),f&#x27;{tt:.2f}&#x27;,fill=&#x27;white&#x27;)
+ for hz in [1000,3000,5000,7000,9000]:d.text((0,25+int((10000-hz)/9900*600)),str(hz),fill=&#x27;white&#x27;)
+ d.text((55,5),name,fill=&#x27;white&#x27;);out.save(&#x27;/workspace/scratch/detail_&#x27;+name+&#x27;.png&#x27;)
+PY&quot;</pre><pre></pre></details><details><summary>16 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/tts_probe.py &lt;&lt;&#x27;PY&#x27;
+import asyncio,edge_tts,os,time,json
+from pathlib import Path
+async def main():
+ st=time.time(); proxy=os.environ.get(&#x27;HTTPS_PROXY&#x27;) or os.environ.get(&#x27;HTTP_PROXY&#x27;)
+ try:
+  c=edge_tts.Communicate(&#x27;先静静观察。这只小鸟，有着棕褐色的背部和细长的嘴。&#x27;, &#x27;zh-CN-XiaoxiaoNeural&#x27;,rate=&#x27;-5%&#x27;,proxy=proxy)
+  await c.save(&#x27;/workspace/scratch/voice_probe.mp3&#x27;,&#x27;/workspace/scratch/voice_probe.srt&#x27;)
+  result=&#x27;success&#x27;
+ except Exception as e:result=repr(e)
+ p=Path(&#x27;/workspace/submission/research_log.json&#x27;);v=json.loads(p.read_text());v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;TTS service probe&#x27;,&#x27;tool&#x27;:&#x27;edge-tts 7.3.1&#x27;,&#x27;voice&#x27;:&#x27;zh-CN-XiaoxiaoNeural&#x27;,&#x27;rate&#x27;:&#x27;-5%&#x27;,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;proxy_explicit&#x27;:True,&#x27;external_payload&#x27;:&#x27;Only self-written Chinese narration text&#x27;,&#x27;result&#x27;:result});p.write_text(json.dumps(v,ensure_ascii=False,indent=2));print(result)
+asyncio.run(main())
+PY
+python3 /workspace/scratch/tts_probe.py&quot;</pre><pre>success
+</pre></details><details><summary>17 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;fc-list :lang=zh family file | head -15&#x27;</pre><pre></pre></details><details><summary>18 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+p=&#x27;/workspace/scratch/research.py&#x27;
+s=open(p).read();a=s.index(&#x27;urls=[&#x27;);b=s.index(&#x27;\\ndef run&#x27;,a)
+s=s[:a]+&#x27;&#x27;&#x27;urls=[
+&#x27;https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler&#x27;,
+&#x27;https://www.rspb.org.uk/birds-and-wildlife/reed-warbler&#x27;,
+&#x27;https://www.audubon.org/field-guide/bird/willow-flycatcher&#x27;,
+&#x27;https://www.audubon.org/field-guide/bird/alder-flycatcher&#x27;,
+&#x27;https://ebird.org/species/cetwar1&#x27;,
+&#x27;https://ebird.org/species/eurwar1&#x27;,
+&#x27;https://ebird.org/species/bkfalb&#x27;,
+&#x27;https://ebird.org/species/layalb&#x27;]&#x27;&#x27;&#x27;+s[b:]
+open(&#x27;/workspace/scratch/research2.py&#x27;,&#x27;w&#x27;).write(s)
+PY
+python3 /workspace/scratch/research2.py&quot;</pre><pre>{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler&quot;, &quot;final_url&quot;: &quot;https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077392.4592214, &quot;elapsed_seconds&quot;: 12.964189767837524, &quot;text_file&quot;: &quot;ref_birds-and-wildlife_cettis-warbler.txt&quot;, &quot;excerpt&quot;: &quot;Cetti&#x27;s Warbler Facts | Cettia Cetti How to identify Small and rather undistinctive, Cetti&#x27;s Warbler (pronounced chetty) is a shy bird that likes to skulk about&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.rspb.org.uk/birds-and-wildlife/reed-warbler&quot;, &quot;final_url&quot;: &quot;https://www.rspb.org.uk/birds-and-wildlife/reed-warbler&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077392.459591, &quot;elapsed_seconds&quot;: 10.088010311126709, &quot;text_file&quot;: &quot;ref_birds-and-wildlife_reed-warbler.txt&quot;, &quot;excerpt&quot;: &quot;Reed Warbler Bird Facts | Acrocephalus Scirpaceus How to identify The Reed Warbler is a plain unstreaked warbler. It&#x27;s warm brown on top and beige underneath. A&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.audubon.org/field-guide/bird/willow-flycatcher&quot;, &quot;final_url&quot;: &quot;https://www.audubon.org/field-guide/bird/willow-flycatcher&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077392.459793, &quot;elapsed_seconds&quot;: 14.209258317947388, &quot;text_file&quot;: &quot;ref_bird_willow-flycatcher.txt&quot;, &quot;excerpt&quot;: &quot;Willow Flycatcher | Audubon Field Guide Skip to main content Open Search Bird Guide Tyrant Flycatchers Willow Flycatcher Listen 4 Willow Flycatcher Adult. Photo&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.audubon.org/field-guide/bird/alder-flycatcher&quot;, &quot;final_url&quot;: &quot;https://www.audubon.org/field-guide/bird/alder-flycatcher&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077392.460056, &quot;elapsed_seconds&quot;: 4.571017026901245, &quot;text_file&quot;: &quot;ref_bird_alder-flycatcher.txt&quot;, &quot;excerpt&quot;: &quot;Alder Flycatcher | Audubon Field Guide Skip to main content Open Search Bird Guide Tyrant Flycatchers Alder Flycatcher Listen 6 Alder Flycatcher Adult. Photo: S&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://ebird.org/species/cetwar1&quot;, &quot;final_url&quot;: &quot;https://ebird.org/species/cetwar1&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077397.0311873, &quot;elapsed_seconds&quot;: 2.724627733230591, &quot;text_file&quot;: &quot;ref_species_cetwar1.txt&quot;, &quot;excerpt&quot;: &quot;Making sure you&#x27;re not a bot! Making sure you&#x27;re not a bot! Loading... Anubis could not load its JavaScript. The server may be overloaded. Please reload the pag&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://ebird.org/species/eurwar1&quot;, &quot;final_url&quot;: &quot;https://ebird.org/species/eurwar1&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077399.75588, &quot;elapsed_seconds&quot;: 1.4811038970947266, &quot;text_file&quot;: &quot;ref_species_eurwar1.txt&quot;, &quot;excerpt&quot;: &quot;Making sure you&#x27;re not a bot! Making sure you&#x27;re not a bot! Loading... Anubis could not load its JavaScript. The server may be overloaded. Please reload the pag&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://ebird.org/species/bkfalb&quot;, &quot;final_url&quot;: &quot;https://ebird.org/species/bkfalb&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077401.2370734, &quot;elapsed_seconds&quot;: 1.4046902656555176, &quot;text_file&quot;: &quot;ref_species_bkfalb.txt&quot;, &quot;excerpt&quot;: &quot;Making sure you&#x27;re not a bot! Making sure you&#x27;re not a bot! Loading... Anubis could not load its JavaScript. The server may be overloaded. Please reload the pag&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://ebird.org/species/layalb&quot;, &quot;final_url&quot;: &quot;https://ebird.org/species/layalb&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077402.5476935, &quot;elapsed_seconds&quot;: 1.4316582679748535, &quot;text_file&quot;: &quot;ref_species_layalb.txt&quot;, &quot;excerpt&quot;: &quot;Making sure you&#x27;re not a bot! Making sure you&#x27;re not a bot! Loading... Anubis could not load its JavaScript. The server may be overloaded. Please reload the pag&quot;}
+</pre></details><details><summary>19 · agent_message · </summary><pre>语音合成已成功连通，选用普通话女声 Xiaoxiao，以略慢语速和短句停顿制作。初步画面中有隐于灌丛、芦苇的鸟，不能把背景叫声直接归给某只可见个体；这些段落会保守说明。部分独立资料页被网关或网站拒绝，已记录并放弃。
+</pre><pre></pre></details><details><summary>20 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/scratch/timed_run.py &lt;&lt;&#x27;PY&#x27;
+import subprocess,time,json,sys
+from pathlib import Path
+st=time.time(); result=subprocess.run(sys.argv[2:]); end=time.time()
+p=Path(&#x27;/workspace/submission/research_log.json&#x27;);v=json.loads(p.read_text());v[&#x27;events&#x27;].append({&#x27;activity&#x27;:sys.argv[1],&#x27;command&#x27;:sys.argv[2:],&#x27;started_unix&#x27;:st,&#x27;ended_unix&#x27;:end,&#x27;elapsed_seconds&#x27;:end-st,&#x27;returncode&#x27;:result.returncode});p.write_text(json.dumps(v,ensure_ascii=False,indent=2));raise SystemExit(result.returncode)
+PY
+python3 /workspace/scratch/timed_run.py &#x27;Download Chinese font for readable burnt-in subtitles&#x27; curl -L --fail --max-time 90 https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /workspace/scratch/NotoSansCJKsc-Regular.otf&quot;</pre><pre>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  9 15.6M    9 1600k    0     0   488k      0  0:00:32  0:00:03  0:00:29  488k
+ 20 15.6M   20 3216k    0     0   951k      0  0:00:16  0:00:03  0:00:13  951k
+ 80 15.6M   80 12.6M    0     0  2958k      0  0:00:05  0:00:04  0:00:01 2958k
+100 15.6M  100 15.6M    0     0  3471k      0  0:00:04  0:00:04 --:--:-- 4666k
+</pre></details><details><summary>21 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;cat /workspace/scratch/ref_birds-and-wildlife_cettis-warbler.txt /workspace/scratch/ref_birds-and-wildlife_reed-warbler.txt /workspace/scratch/ref_bird_willow-flycatcher.txt /workspace/scratch/ref_bird_alder-flycatcher.txt&#x27;</pre><pre>Cetti&#x27;s Warbler Facts | Cettia Cetti How to identify Small and rather undistinctive, Cetti&#x27;s Warbler (pronounced chetty) is a shy bird that likes to skulk about in patches of scrub and long grass. Its loud bursts of song mean you&#x27;ll usually hear it before you see it. But if you&#x27;re determined to spot one, look for a dark, rather stocky warbler with short wings and a full, rounded tail, diving for cover.
+
+This Schedule 1 species is one of the UK&#x27;s most recent new residents, first breeding in Kent in 1972. Call Cetti&#x27;s Warbler Jordi Calvet / xeno-canto Key Resident Passage Summer Winter * This map is intended as a guide. It shows general distribution rather than detailed, localised populations. Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Where best to see them Days out Radipole Lake Weymouth Radipole Lake is a wildlife oasis in bustling Weymouth. Don’t let its urban setting fool you, a vibrant patchwork of wetland and wildlife awaits. +9 more Days out Marazion Marsh Longrock Explore the whispering reedbeds and keep your eyes sharp for our shy but numerous inhabitants. Rest a while at the viewing area, or bring a flask and take your time over a cuppa among nature. Days out Rainham Marshes Purfleet A peaceful paradise for wetland birds on the outskirts of the capital, where you can spot waders, wildfowl, warblers and owls. +10 more Days out Strumpshaw Fen Strumpshaw This is a land where Bitterns sneak through reedbeds, orchids bejewel meadows and in summer, the Cuckoo calls reverberate through woodlands. +10 more Days out Lodmoor Weymouth Leave the hubbub of Weymouth and discover a saltmarsh reserve that&#x27;s busy with wildlife. Follow the trail into the grasses and look for waders, ducks and terns. +3 more Days out Rockland Marshes Rockland St Mary Watch Great Crested Grebes dancing, Barn Owls hunting silently, and the vivid flash of a Kingfisher. Rockland Marshes may be small, but there&#x27;s plenty to discover. Days out Middleton Lakes Bodymoor Heath Explore a landscape transformed from gravel pit to nature’s paradise. Open water gives way to wet grasslands and reedbeds, meadows and woodland that teem with life. +5 more Days out Brading Marshes Brading Hop on a ferry from the mainland and visit our reserve that makes up a small part of a beautiful island. Explore the River Yar valley, walking right down to the sea at Bembridge. Days out Exminster and Powderham Marshes Exminster Pull on your boots and explore the winding trails through this vibrant reserve, spotting birds and insects around the pools and canals. +2 more Key factsReed Warbler Bird Facts | Acrocephalus Scirpaceus How to identify The Reed Warbler is a plain unstreaked warbler. It&#x27;s warm brown on top and beige underneath. A summer visitor to breed in the UK, the largest concentrations are East Anglia and along the south coast. There are relatively few breeding in Scotland and Ireland. It spends winters in Africa. Call Reed Warbler Patrik Åberg / xeno-canto Key Resident Passage Summer Winter * This map is intended as a guide. It shows general distribution rather than detailed, localised populations. Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Where best to see them Days out Mersehead Caulkerbush There’s so much to explore at Mersehead. We have freshwater pools, woodland, farmland, mudflats and a fabulous beach. Come by this autumn to see great flocks of wintering Barnacle Geese. +10 more Days out Canvey Wick Canvey Island Discover the ex-oil refinery that&#x27;s now thriving with life, home to rare bees, beetles, birds and more. Key factsWillow Flycatcher | Audubon Field Guide Skip to main content Open Search Bird Guide Tyrant Flycatchers Willow Flycatcher Listen 4 Willow Flycatcher Adult. Photo: Andrew Weitzel/Flickr (CC-BY-SA-2.0) Adult. Photo: Susan Ward/Audubon Photography Awards Immature. Photo: Becky Matsubara/Flickr (CC-BY-2.0) Adult. Photo: Kelly Colgan Azar/Flickr (CC-BY-ND-2.0) Adult. Photo: Kelly Colgan Azar/Flickr (CC-BY-ND-2.0) Adult. Photo: Andrew Weitzel/Flickr (CC-BY-SA-2.0) Willow Flycatcher Empidonax traillii At a Glance Range &amp; Identification Behavior Conservation Explore More Back to Top At a Glance Until the 1970s, the Willow Flycatcher and the Alder Flycatcher masqueraded as just one species under the name &#x27;Traill&#x27;s Flycatcher.&#x27; They are essentially identical in looks, but their voices are different. Either kind may be found in thickets of either willow or alder shrubs, but their ranges are largely separate: Alder Flycatchers spend the summer mostly in Canada and Alaska, while Willow Flycatchers nest mostly south of the Canadian border. All bird guide text and rangemaps adapted from Lives of North American Birds by Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved. Category Perching Birds, Tyrant Flycatchers IUCN Status Least Concern Habitat Arroyos and Canyons, Fields, Meadows, and Grasslands, Forests and Woodlands, Freshwater Wetlands, Shrublands, Savannas, and Thickets Region California, Eastern Canada, Florida, Great Lakes, Mid Atlantic, New England, Northwest, Plains, Rocky Mountains, Southeast, Southwest, Texas, Western Canada Behavior Flitter, Hovering, Swooping Population 8.100.000 Range &amp; Identification Migration &amp; Range Maps Migrates relatively late in spring and early in fall. In North America, migrants are seen moving north mostly during mid to late May, moving south in August and September. Description Sexes similar — Length: 5.5 - 5.9 in (14 - 15 cm); wingspan: 8.7 - 9.4 in (22 - 24 cm); weight: 0.4 - 0.5 oz (11 - 14 g). The Willow Flycatcher is almost identical to Alder Flycatcher (and formerly considered same species). It tends to be browner and show less obvious eye-ring, but safely identified only by voice. Size About the size of a Robin, About the size of a Sparrow Color Gray, White Wing Shape Rounded Tail Shape Notched, Square-tipped Songs and Calls A wheezy fitz-bew or pit-speer. The song of the Alder Flycatcher is a burry fee-bee-o, descending more abruptly in pitch. Call Pattern Falling, Flat, Undulating Call Type Buzz, Chirp/Chip Habitat Bushes, willow thickets, brushy fields, upland copses. The Willow Flycatcher breeds in thickets of deciduous trees and shrubs, especially willows, or along woodland edges. Often near streams or marshes (especially in southern part of range), but may be found in drier habitats than Alder Flycatcher. Winters around clearings and second growth in the tropics, especially near water. Sign up for Audubon&#x27;s newsletter to learn more about birds like the Willow Flycatcher Email Zip Phone (optional) By submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our Privacy Policy and Terms &amp; Conditions . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Behavior Eggs A Willow Flycatcher generally lays 3-4 eggs. The eggs are pale buff to whitish, with brown spots concentrated toward larger end. Incubation is by female, 12-15 days. Young Both parents bring food for nestlings. Age of young at first flight about 12-14 days. Feeding Behavior Forages by watching from a perch and then flying out to catch insects. Usually forages from perches within tall shrubs or low trees; catches insects in mid-air, or takes them from foliage while hovering. Diet Differences in diet, if any, between the Willow Flycatcher and the Alder Flycatcher are not well known. Apparently eats mostly insects, including wasps, bees, winged ants, beetles, flies, caterpillars, moths, true bugs, and others. Also eats some spiders, a few berries, and possibly some seeds. Nesting Male defends nesting territory by singing (female may sing also). Courtship behavior is not well known, probably involves male actively chasing female through the trees. In some regions, Brown-headed Cowbirds often lay their eggs in nests of this species. Nest site is in a deciduous shrub or tree, especially in willow, 4-15 ft above the ground. Placed in a vertical or diagonal fork of a branch, or on top of a horizontal branch. Nest (built by female alone) is an open cup of grass, strips of bark, plant fibers, lined with plant down and other soft materials. Nest often has strips of plant material dangling from the bottom. Conservation Conservation Status The Willow Flycatcher has declined in some areas with loss of streamside habitat. The race that nests along streams in the southwest is now considered threatened or endangered. Change in Abundance Over Time Drawing on more than a century of community science from the Christmas Bird Count (CBC), this chart shows how this species’ relative abundance has shifted in recent decades. Explore more and get involved in the CBC . Climate Map Audubon’s scientists have used 140 million bird observations and sophisticated climate models to project how climate change will affect the range of the Willow Flycatcher. Learn even more in Audubon’s Survival By Degrees project . Climate Threats Facing the Willow Flycatcher Choose a temperature scenario below to see which threats will affect this species as warming increases. The same climate change-driven threats that put birds at risk will affect other wildlife and people, too. Explore More Murals, Art, and Culture Artists throughout history and across the U.S. have captured this bird in murals, books, and museum hangings. See what they’ve done: Attention! ¡Atención! Attention! La página que intenta visitar no está disponible en español. ¡Disculpa! La page que vous souhaitez consulter n&#x27;est pas disponible en français. Désolé! The page you are about to visit is not available in the language you selected. Sorry! The page you are about to visit is not available in Spanish. Sorry! The page you are about to visit is not available in French. Sorry! OKAlder Flycatcher | Audubon Field Guide Skip to main content Open Search Bird Guide Tyrant Flycatchers Alder Flycatcher Listen 6 Alder Flycatcher Adult. Photo: Simon Pierre Barrette/Wikimedia (CC BY-SA 4.0) Juvenile. Photo: Jukka Jantunen/Shutterstock Adult. Photo: Jukka Jantunen/Shutterstock Adult. Photo: Alan Schmierer Alder Flycatcher Empidonax alnorum At a Glance Range &amp; Identification Behavior Conservation Back to Top At a Glance A small bird that spends the summer catching flying insects in northern thickets. The Alder Flycatcher and the Willow Flycatcher are so similar to each other that they were considered one species until the 1970s. The only differences apparent in the field are in their voices. However, voice is important to these birds: many other kinds of songbirds have to learn their songs, but the Willow Flycatcher and the Alder Flycatcher are born instinctively knowing the voice of their own species. All bird guide text and rangemaps adapted from Lives of North American Birds by Kenn Kaufman© 1996, used by permission of Houghton Mifflin Harcourt Publishing Company. All rights reserved. Category Perching Birds, Tyrant Flycatchers IUCN Status Least Concern Habitat Forests and Woodlands, Freshwater Wetlands, Lakes, Ponds, and Rivers, Tundra and Boreal Habitats Region Alaska and The North, Eastern Canada, Florida, Great Lakes, Mid Atlantic, New England, Plains, Southeast, Texas, Western Canada Behavior Flitter, Hovering Population 120.000.000 Range &amp; Identification Migration &amp; Range Maps The Alder Flycatcher is more of a long-distance migrant than Willow Flycatcher, tending to nest farther north and winter farther south. Migrates late in spring and early in fall. Description Sexes similar — Length: 5-6 in (13-15 cm); wingspan: 8-9 in (20-23 cm); weight: 0.4-0.5 oz (11-14 g). the Alder Flycatcher is a large Empidonax flycatcher with greenish gray back, large bill, white throat. Eye-ring sometimes not well defined. Extremely similar to Willow Flycatcher, most safely identified by voice. Size About the size of a Sparrow Color Gray, Green, Olive, White Wing Shape Rounded Tail Shape Notched, Square-tipped Songs and Calls A burry fee-bee-o, rather different from the wheezy fitz-bew of the Willow Flycatcher. Call Pattern Falling, Flat, Undulating Call Type Buzz, Chirp/Chip, Whistle Habitat Willows, alders, brushy swamps, swales. Breeds in thickets of deciduous trees and shrubs, usually near water, as around streams, ponds, or bogs. Especially common in thickets of willows or alders. Winters in woodland edges or second growth in the tropics, especially near water. Sign up for Audubon&#x27;s newsletter to learn more about birds like the Alder Flycatcher Email Zip Phone (optional) By submitting my mobile number I agree to receive text messages from Audubon at 42248 about how I can help birds, including donation requests. Up to 4 msgs/month. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving messages. Read our Privacy Policy and Terms &amp; Conditions . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Behavior Eggs An Alder Flycatcher generally lays 3-4 eggs, rarely 2. The eggs are white, with brown spots concentrated toward larger end. Incubation is by female, 12-14 days. Young Both parents bring food for nestlings. Age of young at first flight about 13-14 days. Feeding Behavior Forages by watching from a perch and then flying out to catch insects. Usually forages from perches within tall shrubs or low trees; catches insects in mid-air, or takes them from foliage while hovering. Diet Differences in diet, if any, between the Alder Flycatcher and Willow Flycatcher are not well known. Apparently eats mostly insects, including wasps, bees, winged ants, beetles, flies, caterpillars, moths, true bugs, and others. Also eats some spiders, a few berries, and possibly some seeds. Nesting Male defends nesting territory by singing. Courtship behavior is not well known, probably involves male actively chasing female through the trees. Nest site is usually low in a deciduous shrub, averaging about 2 ft up, usually lower than 6 ft above the ground. Placed in a vertical or diagonal fork in a branch. Nest (probably built by female alone) is an open cup, usually built rather loosely of grass, weeds, strips of bark, small twigs, rootlets, lined with plant down or other soft materials. Nest may have strips of grass or bark dangling from the bottom. Conservation Conservation Status Much of breeding habitat of an Alder Flycatcher in the north is remote from effects of human disturbance. Numbers probably stable. Change in Abundance Over Time Drawing on more than a century of community science from the Christmas Bird Count (CBC), this chart shows how this species’ relative abundance has shifted in recent decades. Explore more and get involved in the CBC . Climate Map Audubon’s scientists have used 140 million bird observations and sophisticated climate models to project how climate change will affect the range of the Alder Flycatcher. Learn even more in Audubon’s Survival By Degrees project . Climate Threats Facing the Alder Flycatcher Choose a temperature scenario below to see which threats will affect this species as warming increases. The same climate change-driven threats that put birds at risk will affect other wildlife and people, too. Attention! ¡Atención! Attention! La página que intenta visitar no está disponible en español. ¡Disculpa! La page que vous souhaitez consulter n&#x27;est pas disponible en français. Désolé! The page you are about to visit is not available in the language you selected. Sorry! The page you are about to visit is not available in Spanish. Sorry! The page you are about to visit is not available in French. Sorry! OK</pre></details><details><summary>22 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;ffprobe -v error -show_entries format=duration -of json /workspace/scratch/voice_probe.mp3 &amp;&amp; cat /workspace/scratch/voice_probe.srt&#x27;</pre><pre>{
+    &quot;format&quot;: {
+        &quot;duration&quot;: &quot;6.624000&quot;
+    }
+}
+{&quot;type&quot;: &quot;SentenceBoundary&quot;, &quot;offset&quot;: 1000000, &quot;duration&quot;: 18578947, &quot;text&quot;: &quot;\u5148\u9759\u9759\u89c2\u5bdf\u3002&quot;}
+{&quot;type&quot;: &quot;SentenceBoundary&quot;, &quot;offset&quot;: 19078947, &quot;duration&quot;: 46447369, &quot;text&quot;: &quot;\u8fd9\u53ea\u5c0f\u9e1f\uff0c\u6709\u7740\u68d5\u8910\u8272\u7684\u80cc\u90e8\u548c\u7ec6\u957f\u7684\u5634\u3002&quot;}
+</pre></details><details><summary>23 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+p=&#x27;/workspace/scratch/research.py&#x27;;s=open(p).read();a=s.index(&#x27;urls=[&#x27;);b=s.index(&#x27;\\ndef run&#x27;,a)
+s=s[:a]+&#x27;&#x27;&#x27;urls=[
+&#x27;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Cettia%20cetti&#x27;,
+&#x27;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii&#x27;,
+&#x27;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus&#x27;,
+&#x27;https://www.audubon.org/field-guide/bird/black-footed-albatross&#x27;,
+&#x27;https://www.audubon.org/field-guide/bird/laysan-albatross&#x27;]&#x27;&#x27;&#x27;+s[b:]
+open(&#x27;/workspace/scratch/research3.py&#x27;,&#x27;w&#x27;).write(s)
+PY
+python3 /workspace/scratch/research3.py&quot;</pre><pre>{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Cettia%20cetti&quot;, &quot;final_url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Cettia%20cetti&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077449.3685575, &quot;elapsed_seconds&quot;: 1.0704400539398193, &quot;text_file&quot;: &quot;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Cettia%20cetti.txt&quot;, &quot;excerpt&quot;: &quot;Just a moment... Enable JavaScript and cookies to continue&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii&quot;, &quot;final_url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077449.368885, &quot;elapsed_seconds&quot;: 1.0785613059997559, &quot;text_file&quot;: &quot;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii.txt&quot;, &quot;excerpt&quot;: &quot;Just a moment... Enable JavaScript and cookies to continue&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus&quot;, &quot;final_url&quot;: &quot;https://avibase.bsc-eoc.org/species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus&quot;, &quot;status&quot;: 403, &quot;started_unix&quot;: 1795077449.3692524, &quot;elapsed_seconds&quot;: 1.0715911388397217, &quot;text_file&quot;: &quot;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus.txt&quot;, &quot;excerpt&quot;: &quot;Just a moment... Enable JavaScript and cookies to continue&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.audubon.org/field-guide/bird/black-footed-albatross&quot;, &quot;final_url&quot;: &quot;https://www.audubon.org/field-guide/bird/black-footed-albatross&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077449.369529, &quot;elapsed_seconds&quot;: 3.4411892890930176, &quot;text_file&quot;: &quot;ref_bird_black-footed-albatross.txt&quot;, &quot;excerpt&quot;: &quot;Black-footed Albatross | Audubon Field Guide Skip to main content Open Search Bird Guide Albatrosses Black-footed Albatross Listen 2 Black-footed Albatross Adul&quot;}
+{&quot;activity&quot;: &quot;Independent bird reference page request&quot;, &quot;url&quot;: &quot;https://www.audubon.org/field-guide/bird/laysan-albatross&quot;, &quot;final_url&quot;: &quot;https://www.audubon.org/field-guide/bird/laysan-albatross&quot;, &quot;status&quot;: 200, &quot;started_unix&quot;: 1795077450.4390883, &quot;elapsed_seconds&quot;: 3.1351261138916016, &quot;text_file&quot;: &quot;ref_bird_laysan-albatross.txt&quot;, &quot;excerpt&quot;: &quot;Laysan Albatross | Audubon Field Guide Skip to main content Open Search Bird Guide Albatrosses Laysan Albatross Listen 1 Laysan Albatross Adults. Photo: Kat Pal&quot;}
+</pre></details><details><summary>24 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+import time,json,importlib.metadata
+p=Path(&#x27;/workspace/submission/research_log.json&#x27;);v=json.loads(p.read_text())
+v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Tool selection, dependency installation and initial media inspection audit&#x27;,&#x27;recorded_unix&#x27;:time.time(),&#x27;details&#x27;:[&#x27;Selected ffmpeg/ffprobe, scipy PCM/STFT and Pillow frames; no other recognition models or subagents used.&#x27;,&#x27;First combined pip attempt for edge-tts and matplotlib terminated with exit 143; no matplotlib used or needed.&#x27;,&#x27;Retried installing edge-tts alone successfully; version &#x27;+importlib.metadata.version(&#x27;edge-tts&#x27;)+&#x27;. Initial pip stage was within task-start to 08:36:30 UTC; individual installation stopwatch was not captured, so no invented precise time.&#x27;,&#x27;Read full source video as samples and full-duration spectrograms; chapter 1 appears visually static in supplied source. Preserve without adding freezes.&#x27;,&#x27;eBird returned HTTP 200 bot challenges, not species content; do not cite.&#x27;,&#x27;Wikipedia policy denials abandoned without alternate URL/translation/cache retry. Cornell Cloudflare blocked pages abandoned.&#x27;]})
+v[&#x27;audio_monitoring_limit&#x27;]=&#x27;No native tool for hearing audio. Human-listening quality not directly verified. PCM amplitude, spectrogram, waveform, synthesized boundaries, clipping and alignment measured locally.&#x27;
+p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+PY&quot;</pre><pre></pre></details><details><summary>25 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+for name in [&#x27;black-footed-albatross&#x27;,&#x27;laysan-albatross&#x27;]:
+ s=Path(&#x27;/workspace/scratch/ref_bird_&#x27;+name+&#x27;.txt&#x27;).read_text()
+ for a,b in [(&#x27;Description&#x27;,&#x27;Habitat&#x27;),(&#x27;Songs and Calls&#x27;,&#x27;Habitat&#x27;),(&#x27;Young&#x27;,&#x27;Conservation&#x27;)]:
+  if a in s: print(name,a,s[s.index(a):s.index(b,s.index(a))][:3500])
+PY&quot;</pre><pre>black-footed-albatross Description Description Sexes similar; male slightly larger — Length: 2 ft 5 in-2 ft 8 in (74-84 cm); wingspan: 6 ft 5 in-7 ft 2 in (2-2.2 m); weight: 5 lb 5 oz-8 lb 2 oz (2.4-3.7 kg). The Black-footed Albatross is much larger than any of the other true seabirds seen commonly off the West Coast, with very long narrow wings, heavy bill, and slow wingbeats interspersed with long glides. In windy conditions, may not have to flap at all. Dusky brown, with white around base of bill and sometimes at base of tail; bill and feet dark. Size About the size of a Heron Color Black, Brown, Gray, White Wing Shape Long, Narrow, Pointed, Tapered Tail Shape Rounded, Short, Square-tipped, Wedge-shaped Songs and Calls Shrieks and squeals during fights over food; on nesting grounds, makes a variety of bill-clapping sounds, quacks, and whistles. Call Pattern Flat, Simple Call Type Chatter, Croak/Quack, Odd 
+black-footed-albatross Songs and Calls Songs and Calls Shrieks and squeals during fights over food; on nesting grounds, makes a variety of bill-clapping sounds, quacks, and whistles. Call Pattern Flat, Simple Call Type Chatter, Croak/Quack, Odd 
+black-footed-albatross Young Young For about 18-20 days after hatching, one parent broods and guards the nestling while other forages for food, taking turns every one or two days. Young is fed by regurgitation, by both parents, until it leaves the nest. Period from hatching to departure from island is about 140-150 days. Feeding Behavior Forages while swimming by seizing items at surface, up-ending to reach underwater, or diving short distances underwater with wings partly spread. Feeds mostly early morning and evening. Diet Around Hawaii, the Black-footed Albatross feeds heavily on the eggs of flying fish. Also eats many squid, adult fish including flying fish, and crustaceans. Will scavenge carrion or refuse at sea. Nesting First breeds at age five years or older. Courtship &quot;dance&quot; of pairs is complex, includes many ritualized movements including bowing head, mutual preening, swinging head from side to side, pointing bill straight up while calling. Nest:  Preferred nest sites are on higher parts of open sandy beaches. Nest is a simple, shallow depression, with a slightly built-up rim. 
+laysan-albatross Description Description Sexes similar; male slightly larger — Length: 2 ft 7 in-2 ft 10 in (79-89 cm); wingspan: 6 ft 5 in-6 ft 8 in (2-2.1 m); weight: 4 lb 12 oz-7 lb 5 oz (2.2-3.3 kg). The Laysan Albatross is a huge, long-winged seabird. Back and upper wings dark, body mostly white. Has dark marks on center of white underwing and U-shaped white pattern across rump. Size About the size of a Heron Color Black, Brown, Gray, White, Yellow Wing Shape Long, Narrow, Pointed, Tapered Tail Shape Rounded, Short, Square-tipped, Wedge-shaped Songs and Calls Silent at sea, except for grunting calls when squabbling over food. Call Pattern Flat, Simple Call Type Chatter, Croak/Quack, Drum, Odd, Raucous, Scream 
+laysan-albatross Songs and Calls Songs and Calls Silent at sea, except for grunting calls when squabbling over food. Call Pattern Flat, Simple Call Type Chatter, Croak/Quack, Drum, Odd, Raucous, Scream 
+laysan-albatross Young Young For 12-24 days after egg hatches, one parent stays with young while other forages for food. Nestling fed by regurgitation, by both parents. Period from hatching to departure from island averages about 165 days. Feeding Behavior Forages by seizing prey near water&#x27;s surface while swimming. Does much feeding at night (when squid are closer to surface), and eyes are adapted for night vision. Diet Small squid are apparently a staple fare of the Laysan Albatross, as they are for some larger albatrosses of southern hemisphere. Also eats fish and fish eggs, crustaceans, some carrion and refuse. Nesting First breeds at age of 7-9 years. Breeding season in Hawaii extends from November to July. Elaborate courtship &quot;dance,&quot; performed only by first-time breeders and pre-breeders, includes many movements including bowing head, mutual preening, swinging head from side to side, pointing bill straight up while calling. Nest:  Site is on open ground, preferably close to taller vegetation. Nest (begun by female, finished by both sexes) is shallow depression in ground, surrounded by built-up rim. 
+</pre></details><details><summary>26 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import inspect,edge_tts
+print(inspect.signature(edge_tts.Communicate))
+PY&quot;</pre><pre>(text: str, voice: str = &#x27;en-US-EmmaMultilingualNeural&#x27;, *, rate: str = &#x27;+0%&#x27;, volume: str = &#x27;+0%&#x27;, pitch: str = &#x27;+0Hz&#x27;, boundary: Literal[&#x27;WordBoundary&#x27;, &#x27;SentenceBoundary&#x27;] = &#x27;SentenceBoundary&#x27;, connector: Optional[aiohttp.connector.BaseConnector] = None, proxy: Optional[str] = None, connect_timeout: Optional[int] = 10, receive_timeout: Optional[int] = 60)
+</pre></details><details><summary>27 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import time,json
+from pathlib import Path
+p=Path(&#x27;/workspace/submission/research_log.json&#x27;);v=json.loads(p.read_text());v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Identification decisions and narration composition&#x27;,&#x27;started_unix&#x27;:1795077454.0,&#x27;ended_unix&#x27;:time.time(),&#x27;elapsed_seconds&#x27;:time.time()-1795077454.0,&#x27;timing_note&#x27;:&#x27;Stage begins after independent albatross reference retrieval, covers frame and spectrogram review plus self-written script composition.&#x27;,&#x27;decisions&#x27;:[&#x27;1: Cetti\\&#x27;s Warbler: stocky warm brown, short rounded wing, broad graduated tail, pale throat; static source close-up, no demonstrated vocalizing individual.&#x27;,&#x27;2: Cetti\\&#x27;s Warbler tentative: concealed in scrub; song short opening notes plus rapid repeated bursts, visually not confirmed.&#x27;,&#x27;3: Willow Flycatcher tentative: pale throat, weak eye ring, wingbars and repeated two-part song with arched terminal sweep; similar Empidonax require vocal distinction.&#x27;,&#x27;4: Eurasian Reed Warbler tentative: reedbed obscuration, varied ongoing chattering phrases, low visual certainty.&#x27;,&#x27;5: Black-footed Albatross adult and chick: dark plumage and dark bill, pale bill base; bill contact consistent with feeding.&#x27;,&#x27;6: Laysan Albatross: white head/body and dark back/wings, ritualized face-to-face head/bill gestures.&#x27;],&#x27;citations_policy&#x27;:&#x27;Only successfully read RSPB and Audubon text used; challenge/denied pages not used. No source media links or images from those pages downloaded.&#x27;});p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+PY&quot;</pre><pre></pre></details><details><summary>28 · command_execution · failed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/submission/narration_plan.json &lt;&lt;&#x27;JSON&#x27;
+[
+{\&quot;segment\&quot;:1,\&quot;start\&quot;:5.2,\&quot;slot_end\&quot;:16.8,\&quot;text\&quot;:\&quot;这是宽尾树莺。背部棕褐，喉部偏白，翅短，尾巴宽圆。\&quot;},
+{\&quot;segment\&quot;:1,\&quot;start\&quot;:25.0,\&quot;slot_end\&quot;:34.8,\&quot;text\&quot;:\&quot;它常藏在浓密的植被里。这里的近景中，并没有看见它张嘴鸣叫。\&quot;},
+{\&quot;segment\&quot;:1,\&quot;start\&quot;:35.8,\&quot;slot_end\&quot;:45.6,\&quot;text\&quot;:\&quot;原声中，重复的短音与成串的高音交替出现，但不能认定都来自画面中的个体。\&quot;},
+{\&quot;segment\&quot;:2,\&quot;start\&quot;:50.2,\&quot;slot_end\&quot;:58.0,\&quot;text\&quot;:\&quot;灌丛里这串突出的鸣唱，也暂定为宽尾树莺。\&quot;},
+{\&quot;segment\&quot;:2,\&quot;start\&quot;:61.5,\&quot;slot_end\&quot;:72.4,\&quot;text\&quot;:\&quot;几个短音接着密集重复，随后停顿。鸟藏在枝叶后，画面没有给出清楚的外形。\&quot;},
+{\&quot;segment\&quot;:3,\&quot;start\&quot;:78.1,\&quot;slot_end\&quot;:88.7,\&quot;text\&quot;:\&quot;枝头这只，暂定为柳纹霸鹟。留意浅色喉部、淡淡的翼斑，还有细细的眼圈。\&quot;},
+{\&quot;segment\&quot;:3,\&quot;start\&quot;:92.0,\&quot;slot_end\&quot;:100.4,\&quot;text\&quot;:\&quot;它不时转头、张嘴。短促的两段式鸣唱，比相似的外形更有辨识价值。\&quot;},
+{\&quot;segment\&quot;:4,\&quot;start\&quot;:105.0,\&quot;slot_end\&quot;:115.0,\&quot;text\&quot;:\&quot;这里暂定为芦苇莺。它常在苇丛中活动，但这次，鸟体被叶片挡住了。\&quot;},
+{\&quot;segment\&quot;:4,\&quot;start\&quot;:115.6,\&quot;slot_end\&quot;:121.0,\&quot;text\&quot;:\&quot;连续变化的鸣唱，是主要的辨认线索。\&quot;},
+{\&quot;segment\&quot;:5,\&quot;start\&quot;:128.3,\&quot;slot_end\&quot;:138.7,\&quot;text\&quot;:\&quot;黑脚信天翁的雏鸟，披着褐色绒羽，张着嘴。原声中有接连的尖细叫声。\&quot;},
+{\&quot;segment\&quot;:5,\&quot;start\&quot;:139.0,\&quot;slot_end\&quot;:148.0,\&quot;text\&quot;:\&quot;成鸟也是暗褐色，嘴基周围略浅。现在，它正低头靠近雏鸟。\&quot;},
+{\&quot;segment\&quot;:5,\&quot;start\&quot;:151.0,\&quot;slot_end\&quot;:158.0,\&quot;text\&quot;:\&quot;嘴部接触符合喂雏行为，但看不清食物。\&quot;},
+{\&quot;segment\&quot;:6,\&quot;start\&quot;:164.2,\&quot;slot_end\&quot;:172.0,\&quot;text\&quot;:\&quot;这是黑背信天翁，白色的头颈与深色背翅，对比鲜明。\&quot;},
+{\&quot;segment\&quot;:6,\&quot;start\&quot;:174.3,\&quot;slot_end\&quot;:184.9,\&quot;text\&quot;:\&quot;伸颈、仰头、相互点嘴，伴着叫声和喙击声，这是它们的求偶展示。\&quot;}
+]
+JSON
+cat &gt; /workspace/submission/synthesize_narration.py &lt;&lt;&#x27;PY&#x27;
+\&quot;\&quot;\&quot;Synthesize only self-written text; never upload source media. Uses explicit HTTP proxy.
+Run: python3 synthesize_narration.py [--force]
+Requires edge-tts 7.3.1 and ffmpeg. No speed alteration of generated speech.
+\&quot;\&quot;\&quot;
+import asyncio,json,os,time,subprocess,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent
+SCRATCH=ROOT.parent/&#x27;scratch&#x27;/&#x27;tts&#x27;
+SCRATCH.mkdir(parents=True,exist_ok=True)
+def log(d):
+ p=ROOT/&#x27;research_log.json&#x27;;v=json.loads(p.read_text());v[&#x27;events&#x27;].append(d);p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+async def main():
+ import edge_tts
+ plan=json.loads((ROOT/&#x27;narration_plan.json&#x27;).read_text())
+ proxy=os.environ.get(&#x27;HTTPS_PROXY&#x27;) or os.environ.get(&#x27;HTTP_PROXY&#x27;)
+ if not proxy:raise RuntimeError(&#x27;Environment HTTP(S) proxy required&#x27;)
+ for i,item in enumerate(plan):
+  mp3=SCRATCH/f&#x27;{i:02d}.mp3&#x27;;meta=SCRATCH/f&#x27;{i:02d}.json&#x27;;wav=SCRATCH/f&#x27;{i:02d}.wav&#x27;
+  if not mp3.exists() or &#x27;--force&#x27; in sys.argv:
+   st=time.time();bounds=[];err=None
+   try:
+    c=edge_tts.Communicate(item[&#x27;text&#x27;],&#x27;zh-CN-XiaoxiaoNeural&#x27;,rate=&#x27;-5%&#x27;,pitch=&#x27;+0Hz&#x27;,boundary=&#x27;WordBoundary&#x27;,proxy=proxy)
+    with mp3.open(&#x27;wb&#x27;) as f:
+     async for part in c.stream():
+      if part[&#x27;type&#x27;]==&#x27;audio&#x27;:f.write(part[&#x27;data&#x27;])
+      elif part[&#x27;type&#x27;]==&#x27;WordBoundary&#x27;:bounds.append(part)
+    meta.write_text(json.dumps(bounds,ensure_ascii=False,indent=2))
+   except Exception as e:err=repr(e)
+   log({&#x27;activity&#x27;:&#x27;Synthesize narration utterance&#x27;,&#x27;index&#x27;:i,&#x27;segment&#x27;:item[&#x27;segment&#x27;],&#x27;tool&#x27;:&#x27;edge-tts 7.3.1&#x27;,&#x27;voice&#x27;:&#x27;zh-CN-XiaoxiaoNeural&#x27;,&#x27;rate&#x27;:&#x27;-5%&#x27;,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;external_payload&#x27;:item[&#x27;text&#x27;],&#x27;proxy_explicit&#x27;:True,&#x27;error&#x27;:err})
+   if err:raise RuntimeError(err)
+  st=time.time()
+  subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-y&#x27;,&#x27;-i&#x27;,str(mp3),&#x27;-af&#x27;,&#x27;highpass=f=70,loudnorm=I=-19:TP=-3:LRA=9&#x27;,&#x27;-ar&#x27;,&#x27;48000&#x27;,&#x27;-ac&#x27;,&#x27;1&#x27;,&#x27;-c:a&#x27;,&#x27;pcm_s16le&#x27;,str(wav)],check=True)
+  import wave
+  with wave.open(str(wav)) as w:dur=w.getnframes()/w.getframerate()
+  item.update(index=i,wav=str(wav),metadata=str(meta),duration=dur,end=item[&#x27;start&#x27;]+dur)
+  log({&#x27;activity&#x27;:&#x27;Normalize and decode synthesized voice&#x27;,&#x27;index&#x27;:i,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;duration_seconds&#x27;:dur,&#x27;fits_slot&#x27;:item[&#x27;end&#x27;]&lt;=item[&#x27;slot_end&#x27;],&#x27;no_time_stretch&#x27;:True})
+  print(i,item[&#x27;segment&#x27;],f&#x27;{dur:.3f}&#x27;,f&#x27;end={item[\&quot;end\&quot;]:.3f}&#x27;, &#x27;OK&#x27; if item[&#x27;end&#x27;]&lt;=item[&#x27;slot_end&#x27;] else &#x27;OVERFLOW&#x27;,flush=True)
+ (ROOT/&#x27;narration_timing.json&#x27;).write_text(json.dumps(plan,ensure_ascii=False,indent=2))
+asyncio.run(main())
+PY
+python3 /workspace/submission/synthesize_narration.py&quot;</pre><pre>Traceback (most recent call last):
+  File &quot;/workspace/submission/synthesize_narration.py&quot;, line 39, in &lt;module&gt;
+    asyncio.run(main())
+  File &quot;/usr/lib/python3.12/asyncio/runners.py&quot;, line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.12/asyncio/runners.py&quot;, line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.12/asyncio/base_events.py&quot;, line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File &quot;/workspace/submission/synthesize_narration.py&quot;, line 30, in main
+    if err:raise RuntimeError(err)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: NoAudioReceived(&#x27;No audio was received. Please verify that your parameters are correct.&#x27;)
+</pre></details><details><summary>29 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;ffprobe -v error -select_streams v:0 -show_entries stream=start_time,duration,nb_frames -of json /candidate/birds_source.mp4 &amp;&amp; ls -l /workspace/scratch/tts&#x27;</pre><pre>{
+    &quot;programs&quot;: [
+
+    ],
+    &quot;streams&quot;: [
+        {
+            &quot;start_time&quot;: &quot;0.021029&quot;,
+            &quot;duration&quot;: &quot;185.475651&quot;,
+            &quot;nb_frames&quot;: &quot;5559&quot;
+        }
+    ]
+}
+total 0
+-rwxrwxrwx 1 1000 1000 0 Nov 19 08:41 00.mp3
+</pre></details><details><summary>30 · agent_message · </summary><pre>六段的解说稿已写好，并预留了多处原声窗口。配音测试成功，但正式调用的词级时间标记请求没有返回音频；我正在改用句级标记重试，再核对实际时长。不会用变速压缩旁白。
+</pre><pre></pre></details><details><summary>31 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from PIL import Image,ImageDraw
+import subprocess
+samples=[76.6,76.95,77.1,77.3,80.9,81.16,81.3,81.5]
+out=Image.new(&#x27;RGB&#x27;,(1200,500),&#x27;#222&#x27;);d=ImageDraw.Draw(out)
+for j,t in enumerate(samples):
+ p=f&#x27;/workspace/scratch/mouth_{j}.jpg&#x27;;subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-ss&#x27;,str(t),&#x27;-i&#x27;,&#x27;/candidate/birds_source.mp4&#x27;,&#x27;-frames:v&#x27;,&#x27;1&#x27;,&#x27;-y&#x27;,p],check=True)
+ im=Image.open(p).crop((440,140,700,370)).resize((300,230));xx=(j%4)*300; yy=(j//4)*250;out.paste(im,(xx,yy));d.text((xx+10,yy+232),f&#x27;{t:.2f} sec&#x27;,fill=&#x27;white&#x27;)
+out.save(&#x27;/workspace/scratch/mouth_sequence.jpg&#x27;)
+PY&quot;</pre><pre></pre></details><details><summary>32 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;cat /workspace/scratch/tts/00.json /workspace/scratch/tts/05.json&#x27;</pre><pre>[
+  {
+    &quot;type&quot;: &quot;SentenceBoundary&quot;,
+    &quot;offset&quot;: 1000000,
+    &quot;duration&quot;: 19763158,
+    &quot;text&quot;: &quot;这是宽尾树莺。&quot;
+  },
+  {
+    &quot;type&quot;: &quot;SentenceBoundary&quot;,
+    &quot;offset&quot;: 20263158,
+    &quot;duration&quot;: 44605263,
+    &quot;text&quot;: &quot;背部棕褐，喉部偏白，翅短，尾巴宽圆。&quot;
+  }
+][
+  {
+    &quot;type&quot;: &quot;SentenceBoundary&quot;,
+    &quot;offset&quot;: 1000000,
+    &quot;duration&quot;: 32263158,
+    &quot;text&quot;: &quot;枝头这只，暂定为柳纹霸鹟。&quot;
+  },
+  {
+    &quot;type&quot;: &quot;SentenceBoundary&quot;,
+    &quot;offset&quot;: 32763158,
+    &quot;duration&quot;: 47236842,
+    &quot;text&quot;: &quot;留意浅色喉部、淡淡的翼斑，还有细细的眼圈。&quot;
+  }
+]</pre></details><details><summary>33 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+p=&#x27;/workspace/submission/synthesize_narration.py&#x27;
+s=open(p).read().replace(\&quot;if not mp3.exists() or &#x27;--force&#x27; in sys.argv:\&quot;,\&quot;if not mp3.exists() or mp3.stat().st_size &lt; 1000 or &#x27;--force&#x27; in sys.argv:\&quot;)
+s=s.replace(\&quot;boundary=&#x27;WordBoundary&#x27;\&quot;,\&quot;boundary=&#x27;SentenceBoundary&#x27;\&quot;).replace(\&quot;elif part[&#x27;type&#x27;]==&#x27;WordBoundary&#x27;:bounds.append(part)\&quot;,\&quot;elif part[&#x27;type&#x27;] in (&#x27;WordBoundary&#x27;,&#x27;SentenceBoundary&#x27;):bounds.append(part)\&quot;)
+open(p,&#x27;w&#x27;).write(s)
+PY
+python3 /workspace/scratch/timed_run.py &#x27;Debug TTS failed word-boundary request: use tested sentence boundaries instead&#x27; python3 /workspace/submission/synthesize_narration.py&quot;</pre><pre>0 1 6.552 end=11.752 OK
+1 1 6.984 end=31.984 OK
+2 1 8.232 end=44.032 OK
+3 2 4.752 end=54.952 OK
+4 2 8.208 end=69.708 OK
+5 3 8.064 end=86.164 OK
+6 3 7.920 end=99.920 OK
+7 4 7.704 end=112.704 OK
+8 4 4.056 end=119.656 OK
+9 5 8.088 end=136.388 OK
+10 5 7.200 end=146.200 OK
+11 5 4.560 end=155.560 OK
+12 6 5.976 end=170.176 OK
+13 6 7.320 end=181.620 OK
+</pre></details><details><summary>34 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;cat /workspace/submission/narration_timing.json&#x27;</pre><pre>[
+  {
+    &quot;segment&quot;: 1,
+    &quot;start&quot;: 5.2,
+    &quot;slot_end&quot;: 16.8,
+    &quot;text&quot;: &quot;这是宽尾树莺。背部棕褐，喉部偏白，翅短，尾巴宽圆。&quot;,
+    &quot;index&quot;: 0,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/00.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/00.json&quot;,
+    &quot;duration&quot;: 6.552,
+    &quot;end&quot;: 11.751999999999999
+  },
+  {
+    &quot;segment&quot;: 1,
+    &quot;start&quot;: 25.0,
+    &quot;slot_end&quot;: 34.8,
+    &quot;text&quot;: &quot;它常藏在浓密的植被里。这里的近景中，并没有看见它张嘴鸣叫。&quot;,
+    &quot;index&quot;: 1,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/01.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/01.json&quot;,
+    &quot;duration&quot;: 6.984,
+    &quot;end&quot;: 31.984
+  },
+  {
+    &quot;segment&quot;: 1,
+    &quot;start&quot;: 35.8,
+    &quot;slot_end&quot;: 45.6,
+    &quot;text&quot;: &quot;原声中，重复的短音与成串的高音交替出现，但不能认定都来自画面中的个体。&quot;,
+    &quot;index&quot;: 2,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/02.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/02.json&quot;,
+    &quot;duration&quot;: 8.232,
+    &quot;end&quot;: 44.032
+  },
+  {
+    &quot;segment&quot;: 2,
+    &quot;start&quot;: 50.2,
+    &quot;slot_end&quot;: 58.0,
+    &quot;text&quot;: &quot;灌丛里这串突出的鸣唱，也暂定为宽尾树莺。&quot;,
+    &quot;index&quot;: 3,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/03.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/03.json&quot;,
+    &quot;duration&quot;: 4.752,
+    &quot;end&quot;: 54.952000000000005
+  },
+  {
+    &quot;segment&quot;: 2,
+    &quot;start&quot;: 61.5,
+    &quot;slot_end&quot;: 72.4,
+    &quot;text&quot;: &quot;几个短音接着密集重复，随后停顿。鸟藏在枝叶后，画面没有给出清楚的外形。&quot;,
+    &quot;index&quot;: 4,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/04.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/04.json&quot;,
+    &quot;duration&quot;: 8.208,
+    &quot;end&quot;: 69.708
+  },
+  {
+    &quot;segment&quot;: 3,
+    &quot;start&quot;: 78.1,
+    &quot;slot_end&quot;: 88.7,
+    &quot;text&quot;: &quot;枝头这只，暂定为柳纹霸鹟。留意浅色喉部、淡淡的翼斑，还有细细的眼圈。&quot;,
+    &quot;index&quot;: 5,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/05.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/05.json&quot;,
+    &quot;duration&quot;: 8.064,
+    &quot;end&quot;: 86.16399999999999
+  },
+  {
+    &quot;segment&quot;: 3,
+    &quot;start&quot;: 92.0,
+    &quot;slot_end&quot;: 100.4,
+    &quot;text&quot;: &quot;它不时转头、张嘴。短促的两段式鸣唱，比相似的外形更有辨识价值。&quot;,
+    &quot;index&quot;: 6,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/06.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/06.json&quot;,
+    &quot;duration&quot;: 7.92,
+    &quot;end&quot;: 99.92
+  },
+  {
+    &quot;segment&quot;: 4,
+    &quot;start&quot;: 105.0,
+    &quot;slot_end&quot;: 115.0,
+    &quot;text&quot;: &quot;这里暂定为芦苇莺。它常在苇丛中活动，但这次，鸟体被叶片挡住了。&quot;,
+    &quot;index&quot;: 7,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/07.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/07.json&quot;,
+    &quot;duration&quot;: 7.704,
+    &quot;end&quot;: 112.704
+  },
+  {
+    &quot;segment&quot;: 4,
+    &quot;start&quot;: 115.6,
+    &quot;slot_end&quot;: 121.0,
+    &quot;text&quot;: &quot;连续变化的鸣唱，是主要的辨认线索。&quot;,
+    &quot;index&quot;: 8,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/08.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/08.json&quot;,
+    &quot;duration&quot;: 4.056,
+    &quot;end&quot;: 119.65599999999999
+  },
+  {
+    &quot;segment&quot;: 5,
+    &quot;start&quot;: 128.3,
+    &quot;slot_end&quot;: 138.7,
+    &quot;text&quot;: &quot;黑脚信天翁的雏鸟，披着褐色绒羽，张着嘴。原声中有接连的尖细叫声。&quot;,
+    &quot;index&quot;: 9,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/09.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/09.json&quot;,
+    &quot;duration&quot;: 8.088,
+    &quot;end&quot;: 136.388
+  },
+  {
+    &quot;segment&quot;: 5,
+    &quot;start&quot;: 139.0,
+    &quot;slot_end&quot;: 148.0,
+    &quot;text&quot;: &quot;成鸟也是暗褐色，嘴基周围略浅。现在，它正低头靠近雏鸟。&quot;,
+    &quot;index&quot;: 10,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/10.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/10.json&quot;,
+    &quot;duration&quot;: 7.2,
+    &quot;end&quot;: 146.2
+  },
+  {
+    &quot;segment&quot;: 5,
+    &quot;start&quot;: 151.0,
+    &quot;slot_end&quot;: 158.0,
+    &quot;text&quot;: &quot;嘴部接触符合喂雏行为，但看不清食物。&quot;,
+    &quot;index&quot;: 11,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/11.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/11.json&quot;,
+    &quot;duration&quot;: 4.56,
+    &quot;end&quot;: 155.56
+  },
+  {
+    &quot;segment&quot;: 6,
+    &quot;start&quot;: 164.2,
+    &quot;slot_end&quot;: 172.0,
+    &quot;text&quot;: &quot;这是黑背信天翁，白色的头颈与深色背翅，对比鲜明。&quot;,
+    &quot;index&quot;: 12,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/12.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/12.json&quot;,
+    &quot;duration&quot;: 5.976,
+    &quot;end&quot;: 170.176
+  },
+  {
+    &quot;segment&quot;: 6,
+    &quot;start&quot;: 174.3,
+    &quot;slot_end&quot;: 184.9,
+    &quot;text&quot;: &quot;伸颈、仰头、相互点嘴，伴着叫声和喙击声，这是它们的求偶展示。&quot;,
+    &quot;index&quot;: 13,
+    &quot;wav&quot;: &quot;/workspace/scratch/tts/13.wav&quot;,
+    &quot;metadata&quot;: &quot;/workspace/scratch/tts/13.json&quot;,
+    &quot;duration&quot;: 7.32,
+    &quot;end&quot;: 181.62
+  }
+]</pre></details><details><summary>35 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/submission/build_film.py &lt;&lt;&#x27;PY&#x27;
+\&quot;\&quot;\&quot;Build aligned narration, original-sound mix, subtitles and six-segment evidence JSON.
+No source cuts, speed changes, substitute bird audio or background music.
+\&quot;\&quot;\&quot;
+import json,subprocess,time,re,math
+from pathlib import Path
+import numpy as np
+from scipy.io import wavfile
+from scipy.ndimage import maximum_filter1d,minimum_filter1d,uniform_filter1d
+ROOT=Path(__file__).resolve().parent;SCR=ROOT.parent/&#x27;scratch&#x27;;SR=48000
+DURATION=185.4666666666667;N=round(DURATION*SR)
+def log(d):
+ p=ROOT/&#x27;research_log.json&#x27;;v=json.loads(p.read_text());v[&#x27;events&#x27;].append(d);p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+def tcode(v,ass=False):
+ units=round(v*(100 if ass else 1000));base=100 if ass else 1000
+ sec,frac=divmod(units,base);hrs,sec=divmod(sec,3600);mins,sec=divmod(sec,60)
+ return f&#x27;{hrs}:{mins:02}:{sec:02}.{frac:02}&#x27; if ass else f&#x27;{hrs:02}:{mins:02}:{sec:02},{frac:03}&#x27;
+def caption_chunks(s,limit=24):
+ parts=[]
+ while len(s)&gt;limit:
+  cuts=[m.end() for m in re.finditer(&#x27;[，；、：。！？]&#x27;,s[:limit]) if m.end()&gt;=8]
+  cut=cuts[-1] if cuts else limit;parts.append(s[:cut]);s=s[cut:]
+ if s:parts.append(s)
+ return parts
+st=time.time();plan=json.loads((ROOT/&#x27;narration_timing.json&#x27;).read_text());chap=json.load(open(&#x27;/candidate/chapters.json&#x27;))[&#x27;segments&#x27;]
+narr=np.zeros(N,np.float32);captions=[]
+for item in plan:
+ sr,a=wavfile.read(item[&#x27;wav&#x27;]);assert sr==SR
+ a=a.astype(np.float32)/32768;pos=round(item[&#x27;start&#x27;]*SR);assert pos+len(a)&lt;=N
+ # Tiny edge fades suppress discontinuities in otherwise silent MP3 decoder padding.
+ fade=min(240,len(a)//2);a[:fade]*=np.linspace(0,1,fade);a[-fade:]*=np.linspace(1,0,fade)
+ narr[pos:pos+len(a)]+=a
+ bounds=json.load(open(item[&#x27;metadata&#x27;]))
+ assert &#x27;&#x27;.join(b[&#x27;text&#x27;] for b in bounds)==item[&#x27;text&#x27;]
+ for b in bounds:
+  chunks=caption_chunks(b[&#x27;text&#x27;]);weights=[sum(0.55 if c in &#x27;，；、：。！？&#x27; else 1 for c in s) for s in chunks];total=sum(weights);cursor=0
+  a0=item[&#x27;start&#x27;]+b[&#x27;offset&#x27;]/1e7;dur=b[&#x27;duration&#x27;]/1e7
+  for text,w in zip(chunks,weights):
+   a1=a0+dur*cursor/total;cursor+=w;b1=min(a0+dur*cursor/total,item[&#x27;end&#x27;])
+   captions.append({&#x27;start&#x27;:a1,&#x27;end&#x27;:b1,&#x27;text&#x27;:text,&#x27;segment&#x27;:item[&#x27;segment&#x27;]})
+# Resolve small overlapping sentence markers returned by service.
+for c,n in zip(captions,captions[1:]):c[&#x27;end&#x27;]=min(c[&#x27;end&#x27;],n[&#x27;start&#x27;])
+assert all(c[&#x27;end&#x27;]&gt;c[&#x27;start&#x27;] for c in captions)
+assert &#x27;&#x27;.join(c[&#x27;text&#x27;] for c in captions)==&#x27;&#x27;.join(i[&#x27;text&#x27;] for i in plan)
+wavfile.write(ROOT/&#x27;narration.wav&#x27;,SR,np.int16(np.clip(narr,-1,1)*32767))
+srt=&#x27;\\n\\n&#x27;.join(f&#x27;{i+1}\\n{tcode(c[\&quot;start\&quot;])} --&gt; {tcode(c[\&quot;end\&quot;])}\\n{c[\&quot;text\&quot;]}&#x27; for i,c in enumerate(captions))+&#x27;\\n&#x27;
+(ROOT/&#x27;subtitles.srt&#x27;).write_text(srt,encoding=&#x27;utf-8&#x27;)
+# ASS mirrors SRT text and timing exactly, using a single bottom line clear of main birds.
+ass=&#x27;&#x27;&#x27;[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans CJK SC,30,&amp;H00FFFFFF,&amp;H00FFFFFF,&amp;H00101010,&amp;H70000000,0,0,0,0,100,100,0,0,1,2,1,2,42,42,14,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+&#x27;&#x27;&#x27;
+for c in captions:ass+=f&#x27;Dialogue: 0,{tcode(c[\&quot;start\&quot;],True)},{tcode(c[\&quot;end\&quot;],True)},Default,,0,0,0,,{c[\&quot;text\&quot;]}\\n&#x27;
+(SCR/&#x27;subtitles.ass&#x27;).write_text(ass)
+# Decode source at original timeline. Original stereo samples are never relocated or repeated.
+subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-y&#x27;,&#x27;-i&#x27;,&#x27;/candidate/birds_source.mp4&#x27;,&#x27;-vn&#x27;,&#x27;-ac&#x27;,&#x27;2&#x27;,&#x27;-ar&#x27;,str(SR),&#x27;-c:a&#x27;,&#x27;pcm_s16le&#x27;,str(SCR/&#x27;original_stereo.wav&#x27;)],check=True)
+sr,original=wavfile.read(SCR/&#x27;original_stereo.wav&#x27;);original=original.astype(np.float32)/32768
+if len(original)&lt;N:original=np.pad(original,((0,N-len(original)),(0,0)))
+original=original[:N]
+base_db=[-5,7,-2,16,16,2];duck_db=[-15,-10,-10,-6,-7,-11]
+gain=np.empty(N,np.float32)
+for j,c in enumerate(chap):gain[round(c[&#x27;start&#x27;]*SR):round(c[&#x27;end&#x27;]*SR)]=10**(base_db[j]/20)
+# Smooth only gain at chapter joins, preserving all source sample timing.
+gain=uniform_filter1d(gain,size=round(.04*SR))
+duck=np.ones(N,np.float32)
+for item in plan:
+ a=round(item[&#x27;start&#x27;]*SR);b=min(N,round(item[&#x27;end&#x27;]*SR));g=10**(duck_db[item[&#x27;segment&#x27;]-1]/20)
+ pre=min(round(.18*SR),a);post=min(round(.30*SR),N-b)
+ duck[a-pre:a]=np.minimum(duck[a-pre:a],np.linspace(1,g,pre));duck[a:b]=np.minimum(duck[a:b],g);duck[b:b+post]=np.minimum(duck[b:b+post],np.linspace(g,1,post))
+gain*=duck
+# Limit isolated source transients by local gain only; no replacement or synthesis.
+source_peak=maximum_filter1d(np.max(np.abs(original),axis=1)*gain,size=round(.08*SR))
+safety=np.minimum(1,0.60/np.maximum(source_peak,1e-6));safety=minimum_filter1d(safety,size=round(.04*SR));gain*=safety
+kept=original*gain[:,None]
+mix=kept+narr[:,None]
+peak=float(np.max(np.abs(mix)));master=min(1,.89/max(peak,1e-6));mix*=master
+wavfile.write(SCR/&#x27;mix.wav&#x27;,SR,np.int16(np.clip(mix,-1,1)*32767))
+np.save(SCR/&#x27;original_gain_envelope.npy&#x27;,gain*master)
+# Evidence explicitly distinguishes observed PCM/spectral patterns from unverified sound ownership.
+data=[
+ {&#x27;chinese_name&#x27;:&#x27;宽尾树莺&#x27;,&#x27;english_name&#x27;:\&quot;Cetti&#x27;s Warbler\&quot;,&#x27;scientific_name&#x27;:&#x27;Cettia cetti&#x27;,&#x27;confidence&#x27;:90,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:0.3,&#x27;end&#x27;:44.5,&#x27;description&#x27;:&#x27;近景鸟由手指托持；上体暖棕褐，喉部灰白，眼上有弱浅色纹，嘴细长，翅短而圆，尾宽而有明显层次。所抽取各时点外观几乎不变，未见张嘴发声，不把音轨当作手中个体的同步鸣叫。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:0.5,&#x27;end&#x27;:4.8,&#x27;description&#x27;:&#x27;原始PCM声谱可见约每0.5至0.6秒一个的强短音，约2.5至3千赫的能量团及较高谐波；属反复的短叫声结构。未直接听音，无法确认与静态近景个体的对应。&#x27;},{&#x27;start&#x27;:17.6,&#x27;end&#x27;:24.8,&#x27;description&#x27;:&#x27;约5.5至7千赫出现另一组密集重复音节，与前面较低短音形成明显结构变化。保守称成串高音，不把所有声源都定位为宽尾树莺。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:0.2,&#x27;end&#x27;:5.0},{&#x27;start&#x27;:17.0,&#x27;end&#x27;:24.5},{&#x27;start&#x27;:32.4,&#x27;end&#x27;:35.5}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler&#x27;,&#x27;supports&#x27;:&#x27;独立图鉴文字：体型较敦实、短翅、丰满圆尾，常隐于灌丛和高草，鸣唱为响亮的爆发短句；帮助外形判断与一般习性介绍，不用于声源定位。&#x27;}]},
+ {&#x27;chinese_name&#x27;:&#x27;宽尾树莺（暂定）&#x27;,&#x27;english_name&#x27;:\&quot;Cetti&#x27;s Warbler (tentative)\&quot;,&#x27;scientific_name&#x27;:&#x27;Cettia cetti&#x27;,&#x27;confidence&#x27;:78,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:46.2,&#x27;end&#x27;:72.5,&#x27;description&#x27;:&#x27;镜头主要为浓密灌丛、交错细枝与草叶；未能稳定辨清鸟体或辨种外形，因此该章主要依据音节结构作单一暂定判断。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:46.35,&#x27;end&#x27;:49.5,&#x27;description&#x27;:&#x27;声谱呈数个间隔较开的短音后接一串上扬、重复的密集音节。其爆发短句结构支持宽尾树莺的暂定判断，但没有可见发声个体可供确认。&#x27;},{&#x27;start&#x27;:52.2,&#x27;end&#x27;:59.4,&#x27;description&#x27;:&#x27;较强短音连续重复后停止；原声中还叠加较细的频率线和环境底声，不能将整段所有声音认作同一只鸟。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:46.3,&#x27;end&#x27;:50.0},{&#x27;start&#x27;:55.3,&#x27;end&#x27;:61.2},{&#x27;start&#x27;:70.1,&#x27;end&#x27;:72.5}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.rspb.org.uk/birds-and-wildlife/cettis-warbler&#x27;,&#x27;supports&#x27;:&#x27;独立图鉴对隐蔽于灌丛的习性和爆发式响亮鸣唱的文字介绍；不构成隐蔽个体的外形确认。&#x27;}]},
+ {&#x27;chinese_name&#x27;:&#x27;柳纹霸鹟（暂定）&#x27;,&#x27;english_name&#x27;:&#x27;Willow Flycatcher (tentative)&#x27;,&#x27;scientific_name&#x27;:&#x27;Empidonax traillii&#x27;,&#x27;confidence&#x27;:85,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:74.0,&#x27;end&#x27;:98.8,&#x27;description&#x27;:&#x27;小型鸟停在裸露斜枝上，头背灰褐略带橄榄色，喉白、腹浅，翼上淡色条纹，眼圈细弱，嘴基较宽，下嘴偏浅；尾下垂，反复转头。&#x27;},{&#x27;start&#x27;:76.6,&#x27;end&#x27;:77.3,&#x27;description&#x27;:&#x27;逐帧核对76.95秒可见抬嘴张口，随后合拢，与同段短歌时间邻近；80.9秒附近也见张口动作。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:76.85,&#x27;end&#x27;:77.35,&#x27;description&#x27;:&#x27;局部STFT显示一个较粗糙的短起音，后接约2.6至4.8千赫先升后落的弧形音节，组成紧凑两段式短歌。80.9至81.4秒等处重复近似结构，支持柳纹霸鹟的fitz-bew型歌；相似纹霸鹟外形难分，故仍暂定。&#x27;},{&#x27;start&#x27;:88.8,&#x27;end&#x27;:90.1,&#x27;description&#x27;:&#x27;无旁白窗口中保留另一相似短歌，背景还有细弱其他频率轨迹；不把背景所有音节都归为主体鸟。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:73.0,&#x27;end&#x27;:77.9},{&#x27;start&#x27;:86.6,&#x27;end&#x27;:91.7}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.audubon.org/field-guide/bird/willow-flycatcher&#x27;,&#x27;supports&#x27;:&#x27;柳纹霸鹟与桤木纹霸鹟外形极近似，眼圈往往更弱，辨别主要靠声音；柳纹歌为fitz-bew。&#x27;},{&#x27;url&#x27;:&#x27;https://www.audubon.org/field-guide/bird/alder-flycatcher&#x27;,&#x27;supports&#x27;:&#x27;独立相似种对比：桤木纹霸鹟歌声为fee-bee-o，外形不足以安全区分；据此保留暂定措辞。&#x27;}]},
+ {&#x27;chinese_name&#x27;:&#x27;芦苇莺（暂定）&#x27;,&#x27;english_name&#x27;:&#x27;Eurasian Reed Warbler (tentative)&#x27;,&#x27;scientific_name&#x27;:&#x27;Acrocephalus scirpaceus&#x27;,&#x27;confidence&#x27;:61,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:100.95,&#x27;end&#x27;:123.7,&#x27;description&#x27;:&#x27;前景为密集直立芦苇和叶片，焦点、遮挡使鸟体无法可靠解析；没有据此声称看见捕食、筑巢或清楚的种级羽色。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:101.2,&#x27;end&#x27;:112.9,&#x27;description&#x27;:&#x27;原始音轨总体较轻；提高显示动态范围后，声谱可见约2至7千赫的多种短音、弯曲扫频及粗糙音群，连成变化较多的鸣唱。苇丛场景与持续多变短语支持暂定芦苇莺，无法排除近似种。&#x27;},{&#x27;start&#x27;:120.0,&#x27;end&#x27;:123.7,&#x27;description&#x27;:&#x27;后段仍有短音群及扫频音节，保留为无旁白原声窗口。鸟被遮挡，具体发声位置不能确认。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:100.95,&#x27;end&#x27;:104.8},{&#x27;start&#x27;:113.1,&#x27;end&#x27;:115.35},{&#x27;start&#x27;:120.0,&#x27;end&#x27;:123.75}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.rspb.org.uk/birds-and-wildlife/reed-warbler&#x27;,&#x27;supports&#x27;:&#x27;独立物种名Acrocephalus scirpaceus和无纵纹、上体暖棕下体米色等一般描述；因片中遮挡，未将这些参考羽色描述冒充已观察事实。&#x27;}]},
+ {&#x27;chinese_name&#x27;:&#x27;黑脚信天翁&#x27;,&#x27;english_name&#x27;:&#x27;Black-footed Albatross&#x27;,&#x27;scientific_name&#x27;:&#x27;Phoebastria nigripes&#x27;,&#x27;confidence&#x27;:98,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:124.2,&#x27;end&#x27;:131.9,&#x27;description&#x27;:&#x27;褐色绒羽雏鸟坐在地面，伸颈张嘴，嘴端弯钩可见。&#x27;},{&#x27;start&#x27;:132.2,&#x27;end&#x27;:145.5,&#x27;description&#x27;:&#x27;旁边出现通体暗褐的成鸟，嘴为暗灰，嘴基和眼下附近颜色略浅；符合黑脚信天翁外形。&#x27;},{&#x27;start&#x27;:146.0,&#x27;end&#x27;:157.8,&#x27;description&#x27;:&#x27;成鸟俯身，嘴与雏鸟张开的嘴相接、伸入，符合喂雏过程；未见可辨认的具体食物，不指认食物种类。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:124.3,&#x27;end&#x27;:136.7,&#x27;description&#x27;:&#x27;低幅原声经增益后，声谱显示多次约3至5千赫较细的上扬、下落叫声轨迹，间有短促宽频信号；雏鸟同段多次张口，但群落背景存在其他鸟，无法逐一断言每声都来自此雏鸟。&#x27;},{&#x27;start&#x27;:146.5,&#x27;end&#x27;:150.8,&#x27;description&#x27;:&#x27;嘴部接触过程保留无旁白窗口，原有细弱叫声与环境声仍在原时间位置。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:124.2,&#x27;end&#x27;:128.1},{&#x27;start&#x27;:146.6,&#x27;end&#x27;:150.8},{&#x27;start&#x27;:155.9,&#x27;end&#x27;:158.25}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.audubon.org/field-guide/bird/black-footed-albatross&#x27;,&#x27;supports&#x27;:&#x27;成鸟暗褐、暗嘴暗足、嘴基带白；双亲反刍喂雏；繁殖地会有多种鸣叫与喙部敲击声。片中具体食物和逐声归属未据参考推定。&#x27;}]},
+ {&#x27;chinese_name&#x27;:&#x27;黑背信天翁&#x27;,&#x27;english_name&#x27;:&#x27;Laysan Albatross&#x27;,&#x27;scientific_name&#x27;:&#x27;Phoebastria immutabilis&#x27;,&#x27;confidence&#x27;:99,
+ &#x27;visual_evidence&#x27;:[{&#x27;start&#x27;:158.7,&#x27;end&#x27;:170.2,&#x27;description&#x27;:&#x27;前景成鸟头、颈、腹白，背部和上翼深色，眼周深色，嘴浅而端部带钩；两鸟面对面，伸颈、低头并快速转动头部。&#x27;},{&#x27;start&#x27;:173.0,&#x27;end&#x27;:184.8,&#x27;description&#x27;:&#x27;两鸟交替仰头举嘴，靠近彼此嘴部并点动；背景为多只成鸟和绒羽雏鸟，符合繁殖群中仪式化求偶展示，而非据此判断性别或配对成功。&#x27;}],
+ &#x27;audio_evidence&#x27;:[{&#x27;start&#x27;:158.8,&#x27;end&#x27;:164.0,&#x27;description&#x27;:&#x27;声谱可见持续谐波带与短促宽频脉冲交替，体现较长叫声与短促敲击类声音；与画面开嘴、伸颈和快速喙动作同段出现，支持旁白对鸣叫及喙击声的描述。&#x27;},{&#x27;start&#x27;:170.6,&#x27;end&#x27;:174.1,&#x27;description&#x27;:&#x27;原声窗口内仍有周期性音与脉冲；群落里有多只鸟，不能逐声确认由前景哪只发出。未亲耳核听。&#x27;}],
+ &#x27;original_sound_windows&#x27;:[{&#x27;start&#x27;:158.7,&#x27;end&#x27;:164.0},{&#x27;start&#x27;:170.6,&#x27;end&#x27;:174.1},{&#x27;start&#x27;:182.0,&#x27;end&#x27;:185.3}],
+ &#x27;sources&#x27;:[{&#x27;url&#x27;:&#x27;https://www.audubon.org/field-guide/bird/laysan-albatross&#x27;,&#x27;supports&#x27;:&#x27;背、上翼暗色，身体主要白色；复杂求偶舞含低头、摆头和举嘴向上等仪式动作。说明行为类型，不推断个体性别或繁殖结果。&#x27;}]}
+]
+for c,d in zip(chap,data):
+ d.update(segment=c[&#x27;segment&#x27;],start=c[&#x27;start&#x27;],end=c[&#x27;end&#x27;])
+ d[&#x27;narration&#x27;]=[{&#x27;start&#x27;:round(i[&#x27;start&#x27;],3),&#x27;end&#x27;:round(i[&#x27;end&#x27;],3),&#x27;text&#x27;:i[&#x27;text&#x27;]} for i in plan if i[&#x27;segment&#x27;]==c[&#x27;segment&#x27;]]
+ for w in d[&#x27;original_sound_windows&#x27;]:
+  assert w[&#x27;end&#x27;]-w[&#x27;start&#x27;]&gt;=2
+  lo,hi=round(w[&#x27;start&#x27;]*SR),round(w[&#x27;end&#x27;]*SR);assert not np.any(narr[lo:hi])
+result={&#x27;audio_analysis_method&#x27;:&#x27;没有可直接听音的原生工具，未声称亲耳听过。用ffmpeg把整条原轨解码为PCM，实际读取采样，以scipy STFT（全章512点窗、局部1024点窗）生成全六章及局部声谱；Pillow逐帧观察形态、张口和嘴部接触，并核对声谱时间。声音类型与物种判断由本模型完成，未调用其他识别模型或子代理。谱形不能完全代替听感，隐蔽鸟和群落背景的声源归属有明确限制。旁白人声由edge-tts XiaoxiaoNeural生成，只上传自写文本，未上传输入音视频；人声的真实听感未能直接试听，仅核对采样、响度、失真风险和时间。&#x27;,&#x27;segments&#x27;:data}
+(ROOT/&#x27;segments.json&#x27;).write_text(json.dumps(result,ensure_ascii=False,indent=2))
+report={&#x27;sample_rate&#x27;:SR,&#x27;duration&#x27;:N/SR,&#x27;narration_peak&#x27;:float(np.max(np.abs(narr))),&#x27;mix_peak_before_master&#x27;:peak,&#x27;master_gain&#x27;:master,&#x27;mix_peak&#x27;:float(np.max(np.abs(mix))),&#x27;voice_seconds_including_clip_padding&#x27;:sum(i[&#x27;duration&#x27;] for i in plan),&#x27;caption_count&#x27;:len(captions),&#x27;max_caption_characters&#x27;:max(map(lambda c:len(c[&#x27;text&#x27;]),captions)),&#x27;source_gain_db_per_chapter&#x27;:base_db,&#x27;source_duck_db_per_chapter&#x27;:duck_db,&#x27;original_windows_verified_silent_narration&#x27;:True}
+(ROOT/&#x27;audio_build_report.json&#x27;).write_text(json.dumps(report,indent=2));log({&#x27;activity&#x27;:&#x27;Build aligned PCM narration, subtitles, source-preserving mix and segment evidence&#x27;,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;result&#x27;:report});print(json.dumps(report,indent=2))
+PY
+python3 /workspace/scratch/timed_run.py &#x27;Produce narration track, captions, original-sound mix and evidence JSON&#x27; python3 /workspace/submission/build_film.py&quot;</pre><pre>{
+  &quot;sample_rate&quot;: 48000,
+  &quot;duration&quot;: 185.46666666666667,
+  &quot;narration_peak&quot;: 0.707244873046875,
+  &quot;mix_peak_before_master&quot;: 0.751827597618103,
+  &quot;master_gain&quot;: 1,
+  &quot;mix_peak&quot;: 0.751827597618103,
+  &quot;voice_seconds_including_clip_padding&quot;: 95.616,
+  &quot;caption_count&quot;: 24,
+  &quot;max_caption_characters&quot;: 24,
+  &quot;source_gain_db_per_chapter&quot;: [
+    -5,
+    7,
+    -2,
+    16,
+    16,
+    2
+  ],
+  &quot;source_duck_db_per_chapter&quot;: [
+    -15,
+    -10,
+    -10,
+    -6,
+    -7,
+    -11
+  ],
+  &quot;original_windows_verified_silent_narration&quot;: true
+}
+</pre></details><details><summary>36 · agent_message · </summary><pre>全部旁白已生成，均能以自然语速放入对应章节；独立旁白轨共约 95.6 秒，其余时间保留原声。已核对每章都有至少 2 秒的无旁白窗口。现在正在输出成片，随后检查字幕位置、时长和音频指标。
+</pre><pre></pre></details><details><summary>37 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;mkdir -p /workspace/scratch/fonts &amp;&amp; cp /workspace/scratch/NotoSansCJKsc-Regular.otf /workspace/scratch/fonts/ &amp;&amp; sed -i &#x27;s@fontsdir=/workspace/scratch,fps@fontsdir=/workspace/scratch/fonts,fps@&#x27; /workspace/submission/render_film.sh
+cat /workspace/submission/subtitles.srt&quot;</pre><pre>1
+00:00:05,300 --&gt; 00:00:07,226
+这是宽尾树莺。
+
+2
+00:00:07,226 --&gt; 00:00:11,687
+背部棕褐，喉部偏白，翅短，尾巴宽圆。
+
+3
+00:00:25,100 --&gt; 00:00:27,684
+它常藏在浓密的植被里。
+
+4
+00:00:27,684 --&gt; 00:00:31,921
+这里的近景中，并没有看见它张嘴鸣叫。
+
+5
+00:00:35,900 --&gt; 00:00:40,510
+原声中，重复的短音与成串的高音交替出现，
+
+6
+00:00:40,510 --&gt; 00:00:44,021
+但不能认定都来自画面中的个体。
+
+7
+00:00:50,300 --&gt; 00:00:54,934
+灌丛里这串突出的鸣唱，也暂定为宽尾树莺。
+
+8
+00:01:01,600 --&gt; 00:01:05,395
+几个短音接着密集重复，随后停顿。
+
+9
+00:01:05,395 --&gt; 00:01:09,658
+鸟藏在枝叶后，画面没有给出清楚的外形。
+
+10
+00:01:18,200 --&gt; 00:01:21,376
+枝头这只，暂定为柳纹霸鹟。
+
+11
+00:01:21,376 --&gt; 00:01:26,100
+留意浅色喉部、淡淡的翼斑，还有细细的眼圈。
+
+12
+00:01:32,100 --&gt; 00:01:34,553
+它不时转头、张嘴。
+
+13
+00:01:34,553 --&gt; 00:01:39,868
+短促的两段式鸣唱，比相似的外形更有辨识价值。
+
+14
+00:01:45,100 --&gt; 00:01:47,434
+这里暂定为芦苇莺。
+
+15
+00:01:47,434 --&gt; 00:01:52,632
+它常在苇丛中活动，但这次，鸟体被叶片挡住了。
+
+16
+00:01:55,700 --&gt; 00:01:59,637
+连续变化的鸣唱，是主要的辨认线索。
+
+17
+00:02:08,400 --&gt; 00:02:13,182
+黑脚信天翁的雏鸟，披着褐色绒羽，张着嘴。
+
+18
+00:02:13,182 --&gt; 00:02:16,313
+原声中有接连的尖细叫声。
+
+19
+00:02:19,100 --&gt; 00:02:22,908
+成鸟也是暗褐色，嘴基周围略浅。
+
+20
+00:02:22,908 --&gt; 00:02:26,145
+现在，它正低头靠近雏鸟。
+
+21
+00:02:31,100 --&gt; 00:02:35,550
+嘴部接触符合喂雏行为，但看不清食物。
+
+22
+00:02:44,300 --&gt; 00:02:50,158
+这是黑背信天翁，白色的头颈与深色背翅，对比鲜明。
+
+23
+00:02:54,400 --&gt; 00:02:59,131
+伸颈、仰头、相互点嘴，伴着叫声和喙击声，
+
+24
+00:02:59,131 --&gt; 00:03:01,613
+这是它们的求偶展示。
+</pre></details><details><summary>38 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/submission/render_film.sh &lt;&lt;&#x27;SH&#x27;
+#&quot;&#x27;!/usr/bin/env bash
+set -euo pipefail
+ffmpeg -hide_banner -y &#x27;&quot;\\
+  -i /candidate/birds_source.mp4 -i /workspace/scratch/mix.wav \\
+  -map 0:v:0 -map 1:a:0 \\
+  -vf &#x27;ass=/workspace/scratch/subtitles.ass:fontsdir=/workspace/scratch,fps=30&#x27; \\
+  -c:v libx264 -preset medium -crf 19 -pix_fmt yuv420p \\
+  -c:a aac -b:a 192k -ar 48000 \\
+  -t 185.466666667 -movflags +faststart /workspace/submission/final.mp4
+SH
+chmod +x /workspace/submission/render_film.sh
+python3 /workspace/scratch/timed_run.py &#x27;Encode full six-chapter 720p30 H.264/AAC film with burnt Chinese subtitles&#x27; bash /workspace/submission/render_film.sh&quot;</pre><pre>Input #0, mov,mp4,m4a,3gp,3g2,mj2, from &#x27;/candidate/birds_source.mp4&#x27;:
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.3.100
+  Duration: 00:03:05.50, start: 0.000000, bitrate: 2699 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2496 kb/s, 29.97 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 194 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[aist#1:0/pcm_s16le @ 0x5a6cfec16f80] Guessed Channel Layout: stereo
+Input #1, wav, from &#x27;/workspace/scratch/mix.wav&#x27;:
+  Duration: 00:03:05.47, bitrate: 1536 kb/s
+  Stream #1:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, 2 channels, s16, 1536 kb/s
+[Parsed_ass_0 @ 0x5a6cfecfeec0] libass API version: 0x1701000
+[Parsed_ass_0 @ 0x5a6cfecfeec0] libass source: tarball: 0.17.1
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng 8.3.0 (COMPLEX)
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/contact_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/contact_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/contact_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/contact_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/detail_bush.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/detail_first.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/detail_fly1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/detail_fly2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/detail_reed.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/frames&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Read failed, 21: Is a directory
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/inspect_media.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mix.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_4.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_5.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_6.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_7.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/mouth_sequence.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/NotoSansCJKsc-Regular.otf&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/original_gain_envelope.npy&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/original_mono.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/original_stereo.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_Alder_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Cettia%20cetti.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_birds-and-wildlife_cettis-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_birds-and-wildlife_reed-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_bird_alder-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_bird_black-footed-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_bird_laysan-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_bird_willow-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_Black-footed_Albatross_id.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_Laysan_Albatross_lifehistory.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_Marsh_Wren_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_species_bkfalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_species_cetwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_species_eurwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_species_layalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_wiki_Cetti%27s_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_wiki_Common_nightingale.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_wiki_Eurasian_reed_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/ref_Willow_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/research.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/research2.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/research3.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_3.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_4.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_5.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/spec_6.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/subtitles.ass&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/timed_run.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/tts&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Read failed, 21: Is a directory
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/tts_probe.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/voice_probe.mp3&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Loading font file &#x27;/workspace/scratch/voice_probe.srt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;contact_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;contact_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;contact_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;contact_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;detail_bush.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;detail_first.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;detail_fly1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;detail_fly2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;detail_reed.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;inspect_media.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mix.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_4.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_5.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_6.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_7.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;mouth_sequence.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;original_gain_envelope.npy&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;original_mono.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;original_stereo.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_Alder_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Cettia%20cetti.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_birds-and-wildlife_cettis-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_birds-and-wildlife_reed-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_bird_alder-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_bird_black-footed-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_bird_laysan-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_bird_willow-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_Black-footed_Albatross_id.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_Laysan_Albatross_lifehistory.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_Marsh_Wren_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_species_bkfalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_species_cetwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_species_eurwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_species_layalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_wiki_Cetti%27s_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_wiki_Common_nightingale.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_wiki_Eurasian_reed_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;ref_Willow_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;research.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;research2.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;research3.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_3.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_4.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_5.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;spec_6.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;subtitles.ass&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;timed_run.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;tts_probe.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;voice_probe.mp3&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Error opening memory font &#x27;voice_probe.srt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Using font provider fontconfig
+[Parsed_ass_0 @ 0x5a6cfecfeec0] Added subtitle file: &#x27;/workspace/scratch/subtitles.ass&#x27; (2 styles, 24 events)
+Stream mapping:
+  Stream #0:0 -&gt; #0:0 (h264 (native) -&gt; h264 (libx264))
+  Stream #1:0 -&gt; #0:1 (pcm_s16le (native) -&gt; aac (native))
+Press [q] to stop, [?] for help
+[Parsed_ass_0 @ 0x5a6cfecfbf00] libass API version: 0x1701000
+[Parsed_ass_0 @ 0x5a6cfecfbf00] libass source: tarball: 0.17.1
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng 8.3.0 (COMPLEX)
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/contact_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/contact_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/contact_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/contact_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/detail_bush.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/detail_first.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/detail_fly1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/detail_fly2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/detail_reed.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/frames&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Read failed, 21: Is a directory
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/inspect_media.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mix.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_4.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_5.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_6.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_7.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/mouth_sequence.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/NotoSansCJKsc-Regular.otf&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/original_gain_envelope.npy&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/original_mono.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/original_stereo.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_Alder_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Cettia%20cetti.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_birds-and-wildlife_cettis-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_birds-and-wildlife_reed-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_bird_alder-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_bird_black-footed-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_bird_laysan-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_bird_willow-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_Black-footed_Albatross_id.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_Laysan_Albatross_lifehistory.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_Marsh_Wren_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_species_bkfalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_species_cetwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_species_eurwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_species_layalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_wiki_Cetti%27s_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_wiki_Common_nightingale.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_wiki_Eurasian_reed_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/ref_Willow_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/research.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/research2.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/research3.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_3.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_4.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_5.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/spec_6.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/subtitles.ass&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/timed_run.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/tts&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Read failed, 21: Is a directory
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/tts_probe.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/voice_probe.mp3&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Loading font file &#x27;/workspace/scratch/voice_probe.srt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;contact_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;contact_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;contact_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;contact_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;detail_bush.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;detail_first.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;detail_fly1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;detail_fly2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;detail_reed.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;inspect_media.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mix.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_0.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_1.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_2.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_3.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_4.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_5.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_6.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_7.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;mouth_sequence.jpg&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;original_gain_envelope.npy&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;original_mono.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;original_stereo.wav&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_Alder_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Acrocephalus%20scirpaceus.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Cettia%20cetti.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_avibase.bsc-eoc.org_species.jsp?lang=ZH&amp;sciname=Empidonax%20traillii.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_birds-and-wildlife_cettis-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_birds-and-wildlife_reed-warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_bird_alder-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_bird_black-footed-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_bird_laysan-albatross.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_bird_willow-flycatcher.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_Black-footed_Albatross_id.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_Laysan_Albatross_lifehistory.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_Marsh_Wren_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_species_bkfalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_species_cetwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_species_eurwar1.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_species_layalb.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_wiki_Cetti%27s_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_wiki_Common_nightingale.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_wiki_Eurasian_reed_warbler.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;ref_Willow_Flycatcher_sounds.txt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;research.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;research2.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;research3.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_1.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_2.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_3.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_4.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_5.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;spec_6.png&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;subtitles.ass&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;timed_run.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;tts_probe.py&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;voice_probe.mp3&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Error opening memory font &#x27;voice_probe.srt&#x27;
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Using font provider fontconfig
+[Parsed_ass_0 @ 0x5a6cfecfbf00] Added subtitle file: &#x27;/workspace/scratch/subtitles.ass&#x27; (2 styles, 24 events)
+[libx264 @ 0x5a6cfec98bc0] using SAR=1/1
+[libx264 @ 0x5a6cfec98bc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x5a6cfec98bc0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x5a6cfec98bc0] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=22 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=19.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to &#x27;/workspace/submission/final.mp4&#x27;:
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 192 kb/s
+    Metadata:
+      encoder         : Lavc60.31.102 aac
+frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A dup=1 drop=0 speed=N/A    
+[Parsed_ass_0 @ 0x5a6cfecfbf00] fontselect: (Noto Sans CJK SC, 400, 0) -&gt; NotoSansCJKsc-Regular, 0, NotoSansCJKsc-Regular
+frame=  114 fps= 36 q=25.0 size=     256kB time=00:00:05.93 bitrate= 353.7kbits/s dup=1 drop=0 speed=1.86x    
+frame=  325 fps= 88 q=25.0 size=     512kB time=00:00:12.97 bitrate= 323.4kbits/s dup=1 drop=0 speed=3.52x    
+frame=  563 fps=134 q=25.0 size=    1024kB time=00:00:20.90 bitrate= 401.3kbits/s dup=1 drop=0 speed=4.99x    
+frame=  789 fps=168 q=25.0 size=    1280kB time=00:00:28.41 bitrate= 369.0kbits/s dup=1 drop=0 speed=6.06x    
+frame= 1009 fps=194 q=25.0 size=    1792kB time=00:00:35.75 bitrate= 410.6kbits/s dup=1 drop=0 speed=6.89x    
+frame= 1248 fps=219 q=25.0 size=    2048kB time=00:00:43.71 bitrate= 383.8kbits/s dup=1 drop=0 speed=7.68x    
+frame= 1423 fps=230 q=25.0 size=    3072kB time=00:00:49.55 bitrate= 507.8kbits/s dup=1 drop=0 speed=   8x    
+frame= 1550 fps=232 q=25.0 size=    5376kB time=00:00:53.78 bitrate= 818.9kbits/s dup=1 drop=0 speed=8.03x    
+frame= 1667 fps=232 q=25.0 size=    7424kB time=00:00:57.68 bitrate=1054.3kbits/s dup=1 drop=0 speed=8.02x    
+frame= 1792 fps=233 q=25.0 size=    9472kB time=00:01:01.84 bitrate=1254.7kbits/s dup=1 drop=0 speed=8.03x    
+frame= 1907 fps=233 q=25.0 size=   11520kB time=00:01:05.68 bitrate=1436.7kbits/s dup=1 drop=0 speed=8.01x    
+frame= 2028 fps=233 q=25.0 size=   13568kB time=00:01:09.71 bitrate=1594.3kbits/s dup=1 drop=0 speed=8.01x    
+frame= 2148 fps=233 q=25.0 size=   15616kB time=00:01:13.72 bitrate=1735.1kbits/s dup=1 drop=0 speed=8.01x    
+frame= 2286 fps=236 q=25.0 size=   17152kB time=00:01:18.33 bitrate=1793.7kbits/s dup=1 drop=0 speed=8.07x    
+frame= 2427 fps=238 q=25.0 size=   18688kB time=00:01:23.02 bitrate=1843.8kbits/s dup=1 drop=0 speed=8.14x    
+frame= 2567 fps=240 q=25.0 size=   19968kB time=00:01:27.68 bitrate=1865.6kbits/s dup=1 drop=0 speed=8.18x    
+frame= 2713 fps=242 q=25.0 size=   21504kB time=00:01:32.56 bitrate=1903.1kbits/s dup=1 drop=0 speed=8.25x    
+frame= 2850 fps=243 q=25.0 size=   22784kB time=00:01:37.13 bitrate=1921.6kbits/s dup=1 drop=0 speed=8.29x    
+frame= 2976 fps=244 q=25.0 size=   24320kB time=00:01:41.31 bitrate=1966.5kbits/s dup=1 drop=0 speed=8.29x    
+frame= 3084 fps=242 q=22.0 size=   25344kB time=00:01:44.93 bitrate=1978.5kbits/s dup=1 drop=0 speed=8.25x    
+frame= 3196 fps=242 q=25.0 size=   26368kB time=00:01:48.67 bitrate=1987.7kbits/s dup=1 drop=0 speed=8.22x    
+frame= 3319 fps=242 q=25.0 size=   27392kB time=00:01:52.74 bitrate=1990.3kbits/s dup=1 drop=0 speed=8.22x    
+frame= 3430 fps=241 q=25.0 size=   28416kB time=00:01:56.45 bitrate=1998.9kbits/s dup=1 drop=0 speed=8.19x    
+frame= 3554 fps=241 q=25.0 size=   29440kB time=00:02:00.59 bitrate=1999.8kbits/s dup=1 drop=0 speed=8.19x    
+frame= 3673 fps=241 q=25.0 size=   30464kB time=00:02:04.56 bitrate=2003.5kbits/s dup=1 drop=0 speed=8.18x    
+frame= 3811 fps=242 q=25.0 size=   31744kB time=00:02:09.17 bitrate=2013.2kbits/s dup=1 drop=0 speed=8.21x    
+frame= 3969 fps=245 q=25.0 size=   33024kB time=00:02:14.42 bitrate=2012.6kbits/s dup=1 drop=0 speed=8.28x    
+frame= 4098 fps=245 q=25.0 size=   34560kB time=00:02:18.73 bitrate=2040.8kbits/s dup=1 drop=0 speed=8.29x    
+frame= 4246 fps=246 q=25.0 size=   36096kB time=00:02:23.65 bitrate=2058.3kbits/s dup=1 drop=0 speed=8.34x    
+frame= 4389 fps=247 q=25.0 size=   37376kB time=00:02:28.41 bitrate=2063.0kbits/s dup=1 drop=0 speed=8.37x    
+frame= 4539 fps=249 q=25.0 size=   38656kB time=00:02:33.42 bitrate=2063.9kbits/s dup=1 drop=0 speed=8.41x    
+frame= 4691 fps=250 q=25.0 size=   39936kB time=00:02:38.48 bitrate=2064.3kbits/s dup=1 drop=0 speed=8.46x    
+frame= 4824 fps=251 q=25.0 size=   41472kB time=00:02:42.92 bitrate=2085.3kbits/s dup=1 drop=0 speed=8.47x    
+frame= 4959 fps=251 q=25.0 size=   43520kB time=00:02:47.42 bitrate=2129.4kbits/s dup=1 drop=0 speed=8.48x    
+frame= 5095 fps=252 q=25.0 size=   45568kB time=00:02:51.94 bitrate=2171.0kbits/s dup=1 drop=0 speed= 8.5x    
+frame= 5230 fps=252 q=25.0 size=   47616kB time=00:02:56.44 bitrate=2210.7kbits/s dup=1 drop=0 speed=8.51x    
+frame= 5369 fps=253 q=25.0 size=   49664kB time=00:03:01.09 bitrate=2246.6kbits/s dup=1 drop=0 speed=8.52x    
+[mp4 @ 0x5a6cfebf9840] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0x5a6cfebec540] video:48054kB audio:4394kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.382196%
+frame= 5564 fps=232 q=-1.0 Lsize=   52648kB time=00:03:05.45 bitrate=2325.6kbits/s dup=1 drop=0 speed=7.75x    
+[libx264 @ 0x5a6cfec98bc0] frame I:38    Avg QP:14.37  size: 89946
+[libx264 @ 0x5a6cfec98bc0] frame P:1474  Avg QP:16.79  size: 20933
+[libx264 @ 0x5a6cfec98bc0] frame B:4052  Avg QP:18.61  size:  3686
+[libx264 @ 0x5a6cfec98bc0] consecutive B-frames:  1.7%  2.7%  2.7% 92.9%
+[libx264 @ 0x5a6cfec98bc0] mb I  I16..4: 25.6% 58.4% 16.0%
+[libx264 @ 0x5a6cfec98bc0] mb P  I16..4:  5.3%  9.1%  0.7%  P16..4: 26.4% 14.1%  9.2%  0.0%  0.0%    skip:35.1%
+[libx264 @ 0x5a6cfec98bc0] mb B  I16..4:  0.9%  1.2%  0.1%  B16..8: 24.3%  4.5%  0.6%  direct: 3.2%  skip:65.2%  L0:42.6% L1:43.9% BI:13.6%
+[libx264 @ 0x5a6cfec98bc0] 8x8 transform intra:58.5% inter:68.3%
+[libx264 @ 0x5a6cfec98bc0] coded y,uvDC,uvAC intra: 37.5% 69.6% 34.6% inter: 10.2% 13.8% 0.3%
+[libx264 @ 0x5a6cfec98bc0] i16 v,h,dc,p: 43% 22% 13% 22%
+[libx264 @ 0x5a6cfec98bc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 16% 35%  2%  4%  5%  4%  3%  3%
+[libx264 @ 0x5a6cfec98bc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 23% 15%  5%  9%  7%  8%  5%  6%
+[libx264 @ 0x5a6cfec98bc0] i8c dc,h,v,p: 55% 18% 22%  6%
+[libx264 @ 0x5a6cfec98bc0] Weighted P-Frames: Y:1.8% UV:1.4%
+[libx264 @ 0x5a6cfec98bc0] ref P L0: 63.6% 11.0% 21.2%  4.2%  0.0%
+[libx264 @ 0x5a6cfec98bc0] ref B L0: 85.1% 12.5%  2.4%
+[libx264 @ 0x5a6cfec98bc0] ref B L1: 96.1%  3.9%
+[libx264 @ 0x5a6cfec98bc0] kb/s:2122.49
+[aac @ 0x5a6cff0f67c0] Qavg: 2804.252
+</pre></details><details><summary>39 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;cat &gt; /workspace/submission/verify_delivery.py &lt;&lt;&#x27;PY&#x27;
+import subprocess,json,time,wave,re,hashlib
+from pathlib import Path
+import numpy as np
+from scipy.io import wavfile
+R=Path(__file__).resolve().parent;S=R.parent/&#x27;scratch&#x27;;st=time.time()
+def probe(p):
+ return json.loads(subprocess.check_output([&#x27;ffprobe&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-show_entries&#x27;,&#x27;format=duration:stream=codec_name,codec_type,width,height,r_frame_rate,sample_rate,channels,nb_frames&#x27;,&#x27;-of&#x27;,&#x27;json&#x27;,str(p)]))
+a=probe(&#x27;/candidate/birds_source.mp4&#x27;);b=probe(R/&#x27;final.mp4&#x27;);dif=abs(float(a[&#x27;format&#x27;][&#x27;duration&#x27;])-float(b[&#x27;format&#x27;][&#x27;duration&#x27;]));assert dif&lt;=.5
+v=next(x for x in b[&#x27;streams&#x27;] if x[&#x27;codec_type&#x27;]==&#x27;video&#x27;);au=next(x for x in b[&#x27;streams&#x27;] if x[&#x27;codec_type&#x27;]==&#x27;audio&#x27;)
+assert v[&#x27;codec_name&#x27;]==&#x27;h264&#x27; and v[&#x27;width&#x27;]&gt;=1280 and v[&#x27;height&#x27;]&gt;=720 and v[&#x27;r_frame_rate&#x27;]==&#x27;30/1&#x27;
+assert au[&#x27;codec_name&#x27;]==&#x27;aac&#x27;
+sr,n=wavfile.read(R/&#x27;narration.wav&#x27;);assert sr==48000 and n.dtype==np.int16
+seg=json.load(open(R/&#x27;segments.json&#x27;));assert len(seg[&#x27;segments&#x27;])==6
+windows=[]
+for c in seg[&#x27;segments&#x27;]:
+ assert c[&#x27;narration&#x27;]
+ for w in c[&#x27;original_sound_windows&#x27;]:
+  aa,bb=round(w[&#x27;start&#x27;]*sr),round(w[&#x27;end&#x27;]*sr);assert w[&#x27;end&#x27;]-w[&#x27;start&#x27;]&gt;=2 and not np.any(n[aa:bb]);windows.append(dict(segment=c[&#x27;segment&#x27;],**w,narration_peak=0))
+ assert all(c[&#x27;start&#x27;]&lt;=i[&#x27;start&#x27;]&lt;i[&#x27;end&#x27;]&lt;=c[&#x27;end&#x27;] for i in c[&#x27;narration&#x27;])
+assert abs(len(n)/sr-float(b[&#x27;format&#x27;][&#x27;duration&#x27;]))&lt;.05
+# Decode entire delivered movie, detecting damaged packets/frames and measuring actual AAC output.
+r=subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-hide_banner&#x27;,&#x27;-i&#x27;,str(R/&#x27;final.mp4&#x27;),&#x27;-af&#x27;,&#x27;ebur128=peak=true&#x27;,&#x27;-f&#x27;,&#x27;null&#x27;,&#x27;-&#x27;],capture_output=True,text=True)
+(S/&#x27;final_decode_check.log&#x27;).write_text(r.stderr);assert r.returncode==0
+summary=r.stderr[r.stderr.rfind(&#x27;Summary:&#x27;):]
+for j,t in enumerate([8.0,51.5,79.5,108.5,141.0,166.5]):
+ subprocess.run([&#x27;ffmpeg&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-y&#x27;,&#x27;-ss&#x27;,str(t),&#x27;-i&#x27;,str(R/&#x27;final.mp4&#x27;),&#x27;-frames:v&#x27;,&#x27;1&#x27;,str(S/f&#x27;final_frame_{j}.jpg&#x27;)],check=True)
+from PIL import Image,ImageDraw
+im=Image.new(&#x27;RGB&#x27;,(1280,3*380),&#x27;#202020&#x27;);d=ImageDraw.Draw(im)
+for j,t in enumerate([8.0,51.5,79.5,108.5,141.0,166.5]):
+ x=(j%2)*640;y=(j//2)*380;im.paste(Image.open(S/f&#x27;final_frame_{j}.jpg&#x27;).resize((640,360)),(x,y));d.text((x+6,y+362),f&#x27;Chapter {j+1}: {t}s&#x27;,fill=&#x27;white&#x27;)
+im.save(S/&#x27;final_contact.jpg&#x27;)
+files={p.name:{&#x27;bytes&#x27;:p.stat().st_size,&#x27;sha256&#x27;:hashlib.sha256(p.read_bytes()).hexdigest()} for p in [R/&#x27;final.mp4&#x27;,R/&#x27;narration.wav&#x27;,R/&#x27;subtitles.srt&#x27;,R/&#x27;segments.json&#x27;]}
+report={&#x27;input&#x27;:a,&#x27;output&#x27;:b,&#x27;duration_difference_seconds&#x27;:dif,&#x27;narration_duration_seconds&#x27;:len(n)/sr,&#x27;narration_pcm_bits&#x27;:16,&#x27;verified_original_sound_windows&#x27;:windows,&#x27;full_decode_passed&#x27;:True,&#x27;actual_output_loudness_summary&#x27;:summary,&#x27;files&#x27;:files,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;limits&#x27;:&#x27;No native listening tool; perceptual naturalness not directly auditioned. Species confidence and acoustic ownership limits are explicit in segments.json.&#x27;}
+(R/&#x27;verification_report.json&#x27;).write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2))
+p=R/&#x27;research_log.json&#x27;;log=json.loads(p.read_text());log[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Full movie decode, technical/audio validation and six output-frame review preparation&#x27;,&#x27;started_unix&#x27;:st,&#x27;elapsed_seconds&#x27;:time.time()-st,&#x27;duration_difference_seconds&#x27;:dif,&#x27;full_decode_passed&#x27;:True,&#x27;window_count&#x27;:len(windows)});p.write_text(json.dumps(log,ensure_ascii=False,indent=2))
+PY
+python3 /workspace/submission/verify_delivery.py&quot;</pre><pre>{
+  &quot;input&quot;: {
+    &quot;programs&quot;: [],
+    &quot;streams&quot;: [
+      {
+        &quot;codec_name&quot;: &quot;h264&quot;,
+        &quot;codec_type&quot;: &quot;video&quot;,
+        &quot;width&quot;: 1280,
+        &quot;height&quot;: 720,
+        &quot;r_frame_rate&quot;: &quot;30/1&quot;,
+        &quot;nb_frames&quot;: &quot;5559&quot;
+      },
+      {
+        &quot;codec_name&quot;: &quot;aac&quot;,
+        &quot;codec_type&quot;: &quot;audio&quot;,
+        &quot;sample_rate&quot;: &quot;48000&quot;,
+        &quot;channels&quot;: 2,
+        &quot;r_frame_rate&quot;: &quot;0/0&quot;,
+        &quot;nb_frames&quot;: &quot;8702&quot;
+      }
+    ],
+    &quot;format&quot;: {
+      &quot;duration&quot;: &quot;185.504000&quot;
+    }
+  },
+  &quot;output&quot;: {
+    &quot;programs&quot;: [],
+    &quot;streams&quot;: [
+      {
+        &quot;codec_name&quot;: &quot;h264&quot;,
+        &quot;codec_type&quot;: &quot;video&quot;,
+        &quot;width&quot;: 1280,
+        &quot;height&quot;: 720,
+        &quot;r_frame_rate&quot;: &quot;30/1&quot;,
+        &quot;nb_frames&quot;: &quot;5564&quot;
+      },
+      {
+        &quot;codec_name&quot;: &quot;aac&quot;,
+        &quot;codec_type&quot;: &quot;audio&quot;,
+        &quot;sample_rate&quot;: &quot;48000&quot;,
+        &quot;channels&quot;: 2,
+        &quot;r_frame_rate&quot;: &quot;0/0&quot;,
+        &quot;nb_frames&quot;: &quot;8695&quot;
+      }
+    ],
+    &quot;format&quot;: {
+      &quot;duration&quot;: &quot;185.466667&quot;
+    }
+  },
+  &quot;duration_difference_seconds&quot;: 0.037332999999989624,
+  &quot;narration_duration_seconds&quot;: 185.46666666666667,
+  &quot;narration_pcm_bits&quot;: 16,
+  &quot;verified_original_sound_windows&quot;: [
+    {
+      &quot;segment&quot;: 1,
+      &quot;start&quot;: 0.2,
+      &quot;end&quot;: 5.0,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 1,
+      &quot;start&quot;: 17.0,
+      &quot;end&quot;: 24.5,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 1,
+      &quot;start&quot;: 32.4,
+      &quot;end&quot;: 35.5,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 2,
+      &quot;start&quot;: 46.3,
+      &quot;end&quot;: 50.0,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 2,
+      &quot;start&quot;: 55.3,
+      &quot;end&quot;: 61.2,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 2,
+      &quot;start&quot;: 70.1,
+      &quot;end&quot;: 72.5,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 3,
+      &quot;start&quot;: 73.0,
+      &quot;end&quot;: 77.9,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 3,
+      &quot;start&quot;: 86.6,
+      &quot;end&quot;: 91.7,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 4,
+      &quot;start&quot;: 100.95,
+      &quot;end&quot;: 104.8,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 4,
+      &quot;start&quot;: 113.1,
+      &quot;end&quot;: 115.35,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 4,
+      &quot;start&quot;: 120.0,
+      &quot;end&quot;: 123.75,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 5,
+      &quot;start&quot;: 124.2,
+      &quot;end&quot;: 128.1,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 5,
+      &quot;start&quot;: 146.6,
+      &quot;end&quot;: 150.8,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 5,
+      &quot;start&quot;: 155.9,
+      &quot;end&quot;: 158.25,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 6,
+      &quot;start&quot;: 158.7,
+      &quot;end&quot;: 164.0,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 6,
+      &quot;start&quot;: 170.6,
+      &quot;end&quot;: 174.1,
+      &quot;narration_peak&quot;: 0
+    },
+    {
+      &quot;segment&quot;: 6,
+      &quot;start&quot;: 182.0,
+      &quot;end&quot;: 185.3,
+      &quot;narration_peak&quot;: 0
+    }
+  ],
+  &quot;full_decode_passed&quot;: true,
+  &quot;actual_output_loudness_summary&quot;: &quot;Summary:\n\n  Integrated loudness:\n    I:         -15.4 LUFS\n    Threshold: -26.8 LUFS\n\n  Loudness range:\n    LRA:        13.4 LU\n    Threshold: -36.9 LUFS\n    LRA low:   -26.3 LUFS\n    LRA high:  -13.0 LUFS\n\n  True peak:\n    Peak:       -0.5 dBFS\n&quot;,
+  &quot;files&quot;: {
+    &quot;final.mp4&quot;: {
+      &quot;bytes&quot;: 53911484,
+      &quot;sha256&quot;: &quot;5406af0f24b951cd25f709721c34ae0d7eab3a0763b6065bbf7b3342a4131a51&quot;
+    },
+    &quot;narration.wav&quot;: {
+      &quot;bytes&quot;: 17804844,
+      &quot;sha256&quot;: &quot;69aa32f3e3a20cfcab5c03990e0abe0401b6ae2fc5e597170315a5adf3b7cf32&quot;
+    },
+    &quot;subtitles.srt&quot;: {
+      &quot;bytes&quot;: 1994,
+      &quot;sha256&quot;: &quot;fe923676069963001621c4a61927abc7519c2601fa52c3004397beb357e5524e&quot;
+    },
+    &quot;segments.json&quot;: {
+      &quot;bytes&quot;: 14485,
+      &quot;sha256&quot;: &quot;c0743714200d47be64225c65d75338cb9189120f2072bae485827619ed35f720&quot;
+    }
+  },
+  &quot;elapsed_seconds&quot;: 6.303741455078125,
+  &quot;limits&quot;: &quot;No native listening tool; perceptual naturalness not directly auditioned. Species confidence and acoustic ownership limits are explicit in segments.json.&quot;
+}
+</pre></details><details><summary>40 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import importlib.metadata as m,platform,subprocess,time,json
+from pathlib import Path
+r=Path(&#x27;/workspace/submission&#x27;)
+versions={p:m.version(p) for p in [&#x27;edge-tts&#x27;,&#x27;aiohttp&#x27;,&#x27;numpy&#x27;,&#x27;scipy&#x27;,&#x27;Pillow&#x27;,&#x27;requests&#x27;,&#x27;beautifulsoup4&#x27;]}
+(r/&#x27;requirements.txt&#x27;).write_text(&#x27;edge-tts==7.3.1\\nnumpy==&#x27;+versions[&#x27;numpy&#x27;]+&#x27;\\nscipy==&#x27;+versions[&#x27;scipy&#x27;]+&#x27;\\nPillow==&#x27;+versions[&#x27;Pillow&#x27;]+&#x27;\\nrequests==&#x27;+versions[&#x27;requests&#x27;]+&#x27;\\nbeautifulsoup4==&#x27;+versions[&#x27;beautifulsoup4&#x27;]+&#x27;\\n&#x27;)
+(r/&#x27;dependency_versions.json&#x27;).write_text(json.dumps({&#x27;python&#x27;:platform.python_version(),&#x27;packages&#x27;:versions,&#x27;ffmpeg&#x27;:subprocess.check_output([&#x27;ffmpeg&#x27;,&#x27;-version&#x27;],text=True).splitlines()[0],&#x27;font&#x27;:&#x27;Noto Sans CJK SC Regular OTF; downloaded from official notofonts/noto-cjk GitHub repository; font download is recorded in research_log.json&#x27;,&#x27;proxy&#x27;:&#x27;HTTP_PROXY / HTTPS_PROXY / ALL_PROXY environment; edge-tts explicitly receives HTTPS_PROXY or HTTP_PROXY. No direct public connections.&#x27;},indent=2))
+(r/&#x27;README.md&#x27;).write_text(&#x27;&#x27;&#x27;交付说明
+
+final.mp4 为六章完整成片：1280×720、30fps、H.264/AAC，无背景音乐。
+narration.wav 为48kHz、16位单声道PCM旁白，完整时间线185.466667秒，未解说处为零值静音。
+subtitles.srt 为实际旁白字幕；烧录使用同文同时间的ASS排版，最多一行24个字符。
+segments.json 写明独立识别、置信度、观察依据、参考资料和原声窗口。
+
+配音方案
+
+自撰旁白通过edge-tts 7.3.1调用zh-CN-XiaoxiaoNeural，语速-5%，音调默认。仅发送文字，未上传输入视频或音轨。正常语速生成，无任何变速或赶时长。用ffmpeg高通70Hz和loudnorm（-19 LUFS，峰值上限-3dBTP）统一人声，再放回原时间线。词级边界第一次无音频返回，已记录失败；改用已测试成功的句级边界。长句内部的换字幕时机按文字权重分配，句级起止来自实际合成服务标记。
+
+未提供原生听音工具，因此没有亲耳试听。实际使用PCM数值、声谱与逐帧口部动作核验。音色舒适度和自然韵律的主观听感不能声称已由本模型听评。
+
+混音
+
+保留原音轨双声道位置与全部样本顺序；仅调整增益、柔和避让及孤立峰值的局部增益。没有替换、移动、复制或合成鸟叫。弱音章节提高原声音量，人声时适当降低原声；所有声明的原声窗口已逐样本确认旁白为零。原视频本身第1章近景几乎静止，成片未对它增加冻结处理。fps过滤器将原始约29.97的可变时间戳转为要求的30fps，保留完整时间线，没有setpts或播放速度变更。
+
+复现
+
+依赖版本见dependency_versions.json和requirements.txt；系统提供ffmpeg/ffprobe及Python。需保留环境HTTP代理。
+
+1. python3 -m pip install --target /workspace/site-packages -r /workspace/submission/requirements.txt
+2. python3 /workspace/submission/synthesize_narration.py --force
+3. python3 /workspace/submission/build_film.py
+4. bash /workspace/submission/render_film.sh
+5. python3 /workspace/submission/verify_delivery.py
+
+输入沿用/candidate/birds_source.mp4与/candidate/chapters.json。中间产物放在/workspace/scratch。字体位于/workspace/scratch/fonts/NotoSansCJKsc-Regular.otf，下载地址已记录。research_log.json含实际网页状态、放弃的来源、服务失败与重试、逐次语音生成用时及制作阶段用时。初次依赖安装未捕获独立秒表，明确记录了可核实的时间区间，不虚构精确安装时长。verification_report.json记录最终流参数、全片解码、峰值/响度及文件哈希。
+&#x27;&#x27;&#x27;,encoding=&#x27;utf-8&#x27;)
+PY&quot;</pre><pre></pre></details><details><summary>41 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+import json,time,shutil
+r=Path(&#x27;/workspace/submission&#x27;);p=r/&#x27;research_log.json&#x27;;v=json.loads(p.read_text());v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Review actual encoded subtitle placement and finish dependency/implementation documentation&#x27;,&#x27;started_unix&#x27;:time.time(),&#x27;note&#x27;:&#x27;Viewed six actual output frames at 8.0, 51.5, 79.5, 108.5, 141.0, 166.5 seconds. Font rendering/position inspection is local image viewing, not OCR or another recognition model. Updated reproduction render script to isolated fonts directory after initial successful render loaded extraneous scratch files as invalid font candidates; same Noto font and output parameters.&#x27;});p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+for name in [&#x27;timed_run.py&#x27;,&#x27;inspect_media.py&#x27;,&#x27;research.py&#x27;,&#x27;research2.py&#x27;,&#x27;research3.py&#x27;,&#x27;tts_probe.py&#x27;]:
+ shutil.copy(&#x27;/workspace/scratch/&#x27;+name,r/name)
+PY&quot;</pre><pre></pre></details><details><summary>42 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+from pathlib import Path
+import json,time
+r=Path(&#x27;/workspace/submission&#x27;);p=r/&#x27;build_film.py&#x27;;s=p.read_text().replace(&#x27;Style: Default,Noto Sans CJK SC,30,&#x27;,&#x27;Style: Default,Noto Sans CJK SC,38,&#x27;);p.write_text(s)
+p=Path(&#x27;/workspace/scratch/subtitles.ass&#x27;);p.write_text(p.read_text().replace(&#x27;Style: Default,Noto Sans CJK SC,30,&#x27;,&#x27;Style: Default,Noto Sans CJK SC,38,&#x27;))
+p=r/&#x27;research_log.json&#x27;;v=json.loads(p.read_text());v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Output-frame review adjustment&#x27;,&#x27;recorded_unix&#x27;:time.time(),&#x27;finding&#x27;:&#x27;Actual output subtitles were clear but relatively small. Increase ASS font size from 30 to 38 at 1280x720; keep single line, exact text/timing, bottom margin and main-bird clearance. Re-encode with isolated font directory.&#x27;});p.write_text(json.dumps(v,ensure_ascii=False,indent=2))
+PY
+python3 /workspace/submission/timed_run.py &#x27;Improve subtitle readability to font size 38 and render final film&#x27; bash /workspace/submission/render_film.sh &gt; /workspace/scratch/render_final.log 2&gt;&amp;1&quot;</pre><pre></pre></details><details><summary>43 · agent_message · </summary><pre>成片已通过整片解码检查，时长为 185.467 秒，与输入相差约 0.037 秒；17 处原声窗口的旁白均为零值静音。已查看六章的实际输出画面，正在把字幕字号稍作增大，随后完成最终复核与交付记录。
+</pre><pre></pre></details><details><summary>44 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import time,json
+from pathlib import Path
+r=Path(&#x27;/workspace/submission&#x27;);v=json.loads((r/&#x27;research_log.json&#x27;).read_text())
+print(&#x27;elapsed_seconds_since_task_start&#x27;,round(time.time()-v[&#x27;task_started_unix&#x27;],3))
+print(&#x27;event_count&#x27;,len(v[&#x27;events&#x27;]))
+print(&#x27;successful_tts_calls&#x27;,len([e for e in v[&#x27;events&#x27;] if e.get(&#x27;activity&#x27;)==&#x27;Synthesize narration utterance&#x27; and e.get(&#x27;error&#x27;) is None]))
+print(&#x27;latest_activity&#x27;,v[&#x27;events&#x27;][-1][&#x27;activity&#x27;])
+PY&quot;</pre><pre>elapsed_seconds_since_task_start 971.599
+event_count 63
+successful_tts_calls 14
+latest_activity Improve subtitle readability to font size 38 and render final film
+</pre></details><details><summary>45 · command_execution · completed</summary><pre>/usr/bin/bash -lc &#x27;python3 /workspace/submission/verify_delivery.py &gt; /workspace/scratch/final_verification_stdout.json
+mkdir -p /workspace/submission/evidence
+cp /workspace/scratch/spec_*.png /workspace/scratch/detail_fly1.png /workspace/scratch/mouth_sequence.jpg /workspace/scratch/final_contact.jpg /workspace/submission/evidence/
+cp /workspace/scratch/ref_birds-and-wildlife_cettis-warbler.txt /workspace/scratch/ref_birds-and-wildlife_reed-warbler.txt /workspace/scratch/ref_bird_willow-flycatcher.txt /workspace/scratch/ref_bird_alder-flycatcher.txt /workspace/scratch/ref_bird_black-footed-albatross.txt /workspace/scratch/ref_bird_laysan-albatross.txt /workspace/submission/evidence/
+cp /workspace/scratch/render_final.log /workspace/scratch/final_decode_check.log /workspace/submission/evidence/&#x27;</pre><pre></pre></details><details><summary>46 · command_execution · completed</summary><pre>/usr/bin/bash -lc &quot;python3 - &lt;&lt;&#x27;PY&#x27;
+import json,time
+from pathlib import Path
+r=Path(&#x27;/workspace/submission&#x27;);p=r/&#x27;research_log.json&#x27;;v=json.loads(p.read_text());end=time.time();v[&#x27;task_finished_unix&#x27;]=end;v[&#x27;task_finished_utc&#x27;]=time.strftime(&#x27;%Y-%m-%dT%H:%M:%SZ&#x27;,time.gmtime(end));v[&#x27;total_wall_clock_seconds&#x27;]=round(end-v[&#x27;task_started_unix&#x27;],3)
+v[&#x27;events&#x27;].append({&#x27;activity&#x27;:&#x27;Final visual review, evidence archive and self-submission&#x27;,&#x27;ended_unix&#x27;:end,&#x27;result&#x27;:&#x27;Reviewed newly rendered font-size-38 output; subtitles legible and below main adult bird bodies. All four mandatory deliverables exist. Entire final file decodes; 1280x720 H.264, AAC 48kHz stereo, 30fps, 185.466667s. All six chapters have narration and multiple &gt;=2-second original-sound windows. No native listening tool used or claimed. No subagents or other recognition models used.&#x27;})
+v[&#x27;timing_accounting_note&#x27;]=&#x27;Total wall clock covers task reading, all selections, installations, model reasoning, code composition, debugging, network waiting, TTS, rendering and validation without a total time limit. Per-request/per-command timings are measured where recorded. Initial dependency installation was not independently stopwatch-instrumented; its observed task interval and failure/retry are recorded explicitly rather than assigning invented exact seconds. Several media reads and code-writing actions are grouped in stage intervals.&#x27;
+p.write_text(json.dumps(v,ensure_ascii=False,indent=2));print(&#x27;total_wall_clock_seconds&#x27;,v[&#x27;total_wall_clock_seconds&#x27;])
+rep=json.loads((r/&#x27;verification_report.json&#x27;).read_text());print(&#x27;output&#x27;,rep[&#x27;output&#x27;]);print(&#x27;full_decode_passed&#x27;,rep[&#x27;full_decode_passed&#x27;]);print(&#x27;duration_difference&#x27;,rep[&#x27;duration_difference_seconds&#x27;])
+for f in [&#x27;final.mp4&#x27;,&#x27;narration.wav&#x27;,&#x27;subtitles.srt&#x27;,&#x27;segments.json&#x27;,&#x27;research_log.json&#x27;,&#x27;synthesize_narration.py&#x27;,&#x27;README.md&#x27;]:print(f,(r/f).stat().st_size)
+PY&quot;</pre><pre>total_wall_clock_seconds 1023.35
+output {&#x27;programs&#x27;: [], &#x27;streams&#x27;: [{&#x27;codec_name&#x27;: &#x27;h264&#x27;, &#x27;codec_type&#x27;: &#x27;video&#x27;, &#x27;width&#x27;: 1280, &#x27;height&#x27;: 720, &#x27;r_frame_rate&#x27;: &#x27;30/1&#x27;, &#x27;nb_frames&#x27;: &#x27;5564&#x27;}, {&#x27;codec_name&#x27;: &#x27;aac&#x27;, &#x27;codec_type&#x27;: &#x27;audio&#x27;, &#x27;sample_rate&#x27;: &#x27;48000&#x27;, &#x27;channels&#x27;: 2, &#x27;r_frame_rate&#x27;: &#x27;0/0&#x27;, &#x27;nb_frames&#x27;: &#x27;8695&#x27;}], &#x27;format&#x27;: {&#x27;duration&#x27;: &#x27;185.466667&#x27;}}
+full_decode_passed True
+duration_difference 0.037332999999989624
+final.mp4 54022640
+narration.wav 17804844
+subtitles.srt 1994
+segments.json 14485
+research_log.json 31133
+synthesize_narration.py 2576
+README.md 2611
+</pre></details><details><summary>47 · agent_message · </summary><pre>已完成并交卷，文件位于 `/workspace/submission`：
+
+- [final.mp4](/workspace/submission/final.mp4)
+- [narration.wav](/workspace/submission/narration.wav)
+- [subtitles.srt](/workspace/submission/subtitles.srt)
+- [segments.json](/workspace/submission/segments.json)
+
+另附研究日志、配音与制作脚本、依赖说明及验证报告。实际用时约 17 分 3 秒。
+
+成片通过完整解码检查。环境无原生听音工具，已如实记录声谱分析方式及听感核验限制。</pre><pre></pre></details><p><a href="sol/tool_trajectory.json">完整工具轨迹 JSON</a></p><h2 id="task">本轮题面</h2><p><a href="../candidate/TASK.md">下载原题面</a> · <a href="../evaluator/rubric.json">冻结评分规则</a></p><details><summary>展开完整题面</summary><pre># 鸟类科普短片：识别、中文旁白与原声混音
+
+你是一名自然纪录片制作助手。将 `birds_source.mp4` 制作成可以直接播放的中文鸟类科普短片。
+视频包含六段鸟类的观察记录。片段边界见 `chapters.json`，不提供鸟名答案。
+
+## 工作要求
+
+1. 综合画面与原始音轨识别每段鸟类。介绍中文名，并根据可观察证据说明行为及声音类型。
+   `segments.json` 中另写英文名、拉丁学名、置信度和识别依据；英文和拉丁名不必念出。
+   不确定时可以保守表述并解释，不得伪造声音来源、因果关系或未出现的动作。
+2. 为每段制作符合人类听感的普通话科普解说：音色舒适稳定、发音清楚、语调自然、语速适中、停顿合理，不得机械朗读、刺耳失真或用不自然的变速赶时长。允许TTS，但是否自然以实际声音评价。必须实际合成语音并混入成片，
+   不能只交文稿、字幕、静音或蜂鸣声。配音方案、工具、音色及调用代码由你自主选择和实现，不提供预制配音脚本。
+3. 旁白应与画面同步，先观察后解说，避免全程朗读。每段至少留一处不少于 2 秒的
+   无旁白原声窗口，尽量选择明显鸟声或展示行为处，使观众能听见动物自身的声音。
+4. 保留原始音轨。允许合理降音量、淡入淡出和动态避让，但不允许替换、复制、移动、
+   合成鸟叫冒充原声。关键鸣叫应可辨，旁白也应清楚；不加背景音乐。
+5. 保留全部六段画面的顺序、内容、速度与整体时间线。允许等比例缩放、正常转码和字幕；
+   不得删段、加速、倒放、冻结或用图片替代。输出时长与输入差异不超过 0.5 秒。
+6. 输出一份同步中文字幕，并将字幕烧录在最终视频中。字幕不得遮挡主要鸟体，
+   文字必须对应实际说出的旁白，不要用字幕补充旁白未说的物种答案。
+7. 不要求介绍保护等级、拍摄地点或来源；没有可靠依据时不要添加。
+
+## 联网规则
+
+可以按观察到的形态、行为、声音或候选物种，查询独立鸟类资料。
+允许在 YouTube、Macaulay Library、Cornell、eBird、Wikipedia、Wikidata、Wikimedia Foundation 和 FWS 查询与题目原素材无关的独立资料；不按这些网站整站封禁。仍禁止搜索、访问、下载、引用下列数据集、镜像和实验答案域名及全部子域名：
+
+- `dearkitty1.wordpress.com`
+- `wikimedia.org`
+- `picryl.com`
+- `getarchive.net`
+- `archive.org`
+- `nanxiang-git.github.io`
+
+此外禁止访问、下载或引用以下特定素材及其所有下载地址、直链、嵌入副本、缓存和转载版本：
+- Macaulay Library 素材编号 `201977041`、`352463391`。
+- YouTube 视频编号 `xFV9lcvgMWQ`，包括短链接、嵌入、缩略图及媒体直链。
+- `https://xeno-canto.org/238544`（包括 `/download`、声谱及音频直链）。
+- `https://www.flickr.com/photos/usfwsnortheast/7245581374` 及对应 `video_download.gne?id=7245581374`。
+遇到网关阻止或疑似同源素材，应放弃该资料，不得更换域名、编码或剪辑形式绕过。其他合法独立参考录音仍可使用。
+联网网关会在交付响应前检查网址、重定向、已知素材标记及音频同源匹配，并记录实际网址、状态和响应哈希；含受限素材的页面也可能被拦截。
+
+不得访问本实验公开报告、历史答卷及其仓库副本来获取答案。
+禁止用文件元数据、原始文件名、来源水印、反向搜图或音视频指纹寻找原始题目素材与答案。
+不得通过镜像、网页缓存、翻译代理、转存网站或其他模型绕过限制。
+使用通用联网环境自行检索、访问资料和安装依赖；必须遵守上述限制与禁止溯源规则。搜索摘要若暴露受限原素材或现成答案，也不得使用。
+参考资料只能辅助识别，不能把参考资料中的声音描述写成自己在视频里观察到的事实。
+
+## 通用实验环境
+
+已提供 Linux、Python 3、pip、ffmpeg、ffprobe、curl，以及 numpy、scipy、Pillow 等通用库。可自行安装其他依赖、编写代码并选择语音方案；不指定配音包、服务商或音色。
+联网通过 HTTP_PROXY / HTTPS_PROXY / ALL_PROXY 指定的标准代理，支持 HTTP、HTTPS CONNECT 和加密 WebSocket。curl、pip 等可读取环境变量；自行使用的库若不自动读取，应按其文档设置代理。直接公网连接不可用，不能绕过代理。
+可使用无需额外付费或自带可用授权的方案；本实验不提供商业语音服务密钥，不得使用宿主或其他实验的凭据。两组条件一致。
+依赖安装位置为 /workspace/site-packages（已加入 PYTHONPATH），或在工作目录创建自己的环境；预置 pip 可用 python3 -m pip 调用。中间产物放 /workspace/scratch。
+软件选择、依赖下载、代码编写、调试和音频生成全程计时记录，但不设总作答时限。宿主不替你完成配音或混音，不允许请求宿主代写或代调用。
+命令行模型没有直接听音工具时，应实际读取音频采样、查看声谱并结合动作核验，在 segments.json 如实说明限制，不能声称亲耳听过。不要调用其他识别模型代答；允许语音合成工具生成你自己撰写的解说。
+
+## 必须交付到 /workspace/submission
+
+- `final.mp4`：H.264 + AAC，1280×720 或更高、30 fps，六段完整，中文旁白、原声、烧录中文字幕。
+- `narration.wav`：与成片时间线完全对齐的独立旁白轨，空白处为静音，48 kHz PCM。
+- `subtitles.srt`：UTF-8，实际旁白对应字幕，与烧录字幕一致。
+- `segments.json`：以下结构，时间使用完整成片的秒数。
+
+```json
+{
+  &quot;audio_analysis_method&quot;: &quot;实际采用的音轨分析方式与限制&quot;,
+  &quot;segments&quot;: [{
+    &quot;segment&quot;: 1, &quot;start&quot;: 0, &quot;end&quot;: 27,
+    &quot;chinese_name&quot;: &quot;识别结果&quot;, &quot;english_name&quot;: &quot;识别结果&quot;, &quot;scientific_name&quot;: &quot;识别结果&quot;,
+    &quot;confidence&quot;: 90,
+    &quot;visual_evidence&quot;: [{&quot;start&quot;: 1, &quot;end&quot;: 3, &quot;description&quot;: &quot;实际观察&quot;}],
+    &quot;audio_evidence&quot;: [{&quot;start&quot;: 4, &quot;end&quot;: 6, &quot;description&quot;: &quot;实际证据与声音归属限制&quot;}],
+    &quot;narration&quot;: [{&quot;start&quot;: 7, &quot;end&quot;: 12, &quot;text&quot;: &quot;实际旁白&quot;}],
+    &quot;original_sound_windows&quot;: [{&quot;start&quot;: 4, &quot;end&quot;: 6}],
+    &quot;sources&quot;: [{&quot;url&quot;: &quot;真实访问的允许网址&quot;, &quot;supports&quot;: &quot;辅助判断的事实&quot;}]
+  }]
+}
+```
+
+示例时间仅说明字段；以 `chapters.json` 的实际边界为准。
+如果未成功使用网络资料，`sources` 写空数组，不编造引用。
+
+## 评分规则
+
+最终分 S = 主体分 B × 质量系数 Q。
+
+六段等权，每段主体分最高100/6（约16.67）。该段在实际旁白中识别错误、未给出物种或只在字幕/JSON写对时，该段主体分为0；不会因此清零其他正确片段。允许标准别名、明确的单一暂定识别；纯音频转写的同音字差异不作物种识别错误，不接受枚举候选碰答案。
+B = (100/6) × Σ I_i × (0.40 + 0.32F_i + 0.28E_i)。I_i=物种识别正确1/否则0；F_i=科普事实准确性；E_i=解说与实际视听证据对应程度，F/E范围0–1。不要把一般物种习性说成片中发生的事件。视野不清时如实说明可得对应证据分。
+
+Q = 0.70H + 0.20A + 0.10D，所有子项0–1，各章等权：
+- H：自然韵律35%、音色舒适25%、发音清晰25%、语速停顿15%。重视实际人类听感。
+- A：原声保留40%、混音平衡40%、至少2秒无旁白且有原声窗口20%。
+- D：画面完整40%、字幕同步与可读30%、解说时机20%、交付有效10%。
+
+全片无可播放成片或没有可懂中文旁白，Q=0。缺章、改速、时长误差超过0.5秒、缺少必需交付、任一章无中文解说或无原声窗口、替换伪造原声，均为硬性要求不通过。分数与硬性要求分开展示；通过需S≥80且全部门槛通过。评审无法判断时标记待评，不默认为满分。
+
+只评实际成片，不用文稿、字幕或JSON代替声音证据。六段不保证六个不同物种。短章节可以简洁介绍，不能为了长篇科普挤掉原声窗口。
+
+## 实验约束与审计
+
+不设总作答时限，/workspace/DEADLINE.json 中截止时间为 null；完成后自行交卷。禁止子代理、其他识别模型、上传素材、推断遮挡文字或追溯素材来源。研究工具返回的文字也可能包含第三方派生信息，发现原素材或现成答案应停止使用并记录。网页访问失败或仅见搜索摘要，不得声称已经阅读正文。
+segments.json 的sources写实际使用网址及支持的具体事实；另建议交research_log.json记录查询、访问失败及放弃的来源。宿主独立保存实际联网轨迹并核实引用。
+</pre></details></main><script src="../report.js"></script></html>

@@ -1,0 +1,1 @@
+document.addEventListener('click',e=>{const b=e.target.closest('[data-seek]');if(!b)return;const v=document.querySelector('video');v.currentTime=Number(b.dataset.seek);v.play().catch(()=>{});v.scrollIntoView({block:'center',behavior:'smooth'})});

@@ -36,6 +36,9 @@ def build():
         text = text.replace('</head>', '  <link rel="stylesheet" href="birds-case/styles.css">\n</head>')
         index.write_text(text, encoding='utf8')
     print('Unified birds case refreshed')
+    if (BASE.parent / 'case_birds/omni_task_v6_sol_high_relaxed_repeat02/reports/REPEAT_COMPARISON.json').exists():
+        from birds_relaxed_report import build as build_relaxed
+        build_relaxed()
 
 
 if __name__ == '__main__':
