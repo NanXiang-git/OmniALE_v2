@@ -1,0 +1,78 @@
+{
+  "reference_and_tool_assets_hidden_during_rebuild": true,
+  "R_byte_identical": true,
+  "E_byte_identical": true,
+  "shared_reconstruction_raw_frames_identical": true,
+  "shared_R_checked_frames": 240,
+  "late_preservation_checked_frames": 90,
+  "late_max_pixel_rounding_difference": 2,
+  "audio": {
+    "input_samples": 480000,
+    "output_samples": 480256,
+    "correlation_zero_lag_per_channel": [
+      0.9989400610400032,
+      0.9991923745572483
+    ],
+    "snr_db": 27.28930746404043,
+    "decoded_peak": 0.748001754283905,
+    "clipped_sample_fraction": 0.0
+  },
+  "event_times": {
+    "A": 0.9,
+    "B": 2.61,
+    "C": 4.3
+  },
+  "envelope_max_error": 2.609024107869118e-15,
+  "cursor": {
+    "visible_samples": 31,
+    "max_pixel_error_against_six_frame_shift": 0
+  },
+  "pulse_locality": {
+    "samples": [
+      {
+        "frame": 32,
+        "changed_pixels": 51903,
+        "outside_tube_and_refractive_panel": 0
+      },
+      {
+        "frame": 36,
+        "changed_pixels": 43472,
+        "outside_tube_and_refractive_panel": 0
+      },
+      {
+        "frame": 40,
+        "changed_pixels": 38170,
+        "outside_tube_and_refractive_panel": 0
+      },
+      {
+        "frame": 44,
+        "changed_pixels": 37855,
+        "outside_tube_and_refractive_panel": 0
+      },
+      {
+        "frame": 48,
+        "changed_pixels": 37974,
+        "outside_tube_and_refractive_panel": 0
+      },
+      {
+        "frame": 52,
+        "changed_pixels": 26902,
+        "outside_tube_and_refractive_panel": 0
+      }
+    ],
+    "glass_exception": "Renderer samples underlay and Gaussian blurs inside fixed panel; no panel displacement."
+  },
+  "head_actual_peak_extension_px": 36,
+  "shifted_audio_events": {
+    "A": 1.02,
+    "B": 2.74,
+    "C": 4.42
+  },
+  "high_only_variant_all_sample_frames_unchanged": true,
+  "source_code_audit": "Render sources use vector/Cairo/procedural assets and explicit permitted portrait derivatives. Reference snapshots exist in diagnostics for comparison, but no reference video/frame-sequence is read by render.py/renderer modules. Rebuild runs with no reference inputs mounted.",
+  "limits": [
+    "No pixel-perfect ground-truth alpha exists for stock portrait.",
+    "Timing comparison uses declared task events plus actual frame windows, not audio listening.",
+    "No real browser playback verification; CUA host unavailable."
+  ]
+}

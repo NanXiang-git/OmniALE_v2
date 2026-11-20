@@ -1,0 +1,852 @@
+{
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "retrospective": true,
+  "runtime_seconds": 3138.2251772880554,
+  "completed_requests": 76,
+  "summary": "可编辑工程、真实人物抠像及程序控制成立；视觉表现按v2尺度仅约六成。音频计算正确，但A/B实际完成动作不等于映射锚点，强低频峰时管体不可见，正常画面中的脉冲难辨。新量表分别扣除视觉保真与音画呈现质量，不添加总分系数。",
+  "limitations": [
+    "用户要求后的事后复评；新评分不是Sol首次作答前预注册规则。原题、素材、成片和工程未修改。",
+    "A/B完成时间来自独立代码端点审计与实际图像窗口；端点小数为数学计算，不代表人眼测量精度。",
+    "可感知性是助手对正常尺度画面与对照证据的评档，没有独立人耳/人眼盲测。",
+    "仅工具辅助声音分析，没有原生听音；无人物alpha真值。",
+    "独立验证覆盖范围与原reports/verification.json一致；不把抽样当成所有帧。",
+    "固定UI窗口、规定包络及12%上限与B主低频峰错开，是题目设计的可感知性限制。该部分反映输出观感，不可全部归因于模型音频能力；不能为获得该分违反题面时序或包络。"
+  ],
+  "criteria": [
+    {
+      "id": "V_geometry",
+      "title": "构图、标志结构与曲率",
+      "weight": 6,
+      "components": [
+        {
+          "name": "位置尺度留白",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "主体位置和留白接近，后半段尺度与厚度偏差。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "拓扑结构",
+          "weight": 1,
+          "tier": 1,
+          "reason": "标志拓扑完整。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部轮廓曲率",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "环尾、手与建筑、花园轮廓明显近似。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_grid",
+      "title": "网格色卡与印刷拼装",
+      "weight": 5,
+      "components": [
+        {
+          "name": "布局",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "色卡与网格总体布局接近，左套准标记及局部边界有误差。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "纹理渐变",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "网点颗粒与渐变分布明显简化。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "拼装显露退场",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "有实际逐段显露，但缺少参考移动粉色端帽等关键局部动作。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_ui",
+      "title": "立体UI、玻璃与光学结构",
+      "weight": 7,
+      "components": [
+        {
+          "name": "对象布局",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "控件、指针及管道布局接近。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "截面体积",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "截面和厚度由平面描边近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "玻璃折射高光",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "多层渐变和模糊只有光学提示，未充分复现玻璃厚度及真实折射结构。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "阴影微细节",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "阴影存在，表面层次和微细节明显简化。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_illustration",
+      "title": "插画细节、字形与非刚性展开",
+      "weight": 8,
+      "components": [
+        {
+          "name": "装饰覆盖密度",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "主要装饰对象和密度保留。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "轮廓构图",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "皇冠、蘑菇、花朵与卷纸等形状明显近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手绘字形",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "均匀块状字形未复现手绘挤压及鼓胀。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "非刚性展开",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "装饰以整体缩放弹出，未重建参考卷纸弯折与局部非刚性展开机制。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py"
+          ],
+          "score": 0.75
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_late",
+      "title": "切片、手与建筑、花草骑行",
+      "weight": 8,
+      "components": [
+        {
+          "name": "人物周围切片",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "切片和环存在，空间交错与透明光学明显简化；不扣豁免的原人物身份、姿态、火焰。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手与建筑形体材质",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "卡通手、径向扇片台阶和棉球云代替复杂形体。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "花草骑行形体材质运动",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "植物木板与骑行者都有运动，但材质、尺度及空间关系明显近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_transition",
+      "title": "源片时序、转换机制与遮挡",
+      "weight": 8,
+      "components": [
+        {
+          "name": "原片事件进程",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "阶段顺序成立，但4.5秒仍有大面积插画，实际局部姿态进程偏离源片。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "跨阶段形变机制",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "关键切片位移和翻卷以整场透明度叠化替代，严重重影。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "局部遮挡层次",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "有可编辑遮挡，但原片细部交错关系近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "全段稳定与运动",
+          "weight": 1,
+          "tier": 1,
+          "reason": "全240帧可解码，后半段有实际动作且正常退出。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 3.75
+    },
+    {
+      "id": "V_text",
+      "title": "返修文字内容、方向及曲线形变",
+      "weight": 8,
+      "components": [
+        {
+          "name": "全部目标文字覆盖",
+          "weight": 1,
+          "tier": 1,
+          "reason": "插画和黑白文字环实际替换全部TOGETHER。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "阅读方向可读性",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "显著弧段阅读方向与拥挤程度不佳，沿用v2同类错误的严格档位；不将保留原CREATE前缀单独扣分。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "曲线字形手绘变形",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "规整字形沿线排布，缺乏原片夸张曲线形变。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "填色描边间距遮挡",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "暖色、描边保留，字距和转场叠字明显影响排版。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 3.25
+    },
+    {
+      "id": "V_material",
+      "title": "返修材质与局部范围",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定色彩",
+          "weight": 1,
+          "tier": 1,
+          "reason": "指定蓝青渐变实际生效。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部范围",
+          "weight": 1,
+          "tier": 1,
+          "reason": "目标局部改色，其他对象保持。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "原片光学质感保留",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "原片透明边缘、体积及折射未充分恢复，不能以改色正确替代材质保真。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg"
+          ],
+          "score": 0.75
+        }
+      ],
+      "score": 2.75
+    },
+    {
+      "id": "V_portrait",
+      "title": "真实人像、边缘、融合与层次",
+      "weight": 10,
+      "components": [
+        {
+          "name": "真实素材和背景去除",
+          "weight": 1,
+          "tier": 1,
+          "reason": "指定真实素材及RVM衍生alpha去除了街景。",
+          "evidence": [
+            "reports/evidence/head_109.jpg",
+            "reports/evidence/stage1_portrait_checker.jpg",
+            "sealed/stage2/submission/project/renderer.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "边缘与时间稳定",
+          "weight": 3,
+          "tier": 0.75,
+          "reason": "发丝大体保留，但浅色晕边和柔化可见。",
+          "evidence": [
+            "reports/evidence/head_109.jpg",
+            "reports/evidence/stage1_portrait_checker.jpg",
+            "sealed/stage2/submission/project/renderer.py"
+          ],
+          "score": 2.25
+        },
+        {
+          "name": "连续运动及自然融合",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "源运动连续，但下方衣服被4倍纵向拉伸以补齐窗口，合成形体和光照融合存在明显问题。",
+          "evidence": [
+            "reports/evidence/head_109.jpg",
+            "reports/evidence/stage1_portrait_checker.jpg",
+            "sealed/stage2/submission/project/renderer.py"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "窗口头部越界前景遮挡",
+          "weight": 3,
+          "tier": 1,
+          "reason": "真实像素验证单头越界36px、躯干窗口裁切及前方环边遮挡；该层次操作不重复扣材质。",
+          "evidence": [
+            "reports/evidence/head_109.jpg",
+            "reports/evidence/stage1_portrait_checker.jpg",
+            "sealed/stage2/submission/project/renderer.py"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 7.75
+    },
+    {
+      "id": "V_local",
+      "title": "光标局部延迟与未改内容保持",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定光标及非目标保持",
+          "weight": 2,
+          "tier": 1,
+          "reason": "蓝光标31个可见采样精确延迟6帧，绿色橙色不延迟。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/control_checks.json"
+          ],
+          "score": 2
+        },
+        {
+          "name": "时间映射及其余画面保持",
+          "weight": 3,
+          "tier": 1,
+          "reason": "映射误差0，共享R全部240帧一致；后半段90帧仅舍入微差。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/control_checks.json"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 5
+    },
+    {
+      "id": "A_analysis",
+      "title": "音频事件与包络计算",
+      "weight": 2,
+      "components": [
+        {
+          "name": "三峰时间",
+          "weight": 1.5,
+          "tier": 1,
+          "reason": "独立分析峰值0.90/2.61/4.30秒一致。",
+          "evidence": [
+            "reports/control_checks.json"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "包络算法",
+          "weight": 0.5,
+          "tier": 1,
+          "reason": "包络数值最大误差约2.6e-15。",
+          "evidence": [
+            "reports/control_checks.json"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 2.0
+    },
+    {
+      "id": "A_track",
+      "title": "音轨内容、增益与时基",
+      "weight": 2,
+      "components": [
+        {
+          "name": "内容增益",
+          "weight": 1,
+          "tier": 1,
+          "reason": "B解码声道相关系数约.999，无原片声音混入。",
+          "evidence": [
+            "reports/verification.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "零偏移原速长度无削波",
+          "weight": 1,
+          "tier": 1,
+          "reason": "零偏移原速原增益、无削波，AAC尾部填充不扣分。",
+          "evidence": [
+            "reports/verification.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 2
+    },
+    {
+      "id": "A_events",
+      "title": "声音事件对应的实际视觉完成",
+      "weight": 9,
+      "components": [
+        {
+          "name": "A · 实际完成时刻",
+          "weight": 1,
+          "tier": 0.25,
+          "reason": "最后网格卡片显露在0.702秒结束，峰0.90秒，早约4.75帧；后续色彩漂移不是拼装完成。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_A_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_A.jpg"
+          ],
+          "score": 0.25
+        },
+        {
+          "name": "A · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "网格目标结构可辨，但缺少移动端帽、部分定位标记及细部。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_A_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_A.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "A · 连续局部动作",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "有独立卡片运动，但显露机制和参考局部动作明显近似。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_A_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_A.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "B · 实际完成时刻",
+          "weight": 1,
+          "tier": 0,
+          "reason": "12个装饰中最后一个缩放端点在约2.877秒，晚于2.61秒约6.41帧；在峰时设置source_time=3.5并不代表完整插画已展开。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_B_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_B.jpg"
+          ],
+          "score": 0
+        },
+        {
+          "name": "B · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "主要插画和文字存在，目标细节与形体明显简化。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_B_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_B.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "B · 连续局部动作",
+          "weight": 1,
+          "tier": 0.25,
+          "reason": "主要靠整体缩放弹出，未复现局部非刚性展开。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_B_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py",
+            "evaluation_v31/sol/completion_B.jpg"
+          ],
+          "score": 0.25
+        },
+        {
+          "name": "C · 实际完成时刻",
+          "weight": 1,
+          "tier": 1,
+          "reason": "实际人物alpha在4.30秒完成，与C一致。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_C_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "C · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "替换人物正确，环边/切片周围状态明显简化；身份火焰豁免有效。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_C_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "C · 连续局部动作",
+          "weight": 1,
+          "tier": 0.25,
+          "reason": "人物渐显达到终点，但原片局部切片揭示被大面积叠化近似。",
+          "evidence": [
+            "evaluation_v31/sol/measurements.json",
+            "reports/evidence/event_C_window.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "sealed/stage2/submission/project/revision_renderer.py"
+          ],
+          "score": 0.25
+        }
+      ],
+      "score": 3.75
+    },
+    {
+      "id": "A_pulse",
+      "title": "低频管体响应的正确性与可感知性",
+      "weight": 8,
+      "components": [
+        {
+          "name": "实际厚度及包络正确",
+          "weight": 2,
+          "tier": 1,
+          "reason": "实际像素有厚度变化，0–12%控制与包络算法正确。",
+          "evidence": [
+            "evaluation_v31/sol/pulse_normal_comparison.jpg",
+            "evaluation_v31/sol/measurements.json",
+            "reports/pulse_locality.json"
+          ],
+          "score": 2
+        },
+        {
+          "name": "正常尺度可见响应",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "正常完整画面几乎看不出收放；开关脉冲并排图和差分才能明确辨识，不能用差分可见冒充正常观感。",
+          "evidence": [
+            "evaluation_v31/sol/pulse_normal_comparison.jpg",
+            "evaluation_v31/sol/measurements.json",
+            "reports/pulse_locality.json"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "声音与局部运动节奏对应",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "UI清楚可见仅1.333–2.042秒，厚度主要从+5.65%回落到+1.72%；两个主要低频峰时UI可见度均为0，缺少清楚收放峰谷。",
+          "evidence": [
+            "evaluation_v31/sol/pulse_normal_comparison.jpg",
+            "evaluation_v31/sol/measurements.json",
+            "reports/pulse_locality.json"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "中心线及非目标保持",
+          "weight": 1,
+          "tier": 1,
+          "reason": "路径固定，非目标保持；玻璃只折射其下方管体变化。",
+          "evidence": [
+            "evaluation_v31/sol/pulse_normal_comparison.jpg",
+            "evaluation_v31/sol/measurements.json",
+            "reports/pulse_locality.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 4.25
+    },
+    {
+      "id": "A_causal",
+      "title": "改音轨后的实际画面因果与不变性",
+      "weight": 4,
+      "components": [
+        {
+          "name": "整体移音频事件移动",
+          "weight": 1,
+          "tier": 1,
+          "reason": "整体音轨后移.125秒，计算事件和对应画面随之改变。",
+          "evidence": [
+            "reports/control_checks.json",
+            "evaluation_v31/sol/measurements.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "仅高频改变不误触发",
+          "weight": 1,
+          "tier": 1,
+          "reason": "仅改变高频，10个抽查帧不变。",
+          "evidence": [
+            "reports/control_checks.json",
+            "evaluation_v31/sol/measurements.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "实际动作随新峰重新完成",
+          "weight": 1,
+          "tier": 0.25,
+          "reason": "能跟随新声音移时间，但A/B原有实际完成动作与锚点不一致的误差同时保留；仅C有明确正确完成。",
+          "evidence": [
+            "reports/control_checks.json",
+            "evaluation_v31/sol/measurements.json"
+          ],
+          "score": 0.25
+        },
+        {
+          "name": "后半段与其他对象保持",
+          "weight": 1,
+          "tier": 1,
+          "reason": "6.25秒后90帧与其他对象保持。",
+          "evidence": [
+            "reports/control_checks.json",
+            "evaluation_v31/sol/measurements.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 3.25
+    },
+    {
+      "id": "ENG",
+      "title": "工程与有效参数变体",
+      "weight": 5,
+      "components": [
+        {
+          "name": "R独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "R独立重渲染与封存字节一致。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/run_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "E独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "E独立重渲染与封存字节一致。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/run_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "依赖素材完整",
+          "weight": 1,
+          "tier": 1,
+          "reason": "无参考素材挂载也可渲染，依赖素材齐全。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/run_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "参数实际生效",
+          "weight": 1,
+          "tier": 1,
+          "reason": "改字与改音轨均实际生效。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/run_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "诊断与图层定位",
+          "weight": 1,
+          "tier": 1,
+          "reason": "alpha/checker/头部越界/CSV和编辑映射完整。",
+          "evidence": [
+            "reports/verification.json",
+            "reports/run_audit.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 5
+    }
+  ],
+  "version": "v3.1",
+  "categories": [
+    {
+      "title": "视觉重建与返修",
+      "score": 39.5,
+      "maximum": 70
+    },
+    {
+      "title": "音画同步",
+      "score": 15.25,
+      "maximum": 25
+    },
+    {
+      "title": "工程交付",
+      "score": 5,
+      "maximum": 5
+    }
+  ],
+  "total": 59.75,
+  "maximum": 100,
+  "pass_threshold": 85,
+  "passed": false,
+  "rubric_sha256": "487251f9a8b085ece1573ab27c62f9fe3345adc959184758da3b4ee2c55496e6",
+  "graded_utc": "2026-11-20T08:37:33.664811+00:00",
+  "method": "sum(component weight × fixed tier), no global multiplier"
+}

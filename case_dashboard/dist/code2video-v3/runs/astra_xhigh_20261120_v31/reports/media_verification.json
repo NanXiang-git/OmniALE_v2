@@ -1,0 +1,345 @@
+{
+  "media": {
+    "R": {
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 122880,
+            "duration": "10.000000",
+            "bit_rate": "2682450",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "240",
+            "extradata_size": 50,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\case_code2video\\av_v3\\runs\\astra_xhigh_20261120_v31\\sealed\\stage1\\submission\\reconstruction.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "10.000000",
+          "size": "3356581",
+          "bit_rate": "2685264",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      },
+      "decoded_frames": 240,
+      "unique_frames": 223,
+      "decode_ok": true,
+      "dimensions_ok": true,
+      "fps_ok": true,
+      "frames_ok": true,
+      "audio_policy_ok": true
+    },
+    "E": {
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "color_range": "tv",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 122880,
+            "duration": "10.000000",
+            "bit_rate": "2674738",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "240",
+            "extradata_size": 50,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 480000,
+            "duration": "10.000000",
+            "bit_rate": "308003",
+            "nb_frames": "470",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "D:\\omniALE\\case_code2video\\av_v3\\runs\\astra_xhigh_20261120_v31\\sealed\\stage2\\submission\\revision.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "10.000000",
+          "size": "3737356",
+          "bit_rate": "2989884",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      },
+      "decoded_frames": 240,
+      "unique_frames": 226,
+      "decode_ok": true,
+      "dimensions_ok": true,
+      "fps_ok": true,
+      "frames_ok": true,
+      "audio_policy_ok": true
+    }
+  },
+  "audio": {
+    "input_samples": 480000,
+    "output_samples": 480256,
+    "correlation_zero_lag_per_channel": [
+      0.9989400610400032,
+      0.9991923745572483
+    ],
+    "snr_db": 27.28930746404043,
+    "decoded_peak": 0.748001754283905,
+    "clipped_sample_fraction": 0.0
+  },
+  "frozen_inputs_unchanged": true,
+  "integrity": [
+    {
+      "path": "rubric.json",
+      "unchanged": true
+    },
+    {
+      "path": "SCORING.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage1/acceptance.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage1/input/portrait_live_action.mp4",
+      "unchanged": true
+    },
+    {
+      "path": "stage1/input/reference_silent_10s.mp4",
+      "unchanged": true
+    },
+    {
+      "path": "stage1/SOURCE.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage1/TASK.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage2/acceptance.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage2/input/brand_B_10s.wav",
+      "unchanged": true
+    },
+    {
+      "path": "stage2/SOURCE.md",
+      "unchanged": true
+    },
+    {
+      "path": "stage2/TASK.md",
+      "unchanged": true
+    },
+    {
+      "path": "tool_assets/LICENSE_RVM.txt",
+      "unchanged": true
+    },
+    {
+      "path": "tool_assets/RVM_INFERENCE.md",
+      "unchanged": true
+    },
+    {
+      "path": "tool_assets/rvm_mobilenetv3_fp32.onnx",
+      "unchanged": true
+    }
+  ],
+  "stages": {
+    "stage1": {
+      "completed": 56,
+      "model_effort_verified": true,
+      "sealed_unchanged": true,
+      "sealed_mismatches": [],
+      "elapsed_seconds": 1994.068175792694,
+      "returncode": 0
+    },
+    "stage2": {
+      "completed": 42,
+      "model_effort_verified": true,
+      "sealed_unchanged": true,
+      "sealed_mismatches": [],
+      "elapsed_seconds": 1612.5123782157898,
+      "returncode": 0
+    }
+  },
+  "events": {
+    "A": 0.9,
+    "B": 2.61,
+    "C": 4.3
+  },
+  "limits": [
+    "Signal analysis and normal-scale image review; no native listening or human blind test.",
+    "Independent renderer/control checks are recorded separately; this media check alone does not certify task success."
+  ]
+}

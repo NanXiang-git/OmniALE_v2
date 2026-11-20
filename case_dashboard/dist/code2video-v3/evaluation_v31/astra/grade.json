@@ -1,0 +1,895 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "retrospective": false,
+  "runtime_seconds": 6333.500251054764,
+  "elapsed_seconds": 6551.353724956512,
+  "completed_requests": 150,
+  "implementation": "Codex CLI隔离执行；Python/Cairo可编辑矢量与程序材质，RVM/ONNX真实人像软抠像，NumPy/SciPy/OpenCV音频分析与合成，FFmpeg编码；本次未使用Blender。",
+  "summary": "共享可编辑工程、真实人物抠像和声音驱动链路成立，曲线字形及局部展开较完整。视觉仍受平面翻卷近似、光学材质、后半段形体与进程偏差限制；A提前、B稍晚，正常完整画面的管体脉冲仍不清楚，音频不能因计算正确而满分。",
+  "limitations": [
+    "新量表在本次Astra作答前冻结；Sol为既有答卷事后复评。两模型不是同一种预注册条件的重复试验。",
+    "本次上游HTTP429曾终止第一阶段临时Codex会话；已在同一完整工作区用新上下文继续，无评分反馈。累计150次完成请求，含中断前52次；不将恢复后的上下文重置隐去。",
+    "运行时长按全部实际运行累计，另有约218秒恢复间隙；没有任务总时长或总token上限。",
+    "事件完成按可观察的装配/展开端点评审，持续漂移和后续转场不要求停住；A/B时间定义及图证已列出，非人眼小数精度测量。",
+    "声音可感知性为助手对完整尺度和辅助对照的评档，无原生听音或独立人耳/人眼盲测。",
+    "固定UI窗口、规定包络和12%上限使主要低频峰错开；这是题目设计限制，不能全部归因于模型音频能力，也不能要求违反题面时序来补救。",
+    "高频与非目标局部性为记录帧的独立像素抽查，不能扩展成每帧的证明。人像没有alpha真值，不报告分割准确率。",
+    "共享R原始240帧一致，但改用固定4线程编码后解码像素不同，PSNR约46.99dB；工程保真按原始帧核验，不将编码差异误判为场景修改。"
+  ],
+  "criteria": [
+    {
+      "id": "V_geometry",
+      "title": "构图、标志结构与曲率",
+      "weight": 6,
+      "components": [
+        {
+          "name": "位置尺度留白",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "主体位置、留白和标志结构接近；后半段骑行和路径的尺度仍偏大。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_all_stages.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "拓扑结构",
+          "weight": 1,
+          "tier": 1,
+          "reason": "两条互扣曲线及各处理阶段的标志拓扑保留。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_all_stages.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部轮廓曲率",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "插画尾端、手部、梯级及花园的局部曲率和形体仍有明显近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_all_stages.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_grid",
+      "title": "网格色卡与印刷拼装",
+      "weight": 5,
+      "components": [
+        {
+          "name": "布局",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "网格色卡和套准布局接近；局部边界、负形和灰色卡色彩分布有偏差。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0125.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "纹理渐变",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "实现了动态墨色和网点、颗粒，但网点密度、印刷质感及渐变分布明显不同。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0125.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "拼装显露退场",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "有右卡滑入、独立卡片退场及粉色端帽；其余卡片主要整体渐显，局部拼装进程仍近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0125.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_ui",
+      "title": "立体UI、玻璃与光学结构",
+      "weight": 7,
+      "components": [
+        {
+          "name": "对象布局",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "控件、轨道、选择框与指针布局基本保留；局部滑块姿态有偏差。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "截面体积",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "多层描边和截面明暗可表达体积，但实体截面、套筒和细小几何仍简化。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "玻璃折射高光",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "光学卡用硬编码模糊色斑提示透射，没有重建参考的厚度、折射关系和真实玻璃边缘。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "阴影微细节",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "阴影与小控件有实现，表面微纹理和反光层次仍近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_illustration",
+      "title": "插画细节、字形与非刚性展开",
+      "weight": 8,
+      "components": [
+        {
+          "name": "装饰覆盖密度",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "21个可编辑装饰覆盖主要区域；部分内部构图和密度不同。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "轮廓构图",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "皇冠、叶片、卷纸、蘑菇等轮廓可辨，但比例及内部细节明显近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手绘字形",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "有独立手绘字形并沿曲线变形，但挤压、鼓胀和笔画厚度与参考仍明显不同。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "非刚性展开",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "独立纸片有压缩、翻面亮边及展开动作，较整体缩放更完整；仍由平面压缩近似参考的非刚性卷曲。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.25
+    },
+    {
+      "id": "V_late",
+      "title": "切片、手与建筑、花草骑行",
+      "weight": 8,
+      "components": [
+        {
+          "name": "人物周围切片",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "多行切片与光学环存在，截面、透明混色和前后交错仍近似；人物身份、服饰、原动作与火焰豁免。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0550.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手与建筑形体材质",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "手与码头、阶梯、船和云都可编辑，但手部材质、云体积和建筑空间明显简化。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0550.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "花草骑行形体材质运动",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "植物、木板和关节骑行者都有实际运动；板间距、材质、人体姿态和退出位置仍不同。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0550.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0680.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_compare_0850.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_transition",
+      "title": "源片时序、转换机制与遮挡",
+      "weight": 8,
+      "components": [
+        {
+          "name": "原片事件进程",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "阶段顺序成立，但6.25–6.5秒人像残留、插画到切片进程及骑行退出姿态偏离参考。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_transition_motion.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_late_motion.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "跨阶段形变机制",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "关键黑白文字环主要沿固定平面曲线替换显露，缺失原片主导的空间翻卷机制；不能因有切片而视为完整复现。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_transition_motion.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_late_motion.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "局部遮挡层次",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "前后切片、人物和环有独立遮挡层次；细部交错仍与参考不同。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_transition_motion.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_late_motion.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "全段稳定与运动",
+          "weight": 1,
+          "tier": 1,
+          "reason": "全240帧可解码，所有阶段都有实际动作并正常退出。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_transition_motion.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/R_late_motion.jpg"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_text",
+      "title": "返修文字内容、方向及曲线形变",
+      "weight": 8,
+      "components": [
+        {
+          "name": "全部目标文字覆盖",
+          "weight": 1,
+          "tier": 1,
+          "reason": "彩色字与后续黑白环均实际替换TOGETHER为CREATE ON。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0450.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "阅读方向可读性",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "CREATE ON可沿曲线辨读，保留阅读方向；上方短弧和折叠切口附近仍有局部拥挤、截字。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0450.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "曲线字形手绘变形",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "自定义字形沿曲线扭曲，但未达到参考的粗厚手绘挤压与空间翻卷。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0450.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "填色描边间距遮挡",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "暖色、描边及原有遮挡保留，笔画粗细、字距及切口配合仍明显近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0350.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0450.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 5.0
+    },
+    {
+      "id": "V_material",
+      "title": "返修材质与局部范围",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定色彩",
+          "weight": 1,
+          "tier": 1,
+          "reason": "蓝青指定渐变实际生效。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_graphics.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部范围",
+          "weight": 1,
+          "tier": 1,
+          "reason": "改色限于管体及其光学卡透射色，其他图形保持。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_graphics.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "原片光学质感保留",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "法向截面着色、附着高光及透明边缘改善了体积；仍缺少参考材质的微纹理、复杂折射和光学层次。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/E_compare_0225.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_graphics.py"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 3.5
+    },
+    {
+      "id": "V_portrait",
+      "title": "真实人像、边缘、融合与层次",
+      "weight": 10,
+      "components": [
+        {
+          "name": "真实素材和背景去除",
+          "weight": 1,
+          "tier": 1,
+          "reason": "使用指定真实Mixkit视频和RVM软alpha，去除了街道背景。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/head_109.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/stage1_portrait_checker.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_portrait.py",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "边缘与时间稳定",
+          "weight": 3,
+          "tier": 0.75,
+          "reason": "连续人物轮廓稳定且保留发丝；仍有浅色晕边与软化，未声称有分割真值精度。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/head_109.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/stage1_portrait_checker.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_portrait.py",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 2.25
+        },
+        {
+          "name": "连续运动及自然融合",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "头部比例和连续运动保留，但下方衣服以分段网格纵向延展，人物光照与背景融合仍明显近似。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/head_109.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/stage1_portrait_checker.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_portrait.py",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "窗口头部越界前景遮挡",
+          "weight": 3,
+          "tier": 1,
+          "reason": "独立像素测试确认头顶额外36px、单头合成、躯干窗口裁切和前景环/切片遮挡成立。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/evidence/head_109.jpg",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/stage1_portrait_checker.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_portrait.py",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 7.75
+    },
+    {
+      "id": "V_local",
+      "title": "光标局部延迟与未改内容保持",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定光标及非目标保持",
+          "weight": 2,
+          "tier": 1,
+          "reason": "蓝光标采用独立延后0.25秒时钟；关闭延迟时7个抽查帧的改变仅在两种光标几何并集中，绿橙对象不改。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/timeline.py"
+          ],
+          "score": 2
+        },
+        {
+          "name": "时间映射及其余画面保持",
+          "weight": 3,
+          "tier": 1,
+          "reason": "基础映射误差小于1e-15秒，共享R的240个原始渲染帧一致；6.25秒后90帧最大通道差0，保持在舍入微差内。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/timeline.py"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 5
+    },
+    {
+      "id": "A_analysis",
+      "title": "音频事件与包络计算",
+      "weight": 2,
+      "components": [
+        {
+          "name": "三峰时间",
+          "weight": 1.5,
+          "tier": 1,
+          "reason": "独立SciPy计算A/B/C为0.90/2.61/4.30秒，与模型一致。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "包络算法",
+          "weight": 0.5,
+          "tier": 1,
+          "reason": "独立攻击/释放包络最大误差约2.61e-15。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 2.0
+    },
+    {
+      "id": "A_track",
+      "title": "音轨内容、增益与时基",
+      "weight": 2,
+      "components": [
+        {
+          "name": "内容增益",
+          "weight": 1,
+          "tier": 1,
+          "reason": "输出B音轨零延迟两声道相关约.999，仅AAC编码误差。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/media_verification.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "零偏移原速长度无削波",
+          "weight": 1,
+          "tier": 1,
+          "reason": "原位、原速、原增益，无削波；256样本AAC尾部填充不扣分。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/media_verification.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 2
+    },
+    {
+      "id": "A_events",
+      "title": "声音事件对应的实际视觉完成",
+      "weight": 9,
+      "components": [
+        {
+          "name": "A · 实际完成时刻",
+          "weight": 1,
+          "tier": 0.25,
+          "reason": "最后套准中心在源第23帧出现，拼装约0.690秒完成，早于A约5.04帧；后续墨色与端帽移动不代替拼装完成。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_A_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_A.jpg"
+          ],
+          "score": 0.25
+        },
+        {
+          "name": "A · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "网格、卡片与套准结构存在，但负形与局部装配状态明显近似。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_A_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_A.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "A · 连续局部动作",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "有卡片滑入和独立退场，仍以多卡整体渐显近似主要拼装。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_A_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_A.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "B · 实际完成时刻",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "最后纸片局部折叠在源第87帧恢复，输出约2.716秒，晚于B约2.54帧；峰时蘑菇等仍在恢复展开。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_B_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_B.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "B · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "主要装饰及新文字完整，但轮廓、字形和局部空间形体明显近似。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_B_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_B.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "B · 连续局部动作",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "有独立压缩、反面亮边和展开，未完整复现参考卷曲机制。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_B_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py",
+            "evaluation_v31/astra/completion_B.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "C · 实际完成时刻",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立实际人物alpha扫描在源第132帧达到完整，即4.30秒，与C一致。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_C_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py"
+          ],
+          "score": 1
+        },
+        {
+          "name": "C · 目标状态完整性",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "替换人物成立，周围光学环、切片及轨道的形体状态仍明显近似；人物身份与火焰不计缺失。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_C_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "C · 连续局部动作",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "使用分行空间揭示并保持连续人像源时间，参考切片与空间混合机制仍明显简化。",
+          "evidence": [
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/evidence/event_C_window.jpg",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/scenes_graphic.py",
+            "runs/astra_xhigh_20261120_v31/sealed/stage2/submission/project/revision_portrait.py"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 4.75
+    },
+    {
+      "id": "A_pulse",
+      "title": "低频管体响应的正确性与可感知性",
+      "weight": 8,
+      "components": [
+        {
+          "name": "实际厚度及包络正确",
+          "weight": 2,
+          "tier": 1,
+          "reason": "实际像素截面随规定包络变化，独立采样从93像素基线到97/96/94像素；未缩放路径。",
+          "evidence": [
+            "evaluation_v31/astra/pulse_normal_comparison.jpg",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 2
+        },
+        {
+          "name": "正常尺度可见响应",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "管体增厚在脉冲开关并排中可辨；完整画面中与轨道拼装和套筒移动混在一起，未达到正常尺度两次清晰收放。",
+          "evidence": [
+            "evaluation_v31/astra/pulse_normal_comparison.jpg",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "声音与局部运动节奏对应",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "两个主低频峰时管体都不可见；较强回落发生在管体仍拼装时，完整管体主要只剩较小波动，缺少清楚峰谷。",
+          "evidence": [
+            "evaluation_v31/astra/pulse_normal_comparison.jpg",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "中心线及非目标保持",
+          "weight": 1,
+          "tier": 1,
+          "reason": "6个采样帧的改变全部位于管体支持范围，中心路径固定，非目标不跟随脉冲。",
+          "evidence": [
+            "evaluation_v31/astra/pulse_normal_comparison.jpg",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 5.0
+    },
+    {
+      "id": "A_causal",
+      "title": "改音轨后的实际画面因果与不变性",
+      "weight": 4,
+      "components": [
+        {
+          "name": "整体移音频事件移动",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立音轨后移.125秒后，峰值变为1.02/2.74/4.42秒，实际前半段画面重新渲染并改变。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "仅高频改变不误触发",
+          "weight": 1,
+          "tier": 1,
+          "reason": "仅高频变化的10个独立抽查帧原始像素完全不变。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "实际动作随新峰重新完成",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "实际动作随新峰移动，但A依然提前约5帧、B仍有约2.5帧偏差；C实际alpha完成可跟随，故不能只凭时间映射满分。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "后半段与其他对象保持",
+          "weight": 1,
+          "tier": 1,
+          "reason": "移音轨后6.25秒及7.5/8.75秒抽样原始像素不变；后半段全90帧与基础R的保持另行验证。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "evaluation_v31/astra/measurements.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 3.5
+    },
+    {
+      "id": "ENG",
+      "title": "工程与有效参数变体",
+      "weight": 5,
+      "components": [
+        {
+          "name": "R独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "第一阶段R在隐藏参考的独立环境中重渲染，视频字节一致。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_R_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_E_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/execution_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "E独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "第二阶段E在独立环境重渲染，视频字节一致；共享R原始帧也保持。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_R_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_E_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/execution_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "依赖素材完整",
+          "weight": 1,
+          "tier": 1,
+          "reason": "工程自带人物衍生帧、矢量、字体和配置；无参考素材和外网也能渲染。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_R_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_E_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/execution_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "参数实际生效",
+          "weight": 1,
+          "tier": 1,
+          "reason": "文字、音轨、脉冲、光标、头部参数均由独立副本实际改动并重新出图验证。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_R_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_E_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/execution_audit.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "诊断与图层定位",
+          "weight": 1,
+          "tier": 1,
+          "reason": "alpha/checker/头部越界、音频事件、CSV和编辑映射齐全。",
+          "evidence": [
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_R_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/rebuild_E_compare.json",
+            "runs/astra_xhigh_20261120_v31/reports/raw_preservation.json",
+            "runs/astra_xhigh_20261120_v31/reports/independent_controls.json",
+            "runs/astra_xhigh_20261120_v31/reports/execution_audit.json"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 5
+    }
+  ],
+  "version": "v3.1",
+  "categories": [
+    {
+      "title": "视觉重建与返修",
+      "score": 43.5,
+      "maximum": 70
+    },
+    {
+      "title": "音画同步",
+      "score": 17.25,
+      "maximum": 25
+    },
+    {
+      "title": "工程交付",
+      "score": 5,
+      "maximum": 5
+    }
+  ],
+  "total": 65.75,
+  "maximum": 100,
+  "pass_threshold": 85,
+  "passed": false,
+  "rubric_sha256": "487251f9a8b085ece1573ab27c62f9fe3345adc959184758da3b4ee2c55496e6",
+  "graded_utc": "2026-11-20T10:47:44.739712+00:00",
+  "method": "sum(component weight × fixed tier), no global multiplier"
+}
