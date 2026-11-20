@@ -53,6 +53,15 @@ for (const url of [pathToFileURL(path.join(dist,'index.html')).href, 'http://127
     await links(d.querySelector('#detail-panel'));
   }
   route('#task-birds/results/v6-all');
+  const combined=d.querySelector('[data-v6-all-comparison]');
+  assert(combined,'All five runs share one comparison');
+  assert.equal(d.querySelectorAll('[data-birds-content] table').length,1);
+  assert.deepEqual([...combined.querySelectorAll('tbody tr')].map(row=>row.dataset.birdsRun),
+    ['sol','sol_relaxed_1','sol_relaxed_2','luna_xhigh','astra_xhigh']);
+  for (const row of combined.querySelectorAll('tbody tr')) {
+    assert(row.textContent.includes(w.OMNIALE_BIRDS_CASE.comparison[row.dataset.birdsRun].score.toFixed(4)));
+  }
+  await links(combined);
   for (const option of [...d.querySelectorAll('[data-birds-model] option')]) {
     const select=d.querySelector('[data-birds-model]');select.value=option.value;
     select.dispatchEvent(new w.Event('change',{bubbles:true}));

@@ -76,7 +76,29 @@ def build():
     overview+='<p>已放开 YouTube、Macaulay Library、Cornell/eBird、Wikipedia/Wikidata 和 FWS 等独立资料；保留 Wikimedia 原数据集、镜像、原素材 ID、同源音频及历史答卷限制。</p>'
     (OUT/'reports').mkdir(exist_ok=True);(OUT/'reports/index.html').write_text(page('V6 Sol · 三轮网站限制对照','<p><a href="../../index.html#task-birds/results/v6-relaxed">← 返回看板</a></p><h1>鸟类科普 V6 · Sol 重复实验</h1>'+overview),encoding='utf8')
     # Loaded after birds-case/data.js and before unified case registration.
-    overlay="""(()=>{const p=PAYLOAD,d=window.OMNIALE_BIRDS_CASE,s=window.OMNIALE_BIRDS_SECTIONS;if(!d||!s)return;d.relaxedAttempts=p.attempts;for(const a of p.attempts)d.comparison[a.id]=a;const report='birds-v6-relaxed-report/reports/index.html';const markup=MARKUP;s['v6-relaxed']={report,content:()=>'<section class="note-card" data-v6-relaxed-comparison>'+markup+'</section>'};const old=s['v6-all'];if(old)s['v6-all']={...old,content:()=>old.content()+s['v6-relaxed'].content()};})();"""
+    overlay="""(()=>{
+const p=PAYLOAD,d=window.OMNIALE_BIRDS_CASE,s=window.OMNIALE_BIRDS_SECTIONS;
+if(!d||!s)return;
+d.relaxedAttempts=p.attempts;
+for(const a of p.attempts)d.comparison[a.id]=a;
+const report='birds-v6-relaxed-report/reports/index.html',markup=MARKUP;
+s['v6-relaxed']={report,content:()=>'<section class="note-card" data-v6-relaxed-comparison>'+markup+'</section>'};
+const runs=[
+  ['sol','Sol · 原 V6','high','60 分钟','原网站限制','birds-v6-report'],
+  ...p.attempts.map((a,i)=>[a.id,'Sol · 放宽第 '+(i+1)+' 次','high','不限时','放宽网站限制',a.folder]),
+  ['luna_xhigh','Luna','xhigh','不限时','原网站限制','birds-v6-luna-xhigh-report'],
+  ['astra_xhigh','Astra','xhigh','不限时','原网站限制','birds-v6-astra-xhigh-report']
+];
+const fmt=(v,n=4)=>typeof v==='number'?v.toFixed(n):'—';
+const old=s['v6-all'];
+if(old)s['v6-all']={...old,content:()=>{
+  const rows=runs.map(([id,label,effort,limit,network,folder])=>{
+    const r=d.comparison[id];
+    return '<tr data-birds-run="'+id+'"><td>'+label+'</td><td>'+effort+'</td><td>'+limit+'</td><td>'+network+'</td><td><strong>'+fmt(r.score)+'</strong></td><td>'+fmt(r.body?.[0])+'</td><td>'+fmt(r.quality?.[0],6)+'</td><td>'+r.correct_chapters+'/6</td><td>'+(typeof r.text_label_matches==='number'?r.text_label_matches+'/6':'—')+'</td><td>'+fmt(r.minutes,2)+'</td><td><a href="'+folder+'/reports/index.html">成片与评分证据 ↗</a></td></tr>';
+  }).join('');
+  return '<section class="note-card" data-v6-all-comparison><h2>V6 · 全部模型成绩 · 5 次实验</h2><p>Sol 三次成绩与 Luna、Astra 集中展示。各轮使用相同视频与评分规则；推理强度、总时限和网站限制见表。</p><div style="overflow:auto"><table style="width:100%;text-align:left"><thead><tr><th>模型 / 实验</th><th>推理强度</th><th>总时限</th><th>网络规则</th><th>得分</th><th>主体 B</th><th>质量 Q</th><th>成片识别</th><th>文字标签</th><th>实际分钟</th><th>答卷 / 报告</th></tr></thead><tbody>'+rows+'</tbody></table></div><p>Sol 原 V6 为 high / 60 分钟，两次放宽实验为 high / 不限时；Luna 与 Astra 均为 xhigh / 不限时，沿用原网站限制。五次实验配置不完全一致，分差不能单独归因于模型或网站限制。文字标签未汇总的记录以“—”表示。</p><p>放宽实验允许访问 YouTube、Macaulay Library、Cornell/eBird、Wikipedia/Wikidata 和 FWS 等独立资料，仍限制原数据集、镜像、原素材 ID、同源音频及历史答卷。<a href="'+report+'">查看 Sol 三轮网站限制对照与访问核实 ↗</a></p></section>';
+}};
+})();"""
     markup=overview.replace('../attempt-','birds-v6-relaxed-report/attempt-')
     (OUT/'integration.js').write_text(overlay.replace('PAYLOAD',json.dumps(payload,ensure_ascii=False).replace('<','\\u003c')).replace('MARKUP',json.dumps(markup,ensure_ascii=False).replace('<','\\u003c')),encoding='utf8')
     index=BASE/'dist/index.html';s=index.read_text(encoding='utf8')
