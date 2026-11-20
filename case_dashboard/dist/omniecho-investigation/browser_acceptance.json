@@ -1,0 +1,1085 @@
+{
+  "date": "2026-11-20T03:17:54.105Z",
+  "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+  "physical_audio_observable": false,
+  "ui_control_failure": "CUA browser access host unavailable; native Edge get_window_state timed out. Headless tests do not verify physical audio output.",
+  "models": [
+    {
+      "run": "case1__sol_01",
+      "report_sha256": "e81ca485659ed13f3c849e9471ba12b1b3123ffd9aa3c1c0e45463b1e17ab740",
+      "findings_sha256": "41bc45abf7c97df23fc8aec1127e115da6f2958b3545ebcadb3271f2016ab5fa",
+      "offline_open": true,
+      "all_record_navigation": true,
+      "video_playback": true,
+      "audio_output": null,
+      "visible_json_consistency": true,
+      "records": [
+        {
+          "record_id": "C01",
+          "anchor_visible": true,
+          "location_hash": "#C01",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 32,
+              "visible": "32",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0,
+            "expected": 0,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C02",
+          "anchor_visible": true,
+          "location_hash": "#C02",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 32,
+              "visible": "32",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.5,
+            "expected": 0.5,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C03",
+          "anchor_visible": true,
+          "location_hash": "#C03",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 8.75,
+            "expected": 8.75,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C04",
+          "anchor_visible": true,
+          "location_hash": "#C04",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 9.25,
+            "expected": 9.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C05",
+          "anchor_visible": true,
+          "location_hash": "#C05",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "yes",
+              "visible": "yes",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.501296,
+            "expected": 0.5,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C06",
+          "anchor_visible": true,
+          "location_hash": "#C06",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.5,
+            "expected": 0.5,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C07",
+          "anchor_visible": true,
+          "location_hash": "#C07",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 30,
+              "visible": "30",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 8.25,
+            "expected": 8.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C08",
+          "anchor_visible": true,
+          "location_hash": "#C08",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 2.25,
+            "expected": 2.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C09",
+          "anchor_visible": true,
+          "location_hash": "#C09",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 1.25,
+            "expected": 1.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C10",
+          "anchor_visible": true,
+          "location_hash": "#C10",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4.5,
+              "visible": "4.5",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 9.25,
+            "expected": 9.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C11",
+          "anchor_visible": true,
+          "location_hash": "#C11",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.5,
+            "expected": 0.5,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C12",
+          "anchor_visible": true,
+          "location_hash": "#C12",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 115,
+              "visible": "115",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.75,
+            "expected": 0.75,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C13",
+          "anchor_visible": true,
+          "location_hash": "#C13",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 4.25,
+            "expected": 4.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C14",
+          "anchor_visible": true,
+          "location_hash": "#C14",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 2.75,
+            "expected": 2.75,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C15",
+          "anchor_visible": true,
+          "location_hash": "#C15",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 5.25,
+            "expected": 5.25,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C16",
+          "anchor_visible": true,
+          "location_hash": "#C16",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "no",
+              "visible": "no",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 0.5,
+            "expected": 0.5,
+            "ready": 4
+          }
+        },
+        {
+          "record_id": "C17",
+          "anchor_visible": true,
+          "location_hash": "#C17",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 140,
+              "visible": "140",
+              "match": true
+            }
+          ],
+          "play": {
+            "time": 12.25,
+            "expected": 12.25,
+            "ready": 4
+          }
+        }
+      ],
+      "errors": [],
+      "video_state": {
+        "time": 2.259191,
+        "width": 960,
+        "height": 540,
+        "paused": false,
+        "muted": false,
+        "volume": 1,
+        "readyState": 4
+      },
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+    },
+    {
+      "run": "case1__luna_01",
+      "report_sha256": "386257affb68cafa036c8fa7ba9bbd4ae547b2b80fac2c31b1e2a0431e6da4f9",
+      "findings_sha256": "11f3b9fc1e05c82a9af95d1b468411fbaa584ec62d146d837fb2d110e289ab1c",
+      "offline_open": true,
+      "all_record_navigation": true,
+      "video_playback": true,
+      "audio_output": null,
+      "visible_json_consistency": true,
+      "records": [
+        {
+          "record_id": "C01",
+          "anchor_visible": true,
+          "location_hash": "#rec-C01",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 18,
+              "visible": 18,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C02",
+          "anchor_visible": true,
+          "location_hash": "#rec-C02",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 18,
+              "visible": 18,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C03",
+          "anchor_visible": true,
+          "location_hash": "#rec-C03",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C04",
+          "anchor_visible": true,
+          "location_hash": "#rec-C04",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 3,
+              "visible": 3,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C05",
+          "anchor_visible": true,
+          "location_hash": "#rec-C05",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "no",
+              "visible": "no",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C06",
+          "anchor_visible": true,
+          "location_hash": "#rec-C06",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C07",
+          "anchor_visible": true,
+          "location_hash": "#rec-C07",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 16,
+              "visible": 16,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C08",
+          "anchor_visible": true,
+          "location_hash": "#rec-C08",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C09",
+          "anchor_visible": true,
+          "location_hash": "#rec-C09",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C10",
+          "anchor_visible": true,
+          "location_hash": "#rec-C10",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 3,
+              "visible": 3,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C11",
+          "anchor_visible": true,
+          "location_hash": "#rec-C11",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "front-right",
+              "visible": "front-right",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C12",
+          "anchor_visible": true,
+          "location_hash": "#rec-C12",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 80,
+              "visible": 80,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C13",
+          "anchor_visible": true,
+          "location_hash": "#rec-C13",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 3,
+              "visible": 3,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C14",
+          "anchor_visible": true,
+          "location_hash": "#rec-C14",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C15",
+          "anchor_visible": true,
+          "location_hash": "#rec-C15",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 3,
+              "visible": 3,
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C16",
+          "anchor_visible": true,
+          "location_hash": "#rec-C16",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "yes",
+              "visible": "yes",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C17",
+          "anchor_visible": true,
+          "location_hash": "#rec-C17",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 66,
+              "visible": 66,
+              "match": true
+            }
+          ],
+          "play": null
+        }
+      ],
+      "errors": [
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause().",
+        "The play() request was interrupted by a call to pause()."
+      ],
+      "video_state": {
+        "time": 2.256181,
+        "width": 960,
+        "height": 540,
+        "paused": false,
+        "muted": false,
+        "volume": 1,
+        "readyState": 4
+      },
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+    },
+    {
+      "run": "case1__astra_xhigh_unlimited_20261119_newkey",
+      "report_sha256": "c7031b8ea44ef5527f01e5ad5cc30cb77773b2950f69153b502ae4413c53da25",
+      "findings_sha256": "7a63d8d9a8e898d6b626bf2f2c81f1421182f3f819570fb0a0d0c8a5487d46c4",
+      "offline_open": true,
+      "all_record_navigation": true,
+      "video_playback": true,
+      "audio_output": null,
+      "visible_json_consistency": true,
+      "records": [
+        {
+          "record_id": "C01",
+          "anchor_visible": true,
+          "location_hash": "#C01",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 30,
+              "visible": "30",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C02",
+          "anchor_visible": true,
+          "location_hash": "#C02",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "right",
+              "visible": "right",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 30,
+              "visible": "30",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C03",
+          "anchor_visible": true,
+          "location_hash": "#C03",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C04",
+          "anchor_visible": true,
+          "location_hash": "#C04",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front-left",
+              "visible": "front-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C05",
+          "anchor_visible": true,
+          "location_hash": "#C05",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "yes",
+              "visible": "yes",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C06",
+          "anchor_visible": true,
+          "location_hash": "#C06",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "front-right",
+              "visible": "front-right",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C07",
+          "anchor_visible": true,
+          "location_hash": "#C07",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 20,
+              "visible": "20",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C08",
+          "anchor_visible": true,
+          "location_hash": "#C08",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C09",
+          "anchor_visible": true,
+          "location_hash": "#C09",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C10",
+          "anchor_visible": true,
+          "location_hash": "#C10",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C11",
+          "anchor_visible": true,
+          "location_hash": "#C11",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "motion_direction",
+              "expected": "front",
+              "visible": "front",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C12",
+          "anchor_visible": true,
+          "location_hash": "#C12",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 125,
+              "visible": "125",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C13",
+          "anchor_visible": true,
+          "location_hash": "#C13",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C14",
+          "anchor_visible": true,
+          "location_hash": "#C14",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C15",
+          "anchor_visible": true,
+          "location_hash": "#C15",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "direction",
+              "expected": "back-left",
+              "visible": "back-left",
+              "match": true
+            },
+            {
+              "field": "distance_m",
+              "expected": 4,
+              "visible": "4",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C16",
+          "anchor_visible": true,
+          "location_hash": "#C16",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "same_turn_direction",
+              "expected": "no",
+              "visible": "no",
+              "match": true
+            }
+          ],
+          "play": null
+        },
+        {
+          "record_id": "C17",
+          "anchor_visible": true,
+          "location_hash": "#C17",
+          "navigation": true,
+          "visible_fields": [
+            {
+              "field": "turn_direction",
+              "expected": "left",
+              "visible": "left",
+              "match": true
+            },
+            {
+              "field": "turn_degrees",
+              "expected": 145,
+              "visible": "145",
+              "match": true
+            }
+          ],
+          "play": null
+        }
+      ],
+      "errors": [],
+      "video_state": {
+        "time": 2.269491,
+        "width": 960,
+        "height": 540,
+        "paused": false,
+        "muted": false,
+        "volume": 1,
+        "readyState": 4
+      },
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+    }
+  ]
+}

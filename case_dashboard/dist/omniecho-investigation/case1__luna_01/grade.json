@@ -1,52 +1,35 @@
 {
-  "name": "case1__luna_01",
-  "case": "case1",
+  "version": "2.1-strict-retrospective",
+  "run": "case1__luna_01",
   "model": "gpt-6-luna",
-  "classification": "development pilot",
-  "infrastructure_valid": true,
-  "submitted": true,
-  "elapsed_seconds": 794.8080806732178,
-  "token_usage": {
-    "input_tokens": 653280,
-    "output_tokens": 36279,
-    "total_tokens": 689559
-  },
-  "manual_review": {
-    "status": "complete",
-    "reviewer": "root assistant",
-    "method": "HTML source inspection and all 17 visible record JSON blocks compared with findings.json; local links and media decoded; browser rendering unavailable",
-    "report_structurally_viewable": true,
-    "report_facts_consistent": true,
-    "notes": [
-      "Report is a static table by source/time with audio playback and per-record seek buttons.",
-      "All 17 visible record data blocks match final JSON exactly.",
-      "One full-length exported original clip used for all records; traceability is temporal coverage, not independent semantic verification.",
-      "Uses audio element for MP4 soundtrack with original video file download; browser rendering/playback not exercised."
-    ]
-  },
-  "limitations": [
-    "Single development instance; not benchmark-level comparison",
-    "Audio processed via local tools, not native audio-model input"
+  "strict_fact_correct": 3,
+  "fact_total": 18,
+  "F": 0.16666666666666666,
+  "G": 0.0,
+  "P": 0.5,
+  "L": 0.17647058823529413,
+  "R": null,
+  "R_interval": [
+    0.8,
+    1.0
   ],
-  "score": 33.3333,
-  "F": 0.3333333333333333,
-  "E": 1.0,
-  "D": 1.0,
-  "original_fact_correct": 6,
-  "original_fact_total": 18,
-  "delivery": {
-    "report_openable": true,
-    "json_valid": true,
-    "evidence_decodable": true,
-    "references_closed": true,
-    "report_json_consistent": true
-  },
+  "A_interval": [
+    0.2464705882352941,
+    0.27647058823529413
+  ],
+  "v2_score_interval": [
+    10.3873,
+    10.6373
+  ],
+  "v2_formal_score": null,
+  "status": "physical_audio_acceptance_pending",
+  "failed_known_gate": "F < 0.8",
+  "score": null,
   "task_pass": false,
-  "atoms": [
+  "facts": [
     {
       "atom_id": "F01",
       "record_id": "C01",
-      "source_id": "camera",
       "category": "camera_rotation",
       "reference": {
         "turn_direction": "right",
@@ -56,14 +39,14 @@
         "turn_direction": "right",
         "turn_degrees": 18
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 90
+      "errors": {
+        "turn_degrees": 17.0
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F02",
       "record_id": "C02",
-      "source_id": "camera",
       "category": "camera_rotation",
       "reference": {
         "turn_direction": "right",
@@ -73,14 +56,14 @@
         "turn_direction": "right",
         "turn_degrees": 18
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 91
+      "errors": {
+        "turn_degrees": 17.0
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F03",
       "record_id": "C03",
-      "source_id": "S1",
       "category": "direction",
       "reference": {
         "direction": "front"
@@ -88,14 +71,12 @@
       "prediction": {
         "direction": "front"
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 92
+      "errors": {},
+      "new_correct": true
     },
     {
       "atom_id": "F04",
       "record_id": "C04",
-      "source_id": "S1",
       "category": "localization3d",
       "reference": {
         "direction": "front",
@@ -105,14 +86,14 @@
         "direction": "front-left",
         "distance_m": 3.0
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 93
+      "errors": {
+        "distance_m": 1.5
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F05",
       "record_id": "C05",
-      "source_id": "S1",
       "category": "camera_rotation",
       "reference": {
         "same_turn_direction": "yes"
@@ -120,14 +101,12 @@
       "prediction": {
         "same_turn_direction": "no"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 94
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F06",
       "record_id": "C06",
-      "source_id": "S1",
       "category": "motion",
       "reference": {
         "motion_direction": "right"
@@ -135,14 +114,12 @@
       "prediction": {
         "motion_direction": "left"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 95
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F07",
       "record_id": "C07",
-      "source_id": "S1",
       "category": "direction",
       "reference": {
         "turn_direction": "left",
@@ -152,14 +129,14 @@
         "turn_direction": "left",
         "turn_degrees": 16
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 96
+      "errors": {
+        "turn_degrees": 5.0
+      },
+      "new_correct": true
     },
     {
       "atom_id": "F08",
       "record_id": "C08",
-      "source_id": "S1",
       "category": "direction",
       "reference": {
         "direction": "front"
@@ -167,14 +144,12 @@
       "prediction": {
         "direction": "front"
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 97
+      "errors": {},
+      "new_correct": true
     },
     {
       "atom_id": "F09",
       "record_id": "C09",
-      "source_id": "S2",
       "category": "direction",
       "reference": {
         "direction": "back-left"
@@ -182,14 +157,12 @@
       "prediction": {
         "direction": "left"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 98
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F10",
       "record_id": "C10",
-      "source_id": "S2",
       "category": "localization3d",
       "reference": {
         "direction": "back-left",
@@ -199,14 +172,14 @@
         "direction": "front-left",
         "distance_m": 3.0
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 99
+      "errors": {
+        "distance_m": 1.0
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F11",
       "record_id": "C11",
-      "source_id": "S2",
       "category": "motion",
       "reference": {
         "motion_direction": "left"
@@ -214,14 +187,12 @@
       "prediction": {
         "motion_direction": "front-right"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 100
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F12",
       "record_id": "C12",
-      "source_id": "S2",
       "category": "direction",
       "reference": {
         "turn_direction": "left",
@@ -231,14 +202,14 @@
         "turn_direction": "left",
         "turn_degrees": 80
       },
-      "correct": true,
-      "traceable_evidence": true,
-      "original_jsonl_line": 101
+      "errors": {
+        "turn_degrees": 45.0
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F13",
       "record_id": "C13",
-      "source_id": "S2",
       "category": "direction",
       "reference": {
         "direction": "back-left"
@@ -246,14 +217,12 @@
       "prediction": {
         "direction": "left"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 102
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F14",
       "record_id": "C13",
-      "source_id": "S2",
       "category": "localization3d",
       "reference": {
         "direction": "back-left",
@@ -263,14 +232,14 @@
         "direction": "left",
         "distance_m": 3.0
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 103
+      "errors": {
+        "distance_m": 0.3999999999999999
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F15",
       "record_id": "C14",
-      "source_id": "S3",
       "category": "direction",
       "reference": {
         "direction": "back-left"
@@ -278,14 +247,12 @@
       "prediction": {
         "direction": "left"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 104
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F16",
       "record_id": "C15",
-      "source_id": "S3",
       "category": "localization3d",
       "reference": {
         "direction": "back-left",
@@ -295,14 +262,14 @@
         "direction": "front-left",
         "distance_m": 3.0
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 105
+      "errors": {
+        "distance_m": 1.2000000000000002
+      },
+      "new_correct": false
     },
     {
       "atom_id": "F17",
       "record_id": "C16",
-      "source_id": "S3",
       "category": "camera_rotation",
       "reference": {
         "same_turn_direction": "no"
@@ -310,14 +277,12 @@
       "prediction": {
         "same_turn_direction": "yes"
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 106
+      "errors": {},
+      "new_correct": false
     },
     {
       "atom_id": "F18",
       "record_id": "C17",
-      "source_id": "S3",
       "category": "direction",
       "reference": {
         "turn_direction": "left",
@@ -327,18 +292,19 @@
         "turn_direction": "left",
         "turn_degrees": 66
       },
-      "correct": false,
-      "traceable_evidence": true,
-      "original_jsonl_line": 108
+      "errors": {
+        "turn_degrees": 81.0
+      },
+      "new_correct": false
     }
   ],
   "breakdown": {
     "camera_rotation": {
-      "correct": 2,
+      "correct": 0,
       "total": 4
     },
     "direction": {
-      "correct": 4,
+      "correct": 3,
       "total": 8
     },
     "localization3d": {
@@ -349,6 +315,5 @@
       "correct": 0,
       "total": 2
     }
-  },
-  "review_complete": true
+  }
 }

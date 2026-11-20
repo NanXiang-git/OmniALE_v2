@@ -1,0 +1,1188 @@
+{
+  "reviewer": "root assistant; separate from the three solver sessions",
+  "blind_to_gold": false,
+  "human_expert_review": false,
+  "grounding_scope": "Submitted report, media, and retained reproducible analyses. No new JSON fields required. Unsubmitted execution outputs can substantiate P, not supplement the delivered report for G.",
+  "findings_sha256": "7a63d8d9a8e898d6b626bf2f2c81f1421182f3f819570fb0a0d0c8a5487d46c4",
+  "report_sha256": "c7031b8ea44ef5527f01e5ad5cc30cb77773b2950f69153b502ae4413c53da25",
+  "submission_hashes": {
+    "analysis/audio_stats.py": "941120de84456d5589b77cbab1c3de7995b04b17c9df103285de61bd65e898d1",
+    "analysis/channel_statistics.json": "a497a55208d6594d0a55608fef148708ac9043d01576ebb5129e8eb1564b8cb2",
+    "analysis/check_submission.py": "d73408634377eed8b54f2f46c816d30d789a13579ccc00741b696473099876f1",
+    "analysis/coverage_manifest.json": "6984cd2ad5434d0c330f658f71d847c68132984a081f1a756e1717231bc082b1",
+    "analysis/diffuse_fit.json": "added6c1a77c4f76b91c12d54fc4c42af468cb81cabc9d92e8809b1d6c23ef8f",
+    "analysis/diffuse_fit.py": "6edaf718fc4d60b8b2e92ae35637303ab8373a909ecced231f3c010bbfff8e6c",
+    "analysis/doa_histogram.jpg": "05050fbeeaff07d482ea4eebf439698e3f5d7f93cdb34e419763983a343889d6",
+    "analysis/exact_contact.jpg": "4d1567a4db069960095004e3259e5d91cbfadca117ad7640de0eab0983ca13e1",
+    "analysis/export_receipt.json": "e8672cf188e9309657a2232736ef131225f7923521a59fb673e0af68f8637920",
+    "analysis/findings.schema.json": "8a2ffa9652d4c11db82ba39e8832cb0ae469e9fc290ab4e1e9eae1259774577e",
+    "analysis/frame_0.jpg": "f34c00d95c1e84e9cfc7cb2addb7f9c4c0e640bb0807abc391510cc21bbc9362",
+    "analysis/frame_18.jpg": "38d6062a7896594916ab369e0c90e3f1ec92767a8ac8be322df4556e0243ca3d",
+    "analysis/geometry.json": "d152562422cfdd0c9f8074b420d60ac9bae8580e97f6eef9184c11cb4441db65",
+    "analysis/geometry.py": "d49f1419db0d0e2fe174ed48016bc42d9826719b1f2db4dcc569edc7c08642c3",
+    "analysis/grid0.jpg": "0bed46939d2358a785b2e5d7314932155076d689c74b886978c4d9a9a3c40aea",
+    "analysis/grid1.jpg": "08522a2d59017fdbe189e42008109e73785f3d8fdcf168aeea85574c68f4ee0f",
+    "analysis/intensity.jpg": "8b33b6fe106793d3d9c03ed509079b8e7933626afcb59016d09733151068feeb",
+    "analysis/intensity.json": "3ad9f82204fdef85aecd2eb1c66fe116efaea18f3754be2b22aa70bb6a84a456",
+    "analysis/intensity.py": "164b36472ecbb4e0f3de90b3bbb559dfff5faf09d6334c0b22887b00f19b34f4",
+    "analysis/local_validation.json": "2f1214363da8e5baa890ff8272eb6d7dfe48d28717709a4b876645c373bd9735",
+    "analysis/method_and_uncertainty.json": "23233a809da247ad968a346cf8b819a199c723fdcbeafd31dc5ef4484d05d229",
+    "analysis/robust_direction.json": "d62e1de49a6d252460ea543a32c2f0c5b107b2c3c7b1325aa735dbc20ee34c96",
+    "analysis/robust_direction.py": "98682be2299615d2b808f46b492142baba1ab46fe15ab629edfaec906de02d70",
+    "analysis/source_tracks.json": "77acfbcd28457b9780f122e781d96e1f9ca1012e3dd3a290b59abfec21c38a7d",
+    "analysis/source_tracks.py": "70ac12b36e0cea4e8a259692390a8cf2d79012fffb475cef0794117ac4f1e432",
+    "analysis/spectrogram.png": "8f9787bb8a691a1d680828b94f50e3f7fcf77e8620687183878b5e8706ace020",
+    "ATTRIBUTION.md": "4de0044f9e42fd1612147d264d65183d8d8e1343ddffbb170237d8d483373756",
+    "evidence/E5d3506f851304c41.mkv": "78abef16262a703c499c6646c9b65bb4eecb56b11120ece6688b8961f89ac65b",
+    "evidence/E5d3506f851304c41_preview.mp4": "187a7df2b7fba0066cbfb2222923bc2e360a9b223b47e30399cbb14927e62384",
+    "evidence_manifest.json": "1adc54e09d3726c4201b746a31e41eaa6c79b7dcaa589fa25f94dfae773ddabd",
+    "findings.json": "7a63d8d9a8e898d6b626bf2f2c81f1421182f3f819570fb0a0d0c8a5487d46c4",
+    "host_validation.json": "ea46960ed14efa0c6773b92ef7eb5d316e0e200144e08376cc05e8010695625b",
+    "query_trace.jsonl": "4113bf8ba99285a6f35c88023a937b9281edc58a6f02785474efe4c0a7130ab1",
+    "README.txt": "f1ecb94c16346869644f55d4776309bf3f4d782e6c7dda45d14af9b42a77ca8b",
+    "report.html": "c7031b8ea44ef5527f01e5ad5cc30cb77773b2950f69153b502ae4413c53da25",
+    "submission_receipt.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "atoms": [
+    {
+      "atom_id": "F01",
+      "record_id": "C01",
+      "required_original_span": [
+        0.0,
+        18.0
+      ],
+      "support": 1,
+      "reason": "原始地面网格图、明确的对应点和可复算平面几何支持右转及所报近似角度；另有独立静态地面特征匹配支持转向和后半段视角稳定。",
+      "observed_evidence": [
+        "analysis/geometry.py",
+        "analysis/geometry.json",
+        "analysis/grid0.jpg",
+        "analysis/grid1.jpg"
+      ]
+    },
+    {
+      "atom_id": "F02",
+      "record_id": "C02",
+      "required_original_span": [
+        0.5,
+        37.0
+      ],
+      "support": 1,
+      "reason": "原始地面网格图、明确的对应点和可复算平面几何支持右转及所报近似角度；另有独立静态地面特征匹配支持转向和后半段视角稳定。",
+      "observed_evidence": [
+        "analysis/geometry.py",
+        "analysis/geometry.json",
+        "analysis/grid0.jpg",
+        "analysis/grid1.jpg"
+      ]
+    },
+    {
+      "atom_id": "F03",
+      "record_id": "C03",
+      "required_original_span": [
+        8.75,
+        9.25
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F04",
+      "record_id": "C04",
+      "required_original_span": [
+        9.25,
+        9.75
+      ],
+      "support": 0.5,
+      "reason": "有可复算四通道方向观察，但声源关联仍有混响/混合声场歧义；距离采用未标定的网格尺度或统一场景尺度估计，不能充分支撑米制定位。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F05",
+      "record_id": "C05",
+      "required_original_span": [
+        0.5,
+        37.0
+      ],
+      "support": 0.5,
+      "reason": "有相机转向和可检测声段方位变化，但静音段轨迹、目标源关联及小幅变化不确定；不足以充分支持整段的同向/反向结论。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F06",
+      "record_id": "C06",
+      "required_original_span": [
+        0.5,
+        10.0
+      ],
+      "support": 0.5,
+      "reason": "相对方位与相机补偿提供相关观察，但缺少可核验径向距离轨迹；角度变化或响度变化不能充分确定世界坐标位移方向。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F07",
+      "record_id": "C07",
+      "required_original_span": [
+        8.25,
+        8.75
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F08",
+      "record_id": "C08",
+      "required_original_span": [
+        2.25,
+        2.75
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F09",
+      "record_id": "C09",
+      "required_original_span": [
+        12.75,
+        13.25
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F10",
+      "record_id": "C10",
+      "required_original_span": [
+        20.75,
+        21.25
+      ],
+      "support": 0.5,
+      "reason": "有可复算四通道方向观察，但声源关联仍有混响/混合声场歧义；距离采用未标定的网格尺度或统一场景尺度估计，不能充分支撑米制定位。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F11",
+      "record_id": "C11",
+      "required_original_span": [
+        12.0,
+        21.0
+      ],
+      "support": 0.5,
+      "reason": "相对方位与相机补偿提供相关观察，但缺少可核验径向距离轨迹；角度变化或响度变化不能充分确定世界坐标位移方向。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F12",
+      "record_id": "C12",
+      "required_original_span": [
+        12.25,
+        12.75
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F13",
+      "record_id": "C13",
+      "required_original_span": [
+        15.75,
+        16.25
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F14",
+      "record_id": "C13",
+      "required_original_span": [
+        15.75,
+        16.25
+      ],
+      "support": 0.5,
+      "reason": "有可复算四通道方向观察，但声源关联仍有混响/混合声场歧义；距离采用未标定的网格尺度或统一场景尺度估计，不能充分支撑米制定位。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F15",
+      "record_id": "C14",
+      "required_original_span": [
+        24.75,
+        25.25
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F16",
+      "record_id": "C15",
+      "required_original_span": [
+        27.25,
+        27.75
+      ],
+      "support": 0.5,
+      "reason": "有可复算四通道方向观察，但声源关联仍有混响/混合声场歧义；距离采用未标定的网格尺度或统一场景尺度估计，不能充分支撑米制定位。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F17",
+      "record_id": "C16",
+      "required_original_span": [
+        0.5,
+        37.0
+      ],
+      "support": 0.5,
+      "reason": "有相机转向和可检测声段方位变化，但静音段轨迹、目标源关联及小幅变化不确定；不足以充分支持整段的同向/反向结论。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    },
+    {
+      "atom_id": "F18",
+      "record_id": "C17",
+      "required_original_span": [
+        34.25,
+        34.75
+      ],
+      "support": 0.5,
+      "reason": "原四通道方向统计可以复算，且有频带/相邻窗检查；不同频带的方位仍有分歧，未完成目标声源分离或可靠的画外身份关联，给予部分支持。",
+      "observed_evidence": [
+        "report.html: per-record rationale",
+        "analysis/robust_direction.json",
+        "analysis/method_and_uncertainty.json"
+      ]
+    }
+  ],
+  "process": {
+    "rating": 0.5,
+    "host_event_ids": [
+      2,
+      3,
+      4
+    ],
+    "reason": "真实本地信号/图像分析产生方向或视角检查结果，并完成宿主验证与封存；关键声源关联、尺度或世界运动歧义未得到充分核验，按V2有用分析但关键歧义未解决记0.5。",
+    "command_output_evidence": [
+      {
+        "event_line": 14,
+        "event_id": "item_3",
+        "output_excerpt": "# 宿主工具契约 v1\r\n\r\n由宿主创建唯一会话并提供 session_id 和服务地址。所有 API 返回 JSON，错误不改变预算。POST /api/<tool>，JSON 含 session_id。工具名：list_stations、listen_at（station_id）、record_observation（receipt_id,direction,distance_m,candidate_belief 可选）、finalize_location（candidate,evidence_ids）、export_evidence（start_s,end_s）、validate_submission、submit。\r\n\r\nlisten_at 返回原四通道的受控 URL /media/<session_id>/<station_id>.wav、回执和剩余预算；工具已把完整录音交付会话目录。record_observation 返回是否修订，所有记录由宿主保存，下一次新查询或定案冻结原观察。\r\n\r\nexport_evidence 仅 Case 1，返回 evidence 回执与预览"
+      },
+      {
+        "event_line": 51,
+        "event_id": "item_23",
+        "output_excerpt": "H 0 [[ 1.47682268e+03  9.53205994e+02  1.05855238e+03]\n [ 2.39437682e+01 -2.95377962e+02  1.96111335e+03]\n [ 3.28532588e-03  9.76378525e-01  1.00000000e+00]]\nvanishing [4.49520910e+05 7.28809532e+03 1.00000000e+00] [ 976.26685702 -302.52402594    1.        ]\nf 0.0\nH 1 [[ 3.07640919e+03  1.07118531e+02  1.03791840e+03]\n [-2.43328933e+02 -2.38596077e+02  1.82317901e+03]\n [ 8.76908585e-01  7.70191971e-01  1.00000000e+00]]\nvanishing [ 3.50824389e+03 -2.77484948e+02  1.00000000e+00] [ 139.08030141 -3"
+      },
+      {
+        "event_line": 54,
+        "event_id": "item_25",
+        "output_excerpt": "H 0 [[ 1.47682268e+03  9.53205994e+02  1.05855238e+03]\n [ 2.39437682e+01 -2.95377962e+02  1.96111335e+03]\n [ 3.28532588e-03  9.76378525e-01  1.00000000e+00]]\nvanishing [4.49520910e+05 7.28809532e+03 1.00000000e+00] [ 976.26685702 -302.52402594    1.        ]\nf 0.0\nH 1 [[ 1.52556134e+03  1.04423856e+02  1.03798948e+03]\n [-1.21369511e+02 -2.38162880e+02  1.81542248e+03]\n [ 4.33864410e-01  7.63003054e-01  1.00000000e+00]]\nvanishing [ 3.51621682e+03 -2.79740646e+02  1.00000000e+00] [ 136.85902761 -3"
+      },
+      {
+        "event_line": 74,
+        "event_id": "item_36",
+        "output_excerpt": "TIME 0.5\n(500, 3000) [5, 5, 5, 7]\n(1000, 3000) [5, 5, 5, 5]\n(1500, 3000) [7, 7, 7, 7]\n(3000, 5000) [47, 47, 47, 33]\nTIME 2.5\n(500, 3000) [1, 1, 1, 1]\n(1000, 3000) [-1, -1, -1, -1]\n(1500, 3000) [1, 1, -1, 1]\n(3000, 5000) [-13, -13, -11, -11]\nTIME 8.5\n(500, 3000) [19, 19, 17, 13]\n(1000, 3000) [19, 19, 17, 11]\n(1500, 3000) [21, 21, 19, 23]\n(3000, 5000) [7, 7, 9, 13]\nTIME 9\n(500, 3000) [19, 19, 19, 17]\n(1000, 3000) [19, 19, 21, 19]\n(1500, 3000) [19, 19, 21, 25]\n(3000, 5000) [11, 11, 11, 17]\nTIME 9.5"
+      }
+    ]
+  },
+  "navigation": {
+    "L": 1.0,
+    "records": [
+      {
+        "record_id": "C01",
+        "required_span": [
+          0.0,
+          18.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0,18",
+            "original_span": [
+              0.0,
+              18.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0,18",
+            "original_span": [
+              0.0,
+              18.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C02",
+        "required_span": [
+          0.5,
+          37.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C03",
+        "required_span": [
+          8.75,
+          9.25
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=8.25,9.75",
+            "original_span": [
+              8.25,
+              9.75
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=8.25,9.75",
+            "original_span": [
+              8.25,
+              9.75
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C04",
+        "required_span": [
+          9.25,
+          9.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=8.75,10.25",
+            "original_span": [
+              8.75,
+              10.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=8.75,10.25",
+            "original_span": [
+              8.75,
+              10.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C05",
+        "required_span": [
+          0.5,
+          37.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C06",
+        "required_span": [
+          0.5,
+          10.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,10",
+            "original_span": [
+              0.5,
+              10.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,10",
+            "original_span": [
+              0.5,
+              10.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C07",
+        "required_span": [
+          8.25,
+          8.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=7.75,9.25",
+            "original_span": [
+              7.75,
+              9.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=7.75,9.25",
+            "original_span": [
+              7.75,
+              9.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C08",
+        "required_span": [
+          2.25,
+          2.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=1.75,3.25",
+            "original_span": [
+              1.75,
+              3.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=1.75,3.25",
+            "original_span": [
+              1.75,
+              3.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C09",
+        "required_span": [
+          12.75,
+          13.25
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=12.25,13.75",
+            "original_span": [
+              12.25,
+              13.75
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=12.25,13.75",
+            "original_span": [
+              12.25,
+              13.75
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C10",
+        "required_span": [
+          20.75,
+          21.25
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=20.25,21.75",
+            "original_span": [
+              20.25,
+              21.75
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=20.25,21.75",
+            "original_span": [
+              20.25,
+              21.75
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C11",
+        "required_span": [
+          12.0,
+          21.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=12,21",
+            "original_span": [
+              12.0,
+              21.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=12,21",
+            "original_span": [
+              12.0,
+              21.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C12",
+        "required_span": [
+          12.25,
+          12.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=11.75,13.25",
+            "original_span": [
+              11.75,
+              13.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=11.75,13.25",
+            "original_span": [
+              11.75,
+              13.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C13",
+        "required_span": [
+          15.75,
+          16.25
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=15.25,16.75",
+            "original_span": [
+              15.25,
+              16.75
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=15.25,16.75",
+            "original_span": [
+              15.25,
+              16.75
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C14",
+        "required_span": [
+          24.75,
+          25.25
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=24.25,25.75",
+            "original_span": [
+              24.25,
+              25.75
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=24.25,25.75",
+            "original_span": [
+              24.25,
+              25.75
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C15",
+        "required_span": [
+          27.25,
+          27.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=26.75,28.25",
+            "original_span": [
+              26.75,
+              28.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=26.75,28.25",
+            "original_span": [
+              26.75,
+              28.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C16",
+        "required_span": [
+          0.5,
+          37.0
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=0.5,37",
+            "original_span": [
+              0.5,
+              37.0
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      },
+      {
+        "record_id": "C17",
+        "required_span": [
+          34.25,
+          34.75
+        ],
+        "localized_navigation": true,
+        "candidates": [
+          {
+            "element": "video",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=33.75,35.25",
+            "original_span": [
+              33.75,
+              35.25
+            ],
+            "qualified": true
+          },
+          {
+            "element": "a",
+            "url": "evidence/E5d3506f851304c41_preview.mp4#t=33.75,35.25",
+            "original_span": [
+              33.75,
+              35.25
+            ],
+            "qualified": true
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "inline_video_count": 17,
+    "compatibility": "Existing video src fragments and equivalent JS controls count, including the actual media EOF as an implicit end. V2 data-record/data-evidence attributes and evidence_focus JSON are not required retrospectively."
+  },
+  "browser": {
+    "run": "case1__astra_xhigh_unlimited_20261119_newkey",
+    "report_sha256": "c7031b8ea44ef5527f01e5ad5cc30cb77773b2950f69153b502ae4413c53da25",
+    "findings_sha256": "7a63d8d9a8e898d6b626bf2f2c81f1421182f3f819570fb0a0d0c8a5487d46c4",
+    "offline_open": true,
+    "all_record_navigation": true,
+    "video_playback": true,
+    "audio_output": null,
+    "visible_json_consistency": true,
+    "records": [
+      {
+        "record_id": "C01",
+        "anchor_visible": true,
+        "location_hash": "#C01",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "turn_direction",
+            "expected": "right",
+            "visible": "right",
+            "match": true
+          },
+          {
+            "field": "turn_degrees",
+            "expected": 30,
+            "visible": "30",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C02",
+        "anchor_visible": true,
+        "location_hash": "#C02",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "turn_direction",
+            "expected": "right",
+            "visible": "right",
+            "match": true
+          },
+          {
+            "field": "turn_degrees",
+            "expected": 30,
+            "visible": "30",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C03",
+        "anchor_visible": true,
+        "location_hash": "#C03",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "front",
+            "visible": "front",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C04",
+        "anchor_visible": true,
+        "location_hash": "#C04",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "front-left",
+            "visible": "front-left",
+            "match": true
+          },
+          {
+            "field": "distance_m",
+            "expected": 4,
+            "visible": "4",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C05",
+        "anchor_visible": true,
+        "location_hash": "#C05",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "same_turn_direction",
+            "expected": "yes",
+            "visible": "yes",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C06",
+        "anchor_visible": true,
+        "location_hash": "#C06",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "motion_direction",
+            "expected": "front-right",
+            "visible": "front-right",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C07",
+        "anchor_visible": true,
+        "location_hash": "#C07",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "turn_direction",
+            "expected": "left",
+            "visible": "left",
+            "match": true
+          },
+          {
+            "field": "turn_degrees",
+            "expected": 20,
+            "visible": "20",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C08",
+        "anchor_visible": true,
+        "location_hash": "#C08",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "front",
+            "visible": "front",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C09",
+        "anchor_visible": true,
+        "location_hash": "#C09",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "back-left",
+            "visible": "back-left",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C10",
+        "anchor_visible": true,
+        "location_hash": "#C10",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "left",
+            "visible": "left",
+            "match": true
+          },
+          {
+            "field": "distance_m",
+            "expected": 4,
+            "visible": "4",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C11",
+        "anchor_visible": true,
+        "location_hash": "#C11",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "motion_direction",
+            "expected": "front",
+            "visible": "front",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C12",
+        "anchor_visible": true,
+        "location_hash": "#C12",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "turn_direction",
+            "expected": "left",
+            "visible": "left",
+            "match": true
+          },
+          {
+            "field": "turn_degrees",
+            "expected": 125,
+            "visible": "125",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C13",
+        "anchor_visible": true,
+        "location_hash": "#C13",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "back-left",
+            "visible": "back-left",
+            "match": true
+          },
+          {
+            "field": "distance_m",
+            "expected": 4,
+            "visible": "4",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C14",
+        "anchor_visible": true,
+        "location_hash": "#C14",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "back-left",
+            "visible": "back-left",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C15",
+        "anchor_visible": true,
+        "location_hash": "#C15",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "direction",
+            "expected": "back-left",
+            "visible": "back-left",
+            "match": true
+          },
+          {
+            "field": "distance_m",
+            "expected": 4,
+            "visible": "4",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C16",
+        "anchor_visible": true,
+        "location_hash": "#C16",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "same_turn_direction",
+            "expected": "no",
+            "visible": "no",
+            "match": true
+          }
+        ],
+        "play": null
+      },
+      {
+        "record_id": "C17",
+        "anchor_visible": true,
+        "location_hash": "#C17",
+        "navigation": true,
+        "visible_fields": [
+          {
+            "field": "turn_direction",
+            "expected": "left",
+            "visible": "left",
+            "match": true
+          },
+          {
+            "field": "turn_degrees",
+            "expected": 145,
+            "visible": "145",
+            "match": true
+          }
+        ],
+        "play": null
+      }
+    ],
+    "errors": [],
+    "video_state": {
+      "time": 2.269491,
+      "width": 960,
+      "height": 540,
+      "paused": false,
+      "muted": false,
+      "volume": 1,
+      "readyState": 4
+    },
+    "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
+    "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+    "R_interval": [
+      0.8,
+      1.0
+    ]
+  }
+}
