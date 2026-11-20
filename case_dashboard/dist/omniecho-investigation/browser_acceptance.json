@@ -11,7 +11,6 @@
       "offline_open": true,
       "all_record_navigation": true,
       "video_playback": true,
-      "audio_output": null,
       "visible_json_consistency": true,
       "records": [
         {
@@ -402,7 +401,15 @@
         "volume": 1,
         "readyState": 4
       },
-      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
+      "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+      "excluded_from_scoring": [
+        "physical speaker output; removed by user request"
+      ],
+      "R_interval": [
+        1.0,
+        1.0
+      ]
     },
     {
       "run": "case1__luna_01",
@@ -411,7 +418,6 @@
       "offline_open": true,
       "all_record_navigation": true,
       "video_playback": true,
-      "audio_output": null,
       "visible_json_consistency": true,
       "records": [
         {
@@ -747,7 +753,15 @@
         "volume": 1,
         "readyState": 4
       },
-      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
+      "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+      "excluded_from_scoring": [
+        "physical speaker output; removed by user request"
+      ],
+      "R_interval": [
+        1.0,
+        1.0
+      ]
     },
     {
       "run": "case1__astra_xhigh_unlimited_20261119_newkey",
@@ -756,7 +770,6 @@
       "offline_open": true,
       "all_record_navigation": true,
       "video_playback": true,
-      "audio_output": null,
       "visible_json_consistency": true,
       "records": [
         {
@@ -1079,7 +1092,16 @@
         "volume": 1,
         "readyState": 4
       },
-      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass."
+      "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
+      "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+      "excluded_from_scoring": [
+        "physical speaker output; removed by user request"
+      ],
+      "R_interval": [
+        1.0,
+        1.0
+      ]
     }
-  ]
+  ],
+  "scoring_policy": "four_checks_equal_weights; physical speaker output excluded by user request"
 }

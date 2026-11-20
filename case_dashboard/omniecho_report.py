@@ -52,9 +52,9 @@ A=0.50G+0.20P+0.15L+0.15R；S=100F(0.50+0.50A)。
 - G：18个事实的证据支持均值。充分支持1，相关但关键歧义未消解0.5，只有断言或不支持0。
 - P：行动产生有用分析并核验关键歧义与交付1；有用分析但关键歧义未解决0.5；无有用行动0。
 - L：17条证据定位均值。链接/按钮指向真实证据、覆盖要求时段，且范围≤max(3秒,要求时段+2秒)记1。既有HTML控制按等价机制接受。
-- R：真实浏览器离线打开、17条定位、视频播放、实际音频输出、可见值与JSON一致五项均值。未实际确认记null，总分只显示区间。
+- R：真实浏览器离线打开、17条定位、视频播放、可见值与JSON一致四项均值，各占R的25%（实体扬声器出声不计分）。未实际确认记null，总分只显示区间。
 
-通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过，即使音频待验收也不影响该结论。
+通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过。
 
 G/P由助手独立于答题会话复核，非盲审，不冒充人工专家评审。权重与通过线尚需跨样本校准，当前仍是单样本开发试跑。本版替代旧版展示，不能据此推断泛化排名。
 """
@@ -98,11 +98,12 @@ G/P由助手独立于答题会话复核，非盲审，不冒充人工专家评�
         links['browser']=publish(EVAL / (name+'_browser.png'),name+'/browser.png')
         models.append(dict(key=name,model=result['model'],grade=grade,browser=review['browser'],review=review,effort=run['effort'],seconds=run['elapsed_seconds'],exports=run['tool_state']['exports'],apiCalls=run['api_calls'],apiErrors=run['api_errors'],isolation=run['isolation'],links=links,artifacts=artifacts,timeBudget='不限时' if 'unlimited' in name else '35 分钟上限'))
     publish(SRC / 'private/asset_provenance.json','asset_provenance.json')
-    publish(EVAL / 'browser_acceptance.json','browser_acceptance.json')
+    current_browser=dict(browser, scoring_policy='four_checks_equal_weights; physical speaker output excluded by user request', models=[m['browser'] for m in models])
+    generated(current_browser,'browser_acceptance.json')
     for name in ['independent_signal_checks.json','independent_geometry_checks.json']:
         publish(EVAL / name,name)
-    totals=' / '.join(f"{m['model']} {m['grade']['v2_score_interval'][0]:.2f}–{m['grade']['v2_score_interval'][1]:.2f}" for m in models)
-    case=dict(key='task-omniecho-investigation',caseId='OMNIECHO-1',title='多声源事件调查与证据报告 · 开发试跑',summary='37.33秒真实四通道视频，三个声源；自主调查、导出证据、提交HTML与JSON。V2严格版；音频出声待验收。',versionLabel='V2 严格版 · 当前唯一评分',status='packaged',maturity='development-pilot',category='多声源调查',directory='omniecho_agent_cases_v1/candidate/case1',main='incident.mp4',poster='omniecho-investigation/incident_poster.jpg',files=files,task=(SRC/'candidate/case1/TASK.md').read_text(encoding='utf-8'),contract=scoring,delivery=['report.html 可播放证据报告','findings.json · 17条检查记录 / 18个事实','evidence_manifest.json · 导出回执','evidence/ · 原四通道与双声道预览'],resultCount=3,resultSummary='V2严格版 · '+totals+' · 均未通过')
+    totals=' / '.join(f"{m['model']} {m['grade']['score']:.4f}" for m in models)
+    case=dict(key='task-omniecho-investigation',caseId='OMNIECHO-1',title='多声源事件调查与证据报告 · 开发试跑',summary='37.33秒真实四通道视频，三个声源；自主调查、导出证据、提交HTML与JSON。V2严格版；交付验收完成。',versionLabel='V2 严格版 · 当前唯一评分',status='packaged',maturity='development-pilot',category='多声源调查',directory='omniecho_agent_cases_v1/candidate/case1',main='incident.mp4',poster='omniecho-investigation/incident_poster.jpg',files=files,task=(SRC/'candidate/case1/TASK.md').read_text(encoding='utf-8'),contract=scoring,delivery=['report.html 可播放证据报告','findings.json · 17条检查记录 / 18个事实','evidence_manifest.json · 导出回执','evidence/ · 原四通道与双声道预览'],resultCount=3,resultSummary='V2严格版 · '+totals+' · 均未通过')
     payload=dict(case=case,models=models,coverage=read(SRC/'candidate/case1/coverage_manifest.json'),browserEnvironment=browser['environment'])
     generated(payload,'data.json')
     allowed.add('data.js')

@@ -3,7 +3,7 @@
     "key": "task-omniecho-investigation",
     "caseId": "OMNIECHO-1",
     "title": "多声源事件调查与证据报告 · 开发试跑",
-    "summary": "37.33秒真实四通道视频，三个声源；自主调查、导出证据、提交HTML与JSON。V2严格版；音频出声待验收。",
+    "summary": "37.33秒真实四通道视频，三个声源；自主调查、导出证据、提交HTML与JSON。V2严格版；交付验收完成。",
     "versionLabel": "V2 严格版 · 当前唯一评分",
     "status": "packaged",
     "maturity": "development-pilot",
@@ -103,14 +103,14 @@
         "name": "SCORING.md",
         "path": "SCORING.md",
         "url": "omniecho-investigation/candidate/SCORING.md",
-        "bytes": 1462,
+        "bytes": 1448,
         "kind": "document",
-        "text": "# V2 最终使用的评分规则（严格版）\n\n本次按用户要求复评已有封存答卷，不改题、不重跑。公开页面仅展示本版成绩。任务与真值的专家审核按用户确认接受。\n\nF=18个原事实的正确率。方向精确匹配；角度误差≤15°且转向正确；距离误差≤0.5米且方向正确；yes/no精确匹配。边界包含，超过即错，unknown记错。\n\nA=0.50G+0.20P+0.15L+0.15R；S=100F(0.50+0.50A)。\n\n- G：18个事实的证据支持均值。充分支持1，相关但关键歧义未消解0.5，只有断言或不支持0。\n- P：行动产生有用分析并核验关键歧义与交付1；有用分析但关键歧义未解决0.5；无有用行动0。\n- L：17条证据定位均值。链接/按钮指向真实证据、覆盖要求时段，且范围≤max(3秒,要求时段+2秒)记1。既有HTML控制按等价机制接受。\n- R：真实浏览器离线打开、17条定位、视频播放、实际音频输出、可见值与JSON一致五项均值。未实际确认记null，总分只显示区间。\n\n通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过，即使音频待验收也不影响该结论。\n\nG/P由助手独立于答题会话复核，非盲审，不冒充人工专家评审。权重与通过线尚需跨样本校准，当前仍是单样本开发试跑。本版替代旧版展示，不能据此推断泛化排名。\n",
+        "text": "# V2 最终使用的评分规则（严格版）\n\n本次按用户要求复评已有封存答卷，不改题、不重跑。公开页面仅展示本版成绩。任务与真值的专家审核按用户确认接受。\n\nF=18个原事实的正确率。方向精确匹配；角度误差≤15°且转向正确；距离误差≤0.5米且方向正确；yes/no精确匹配。边界包含，超过即错，unknown记错。\n\nA=0.50G+0.20P+0.15L+0.15R；S=100F(0.50+0.50A)。\n\n- G：18个事实的证据支持均值。充分支持1，相关但关键歧义未消解0.5，只有断言或不支持0。\n- P：行动产生有用分析并核验关键歧义与交付1；有用分析但关键歧义未解决0.5；无有用行动0。\n- L：17条证据定位均值。链接/按钮指向真实证据、覆盖要求时段，且范围≤max(3秒,要求时段+2秒)记1。既有HTML控制按等价机制接受。\n- R：真实浏览器离线打开、17条定位、视频播放、可见值与JSON一致四项均值，各占R的25%（实体扬声器出声不计分）。未实际确认记null，总分只显示区间。\n\n通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过。\n\nG/P由助手独立于答题会话复核，非盲审，不冒充人工专家评审。权重与通过线尚需跨样本校准，当前仍是单样本开发试跑。本版替代旧版展示，不能据此推断泛化排名。\n",
         "meta": {}
       }
     ],
     "task": "# 多声源事件调查与证据报告\n\n你是视听材料调查员。调查 incident.mp4 中的报警、塑料摩擦和钥匙声，为复核者交付可播放、可追溯的证据档案。coverage_manifest.json 给出必须覆盖的检查记录及待填字段，按声源和时间组织你的调查。\n\n自主选择分析顺序、重听/抽帧、空间分析和证据片段；通过 export_evidence 导出原声证据。必须提交 report.html、findings.json、evidence_manifest.json 以及 evidence/ 下的实际证据文件。报告按 findings.json 渲染可判分字段，每条报告结论有对应 record_id 锚点和可播放证据。最终调用 validate_submission，再 submit 封存；这两个操作均不返回正确性。\n\n## 字段与证据\n方向用 front/front-left/left/back-left/back/back-right/right/front-right。turn_direction 为 left/right；turn_degrees 是非负角度；same_turn_direction 是 yes/no；距离单位米。依 findings.schema.json 填写全部检查记录，record_id 不得重复。\n\nevidence_manifest.json 的 evidence 数组放 export_evidence 返回的完整回执，包含 evidence_id、start_s、end_s、path、sha256、source_sha256。findings.evidence_ids 引用这些 evidence_id。时刻检查片段需覆盖时刻前后各 0.25 秒（到媒体边界时截断）；区间检查需完整覆盖原区间。一个片段可支撑多条结论，无需重复复制。此上下文长度是新增格式约定，不是语义标注。\n\n原四通道证据采用 MKV＋FFV1＋PCM，可用本地 FFmpeg 解码；工具另给浏览器双声道 MP4 预览。报告同时提供原件链接与可播放预览，并注明预览混音。证据只证明来源与时间覆盖，不能替代方向事实正确性。\n\n## 执行环境与输入边界\n正式推理禁用公网检索，模型服务通过宿主代理调用。允许 Python/FFmpeg 等本地工具。只挂载本题 candidate 目录与会话工作区；不得挂载出题看板、private、research 或其他会话目录。题包本身不是 OS 沙箱，正式跑题前必须由 runner 实施网络/文件系统隔离。原四通道素材用于分析；看板双声道有损预览只供人工理解。\n\nunknown 允许，但相应事实不得分。不得枚举候选；不得伪造回执、修改原媒体内容或查询隐藏答案。模板为空白骨架，未达到提交要求。\n",
-    "contract": "# V2 最终使用的评分规则（严格版）\n\n本次按用户要求复评已有封存答卷，不改题、不重跑。公开页面仅展示本版成绩。任务与真值的专家审核按用户确认接受。\n\nF=18个原事实的正确率。方向精确匹配；角度误差≤15°且转向正确；距离误差≤0.5米且方向正确；yes/no精确匹配。边界包含，超过即错，unknown记错。\n\nA=0.50G+0.20P+0.15L+0.15R；S=100F(0.50+0.50A)。\n\n- G：18个事实的证据支持均值。充分支持1，相关但关键歧义未消解0.5，只有断言或不支持0。\n- P：行动产生有用分析并核验关键歧义与交付1；有用分析但关键歧义未解决0.5；无有用行动0。\n- L：17条证据定位均值。链接/按钮指向真实证据、覆盖要求时段，且范围≤max(3秒,要求时段+2秒)记1。既有HTML控制按等价机制接受。\n- R：真实浏览器离线打开、17条定位、视频播放、实际音频输出、可见值与JSON一致五项均值。未实际确认记null，总分只显示区间。\n\n通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过，即使音频待验收也不影响该结论。\n\nG/P由助手独立于答题会话复核，非盲审，不冒充人工专家评审。权重与通过线尚需跨样本校准，当前仍是单样本开发试跑。本版替代旧版展示，不能据此推断泛化排名。\n",
+    "contract": "# V2 最终使用的评分规则（严格版）\n\n本次按用户要求复评已有封存答卷，不改题、不重跑。公开页面仅展示本版成绩。任务与真值的专家审核按用户确认接受。\n\nF=18个原事实的正确率。方向精确匹配；角度误差≤15°且转向正确；距离误差≤0.5米且方向正确；yes/no精确匹配。边界包含，超过即错，unknown记错。\n\nA=0.50G+0.20P+0.15L+0.15R；S=100F(0.50+0.50A)。\n\n- G：18个事实的证据支持均值。充分支持1，相关但关键歧义未消解0.5，只有断言或不支持0。\n- P：行动产生有用分析并核验关键歧义与交付1；有用分析但关键歧义未解决0.5；无有用行动0。\n- L：17条证据定位均值。链接/按钮指向真实证据、覆盖要求时段，且范围≤max(3秒,要求时段+2秒)记1。既有HTML控制按等价机制接受。\n- R：真实浏览器离线打开、17条定位、视频播放、可见值与JSON一致四项均值，各占R的25%（实体扬声器出声不计分）。未实际确认记null，总分只显示区间。\n\n通过需S≥80、F≥0.8、G≥0.8、R=1且封存及来源校验通过。三模型F均未达到门槛，因此结论均为未通过。\n\nG/P由助手独立于答题会话复核，非盲审，不冒充人工专家评审。权重与通过线尚需跨样本校准，当前仍是单样本开发试跑。本版替代旧版展示，不能据此推断泛化排名。\n",
     "delivery": [
       "report.html 可播放证据报告",
       "findings.json · 17条检查记录 / 18个事实",
@@ -118,14 +118,14 @@
       "evidence/ · 原四通道与双声道预览"
     ],
     "resultCount": 3,
-    "resultSummary": "V2严格版 · gpt-6.1-sol 45.77–46.60 / gpt-6-luna 10.39–10.64 / gpt-6-astra 59.50–60.59 · 均未通过"
+    "resultSummary": "V2严格版 · gpt-6.1-sol 46.6049 / gpt-6-luna 10.6373 / gpt-6-astra 60.5864 · 均未通过"
   },
   "models": [
     {
       "key": "case1__sol_01",
       "model": "gpt-6.1-sol",
       "grade": {
-        "version": "2.1-strict-retrospective",
+        "version": "2.2-strict-retrospective",
         "run": "case1__sol_01",
         "model": "gpt-6.1-sol",
         "strict_fact_correct": 10,
@@ -134,23 +134,23 @@
         "G": 0.5555555555555556,
         "P": 0.5,
         "L": 1.0,
-        "R": null,
+        "R": 1.0,
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ],
         "A_interval": [
-          0.6477777777777778,
+          0.6777777777777778,
           0.6777777777777778
         ],
         "v2_score_interval": [
-          45.7716,
+          46.6049,
           46.6049
         ],
-        "v2_formal_score": null,
-        "status": "physical_audio_acceptance_pending",
+        "v2_formal_score": 46.6049,
+        "status": "complete",
         "failed_known_gate": "F < 0.8",
-        "score": null,
+        "score": 46.6049,
         "task_pass": false,
         "facts": [
           {
@@ -450,7 +450,6 @@
         "offline_open": true,
         "all_record_navigation": true,
         "video_playback": true,
-        "audio_output": null,
         "visible_json_consistency": true,
         "records": [
           {
@@ -843,8 +842,11 @@
         },
         "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
         "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+        "excluded_from_scoring": [
+          "physical speaker output; removed by user request"
+        ],
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ]
       },
@@ -1567,7 +1569,6 @@
           "offline_open": true,
           "all_record_navigation": true,
           "video_playback": true,
-          "audio_output": null,
           "visible_json_consistency": true,
           "records": [
             {
@@ -1960,8 +1961,11 @@
           },
           "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
           "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+          "excluded_from_scoring": [
+            "physical speaker output; removed by user request"
+          ],
           "R_interval": [
-            0.8,
+            1.0,
             1.0
           ]
         }
@@ -2205,7 +2209,7 @@
       "key": "case1__luna_01",
       "model": "gpt-6-luna",
       "grade": {
-        "version": "2.1-strict-retrospective",
+        "version": "2.2-strict-retrospective",
         "run": "case1__luna_01",
         "model": "gpt-6-luna",
         "strict_fact_correct": 3,
@@ -2214,23 +2218,23 @@
         "G": 0.0,
         "P": 0.5,
         "L": 0.17647058823529413,
-        "R": null,
+        "R": 1.0,
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ],
         "A_interval": [
-          0.2464705882352941,
+          0.27647058823529413,
           0.27647058823529413
         ],
         "v2_score_interval": [
-          10.3873,
+          10.6373,
           10.6373
         ],
-        "v2_formal_score": null,
-        "status": "physical_audio_acceptance_pending",
+        "v2_formal_score": 10.6373,
+        "status": "complete",
         "failed_known_gate": "F < 0.8",
-        "score": null,
+        "score": 10.6373,
         "task_pass": false,
         "facts": [
           {
@@ -2530,7 +2534,6 @@
         "offline_open": true,
         "all_record_navigation": true,
         "video_playback": true,
-        "audio_output": null,
         "visible_json_consistency": true,
         "records": [
           {
@@ -2868,8 +2871,11 @@
         },
         "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
         "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+        "excluded_from_scoring": [
+          "physical speaker output; removed by user request"
+        ],
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ]
       },
@@ -3539,7 +3545,6 @@
           "offline_open": true,
           "all_record_navigation": true,
           "video_playback": true,
-          "audio_output": null,
           "visible_json_consistency": true,
           "records": [
             {
@@ -3877,8 +3882,11 @@
           },
           "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
           "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+          "excluded_from_scoring": [
+            "physical speaker output; removed by user request"
+          ],
           "R_interval": [
-            0.8,
+            1.0,
             1.0
           ]
         }
@@ -3959,7 +3967,7 @@
       "key": "case1__astra_xhigh_unlimited_20261119_newkey",
       "model": "gpt-6-astra",
       "grade": {
-        "version": "2.1-strict-retrospective",
+        "version": "2.2-strict-retrospective",
         "run": "case1__astra_xhigh_unlimited_20261119_newkey",
         "model": "gpt-6-astra",
         "strict_fact_correct": 13,
@@ -3968,23 +3976,23 @@
         "G": 0.5555555555555556,
         "P": 0.5,
         "L": 1.0,
-        "R": null,
+        "R": 1.0,
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ],
         "A_interval": [
-          0.6477777777777778,
+          0.6777777777777778,
           0.6777777777777778
         ],
         "v2_score_interval": [
-          59.5031,
+          60.5864,
           60.5864
         ],
-        "v2_formal_score": null,
-        "status": "physical_audio_acceptance_pending",
+        "v2_formal_score": 60.5864,
+        "status": "complete",
         "failed_known_gate": "F < 0.8",
-        "score": null,
+        "score": 60.5864,
         "task_pass": false,
         "facts": [
           {
@@ -4284,7 +4292,6 @@
         "offline_open": true,
         "all_record_navigation": true,
         "video_playback": true,
-        "audio_output": null,
         "visible_json_consistency": true,
         "records": [
           {
@@ -4609,8 +4616,11 @@
         },
         "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
         "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+        "excluded_from_scoring": [
+          "physical speaker output; removed by user request"
+        ],
         "R_interval": [
-          0.8,
+          1.0,
           1.0
         ]
       },
@@ -5471,7 +5481,6 @@
           "offline_open": true,
           "all_record_navigation": true,
           "video_playback": true,
-          "audio_output": null,
           "visible_json_consistency": true,
           "records": [
             {
@@ -5796,8 +5805,11 @@
           },
           "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
           "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+          "excluded_from_scoring": [
+            "physical speaker output; removed by user request"
+          ],
           "R_interval": [
-            0.8,
+            1.0,
             1.0
           ]
         }
@@ -5978,7 +5990,7 @@
         },
         {
           "name": "evidence/E5d3506f851304c41.mkv",
-          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/astra-three-cases-20261119/78abef16262a703c499c-E5d3506f851304c41.mkv",
+          "url": "https://github.com/NanXiang-git/OmniALE_v2/releases/download/omniecho-investigation-v1-20261118/78abef16262a703c499c-E5d3506f851304c41.mkv",
           "bytes": 561563116
         },
         {

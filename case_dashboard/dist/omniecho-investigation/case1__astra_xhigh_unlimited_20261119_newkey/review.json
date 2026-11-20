@@ -855,7 +855,6 @@
     "offline_open": true,
     "all_record_navigation": true,
     "video_playback": true,
-    "audio_output": null,
     "visible_json_consistency": true,
     "records": [
       {
@@ -1180,8 +1179,11 @@
     },
     "audio_note": "Media playback advanced with unmuted element; physical audio output cannot be observed by this headless environment. Not counted as a pass.",
     "environment": "Headless Microsoft Edge 157.0.4341.60, Windows; file://, offline context",
+    "excluded_from_scoring": [
+      "physical speaker output; removed by user request"
+    ],
     "R_interval": [
-      0.8,
+      1.0,
       1.0
     ]
   }

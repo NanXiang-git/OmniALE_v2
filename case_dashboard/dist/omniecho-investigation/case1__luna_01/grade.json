@@ -1,5 +1,5 @@
 {
-  "version": "2.1-strict-retrospective",
+  "version": "2.2-strict-retrospective",
   "run": "case1__luna_01",
   "model": "gpt-6-luna",
   "strict_fact_correct": 3,
@@ -8,23 +8,23 @@
   "G": 0.0,
   "P": 0.5,
   "L": 0.17647058823529413,
-  "R": null,
+  "R": 1.0,
   "R_interval": [
-    0.8,
+    1.0,
     1.0
   ],
   "A_interval": [
-    0.2464705882352941,
+    0.27647058823529413,
     0.27647058823529413
   ],
   "v2_score_interval": [
-    10.3873,
+    10.6373,
     10.6373
   ],
-  "v2_formal_score": null,
-  "status": "physical_audio_acceptance_pending",
+  "v2_formal_score": 10.6373,
+  "status": "complete",
   "failed_known_gate": "F < 0.8",
-  "score": null,
+  "score": 10.6373,
   "task_pass": false,
   "facts": [
     {

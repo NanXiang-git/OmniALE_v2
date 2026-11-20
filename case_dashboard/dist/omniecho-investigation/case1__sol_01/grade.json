@@ -1,5 +1,5 @@
 {
-  "version": "2.1-strict-retrospective",
+  "version": "2.2-strict-retrospective",
   "run": "case1__sol_01",
   "model": "gpt-6.1-sol",
   "strict_fact_correct": 10,
@@ -8,23 +8,23 @@
   "G": 0.5555555555555556,
   "P": 0.5,
   "L": 1.0,
-  "R": null,
+  "R": 1.0,
   "R_interval": [
-    0.8,
+    1.0,
     1.0
   ],
   "A_interval": [
-    0.6477777777777778,
+    0.6777777777777778,
     0.6777777777777778
   ],
   "v2_score_interval": [
-    45.7716,
+    46.6049,
     46.6049
   ],
-  "v2_formal_score": null,
-  "status": "physical_audio_acceptance_pending",
+  "v2_formal_score": 46.6049,
+  "status": "complete",
   "failed_known_gate": "F < 0.8",
-  "score": null,
+  "score": 46.6049,
   "task_pass": false,
   "facts": [
     {
