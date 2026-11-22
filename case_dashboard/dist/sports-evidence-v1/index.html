@@ -37,8 +37,8 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 <section class="hero">
 <small>OMNIALE BENCHMARK</small>
 <h1>体育长视频<br>Agent 任务</h1>
-<p>从转播找出裁决、比分与击球证据，交付可复核的结构化记录和剪辑。两题的计分依据来自官方成绩或领域专家标注。</p>
-<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打失分复盘</a></nav>
+<p>从转播找出裁决、比分与击球证据，交付可复核的结构化记录和剪辑。两道可运行任务的计分依据来自赛事官方记录。羽球条目另有逐拍专家标注版本。</p>
+<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打比分复盘</a></nav>
 </section>
 <section class="cards" aria-label="案例">
 <article id="race">
@@ -67,35 +67,33 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 - audit.mp4 使用 edit 描述的直接拼接，长 24–65 秒。覆盖罚牌图卡、冲线和最终结果牌。
 
 第一阶段的正式结果牌发布状态使用 pending_final_board。若当前片段已出现正式结果牌，使用 final_board_visible。</p></details>
-<details><summary>验收方法</summary><p>分别核验裁决、阶段发布状态、最终名次、正式计时和证据位置。检查剪辑是否覆盖三个关键事件，并在成片中抽帧同原片匹配。</p></details>
+<details><summary>验收方法</summary><p>分别核验裁决、阶段发布状态、最终名次、正式计时和证据位置。检查剪辑是否覆盖三个关键事件，并把成片中抽样的画面和音轨与原片匹配。</p></details>
 <p class="state-detail" id="race-detail"></p>
 <div class="sources"><a href="https://worldathletics.org/results/world-athletics-u20-championships/2018/iaaf-world-u20-championships-tampere-2018-7105080/men/10000-metres-race-walk/final/result">官方成绩</a><a href="https://www.youtube.com/watch?v=8UxGzDeRIJk">原片来源</a></div>
 </div>
 </article>
 <article id="badminton">
-<div class="preview"><img src="https://i.ytimg.com/vi/OQ8SzOa8U4Q/hqdefault.jpg" alt=""><button class="button" data-video="OQ8SzOa8U4Q" type="button">播放转播</button></div>
+<div class="preview"><img src="https://i.ytimg.com/vi/BrjwEoPXyxA/hqdefault.jpg" alt=""><button class="button" data-video="BrjwEoPXyxA" type="button">播放转播</button></div>
 <div class="content">
-<span class="status" id="badminton-status"></span><h2 class="case-name">羽球双打失分复盘</h2>
-<p class="intro">面向教练组。从全英公开赛男双四分之一决赛找出两队所有符合目标失分类型的回合，并重建关键击球时的站位。</p>
-<dl class="facts"><div><dt>标注覆盖</dt><dd>81 个回合 · 693 拍</dd></div><div><dt>计分依据</dt><dd>DShuttleNet 第 39 场</dd></div></dl>
-<details><summary>题目与交付</summary><p>教练要复核双方发生的球未过网失分。使用完整转播找齐两局中的相关回合，逐条标明哪位球员失分、最后一拍的击球者及球种，并重建该拍发生时四名球员的站位。优先查运动员身份、比分牌更新与回合结束动作。可用击球声辅助定位。
+<span class="status" id="badminton-status"></span><h2 class="case-name">羽球双打比分复盘</h2>
+<p class="intro">面向赛事编辑。核对印尼与印度两组球员在两局中的比分变化，交付能回看原片证据的复盘。</p>
+<dl class="facts"><div><dt>原片长度</dt><dd>51 分 40 秒</dd></div><div><dt>计分依据</dt><dd>BWF 比分牌，TraceAV 同片锚点</dd></div></dl>
+<details><summary>题目与交付</summary><p>给赛事编辑交一份两局比分核验记录。以 Fikri/Maulana、Rankireddy/Shetty 的顺序填写比分。原片有两栏比分和赛后回放，需要分清当前局及上一局。
 
-## 交付
+在 report.json 的 observations 逐条记录 game、score 和 evidence_s。第一局记录局点、该局最终比分。第二局记录印尼组合到第 5 分、第 7 分以及第 8 分时各自的局内比分，再记录比赛最后一个赛点和该局最终比分。evidence_s 是能读到该比分的原片秒数。
 
-- report.json 的 rallies 数组每回合一条。字段为 game、post_score、fault_player_id、last_hitter_id、last_shot_type、start_s、end_s、contact_s、positions。post_score 固定按 Alfian/Ardianto、Lee/Wang 排列。
-- players.json 提供四位球员编号。positions 是以该编号为键的四个 [x,y]，在 61×134 的场地标尺上标示接触时的站位。坐标朝向参考下发的 calibration.json。
-- 术语表以英文小写提交。示例为 short serve、long serve、lift、net shot、push、drive、clear、drop、smash。
-- report.json 的 edit 汇总两局至少三个回合片段，每段给 start_s、end_s。交付 35–110 秒 audit.mp4。使用这些片段按顺序直接拼接，保留原声。</p></details>
-<details><summary>验收方法</summary><p>以局号和双方比分配对回合，按精确率、召回率、责任球员、最后一拍与站位打分。媒体对齐后增加证据时间和成片检查。</p></details>
+在 report.json 的 edit 数组记录原片起止秒数 start_s、end_s，按输出顺序给出。交 30–100 秒的 audit.mp4，直接拼接，保留原声。成片须含第一局局点、第二局赛点和赛后最终比分牌。提交三段证据在正片中的原片与成片对应关系。</p></details>
+<details><summary>验收方法</summary><p>根据局号、双方比分和原片时点核对七个状态。对照成片与原片的画面和声音，检查有无混用两栏比分。</p></details>
 <p class="state-detail" id="badminton-detail"></p>
-<div class="sources"><a href="https://arxiv.org/abs/2610.14016">专家标注方法</a><a href="https://www.youtube.com/watch?v=OQ8SzOa8U4Q">BWF 原片</a></div>
+<div class="sources"><a href="https://www.youtube.com/watch?v=BrjwEoPXyxA">BWF 原片</a><a href="https://huggingface.co/datasets/Heinz217/TraceAV-Bench">TraceAV 标注</a></div>
+<details><summary>专家逐拍版进度</summary><p>全英公开赛男双四分之一决赛 Alfian/Ardianto 对 Lee/Wang。DShuttleNet 第 39 场的 81 个回合和 693 拍已装入评分器，参考提交验证了目标回合的识别与站位评分。正式视频仍待获取并校准。</p><div class="sources"><a href="https://arxiv.org/abs/2610.14016">专家标注方法</a><a href="https://www.youtube.com/watch?v=OQ8SzOa8U4Q">对应 BWF 原片</a></div></details>
 </div>
 </article>
 </section>
 </main>
 <footer>题包和评分器部署在评测服务器。页面状态来自基准自检。</footer>
 <script>
-const states={"race": {"ready": true, "label": "媒体和评分已验证", "detail": "参考提交通过结构化评分和实际成片核验，错误计时差被评分器拒绝。"}, "badminton": {"ready": false, "label": "待校准转播", "detail": "专家标注和回合评分已通过参考提交测试。 服务器尚缺可校准的同场视频，当前可运行结构化评分。"}};
+const states={"race": {"ready": true, "label": "媒体和评分已验证", "detail": "参考提交通过结构化评分和实际成片核验，错误计时差被评分器拒绝。"}, "badminton": {"ready": true, "label": "比分版已通过视听验收", "detail": "七个比分证据点和成片通过参考提交测试，错局样本被评分器拒绝。"}};
 for (const [id, item] of Object.entries(states)) {
   const badge = document.getElementById(id + '-status');
   badge.textContent = item.label;
