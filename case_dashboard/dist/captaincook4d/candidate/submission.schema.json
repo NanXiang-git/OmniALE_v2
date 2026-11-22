@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recordings"
+  ],
+  "properties": {
+    "recordings": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "recording",
+          "status",
+          "summary",
+          "findings"
+        ],
+        "properties": {
+          "recording": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "status": {
+            "enum": [
+              "issues_found",
+              "no_issue_observed"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "step_ids",
+                "observed",
+                "correction",
+                "evidence"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "technique",
+                    "order",
+                    "omission",
+                    "other"
+                  ]
+                },
+                "step_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "observed": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "correction": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "source_seconds",
+                      "output_seconds"
+                    ],
+                    "properties": {
+                      "source_seconds": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      },
+                      "output_seconds": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

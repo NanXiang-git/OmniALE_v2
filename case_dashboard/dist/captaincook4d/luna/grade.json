@@ -1,0 +1,85 @@
+{
+  "delivery_pass": true,
+  "duration_seconds": 147.033333,
+  "identification_45": 0.0,
+  "timecode_25": 0.0,
+  "automatic_70": 0.0,
+  "human_pending": false,
+  "score": 10.0,
+  "events": [
+    {
+      "recording": "A",
+      "kind": "technique",
+      "step_ids": [
+        275
+      ],
+      "matched": false,
+      "windows_hit": 0,
+      "windows_total": 1
+    },
+    {
+      "recording": "A",
+      "kind": "order",
+      "step_ids": [
+        280,
+        285
+      ],
+      "matched": false,
+      "windows_hit": 0,
+      "windows_total": 2
+    },
+    {
+      "recording": "A",
+      "kind": "omission",
+      "step_ids": [
+        280
+      ],
+      "false_positive": true
+    },
+    {
+      "recording": "B",
+      "kind": "omission",
+      "step_ids": [
+        267
+      ],
+      "matched": false,
+      "windows_hit": 0,
+      "windows_total": 2
+    },
+    {
+      "recording": "B",
+      "kind": "order",
+      "step_ids": [
+        253,
+        261
+      ],
+      "false_positive": true
+    },
+    {
+      "recording": "C",
+      "kind": "technique",
+      "step_ids": [
+        292
+      ],
+      "false_positive": true
+    },
+    {
+      "recording": "C",
+      "kind": "omission",
+      "step_ids": [
+        280
+      ],
+      "false_positive": true
+    }
+  ],
+  "human_review": {
+    "observation_and_correction": 2,
+    "training_video": 8,
+    "notes": [
+      "观察与纠正 2/15。每个标注事件 5 分。A 察觉翻面前没有离火，纠正建议正确，但没有找到稍后的离火动作，误报为整步遗漏。A 的切块碎裂和 B 的姜末遗漏均未识别。",
+      "B 所指的红色物体是锅铲，绿甜椒约在 1494 秒从砧板倒入，早加结论有误。C 用下锅时间计算首面时长，未区分开中火及查看底色与正式翻面，也漏看约 985–993 秒的移锅动作。C 不符合其声称的两个错误。",
+      "成片证据与教学可用性 8/15。时码映射和可读性 5/5，抽查的源帧与成片吻合。教学事实 1/5，翻面前应离火的提示正确，但 B 和 C 的关键结论与画面不符。三段覆盖与剪辑 2/5，登记了各段和跳切，证据窗缺必要的后续动作。"
+    ],
+    "review_method": "评测会话外按冻结规则，以整条成片的定点抽帧、报告和关键动作的源片对照进行视听交付审核。音轨另作规格与电平检查。"
+  }
+}

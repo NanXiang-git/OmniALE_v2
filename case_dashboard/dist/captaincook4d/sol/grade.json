@@ -1,0 +1,61 @@
+{
+  "delivery_pass": true,
+  "duration_seconds": 146.0,
+  "identification_45": 30.0,
+  "timecode_25": 12.5,
+  "automatic_70": 42.5,
+  "human_pending": false,
+  "score": 64.5,
+  "events": [
+    {
+      "recording": "A",
+      "kind": "technique",
+      "step_ids": [
+        275
+      ],
+      "matched": false,
+      "windows_hit": 0,
+      "windows_total": 1
+    },
+    {
+      "recording": "A",
+      "kind": "order",
+      "step_ids": [
+        280,
+        285
+      ],
+      "matched": true,
+      "windows_hit": 2,
+      "windows_total": 2
+    },
+    {
+      "recording": "A",
+      "kind": "order",
+      "step_ids": [
+        291,
+        276
+      ],
+      "false_positive": true
+    },
+    {
+      "recording": "B",
+      "kind": "omission",
+      "step_ids": [
+        267
+      ],
+      "matched": true,
+      "windows_hit": 1,
+      "windows_total": 2
+    }
+  ],
+  "human_review": {
+    "observation_and_correction": 10,
+    "training_video": 12,
+    "notes": [
+      "观察与纠正 10/15。每个标注事件 5 分。正确解释先翻面后离火，并说明正确顺序。姜末遗漏有调酱前后证据，并说明短片能支持的范围。遗漏切块碎裂。A 的旋钮画面能看见调节动作，档位无法确认，不能证明开启中火先于加油，按冻结标注计为误报。",
+      "成片证据与教学可用性 12/15。时码映射和可读性 5/5，抽查的源帧与成片吻合。教学事实 3/5，正确动作可见，旋钮结论在成片写得过于确定。三段覆盖与剪辑 4/5，C 有清楚的正确顺序对照，A 缺切块纠错。",
+      "姜末项第一段提交窗为 805–816 秒，展示了蒜末动作但早于冻结窗口 817–834 秒，自动项只命中搅酱检查点。复核保留了人工观察的依据。"
+    ],
+    "review_method": "评测会话外按冻结规则，以整条成片的定点抽帧、报告和关键动作的源片对照进行视听交付审核。音轨另作规格与电平检查。"
+  }
+}

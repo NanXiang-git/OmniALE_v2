@@ -1,0 +1,126 @@
+{
+  "recordings": [
+    {
+      "recording": "A",
+      "status": "issues_found",
+      "summary": "首次翻面时锅仍留在炉面上，画面未见步骤 280 要求的短暂离火。擦干与切块顺序允许调整。",
+      "findings": [
+        {
+          "kind": "omission",
+          "step_ids": [
+            280
+          ],
+          "observed": "原片约 890–910 秒连续画面中，煎锅留在炉面上，操作者随后直接翻动豆腐；未见翻面前短暂离火。",
+          "correction": "首面煎至浅褐后，翻面前将锅短暂移离热源以减少溅油，再翻面并按配方复热。",
+          "evidence": [
+            {
+              "source_seconds": [
+                890,
+                910
+              ],
+              "output_seconds": [
+                23.0,
+                43.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "recording": "B",
+      "status": "issues_found",
+      "summary": "西兰花和蘑菇入锅后约 1 分钟即加入甜椒，未先按配方常搅拌炒 4 分钟。",
+      "findings": [
+        {
+          "kind": "order",
+          "step_ids": [
+            253,
+            261
+          ],
+          "observed": "原片约 1210–1230 秒可见西兰花和蘑菇入锅；约 1278–1290 秒甜椒已加入，两次入锅动作约相隔 1 分钟，短于步骤 253 要求的 4 分钟。",
+          "correction": "先将西兰花与蘑菇常搅拌炒满 4 分钟，再加入甜椒；随后继续炒 2–3 分钟至脆嫩（步骤 274）。",
+          "evidence": [
+            {
+              "source_seconds": [
+                1210,
+                1230
+              ],
+              "output_seconds": [
+                50.0,
+                70.0
+              ]
+            },
+            {
+              "source_seconds": [
+                1278,
+                1290
+              ],
+              "output_seconds": [
+                76.0,
+                88.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "recording": "C",
+      "status": "issues_found",
+      "summary": "豆腐入锅至首次翻动约 9 分钟，明显超过步骤 292 的 5–6 分钟。",
+      "findings": [
+        {
+          "kind": "technique",
+          "step_ids": [
+            292
+          ],
+          "observed": "原片约 420–430 秒豆腐入锅，约 960 秒才开始翻动，间隔约 9 分钟；超过标准 5–6 分钟。",
+          "correction": "豆腐下锅后计时 5–6 分钟，检查底面浅褐后及时进入下一步，避免首面久煎。",
+          "evidence": [
+            {
+              "source_seconds": [
+                420,
+                430
+              ],
+              "output_seconds": [
+                102.0,
+                112.0
+              ]
+            },
+            {
+              "source_seconds": [
+                958,
+                976
+              ],
+              "output_seconds": [
+                116.0,
+                134.0
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "omission",
+          "step_ids": [
+            280
+          ],
+          "observed": "首次翻面时煎锅仍放在炉面上，连续画面未见步骤 280 要求的短暂移离热源。",
+          "correction": "翻面前将锅短暂移离热源以减少溅油，再翻面并按配方复热。",
+          "evidence": [
+            {
+              "source_seconds": [
+                958,
+                976
+              ],
+              "output_seconds": [
+                116.0,
+                134.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
