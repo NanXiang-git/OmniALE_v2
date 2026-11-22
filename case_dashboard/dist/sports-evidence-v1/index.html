@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OmniALE 的两道体育长视频 Agent 任务。查看题面、证据来源及验证状态。">
+<title>体育长视频 Agent · OmniALE</title>
+<style>
+:root{color-scheme:dark;--bg:#131814;--panel:#1c251d;--line:#455044;--soft:#becdb9;--text:#fff9ea;--green:#d8f792;--warm:#ffd3a0;font:16px/1.6 Inter,"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;background:var(--bg);color:var(--text)}
+*{box-sizing:border-box}body{margin:0}a{color:var(--green);text-underline-offset:.25em}a:hover{color:white}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+header{border-bottom:1px solid var(--line)}header div,main,footer{max-width:1280px;margin:auto;padding-inline:clamp(20px,5vw,70px)}
+header div{min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-weight:760;text-decoration:none}.hero{padding-top:clamp(40px,9vw,100px);padding-bottom:40px;border-bottom:1px solid var(--line)}
+.hero small{color:var(--green);font-weight:750;letter-spacing:.14em}
+h1{font-size:clamp(2.8rem,7vw,6.2rem);line-height:1.02;letter-spacing:-.055em;margin:16px 0}
+h2,h3,p{margin-top:0}.hero p{max-width:680px;color:var(--soft);margin-bottom:24px}
+.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a,.button{background:#283526;border:1px solid #50644a;border-radius:6px;padding:6px 12px;text-decoration:none;font:inherit;font-size:.9rem}.button{color:var(--green);cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-block:32px}
+article{scroll-margin-top:15px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.preview{display:grid;width:100%;aspect-ratio:2.15;background:linear-gradient(130deg,#293a27,#142218);place-items:center;overflow:hidden;position:relative}
+.preview img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.68}
+.preview iframe{border:0;width:100%;height:100%}.preview button{z-index:1;background:#142019;color:var(--green);padding:.65em 1.1em}
+.content{padding:22px}.case-name{font-size:clamp(1.35rem,3vw,1.85rem);line-height:1.25;margin:8px 0 12px}
+.status{display:inline-block;color:var(--green);font-size:.81rem;padding:1px .55em;border:1px solid #5b7351;border-radius:4px;font-weight:700}.pending{color:var(--warm);border-color:#936f4d}
+.intro,dd,.state-detail,.content li{color:var(--soft)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-block:1px solid var(--line);padding-block:11px}
+dt{font-size:.82rem;font-weight:650}dd{font-size:.9rem;margin:0}
+details{border-bottom:1px solid var(--line);padding-block:8px}summary{cursor:pointer;font-weight:700}summary::marker{color:var(--green)}
+details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91rem}
+.sources{display:flex;gap:9px 15px;flex-wrap:wrap;padding-top:14px;font-size:.9rem}
+.state-detail{font-size:.88rem;line-height:1.5;margin:15px 0 0}footer{border-top:1px solid var(--line);padding-block:17px;color:var(--soft);font-size:.89rem}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.preview{aspect-ratio:16/8}.hero{padding-bottom:25px}}
+</style>
+</head>
+<body>
+<header><div><a class="brand" href="../../index.html">OmniALE</a><a href="https://github.com/NanXiang-git/OmniALE_v2">GitHub</a></div></header>
+<main>
+<section class="hero">
+<small>OMNIALE BENCHMARK</small>
+<h1>体育长视频<br>Agent 任务</h1>
+<p>从转播找出裁决、比分与击球证据，交付可复核的结构化记录和剪辑。两题的计分依据来自官方成绩或领域专家标注。</p>
+<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打失分复盘</a></nav>
+</section>
+<section class="cards" aria-label="案例">
+<article id="race">
+<div class="preview"><img src="https://i.ytimg.com/vi/8UxGzDeRIJk/hqdefault.jpg" alt=""><button class="button" data-video="8UxGzDeRIJk" type="button">播放转播</button></div>
+<div class="content">
+<span class="status" id="race-status"></span><h2 class="case-name">竞走裁决核验</h2>
+<p class="intro">面向赛事编辑台。追踪运动员的裁决及终点冲线，分两阶段发布可被当时证据支持的结论。</p>
+<dl class="facts"><div><dt>原片长度</dt><dd>41 分 46 秒</dd></div><div><dt>计分依据</dt><dd>世界田联成绩与精确计时</dd></div></dl>
+<details><summary>题目与交付</summary><p>你在赛事编辑台。调查 228 号运动员的裁决和领先两位运动员的冲线判定，为值班编辑交一份可复核的赛事记录。
+
+## 阶段 A
+
+只使用第一阶段目录里的转播。提交 stage_a.json 后交卷，后续输入在锁卷后提供。
+
+- disqualification 填 bib、red_cards、status、evidence_s。evidence_s 使用源片相对秒数。
+- finish 填 bibs、evidence_s、status。status 表达这个时间点的发布状态。
+
+## 阶段 B
+
+使用完整转播和赛事方公布的成绩。提交 stage_b.json 和 audit.mp4。
+
+- results 按名次填每名运动员的 bib、rank、display_time、time_ms。time_ms 为官方公布的精确比赛用时。
+- margin_ms 填官方终点照相的差值。source_basis 从 photo_finish、broadcast_timer、guess 中选择。
+- final_board_s 给转播正式结果牌的时间。
+- edit 记录每个原片片段的 start_s、end_s，按输出顺序排列。保留原声。
+- audit.mp4 使用 edit 描述的直接拼接，长 24–65 秒。覆盖罚牌图卡、冲线和最终结果牌。
+
+第一阶段的正式结果牌发布状态使用 pending_final_board。若当前片段已出现正式结果牌，使用 final_board_visible。</p></details>
+<details><summary>验收方法</summary><p>分别核验裁决、阶段发布状态、最终名次、正式计时和证据位置。检查剪辑是否覆盖三个关键事件，并在成片中抽帧同原片匹配。</p></details>
+<p class="state-detail" id="race-detail"></p>
+<div class="sources"><a href="https://worldathletics.org/results/world-athletics-u20-championships/2018/iaaf-world-u20-championships-tampere-2018-7105080/men/10000-metres-race-walk/final/result">官方成绩</a><a href="https://www.youtube.com/watch?v=8UxGzDeRIJk">原片来源</a></div>
+</div>
+</article>
+<article id="badminton">
+<div class="preview"><img src="https://i.ytimg.com/vi/OQ8SzOa8U4Q/hqdefault.jpg" alt=""><button class="button" data-video="OQ8SzOa8U4Q" type="button">播放转播</button></div>
+<div class="content">
+<span class="status" id="badminton-status"></span><h2 class="case-name">羽球双打失分复盘</h2>
+<p class="intro">面向教练组。从全英公开赛男双四分之一决赛找出两队所有符合目标失分类型的回合，并重建关键击球时的站位。</p>
+<dl class="facts"><div><dt>标注覆盖</dt><dd>81 个回合 · 693 拍</dd></div><div><dt>计分依据</dt><dd>DShuttleNet 第 39 场</dd></div></dl>
+<details><summary>题目与交付</summary><p>教练要复核双方发生的球未过网失分。使用完整转播找齐两局中的相关回合，逐条标明哪位球员失分、最后一拍的击球者及球种，并重建该拍发生时四名球员的站位。优先查运动员身份、比分牌更新与回合结束动作。可用击球声辅助定位。
+
+## 交付
+
+- report.json 的 rallies 数组每回合一条。字段为 game、post_score、fault_player_id、last_hitter_id、last_shot_type、start_s、end_s、contact_s、positions。post_score 固定按 Alfian/Ardianto、Lee/Wang 排列。
+- players.json 提供四位球员编号。positions 是以该编号为键的四个 [x,y]，在 61×134 的场地标尺上标示接触时的站位。坐标朝向参考下发的 calibration.json。
+- 术语表以英文小写提交。示例为 short serve、long serve、lift、net shot、push、drive、clear、drop、smash。
+- report.json 的 edit 汇总两局至少三个回合片段，每段给 start_s、end_s。交付 35–110 秒 audit.mp4。使用这些片段按顺序直接拼接，保留原声。</p></details>
+<details><summary>验收方法</summary><p>以局号和双方比分配对回合，按精确率、召回率、责任球员、最后一拍与站位打分。媒体对齐后增加证据时间和成片检查。</p></details>
+<p class="state-detail" id="badminton-detail"></p>
+<div class="sources"><a href="https://arxiv.org/abs/2610.14016">专家标注方法</a><a href="https://www.youtube.com/watch?v=OQ8SzOa8U4Q">BWF 原片</a></div>
+</div>
+</article>
+</section>
+</main>
+<footer>题包和评分器部署在评测服务器。页面状态来自基准自检。</footer>
+<script>
+const states={"race": {"ready": true, "label": "媒体和评分已验证", "detail": "参考提交通过结构化评分和实际成片核验，错误计时差被评分器拒绝。"}, "badminton": {"ready": false, "label": "待校准转播", "detail": "专家标注和回合评分已通过参考提交测试。 服务器尚缺可校准的同场视频，当前可运行结构化评分。"}};
+for (const [id, item] of Object.entries(states)) {
+  const badge = document.getElementById(id + '-status');
+  badge.textContent = item.label;
+  badge.classList.toggle('pending', !item.ready);
+  document.getElementById(id + '-detail').textContent = item.detail;
+}
+for (const button of document.querySelectorAll('button[data-video]')) {
+  button.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + button.dataset.video + '?autoplay=1';
+    frame.title = button.closest('article').querySelector('h2').textContent + '转播';
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+    frame.allowFullscreen = true;
+    button.parentElement.replaceChildren(frame);
+  });
+}
+</script>
+</body>
+</html>
