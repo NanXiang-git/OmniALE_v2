@@ -66,7 +66,7 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 - edit 记录每个原片片段的 start_s、end_s，按输出顺序排列。保留原声。
 - audit.mp4 使用 edit 描述的直接拼接，长 24–65 秒。覆盖罚牌图卡、冲线和最终结果牌。
 
-第一阶段的正式结果牌发布状态使用 pending_final_board。若当前片段已出现正式结果牌，使用 final_board_visible。</p></details>
+finish.status 使用 pending_final_board 或 final_board_visible，按当前素材里的正式结果牌状态选择。</p></details>
 <details><summary>验收方法</summary><p>分别核验裁决、阶段发布状态、最终名次、正式计时和证据位置。检查剪辑是否覆盖三个关键事件，并把成片中抽样的画面和音轨与原片匹配。</p></details>
 <p class="state-detail" id="race-detail"></p>
 <div class="sources"><a href="https://worldathletics.org/results/world-athletics-u20-championships/2018/iaaf-world-u20-championships-tampere-2018-7105080/men/10000-metres-race-walk/final/result">官方成绩</a><a href="https://www.youtube.com/watch?v=8UxGzDeRIJk">原片来源</a></div>
@@ -82,7 +82,7 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 
 在 report.json 的 observations 逐条记录 game、score 和 evidence_s。第一局记录局点、该局最终比分。第二局记录印尼组合到第 5 分、第 7 分以及第 8 分时各自的局内比分，再记录比赛最后一个赛点和该局最终比分。evidence_s 是能读到该比分的原片秒数。
 
-在 report.json 的 edit 数组记录原片起止秒数 start_s、end_s，按输出顺序给出。交 30–100 秒的 audit.mp4，直接拼接，保留原声。成片须含第一局局点、第二局赛点和赛后最终比分牌。提交三段证据在正片中的原片与成片对应关系。</p></details>
+在 report.json 的 edit 数组记录原片起止秒数 start_s、end_s，按输出顺序给出。交 30–100 秒的 audit.mp4，直接拼接，保留原声。成片须含第一局局点、第二局赛点和赛后最终比分牌。</p></details>
 <details><summary>验收方法</summary><p>根据局号、双方比分和原片时点核对七个状态。对照成片与原片的画面和声音，检查有无混用两栏比分。</p></details>
 <p class="state-detail" id="badminton-detail"></p>
 <div class="sources"><a href="https://www.youtube.com/watch?v=BrjwEoPXyxA">BWF 原片</a><a href="https://huggingface.co/datasets/Heinz217/TraceAV-Bench">TraceAV 标注</a></div>
