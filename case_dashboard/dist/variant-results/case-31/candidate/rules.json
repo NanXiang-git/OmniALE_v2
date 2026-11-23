@@ -1,0 +1,50 @@
+{
+  "main_output": "preview.mp4",
+  "required_files": [
+    "preview.mp4",
+    "interview.ass",
+    "interview.srt",
+    "alignment.json",
+    "rebuild.json",
+    "README.md"
+  ],
+  "auto_weights": {
+    "timing": 30,
+    "speakers": 15,
+    "overlap": 10,
+    "text": 10,
+    "format": 10,
+    "consistency": 10,
+    "rebuild": 5
+  },
+  "judge_weights": {
+    "readability": 10
+  },
+  "fact_weight": 0,
+  "judge_criteria": {
+    "readability": "Watch actual burned subtitle preview while hearing source: speakers, overlapping layout, corrections and reading are clear. Compare rendered content to submitted subtitle events."
+  },
+  "judge_gates": {
+    "critical_content": "Use private critical_units and speaker/word references plus actual audiovisual input. No reversal or omission of negation, numerical constraints, repeated repairs or speaker identity. Do not mark official annotation disputes as candidate failure.",
+    "actual_preview": "Output really displays submitted subtitles, not missing/wrong text or labels.",
+    "source_audio": "Original dialogue and other speakers preserved, no muting/cuts."
+  },
+  "case_number": 12,
+  "original_case_id": 31,
+  "version": "2.0-hard",
+  "task_summary": "真实四人会议困难字幕对轴：三段重排、随机角色身份、无序逐字稿；保留重叠、修正、否定与数字并交付等价双格式和烧录预览。",
+  "passing_score": 80,
+  "scoring_status": "experimental_source_grounded",
+  "rebuild_timeout": 600,
+  "hard_thresholds": {
+    "token_recall": 0.97,
+    "token_precision": 0.99,
+    "overlap": 0.9,
+    "overlap_duration_recall": 0.85,
+    "min_speaker_recall": 0.95,
+    "timing_score": 0.75,
+    "format_fraction": 0.95,
+    "format_equivalence": 0.98
+  },
+  "repeat_contract": "Distinct repeated identical utterances require separate ASS events and explicit SRT cues at the same boundary. Cross-speaker technical continuation slices are deduplicated using ASS repetition boundaries. SRT numeric IDs may be nonconsecutive but must be unique."
+}

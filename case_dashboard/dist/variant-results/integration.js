@@ -10,14 +10,10 @@
 
   const cases = [
     {
-      id: 31, title: '多人会议字幕', original: 'task-12',
+      id: 31, title: '多人会议字幕', original: 'task-12', source: 'EasyCom · Session 2',
       method: '按原题的时间对齐、说话人、重叠对白、文字、格式、一致性、可读性及重建规则计分。',
-      finding: '两份答卷均通过离线重建，主要失分在说话人归属、重叠对白和时间对齐。',
-      notes: [
-        'Sol 在部分窗口漏交关键信息，预览呈现也有问题。1 个复核窗口记录了标注争议。',
-        'Luna 的重叠对白项为 0 分，ASS 与 SRT 一致性未达门槛。2 个复核窗口记录了标注争议。'
-      ],
-      review: '重建评分兼容题包素材目录、可写临时目录及文件形式的输出路径。'
+      finding: '四名新的发言者在同一场英语小组讨论中交谈，三个片段重新排序。',
+      review: '使用 EasyCom 的官方发言者标注和逐句稿，逐词时间由离线对齐生成。'
     },
     {
       id: 40, title: '中文配音', original: 'task-13', source: '《Cosmos Laundromat: First Cycle》· 02:48–04:07',
@@ -57,10 +53,6 @@
     46: ['普通话口述影像成片', '独立原声、旁白与混音', 'VTT、口述计划、播放器和离线重建']
   };
   const milestones = {
-    31: {
-      sol: ['抽取会议画面定位镜头与说话人', '用本地 Whisper 复扫发言窗口', '对逐词稿做强制对齐', '修订时间轴及重复内容', '解码比较交付预览与原声'],
-      luna: ['探测原始音频规格', '用本地 Whisper 听写并定位发言', '核对指定发言的对齐记录', '比较 ASS、SRT 和交付映射', '执行离线重建命令']
-    },
     40: {
       sol: ['抽取末段原声和角色参考', '检查本地 F5-TTS 试生成记录', '调整本地语音生成脚本', '检查预览渲染', '执行离线重建', '用本地 Whisper 复核译配'],
       luna: ['抽帧检查人物动作及口型', '分析对白残差声轨', '测试低内存 F5-TTS 生成', '检查译配工程及离线合成入口', '检查成片的口型与字幕帧', '剪出片段复核最终画面']
@@ -79,7 +71,7 @@
     const source = caseData[item.id];
     const original = registry.cases.find(entry => entry.key === item.original);
     const runs = allRuns(item.id);
-    if (!source || !runs.length) continue;
+    if (!source) continue;
     const [first] = runs;
     const files = source.files.map(file => file.kind === 'video' ? {
       ...file, poster: 'variant-results/case-' + item.id + '/poster.jpg'
@@ -94,14 +86,14 @@
       contract: (source.task.match(/^## (?:交付|必交文件)[^\n]*\n[\s\S]*?(?=^## |(?![\s\S]))/m)?.[0] || source.task)
         + '\n\n## 评分\n\n' + item.method,
       files, delivery: delivery[item.id], resultCount: runs.length,
-      resultSummary: runs.map(run => modelNames[run.model] + ' ' + run.score).join(' · ')
+      resultSummary: runs.length ? runs.map(run => modelNames[run.model] + ' ' + run.score).join(' · ') : source.result_status
     });
     const toResult = run => ({
       model: run.model, effort: report.solver_effort, total: run.score, verified: run.score,
       accepted: run.passed, seconds: run.elapsed_seconds, gradeStatus: 'complete', artifacts: [], reports: [],
       integrity: {passed: true}
     });
-    window.OMNIALE_RESULTS[key] = {...toResult(first), comparisons: runs.slice(1).map(toResult)};
+    if (first) window.OMNIALE_RESULTS[key] = {...toResult(first), comparisons: runs.slice(1).map(toResult)};
   }
 
   function duration(value) {
@@ -114,10 +106,12 @@
   function comparison(item) {
     const runs = allRuns(item.id);
     if (!runs.length) {
+      const source = caseData[item.id];
       return '<article class="variant-case" data-variant-case="31"><p class="variant-case-id">Case 31</p>'
-        + '<h2>多人会议字幕</h2><p>更换素材中</p>'
-        + '<p>先前发布的素材与原题同属 AMI IS1009a，已撤回这组变式成绩。</p>'
-        + '<a class="variant-original" href="#task-12/task">查看原题 ↗</a></article>';
+        + '<h2>多人会议字幕</h2><p>' + escape(source?.result_status || '更换素材中') + '</p>'
+        + (source ? '<p>EasyCom Session 2 · 四位发言者</p><a class="button primary" href="#task-variant-31/task">查看新题包 ↗</a>'
+          : '<p>先前发布的素材与原题同属 AMI IS1009a，已撤回这组变式成绩。</p><a class="variant-original" href="#task-12/task">查看原题 ↗</a>')
+        + '</article>';
     }
     return `<article class="variant-case" data-variant-case="${item.id}">
       <div class="variant-case-head">
@@ -139,7 +133,7 @@
         <p>${escape(item.method)}</p>
         ${runs.map((run, index) => `
           <h3>${modelNames[run.model]}</h3>
-          <p>${escape(item.notes[index])}</p>
+            <p>${escape(caseData[item.id].models[runs[index].model === 'gpt-6-luna' ? 'luna' : 'sol'].notes || item.notes?.[index] || item.review)}</p>
           <p class="variant-meta">封存校验 ${run.sealed_files_verified} 个文件 · 完成 ${run.verified_solver_responses}/${run.solver_requests} 次模型请求</p>
           ${run.failed_gates.length ? `<p class="variant-gates">${run.failed_gates.map(gate => `<code>${escape(gate)}</code>`).join(' ')}</p>` : ''}
         `).join('')}
@@ -153,7 +147,7 @@
     if (!viewingVariants()) {
       previous.overview(tasks, results, target);
       target.querySelector('.hero')?.insertAdjacentHTML('afterend', `<a class="variant-entry" href="${route}">
-        <span><b>变式题评测</b><small>会议字幕、中文配音与口述影像 · 六份答卷</small></span>
+        <span><b>变式题评测</b><small>会议字幕、中文配音与口述影像 · ${report.runs.length} 份已评分答卷</small></span>
         <span aria-hidden="true">↗</span></a>`);
       return;
     }
@@ -194,7 +188,7 @@
   }
 
   function syncNavigation() {
-    if (!allRuns(31).length && /^#task-variant-31(?:\/|$)/.test(location.hash)) {
+    if (!caseData[31] && /^#task-variant-31(?:\/|$)/.test(location.hash)) {
       location.replace(route);
     }
     navigation.classList.toggle('active', viewingVariants());
@@ -211,7 +205,7 @@
 
   function process(model, item, alias, root) {
     return `<h3>作答过程</h3><ol class="variant-timeline">
-      ${model.milestones.map((step, index) => `<li><strong>${milestones[item.id][alias][index]}</strong>
+      ${model.milestones.map((step, index) => `<li><strong>${escape(step.title || milestones[item.id]?.[alias]?.[index] || '运行工具')}</strong>
         <small>${escape(step.id)}${step.tools?.length ? ' · ' + escape(step.tools.join('、')) : ''}
         ${step.exit_code == null ? '' : ' · 退出码 ' + step.exit_code}</small></li>`).join('')}
       </ol><p class="result-note">按 Codex 日志中的工具调用顺序整理。共记录 ${model.actions} 次已结束的工具操作或文件修改。</p>
@@ -248,6 +242,10 @@
     if (!item) return previous.render(entry, record, target);
     const source = caseData[item.id];
     const runs = allRuns(item.id);
+    if (!runs.length) {
+      target.innerHTML = '<div class="result-empty"><h2>作答结果</h2><p>' + escape(source.result_status) + '</p></div>';
+      return;
+    }
     let alias = 'sol';
     let selected = 'answer';
     const tabs = [['answer', '答卷与成片'], ['process', '作答过程'], ['scores', '分数构成']];
@@ -272,7 +270,7 @@
         button.setAttribute('aria-pressed', String(button.dataset.variantPanel === selected));
       });
       if (selected === 'process') content.innerHTML = process(model, item, alias, root);
-      else if (selected === 'scores') content.innerHTML = breakdown(model, item, runs[index], item.notes[index], root);
+      else if (selected === 'scores') content.innerHTML = breakdown(model, item, runs[index], model.notes || item.notes?.[index] || item.review, root);
       else content.innerHTML = answer(model, root);
     }
     target.querySelectorAll('[data-variant-model]').forEach(button => button.addEventListener('click', () => {

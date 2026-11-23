@@ -1,0 +1,22 @@
+{
+  "dataset": "EasyCom",
+  "session": 2,
+  "license": "CC-BY-NC-4.0",
+  "official_release": "https://github.com/facebookresearch/EasyComDataset",
+  "processing": "Three reordered clips, resized and frame-rate converted. Same conversation. Audio is the in-video microphone recording.",
+  "case_source_sha256": "3bfd5d66aedd3fad66f2b6b8bb509cfb60f3579a6135eafc4fa664e5cba9bcfe",
+  "playback_sha256": "bafac1d0e24e953659f8268b780e0d9f0e6b95c508567f45b62b308dd9579157",
+  "validation": {
+    "source": "EasyCom session 2",
+    "duration": 150.2,
+    "words": {
+      "A": 162,
+      "D": 40,
+      "B": 199,
+      "C": 65
+    },
+    "utterances": 53,
+    "critical_units": 10,
+    "tested_decode": true
+  }
+}

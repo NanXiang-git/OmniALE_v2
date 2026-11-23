@@ -1,0 +1,1 @@
+EasyCom, Main / Session 2, Meta Reality Labs Research, CC BY-NC 4.0. Reordered and resized three clips; participant photos and utterance transcripts from the official release. https://github.com/facebookresearch/EasyComDataset
