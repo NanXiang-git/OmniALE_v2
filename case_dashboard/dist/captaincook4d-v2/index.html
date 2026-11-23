@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniALE · 厨房操作纠错片 V2</title>
+<link rel="stylesheet" href="style.css">
+<script src="results.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header><a href="../index.html#results">OmniALE / 答卷与评分</a><a href="../index.html#task-captaincook4d/results">查看 V1</a></header>
+<main>
+<section class="intro">
+<p class="label">CAPTAINCOOK4D / V2</p>
+<h1>厨房操作纠错片</h1>
+<p>审核三段第一人称厨房长视频，交付带普通话讲解、可定位证据的班前培训片。</p>
+<nav><a href="TASK.md">完整题面</a><a href="SCORING.md">评分标准</a><a href="recipes.md">标准配方</a><a href="../index.html#task-captaincook4d/materials">三条完整原片</a></nav>
+</section>
+<section><h2>两模型评测结果</h2><p>Codex xhigh，不限时。最终分 = 内容分 ÷ 85 × 100 ×（成片质量 ÷ 15）²。</p><div id="comparison" class="scroll"></div></section>
+<section><h2>播放成片并查看评分</h2><div id="choices" role="group" aria-label="切换作答模型"></div><div id="report"></div></section>
+<section><h2>评分依据</h2><p>事件识别与时间码由程序计分。GPT-6.1 Sol 依据成片混音的时间戳转录、同一时刻的实际视频帧、源片对照和声学测量，评审教学内容和音画同步。接口未通过直接音频输入验证，可听辨与混音评分基于转录和信号证据。</p><p>三条原片来自 CaptainCook4D，数据采用 Apache-2.0。V2 将西兰花录像的第一个调酱检查点改用官方加蒜区间。</p></section>
+</main>
+</body></html>
