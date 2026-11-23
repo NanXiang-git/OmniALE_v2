@@ -30,6 +30,18 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 .state-detail{font-size:.88rem;line-height:1.5;margin:15px 0 0}footer{border-top:1px solid var(--line);padding-block:17px;color:var(--soft);font-size:.89rem}
 @media(max-width:720px){.cards{grid-template-columns:1fr}.preview{aspect-ratio:16/8}.hero{padding-bottom:25px}}
 </style>
+<style id="race-trial-style">
+.trial{margin:14px 0 35px;background:#202b22;border:1px solid var(--line);border-radius:12px;padding:clamp(17px,3vw,30px)}
+.trial-heading{border:0;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.trial-heading div{display:block;padding:0;margin:0;min-height:0}.trial-heading h2{font-size:clamp(1.4rem,4vw,2.3rem);margin-bottom:8px}
+.trial-model{color:var(--green);font-weight:bold;margin-bottom:3px}.trial-score{font-size:1.05rem;line-height:1.25;white-space:nowrap;margin:0}
+.trial-score strong{font-size:clamp(1.6rem,5vw,3rem);color:var(--green)}.trial-score span{display:block;font-size:.86rem;color:var(--warm);margin-top:5px}
+.trial-description{color:var(--soft);margin:10px 0}.trial-metrics{display:flex;gap:12px 28px;flex-wrap:wrap;margin:12px 0}
+.trial-scores{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 15px}
+.trial-scores li{display:flex;justify-content:space-between;gap:6px;padding:4px 0;border-bottom:1px solid #394639}
+.trial-scores li strong{font-weight:550}.trial-scores li span{white-space:nowrap;color:var(--green)}
+@media(max-width:610px){.trial-scores{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header><div><a class="brand" href="../../index.html">OmniALE</a><a href="https://github.com/NanXiang-git/OmniALE_v2">GitHub</a></div></header>
@@ -38,7 +50,7 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 <small>OMNIALE BENCHMARK</small>
 <h1>体育长视频<br>Agent 任务</h1>
 <p>从转播找出裁决、比分与击球证据，交付可复核的结构化记录和剪辑。两道可运行任务的计分依据来自赛事官方记录。羽球条目另有逐拍专家标注版本。</p>
-<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打比分复盘</a></nav>
+<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打比分复盘</a><a href="#race-experiment">盲测结果</a></nav>
 </section>
 <section class="cards" aria-label="案例">
 <article id="race">
@@ -90,6 +102,25 @@ finish.status 使用 pending_final_board 或 final_board_visible，按当前素�
 </div>
 </article>
 </section>
+
+<section class="trial" id="race-experiment" aria-labelledby="race-experiment-title">
+  <header class="trial-heading">
+    <div><p class="trial-model">GPT-6.2 Sol · Codex · xhigh</p>
+    <h2 id="race-experiment-title">竞走两阶段盲测</h2></div>
+    <p class="trial-score"><strong>90</strong> / 100 <span>未通过</span></p>
+  </header>
+  <p class="trial-description">2026-11-23 · 服务器运行 · 无实验时限 · 同一 Codex 会话。阶段 A 的提交锁定后开放完整转播及官方成绩。</p>
+  <dl class="trial-metrics">
+    <div><dt>阶段 A</dt><dd>5 分 10.1 秒</dd></div>
+    <div><dt>阶段 B</dt><dd>5 分 34.6 秒</dd></div>
+    <div><dt>两阶段合计</dt><dd>10 分 44.7 秒</dd></div>
+    <div><dt>输出 tokens</dt><dd>14,672</dd></div>
+  </dl>
+  <details open><summary>评分明细</summary><ul class="trial-scores"><li><strong>罚牌裁决事实</strong><span>15 / 15</span></li><li><strong>罚牌图卡定位</strong><span>10 / 10</span></li><li><strong>冲线选手号码</strong><span>5 / 5</span></li><li><strong>冲线时点</strong><span>0 / 10</span></li><li><strong>阶段 A 结果牌状态</strong><span>10 / 10</span></li><li><strong>正式名次及用时</strong><span>15 / 15</span></li><li><strong>千分位时间差</strong><span>10 / 10</span></li><li><strong>官方计时依据</strong><span>5 / 5</span></li><li><strong>最终结果牌定位</strong><span>5 / 5</span></li><li><strong>证据片段与剪辑顺序</strong><span>5 / 5</span></li><li><strong>成片画面与原声同源检查</strong><span>10 / 10</span></li></ul></details>
+  <details open><summary>证据复看与结论</summary><ul><li>阶段 A 的 1360.00 秒画面清楚显示 228 号、四张红牌和 DQ。</li><li>阶段 A 提交的冲线证据是 2175.24 秒，早于冻结的 2175.80–2178.90 秒窗口。复看该帧，画面尚未呈现两位领先者冲线，扣 10 分。</li><li>阶段 B 正确读出张尧与 Hurtado 的精确用时及 6 毫秒差，2492.00 秒的正式结果牌可读。</li><li>54.57 秒成片按要求覆盖三个事件，画面和原声均通过与原片的抽样比对。</li></ul></details>
+  <p class="trial-description">计时与裁决使用世界田联官方记录，证据定位及成片使用转播。评分规则在开跑前冻结。每段成片比较三个画面位置和三个音频窗口。通过须至少 90 分且所有评分项通过。单次盲测结果仅代表该提交。</p>
+</section>
+
 </main>
 <footer>题包和评分器部署在评测服务器。页面状态来自基准自检。</footer>
 <script>
