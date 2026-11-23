@@ -1,0 +1,110 @@
+{
+  "case26": {
+    "model": "GPT-6.1-sol",
+    "effort": "high",
+    "formal_total": null,
+    "visual_points": 39.04642,
+    "audio_automatic": 9.33591675714363,
+    "formal_total_upper_bound": 54.3823,
+    "pending": [
+      "audible_artifacts",
+      "audio_judge:Unresolved independent core-rating disagreement: audible_artifacts",
+      "musical_content",
+      "timbre_detail"
+    ],
+    "critical_failures": [
+      "restoration_quality"
+    ],
+    "frames": 624
+  },
+  "case10": [
+    {
+      "model": "GPT-6.2-astra",
+      "status": "未通过",
+      "score": 39,
+      "components": {
+        "meaning": 29.909,
+        "bilingual": 3.594,
+        "timing": 12.0,
+        "readability": 5.0,
+        "delivery": 5,
+        "calibration": 4.78
+      },
+      "seconds": 1391.808286190033,
+      "effort": "xhigh",
+      "time_limit_seconds": null,
+      "issue": null,
+      "sealed_files": 4
+    },
+    {
+      "model": "GPT-6.2-sol",
+      "status": "未通过",
+      "score": 39,
+      "components": {
+        "meaning": 21.667,
+        "bilingual": 2.667,
+        "timing": 11.739,
+        "readability": 5.0,
+        "delivery": 5,
+        "calibration": 4.625
+      },
+      "seconds": 1007.0486104488373,
+      "effort": "xhigh",
+      "time_limit_seconds": null,
+      "issue": null,
+      "sealed_files": 4
+    },
+    {
+      "model": "GPT-6-luna",
+      "status": "未通过",
+      "score": 25.965,
+      "components": {
+        "meaning": 2.826,
+        "bilingual": 0.348,
+        "timing": 7.826,
+        "readability": 5.0,
+        "delivery": 5,
+        "calibration": 4.965
+      },
+      "seconds": 791.6948938369751,
+      "effort": "xhigh",
+      "time_limit_seconds": null,
+      "issue": null,
+      "sealed_files": 4
+    },
+    {
+      "model": "作者参考",
+      "status": "参考验收",
+      "score": 99.205,
+      "components": {
+        "meaning": 65.0,
+        "bilingual": 8.0,
+        "timing": 11.217,
+        "readability": 5.0,
+        "delivery": 5,
+        "calibration": 4.987
+      }
+    }
+  ],
+  "case07": {
+    "model": "GPT-6.2-sol",
+    "effort": "xhigh",
+    "status": "画质试验已评",
+    "raw_score": 79.9498885106154,
+    "formal_score": null,
+    "clips": [
+      {
+        "clip_id": "clip_1",
+        "score_0_1": 0.7485239404642335
+      },
+      {
+        "clip_id": "clip_2",
+        "score_0_1": 0.8504738297480745
+      }
+    ],
+    "cues": 2,
+    "delivery_valid": false,
+    "resolve_verified": false,
+    "seconds": 877.9183945655823
+  }
+}

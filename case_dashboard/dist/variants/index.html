@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>变式题实验 · OmniALE</title>
+<style>
+:root{color-scheme:light;--paper:#f4f6f9;--white:#fff;--ink:#142339;--muted:#475970;--line:#d9e1eb;--nav:#152945;--accent:#1554a0;--warm:#855600;--good:#12624f}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,"Microsoft YaHei",system-ui,sans-serif}a{color:var(--accent)}a:focus-visible,summary:focus-visible{outline:3px solid #edaa36;outline-offset:4px}
+header{background:var(--nav);color:white}.wrap{max-width:1180px;margin:auto;padding:0 32px}.top{display:flex;gap:24px;align-items:center;justify-content:space-between;padding-block:19px;border-bottom:1px solid #ffffff38}.top a{color:white;text-decoration:none;font-weight:750}.top a:last-child{font-weight:500}.hero{padding-block:48px 50px}.hero h1{font-size:clamp(36px,5vw,65px);line-height:1.1;letter-spacing:-.045em;margin:0 0 12px}.hero p{color:#d8e6fb;margin:0;max-width:680px}
+nav{display:flex;flex-wrap:wrap;gap:8px 26px;padding-block:16px;background:var(--white);border-bottom:1px solid var(--line)}nav .wrap{width:100%;display:flex;flex-wrap:wrap;gap:8px 26px}nav a{text-underline-offset:4px;font-weight:650}
+main{padding-block:24px 60px!important}section{scroll-margin-top:20px;background:var(--white);border:1px solid var(--line);border-radius:15px;margin:0 0 22px;padding:27px 32px}.label{font:bold 14px/1.3 ui-monospace,monospace;color:var(--accent);letter-spacing:.03em}.sectionhead{display:flex;justify-content:space-between;gap:16px;align-items:start}.pill{color:#294768;white-space:nowrap;background:#eaf0f8;border-radius:100px;padding:4px 11px;font-size:.875rem}.pill.pending{color:var(--warm);background:#fff1d8}.pill.ready{color:var(--good);background:#e5f5ef}
+h2{font-size:clamp(25px,3vw,36px);line-height:1.18;margin:6px 0 12px}h3{margin:20px 0 8px;font-size:19px}p{margin:8px 0 14px}.muted{color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:13px;margin:22px 0}.metric{background:#f3f6fb;border-radius:10px;padding:14px 16px}.metric strong{display:block;font-size:1.6rem;font-variant-numeric:tabular-nums;line-height:1.25}.metric span{color:var(--muted);font-size:.9rem}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;white-space:nowrap}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}thead{background:#f0f5fb}th[scope=row]{font-weight:650}details{margin-top:16px}summary{cursor:pointer;font-weight:650}.note{border-left:3px solid #d49a36;padding:1px 0 1px 12px}.figure{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.figure figure{flex:1 1 210px;margin:0}.figure img{width:100%;aspect-ratio:640/338;object-fit:cover;border-radius:8px}.figure figcaption{font-size:.9rem;color:var(--muted)}footer{border-top:1px solid var(--line);padding-block:20px 30px;color:var(--muted)}@media(max-width:640px){.wrap{padding-inline:16px}.hero{padding-block:34px}.top{gap:10px}section{padding:18px}.sectionhead{display:block}.pill{display:inline-block;margin-bottom:4px}}
+</style>
+<script defer src="results.js"></script>
+</head>
+<body>
+<header><div class="wrap"><div class="top"><a href="../index.html">OmniALE</a><a href="../index.html#results">原任务与评分</a></div><div class="hero"><h1>变式题实验</h1><p>弱光修复、手语双语字幕和导播口令抠像的答卷与评分。</p></div></div></header>
+<nav aria-label="跳转到变式"><div class="wrap"><a href="#case26">Case26 音画修复</a><a href="#case10">Case10 手语字幕</a><a href="#case07">Case07 导播抠像</a></div></nav>
+<main class="wrap">
+<section id="case26" aria-labelledby="case26-title">
+<div class="sectionhead"><div><span class="label">CASE 26</span><h2 id="case26-title">厨房备菜音画修复</h2></div><span class="pill pending">听评有分歧</span></div>
+<p class="muted">26 秒厨房切豆腐实拍与新编器乐。复用原题强画面、强音频损伤和视觉 70 / 音频 30 的评分合同。</p>
+<div class="metrics"><div class="metric"><strong>39.0464 / 70</strong><span>视觉评定</span></div><div class="metric"><strong>9.3359 / 24</strong><span>音频自动项</span></div><div class="metric"><strong>54.3823 / 100</strong><span>计入听评满分后的总分上限</span></div></div>
+<div class="figure"><figure><img src="case26-input.jpg" alt="受损画面中的木制案板、豆腐和正在操作的手"><figcaption>受损输入 · 14.5 秒</figcaption></figure><figure><img src="case26-output.jpg" alt="同一帧修复后画面"><figcaption>模型修复 · 14.5 秒</figcaption></figure></div>
+<p class="muted">GPT-6.1-sol / high 用时 48 分 25 秒。四段画面 PSNR 提升 9.94–10.47 dB，音频 SNR 提升 5.28–5.96 dB。</p>
+<p class="note">残余杂音的首评和复核分歧使总分留空。画面有明显的木纹、手部与刀身细节损失。</p>
+<details><summary>播放完整修复成片</summary><video controls preload="none" src="case26-restored.mp4" style="display:block;width:min(100%,640px);margin:12px 0"></video></details><details><summary>对照与评分口径</summary><p>干净参考的原始视觉自动项为 60/60，音频自动项为 24/24。盲测提交通过修订层重放与音画一致性的自动硬门槛。音频听评共 6 分，视觉最低通过门槛为 42 分。</p><a href="https://captaincook4d.github.io/captain-cook/">CaptainCook4D 素材来源</a></details>
+</section>
+<section id="case10" aria-labelledby="case10-title">
+<div class="sectionhead"><div><span class="label">CASE 10</span><h2 id="case10-title">中国手语双语字幕</h2></div><span class="pill" id="sign-status">读取结果</span></div>
+<p class="muted">CE-CSL test 切分的 23 个新片段，9 位表达者，约 160 秒。三次盲测均使用 xhigh、不限时，评分沿用 Harbor 验证器。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">答卷</th><th scope="col">总分</th><th scope="col">封顶前</th><th scope="col">语义 / 65</th><th scope="col">双语 / 8</th><th scope="col">时序 / 12</th><th scope="col">可读 / 5</th><th scope="col">交付 / 5</th><th scope="col">置信 / 5</th><th scope="col">状态</th></tr></thead><tbody id="sign-scores"><tr><td colspan="10">读取中</td></tr></tbody></table></div>
+<p class="muted">语义由 GPT-6-astra/high 按数据集标注和源视频抽帧评审。</p><a href="https://github.com/woshisad159/TFNet">CE-CSL 原始仓库</a>
+</section>
+<section id="case07" aria-labelledby="case07-title">
+<div class="sectionhead"><div><span class="label">CASE 07</span><h2 id="case07-title">按导播口令提取人物</h2></div><span class="pill" id="matte-status">读取结果</span></div>
+<p class="muted">两个 4 秒双人镜头。每段的独立英语导播轨决定保留左侧或右侧人物，交付绿底视频。</p>
+<div id="matte-results" aria-live="polite"></div>
+<p>视觉公式沿用原题的两道门槛和 30/70 边缘 IoU。片段 1 为 74.85，片段 2 为 85.05。</p>
+<p class="note">服务器试验使用可重建的命令行工作流，试验未提交 Resolve 工程，完整交付检查未通过，正式分留空。</p><a href="../index.html#task-03">原题与 Resolve 合同</a>
+</section>
+<noscript>请启用 JavaScript 查看各模型分项。</noscript>
+</main>
+<footer><div class="wrap"><a href="results.json">下载评分数据 JSON</a></div></footer>
+</body></html>
