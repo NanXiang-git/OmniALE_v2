@@ -13,6 +13,26 @@ function total(row) {
 }
 comparison.innerHTML = '<table><thead><tr><th>模型</th><th>内容 / 85</th><th>质量 / 15</th><th>质量系数</th><th>最终分 / 100</th><th>用时</th></tr></thead><tbody>' +
   rows.map(row => '<tr><td>' + clean(row.model) + '</td><td>' + points(row.content_85) + '</td><td>' + points(row.quality_15) + '</td><td>' + points(row.quality_factor,4) + '</td><td class="summary">' + total(row) + '</td><td>' + points(row.minutes,1) + ' 分钟</td></tr>').join('') + '</tbody></table>';
+const targets = [
+  {recording:'A', kind:'technique', steps:'275', label:'A · 切豆腐碎裂'},
+  {recording:'A', kind:'order', steps:'280,285', label:'A · 先翻面后离火'},
+  {recording:'B', kind:'omission', steps:'267', label:'B · 漏加姜末'}
+];
+function renderRecognition() {
+  const header = rows.map(row => '<th scope="col">' + clean(row.model) + '</th>').join('');
+  const body = targets.map(target => {
+    const record = rows.map(row => {
+      const event = (row.events || []).find(item => item.recording === target.recording
+        && item.kind === target.kind && item.step_ids.slice().sort((a,b) => a-b).join(',') === target.steps);
+      const outcome = event?.matched === true ? '已识别' : event?.matched === false ? '未识别' : '待评';
+      return '<td>' + outcome + '</td>';
+    }).join('');
+    return '<tr><th scope="row">' + clean(target.label) + ' <small>步骤 ' + clean(target.steps.replace(',', '、')) + '</small></th>' + record + '</tr>';
+  }).join('');
+  document.querySelector('#recognition').innerHTML =
+    '<table><thead><tr><th scope="col">标准错误</th>' + header + '</tr></thead><tbody>' + body + '</tbody></table>';
+}
+renderRecognition();
 choices.innerHTML = rows.map(row => '<button type="button" data-model="' + row.id + '" aria-pressed="false">' + clean(row.model) + '</button>').join('');
 function select(index) {
   const row = rows[index];
