@@ -68,6 +68,18 @@
 .variant-entry { padding: 12px 16px; margin-bottom: 22px; }
 .variant-entry:hover { border-color: #789760; }
 .variant-entry small { display: block; color: #55665a; font-size: 12px; }
+.variant-case-results .variant-video { width: 100%; aspect-ratio: 16 / 9; background: #17251c; border-radius: 7px; }
+.variant-case-results h3 { margin: 18px 0 10px; }
+.variant-result-nav, .variant-answer-files, .variant-result-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.variant-result-nav { margin: 16px 0; }
+.variant-case-results button[aria-pressed="true"] { color: #fff; background: #355d3e; border-color: #355d3e; }
+.variant-answer-files a { background: #eef2e8; border-radius: 5px; padding: 5px 9px; overflow-wrap: anywhere; }
+.variant-case-results a { color: #355d3e; text-decoration: underline; text-underline-offset: 2px; }
+.variant-timeline { padding-inline-start: 1.65em; }
+.variant-timeline li { padding: 8px 0 10px 6px; border-bottom: 1px solid #e2e8db; }
+.variant-timeline small { display: block; color: #55665a; overflow-wrap: anywhere; }
+.variant-calculation { margin: 12px 0; padding: 10px 12px; background: #eef2e8; border-radius: 6px; }
+.variant-result-links { margin: 20px 0 0; }
 @media (max-width: 1080px) {
   .variant-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

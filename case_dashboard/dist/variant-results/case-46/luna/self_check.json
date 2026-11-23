@@ -1,0 +1,84 @@
+{
+  "cues": [
+    {
+      "id": "AD01",
+      "actual_audio_duration": 1.660229,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "The opening vocal reaction ends about 0.20 s before this cue; next detected vocal begins about 0.66 s after it. The girl is visible behind the tent from the first frame."
+    },
+    {
+      "id": "AD02",
+      "actual_audio_duration": 1.637021,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "Begins about 0.23 s after a short Huh and ends about 0.45 s before the next Whoa. ASR does not classify any concurrent nonverbal effect."
+    },
+    {
+      "id": "AD03",
+      "actual_audio_duration": 2.716750,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "The girl follows the moving red-spotted mushroom away from the campsite; no detected speech is nearby."
+    },
+    {
+      "id": "AD04",
+      "actual_audio_duration": 2.739958,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "The small cap-covered figure crosses the grass toward the trees. No detected speech is nearby."
+    },
+    {
+      "id": "AD05",
+      "actual_audio_duration": 2.565813,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "The girl lowers herself and follows through the undergrowth. No detected speech is nearby."
+    },
+    {
+      "id": "AD06",
+      "actual_audio_duration": 2.995375,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "Begins about 0.25 s after a short Huh and ends about 0.61 s before dialogue describing the discovery. The clearing and crowd are already visible."
+    },
+    {
+      "id": "AD07",
+      "actual_audio_duration": 2.496146,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "Begins about 0.35 s after the last detected line in the prior conversation; the group entering the clearing is visible."
+    },
+    {
+      "id": "AD08",
+      "actual_audio_duration": 3.541063,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "The three red-capped figures and procession of ladybugs are visible in this speech-free interval."
+    },
+    {
+      "id": "AD09",
+      "actual_audio_duration": 2.890896,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "Describes a visible blue-black insect and the figures gathered around it. No detected speech is nearby."
+    },
+    {
+      "id": "AD10",
+      "actual_audio_duration": 2.832854,
+      "dialogue_overlap_risk": "low",
+      "redundant_audio_risk": "low",
+      "notes": "Begins about 0.39 s after the greeting line ends; the pale-faced red-capped figure has already emerged from the tree hollow."
+    }
+  ],
+  "unfinished": [
+    "Dialogue windows were estimated with local faster-whisper small on the English source after ffmpeg decoding; ASR timestamps are approximate.",
+    "Visual review used contact sheets sampled every 0.5 to 3 seconds plus selected full-size frames, not frame-by-frame annotation.",
+    "A local Mandarin ASR pass roughly recovered the narration but made homophone substitutions; it is not a reliable judgment of pronunciation or naturalness.",
+    "ASR does not identify key nonverbal effects, and there was no independent subjective listening review; possible brief effect masking remains uncertain."
+  ],
+  "omissions": [
+    "No narration is placed over the discovery or campsite conversations because the dialogue already conveys the reactions and intentions.",
+    "Small background movements are omitted where describing them would add detail without clarifying the main movement or reveal."
+  ]
+}

@@ -1,0 +1,1 @@
+Sprite Fright © Blender Foundation | studio.blender.org，片段 02:04–03:25。使用 Creative Commons Attribution 4.0 的公开发行视频。裁切，缩放至 1280×536，自成片解码 48 kHz 立体声原声。原片 https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm 。获取副本 https://archive.org/details/sprite-fright-blender-open-movie_202406 。

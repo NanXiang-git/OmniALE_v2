@@ -1,0 +1,763 @@
+{
+  "rows": [
+    {
+      "id": "E_words",
+      "label": "英文词序列准确性",
+      "score": 7.822222222222221,
+      "maximum": 8.0
+    },
+    {
+      "id": "E_events",
+      "label": "源事件覆盖与粗定位",
+      "score": 3.7499999999999964,
+      "maximum": 4.0
+    },
+    {
+      "id": "E_roles",
+      "label": "源说话人/声音实例归属",
+      "score": 2.8125000000000013,
+      "maximum": 3.0
+    },
+    {
+      "id": "E_meaning",
+      "label": "源语义与关键语气识别",
+      "score": 4.625000000000002,
+      "maximum": 5.0
+    },
+    {
+      "id": "T_meaning",
+      "label": "中文意义准确完整",
+      "score": 4.499999999999999,
+      "maximum": 4.5
+    },
+    {
+      "id": "T_natural",
+      "label": "中文自然度",
+      "score": 3.0000000000000013,
+      "maximum": 3.0
+    },
+    {
+      "id": "T_terms",
+      "label": "术语和称呼一致",
+      "score": 1.4999999999999996,
+      "maximum": 1.5
+    },
+    {
+      "id": "T_style",
+      "label": "语体与语用功能",
+      "score": 1.0,
+      "maximum": 1.0
+    },
+    {
+      "id": "A_identity",
+      "label": "原人物音色与身份保持",
+      "score": 24.999999999999996,
+      "maximum": 25
+    },
+    {
+      "id": "A_stable",
+      "label": "同人物跨段声音一致性",
+      "score": 7.5,
+      "maximum": 15
+    },
+    {
+      "id": "A_prosody",
+      "label": "情绪语气与表演保持",
+      "score": 15.000000000000004,
+      "maximum": 15
+    },
+    {
+      "id": "A_content",
+      "label": "实际中文内容忠实度",
+      "score": 9.791666666666671,
+      "maximum": 10
+    },
+    {
+      "id": "A_quality",
+      "label": "自然度清晰度与双版本混音",
+      "score": 5.000000000000005,
+      "maximum": 5
+    },
+    {
+      "id": "V_frames",
+      "label": "原画面内容与顺序",
+      "score": 0.5999999999999999,
+      "maximum": 0.6
+    },
+    {
+      "id": "V_timeline",
+      "label": "时间线完整性",
+      "score": 0.2,
+      "maximum": 0.2
+    },
+    {
+      "id": "V_display",
+      "label": "声画时机与字幕呈现",
+      "score": 0.175,
+      "maximum": 0.2
+    }
+  ],
+  "groups": {
+    "E": {
+      "score": 19.00972222222222,
+      "maximum": 20
+    },
+    "T": {
+      "score": 10.0,
+      "maximum": 10
+    },
+    "A": {
+      "score": 62.29166666666668,
+      "maximum": 70
+    }
+  },
+  "coefficient": 0.9749999999999999,
+  "core": 86.0506641313933,
+  "gates": {
+    "continuity_ledger": {
+      "pass": null,
+      "evidence": {
+        "reason": "字段、事件索引覆盖、最低证据数等公开结构要求均满足。旧失败仅来自每个S都须与私有字幕粗时间窗相交；题面未明确这一精确验收条件，且源时间标注未经校准。因此保留诊断、待源证据核验，不作确定硬门槛失败。跨段语义仍由冻结H类QA评审。",
+        "explicit_structural_contract_passed": true,
+        "structural_issues": [],
+        "private_subtitle_window_diagnostic": [
+          {
+            "challenge_id": "C03",
+            "source_ids_without_private_subtitle_window_overlap": [
+              "S004"
+            ],
+            "submitted_evidence_intervals": [
+              [
+                12.42,
+                15.56
+              ],
+              [
+                16.65,
+                19.88
+              ]
+            ]
+          }
+        ],
+        "original_automatic_gate": {
+          "pass": false,
+          "evidence": {
+            "passed": false,
+            "valid_records": 7,
+            "expected_records": 8,
+            "issues": [
+              "C03"
+            ]
+          }
+        }
+      }
+    },
+    "offline_rebuild": {
+      "pass": false,
+      "evidence": {
+        "exit": null,
+        "output_present": false
+      }
+    },
+    "critical_H05.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H05.A_content.relation",
+        "answer": "no",
+        "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
+        "source_intervals": [
+          [
+            61.41,
+            63.542
+          ],
+          [
+            64.0,
+            65.125
+          ],
+          [
+            65.825,
+            66.5
+          ]
+        ],
+        "output_intervals": [
+          [
+            61.41,
+            63.542
+          ],
+          [
+            64.0,
+            65.125
+          ],
+          [
+            65.825,
+            66.5
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H05.A_content.relation",
+            "answer": "no",
+            "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
+            "source_intervals": [
+              [
+                61.41,
+                63.542
+              ],
+              [
+                64.0,
+                65.125
+              ],
+              [
+                65.825,
+                66.5
+              ]
+            ],
+            "output_intervals": [
+              [
+                61.41,
+                63.542
+              ],
+              [
+                64.0,
+                65.125
+              ],
+              [
+                65.825,
+                66.5
+              ]
+            ]
+          },
+          {
+            "id": "H05.A_content.relation",
+            "answer": "no",
+            "reason": "音频将断开的句子合并为完整句，破坏了原片犹豫和中断的语流关系。",
+            "source_intervals": [
+              [
+                61.41,
+                63.542
+              ],
+              [
+                64.0,
+                65.125
+              ],
+              [
+                65.825,
+                66.5
+              ]
+            ],
+            "output_intervals": [
+              [
+                61.24,
+                63.78
+              ],
+              [
+                63.81,
+                66.27
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_role.Victor.A_stable.distinct": {
+      "pass": false,
+      "evidence": {
+        "id": "role.Victor.A_stable.distinct",
+        "answer": "no",
+        "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+        "source_intervals": [
+          [
+            1.0,
+            3.0
+          ],
+          [
+            37.17,
+            39.75
+          ],
+          [
+            76.25,
+            78.708
+          ]
+        ],
+        "output_intervals": [
+          [
+            1.0,
+            3.0
+          ],
+          [
+            37.17,
+            39.75
+          ],
+          [
+            76.25,
+            78.708
+          ]
+        ],
+        "votes": [
+          {
+            "id": "role.Victor.A_stable.distinct",
+            "answer": "no",
+            "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+            "source_intervals": [
+              [
+                1.0,
+                3.0
+              ],
+              [
+                37.17,
+                39.75
+              ],
+              [
+                76.25,
+                78.708
+              ]
+            ],
+            "output_intervals": [
+              [
+                1.0,
+                3.0
+              ],
+              [
+                37.17,
+                39.75
+              ],
+              [
+                76.25,
+                78.708
+              ]
+            ]
+          },
+          {
+            "id": "role.Victor.A_stable.distinct",
+            "answer": "no",
+            "reason": "Role distinction fails due to an exchange error. At interval 76.25-78.708, the source indicates Victor speaking, but the output places his lines on the Franck track while leaving the Victor track silent. Conversely, checking other intervals confirms roles are generally distinct, but this specific swap violates the requirement that roles remain distinct without exchanges.",
+            "source_intervals": [
+              [
+                1,
+                3
+              ],
+              [
+                37.17,
+                39.75
+              ],
+              [
+                76.25,
+                78.708
+              ]
+            ],
+            "output_intervals": [
+              [
+                1,
+                3
+              ],
+              [
+                37.17,
+                39.75
+              ],
+              [
+                76.25,
+                78.708
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "losses": [
+    {
+      "id": "role.Victor.A_stable.stable",
+      "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
+      "lost": 3.75,
+      "source_intervals": [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          37.17,
+          39.75
+        ],
+        [
+          76.25,
+          78.708
+        ]
+      ],
+      "output_intervals": [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          37.17,
+          39.75
+        ],
+        [
+          76.25,
+          78.708
+        ]
+      ]
+    },
+    {
+      "id": "role.Victor.A_stable.distinct",
+      "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+      "lost": 3.75,
+      "source_intervals": [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          37.17,
+          39.75
+        ],
+        [
+          76.25,
+          78.708
+        ]
+      ],
+      "output_intervals": [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          37.17,
+          39.75
+        ],
+        [
+          76.25,
+          78.708
+        ]
+      ]
+    },
+    {
+      "id": "H05.A_content.relation",
+      "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
+      "lost": 0.20833333333333334,
+      "source_intervals": [
+        [
+          61.41,
+          63.542
+        ],
+        [
+          64.0,
+          65.125
+        ],
+        [
+          65.825,
+          66.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          61.41,
+          63.542
+        ],
+        [
+          64.0,
+          65.125
+        ],
+        [
+          65.825,
+          66.5
+        ]
+      ]
+    },
+    {
+      "id": "S004.E_meaning.proposition",
+      "reason": "英文转录保留了源命题，但因后续事件映射完全错乱，破坏了整体叙事逻辑。",
+      "lost": 0.125,
+      "source_intervals": [
+        [
+          9.813,
+          11.5
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S004.E_meaning.intent",
+      "reason": "源句是惊讶发现对方真实身份，并非温和劝说；语气急促且带确信感。",
+      "lost": 0.125,
+      "source_intervals": [
+        [
+          9.813,
+          11.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          9.46,
+          10.22
+        ]
+      ]
+    },
+    {
+      "id": "S020.E_meaning.intent",
+      "reason": "源句实为请求给一分钟，笔记误判为否定挽回局面。",
+      "lost": 0.125,
+      "source_intervals": [
+        [
+          65.825,
+          66.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          63.81,
+          66.27
+        ]
+      ]
+    },
+    {
+      "id": "S004.E_events.window",
+      "reason": "源句为You are Frank，提交却将其错配至下一句羊的台词。",
+      "lost": 0.08333333333333333,
+      "source_intervals": [
+        [
+          9.813,
+          11.5
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S020.E_events.occurrence",
+      "reason": "源事件被合并入前一事件窗口，未作为独立条目单独记录呈现。",
+      "lost": 0.08333333333333333,
+      "source_intervals": [
+        [
+          65.825,
+          66.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          63.81,
+          66.27
+        ]
+      ]
+    },
+    {
+      "id": "S020.E_events.window",
+      "reason": "提交窗口将原属不同事件的台词错误合并，导致时间轴错置。",
+      "lost": 0.08333333333333333,
+      "source_intervals": [
+        [
+          63.81,
+          66.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          63.81,
+          66.27
+        ]
+      ]
+    },
+    {
+      "id": "S002.E_roles.source_role",
+      "reason": "说话人应为绵羊弗兰克，但提交标记为维克托。",
+      "lost": 0.06250000000000001,
+      "source_intervals": [
+        [
+          4.0,
+          6.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          4.34,
+          4.72
+        ]
+      ]
+    },
+    {
+      "id": "S021.E_roles.source_role",
+      "reason": "源画面为黑脸羊说话，提交却标为红发男子维克托。",
+      "lost": 0.06250000000000001,
+      "source_intervals": [
+        [
+          66.583,
+          69.27
+        ]
+      ],
+      "output_intervals": [
+        [
+          66.61,
+          69.19
+        ]
+      ]
+    },
+    {
+      "id": "S023.E_roles.source_role",
+      "reason": "源音频中该句由弗兰克说出，提交错误地将其标记为维克托。",
+      "lost": 0.06250000000000001,
+      "source_intervals": [
+        [
+          74.12,
+          76.17
+        ]
+      ],
+      "output_intervals": [
+        [
+          72.33,
+          75.41
+        ]
+      ]
+    },
+    {
+      "id": "S002.V_display.sync",
+      "reason": "源画面为维克托张嘴，但输出中文配音却由弗兰克音色说出你好，角色与口型严重不符。",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          4.0,
+          6.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          4.34,
+          4.72
+        ]
+      ]
+    },
+    {
+      "id": "S004.V_display.sync",
+      "reason": "源视频该时段为画外音无可见嘴部动作，输出却出现对应中文配音及字幕。",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          9.813,
+          11.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          9.46,
+          10.22
+        ]
+      ]
+    },
+    {
+      "id": "S006.V_display.safe_area",
+      "reason": "影院版中文字幕横压在弗兰克张开的嘴上，遮住部分口型",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          18.6,
+          18.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          18.6,
+          18.64
+        ]
+      ]
+    },
+    {
+      "id": "S009.V_display.safe_area",
+      "reason": "切到羊脸近景后，底部中文行压住羊嘴，遮挡嘴部表情",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          32.725,
+          32.765
+        ]
+      ],
+      "output_intervals": [
+        [
+          32.725,
+          32.765
+        ]
+      ]
+    },
+    {
+      "id": "S015.V_display.safe_area",
+      "reason": "影院版英文字幕虽在底部且清晰，却横压在羊张开的嘴上",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          53.1,
+          53.14
+        ]
+      ],
+      "output_intervals": [
+        [
+          53.1,
+          53.14
+        ]
+      ]
+    },
+    {
+      "id": "S016.V_display.safe_area",
+      "reason": "影院帧的英文字幕末行压在羊的唇线上，遮住部分嘴部",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          55.515,
+          55.555
+        ]
+      ],
+      "output_intervals": [
+        [
+          55.515,
+          55.555
+        ]
+      ]
+    },
+    {
+      "id": "S018.V_display.safe_area",
+      "reason": "影院字幕压在前景拦阻手势上，遮住部分手指和掌缘",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          62.1,
+          62.14
+        ]
+      ],
+      "output_intervals": [
+        [
+          62.1,
+          62.14
+        ]
+      ]
+    },
+    {
+      "id": "S022.V_display.safe_area",
+      "reason": "影院版英文字幕盖住羊嘴上缘，遮挡部分口部动作",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          71.6,
+          71.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          71.6,
+          71.64
+        ]
+      ]
+    },
+    {
+      "id": "S024.V_display.safe_area",
+      "reason": "院线版英文首行横跨羊的下口部，遮住部分嘴部轮廓",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          76.683,
+          76.723
+        ]
+      ],
+      "output_intervals": [
+        [
+          76.683,
+          76.723
+        ]
+      ]
+    }
+  ]
+}

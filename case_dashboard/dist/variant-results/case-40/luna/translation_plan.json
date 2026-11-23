@@ -1,0 +1,424 @@
+{
+  "events": [
+    {
+      "event_id": "S001",
+      "source_ids": [
+        "S001"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "My name is Victor.",
+      "zh_text": "我叫维克托。",
+      "start": 1.01,
+      "end": 1.97,
+      "visible_speech": true,
+      "delivery_note": "自我介绍，平静清楚。"
+    },
+    {
+      "event_id": "S002",
+      "source_ids": [
+        "S002"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "Hi.",
+      "zh_text": "你好。",
+      "start": 4.34,
+      "end": 4.72,
+      "visible_speech": true,
+      "delivery_note": "短促、礼貌地回应。"
+    },
+    {
+      "event_id": "S003",
+      "source_ids": [
+        "S003"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "And you are? You are Frank.",
+      "zh_text": "你呢？你是弗兰克。",
+      "start": 6.91,
+      "end": 10.22,
+      "visible_speech": true,
+      "delivery_note": "先询问名字，停顿后立即判断并称呼对方。",
+      "audio_segments": [
+        {
+          "start": 6.91,
+          "end": 7.43,
+          "text": "你呢？"
+        },
+        {
+          "start": 9.46,
+          "end": 10.22,
+          "text": "你是弗兰克。"
+        }
+      ]
+    },
+    {
+      "event_id": "S004",
+      "source_ids": [
+        "S004"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "You are so much more than just a sheep, aren't you?",
+      "zh_text": "你可不只是一只羊，对吧？",
+      "start": 12.42,
+      "end": 15.56,
+      "visible_speech": false,
+      "delivery_note": "温和劝说，句末带确认意味。"
+    },
+    {
+      "event_id": "S005",
+      "source_ids": [
+        "S005"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "Yeah.",
+      "zh_text": "是啊。",
+      "start": 16.65,
+      "end": 17.14,
+      "visible_speech": false,
+      "delivery_note": "简短肯定，语气带些怀疑。"
+    },
+    {
+      "event_id": "S006",
+      "source_ids": [
+        "S006"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "How would you know?",
+      "zh_text": "你怎么知道？",
+      "start": 18.48,
+      "end": 19.88,
+      "visible_speech": true,
+      "delivery_note": "质疑而非认同，反问。"
+    },
+    {
+      "event_id": "S007",
+      "source_ids": [
+        "S007"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Look at you, you're an adventurer, Frank.",
+      "zh_text": "看看你，你是个冒险家，弗兰克。",
+      "start": 22.31,
+      "end": 24.37,
+      "visible_speech": true,
+      "delivery_note": "热情地举例，直接称呼弗兰克。"
+    },
+    {
+      "event_id": "S008",
+      "source_ids": [
+        "S008"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Just like me, you're a lone wolf.",
+      "zh_text": "你跟我一样，也是匹独行狼。",
+      "start": 25.65,
+      "end": 28.53,
+      "visible_speech": false,
+      "delivery_note": "把孤狼作为比喻，带一点犹豫。"
+    },
+    {
+      "event_id": "S009",
+      "source_ids": [
+        "S009"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Tell me, does one choose to be alone?",
+      "zh_text": "告诉我，人能选择孤独吗？",
+      "start": 30.43,
+      "end": 33.59,
+      "visible_speech": false,
+      "delivery_note": "沉思式设问，突出是否能选择。"
+    },
+    {
+      "event_id": "S010",
+      "source_ids": [
+        "S010"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "No, one doesn't.",
+      "zh_text": "不，人不会自己选孤独。",
+      "start": 34.59,
+      "end": 35.97,
+      "visible_speech": false,
+      "delivery_note": "明确否定前句的选择。"
+    },
+    {
+      "event_id": "S011",
+      "source_ids": [
+        "S011"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "One doesn't even choose to be a wolf.",
+      "zh_text": "人甚至不能选择当狼。",
+      "start": 36.77,
+      "end": 38.85,
+      "visible_speech": true,
+      "delivery_note": "接續解释，强调 even。"
+    },
+    {
+      "event_id": "S012",
+      "source_ids": [
+        "S012"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Or does one?",
+      "zh_text": "还是说能选？",
+      "start": 41.66,
+      "end": 42.48,
+      "visible_speech": true,
+      "delivery_note": "回转成自我追问，轻微迟疑。"
+    },
+    {
+      "event_id": "S013",
+      "source_ids": [
+        "S013"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "Oh, Mr. Hector.",
+      "zh_text": "哦，赫克托先生。",
+      "start": 47.69,
+      "end": 50.51,
+      "visible_speech": true,
+      "delivery_note": "把对方误称为赫克托先生；Oh 后明显停顿。",
+      "audio_segments": [
+        {
+          "start": 47.69,
+          "end": 48.05,
+          "text": "哦，"
+        },
+        {
+          "start": 49.7,
+          "end": 50.51,
+          "text": "赫克托先生。"
+        }
+      ]
+    },
+    {
+      "event_id": "S014",
+      "source_ids": [
+        "S014"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Victor, Victor.",
+      "zh_text": "维克托，维克托。",
+      "start": 50.89,
+      "end": 51.47,
+      "visible_speech": true,
+      "delivery_note": "立刻打断并重复自己的名字纠正对方。"
+    },
+    {
+      "event_id": "S015",
+      "source_ids": [
+        "S015"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "I don't know what you're on about,",
+      "zh_text": "我不知道你在说什么，",
+      "start": 51.83,
+      "end": 53.31,
+      "visible_speech": true,
+      "delivery_note": "否定自己理解對方的说法。"
+    },
+    {
+      "event_id": "S016",
+      "source_ids": [
+        "S016"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "but I'm just a sheep minding its own business.",
+      "zh_text": "不过我只是一只过自己日子的羊。",
+      "start": 53.49,
+      "end": 57.07,
+      "visible_speech": true,
+      "delivery_note": "转而自我定义，强调只是普通的羊。"
+    },
+    {
+      "event_id": "S017",
+      "source_ids": [
+        "S017"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "And I suggest you do the same.",
+      "zh_text": "我也劝你这么做。",
+      "start": 58.45,
+      "end": 60.61,
+      "visible_speech": false,
+      "delivery_note": "反向建议对方也别管闲事，语气坚定。"
+    },
+    {
+      "event_id": "S018",
+      "source_ids": [
+        "S018"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "No, no, no, no, Frank, wait, wait, wait.",
+      "zh_text": "不，不，不，不，弗兰克，等等，等等，等等！",
+      "start": 61.24,
+      "end": 63.78,
+      "visible_speech": true,
+      "delivery_note": "重复拦阻，急切喊住对方。"
+    },
+    {
+      "event_id": "S019",
+      "source_ids": [
+        "S019"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "No, this is not the way.",
+      "zh_text": "不，这不是办法。",
+      "start": 63.81,
+      "end": 66.27,
+      "visible_speech": true,
+      "delivery_note": "短暂停顿后否定，试图挽回局面。"
+    },
+    {
+      "event_id": "S020",
+      "source_ids": [
+        "S020"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Just give me one minute of your precious time.",
+      "zh_text": "就给我你宝贵的一分钟。",
+      "start": 66.61,
+      "end": 69.19,
+      "visible_speech": true,
+      "delivery_note": "请求对方给一分钟，珍贵一词带说服意味。"
+    },
+    {
+      "event_id": "S021",
+      "source_ids": [
+        "S021"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "Precious time?",
+      "zh_text": "宝贵时间？",
+      "start": 70.89,
+      "end": 71.85,
+      "visible_speech": true,
+      "delivery_note": "反讽式重复对方的措辞。"
+    },
+    {
+      "event_id": "S022",
+      "source_ids": [
+        "S022"
+      ],
+      "type": "speech",
+      "speaker_id": "VICTOR",
+      "speaker_instance": "VICTOR_MALE_01",
+      "voice_id": "F5_VICTOR",
+      "source_text": "Yeah, just give me one minute.",
+      "zh_text": "对，就给我一分钟。",
+      "start": 72.33,
+      "end": 75.41,
+      "visible_speech": false,
+      "delivery_note": "先答应式回应，停顿后再次请求同一分钟。",
+      "audio_segments": [
+        {
+          "start": 72.33,
+          "end": 72.79,
+          "text": "对，"
+        },
+        {
+          "start": 74.21,
+          "end": 75.41,
+          "text": "就给我一分钟。"
+        }
+      ]
+    },
+    {
+      "event_id": "S023",
+      "source_ids": [
+        "S023"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "You would have one more minute,",
+      "zh_text": "你又能多要一分钟，",
+      "start": 76.07,
+      "end": 77.45,
+      "visible_speech": true,
+      "delivery_note": "指出对方还会接着多要时间。"
+    },
+    {
+      "event_id": "S024",
+      "source_ids": [
+        "S024"
+      ],
+      "type": "speech",
+      "speaker_id": "FRANCK",
+      "speaker_instance": "FRANCK_MALE_01",
+      "voice_id": "F5_FRANCK",
+      "source_text": "wouldn't you?",
+      "zh_text": "对吧？",
+      "start": 77.57,
+      "end": 77.95,
+      "visible_speech": true,
+      "delivery_note": "以反问补上句末限定，不改成肯定陈述。"
+    }
+  ]
+}

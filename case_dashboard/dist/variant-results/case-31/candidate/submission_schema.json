@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "file_schemas": {
+    "alignment.json": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "utterance_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "speaker_id": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ]
+              },
+              "start": {
+                "type": "number"
+              },
+              "end": {
+                "type": "number"
+              },
+              "ass_event_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "srt_cue_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "utterance_ids",
+              "speaker_id",
+              "start",
+              "end",
+              "ass_event_ids",
+              "srt_cue_ids"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": true
+    },
+    "rebuild.json": {
+      "type": "object",
+      "properties": {
+        "argv": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "argv"
+      ],
+      "additionalProperties": true
+    }
+  }
+}

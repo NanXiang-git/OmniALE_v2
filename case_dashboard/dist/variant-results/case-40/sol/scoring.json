@@ -1,0 +1,361 @@
+{
+  "rows": [
+    {
+      "id": "E_words",
+      "label": "英文词序列准确性",
+      "score": 7.703703703703704,
+      "maximum": 8.0
+    },
+    {
+      "id": "E_events",
+      "label": "源事件覆盖与粗定位",
+      "score": 3.9999999999999956,
+      "maximum": 4.0
+    },
+    {
+      "id": "E_roles",
+      "label": "源说话人/声音实例归属",
+      "score": 3.0000000000000013,
+      "maximum": 3.0
+    },
+    {
+      "id": "E_meaning",
+      "label": "源语义与关键语气识别",
+      "score": 5.000000000000002,
+      "maximum": 5.0
+    },
+    {
+      "id": "T_meaning",
+      "label": "中文意义准确完整",
+      "score": 4.499999999999999,
+      "maximum": 4.5
+    },
+    {
+      "id": "T_natural",
+      "label": "中文自然度",
+      "score": 3.0000000000000013,
+      "maximum": 3.0
+    },
+    {
+      "id": "T_terms",
+      "label": "术语和称呼一致",
+      "score": 1.4999999999999996,
+      "maximum": 1.5
+    },
+    {
+      "id": "T_style",
+      "label": "语体与语用功能",
+      "score": 1.0,
+      "maximum": 1.0
+    },
+    {
+      "id": "A_identity",
+      "label": "原人物音色与身份保持",
+      "score": 24.999999999999996,
+      "maximum": 25
+    },
+    {
+      "id": "A_stable",
+      "label": "同人物跨段声音一致性",
+      "score": 15.0,
+      "maximum": 15
+    },
+    {
+      "id": "A_prosody",
+      "label": "情绪语气与表演保持",
+      "score": 15.000000000000004,
+      "maximum": 15
+    },
+    {
+      "id": "A_content",
+      "label": "实际中文内容忠实度",
+      "score": 9.791666666666671,
+      "maximum": 10
+    },
+    {
+      "id": "A_quality",
+      "label": "自然度清晰度与双版本混音",
+      "score": 5.000000000000005,
+      "maximum": 5
+    },
+    {
+      "id": "V_frames",
+      "label": "原画面内容与顺序",
+      "score": 0.5999999999999999,
+      "maximum": 0.6
+    },
+    {
+      "id": "V_timeline",
+      "label": "时间线完整性",
+      "score": 0.2,
+      "maximum": 0.2
+    },
+    {
+      "id": "V_display",
+      "label": "声画时机与字幕呈现",
+      "score": 0.18055555555555552,
+      "maximum": 0.2
+    }
+  ],
+  "groups": {
+    "E": {
+      "score": 19.703703703703702,
+      "maximum": 20
+    },
+    "T": {
+      "score": 10.0,
+      "maximum": 10
+    },
+    "A": {
+      "score": 69.79166666666667,
+      "maximum": 70
+    }
+  },
+  "coefficient": 0.9805555555555554,
+  "core": 98.7176660787772,
+  "gates": {
+    "continuity_ledger": {
+      "pass": null,
+      "evidence": {
+        "reason": "字段、事件索引覆盖、最低证据数等公开结构要求均满足。旧失败仅来自每个S都须与私有字幕粗时间窗相交；题面未明确这一精确验收条件，且源时间标注未经校准。因此保留诊断、待源证据核验，不作确定硬门槛失败。跨段语义仍由冻结H类QA评审。",
+        "explicit_structural_contract_passed": true,
+        "structural_issues": [],
+        "private_subtitle_window_diagnostic": [
+          {
+            "challenge_id": "C03",
+            "source_ids_without_private_subtitle_window_overlap": [
+              "S004"
+            ],
+            "submitted_evidence_intervals": [
+              [
+                12.45,
+                15.65
+              ],
+              [
+                16.72,
+                17.27
+              ],
+              [
+                18.7,
+                20.21
+              ]
+            ]
+          }
+        ],
+        "original_automatic_gate": {
+          "pass": false,
+          "evidence": {
+            "passed": false,
+            "valid_records": 7,
+            "expected_records": 8,
+            "issues": [
+              "C03"
+            ]
+          }
+        }
+      }
+    },
+    "critical_H07.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H07.A_content.relation",
+        "answer": "no",
+        "reason": "输出音频缺失原片中“you're...”后的明显停顿犹豫，语流过于连贯。",
+        "source_intervals": [
+          [
+            25.958,
+            28.75
+          ]
+        ],
+        "output_intervals": [
+          [
+            25.9,
+            28.73
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H07.A_content.relation",
+            "answer": "no",
+            "reason": "输出音频缺失原片中“you're...”后的明显停顿犹豫，语流过于连贯。",
+            "source_intervals": [
+              [
+                25.958,
+                28.75
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.9,
+                28.73
+              ]
+            ]
+          },
+          {
+            "id": "H07.A_content.relation",
+            "answer": "no",
+            "reason": "输出音频缺失原片中“you're...”后的明显停顿犹豫。",
+            "source_intervals": [
+              [
+                25.958,
+                28.75
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.9,
+                28.73
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "losses": [
+    {
+      "id": "H07.A_content.relation",
+      "reason": "输出音频缺失原片中“you're...”后的明显停顿犹豫，语流过于连贯。",
+      "lost": 0.20833333333333334,
+      "source_intervals": [
+        [
+          25.958,
+          28.75
+        ]
+      ],
+      "output_intervals": [
+        [
+          25.9,
+          28.73
+        ]
+      ]
+    },
+    {
+      "id": "S006.V_display.safe_area",
+      "reason": "短句字幕清晰且避开人物，后句中文字压住羊嘴，遮挡张嘴动作",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          17.1,
+          17.14
+        ],
+        [
+          18.85,
+          18.89
+        ]
+      ],
+      "output_intervals": [
+        [
+          17.1,
+          17.14
+        ],
+        [
+          18.85,
+          18.89
+        ]
+      ]
+    },
+    {
+      "id": "S008.V_display.safe_area",
+      "reason": "影院版首句中文字幕压住羊嘴，遮挡反应镜头中的嘴部表情",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          26.6,
+          28.6
+        ]
+      ],
+      "output_intervals": [
+        [
+          26.6,
+          28.6
+        ]
+      ]
+    },
+    {
+      "id": "S013.V_display.safe_area",
+      "reason": "影院字幕位于底部且清晰，但英文行压住羊张嘴时的上唇边缘",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          49.515,
+          49.516
+        ]
+      ],
+      "output_intervals": [
+        [
+          49.515,
+          49.516
+        ]
+      ]
+    },
+    {
+      "id": "S015.V_display.safe_area",
+      "reason": "影院版切回羊脸特写时，底部英文字幕遮住张开的羊嘴。",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          53.1,
+          53.14
+        ]
+      ],
+      "output_intervals": [
+        [
+          53.1,
+          53.14
+        ]
+      ]
+    },
+    {
+      "id": "S016.V_display.safe_area",
+      "reason": "影院帧中底部英文第二行叠在羊的张嘴区域，遮住部分嘴形",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          53.515,
+          55.515
+        ]
+      ],
+      "output_intervals": [
+        [
+          53.515,
+          55.515
+        ]
+      ]
+    },
+    {
+      "id": "S017.V_display.safe_area",
+      "reason": "切回弗兰克的脸时，底部英文末尾压住了羊嘴右侧轮廓",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          60.6,
+          60.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          60.6,
+          60.64
+        ]
+      ]
+    },
+    {
+      "id": "S018.V_display.safe_area",
+      "reason": "影院版四行字幕压住前景抬手手势的拇指根部和掌面",
+      "lost": 0.002777777777777778,
+      "source_intervals": [
+        [
+          61.41,
+          63.542
+        ]
+      ],
+      "output_intervals": [
+        [
+          62.1,
+          62.101
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "voices": [
+    {
+      "speaker_id": "victor",
+      "voice_id": "f5_victor",
+      "method": "由本题源片对话条件化的离线 F5-TTS v1 Base 跨语言生成，使用 Vocos。对选中的普通话分句进行节拍编辑和动态处理。",
+      "reference_intervals": [
+        [
+          1.38,
+          4.76
+        ],
+        [
+          34.96,
+          38.97
+        ],
+        [
+          66.4,
+          69.76
+        ]
+      ],
+      "reference_source": "original.wav 的中置声道减去对齐的 M&E 估计背景。"
+    },
+    {
+      "speaker_id": "franck",
+      "voice_id": "f5_franck",
+      "method": "由本题源片对话条件化的离线 F5-TTS v1 Base 跨语言生成，使用 Vocos。另从本题原声差分保留一次无词干笑。",
+      "reference_intervals": [
+        [
+          51.84,
+          57.11
+        ],
+        [
+          72.43,
+          73.17
+        ]
+      ],
+      "reference_source": "original.wav 的中置声道减去对齐的 M&E 估计背景。",
+      "non_speech_retained_intervals": [
+        [
+          72.43,
+          73.17
+        ]
+      ]
+    }
+  ]
+}

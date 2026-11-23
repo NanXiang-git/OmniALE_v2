@@ -1,0 +1,137 @@
+{
+  "version": "2.0-hard",
+  "duration": 79,
+  "challenges": [
+    {
+      "id": "C01",
+      "source_ids": [
+        "S009",
+        "S010",
+        "S011",
+        "S012"
+      ],
+      "requirement": "分别记录围绕选择与独处的设问、否定及转折，保留作用范围。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C02",
+      "source_ids": [
+        "S013",
+        "S014"
+      ],
+      "requirement": "核对人名称呼、打断和立即纠正，区分实际说话者。",
+      "minimum_evidence_intervals": 1
+    },
+    {
+      "id": "C03",
+      "source_ids": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "requirement": "核对身份信息、反问及反应，保持问答归属和语气。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C04",
+      "source_ids": [
+        "S015",
+        "S016",
+        "S017"
+      ],
+      "requirement": "保留先否定后自述再反向建议的关系。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C05",
+      "source_ids": [
+        "S018",
+        "S019",
+        "S020"
+      ],
+      "requirement": "保留重复拦阻、犹豫及断开的同一句，不替角色补完未说内容。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C06",
+      "source_ids": [
+        "S021",
+        "S022",
+        "S023"
+      ],
+      "requirement": "核对同一时长请求的重复、对方的反讽，以及实际可听的反应。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C07",
+      "source_ids": [
+        "S007",
+        "S008"
+      ],
+      "requirement": "保留给对方的比喻、相比对象和犹豫，不当作字面身份陈述。",
+      "minimum_evidence_intervals": 2
+    },
+    {
+      "id": "C08",
+      "source_ids": [
+        "S021",
+        "S023",
+        "S024"
+      ],
+      "requirement": "保持所请求的同一时长、问答关系，确认手机版也能听清。",
+      "minimum_evidence_intervals": 2
+    }
+  ],
+  "audio_contract": {
+    "sample_rate": 48000,
+    "stereo_tracks": [
+      "mix.wav",
+      "effects_track.wav",
+      "all speaker wav files"
+    ],
+    "mono_tracks": [
+      "mobile_mix.wav"
+    ],
+    "duration_tolerance_seconds": 0.08,
+    "effects_gain_db_range": [
+      -12,
+      0
+    ],
+    "effects_formula": "effects_track = input/music_effects.wav * 10 ** (effects_gain_db / 20); no shifting, ducking, EQ, splicing, time stretching, or replacement",
+    "mix_formula": "mix.wav = effects_track.wav + sum(all final-gain speaker tracks); no post-sum processing",
+    "maximum_relative_waveform_error": 0.02,
+    "cinema_integrated_lufs": [
+      -17,
+      -15
+    ],
+    "cinema_true_peak_max_dbtp": -1,
+    "mobile_integrated_lufs": [
+      -19,
+      -17
+    ],
+    "mobile_true_peak_max_dbtp": -2,
+    "mobile_formula": "0.5*(mix.left+mix.right), followed only by declared global gain and peak limiter; no content edits",
+    "mobile_ffmpeg_filter": "pan=mono|c0=0.5*c0+0.5*c1,volume={gain_db}dB,alimiter=limit=0.7943282347:attack=5:release=50:level=0:latency=1"
+  },
+  "subtitle_contract": {
+    "max_lines_per_language": 2,
+    "zh_max_chars_per_line": 18,
+    "en_max_chars_per_line": 42,
+    "max_zh_chars_per_second": 10,
+    "regular_min_duration": 0.4,
+    "max_duration": 7,
+    "screen_text_may_overlap_speech": true,
+    "note": "Unicode non-whitespace code points; punctuation counts; speech cues must intersect corresponding plan event. Very short original interjections may last 0.2-0.4 s if source duration is similarly short and documented.",
+    "burn_in_required": true,
+    "burn_in_region": "bottom 32 percent of frame; both ZH and EN visible"
+  },
+  "reference_policy": "S001-S024 identify distinct source occurrences. Preserve meaning, repetition, and source-backed nonverbal vocalizations.",
+  "delivery_budget": {
+    "suggested_minutes": 180,
+    "cpu_cores": 8,
+    "ram_gb": 32,
+    "optional_gpu_gb": 24,
+    "workspace_gb": 30
+  },
+  "minimum_roles": 2
+}

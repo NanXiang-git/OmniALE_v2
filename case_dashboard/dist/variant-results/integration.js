@@ -1,10 +1,12 @@
 (() => {
   'use strict';
   const report = window.OMNIALE_VARIANT_RESULTS;
+  const caseData = window.OMNIALE_VARIANT_CASES;
+  const registry = window.OMNIALE_DATA;
   const previous = window.OmniResults;
   const route = '#results/variants';
   const navigation = document.querySelector('[data-variant-nav]');
-  if (!report || !previous || !navigation) return;
+  if (!report || !caseData || !registry || !previous || !navigation) return;
 
   const cases = [
     {
@@ -29,7 +31,7 @@
     },
     {
       id: 46, title: '口述影像', original: 'task-14', source: '《Sprite Fright》· 81 秒片段',
-      method: '按原题权重合并叙事核心与交付评分，并应用关键揭示等封顶规则。',
+      method: '总分 = 视觉理解分 ×（有效交付分 ÷ 65），再应用硬门槛封顶。',
       finding: 'Sol 低于 85 分通过线。Luna 触发关键揭示规则。',
       notes: [
         '人物共同视线、瓢虫段的队形和动线，以及树洞处的动作衔接交代不完整。',
@@ -41,6 +43,65 @@
   const escape = value => String(value).replace(/[&<>"']/g, char =>
     ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[char]);
   const viewingVariants = () => location.hash === route;
+  const caseKey = id => 'task-variant-' + id;
+  const pretty = value => Number(value.toFixed(4)).toString();
+  const mediaLink = (url, label, attributes = '') => `<a href="${escape(url)}" ${attributes}>${escape(label)}</a>`;
+  const reportRoot = (id, alias) => 'variant-results/case-' + id + '/' + alias + '/';
+  const scoringLabels = {
+    timing: '字幕时间对齐', speakers: '说话人归属', overlap: '重叠对白', text: '文字准确度',
+    format: '交付格式', consistency: '预览与字幕一致性', rebuild: '离线重建', readability: '烧录字幕可读性'
+  };
+  const delivery = {
+    31: ['带说话人标识的 ASS、SRT 字幕', '烧录字幕预览视频', '对轴记录、阅读说明和离线重建'],
+    40: ['普通话译配成片、双语字幕和转录', '分角色声轨、电影与手机混音', '译配计划、连续性记录和离线重建'],
+    46: ['普通话口述影像成片', '独立原声、旁白与混音', 'VTT、口述计划、播放器和离线重建']
+  };
+  const milestones = {
+    31: {
+      sol: ['抽取会议画面定位镜头与说话人', '用本地 Whisper 复扫发言窗口', '对逐词稿做强制对齐', '修订时间轴及重复内容', '解码比较交付预览与原声'],
+      luna: ['探测原始音频规格', '用本地 Whisper 听写并定位发言', '核对指定发言的对齐记录', '比较 ASS、SRT 和交付映射', '执行离线重建命令']
+    },
+    40: {
+      sol: ['抽取末段原声和角色参考', '检查本地 F5-TTS 试生成记录', '调整本地语音生成脚本', '检查预览渲染', '执行离线重建', '用本地 Whisper 复核译配'],
+      luna: ['抽帧检查人物动作及口型', '分析对白残差声轨', '测试低内存 F5-TTS 生成', '检查译配工程及离线合成入口', '检查成片的口型与字幕帧', '剪出片段复核最终画面']
+    },
+    46: {
+      sol: ['用本地 Whisper 定位原片对白', '以 Piper 生成逐句旁白', '加密抽帧核对后段动作', '编写音轨与成片的重建脚本', '编写可开关旁白的播放器', '校验交付文件和音画'],
+      luna: ['按秒抽帧梳理原片镜头', '继续检查林间段的动作', '合成瓢虫段旁白', '生成开场红帽旁白', '装配播放器和交付文件', '执行离线重建命令']
+    }
+  };
+  const allRuns = id => report.runs.filter(run => run.case === id);
+  const runtimeNote = '> 本轮使用 Codex CLI、xhigh、Linux 工作区，作答不限时。离线重建仍按原题的验收时限执行。下文保留封存题面。看板内的音视频为完整时间轴的浏览器转码。';
+
+  let sequence = Math.max(...registry.cases.map(item => Number(item.seq) || 0));
+  for (const item of cases) {
+    const key = caseKey(item.id);
+    const source = caseData[item.id];
+    const original = registry.cases.find(entry => entry.key === item.original);
+    const runs = allRuns(item.id);
+    const [first] = runs;
+    const files = source.files.map(file => file.kind === 'video' ? {
+      ...file, poster: 'variant-results/case-' + item.id + '/poster.jpg'
+    } : file);
+    registry.cases.push({
+      key, resultKey: key, caseId: item.id, seq: ++sequence, status: 'packaged',
+      category: original?.category || '音视频制作', versionLabel: '换素材变式',
+      title: item.title + ' · 换素材变式', summary: item.source + '。' + item.finding,
+      main: 'input/source.mp4', poster: 'variant-results/case-' + item.id + '/poster.jpg',
+      directory: 'variant-results/case-' + item.id + '/candidate',
+      task: runtimeNote + '\n\n' + source.task + '\n\n## 素材来源\n\n' + source.credit,
+      contract: (source.task.match(/^## (?:交付|必交文件)[^\n]*\n[\s\S]*?(?=^## |(?![\s\S]))/m)?.[0] || source.task)
+        + '\n\n## 评分\n\n' + item.method,
+      files, delivery: delivery[item.id], resultCount: runs.length,
+      resultSummary: runs.map(run => modelNames[run.model] + ' ' + run.score).join(' · ')
+    });
+    const toResult = run => ({
+      model: run.model, effort: report.solver_effort, total: run.score, verified: run.score,
+      accepted: run.passed, seconds: run.elapsed_seconds, gradeStatus: 'complete', artifacts: [], reports: [],
+      integrity: {passed: true}
+    });
+    window.OMNIALE_RESULTS[key] = {...toResult(first), comparisons: runs.slice(1).map(toResult)};
+  }
 
   function duration(value) {
     const seconds = Math.round(value);
@@ -50,7 +111,7 @@
   }
 
   function comparison(item) {
-    const runs = report.runs.filter(run => run.case === item.id);
+    const runs = allRuns(item.id);
     return `<article class="variant-case" data-variant-case="${item.id}">
       <div class="variant-case-head">
         <div><p class="variant-case-id">Case ${item.id}</p><h2>${item.title}</h2></div>
@@ -77,7 +138,7 @@
         `).join('')}
         ${item.review ? `<p class="variant-meta">${escape(item.review)}</p>` : ''}
       </details>
-      <a class="variant-original" href="#${item.original}/results">查看原题评分 <span aria-hidden="true">↗</span></a>
+      <a class="button primary" href="#${caseKey(item.id)}/task">查看变式题包 <span aria-hidden="true">↗</span></a>
     </article>`;
   }
 
@@ -131,7 +192,91 @@
     else navigation.removeAttribute('aria-current');
   }
 
-  window.OmniResults = Object.freeze({...previous, overview});
+  function answer(model, root) {
+    return `<h3>封存答卷</h3>
+      <video class="variant-video" controls playsinline preload="metadata" src="${escape(model.video.url)}"></video>
+      <p class="result-note">完整成片的浏览器转码。${mediaLink(model.video.url, '下载视频', 'download')} · ${mediaLink(root + 'video_provenance.json', '视频校验记录', 'download')}</p>
+      <div class="variant-answer-files">${model.files.map(file => mediaLink(file.url, file.name, 'download')).join('')}</div>`;
+  }
+
+  function process(model, item, alias, root) {
+    return `<h3>作答过程</h3><ol class="variant-timeline">
+      ${model.milestones.map((step, index) => `<li><strong>${milestones[item.id][alias][index]}</strong>
+        <small>${escape(step.id)}${step.tools?.length ? ' · ' + escape(step.tools.join('、')) : ''}
+        ${step.exit_code == null ? '' : ' · 退出码 ' + step.exit_code}</small></li>`).join('')}
+      </ol><p class="result-note">按 Codex 日志中的工具调用顺序整理。共记录 ${model.actions} 次已结束的工具操作或文件修改。</p>
+      <p>${mediaLink(root + 'process.json', '下载作答操作记录', 'download')}</p>`;
+  }
+
+  function breakdown(model, item, run, note, root) {
+    const score = model.scoring;
+    const isDub = item.id === 40;
+    const isDescription = item.id === 46;
+    let computation = '';
+    if (isDub) {
+      computation = ['E', 'T', 'A'].map(key => key + ' ' + pretty(score.groups[key].score) + ' / ' + score.groups[key].maximum)
+        .join(' · ') + ' · V ' + pretty(score.coefficient);
+    } else if (isDescription) {
+      computation = '视觉理解 ' + pretty(score.core) + ' / 100 · 交付 ' + pretty(score.delivery) + ' / '
+        + score.delivery_max + ' · 交付系数 ' + pretty(score.coefficient)
+        + ' · 封顶前 ' + pretty(score.raw) + ' · 封顶 ' + score.cap;
+    }
+    return `<h3>分数构成</h3><p>${escape(item.method)}</p>${computation ? `<p class="variant-calculation">${computation}</p>` : ''}
+      <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">评分项</th><th scope="col">得分</th><th scope="col">满分</th></tr></thead>
+        <tbody>${score.rows.map(row => `<tr><th scope="row">${escape(row.label || scoringLabels[row.id] || row.id)}</th>
+          <td>${pretty(row.score)}</td><td>${pretty(row.maximum)}</td></tr>`).join('')}</tbody>
+        <tfoot><tr><th scope="row">最终总分</th><td><strong>${run.score}</strong></td><td>100</td></tr></tfoot>
+      </table></div>
+      <h3>验收与扣分</h3><p>通过线 ${run.threshold} 分 · ${run.passed ? '通过' : '未通过'}。${escape(note)}</p>
+      ${run.failed_gates.length ? `<p class="variant-gates">${run.failed_gates.map(gate => `<code>${escape(gate)}</code>`).join(' ')}</p>` : ''}
+      ${item.review ? `<p class="result-note">${escape(item.review)}</p>` : ''}
+      <p>${mediaLink(root + 'scoring.json', '下载分项评分记录', 'download')}</p>`;
+  }
+
+  function render(entry, record, target) {
+    const item = cases.find(test => caseKey(test.id) === entry.key);
+    if (!item) return previous.render(entry, record, target);
+    const source = caseData[item.id];
+    const runs = allRuns(item.id);
+    let alias = 'sol';
+    let selected = 'answer';
+    const tabs = [['answer', '答卷与成片'], ['process', '作答过程'], ['scores', '分数构成']];
+    target.innerHTML = `<section class="variant-case-results" data-variant-results="${item.id}">
+      <h2 class="result-section-title">模型作答对照</h2>
+      <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">模型</th><th scope="col">用时</th><th scope="col">总分</th><th scope="col">验收</th></tr></thead>
+      <tbody>${runs.map((run, index) => `<tr><td><button type="button" class="button" data-variant-model="${index ? 'luna' : 'sol'}">${modelNames[run.model]}</button></td><td>${duration(run.elapsed_seconds)}</td><td><b>${run.score}</b> / 100</td><td>${run.passed ? '通过' : '未通过'}</td></tr>`).join('')}</tbody></table></div>
+      <p class="result-note">Codex ${escape(report.codex)} · ${escape(report.solver_effort)} · 不限时。视觉裁判 GPT‑6.2 Sol，听觉裁判 ${escape(report.audio_judge)}。</p>
+      <div class="variant-result-nav" role="group" aria-label="作答结果分区">${tabs.map(([id, label]) => `<button type="button" class="button" data-variant-panel="${id}">${label}</button>`).join('')}</div>
+      <div class="variant-result-content"></div>
+      <p class="variant-result-links"><a href="#${item.original}/results">原题评分 ↗</a> <a href="${route}">三道变式汇总 ↗</a></p>
+    </section>`;
+    const content = target.querySelector('.variant-result-content');
+    function update() {
+      const index = alias === 'sol' ? 0 : 1;
+      const model = source.models[alias];
+      const root = reportRoot(item.id, alias);
+      target.querySelectorAll('[data-variant-model]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.variantModel === alias));
+      });
+      target.querySelectorAll('[data-variant-panel]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.variantPanel === selected));
+      });
+      if (selected === 'process') content.innerHTML = process(model, item, alias, root);
+      else if (selected === 'scores') content.innerHTML = breakdown(model, item, runs[index], item.notes[index], root);
+      else content.innerHTML = answer(model, root);
+    }
+    target.querySelectorAll('[data-variant-model]').forEach(button => button.addEventListener('click', () => {
+      alias = button.dataset.variantModel;
+      update();
+    }));
+    target.querySelectorAll('[data-variant-panel]').forEach(button => button.addEventListener('click', () => {
+      selected = button.dataset.variantPanel;
+      update();
+    }));
+    update();
+  }
+
+  window.OmniResults = Object.freeze({...previous, overview, render});
   window.addEventListener('hashchange', syncNavigation);
   syncNavigation();
 })();

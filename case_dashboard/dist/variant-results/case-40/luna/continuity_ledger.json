@@ -1,0 +1,246 @@
+{
+  "decisions": [
+    {
+      "challenge_id": "C01",
+      "source_ids": [
+        "S009",
+        "S010",
+        "S011",
+        "S012"
+      ],
+      "event_indices": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_evidence": [
+        {
+          "start": 30.38,
+          "end": 33.6,
+          "observation": "维克托以 Tell me 开场，提出是否能选择独处的疑问。"
+        },
+        {
+          "start": 34.59,
+          "end": 38.9,
+          "observation": "先说 No, one doesn't，再补充甚至不能选择成为狼；两个否定作用范围不同。"
+        },
+        {
+          "start": 41.66,
+          "end": 42.5,
+          "observation": "维克托在停顿后用 Or does one? 回问，语气从断言转为迟疑。"
+        }
+      ],
+      "decision": "四个事件分开保留设问、否定、狼的补充和句末回问。中文分别保留‘选择孤独’、‘不选择’、‘甚至不能选择当狼’及最后的反问。",
+      "alternative_rejected": "不把 No, one doesn't 改成‘不会孤独’，也不把 Or does one? 合并成前句肯定結論；那會反轉否定方向並丟掉回問。"
+    },
+    {
+      "challenge_id": "C02",
+      "source_ids": [
+        "S013",
+        "S014"
+      ],
+      "event_indices": [
+        12,
+        13
+      ],
+      "source_evidence": [
+        {
+          "start": 47.56,
+          "end": 50.56,
+          "observation": "弗兰克在羊的近景中先说 Oh, Mr.，停顿后误称 Hector。"
+        },
+        {
+          "start": 50.88,
+          "end": 51.52,
+          "observation": "维克托在自己的近景中重复 Victor, Victor，立即纠正名字。"
+        }
+      ],
+      "decision": "保留弗兰克的误称‘赫克托先生’，并把维克托的两次纠正单独交给维克托声线；中文配音也留出 Oh 后的停顿。",
+      "alternative_rejected": "不把两句都交给一个人，也不把 Hector 静默改成 Victor；这样会抹掉误称、打断和即时纠正。"
+    },
+    {
+      "challenge_id": "C03",
+      "source_ids": [
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "event_indices": [
+        3,
+        4,
+        5
+      ],
+      "source_evidence": [
+        {
+          "start": 12.42,
+          "end": 15.56,
+          "observation": "維克托把弗兰克描述为不只是羊，并以 aren't you? 寻求确认。"
+        },
+        {
+          "start": 16.65,
+          "end": 19.88,
+          "observation": "弗兰克先短答 Yeah，稍停後追问 How would you know?。"
+        }
+      ],
+      "decision": "维克托的身份判断与弗兰克的肯定、反问按三条事件处理；把简短 Yeah 保留为实际语音，不将反问归给维克托。",
+      "alternative_rejected": "不把 Yeah 当成认同维克托整套推断，也不因画面切到聆听者而交换反问说话者。"
+    },
+    {
+      "challenge_id": "C04",
+      "source_ids": [
+        "S015",
+        "S016",
+        "S017"
+      ],
+      "event_indices": [
+        14,
+        15,
+        16
+      ],
+      "source_evidence": [
+        {
+          "start": 51.83,
+          "end": 53.31,
+          "observation": "弗兰克说不知道维克托在说什么，否定只作用于理解对方的话。"
+        },
+        {
+          "start": 53.49,
+          "end": 57.07,
+          "observation": "停顿后以 but 转入‘我只是一只羊’，并说它只管自己的事。"
+        },
+        {
+          "start": 58.45,
+          "end": 60.61,
+          "observation": "弗兰克反向建议维克托也这样做。"
+        }
+      ],
+      "decision": "把‘不知道你在说什么’、but 后的自我描述和‘我也劝你这么做’分开，保留否定轉折及人称方向。",
+      "alternative_rejected": "不把 I don't know 译成不认识维克托，也不把 I suggest you do the same 误配成维克托劝羊。"
+    },
+    {
+      "challenge_id": "C05",
+      "source_ids": [
+        "S018",
+        "S019",
+        "S020"
+      ],
+      "event_indices": [
+        17,
+        18,
+        19
+      ],
+      "source_evidence": [
+        {
+          "start": 61.33,
+          "end": 63.17,
+          "observation": "维克托连续喊 No 四次，再叫弗兰克停下，wait 也重复三次。"
+        },
+        {
+          "start": 63.81,
+          "end": 66.27,
+          "observation": "短停顿后维克托说 No, this is not the way。"
+        },
+        {
+          "start": 66.61,
+          "end": 69.19,
+          "observation": "随后才提出占用一分钟的请求，句子实际说完。"
+        }
+      ],
+      "decision": "重复的拦阻、否定句和一分钟请求按原顺序译配；没有续写未说出的内容，保留弗兰克名字及等待请求。",
+      "alternative_rejected": "不把四个 No 压成一个，不把 wait 重复删掉，也不将后续的一分钟请求提前接进上一句。"
+    },
+    {
+      "challenge_id": "C06",
+      "source_ids": [
+        "S021",
+        "S022",
+        "S023"
+      ],
+      "event_indices": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "source_evidence": [
+        {
+          "start": 66.61,
+          "end": 69.19,
+          "observation": "维克托第一次提出只要一分钟的请求，明确提到 precious time。"
+        },
+        {
+          "start": 70.89,
+          "end": 71.85,
+          "observation": "弗兰克疑问式重复 precious time，构成反讽回应。"
+        },
+        {
+          "start": 72.33,
+          "end": 75.41,
+          "observation": "维克托先答 Yeah，停顿后再重复同样的一分钟请求。"
+        }
+      ],
+      "decision": "保留‘宝贵时间？’的反讽、对方先说‘对’再重复一分钟请求，以及后续反问；没有将一分钟改成其他时长。",
+      "alternative_rejected": "不把 precious time? 当作中性复述，也不漏掉停顿后的重复请求或把 one minute 改成泛指‘一会儿’。"
+    },
+    {
+      "challenge_id": "C07",
+      "source_ids": [
+        "S007",
+        "S008"
+      ],
+      "event_indices": [
+        6,
+        7
+      ],
+      "source_evidence": [
+        {
+          "start": 22.31,
+          "end": 24.37,
+          "observation": "维克托称弗兰克为冒险家，并直接叫出 Frank。"
+        },
+        {
+          "start": 25.65,
+          "end": 28.53,
+          "observation": "维克托以 Just like me 建立比较，随后称对方 lone wolf。"
+        }
+      ],
+      "decision": "中文保留冒险家、弗兰克称呼、‘跟我一样’的比较关系，以及‘独行狼’比喻，不当作字面身份。",
+      "alternative_rejected": "不把 lone wolf 译成动物身份，也不删掉 Just like me 的比较对象。"
+    },
+    {
+      "challenge_id": "C08",
+      "source_ids": [
+        "S021",
+        "S023",
+        "S024"
+      ],
+      "event_indices": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "source_evidence": [
+        {
+          "start": 66.61,
+          "end": 69.19,
+          "observation": "维克托请求占用对方宝贵的一分钟。"
+        },
+        {
+          "start": 72.33,
+          "end": 75.41,
+          "observation": "维克托确认后再次请求同一分钟。"
+        },
+        {
+          "start": 76.07,
+          "end": 77.95,
+          "observation": "弗兰克用 one more minute 及 wouldn't you? 反问对方是否还会再多要一分钟。"
+        }
+      ],
+      "decision": "一分钟在两次请求和弗兰克的句末反问中保持一致；手机混音按声明的单声道参考链生成，并单独实测响度和峰值。",
+      "alternative_rejected": "不把最后一句改成‘你还有一分钟’的状态陈述，也不以影院版可懂代替手机单声道检查。"
+    }
+  ]
+}
