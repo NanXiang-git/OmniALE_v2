@@ -20,13 +20,31 @@ h2{font-size:clamp(25px,3vw,36px);line-height:1.18;margin:6px 0 12px}h3{margin:2
 <nav aria-label="跳转到变式"><div class="wrap"><a href="#case26">Case26 音画修复</a><a href="#case10">Case10 手语字幕</a><a href="#case07">Case07 导播抠像</a></div></nav>
 <main class="wrap">
 <section id="case26" aria-labelledby="case26-title">
-<div class="sectionhead"><div><span class="label">CASE 26</span><h2 id="case26-title">厨房备菜音画修复</h2></div><span class="pill pending">听评有分歧</span></div>
+<div class="sectionhead"><div><span class="label">CASE 26</span><h2 id="case26-title">《Spring》电影原声音画修复</h2></div><span class="pill pending">正式分待核</span></div>
+<p class="muted">Blender Studio 短片 05:16–05:42 的连续 26 秒，含同段原配乐与音效。沿用强画面损伤、强音频损伤和视觉 70 / 音频 30 的评分合同。</p>
+<div class="metrics"><div class="metric"><strong>46.72 / 70</strong><span>视觉评定</span></div><div class="metric"><strong>8.87 / 24</strong><span>音频自动项</span></div><div class="metric"><strong>61.58 / 100</strong><span>总分上限</span></div></div>
+<p class="muted">GPT-6.2-sol / xhigh / 不限时 · 用时 28 分 47 秒。画面四段 PSNR 提升 12.69–16.33 dB，音频四段 SNR 改善 2.71–3.20 dB。</p>
+<p class="note">Qwen 听评通过相同音频对照，但在调换顺序后仍无法稳定区分干净音轨与重损伤音轨。按原规则保留 6 分听评待核，正式总分留空。</p><p class="note">即使听评补满，音频最高 14.87/30，低于音频 18 分的通过门槛。</p>
+<details open><summary>播放受损输入与修复成片</summary><div class="figure">
+<figure><video controls playsinline preload="none" poster="case26-spring-input-detail.jpg" src="case26-spring-damaged.mp4" style="width:100%"></video><figcaption>受损输入</figcaption></figure>
+<figure><video controls playsinline preload="none" poster="case26-spring-output-detail.jpg" src="case26-spring-restored.mp4" style="width:100%"></video><figcaption>模型修复</figcaption></figure></div></details>
+<details><summary>同帧画面对照</summary><h3>人物与发光道具 · 8.75 秒</h3>
+<div class="figure"><figure><img src="case26-spring-input-detail.jpg" alt="人物与发光道具受损输入"><figcaption>受损输入</figcaption></figure>
+<figure><img src="case26-spring-output-detail.jpg" alt="人物与发光道具修复画面"><figcaption>模型修复</figcaption></figure></div>
+<h3>林地远景 · 14.50 秒</h3>
+<div class="figure"><figure><img src="case26-spring-input-forest.jpg" alt="林地远景受损输入"><figcaption>受损输入</figcaption></figure>
+<figure><img src="case26-spring-output-forest.jpg" alt="林地远景修复画面"><figcaption>模型修复</figcaption></figure></div></details>
+<details><summary>对照与评分口径</summary><p>干净对照通过硬门槛，视觉自动项为 60/60，音频自动项为 24/24。模型答卷的原始视觉自动项为 55.93/60，正式视觉分沿用原题 70 分换算。</p></details>
+<p class="muted">《Spring》（2019）© Blender Foundation。导演 Andy Goralczyk，配乐 Torin Borrowdale，声音 Sander Houtman。片段经居中裁切、加入音画损伤和模型修复。 <a href="https://studio.blender.org/projects/spring/pages/about/">官方片源与署名</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+<details><summary>厨房备菜版历史结果</summary>
+<div class="sectionhead"><div><span class="label">CASE 26</span><h3 id="case26-kitchen-title">厨房备菜音画修复</h3></div><span class="pill pending">听评有分歧</span></div>
 <p class="muted">26 秒厨房切豆腐实拍与新编器乐。复用原题强画面、强音频损伤和视觉 70 / 音频 30 的评分合同。</p>
 <div class="metrics"><div class="metric"><strong>39.0464 / 70</strong><span>视觉评定</span></div><div class="metric"><strong>9.3359 / 24</strong><span>音频自动项</span></div><div class="metric"><strong>54.3823 / 100</strong><span>计入听评满分后的总分上限</span></div></div>
 <div class="figure"><figure><img src="case26-input.jpg" alt="受损画面中的木制案板、豆腐和正在操作的手"><figcaption>受损输入 · 14.5 秒</figcaption></figure><figure><img src="case26-output.jpg" alt="同一帧修复后画面"><figcaption>模型修复 · 14.5 秒</figcaption></figure></div>
 <p class="muted">GPT-6.1-sol / high 用时 48 分 25 秒。四段画面 PSNR 提升 9.94–10.47 dB，音频 SNR 提升 5.28–5.96 dB。</p>
 <p class="note">残余杂音的首评和复核分歧使总分留空。画面有明显的木纹、手部与刀身细节损失。</p>
 <details><summary>播放完整修复成片</summary><video controls preload="none" src="case26-restored.mp4" style="display:block;width:min(100%,640px);margin:12px 0"></video></details><details><summary>对照与评分口径</summary><p>干净参考的原始视觉自动项为 60/60，音频自动项为 24/24。盲测提交通过修订层重放与音画一致性的自动硬门槛。音频听评共 6 分，视觉最低通过门槛为 42 分。</p><a href="https://captaincook4d.github.io/captain-cook/">CaptainCook4D 素材来源</a></details>
+</details>
 </section>
 <section id="case10" aria-labelledby="case10-title">
 <div class="sectionhead"><div><span class="label">CASE 10</span><h2 id="case10-title">中国手语双语字幕</h2></div><span class="pill" id="sign-status">读取结果</span></div>
