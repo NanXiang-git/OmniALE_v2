@@ -10,7 +10,7 @@
 
   const cases = [
     {
-      id: 31, title: '多人会议字幕', original: 'task-12', source: 'AMI Meeting Corpus · IS1009a',
+      id: 31, title: '多人会议字幕', original: 'task-12',
       method: '按原题的时间对齐、说话人、重叠对白、文字、格式、一致性、可读性及重建规则计分。',
       finding: '两份答卷均通过离线重建，主要失分在说话人归属、重叠对白和时间对齐。',
       notes: [
@@ -79,6 +79,7 @@
     const source = caseData[item.id];
     const original = registry.cases.find(entry => entry.key === item.original);
     const runs = allRuns(item.id);
+    if (!source || !runs.length) continue;
     const [first] = runs;
     const files = source.files.map(file => file.kind === 'video' ? {
       ...file, poster: 'variant-results/case-' + item.id + '/poster.jpg'
@@ -112,6 +113,12 @@
 
   function comparison(item) {
     const runs = allRuns(item.id);
+    if (!runs.length) {
+      return '<article class="variant-case" data-variant-case="31"><p class="variant-case-id">Case 31</p>'
+        + '<h2>多人会议字幕</h2><p>更换素材中</p>'
+        + '<p>先前发布的素材与原题同属 AMI IS1009a，已撤回这组变式成绩。</p>'
+        + '<a class="variant-original" href="#task-12/task">查看原题 ↗</a></article>';
+    }
     return `<article class="variant-case" data-variant-case="${item.id}">
       <div class="variant-case-head">
         <div><p class="variant-case-id">Case ${item.id}</p><h2>${item.title}</h2></div>
@@ -187,6 +194,9 @@
   }
 
   function syncNavigation() {
+    if (!allRuns(31).length && /^#task-variant-31(?:\/|$)/.test(location.hash)) {
+      location.replace(route);
+    }
     navigation.classList.toggle('active', viewingVariants());
     if (viewingVariants()) navigation.setAttribute('aria-current', 'page');
     else navigation.removeAttribute('aria-current');
