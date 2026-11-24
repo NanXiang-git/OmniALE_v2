@@ -58,7 +58,7 @@ window.OMNIALE_VARIANT_RESULTS = {
     {
       "case": 40,
       "model": "gpt-6.2-sol",
-      "score": 96.7982,
+      "score": 87.2628,
       "threshold": 80,
       "passed": false,
       "elapsed_seconds": 3507.288019180298,
@@ -73,7 +73,7 @@ window.OMNIALE_VARIANT_RESULTS = {
     {
       "case": 40,
       "model": "gpt-6-luna",
-      "score": 83.8994,
+      "score": 79.2227,
       "threshold": 80,
       "passed": false,
       "elapsed_seconds": 5771.348308801651,

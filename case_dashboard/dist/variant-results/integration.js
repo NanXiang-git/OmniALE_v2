@@ -18,12 +18,12 @@
     {
       id: 40, title: '中文配音', original: 'task-13', source: '《Cosmos Laundromat: First Cycle》· 02:48–04:07',
       method: '总分 =（英文理解 E + 中文译文 T）×（配音 A ÷ 70）× 画面系数 V ×（100 ÷ 30）。',
-      finding: '两份答卷均超过 80 分，并触发原题硬门槛。',
+      finding: '角色分轨复评确认 Sol 的维克托跨段音色漂移。两份答卷均未通过验收。',
       notes: [
         '约 26 秒处译配丢失原声在 “you’re…” 后的明显犹豫停顿。离线重建通过。',
         '末段 76.25–78.708 秒的维克托台词进入弗兰克轨。拒绝句缺少原声的停顿。离线重建在 600 秒内未完成。'
       ],
-      review: '使用补充画面和官方角色分轨复核。英文词错率按复核后的原声转录计词，排除时间戳和说话人标签。两份连续性记录各有一项时间窗诊断待确认。'
+      review: '视觉裁判为 GPT‑6.2 Sol。qwen3.8-omni-flash 对照官方角色分轨和交付分轨，复评原人物音色与跨段稳定。每项至少两次听审。两份连续性记录各有一项时间窗诊断待确认。'
     },
     {
       id: 46, title: '口述影像', original: 'task-14', source: '《Sprite Fright》· 81 秒片段',
@@ -217,6 +217,7 @@
     const isMeeting = item.id === 31;
     const isDub = item.id === 40;
     const isDescription = item.id === 46;
+    const showVoiceClips = isDub && model.video.url.includes('/sol/') && score.voice_review;
     let computation = '';
     if (isMeeting) {
       const {content, delivery} = score.groups;
@@ -225,7 +226,8 @@
         + ' · 质量系数 ' + delivery.coefficient.toFixed(5);
     } else if (isDub) {
       computation = ['E', 'T', 'A'].map(key => key + ' ' + pretty(score.groups[key].score) + ' / ' + score.groups[key].maximum)
-        .join(' · ') + ' · V ' + pretty(score.coefficient);
+        .join(' · ') + ' · 配音系数 ' + pretty(score.audio_coefficient ?? score.groups.A.score / 70)
+        + ' · V ' + pretty(score.coefficient);
     } else if (isDescription) {
       computation = '视觉理解 ' + pretty(score.core) + ' / 100 · 交付 ' + pretty(score.delivery) + ' / '
         + score.delivery_max + ' · 交付系数 ' + pretty(score.coefficient)
@@ -240,6 +242,14 @@
       <h3>验收与扣分</h3><p>通过线 ${run.threshold} 分 · ${run.passed ? '通过' : '未通过'}。${escape(note)}</p>
       ${run.failed_gates.length ? `<p class="variant-gates">${run.failed_gates.map(gate => `<code>${escape(gate)}</code>`).join(' ')}</p>` : ''}
       ${item.review ? `<p class="result-note">${escape(item.review)}</p>` : ''}
+      ${showVoiceClips ? `<details><summary>试听维克托的跨段音色</summary>
+        <p class="result-note">片段做了音量匹配。时间为变式视频的时间轴。</p>
+        ${[[22, 74], [26, 61]].map(pair => `<div class="score-table-wrap"><table class="result-table">
+          <thead><tr><th scope="col">约在</th><th scope="col">官方原声</th><th scope="col">Sol 配音分轨</th></tr></thead>
+          <tbody>${pair.map(second => `<tr><th scope="row">${second} 秒</th>${['source', 'sol'].map((track, index) =>
+            `<td><audio controls preload="none" aria-label="${second} 秒 ${index ? '配音分轨' : '官方原声'}" src="variant-results/case-40/voice-review/${track}-${second}.wav"></audio></td>`).join('')}</tr>`).join('')}</tbody>
+        </table></div>`).join('')}
+      </details>` : ''}
       <p>${mediaLink(root + 'scoring.json', '下载分项评分记录', 'download')}</p>`;
   }
 

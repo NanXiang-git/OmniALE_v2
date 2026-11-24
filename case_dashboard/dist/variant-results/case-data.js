@@ -472,13 +472,13 @@ window.OMNIALE_VARIANT_CASES = {
             {
               "id": "A_identity",
               "label": "原人物音色与身份保持",
-              "score": 24.999999999999996,
+              "score": 21.875000000000004,
               "maximum": 25
             },
             {
               "id": "A_stable",
               "label": "同人物跨段声音一致性",
-              "score": 15.0,
+              "score": 11.25,
               "maximum": 15
             },
             {
@@ -520,20 +520,20 @@ window.OMNIALE_VARIANT_CASES = {
           ],
           "groups": {
             "E": {
-              "score": 19.703703703703702,
-              "maximum": 20
+              "maximum": 20,
+              "score": 19.703703703703702
             },
             "T": {
-              "score": 10.0,
-              "maximum": 10
+              "maximum": 10,
+              "score": 10.0
             },
             "A": {
-              "score": 69.79166666666667,
-              "maximum": 70
+              "maximum": 70,
+              "score": 62.916666666666686
             }
           },
           "coefficient": 0.9805555555555554,
-          "core": 98.7176660787772,
+          "core": 88.99323927101707,
           "gates": {
             "continuity_ledger": {
               "pass": null,
@@ -778,9 +778,751 @@ window.OMNIALE_VARIANT_CASES = {
                 ]
               ]
             }
+          ],
+          "total_score": 87.2628,
+          "passed": false,
+          "audio_coefficient": 0.8988095238095241,
+          "formula": "(E20 + T10) * (A70 / 70) * V_coefficient * (100 / 30)",
+          "voice_review": {
+            "judge": "qwen3.8-omni-flash",
+            "scope": [
+              "A_identity",
+              "A_stable"
+            ],
+            "source": "aligned original dialogue and submitted isolated role tracks",
+            "method": "two independent reviews; independent third vote on disagreement; retain unresolved items",
+            "other_evidence": "prior fixed checklist decisions and measured delivery checks",
+            "targeted_review": "Standalone pair comparisons with source performance controls. Per-role macro averaging and original item weights."
+          },
+          "voice_evidence": [
+            {
+              "id": "S006.A_identity.pitch",
+              "answer": "no",
+              "reason": "源人物(Franck)的声音明显更低沉、浑厚，而中文配音的基频偏高，缺乏源人物那种深沉的低音特质。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S006.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源人物(Franck)的声音明显更低沉、浑厚，而中文配音的基频偏高，缺乏源人物那种深沉的低音特质。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                },
+                {
+                  "id": "S006.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源声为中低音男声，而输出声明显偏高，接近年轻男性甚至中性的高音区，音高区间不兼容。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S006.A_identity.texture",
+              "answer": "no",
+              "reason": "源人物具有非常显著的粗糙、沙哑甚至带有撕裂感的嗓音质地；中文配音则相对平滑、干净，丢失了关键的“破损”音色特征。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S006.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源人物具有非常显著的粗糙、沙哑甚至带有撕裂感的嗓音质地；中文配音则相对平滑、干净，丢失了关键的“破损”音色特征。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                },
+                {
+                  "id": "S006.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源声具有明显的粗糙颗粒感和疲惫的沙哑质地；输出声则非常干净、平滑，缺乏源人物的标志性噪点。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S006.A_identity.resonance",
+              "answer": "no",
+              "reason": "源人物的共鸣主要集中在极深的胸腔，产生一种压迫感和厚重感；中文配音的共鸣位置较高，显得单薄，未能还原角色的体量感。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S006.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源人物的共鸣主要集中在极深的胸腔，产生一种压迫感和厚重感；中文配音的共鸣位置较高，显得单薄，未能还原角色的体量感。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                },
+                {
+                  "id": "S006.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源声共鸣深沉，带有显著的喉腔/胸腔震动感；输出声共鸣较浅，主要停留在口腔/鼻腔，显得单薄。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S006.A_identity.identity",
+              "answer": "no",
+              "reason": "由于音高、质感和共鸣的全面偏离，中文听起来像是一个普通的中年男性，完全无法对应到源人物那个极具辨识度的粗犷老者形象。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S006.A_identity.identity",
+                  "answer": "no",
+                  "reason": "由于音高、质感和共鸣的全面偏离，中文听起来像是一个普通的中年男性，完全无法对应到源人物那个极具辨识度的粗犷老者形象。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                },
+                {
+                  "id": "S006.A_identity.identity",
+                  "answer": "no",
+                  "reason": "由于音高显著升高、沙哑质感丢失以及共鸣位置变浅，输出声无法被辨认为源人物（Franck），属于错误的角色配音。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S022.A_identity.texture",
+              "answer": "no",
+              "reason": "源音频中Franck的声音具有非常显著的沙哑、颗粒感和气声特质（如'Precious time'时的喉音摩擦）；而输出音频中的中文配音声音相对平滑、干净，缺乏源人物标志性的粗糙沙哑质感，音色特征不匹配。",
+              "source_intervals": [
+                [
+                  70.5,
+                  73.417
+                ]
+              ],
+              "output_intervals": [
+                [
+                  70.48,
+                  72.35
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S022.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频中Franck的声音具有非常显著的沙哑、颗粒感和气声特质（如'Precious time'时的喉音摩擦）；而输出音频中的中文配音声音相对平滑、干净，缺乏源人物标志性的粗糙沙哑质感，音色特征不匹配。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                },
+                {
+                  "id": "S022.A_identity.texture",
+                  "answer": "yes",
+                  "reason": "两者均呈现明显的沙哑质感（vocal fry）和粗糙度，音色特征高度吻合。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                },
+                {
+                  "id": "S022.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源声（Franck）具有明显的低沉、沙哑且带有颗粒感的音质，而输出声（Victor）的音色相对平滑、干净，缺乏源声特有的沙哑质感。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S022.A_identity.identity",
+              "answer": "no",
+              "reason": "尽管音高和共鸣相似，但源人物极具辨识度的沙哑/撕裂音质在输出音频中完全缺失。输出声音听起来像是一个普通的中年男声，无法让人联想到源音频中那个特定的、充满沧桑感的角色，属于仅性别相近的通用声音。",
+              "source_intervals": [
+                [
+                  70.5,
+                  73.417
+                ]
+              ],
+              "output_intervals": [
+                [
+                  70.48,
+                  72.35
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S022.A_identity.identity",
+                  "answer": "no",
+                  "reason": "尽管音高和共鸣相似，但源人物极具辨识度的沙哑/撕裂音质在输出音频中完全缺失。输出声音听起来像是一个普通的中年男声，无法让人联想到源音频中那个特定的、充满沧桑感的角色，属于仅性别相近的通用声音。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                },
+                {
+                  "id": "S022.A_identity.identity",
+                  "answer": "yes",
+                  "reason": "排除语言因素后，独特的沙哑嗓音和发声习惯表明是同一人物。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                },
+                {
+                  "id": "S022.A_identity.identity",
+                  "answer": "no",
+                  "reason": "排除语言差异后，两者无法辨认为同一人物。源声是典型的年长男性低沉嗓音，而输出声听起来更年轻、清亮，属于不同的角色声音。",
+                  "source_intervals": [
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      70.48,
+                      72.35
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Victor.A_stable.stable",
+              "answer": "no",
+              "reason": "维克托在22.33–24.70与74.03–75.57秒、25.90–28.73与61.30–63.38秒的配音中，出现清亮轻薄与紧涩、不同共鸣及年龄感的变化。两次隔离分轨复核分别在这些比较组中判断基础声线发生漂移。",
+              "source_intervals": [
+                [
+                  22.346,
+                  24.75
+                ],
+                [
+                  25.958,
+                  28.75
+                ],
+                [
+                  61.41,
+                  63.542
+                ],
+                [
+                  74.12,
+                  76.17
+                ]
+              ],
+              "output_intervals": [
+                [
+                  22.33,
+                  24.7
+                ],
+                [
+                  25.9,
+                  28.73
+                ],
+                [
+                  61.3,
+                  63.38
+                ],
+                [
+                  74.03,
+                  75.57
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Victor.A_stable.stable",
+                  "answer": "no",
+                  "reason": "S008与S018的中文配音在音色和年龄感上存在明显差异，前者偏年轻清亮而后者偏成熟低沉，这种基础嗓音特质的漂移超出了正常表演情绪变化所能解释的范围。",
+                  "source_intervals": [
+                    [
+                      22.346,
+                      24.75
+                    ],
+                    [
+                      25.958,
+                      28.75
+                    ],
+                    [
+                      61.41,
+                      63.542
+                    ],
+                    [
+                      74.12,
+                      76.17
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      22.33,
+                      24.7
+                    ],
+                    [
+                      25.9,
+                      28.73
+                    ],
+                    [
+                      61.3,
+                      63.38
+                    ],
+                    [
+                      74.03,
+                      75.57
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Victor.A_stable.stable",
+                  "answer": "no",
+                  "reason": "S007与S023的中文配音在音色和年龄感上存在明显差异，这种基础声音特质的漂移超出了正常表演变化所能解释的范围。",
+                  "source_intervals": [
+                    [
+                      22.346,
+                      24.75
+                    ],
+                    [
+                      25.958,
+                      28.75
+                    ],
+                    [
+                      61.41,
+                      63.542
+                    ],
+                    [
+                      74.12,
+                      76.17
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      22.33,
+                      24.7
+                    ],
+                    [
+                      25.9,
+                      28.73
+                    ],
+                    [
+                      61.3,
+                      63.38
+                    ],
+                    [
+                      74.03,
+                      75.57
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Victor.A_stable.distinct",
+              "answer": "yes",
+              "reason": "Victor的声音与Franck的声音有显著区别。例如在对比片段中，Victor（如[1.0, 3.0]）展现出较为成熟、低沉且连贯的男声特质；而Franck（如在独立聆听参考中的表现）则呈现出更年轻、音调稍高或带有不同鼻音色彩的音质。两者在频谱分布和共振峰特征上清晰可辨，未发生声线混淆或交换。",
+              "source_intervals": [
+                [
+                  1.0,
+                  3.0
+                ],
+                [
+                  37.17,
+                  39.75
+                ],
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  1.33,
+                  2.2
+                ],
+                [
+                  37.12,
+                  39.03
+                ],
+                [
+                  76.15,
+                  78.13
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Victor.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "Victor的声音与Franck的声音有显著区别。例如在对比片段中，Victor（如[1.0, 3.0]）展现出较为成熟、低沉且连贯的男声特质；而Franck（如在独立聆听参考中的表现）则呈现出更年轻、音调稍高或带有不同鼻音色彩的音质。两者在频谱分布和共振峰特征上清晰可辨，未发生声线混淆或交换。",
+                  "source_intervals": [
+                    [
+                      1.0,
+                      3.0
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      1.33,
+                      2.2
+                    ],
+                    [
+                      37.12,
+                      39.03
+                    ],
+                    [
+                      76.15,
+                      78.13
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Victor.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "Victor的声线与Franck有显著区别，未发生交换。对比[37.17, 39.75]中Victor低沉沙哑的嗓音与[41.88, 43.0]中Franck相对清亮、平滑的音色，两者差异明显，角色归属清晰。",
+                  "source_intervals": [
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      41.88,
+                      43.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      37.12,
+                      39.03
+                    ],
+                    [
+                      41.91,
+                      42.65
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Franck.A_stable.stable",
+              "answer": "yes",
+              "reason": "该角色在跨段样本中保持了高度一致的音色身份。无论是开头的“Oh yeah? How would you know?”还是中间的“but I'm just a sheep...”，其沙哑、低沉且带有明显颗粒感的老年男性嗓音特征始终稳定，未出现不合理的音色漂移或断裂。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ],
+                [
+                  53.917,
+                  57.333
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ],
+                [
+                  53.45,
+                  57.24
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Franck.A_stable.stable",
+                  "answer": "yes",
+                  "reason": "该角色在跨段样本中保持了高度一致的音色身份。无论是开头的“Oh yeah? How would you know?”还是中间的“but I'm just a sheep...”，其沙哑、低沉且带有明显颗粒感的老年男性嗓音特征始终稳定，未出现不合理的音色漂移或断裂。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ],
+                    [
+                      53.45,
+                      57.24
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Franck.A_stable.stable",
+                  "answer": "yes",
+                  "reason": "在多个时间窗口中（如17.0-20.0s和53.917-57.333s），Franck的声音始终保持低沉、沙哑且带有明显颗粒感的音色特征。语速缓慢，尾音有独特的拖拽感，整体声学身份高度一致，未出现音色漂移或断裂。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ],
+                    [
+                      53.45,
+                      57.24
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Franck.A_stable.distinct",
+              "answer": "yes",
+              "reason": "该角色的声音与其他实际角色（如Victor）具有清晰的区分度，未发生声线交换。Franck的嗓音粗糙、苍老且共鸣位置较低，而对比中的Victor声音则相对平滑、年轻，两者在听感上截然不同，不存在混淆的可能。",
+              "source_intervals": [
+                [
+                  17.0,
+                  20.0
+                ],
+                [
+                  53.917,
+                  57.333
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.7,
+                  20.25
+                ],
+                [
+                  53.45,
+                  57.24
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Franck.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "该角色的声音与其他实际角色（如Victor）具有清晰的区分度，未发生声线交换。Franck的嗓音粗糙、苍老且共鸣位置较低，而对比中的Victor声音则相对平滑、年轻，两者在听感上截然不同，不存在混淆的可能。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ],
+                    [
+                      53.45,
+                      57.24
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Franck.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "Franck的粗粝低音与Victor（S001）平滑、清晰的中高音形成鲜明对比。例如在17.0-20.0s中，Franck的“Yeah?”带有明显的喉音摩擦，而Victor在0.0-1.0s的自我介绍则干净利落，无任何声线交换迹象，两者可听度区分明确。",
+                  "source_intervals": [
+                    [
+                      17.0,
+                      20.0
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.7,
+                      20.25
+                    ],
+                    [
+                      53.45,
+                      57.24
+                    ]
+                  ]
+                }
+              ]
+            }
           ]
         },
-        "actions": 191
+        "actions": 191,
+        "notes": "维克托的音色在约 22 秒和 74 秒、约 26 秒和 61 秒两组对照中出现漂移。离线重建通过，约 26 秒处的关键犹豫停顿缺失，触发硬门槛。"
       },
       "luna": {
         "video": {
@@ -987,7 +1729,7 @@ window.OMNIALE_VARIANT_CASES = {
             {
               "id": "A_identity",
               "label": "原人物音色与身份保持",
-              "score": 24.999999999999996,
+              "score": 21.527777777777782,
               "maximum": 25
             },
             {
@@ -1035,20 +1777,20 @@ window.OMNIALE_VARIANT_CASES = {
           ],
           "groups": {
             "E": {
-              "score": 19.00972222222222,
-              "maximum": 20
+              "maximum": 20,
+              "score": 19.00972222222222
             },
             "T": {
-              "score": 10.0,
-              "maximum": 10
+              "maximum": 10,
+              "score": 10.0
             },
             "A": {
-              "score": 62.29166666666668,
-              "maximum": 70
+              "maximum": 70,
+              "score": 58.819444444444464
             }
           },
           "coefficient": 0.9749999999999999,
-          "core": 86.0506641313933,
+          "core": 81.2540830761317,
           "gates": {
             "continuity_ledger": {
               "pass": null,
@@ -1695,9 +2437,1067 @@ window.OMNIALE_VARIANT_CASES = {
                 ]
               ]
             }
+          ],
+          "total_score": 79.2227,
+          "passed": false,
+          "audio_coefficient": 0.840277777777778,
+          "formula": "(E20 + T10) * (A70 / 70) * V_coefficient * (100 / 30)",
+          "voice_review": {
+            "judge": "qwen3.8-omni-flash",
+            "scope": [
+              "A_identity",
+              "A_stable"
+            ],
+            "source": "aligned original dialogue and submitted isolated role tracks",
+            "method": "two independent reviews; independent third vote on disagreement; retain unresolved items",
+            "other_evidence": "prior fixed checklist decisions and measured delivery checks",
+            "targeted_review": "Standalone pair comparisons with source performance controls. Per-role macro averaging and original item weights."
+          },
+          "voice_evidence": [
+            {
+              "id": "S002.A_identity.pitch",
+              "answer": "no",
+              "reason": "源音频是Victor低沉的男声。但在对应的输出时间窗口内，实际发声的是Franck的角色轨道，其音调明显高于Victor，属于年轻男性的中高音区，音高完全不相容。",
+              "source_intervals": [
+                [
+                  4.0,
+                  6.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  3.82,
+                  6.12
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S002.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源音频是Victor低沉的男声。但在对应的输出时间窗口内，实际发声的是Franck的角色轨道，其音调明显高于Victor，属于年轻男性的中高音区，音高完全不相容。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                },
+                {
+                  "id": "S002.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音为中低音区；而实际输出的Franck轨道声音音调较高，属于中高音区，两者音高区间不相容。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S002.A_identity.texture",
+              "answer": "no",
+              "reason": "源音频具有标志性的沙哑和气声特质。然而，输出片段中听到的是Franck清晰、平滑且年轻的嗓音，缺乏Victor特有的颗粒感和呼吸噪音，音质特征不匹配。",
+              "source_intervals": [
+                [
+                  4.0,
+                  6.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  3.82,
+                  6.12
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S002.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频具有标志性的沙哑和气声特质。然而，输出片段中听到的是Franck清晰、平滑且年轻的嗓音，缺乏Victor特有的颗粒感和呼吸噪音，音质特征不匹配。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                },
+                {
+                  "id": "S002.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音带有明显的气声和沙哑质感；而实际输出的Franck轨道声音清晰明亮，缺乏气声和沙哑特征，音质纹理不匹配。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S002.A_identity.resonance",
+              "answer": "no",
+              "reason": "源声音表现出深厚的胸腔共鸣。相比之下，输出声音（来自Franck）显得更薄、更靠前，缺乏那种沉稳的低频共振感，厚薄特征不一致。",
+              "source_intervals": [
+                [
+                  4.0,
+                  6.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  3.82,
+                  6.12
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S002.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源声音表现出深厚的胸腔共鸣。相比之下，输出声音（来自Franck）显得更薄、更靠前，缺乏那种沉稳的低频共振感，厚薄特征不一致。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                },
+                {
+                  "id": "S002.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音具有深沉的胸腔共鸣；而实际输出的Franck轨道声音共鸣位置偏前，偏向口腔/鼻腔共鸣，厚薄特征不符。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S002.A_identity.identity",
+              "answer": "no",
+              "reason": "这是一个错误的角色路由。尽管标签为Victor，但实际播放的是Franck的声音。听众可以轻易分辨出这是两个不同的人：一个是苍老沙哑的Victor，另一个是清脆年轻的Franck。",
+              "source_intervals": [
+                [
+                  4.0,
+                  6.0
+                ]
+              ],
+              "output_intervals": [
+                [
+                  3.82,
+                  6.12
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S002.A_identity.identity",
+                  "answer": "no",
+                  "reason": "这是一个错误的角色路由。尽管标签为Victor，但实际播放的是Franck的声音。听众可以轻易分辨出这是两个不同的人：一个是苍老沙哑的Victor，另一个是清脆年轻的Franck。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                },
+                {
+                  "id": "S002.A_identity.identity",
+                  "answer": "no",
+                  "reason": "实际输出的是Franck的声音轨道，其声学特征（高音调、明亮音色、靠前共鸣）与源人物Victor（低音调、气声沙哑、深沉共鸣）完全不同，无法辨认为同一人物。",
+                  "source_intervals": [
+                    [
+                      4.0,
+                      6.0
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      3.82,
+                      6.12
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S024.A_identity.pitch",
+              "answer": "no",
+              "reason": "源音频中Victor的声音是中高音调的清亮男声，而实际输出的音频（错误路由到了Franck的轨道）是极低沉的沙哑男声，音高区间完全不符。",
+              "source_intervals": [
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  76.07,
+                  77.95
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S024.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音是中高音调的清亮男声，而实际输出的音频（错误路由到了Franck的轨道）是极低沉的沙哑男声，音高区间完全不符。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                },
+                {
+                  "id": "S024.A_identity.pitch",
+                  "answer": "no",
+                  "reason": "源音频是Victor原本较高、年轻的音调，但实际输出的音频（来自Franck轨道）是中低音调，音高区间不匹配。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S024.A_identity.texture",
+              "answer": "no",
+              "reason": "源音频中Victor的声音平滑干净，而实际输出的音频（错误路由到了Franck的轨道）充满了强烈的沙哑感和气声摩擦，音质特征截然相反。",
+              "source_intervals": [
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  76.07,
+                  77.95
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S024.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音平滑干净，而实际输出的音频（错误路由到了Franck的轨道）充满了强烈的沙哑感和气声摩擦，音质特征截然相反。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                },
+                {
+                  "id": "S024.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源声音清脆直接，实际输出的声音（Franck轨道）带有标志性的沙哑和气声质感，纹理完全不同。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S024.A_identity.resonance",
+              "answer": "no",
+              "reason": "源音频中Victor的声音共鸣较轻快明亮，而实际输出的音频（错误路由到了Franck的轨道）展现出极其深沉厚重的胸腔共鸣，厚薄特征严重冲突。",
+              "source_intervals": [
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  76.07,
+                  77.95
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S024.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源音频中Victor的声音共鸣较轻快明亮，而实际输出的音频（错误路由到了Franck的轨道）展现出极其深沉厚重的胸腔共鸣，厚薄特征严重冲突。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                },
+                {
+                  "id": "S024.A_identity.resonance",
+                  "answer": "no",
+                  "reason": "源声音较薄，实际输出声音（Franck轨道）具有明显的胸腔厚度和低频共振，共鸣特征不符。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S024.A_identity.identity",
+              "answer": "no",
+              "reason": "实际输出的音频并非Victor的声音，而是另一个角色（Franck）的低沉沙哑嗓音，属于客观错误的角色轨道分配，无法辨认为同一人物。",
+              "source_intervals": [
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  76.07,
+                  77.95
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S024.A_identity.identity",
+                  "answer": "no",
+                  "reason": "实际输出的音频并非Victor的声音，而是另一个角色（Franck）的低沉沙哑嗓音，属于客观错误的角色轨道分配，无法辨认为同一人物。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                },
+                {
+                  "id": "S024.A_identity.identity",
+                  "answer": "no",
+                  "reason": "路由错误：预期应为Victor的台词，但实际播放的是Franck的声音（参考S022的特征），身份完全不匹配。",
+                  "source_intervals": [
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      76.07,
+                      77.95
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S013.A_identity.texture",
+              "answer": "no",
+              "reason": "源音频具有非常显著的沙哑、颗粒感和喉音摩擦（vocal fry），听起来像是一个年迈或声带受损的角色；而输出音频的声音相对干净、平滑，缺乏这种标志性的粗糙质感，更像是普通成年男性的声音。",
+              "source_intervals": [
+                [
+                  47.415,
+                  50.75
+                ]
+              ],
+              "output_intervals": [
+                [
+                  47.235,
+                  50.87
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S013.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频具有非常显著的沙哑、颗粒感和喉音摩擦（vocal fry），听起来像是一个年迈或声带受损的角色；而输出音频的声音相对干净、平滑，缺乏这种标志性的粗糙质感，更像是普通成年男性的声音。",
+                  "source_intervals": [
+                    [
+                      47.415,
+                      50.75
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      47.235,
+                      50.87
+                    ]
+                  ]
+                },
+                {
+                  "id": "S013.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源声音带有明显的沙哑和颗粒感（raspy），而中文配音的声音非常平滑干净，缺乏这种可辨认的沙哑音质特征。",
+                  "source_intervals": [
+                    [
+                      47.415,
+                      50.75
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      47.235,
+                      50.87
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S013.A_identity.identity",
+              "answer": "no",
+              "reason": "尽管性别相同，但由于音色纹理（沙哑度）和共鸣特征的显著不同，排除语言因素后，无法将输出声音辨认为与源音频相同的特定角色。输出声音丢失了源角色独特的病态或苍老特征。",
+              "source_intervals": [
+                [
+                  47.415,
+                  50.75
+                ]
+              ],
+              "output_intervals": [
+                [
+                  47.235,
+                  50.87
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S013.A_identity.identity",
+                  "answer": "no",
+                  "reason": "尽管性别相同，但由于音色纹理（沙哑度）和共鸣特征的显著不同，排除语言因素后，无法将输出声音辨认为与源音频相同的特定角色。输出声音丢失了源角色独特的病态或苍老特征。",
+                  "source_intervals": [
+                    [
+                      47.415,
+                      50.75
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      47.235,
+                      50.87
+                    ]
+                  ]
+                },
+                {
+                  "id": "S013.A_identity.identity",
+                  "answer": "no",
+                  "reason": "由于中文配音完全丢失了源声音标志性的沙哑/粗糙质感，听起来像是一个通用的平滑男声，无法在排除语言差异后辨认为同一特定人物。",
+                  "source_intervals": [
+                    [
+                      47.415,
+                      50.75
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      47.235,
+                      50.87
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S015.A_identity.texture",
+              "answer": "no",
+              "reason": "源音频再次展现了强烈的沙哑和撕裂感（gravelly/raspy texture）；相比之下，输出音频的声音过于圆润和平滑，完全缺失了源角色那种磨损的音质特征。",
+              "source_intervals": [
+                [
+                  52.0,
+                  53.833
+                ]
+              ],
+              "output_intervals": [
+                [
+                  51.82,
+                  53.952999999999996
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S015.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源音频再次展现了强烈的沙哑和撕裂感（gravelly/raspy texture）；相比之下，输出音频的声音过于圆润和平滑，完全缺失了源角色那种磨损的音质特征。",
+                  "source_intervals": [
+                    [
+                      52.0,
+                      53.833
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      51.82,
+                      53.952999999999996
+                    ]
+                  ]
+                },
+                {
+                  "id": "S015.A_identity.texture",
+                  "answer": "no",
+                  "reason": "源声音具有显著的沙哑和摩擦感（gravelly/raspy），这是该角色的核心听觉标识；而中文配音则是标准的平滑嗓音，完全缺失了这一关键纹理。",
+                  "source_intervals": [
+                    [
+                      52.0,
+                      53.833
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      51.82,
+                      53.952999999999996
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S015.A_identity.identity",
+              "answer": "no",
+              "reason": "由于关键的沙哑质感和深厚共鸣的缺失，输出声音听起来像是一个普通的中年男性，而非源音频中那个具有特殊嗓音条件的角色，身份辨识度失败。",
+              "source_intervals": [
+                [
+                  52.0,
+                  53.833
+                ]
+              ],
+              "output_intervals": [
+                [
+                  51.82,
+                  53.952999999999996
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "S015.A_identity.identity",
+                  "answer": "no",
+                  "reason": "由于关键的沙哑质感和深厚共鸣的缺失，输出声音听起来像是一个普通的中年男性，而非源音频中那个具有特殊嗓音条件的角色，身份辨识度失败。",
+                  "source_intervals": [
+                    [
+                      52.0,
+                      53.833
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      51.82,
+                      53.952999999999996
+                    ]
+                  ]
+                },
+                {
+                  "id": "S015.A_identity.identity",
+                  "answer": "no",
+                  "reason": "中文配音未能复现源人物独特的沙哑声线，导致其听起来像一个普通的男性角色，而非特定的Franck，身份辨识度失败。",
+                  "source_intervals": [
+                    [
+                      52.0,
+                      53.833
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      51.82,
+                      53.952999999999996
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Victor.A_stable.stable",
+              "answer": "no",
+              "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
+              "source_intervals": [
+                [
+                  1.0,
+                  3.0
+                ],
+                [
+                  37.17,
+                  39.75
+                ],
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  1.0,
+                  3.0
+                ],
+                [
+                  37.17,
+                  39.75
+                ],
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Victor.A_stable.stable",
+                  "answer": "no",
+                  "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
+                  "source_intervals": [
+                    [
+                      1.0,
+                      3.0
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      1.0,
+                      3.0
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Victor.A_stable.stable",
+                  "answer": "no",
+                  "reason": "Stability fails because the third sample (76.25-78.708) assigned to Victor in the metadata is actually delivered on the Franck track. Comparing only the valid first two samples (1-3 and 37.17-39.75), the voice remains stable, but the inclusion of the misassigned clip breaks the consistency check for the named role across all provided instances.",
+                  "source_intervals": [
+                    [
+                      1,
+                      3
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      1,
+                      3
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Victor.A_stable.distinct",
+              "answer": "no",
+              "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+              "source_intervals": [
+                [
+                  1.0,
+                  3.0
+                ],
+                [
+                  37.17,
+                  39.75
+                ],
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "output_intervals": [
+                [
+                  1.0,
+                  3.0
+                ],
+                [
+                  37.17,
+                  39.75
+                ],
+                [
+                  76.25,
+                  78.708
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Victor.A_stable.distinct",
+                  "answer": "no",
+                  "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+                  "source_intervals": [
+                    [
+                      1.0,
+                      3.0
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      1.0,
+                      3.0
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Victor.A_stable.distinct",
+                  "answer": "no",
+                  "reason": "Role distinction fails due to an exchange error. At interval 76.25-78.708, the source indicates Victor speaking, but the output places his lines on the Franck track while leaving the Victor track silent. Conversely, checking other intervals confirms roles are generally distinct, but this specific swap violates the requirement that roles remain distinct without exchanges.",
+                  "source_intervals": [
+                    [
+                      1,
+                      3
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      1,
+                      3
+                    ],
+                    [
+                      37.17,
+                      39.75
+                    ],
+                    [
+                      76.25,
+                      78.708
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Franck.A_stable.stable",
+              "answer": "yes",
+              "reason": "四段音频均保持了沙哑、低沉且带有颗粒感的音色，角色声音特征在跨语言演绎中高度一致。",
+              "source_intervals": [
+                [
+                  17,
+                  20
+                ],
+                [
+                  53.917,
+                  57.333
+                ],
+                [
+                  70.5,
+                  73.417
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.65,
+                  19.88
+                ],
+                [
+                  53.49,
+                  57.07
+                ],
+                [
+                  70.89,
+                  71.85
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Franck.A_stable.stable",
+                  "answer": "yes",
+                  "reason": "四段音频均保持了沙哑、低沉且带有颗粒感的音色，角色声音特征在跨语言演绎中高度一致。",
+                  "source_intervals": [
+                    [
+                      17,
+                      20
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ],
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.65,
+                      19.88
+                    ],
+                    [
+                      53.49,
+                      57.07
+                    ],
+                    [
+                      70.89,
+                      71.85
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Franck.A_stable.stable",
+                  "answer": "yes",
+                  "reason": "在S022、S016、S013和S006中，Franck的普通话配音均保持了低沉沙哑且略带疲惫的音色特征，与英文原声的角色听感高度一致，未出现明显的音色断裂。",
+                  "source_intervals": [
+                    [
+                      17,
+                      20
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ],
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.65,
+                      19.88
+                    ],
+                    [
+                      53.49,
+                      57.07
+                    ],
+                    [
+                      70.89,
+                      71.85
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role.Franck.A_stable.distinct",
+              "answer": "yes",
+              "reason": "Franck的音色低沉沙哑且带有明显的颗粒感，而Victor的音色相对清亮平滑，两者在音高和音质上存在显著差异。",
+              "source_intervals": [
+                [
+                  17,
+                  20
+                ],
+                [
+                  53.917,
+                  57.333
+                ],
+                [
+                  70.5,
+                  73.417
+                ]
+              ],
+              "output_intervals": [
+                [
+                  16.65,
+                  19.88
+                ],
+                [
+                  53.49,
+                  57.07
+                ],
+                [
+                  70.89,
+                  71.85
+                ]
+              ],
+              "votes": [
+                {
+                  "id": "role.Franck.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "Franck的音色低沉沙哑且带有明显的颗粒感，而Victor的音色相对清亮平滑，两者在音高和音质上存在显著差异。",
+                  "source_intervals": [
+                    [
+                      17,
+                      20
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ],
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.65,
+                      19.88
+                    ],
+                    [
+                      53.49,
+                      57.07
+                    ],
+                    [
+                      70.89,
+                      71.85
+                    ]
+                  ]
+                },
+                {
+                  "id": "role.Franck.A_stable.distinct",
+                  "answer": "yes",
+                  "reason": "Victor的音色低沉沙哑且带有明显的气声和颗粒感，而Franck的音色相对清亮平滑，两者在音高和质感上差异显著。",
+                  "source_intervals": [
+                    [
+                      17,
+                      20
+                    ],
+                    [
+                      53.917,
+                      57.333
+                    ],
+                    [
+                      70.5,
+                      73.417
+                    ]
+                  ],
+                  "output_intervals": [
+                    [
+                      16.65,
+                      19.88
+                    ],
+                    [
+                      53.49,
+                      57.07
+                    ],
+                    [
+                      70.89,
+                      71.85
+                    ]
+                  ]
+                }
+              ]
+            }
           ]
         },
-        "actions": 128
+        "actions": 128,
+        "notes": "76.25–78.708 秒的维克托台词未正确归轨，拒绝句的关键停顿缺失，离线重建在 600 秒内未完成。"
       }
     }
   },
