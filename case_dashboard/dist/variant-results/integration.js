@@ -11,7 +11,7 @@
   const cases = [
     {
       id: 31, title: '多人会议字幕', original: 'task-12', source: 'EasyCom · Session 2',
-      method: '按原题的时间对齐、说话人、重叠对白、文字、格式、一致性、可读性及重建规则计分。',
+      method: '总分 =（内容得分 ÷ 65）×（交付得分 ÷ 35）× 100。',
       finding: '四名新的发言者在同一场英语小组讨论中交谈，三个片段重新排序。',
       review: '使用 EasyCom 的官方发言者标注和逐句稿，逐词时间由离线对齐生成。'
     },
@@ -214,10 +214,16 @@
 
   function breakdown(model, item, run, note, root) {
     const score = model.scoring;
+    const isMeeting = item.id === 31;
     const isDub = item.id === 40;
     const isDescription = item.id === 46;
     let computation = '';
-    if (isDub) {
+    if (isMeeting) {
+      const {content, delivery} = score.groups;
+      computation = '内容 ' + pretty(content.score) + ' / ' + content.maximum
+        + ' · 交付 ' + pretty(delivery.score) + ' / ' + delivery.maximum
+        + ' · 质量系数 ' + delivery.coefficient.toFixed(5);
+    } else if (isDub) {
       computation = ['E', 'T', 'A'].map(key => key + ' ' + pretty(score.groups[key].score) + ' / ' + score.groups[key].maximum)
         .join(' · ') + ' · V ' + pretty(score.coefficient);
     } else if (isDescription) {
@@ -227,7 +233,7 @@
     }
     return `<h3>分数构成</h3><p>${escape(item.method)}</p>${computation ? `<p class="variant-calculation">${computation}</p>` : ''}
       <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">评分项</th><th scope="col">得分</th><th scope="col">满分</th></tr></thead>
-        <tbody>${score.rows.map(row => `<tr><th scope="row">${escape(row.label || scoringLabels[row.id] || row.id)}</th>
+        <tbody>${score.rows.map(row => `<tr><th scope="row">${isMeeting ? (row.group === 'content' ? '内容 · ' : '交付 · ') : ''}${escape(row.label || scoringLabels[row.id] || row.id)}</th>
           <td>${pretty(row.score)}</td><td>${pretty(row.maximum)}</td></tr>`).join('')}</tbody>
         <tfoot><tr><th scope="row">最终总分</th><td><strong>${run.score}</strong></td><td>100</td></tr></tfoot>
       </table></div>

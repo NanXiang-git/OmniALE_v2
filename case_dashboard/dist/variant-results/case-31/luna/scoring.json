@@ -3,42 +3,50 @@
     {
       "id": "timing",
       "score": 10.8586,
-      "maximum": 30
+      "maximum": 30,
+      "group": "content"
     },
     {
       "id": "speakers",
       "score": 9.6245,
-      "maximum": 15
+      "maximum": 15,
+      "group": "content"
     },
     {
       "id": "overlap",
       "score": 0,
-      "maximum": 10
+      "maximum": 10,
+      "group": "content"
     },
     {
       "id": "text",
       "score": 6.3147,
-      "maximum": 10
+      "maximum": 10,
+      "group": "content"
     },
     {
       "id": "format",
       "score": 9.7468,
-      "maximum": 10
+      "maximum": 10,
+      "group": "delivery"
     },
     {
       "id": "consistency",
       "score": 3.2075,
-      "maximum": 10
+      "maximum": 10,
+      "group": "delivery"
     },
     {
       "id": "rebuild",
       "score": 5,
-      "maximum": 5
+      "maximum": 5,
+      "group": "delivery"
     },
     {
       "id": "readability",
       "score": 5.0009,
-      "maximum": 10
+      "maximum": 10,
+      "group": "delivery"
     }
   ],
   "gates": [
@@ -54,5 +62,18 @@
     "critical_content@60",
     "critical_content@90"
   ],
-  "pending": 0
+  "pending": 0,
+  "formula": "(content_score / 65) * (delivery_score / 35) * 100",
+  "score": 27.04,
+  "groups": {
+    "content": {
+      "score": 26.7978,
+      "maximum": 65
+    },
+    "delivery": {
+      "score": 22.9552,
+      "maximum": 35,
+      "coefficient": 0.6558628571428572
+    }
+  }
 }

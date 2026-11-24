@@ -2398,7 +2398,7 @@ window.OMNIALE_VARIANT_CASES = {
     }
   },
   "31": {
-    "task": "# 第12题 / Case31：四人会议字幕对轴·正式困难版\n\n看完所附 Aegisub 教程，把 `input/source.mp4` 制作为准确、可读的英文多人字幕。文字已完整提供，不要求翻译。困难在于真实重叠、短附和、重复和自我修正、数值与否定，以及在镜头切换中保持声源身份。允许使用本地脚本和对齐模型。\n\n## 输入\n\n- `source.mp4`: EasyCom Session 2, three reordered English conversation excerpts, 150.20 seconds at 25 fps. The wearable viewpoint moves with one of the four speakers. Voice identity comes from the four independent references. `original.wav` contains the actual video audio.\n- `transcript.txt`：完整逐词稿，文本组Uxxx的排列经过固定随机打乱，**编号和出现顺序均不代表时间或人物**。文本组是检索单位，不是必须采用的字幕分句。保留重复、口头词和未完成词；可改标点、大小写，但不得润色成与原声不同的句子。\n- `speakers.json`及4组头像/声音：A/B/C/D是本题身份，不是原始语料库ID；以声音参考辨认人物。参考来自目标片段之外，可能含自然附和。\n- `edit_boundaries.json`：公开拼接边界；不能让一个字幕事件跨越边界。段内时轴连续，段与段之间无语义连续性保证。\n- `tutorial.mp4`和本地手册：依据官方文档制作的5分钟讲解，包含波形图，不是软件操作实录。\n\n## 交付\n\n交 `interview.ass`、`interview.srt`、实际烧录的 `preview.mp4`、`alignment.json`、`rebuild.json`、README和离线重建脚本。完整JSON格式见 `submission_schema.json`。\n\nASS的Name字段填A/B/C/D，画面上也显示身份标签。每人的事件独立对轴；同时发言在不同固定位置显示，不得重叠遮字。字幕必须放在底部32%区域（576高画面约y=392—575），顶部68%保留原画面以供完整性检测；建议四个固定角色槽、约20px字号并合理短分句，最多每人两行，必要时用完整底部宽度。SRT每行用 `A: ...` 等前缀，按所有事件边界分割成无重叠时间单元；仍持续显示的文本可跨相邻单元保持，不视为重复说话。ASS/SRT须在相同时间显示相同角色的相同词；技术切片不能改变实际可见寿命。允许拆分、合并同一角色相邻文本组。\n\n真实重复与格式延续必须区分：同一角色再次说出与上一条完全相同的独立短句/回应时，ASS须保留两个独立事件，不能合成一次持续显示；SRT须在对应ASS边界显式开始新cue，即使文字完全相同。只有因其他角色进出而产生的持续文本技术切片才按同一次发言计算，评分器结合ASS重复事件边界核验。单个字幕内原本连续重复的词仍逐词保留。SRT cue数字编号可以不连续，但不得重复；alignment引用实际编号，不是文件内第几个cue。\n\n常规字幕0.4—6秒；自然极短回应可短于0.4秒，但仍须可读。英文每行≤42字符，每位说话人最多2行，读速≤24字符/秒；同时发言最多4名角色，字号和分区应适配原尺寸。可在自然停顿适当延展显示，但需同时满足时间误差及镜头拼接约束。\n\n`alignment.json.events` 为实际字幕事件映射：每项含 `utterance_ids`（涉及的U编号）、`speaker_id`、`start`、`end`、`ass_event_ids`、`srt_cue_ids`。ASS事件从1顺序编号，SRT使用文件cue编号，全部以字符串写入。一组稿件可对应多个事件；不得用映射JSON代替实际字幕。每个源文本组必须被映射覆盖。\n\n视频原尺寸、帧率、时长及声音不变，字幕为唯一画面新增内容。48kHz音轨；不得删词、压低别人的声音、去掉重叠、补配音、改变音速或拼接。成片可由脚本生成，不考鼠标操作。\n\n## 评分合同\n\n100分，≥80且所有硬门槛通过才通过。自动项：时间30、角色15、重叠10、文本10、格式10、格式/映射一致性10、真实重建5；视听Judge评可读性10。精确配置见 `rules.json`。\n\n硬门槛：两格式按角色token总体召回≥97%、精确≥99%，每角色召回≥95%；标注重叠词对保留≥90%，按官方重叠词对持续时间加权的同时显示召回≥85%（两cue仅碰一下不能通过）；时间质量≥0.75；格式合规比例≥95%；两格式时间语义等价≥98%；映射有效/覆盖≥98%。时间质量按真实字幕覆盖词的首尾边界：≤150ms满分，150—500ms线性降分，超过500ms零分；允许多种合理分句，不要求与私有标注唯一对应。原声归一化相关系数≥0.98，画面内容不得替换。\n\n真实视听Judge必须核验：烧录字幕确实对应提交文件；否定和数值约束未反转；短回应、重复、自我修正未被删除；身份与提供声音参考一致；重叠时可以同时读到各人内容。Judge使用原片、实际成片/声音和私有标注，而不是只读提交JSON。两次独立评分，分歧第三次仲裁；模型仍无法确定或官方标注与声音有争议时进入pending，不将不确定性强判为失败。缺真实音视频API时总分为空，不用文本模型伪造视听分数。\n\n`rebuild.json.argv` 使用 `{python}`、`{input}`、`{submission}`、`{output}`。评分器移走已有主视频后执行重建；脚本应从原输入与字幕生成到 `{output}`。不得只复制预先渲染的视频，不能运行时联网或付费调用。依赖和版本须写明，所有新文件和临时文件在D盘。\n\n## 公开真值与考试边界\n\nEasyCom publishes recordings and participant-tagged utterance transcripts. The reordered timeline and anonymous identities are local to this task. Use only the supplied candidate package in the offline test.\n\n建议统一120分钟、8核CPU/32GB RAM、可选24GB GPU和30GB D盘空间；任何预算更改需事先告知。官方人工作词标注不是零误差逐音素认证；本包未生成正式正确字幕或参考成片，也未通过solver难度校准。来源和许可见 `CREDITS.md`，仅在本地构建，不冒称已获公开再分发全部附件的许可。\n",
+    "task": "# 第12题 / Case31：四人会议字幕对轴·正式困难版\n\n看完所附 Aegisub 教程，把 `input/source.mp4` 制作为准确、可读的英文多人字幕。文字已完整提供，不要求翻译。困难在于真实重叠、短附和、重复和自我修正、数值与否定，以及在镜头切换中保持声源身份。允许使用本地脚本和对齐模型。\n\n## 输入\n\n- `source.mp4`: EasyCom Session 2, three reordered English conversation excerpts, 150.20 seconds at 25 fps. The wearable viewpoint moves with one of the four speakers. Voice identity comes from the four independent references. `original.wav` contains the actual video audio.\n- `transcript.txt`：完整逐词稿，文本组Uxxx的排列经过固定随机打乱，**编号和出现顺序均不代表时间或人物**。文本组是检索单位，不是必须采用的字幕分句。保留重复、口头词和未完成词；可改标点、大小写，但不得润色成与原声不同的句子。\n- `speakers.json`及4组头像/声音：A/B/C/D是本题身份，不是原始语料库ID；以声音参考辨认人物。参考来自目标片段之外，可能含自然附和。\n- `edit_boundaries.json`：公开拼接边界；不能让一个字幕事件跨越边界。段内时轴连续，段与段之间无语义连续性保证。\n- `tutorial.mp4`和本地手册：依据官方文档制作的5分钟讲解，包含波形图，不是软件操作实录。\n\n## 交付\n\n交 `interview.ass`、`interview.srt`、实际烧录的 `preview.mp4`、`alignment.json`、`rebuild.json`、README和离线重建脚本。完整JSON格式见 `submission_schema.json`。\n\nASS的Name字段填A/B/C/D，画面上也显示身份标签。每人的事件独立对轴；同时发言在不同固定位置显示，不得重叠遮字。字幕必须放在底部32%区域（576高画面约y=392—575），顶部68%保留原画面以供完整性检测；建议四个固定角色槽、约20px字号并合理短分句，最多每人两行，必要时用完整底部宽度。SRT每行用 `A: ...` 等前缀，按所有事件边界分割成无重叠时间单元；仍持续显示的文本可跨相邻单元保持，不视为重复说话。ASS/SRT须在相同时间显示相同角色的相同词；技术切片不能改变实际可见寿命。允许拆分、合并同一角色相邻文本组。\n\n真实重复与格式延续必须区分：同一角色再次说出与上一条完全相同的独立短句/回应时，ASS须保留两个独立事件，不能合成一次持续显示；SRT须在对应ASS边界显式开始新cue，即使文字完全相同。只有因其他角色进出而产生的持续文本技术切片才按同一次发言计算，评分器结合ASS重复事件边界核验。单个字幕内原本连续重复的词仍逐词保留。SRT cue数字编号可以不连续，但不得重复；alignment引用实际编号，不是文件内第几个cue。\n\n常规字幕0.4—6秒；自然极短回应可短于0.4秒，但仍须可读。英文每行≤42字符，每位说话人最多2行，读速≤24字符/秒；同时发言最多4名角色，字号和分区应适配原尺寸。可在自然停顿适当延展显示，但需同时满足时间误差及镜头拼接约束。\n\n`alignment.json.events` 为实际字幕事件映射：每项含 `utterance_ids`（涉及的U编号）、`speaker_id`、`start`、`end`、`ass_event_ids`、`srt_cue_ids`。ASS事件从1顺序编号，SRT使用文件cue编号，全部以字符串写入。一组稿件可对应多个事件；不得用映射JSON代替实际字幕。每个源文本组必须被映射覆盖。\n\n视频原尺寸、帧率、时长及声音不变，字幕为唯一画面新增内容。48kHz音轨；不得删词、压低别人的声音、去掉重叠、补配音、改变音速或拼接。成片可由脚本生成，不考鼠标操作。\n\n## 评分合同\n\n总分 = （内容得分 ÷ 65）×（交付得分 ÷ 35）× 100。内容项为时间对齐 30、说话人归属 15、重叠对白 10、文字准确度 10。交付项为格式 10、预览与字幕一致性 10、离线重建 5、烧录字幕可读性 10。交付得分除以 35 得到质量系数。总分达到 80 且全部硬门槛通过即通过验收。精确配置见 `rules.json`。\n\n硬门槛：两格式按角色token总体召回≥97%、精确≥99%，每角色召回≥95%；标注重叠词对保留≥90%，按官方重叠词对持续时间加权的同时显示召回≥85%（两cue仅碰一下不能通过）；时间质量≥0.75；格式合规比例≥95%；两格式时间语义等价≥98%；映射有效/覆盖≥98%。时间质量按真实字幕覆盖词的首尾边界：≤150ms满分，150—500ms线性降分，超过500ms零分；允许多种合理分句，不要求与私有标注唯一对应。原声归一化相关系数≥0.98，画面内容不得替换。\n\n真实视听Judge必须核验：烧录字幕确实对应提交文件；否定和数值约束未反转；短回应、重复、自我修正未被删除；身份与提供声音参考一致；重叠时可以同时读到各人内容。Judge使用原片、实际成片/声音和私有标注，而不是只读提交JSON。两次独立评分，分歧第三次仲裁；模型仍无法确定或官方标注与声音有争议时进入pending，不将不确定性强判为失败。缺真实音视频API时总分为空，不用文本模型伪造视听分数。\n\n`rebuild.json.argv` 使用 `{python}`、`{input}`、`{submission}`、`{output}`。评分器移走已有主视频后执行重建；脚本应从原输入与字幕生成到 `{output}`。不得只复制预先渲染的视频，不能运行时联网或付费调用。依赖和版本须写明，所有新文件和临时文件在D盘。\n\n## 公开真值与考试边界\n\nEasyCom publishes recordings and participant-tagged utterance transcripts. The reordered timeline and anonymous identities are local to this task. Use only the supplied candidate package in the offline test.\n\n建议统一120分钟、8核CPU/32GB RAM、可选24GB GPU和30GB D盘空间；任何预算更改需事先告知。官方人工作词标注不是零误差逐音素认证；本包未生成正式正确字幕或参考成片，也未通过solver难度校准。来源和许可见 `CREDITS.md`，仅在本地构建，不冒称已获公开再分发全部附件的许可。\n",
     "credit": "EasyCom, Main / Session 2, Meta Reality Labs Research, CC BY-NC 4.0. Reordered and resized three clips; participant photos and utterance transcripts from the official release. https://github.com/facebookresearch/EasyComDataset",
     "files": [
       {
@@ -2422,8 +2422,8 @@ window.OMNIALE_VARIANT_CASES = {
         "path": "TASK.md",
         "url": "variant-results/case-31/candidate/TASK.md",
         "kind": "document",
-        "bytes": 6167,
-        "text": "# 第12题 / Case31：四人会议字幕对轴·正式困难版\n\n看完所附 Aegisub 教程，把 `input/source.mp4` 制作为准确、可读的英文多人字幕。文字已完整提供，不要求翻译。困难在于真实重叠、短附和、重复和自我修正、数值与否定，以及在镜头切换中保持声源身份。允许使用本地脚本和对齐模型。\n\n## 输入\n\n- `source.mp4`: EasyCom Session 2, three reordered English conversation excerpts, 150.20 seconds at 25 fps. The wearable viewpoint moves with one of the four speakers. Voice identity comes from the four independent references. `original.wav` contains the actual video audio.\n- `transcript.txt`：完整逐词稿，文本组Uxxx的排列经过固定随机打乱，**编号和出现顺序均不代表时间或人物**。文本组是检索单位，不是必须采用的字幕分句。保留重复、口头词和未完成词；可改标点、大小写，但不得润色成与原声不同的句子。\n- `speakers.json`及4组头像/声音：A/B/C/D是本题身份，不是原始语料库ID；以声音参考辨认人物。参考来自目标片段之外，可能含自然附和。\n- `edit_boundaries.json`：公开拼接边界；不能让一个字幕事件跨越边界。段内时轴连续，段与段之间无语义连续性保证。\n- `tutorial.mp4`和本地手册：依据官方文档制作的5分钟讲解，包含波形图，不是软件操作实录。\n\n## 交付\n\n交 `interview.ass`、`interview.srt`、实际烧录的 `preview.mp4`、`alignment.json`、`rebuild.json`、README和离线重建脚本。完整JSON格式见 `submission_schema.json`。\n\nASS的Name字段填A/B/C/D，画面上也显示身份标签。每人的事件独立对轴；同时发言在不同固定位置显示，不得重叠遮字。字幕必须放在底部32%区域（576高画面约y=392—575），顶部68%保留原画面以供完整性检测；建议四个固定角色槽、约20px字号并合理短分句，最多每人两行，必要时用完整底部宽度。SRT每行用 `A: ...` 等前缀，按所有事件边界分割成无重叠时间单元；仍持续显示的文本可跨相邻单元保持，不视为重复说话。ASS/SRT须在相同时间显示相同角色的相同词；技术切片不能改变实际可见寿命。允许拆分、合并同一角色相邻文本组。\n\n真实重复与格式延续必须区分：同一角色再次说出与上一条完全相同的独立短句/回应时，ASS须保留两个独立事件，不能合成一次持续显示；SRT须在对应ASS边界显式开始新cue，即使文字完全相同。只有因其他角色进出而产生的持续文本技术切片才按同一次发言计算，评分器结合ASS重复事件边界核验。单个字幕内原本连续重复的词仍逐词保留。SRT cue数字编号可以不连续，但不得重复；alignment引用实际编号，不是文件内第几个cue。\n\n常规字幕0.4—6秒；自然极短回应可短于0.4秒，但仍须可读。英文每行≤42字符，每位说话人最多2行，读速≤24字符/秒；同时发言最多4名角色，字号和分区应适配原尺寸。可在自然停顿适当延展显示，但需同时满足时间误差及镜头拼接约束。\n\n`alignment.json.events` 为实际字幕事件映射：每项含 `utterance_ids`（涉及的U编号）、`speaker_id`、`start`、`end`、`ass_event_ids`、`srt_cue_ids`。ASS事件从1顺序编号，SRT使用文件cue编号，全部以字符串写入。一组稿件可对应多个事件；不得用映射JSON代替实际字幕。每个源文本组必须被映射覆盖。\n\n视频原尺寸、帧率、时长及声音不变，字幕为唯一画面新增内容。48kHz音轨；不得删词、压低别人的声音、去掉重叠、补配音、改变音速或拼接。成片可由脚本生成，不考鼠标操作。\n\n## 评分合同\n\n100分，≥80且所有硬门槛通过才通过。自动项：时间30、角色15、重叠10、文本10、格式10、格式/映射一致性10、真实重建5；视听Judge评可读性10。精确配置见 `rules.json`。\n\n硬门槛：两格式按角色token总体召回≥97%、精确≥99%，每角色召回≥95%；标注重叠词对保留≥90%，按官方重叠词对持续时间加权的同时显示召回≥85%（两cue仅碰一下不能通过）；时间质量≥0.75；格式合规比例≥95%；两格式时间语义等价≥98%；映射有效/覆盖≥98%。时间质量按真实字幕覆盖词的首尾边界：≤150ms满分，150—500ms线性降分，超过500ms零分；允许多种合理分句，不要求与私有标注唯一对应。原声归一化相关系数≥0.98，画面内容不得替换。\n\n真实视听Judge必须核验：烧录字幕确实对应提交文件；否定和数值约束未反转；短回应、重复、自我修正未被删除；身份与提供声音参考一致；重叠时可以同时读到各人内容。Judge使用原片、实际成片/声音和私有标注，而不是只读提交JSON。两次独立评分，分歧第三次仲裁；模型仍无法确定或官方标注与声音有争议时进入pending，不将不确定性强判为失败。缺真实音视频API时总分为空，不用文本模型伪造视听分数。\n\n`rebuild.json.argv` 使用 `{python}`、`{input}`、`{submission}`、`{output}`。评分器移走已有主视频后执行重建；脚本应从原输入与字幕生成到 `{output}`。不得只复制预先渲染的视频，不能运行时联网或付费调用。依赖和版本须写明，所有新文件和临时文件在D盘。\n\n## 公开真值与考试边界\n\nEasyCom publishes recordings and participant-tagged utterance transcripts. The reordered timeline and anonymous identities are local to this task. Use only the supplied candidate package in the offline test.\n\n建议统一120分钟、8核CPU/32GB RAM、可选24GB GPU和30GB D盘空间；任何预算更改需事先告知。官方人工作词标注不是零误差逐音素认证；本包未生成正式正确字幕或参考成片，也未通过solver难度校准。来源和许可见 `CREDITS.md`，仅在本地构建，不冒称已获公开再分发全部附件的许可。\n"
+        "bytes": 6336,
+        "text": "# 第12题 / Case31：四人会议字幕对轴·正式困难版\n\n看完所附 Aegisub 教程，把 `input/source.mp4` 制作为准确、可读的英文多人字幕。文字已完整提供，不要求翻译。困难在于真实重叠、短附和、重复和自我修正、数值与否定，以及在镜头切换中保持声源身份。允许使用本地脚本和对齐模型。\n\n## 输入\n\n- `source.mp4`: EasyCom Session 2, three reordered English conversation excerpts, 150.20 seconds at 25 fps. The wearable viewpoint moves with one of the four speakers. Voice identity comes from the four independent references. `original.wav` contains the actual video audio.\n- `transcript.txt`：完整逐词稿，文本组Uxxx的排列经过固定随机打乱，**编号和出现顺序均不代表时间或人物**。文本组是检索单位，不是必须采用的字幕分句。保留重复、口头词和未完成词；可改标点、大小写，但不得润色成与原声不同的句子。\n- `speakers.json`及4组头像/声音：A/B/C/D是本题身份，不是原始语料库ID；以声音参考辨认人物。参考来自目标片段之外，可能含自然附和。\n- `edit_boundaries.json`：公开拼接边界；不能让一个字幕事件跨越边界。段内时轴连续，段与段之间无语义连续性保证。\n- `tutorial.mp4`和本地手册：依据官方文档制作的5分钟讲解，包含波形图，不是软件操作实录。\n\n## 交付\n\n交 `interview.ass`、`interview.srt`、实际烧录的 `preview.mp4`、`alignment.json`、`rebuild.json`、README和离线重建脚本。完整JSON格式见 `submission_schema.json`。\n\nASS的Name字段填A/B/C/D，画面上也显示身份标签。每人的事件独立对轴；同时发言在不同固定位置显示，不得重叠遮字。字幕必须放在底部32%区域（576高画面约y=392—575），顶部68%保留原画面以供完整性检测；建议四个固定角色槽、约20px字号并合理短分句，最多每人两行，必要时用完整底部宽度。SRT每行用 `A: ...` 等前缀，按所有事件边界分割成无重叠时间单元；仍持续显示的文本可跨相邻单元保持，不视为重复说话。ASS/SRT须在相同时间显示相同角色的相同词；技术切片不能改变实际可见寿命。允许拆分、合并同一角色相邻文本组。\n\n真实重复与格式延续必须区分：同一角色再次说出与上一条完全相同的独立短句/回应时，ASS须保留两个独立事件，不能合成一次持续显示；SRT须在对应ASS边界显式开始新cue，即使文字完全相同。只有因其他角色进出而产生的持续文本技术切片才按同一次发言计算，评分器结合ASS重复事件边界核验。单个字幕内原本连续重复的词仍逐词保留。SRT cue数字编号可以不连续，但不得重复；alignment引用实际编号，不是文件内第几个cue。\n\n常规字幕0.4—6秒；自然极短回应可短于0.4秒，但仍须可读。英文每行≤42字符，每位说话人最多2行，读速≤24字符/秒；同时发言最多4名角色，字号和分区应适配原尺寸。可在自然停顿适当延展显示，但需同时满足时间误差及镜头拼接约束。\n\n`alignment.json.events` 为实际字幕事件映射：每项含 `utterance_ids`（涉及的U编号）、`speaker_id`、`start`、`end`、`ass_event_ids`、`srt_cue_ids`。ASS事件从1顺序编号，SRT使用文件cue编号，全部以字符串写入。一组稿件可对应多个事件；不得用映射JSON代替实际字幕。每个源文本组必须被映射覆盖。\n\n视频原尺寸、帧率、时长及声音不变，字幕为唯一画面新增内容。48kHz音轨；不得删词、压低别人的声音、去掉重叠、补配音、改变音速或拼接。成片可由脚本生成，不考鼠标操作。\n\n## 评分合同\n\n总分 = （内容得分 ÷ 65）×（交付得分 ÷ 35）× 100。内容项为时间对齐 30、说话人归属 15、重叠对白 10、文字准确度 10。交付项为格式 10、预览与字幕一致性 10、离线重建 5、烧录字幕可读性 10。交付得分除以 35 得到质量系数。总分达到 80 且全部硬门槛通过即通过验收。精确配置见 `rules.json`。\n\n硬门槛：两格式按角色token总体召回≥97%、精确≥99%，每角色召回≥95%；标注重叠词对保留≥90%，按官方重叠词对持续时间加权的同时显示召回≥85%（两cue仅碰一下不能通过）；时间质量≥0.75；格式合规比例≥95%；两格式时间语义等价≥98%；映射有效/覆盖≥98%。时间质量按真实字幕覆盖词的首尾边界：≤150ms满分，150—500ms线性降分，超过500ms零分；允许多种合理分句，不要求与私有标注唯一对应。原声归一化相关系数≥0.98，画面内容不得替换。\n\n真实视听Judge必须核验：烧录字幕确实对应提交文件；否定和数值约束未反转；短回应、重复、自我修正未被删除；身份与提供声音参考一致；重叠时可以同时读到各人内容。Judge使用原片、实际成片/声音和私有标注，而不是只读提交JSON。两次独立评分，分歧第三次仲裁；模型仍无法确定或官方标注与声音有争议时进入pending，不将不确定性强判为失败。缺真实音视频API时总分为空，不用文本模型伪造视听分数。\n\n`rebuild.json.argv` 使用 `{python}`、`{input}`、`{submission}`、`{output}`。评分器移走已有主视频后执行重建；脚本应从原输入与字幕生成到 `{output}`。不得只复制预先渲染的视频，不能运行时联网或付费调用。依赖和版本须写明，所有新文件和临时文件在D盘。\n\n## 公开真值与考试边界\n\nEasyCom publishes recordings and participant-tagged utterance transcripts. The reordered timeline and anonymous identities are local to this task. Use only the supplied candidate package in the offline test.\n\n建议统一120分钟、8核CPU/32GB RAM、可选24GB GPU和30GB D盘空间；任何预算更改需事先告知。官方人工作词标注不是零误差逐音素认证；本包未生成正式正确字幕或参考成片，也未通过solver难度校准。来源和许可见 `CREDITS.md`，仅在本地构建，不冒称已获公开再分发全部附件的许可。\n"
       },
       {
         "name": "aegisub_manual.html",
@@ -2588,15 +2588,15 @@ window.OMNIALE_VARIANT_CASES = {
         "url": "variant-results/case-31/candidate/input_manifest.json",
         "kind": "document",
         "bytes": 3148,
-        "text": "[\n  {\n    \"file\": \"CREDITS.md\",\n    \"bytes\": 227,\n    \"sha256\": \"8ff0f77d94987a7cd606d32f1b2f564cd95f9123c0817fedb0f7c3e7ace28608\"\n  },\n  {\n    \"file\": \"README.md\",\n    \"bytes\": 170,\n    \"sha256\": \"d4db3e23240c61f64f9742abfd0441c8ef44cf2d8efa4609a0ac9287982dd3ac\"\n  },\n  {\n    \"file\": \"TASK.md\",\n    \"bytes\": 6167,\n    \"sha256\": \"572f5a3ae0386e2d4f321f73876cf6e42182e25dfe19c8b9b04cb1066114c951\"\n  },\n  {\n    \"file\": \"input/aegisub_manual.html\",\n    \"bytes\": 38306,\n    \"sha256\": \"9a011fa10207c7f96954bb542ad3f3a6a5427a5e126ac211733ae02830423daf\"\n  },\n  {\n    \"file\": \"input/edit_boundaries.json\",\n    \"bytes\": 124,\n    \"sha256\": \"508b933b636b4829f4f65d112fd482f7ebe96a3241537c81931024118eef0bad\"\n  },\n  {\n    \"file\": \"input/original.wav\",\n    \"bytes\": 28856398,\n    \"sha256\": \"953625282988b7cfaac10a3486262037dd865b28cd9cd62e7f2e2ee6574d268a\"\n  },\n  {\n    \"file\": \"input/source.mp4\",\n    \"bytes\": 76771582,\n    \"sha256\": \"3bfd5d66aedd3fad66f2b6b8bb509cfb60f3579a6135eafc4fa664e5cba9bcfe\"\n  },\n  {\n    \"file\": \"input/speaker_A.jpg\",\n    \"bytes\": 10050,\n    \"sha256\": \"6b4f44b401ee839643d392651de6e5669d534a107567c509d3025da336585481\"\n  },\n  {\n    \"file\": \"input/speaker_A.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"f048cd7e293e19eda0c49ea5360cab0ebc66e9102e76b17aa2447d2cc8408892\"\n  },\n  {\n    \"file\": \"input/speaker_B.jpg\",\n    \"bytes\": 9741,\n    \"sha256\": \"cb9714fa790991c40e31e03368ce70e935a74a04c338ef96d17eccfb4d2a644c\"\n  },\n  {\n    \"file\": \"input/speaker_B.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"f1a970a2f5e4d2ce764de10cfa857d4132574527807a856c2301cedf1801396d\"\n  },\n  {\n    \"file\": \"input/speaker_C.jpg\",\n    \"bytes\": 9092,\n    \"sha256\": \"d4ff57de1e2acedfbd92eb1543726561074ff14daa0c08079008d0752c1eb555\"\n  },\n  {\n    \"file\": \"input/speaker_C.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"20c9093c71f90f1ed3f28cf805d67ff13e4411edeb2d3943bc2501956cec0f10\"\n  },\n  {\n    \"file\": \"input/speaker_D.jpg\",\n    \"bytes\": 4785,\n    \"sha256\": \"62099c921be11cbfbadb8dfd73e892f9e21fad7f5c1c7c1ba08acf31d24176aa\"\n  },\n  {\n    \"file\": \"input/speaker_D.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"2bf4f72948e6bd9c326f5b2fc3a0ae27df1539dee1eff50ea8c05bc4196058ce\"\n  },\n  {\n    \"file\": \"input/speakers.json\",\n    \"bytes\": 787,\n    \"sha256\": \"31758d3159ed8529b3bf838c9beea823f5b5533b659acccf948183f8f9245fe6\"\n  },\n  {\n    \"file\": \"input/transcript.txt\",\n    \"bytes\": 2607,\n    \"sha256\": \"7e068804c025854d2c9b7a7736c818a1f497618b2e7ede97a850a75b56dc9de0\"\n  },\n  {\n    \"file\": \"input/tutorial.mp4\",\n    \"bytes\": 2179359,\n    \"sha256\": \"7dff1b88fbed5d6252d3955ce3cdf4053cb3eb093ec2b0d161e53abc488c938d\"\n  },\n  {\n    \"file\": \"rules.json\",\n    \"bytes\": 2081,\n    \"sha256\": \"6218c914035a86beecf2e9ba4e581ecc11a56e989ff9678fe4b525d598743cef\"\n  },\n  {\n    \"file\": \"submission_schema.json\",\n    \"bytes\": 1886,\n    \"sha256\": \"45c08788640f69485e7d4fd9cac4e185d04db93edae1c110f962df2caeca4d7a\"\n  },\n  {\n    \"file\": \"tools/media.py\",\n    \"bytes\": 3278,\n    \"sha256\": \"edbb9610c99d37a0f9a3187a06e65c97eb6680bde42ee14c165e864265b46423\"\n  },\n  {\n    \"file\": \"tools/tts.py\",\n    \"bytes\": 1922,\n    \"sha256\": \"3b23c39b9d52b6459291580f087e72fb9d3bfdd301e198b9dd3733674ee005fc\"\n  }\n]\n"
+        "text": "[\n  {\n    \"file\": \"CREDITS.md\",\n    \"bytes\": 227,\n    \"sha256\": \"8ff0f77d94987a7cd606d32f1b2f564cd95f9123c0817fedb0f7c3e7ace28608\"\n  },\n  {\n    \"file\": \"README.md\",\n    \"bytes\": 170,\n    \"sha256\": \"d4db3e23240c61f64f9742abfd0441c8ef44cf2d8efa4609a0ac9287982dd3ac\"\n  },\n  {\n    \"file\": \"TASK.md\",\n    \"bytes\": 6336,\n    \"sha256\": \"35fe4c0944325402cf6de439bdebebbb98119d39c82f4446d6fe1b09bc1ed0a9\"\n  },\n  {\n    \"file\": \"input/aegisub_manual.html\",\n    \"bytes\": 38306,\n    \"sha256\": \"9a011fa10207c7f96954bb542ad3f3a6a5427a5e126ac211733ae02830423daf\"\n  },\n  {\n    \"file\": \"input/edit_boundaries.json\",\n    \"bytes\": 124,\n    \"sha256\": \"508b933b636b4829f4f65d112fd482f7ebe96a3241537c81931024118eef0bad\"\n  },\n  {\n    \"file\": \"input/original.wav\",\n    \"bytes\": 28856398,\n    \"sha256\": \"953625282988b7cfaac10a3486262037dd865b28cd9cd62e7f2e2ee6574d268a\"\n  },\n  {\n    \"file\": \"input/source.mp4\",\n    \"bytes\": 76771582,\n    \"sha256\": \"3bfd5d66aedd3fad66f2b6b8bb509cfb60f3579a6135eafc4fa664e5cba9bcfe\"\n  },\n  {\n    \"file\": \"input/speaker_A.jpg\",\n    \"bytes\": 10050,\n    \"sha256\": \"6b4f44b401ee839643d392651de6e5669d534a107567c509d3025da336585481\"\n  },\n  {\n    \"file\": \"input/speaker_A.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"f048cd7e293e19eda0c49ea5360cab0ebc66e9102e76b17aa2447d2cc8408892\"\n  },\n  {\n    \"file\": \"input/speaker_B.jpg\",\n    \"bytes\": 9741,\n    \"sha256\": \"cb9714fa790991c40e31e03368ce70e935a74a04c338ef96d17eccfb4d2a644c\"\n  },\n  {\n    \"file\": \"input/speaker_B.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"f1a970a2f5e4d2ce764de10cfa857d4132574527807a856c2301cedf1801396d\"\n  },\n  {\n    \"file\": \"input/speaker_C.jpg\",\n    \"bytes\": 9092,\n    \"sha256\": \"d4ff57de1e2acedfbd92eb1543726561074ff14daa0c08079008d0752c1eb555\"\n  },\n  {\n    \"file\": \"input/speaker_C.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"20c9093c71f90f1ed3f28cf805d67ff13e4411edeb2d3943bc2501956cec0f10\"\n  },\n  {\n    \"file\": \"input/speaker_D.jpg\",\n    \"bytes\": 4785,\n    \"sha256\": \"62099c921be11cbfbadb8dfd73e892f9e21fad7f5c1c7c1ba08acf31d24176aa\"\n  },\n  {\n    \"file\": \"input/speaker_D.wav\",\n    \"bytes\": 128078,\n    \"sha256\": \"2bf4f72948e6bd9c326f5b2fc3a0ae27df1539dee1eff50ea8c05bc4196058ce\"\n  },\n  {\n    \"file\": \"input/speakers.json\",\n    \"bytes\": 787,\n    \"sha256\": \"31758d3159ed8529b3bf838c9beea823f5b5533b659acccf948183f8f9245fe6\"\n  },\n  {\n    \"file\": \"input/transcript.txt\",\n    \"bytes\": 2607,\n    \"sha256\": \"7e068804c025854d2c9b7a7736c818a1f497618b2e7ede97a850a75b56dc9de0\"\n  },\n  {\n    \"file\": \"input/tutorial.mp4\",\n    \"bytes\": 2179359,\n    \"sha256\": \"7dff1b88fbed5d6252d3955ce3cdf4053cb3eb093ec2b0d161e53abc488c938d\"\n  },\n  {\n    \"file\": \"rules.json\",\n    \"bytes\": 2426,\n    \"sha256\": \"0814af4dfcb4a3806c158486842bba01a88f21bcffe454ad69b0e74ccf353784\"\n  },\n  {\n    \"file\": \"submission_schema.json\",\n    \"bytes\": 1886,\n    \"sha256\": \"45c08788640f69485e7d4fd9cac4e185d04db93edae1c110f962df2caeca4d7a\"\n  },\n  {\n    \"file\": \"tools/media.py\",\n    \"bytes\": 3278,\n    \"sha256\": \"edbb9610c99d37a0f9a3187a06e65c97eb6680bde42ee14c165e864265b46423\"\n  },\n  {\n    \"file\": \"tools/tts.py\",\n    \"bytes\": 1922,\n    \"sha256\": \"3b23c39b9d52b6459291580f087e72fb9d3bfdd301e198b9dd3733674ee005fc\"\n  }\n]\n"
       },
       {
         "name": "rules.json",
         "path": "rules.json",
         "url": "variant-results/case-31/candidate/rules.json",
         "kind": "document",
-        "bytes": 2081,
-        "text": "{\n  \"main_output\": \"preview.mp4\",\n  \"required_files\": [\n    \"preview.mp4\",\n    \"interview.ass\",\n    \"interview.srt\",\n    \"alignment.json\",\n    \"rebuild.json\",\n    \"README.md\"\n  ],\n  \"auto_weights\": {\n    \"timing\": 30,\n    \"speakers\": 15,\n    \"overlap\": 10,\n    \"text\": 10,\n    \"format\": 10,\n    \"consistency\": 10,\n    \"rebuild\": 5\n  },\n  \"judge_weights\": {\n    \"readability\": 10\n  },\n  \"fact_weight\": 0,\n  \"judge_criteria\": {\n    \"readability\": \"Watch actual burned subtitle preview while hearing source: speakers, overlapping layout, corrections and reading are clear. Compare rendered content to submitted subtitle events.\"\n  },\n  \"judge_gates\": {\n    \"critical_content\": \"Use private critical_units and speaker/word references plus actual audiovisual input. No reversal or omission of negation, numerical constraints, repeated repairs or speaker identity. Do not mark official annotation disputes as candidate failure.\",\n    \"actual_preview\": \"Output really displays submitted subtitles, not missing/wrong text or labels.\",\n    \"source_audio\": \"Original dialogue and other speakers preserved, no muting/cuts.\"\n  },\n  \"case_number\": 12,\n  \"original_case_id\": 31,\n  \"version\": \"2.0-hard\",\n  \"task_summary\": \"真实四人会议困难字幕对轴：三段重排、随机角色身份、无序逐字稿；保留重叠、修正、否定与数字并交付等价双格式和烧录预览。\",\n  \"passing_score\": 80,\n  \"scoring_status\": \"experimental_source_grounded\",\n  \"rebuild_timeout\": 600,\n  \"hard_thresholds\": {\n    \"token_recall\": 0.97,\n    \"token_precision\": 0.99,\n    \"overlap\": 0.9,\n    \"overlap_duration_recall\": 0.85,\n    \"min_speaker_recall\": 0.95,\n    \"timing_score\": 0.75,\n    \"format_fraction\": 0.95,\n    \"format_equivalence\": 0.98\n  },\n  \"repeat_contract\": \"Distinct repeated identical utterances require separate ASS events and explicit SRT cues at the same boundary. Cross-speaker technical continuation slices are deduplicated using ASS repetition boundaries. SRT numeric IDs may be nonconsecutive but must be unique.\"\n}"
+        "bytes": 2426,
+        "text": "{\n  \"main_output\": \"preview.mp4\",\n  \"required_files\": [\n    \"preview.mp4\",\n    \"interview.ass\",\n    \"interview.srt\",\n    \"alignment.json\",\n    \"rebuild.json\",\n    \"README.md\"\n  ],\n  \"auto_weights\": {\n    \"timing\": 30,\n    \"speakers\": 15,\n    \"overlap\": 10,\n    \"text\": 10,\n    \"format\": 10,\n    \"consistency\": 10,\n    \"rebuild\": 5\n  },\n  \"judge_weights\": {\n    \"readability\": 10\n  },\n  \"fact_weight\": 0,\n  \"judge_criteria\": {\n    \"readability\": \"Watch actual burned subtitle preview while hearing source: speakers, overlapping layout, corrections and reading are clear. Compare rendered content to submitted subtitle events.\"\n  },\n  \"judge_gates\": {\n    \"critical_content\": \"Use private critical_units and speaker/word references plus actual audiovisual input. No reversal or omission of negation, numerical constraints, repeated repairs or speaker identity. Do not mark official annotation disputes as candidate failure.\",\n    \"actual_preview\": \"Output really displays submitted subtitles, not missing/wrong text or labels.\",\n    \"source_audio\": \"Original dialogue and other speakers preserved, no muting/cuts.\"\n  },\n  \"case_number\": 12,\n  \"original_case_id\": 31,\n  \"version\": \"2.0-hard\",\n  \"task_summary\": \"真实四人会议困难字幕对轴：三段重排、随机角色身份、无序逐字稿；保留重叠、修正、否定与数字并交付等价双格式和烧录预览。\",\n  \"passing_score\": 80,\n  \"scoring_status\": \"experimental_source_grounded\",\n  \"rebuild_timeout\": 600,\n  \"hard_thresholds\": {\n    \"token_recall\": 0.97,\n    \"token_precision\": 0.99,\n    \"overlap\": 0.9,\n    \"overlap_duration_recall\": 0.85,\n    \"min_speaker_recall\": 0.95,\n    \"timing_score\": 0.75,\n    \"format_fraction\": 0.95,\n    \"format_equivalence\": 0.98\n  },\n  \"repeat_contract\": \"Distinct repeated identical utterances require separate ASS events and explicit SRT cues at the same boundary. Cross-speaker technical continuation slices are deduplicated using ASS repetition boundaries. SRT numeric IDs may be nonconsecutive but must be unique.\",\n  \"score_aggregation\": {\n    \"formula\": \"(content_score / 65) * (delivery_score / 35) * 100\",\n    \"content\": {\n      \"items\": [\n        \"overlap\",\n        \"speakers\",\n        \"text\",\n        \"timing\"\n      ],\n      \"maximum\": 65\n    },\n    \"delivery\": {\n      \"items\": [\n        \"consistency\",\n        \"format\",\n        \"readability\",\n        \"rebuild\"\n      ],\n      \"maximum\": 35\n    }\n  }\n}\n"
       },
       {
         "name": "submission_schema.json",
@@ -2745,42 +2745,50 @@ window.OMNIALE_VARIANT_CASES = {
             {
               "id": "timing",
               "score": 17.6131,
-              "maximum": 30
+              "maximum": 30,
+              "group": "content"
             },
             {
               "id": "speakers",
               "score": 14.1953,
-              "maximum": 15
+              "maximum": 15,
+              "group": "content"
             },
             {
               "id": "overlap",
               "score": 4.8214,
-              "maximum": 10
+              "maximum": 10,
+              "group": "content"
             },
             {
               "id": "text",
               "score": 9.4839,
-              "maximum": 10
+              "maximum": 10,
+              "group": "content"
             },
             {
               "id": "format",
               "score": 10,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             },
             {
               "id": "consistency",
               "score": 7.7358,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             },
             {
               "id": "rebuild",
               "score": 5,
-              "maximum": 5
+              "maximum": 5,
+              "group": "delivery"
             },
             {
               "id": "readability",
               "score": 7.2504,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             }
           ],
           "gates": [
@@ -2792,7 +2800,20 @@ window.OMNIALE_VARIANT_CASES = {
             "alignment_records",
             "actual_preview@0"
           ],
-          "pending": 0
+          "pending": 0,
+          "formula": "(content_score / 65) * (delivery_score / 35) * 100",
+          "score": 60.781,
+          "groups": {
+            "content": {
+              "score": 46.1137,
+              "maximum": 65
+            },
+            "delivery": {
+              "score": 29.9862,
+              "maximum": 35,
+              "coefficient": 0.8567485714285714
+            }
+          }
         },
         "actions": 70,
         "notes": "离线重建通过。重叠对白得 4.8214 / 10，时间对齐得 17.6131 / 30。"
@@ -2916,42 +2937,50 @@ window.OMNIALE_VARIANT_CASES = {
             {
               "id": "timing",
               "score": 10.8586,
-              "maximum": 30
+              "maximum": 30,
+              "group": "content"
             },
             {
               "id": "speakers",
               "score": 9.6245,
-              "maximum": 15
+              "maximum": 15,
+              "group": "content"
             },
             {
               "id": "overlap",
               "score": 0,
-              "maximum": 10
+              "maximum": 10,
+              "group": "content"
             },
             {
               "id": "text",
               "score": 6.3147,
-              "maximum": 10
+              "maximum": 10,
+              "group": "content"
             },
             {
               "id": "format",
               "score": 9.7468,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             },
             {
               "id": "consistency",
               "score": 3.2075,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             },
             {
               "id": "rebuild",
               "score": 5,
-              "maximum": 5
+              "maximum": 5,
+              "group": "delivery"
             },
             {
               "id": "readability",
               "score": 5.0009,
-              "maximum": 10
+              "maximum": 10,
+              "group": "delivery"
             }
           ],
           "gates": [
@@ -2967,7 +2996,20 @@ window.OMNIALE_VARIANT_CASES = {
             "critical_content@60",
             "critical_content@90"
           ],
-          "pending": 0
+          "pending": 0,
+          "formula": "(content_score / 65) * (delivery_score / 35) * 100",
+          "score": 27.04,
+          "groups": {
+            "content": {
+              "score": 26.7978,
+              "maximum": 65
+            },
+            "delivery": {
+              "score": 22.9552,
+              "maximum": 35,
+              "coefficient": 0.6558628571428572
+            }
+          }
         },
         "actions": 118,
         "notes": "离线重建通过。重叠对白得 0 / 10，ASS 与 SRT 一致性未达门槛。"

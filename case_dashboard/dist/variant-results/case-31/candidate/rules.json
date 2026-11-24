@@ -46,5 +46,26 @@
     "format_fraction": 0.95,
     "format_equivalence": 0.98
   },
-  "repeat_contract": "Distinct repeated identical utterances require separate ASS events and explicit SRT cues at the same boundary. Cross-speaker technical continuation slices are deduplicated using ASS repetition boundaries. SRT numeric IDs may be nonconsecutive but must be unique."
+  "repeat_contract": "Distinct repeated identical utterances require separate ASS events and explicit SRT cues at the same boundary. Cross-speaker technical continuation slices are deduplicated using ASS repetition boundaries. SRT numeric IDs may be nonconsecutive but must be unique.",
+  "score_aggregation": {
+    "formula": "(content_score / 65) * (delivery_score / 35) * 100",
+    "content": {
+      "items": [
+        "overlap",
+        "speakers",
+        "text",
+        "timing"
+      ],
+      "maximum": 65
+    },
+    "delivery": {
+      "items": [
+        "consistency",
+        "format",
+        "readability",
+        "rebuild"
+      ],
+      "maximum": 35
+    }
+  }
 }

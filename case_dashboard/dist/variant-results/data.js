@@ -10,7 +10,7 @@ window.OMNIALE_VARIANT_RESULTS = {
     {
       "case": 31,
       "model": "gpt-6.2-sol",
-      "score": 76.1,
+      "score": 60.781,
       "threshold": 80,
       "passed": false,
       "elapsed_seconds": 1504.298582792282,
@@ -26,12 +26,13 @@ window.OMNIALE_VARIANT_RESULTS = {
         "alignment_records",
         "actual_preview@0"
       ],
-      "unresolved_items_or_windows": 0
+      "unresolved_items_or_windows": 0,
+      "formula": "(content_score / 65) * (delivery_score / 35) * 100"
     },
     {
       "case": 31,
       "model": "gpt-6-luna",
-      "score": 49.753,
+      "score": 27.04,
       "threshold": 80,
       "passed": false,
       "elapsed_seconds": 2973.3496878147125,
@@ -51,7 +52,8 @@ window.OMNIALE_VARIANT_RESULTS = {
         "critical_content@60",
         "critical_content@90"
       ],
-      "unresolved_items_or_windows": 0
+      "unresolved_items_or_windows": 0,
+      "formula": "(content_score / 65) * (delivery_score / 35) * 100"
     },
     {
       "case": 40,
