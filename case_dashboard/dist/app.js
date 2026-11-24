@@ -162,7 +162,7 @@
         const verdict = run.accepted === null ? '待评' : run.accepted ? '通过' : '未通过';
         return '<tr><td>'+esc(run.model)+' / '+esc(run.effort)+'</td><td>不限时 / '+(run.elapsedSeconds/60).toFixed(1)+' 分钟</td><td>'+run.program+'/90</td><td>'+esc(judge || '待评')+'</td><td><strong>'+(run.total ?? '待评')+'</strong></td><td>'+verdict+'</td></tr>';
       }).join('');
-      panel.innerHTML = '<section class="result-comparison"><h3 class="result-section-title">困难 v3 双模型评测</h3><div class="score-table-wrap"><table class="result-table"><thead><tr><th>模型 / 推理</th><th>限时 / 实际用时</th><th>程序分</th><th>Qwen 裁判</th><th>总分 / 100</th><th>验收</th></tr></thead><tbody>'+values+'</tbody></table></div><p><a class="button" href="case18-v3/index.html">查看 Rubric、失分证据及冻结记录 ↗</a></p></section>';
+      panel.innerHTML = '<section class="result-comparison"><h3 class="result-section-title">困难 v3 双模型评测</h3><div class="score-table-wrap"><table class="result-table"><thead><tr><th>模型 / 推理</th><th>限时 / 实际用时</th><th>程序分</th><th>Qwen 裁判</th><th>总分 / 100</th><th>验收</th></tr></thead><tbody>'+values+'</tbody></table></div><p><a class="button" href="case18-v3/index.html">查看 Rubric、逐帧扣分图与 Qwen 说明 ↗</a></p></section>';
       return;
     }
     if (c.experimentReport && safeArtifactUrl(c.experimentReport)) {
