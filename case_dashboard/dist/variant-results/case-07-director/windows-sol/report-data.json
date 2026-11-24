@@ -1,0 +1,269 @@
+{
+  "model": "GPT-6.1-sol",
+  "effort": "high",
+  "seconds": 1215.3297171592712,
+  "budget": "120 分钟",
+  "total": 70.9735,
+  "status": "Windows 原生 Resolve 已评",
+  "summary": "正式质量分 70.9735 / 100，两段格式及全片语义检查通过，原题无自动通过线。",
+  "rows": [
+    [
+      "镜头 1 质量分",
+      64.0831,
+      100
+    ],
+    [
+      "镜头 2 质量分",
+      77.8639,
+      100
+    ],
+    [
+      "导播口令匹配",
+      2,
+      2
+    ],
+    [
+      "独立重渲染逐像素一致",
+      200,
+      200
+    ]
+  ],
+  "breakdown": [
+    {
+      "label": "镜头 1 · 5 个采样点",
+      "columns": [
+        "抽样",
+        "主体门槛",
+        "编辑门槛",
+        "整帧边缘 IoU",
+        "区域边缘 IoU",
+        "帧分"
+      ],
+      "rows": [
+        [
+          1,
+          "通过",
+          "通过",
+          0.682,
+          0.682,
+          0.682
+        ],
+        [
+          2,
+          "通过",
+          "通过",
+          0.6185,
+          0.6185,
+          0.6185
+        ],
+        [
+          3,
+          "通过",
+          "通过",
+          0.6046,
+          0.6046,
+          0.6046
+        ],
+        [
+          4,
+          "通过",
+          "通过",
+          0.6501,
+          0.6501,
+          0.6501
+        ],
+        [
+          5,
+          "通过",
+          "通过",
+          0.649,
+          0.649,
+          0.649
+        ]
+      ]
+    },
+    {
+      "label": "镜头 2 · 5 个采样点",
+      "columns": [
+        "抽样",
+        "主体门槛",
+        "编辑门槛",
+        "整帧边缘 IoU",
+        "区域边缘 IoU",
+        "帧分"
+      ],
+      "rows": [
+        [
+          1,
+          "通过",
+          "通过",
+          0.7946,
+          0.7946,
+          0.7946
+        ],
+        [
+          2,
+          "通过",
+          "通过",
+          0.7899,
+          0.7899,
+          0.7899
+        ],
+        [
+          3,
+          "通过",
+          "通过",
+          0.746,
+          0.746,
+          0.746
+        ],
+        [
+          4,
+          "通过",
+          "通过",
+          0.7741,
+          0.7741,
+          0.7741
+        ],
+        [
+          5,
+          "通过",
+          "通过",
+          0.7886,
+          0.7886,
+          0.7886
+        ]
+      ]
+    }
+  ],
+  "files": [
+    {
+      "name": "output_1.mp4",
+      "url": "variant-results/case-07-director/windows-sol/output_1.mp4",
+      "kind": "video",
+      "label": "output_1.mp4",
+      "bytes": 209565
+    },
+    {
+      "name": "output_2.mp4",
+      "url": "variant-results/case-07-director/windows-sol/output_2.mp4",
+      "kind": "video",
+      "label": "output_2.mp4",
+      "bytes": 236916
+    },
+    {
+      "name": "project.drp",
+      "url": "variant-results/case-07-director/windows-sol/project.drp",
+      "kind": "document",
+      "label": "project.drp",
+      "bytes": 79495
+    },
+    {
+      "name": "submission.json",
+      "url": "variant-results/case-07-director/windows-sol/submission.json",
+      "kind": "document",
+      "label": "submission.json",
+      "bytes": 822
+    },
+    {
+      "name": "report.json",
+      "url": "variant-results/case-07-director/windows-sol/report.json",
+      "kind": "document",
+      "label": "report.json",
+      "bytes": 3870
+    },
+    {
+      "name": "README.md",
+      "url": "variant-results/case-07-director/windows-sol/README.md",
+      "kind": "document",
+      "label": "README.md",
+      "bytes": 8488
+    },
+    {
+      "name": "cue_decisions.json",
+      "url": "variant-results/case-07-director/windows-sol/cue_decisions.json",
+      "kind": "document",
+      "label": "cue_decisions.json",
+      "bytes": 1042
+    },
+    {
+      "name": "resolve-submission.zip",
+      "url": "variant-results/case-07-director/windows-sol/resolve-submission.zip",
+      "kind": "document",
+      "label": "含重链接素材的完整封存答卷",
+      "bytes": 37415308
+    }
+  ],
+  "video": [
+    {
+      "name": "output_1.mp4",
+      "url": "variant-results/case-07-director/windows-sol/output_1.mp4",
+      "kind": "video",
+      "label": "output_1.mp4",
+      "bytes": 209565
+    },
+    {
+      "name": "output_2.mp4",
+      "url": "variant-results/case-07-director/windows-sol/output_2.mp4",
+      "kind": "video",
+      "label": "output_2.mp4",
+      "bytes": 236916
+    }
+  ],
+  "evidence": [
+    {
+      "title": "镜头 1 · 1.96 秒",
+      "files": [
+        {
+          "name": "clip-1-input.jpg",
+          "url": "variant-results/case-07-director/windows-sol/clip-1-input.jpg",
+          "kind": "document",
+          "label": "原镜头",
+          "bytes": 9856
+        },
+        {
+          "name": "clip-1-output.jpg",
+          "url": "variant-results/case-07-director/windows-sol/clip-1-output.jpg",
+          "kind": "document",
+          "label": "Resolve 绿底交付",
+          "bytes": 5748
+        }
+      ]
+    },
+    {
+      "title": "镜头 2 · 1.96 秒",
+      "files": [
+        {
+          "name": "clip-2-input.jpg",
+          "url": "variant-results/case-07-director/windows-sol/clip-2-input.jpg",
+          "kind": "document",
+          "label": "原镜头",
+          "bytes": 9994
+        },
+        {
+          "name": "clip-2-output.jpg",
+          "url": "variant-results/case-07-director/windows-sol/clip-2-output.jpg",
+          "kind": "document",
+          "label": "Resolve 绿底交付",
+          "bytes": 7066
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "两条口令均识别正确，10 个抽样点全部通过主体及编辑门槛。全片语义复核确认保留指定人物并排除另一人。",
+    "两段最低边缘分均出现在 1.96 秒，第一段约 0.6046，第二段约 0.7460。分差来自边缘 IoU，第一段是主要失分。",
+    "PNG 封装进 QuickTime 的初次试渲染出现黑底和边缘异常。最终改用 ProRes 4444 带 Alpha 前景，DRP 仍包含两条标明用途的诊断时间线。",
+    "独立导入、重链接并重新渲染后，两段各 100 帧与封存 MP4 逐像素一致。",
+    "项目保留可编辑的绿底和 Alpha 前景。完整端到端线性光合规待核。"
+  ],
+  "reports": [
+    {
+      "name": "scoring.json",
+      "url": "variant-results/case-07-director/windows-sol/scoring.json",
+      "kind": "document",
+      "label": "scoring.json",
+      "bytes": 39728
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": "case3-resolve-green-v3.1-draft",
+  "method": "The authoritative 100 PNGs per clip were processed individually at unchanged 512x288 coordinates. A separable clean background plate was fitted using exposed pixels only. Within the selected subject region, color difference generated a narrow trimap, then a local 3x3 closed-form matting Laplacian was solved in linear RGB. Physical gamut constraints bounded alpha, and original background contribution was removed in linear light. Sixteen-bit straight RGBA PNGs were encoded as 25 fps ProRes 4444 foreground intermediates. Resolve performed the editable two-track green composition and every final H.264 render; no external final green video encoding was used.",
+  "target_strategy": "Director 1 says Keep the person on the right; retain the full-length white-coated woman. Director 2 says Keep the person on the left; retain the dark-jacketed woman holding a notebook. Reference identity images label spatial positions only. Keep is fixed for the entire respective 100-frame clip; the other person is excluded. See cue_decisions.json.",
+  "tools": [
+    {
+      "name": "DaVinci Resolve Free, Windows native RunScript API",
+      "version": "21.1.2.10"
+    },
+    {
+      "name": "Python",
+      "version": "3.13.18"
+    },
+    {
+      "name": "OpenCV",
+      "version": "4.10.0"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.2.6"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.15.3"
+    },
+    {
+      "name": "FFmpeg/ffprobe (intermediates and read-only verification)",
+      "version": "n8.1.3-29-gad3b795b72-20261101"
+    },
+    {
+      "name": "case07-asr, Windows English speech recognizer",
+      "version": "Supplied local Case07 runtime; recognizer build not exposed"
+    },
+    {
+      "name": "jsonschema (delivery validation)",
+      "version": "4.25.1"
+    }
+  ],
+  "interface": "API",
+  "color_alpha": "Input PNG RGB is sRGB. Alpha is linear coverage, not gamma encoded. Edge RGB is unassociated/straight, recovered in linear sRGB, then encoded to sRGB for 16-bit PNG. ProRes 4444 intermediates carry straight alpha and 25 fps, BT.709 YUV matrix with video range; Resolve media Alpha mode Straight, Data Level Video, Input Color Space sRGB. Project is custom DaVinci YRGB Color Managed v2, combined color spaces (separate=0), ACEScg timeline, sRGB input/output, no input/output DRT or gamut mapping, imageResizingGamma Linear. The standalone Input Gamma property rejected sRGB, so the accepted combined sRGB setting was used. Final native MP4 is limited-range 8-bit H.264 4:2:0, SMPTE170M matrix, BT.709 primaries, IEC61966-2-1 transfer. Measured green/color and edge diagnostics are supplied; exact RGB after native lossy encoding is not claimed.",
+  "limitations": "Matte edges are estimated from visible source pixels without pretrained models or hidden references; fine hair, narrow gaps and low-contrast edges can retain small estimation errors. ProRes and final H.264 add quantization/chroma filtering. Native decoded distant green is approximately RGB(0,252,0), rather than exactly (0,255,0); diagnostic only per contract. The frozen bridge has no delete operation: two obsolete PNG/QuickTime decoder-test timelines remain alongside the two explicitly named DELIVERY timelines. Their media are preserved to avoid offline bin references; they are not final compositions. Rebuild script creates only the two valid delivery timelines. DRP was exported natively after both final jobs completed and checked as a nonempty CRC-valid archive. Independent reimport/relink/rerender is reserved for the evaluator because the bridge does not expose project import/reopen. Official Resolve manual/API documentation was not supplied; the supplied frozen API_RUNTIME.md operations and contract were the documentation actually consulted. No independent quality score is claimed."
+}

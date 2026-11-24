@@ -1,0 +1,26 @@
+[
+  {
+    "clip_id": "clip_1",
+    "keep": "right",
+    "audio_based_evidence": {
+      "recording": "/candidate/input/director_1.wav",
+      "recognizer": "case07-asr (local Windows English speech recognizer)",
+      "hypothesis": "Keep the person on the right",
+      "confidence": 0.434358537,
+      "direction_agreement": "All 10 supplied hypotheses identify right/write/Wright; none identify left."
+    },
+    "identity_reference": "identity_1.jpg labels the full-length woman in a white medical coat as RIGHT."
+  },
+  {
+    "clip_id": "clip_2",
+    "keep": "left",
+    "audio_based_evidence": {
+      "recording": "/candidate/input/director_2.wav",
+      "recognizer": "case07-asr (local Windows English speech recognizer)",
+      "hypothesis": "Keep the person on the left",
+      "confidence": 0.424302459,
+      "direction_agreement": "All 8 supplied hypotheses identify left; none identify right."
+    },
+    "identity_reference": "identity_2.jpg labels the seated/waist-up woman in a dark jacket holding a notebook as LEFT."
+  }
+]
