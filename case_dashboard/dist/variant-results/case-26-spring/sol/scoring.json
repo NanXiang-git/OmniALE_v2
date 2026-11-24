@@ -1,0 +1,144 @@
+{
+  "rows": [
+    [
+      "分段画面改善",
+      8.4,
+      8.4
+    ],
+    [
+      "运动细节",
+      7.8933,
+      8.4
+    ],
+    [
+      "时序稳定",
+      2.8,
+      2.8
+    ],
+    [
+      "光变保留",
+      3.8258,
+      5.6
+    ],
+    [
+      "正常段保护",
+      2.8,
+      2.8
+    ],
+    [
+      "动作证据",
+      7.875,
+      15.75
+    ],
+    [
+      "实际修复质量",
+      7.875,
+      15.75
+    ],
+    [
+      "光变意图",
+      5.25,
+      10.5
+    ],
+    [
+      "音频相对改善",
+      1.1743665834657686,
+      6
+    ],
+    [
+      "波形保真",
+      0.21453055422569364,
+      6
+    ],
+    [
+      "频谱保真",
+      3.4447319278045225,
+      6
+    ],
+    [
+      "原配乐起音",
+      1.357917436772566,
+      2
+    ],
+    [
+      "损伤事件恢复",
+      0.04326326680927958,
+      1
+    ],
+    [
+      "立体声保留",
+      0.6309668584561308,
+      1
+    ],
+    [
+      "正常音频保护",
+      2.0,
+      2
+    ],
+    [
+      "音频独立听评",
+      null,
+      6
+    ]
+  ],
+  "visual": 46.719049999999996,
+  "audio_automatic": 8.865776627533961,
+  "total": null,
+  "pending": [
+    "audible_artifacts",
+    "audio_judge:Audio judge calibration failed",
+    "musical_content",
+    "timbre_detail"
+  ],
+  "submission_sha256": {
+    "audio_report.json": "816cc4a10d3fcc07be19b8b91b901662562e69438be8bc11d82c5ac8dece279b",
+    "preview.mp4": "e8ae8831ca0145cadadc9d48c764214d64beff3856c926d4b8cf52648799bbfd",
+    "project.json": "e895f46dd051d9982f107901b625292b7e372bec2cbeaa7d90a60f5936628da9",
+    "repair.mkv": "7d4354cadd5835b1805817a1bbcd8ef4830d0da6185c4c6b255598d44f516baf",
+    "report.json": "c259be4fd7e67fc7805d421fdbbb8dcc34e5a83c84d71e02b89b473f6ca89034",
+    "restored.mkv": "1b73cff945295d6ad757f42603acaefe2ac9fcb014ebae3dcdf654cc307e448e",
+    "restored_audio.wav": "101a731093332f9a511650bda734213c8dd5586d6eb9c1faf528d7aa217171c4",
+    "restored_av.mp4": "f028fc2ef005dbb4e31cd86192a4f45d21aa063d2ba00fcddcb020657fff4721",
+    "submission.json": "0f5335283bfcf9dbff73744a55f702b5270e4d2311b01013722e42078137c6e6"
+  },
+  "audio_blocks": [
+    {
+      "start": 2,
+      "end": 8,
+      "input_snr_db": 1.4706796167407101,
+      "output_snr_db": 4.554719394165559,
+      "improvement_db": 3.084039777424849,
+      "spectral_distance_db": 5.301554876688697
+    },
+    {
+      "start": 8,
+      "end": 13,
+      "input_snr_db": 0.7274729258153294,
+      "output_snr_db": 3.788601518372932,
+      "improvement_db": 3.0611285925576026,
+      "spectral_distance_db": 5.586115508469056
+    },
+    {
+      "start": 13,
+      "end": 19,
+      "input_snr_db": 1.5379709585441124,
+      "output_snr_db": 4.733898131616256,
+      "improvement_db": 3.1959271730721435,
+      "spectral_distance_db": 5.275297001090434
+    },
+    {
+      "start": 19,
+      "end": 24,
+      "input_snr_db": 1.2661751660661116,
+      "output_snr_db": 3.973514695989962,
+      "improvement_db": 2.7073395299238503,
+      "spectral_distance_db": 5.73844857244568
+    }
+  ],
+  "visual_block_psnr_gain_db": [
+    12.694499864692867,
+    12.7867002557667,
+    13.550287050180199,
+    16.334894699112535
+  ]
+}

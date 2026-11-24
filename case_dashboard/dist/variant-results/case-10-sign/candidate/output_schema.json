@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "segments.json",
+  "type": "object",
+  "required": [
+    "segments"
+  ],
+  "properties": {
+    "segments": {
+      "type": "array",
+      "minItems": 23,
+      "maxItems": 23,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "zh_cues",
+          "en_cues",
+          "confidence_zh",
+          "confidence_en",
+          "uncertainty"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "S01",
+              "S02",
+              "S03",
+              "S04",
+              "S05",
+              "S06",
+              "S07",
+              "S08",
+              "S09",
+              "S10",
+              "S11",
+              "S12",
+              "S13",
+              "S14",
+              "S15",
+              "S16",
+              "S17",
+              "S18",
+              "S19",
+              "S20",
+              "S21",
+              "S22",
+              "S23"
+            ]
+          },
+          "zh_cues": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "en_cues": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "confidence_zh": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "confidence_en": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$comment": "The verifier additionally checks unique segment IDs, cue coverage, sorted indices, subtitle syntax and media properties."
+}

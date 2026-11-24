@@ -1,0 +1,41 @@
+{
+  "method": "I inspected channel waveforms, multiscale spectrograms, and cross-channel coherence in the original 48 kHz stereo mix. I tracked the drifting narrow interference near 46–62 Hz and subtracted a bounded phase-coherent estimate. I fitted and subtracted isolated click transients using their abrupt edges, then conditioned short sample repairs on surrounding samples. For single-channel gaps, I combined the affected channel’s surviving low-band content with a local prediction from the intact channel and two-sided autoregressive continuation. Multiresolution spectral attenuation uses the changing upper-band hiss, a local broadband noise floor, and stereo coherence to preserve supported partials and attacks. The edit keeps the input sample clock and copies both protected ranges directly. Music by Torin Borrowdale and sound by Sander Houtman in Spring (2019), Blender Foundation, CC BY 4.0.",
+  "limitations": "Separation is least certain where the drifting tone overlaps the strongest bass effects or where dense noise overlaps weak high partials. Single-channel gap waveforms are estimates, especially in the 19.380–19.404 second right-channel event. The spectral pass attenuates some distortion products, while nonlinear changes to the surviving waveform may remain. Observations are based on decoded samples, spectra and channel comparisons.",
+  "checks": [
+    {
+      "start": 0,
+      "end": 2,
+      "observation": "The first 96,000 stereo PCM frames match the input exactly."
+    },
+    {
+      "start": 2.65,
+      "end": 5.2,
+      "observation": "The continuous drifting line is attenuated in the side spectrogram while the surrounding pitched lines remain visible. The 3.170-second impulsive peak in the 22.0–23.8 kHz inspection band drops by 51.6 dB."
+    },
+    {
+      "start": 7.39,
+      "end": 7.405,
+      "observation": "The right-channel gap shows no flat substitute. Its 140–1800 Hz RMS rises from 0.00499 to 0.01532, compared with 0.01632 in the intact channel."
+    },
+    {
+      "start": 12.86,
+      "end": 14.02,
+      "observation": "The large burst transients at 12.870 and 14.004 seconds are reduced. Strong bass and the visible onset and decay of the surrounding effect remain."
+    },
+    {
+      "start": 17.65,
+      "end": 24,
+      "observation": "The stereo tracks retain different energy patterns through the louder section. The 19.380-second right-channel gap uses a local estimate. Integrated output energy at 3.5–7.9 kHz from 19 to 24 seconds is 17.79 dB below the noisy input."
+    },
+    {
+      "start": 24,
+      "end": 26,
+      "observation": "The last 96,000 stereo PCM frames match the input exactly."
+    },
+    {
+      "start": 0,
+      "end": 26,
+      "observation": "WAV contains 1,248,000 stereo PCM16 frames at 48 kHz. Both preview streams start at time zero and declare 26 seconds. AAC to PCM SNR over the declared duration is 46.95 dB with sample alignment unchanged."
+    }
+  ]
+}

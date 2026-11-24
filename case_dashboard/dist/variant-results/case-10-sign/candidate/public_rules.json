@@ -1,0 +1,28 @@
+{
+  "output_directory": "/app/results",
+  "required_files": [
+    "zh-CN.srt",
+    "en.srt",
+    "segments.json",
+    "subtitled.mkv"
+  ],
+  "timeout_seconds": 3600,
+  "weights": {
+    "meaning": 65,
+    "bilingual": 8,
+    "timing": 12,
+    "readability": 5,
+    "delivery": 5,
+    "calibration": 5
+  },
+  "reward": "score / 100",
+  "passing_score_minimum": 90,
+  "passing_component_minimum": {
+    "meaning": 61.75,
+    "bilingual": 7.6,
+    "timing": 10.8,
+    "delivery": 5
+  },
+  "critical_errors_allowed_to_pass": 0,
+  "policy": "Closed-source-material evaluation; model API access only, no source lookup; see instruction.md for complete rules."
+}

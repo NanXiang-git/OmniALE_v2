@@ -1,0 +1,1 @@
+VideoMatte240K / RobustVideoMatting 官方评估素材中未用于原题的片段 0003、0004、0008。画面用数据集前景和 alpha 新合成。导播工作轨使用 Festival Lite 合成英语。素材溯源 https://github.com/PeterL1n/RobustVideoMatting/blob/master/documentation/training.md

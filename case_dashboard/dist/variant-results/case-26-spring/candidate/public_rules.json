@@ -1,0 +1,124 @@
+{
+  "version": "3.2-av-music-heavy",
+  "pass_threshold": 80,
+  "modality_minima": {
+    "visual": 42,
+    "audio": 18
+  },
+  "visual": {
+    "maximum": 70,
+    "formula": "0.7 * C * (automatic_quality_40 + visual_judge_60)",
+    "compliance": "C=min(delivery/5,repair_replay/5), clipped to [0,1]",
+    "automatic_weights": {
+      "restoration": 12,
+      "motion_detail": 12,
+      "temporal": 4,
+      "lighting": 8,
+      "protected": 4
+    },
+    "judge_weights": {
+      "motion_evidence": 22.5,
+      "restoration_quality": 22.5,
+      "lighting_intent": 15
+    },
+    "details": "visual_rules_v3.json retains measurement anchors and hard constraints; weights above supersede its historical weights."
+  },
+  "audio": {
+    "maximum": 30,
+    "objective": {
+      "relative_improvement": 6,
+      "absolute_waveform": 6,
+      "spectral_fidelity": 6,
+      "musical_onsets": 2,
+      "damage_events": 1,
+      "stereo_preservation": 1,
+      "normal_protection": 2
+    },
+    "judge_items": [
+      {
+        "id": "musical_content",
+        "weight": 2,
+        "criterion": "Same melody, rhythm, note attacks, instruments and stereo relationships; no replaced, omitted or hallucinated music. Preserve the original designed sound effects in the mix."
+      },
+      {
+        "id": "timbre_detail",
+        "weight": 2,
+        "criterion": "Preserve timbre, high-frequency detail and natural decay compared with clean music; no muffling or pumping."
+      },
+      {
+        "id": "audible_artifacts",
+        "weight": 2,
+        "criterion": "Remove injected hiss, hum, clicks and distortion without adding musical noise or unstable processing."
+      }
+    ],
+    "judge_ratings": {
+      "0": "Core content wrong/lost, severe damage or no meaningful repair; acceptance fails.",
+      "1": "Reference-faithful music with effective repair and no material new artifacts.",
+      "0.5": "Audible improvement and core music preserved, but localized defects remain."
+    },
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_frames": 1248000,
+    "format": "PCM16 WAV",
+    "protected_seconds": [
+      [
+        0,
+        2
+      ],
+      [
+        24,
+        26
+      ]
+    ],
+    "assessment_blocks": [
+      [
+        2,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        19,
+        24
+      ]
+    ],
+    "damage_score": "For four fixed windows, improvement quality clip(gain/15,0,1), absolute quality clip((output_SNR-3)/32,0,1), spectral quality 1-clip((weighted_log_spectral_distance-0.75)/11.25,0,1). Each contributes 6*pool(quality). pool=0.75*mean+0.25*mean(worst ceil(count/4)). No post-hoc gain/time fitting.",
+    "normal_score": "2*clip((minimum_protected_SNR_dB-30)/20,0,1)",
+    "format_score": "No bonus; exact format/time/synchronization are hard gates.",
+    "hard_constraints": {
+      "each_block_gain_db": 0.5,
+      "each_block_output_snr_db": 3,
+      "protected_snr_db": 30,
+      "global_waveform_correlation": 0.65,
+      "no_silence_or_replacement": true,
+      "av_preview_audio_snr_db": 25,
+      "av_preview_frame_mae": 0.025
+    },
+    "spectral_distance": "Mean across STFT sizes 512/2048/4096, half overlap: weighted mean absolute log magnitude difference (dB), weights=sqrt(reference_magnitude+1e-5), log floor=1e-5. Included in score.",
+    "event_score": "Pre-annotated original-score attacks: mean absolute 5ms RMS-envelope error / mean reference envelope, assessed [-12,+65]ms around fixed attacks, quality=1-clip((error-.03)/.57,0,1), 2*pool. Damage event windows [-8,+15]ms around true event: quality=clip((SNR-3)/27,0,1), 1*pool. Half-second stereo windows: error=abs(left energy fraction difference)+abs(side/mid energy ratio difference)/(1+reference ratio), quality=1-clip((error-.01)/.24,0,1), 1*pool."
+  },
+  "judges": {
+    "visual_model": "gpt-6.1-sol",
+    "visual_reasoning_effort": "high",
+    "visual_protocol": "Old v3 final corrected protocol: 26 one-second native-frame master/target/input windows plus 26 preview/old/target/input windows; full frozen Chinese rubric; final direct-image supplementary review for unverified items. No Qwen visual ratings.",
+    "audio_model": "qwen3.8-omni-flash",
+    "audio_protocol": "Actual audio, randomized A/B order against reference; same-media and strong-damage calibration before formal run; independent identical-media control during judging; failed controls leave score pending. Three criteria, 2 points each, ratings 0/.5/1.",
+    "missing_evidence": "pending; formal total remains null",
+    "zero_core_rating": "separate actual-media confirmation required",
+    "timestamp_policy": "Only evaluator constructed source intervals are trusted."
+  },
+  "solver": {
+    "model": "gpt-6.2-sol",
+    "reasoning_effort": "xhigh",
+    "harness": "Codex CLI",
+    "wall_clock_seconds": null,
+    "network": false,
+    "truth_access": false
+  }
+}

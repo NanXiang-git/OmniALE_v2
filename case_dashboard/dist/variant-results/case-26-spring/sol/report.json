@@ -1,0 +1,45 @@
+{
+  "method": "The display-RGB pass estimates and divides out the measured 3.7 Hz and 5.3 Hz rapid exposure components with shot-dependent amplitudes. It reduces horizontal row offsets, forms edge-preserving luminance and opponent-color guides, and aligns nearby frames within each shot using dense optical flow. Forward and backward agreement and local residuals limit neighboring contributions at moving edges and occlusions. Local noise estimates control how much detail returns from the aligned observations. Luminance-guided chroma filtering targets the sections with larger color blotches, a clipped-noise correction reduces the upward bias in near-black samples, and a bounded inverse blend reduces visible trailing contours on selected motion. The three protected windows are copied sample for sample. Source credit covers the excerpt adapted from Spring (2019), Blender Foundation, directed by Andy Goralczyk, CC BY 4.0.",
+  "protected_ranges": [
+    [
+      0,
+      48
+    ],
+    [
+      264,
+      288
+    ],
+    [
+      600,
+      624
+    ]
+  ],
+  "color_contract": "8bit displayRGB, same candidate transform; no linear/mastering reinterpretation",
+  "limitations": "Rapid motion and occlusion reduce the number of reliable neighboring observations. Some soft motion and faint doubled contours remain around the upward turn, and small texture in the darkest fog can be attenuated. The lighting and motion comparisons use the supplied media. Reference-based PSNR, motion and lighting scores were unavailable.",
+  "checks": [
+    {
+      "frame": 120,
+      "observation": "The rock contour and ground texture are visible with reduced grain, while the moving dog retains its soft edges. Across frames 84–187, the fitted rapid exposure components fall from 4.88% to 0.12% of mean brightness."
+    },
+    {
+      "frame": 175,
+      "observation": "The localized warm cast on the rock remains visible. The sweep crosses a darker blue background and is followed by the warmer face shot at frame 204."
+    },
+    {
+      "frame": 235,
+      "observation": "The upward face turn remains in sequence. The preceding eye contours are reduced, with some visible residual softness around the eyes."
+    },
+    {
+      "frame": 345,
+      "observation": "The torch-lit figure and branches remain distinct in the wide shot while larger colored background blotches are suppressed."
+    },
+    {
+      "frame": 450,
+      "observation": "The cool fog remains darkening through the shot, and the silhouettes and faint light points are visible. Across frames 410–458, the fitted rapid components fall from 4.96% to 0.05% of mean brightness."
+    },
+    {
+      "frame": 600,
+      "observation": "All 96 protected frames match input and carry neutral repairs. The full layer changes 114,034,030 pixel positions across 528 frames and replays within one RGB code value. Both H.264 previews decode to identical frames, with maximum frame MAE 0.01093 and minimum grayscale correlation 0.99679 to the master."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "source_case_id",
+    "resolve_project",
+    "clips",
+    "project_file",
+    "readme"
+  ],
+  "properties": {
+    "version": {
+      "const": "case3-resolve-green-v3.1-draft"
+    },
+    "source_case_id": {
+      "const": "07"
+    },
+    "resolve_project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clips": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "clip_id",
+            "output",
+            "frame_map",
+            "render_job_id",
+            "timeline_name"
+          ],
+          "properties": {
+            "clip_id": {
+              "const": "clip_1"
+            },
+            "output": {
+              "const": "output_1.mp4"
+            },
+            "frame_map": {
+              "const": {
+                "start": 0,
+                "end_exclusive": 100,
+                "step": 1,
+                "mode": "identity"
+              }
+            },
+            "render_job_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "timeline_name": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "clip_id",
+            "output",
+            "frame_map",
+            "render_job_id",
+            "timeline_name"
+          ],
+          "properties": {
+            "clip_id": {
+              "const": "clip_2"
+            },
+            "output": {
+              "const": "output_2.mp4"
+            },
+            "frame_map": {
+              "const": {
+                "start": 0,
+                "end_exclusive": 100,
+                "step": 1,
+                "mode": "identity"
+              }
+            },
+            "render_job_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "timeline_name": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      ],
+      "items": false
+    },
+    "project_file": {
+      "const": "project.drp"
+    },
+    "readme": {
+      "const": "README.md"
+    }
+  }
+}

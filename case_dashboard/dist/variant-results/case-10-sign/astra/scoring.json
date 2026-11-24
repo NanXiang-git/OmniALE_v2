@@ -1,0 +1,115 @@
+{
+  "score": 39,
+  "raw_score": 60.284,
+  "components": {
+    "meaning": 29.909,
+    "bilingual": 3.594,
+    "timing": 12.0,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.78
+  },
+  "caps": [
+    [
+      39,
+      "critical_semantic_error"
+    ],
+    [
+      39,
+      "semantic_coverage_below_half"
+    ]
+  ],
+  "critical_errors": [
+    {
+      "id": "S01",
+      "errors": [
+        "aspect_flip"
+      ],
+      "note": "模型辅助、相对作者标注评审：1.500—4.750秒的动作序列与标注相容。“我今天吃香蕉。”和“I'm having a banana today.”均保留我、香蕉及今天吃这一事件，但中文未明确保留“吃过”，英文将已完成事件改为正在进行或当日安排，第三slot各得0.5，并就英文标记aspect_flip。中文体貌未定、英文明确进行式，双语一致性为0.5。1.400—4.820秒字幕窗覆盖主要表达；完成体判断主要依据作者标注，采样图像不能独立确证。"
+    },
+    {
+      "id": "S03",
+      "errors": [
+        "wrong_person"
+      ],
+      "note": "模型辅助、相对作者标注评审：17.250秒的胸部指示及18.250—18.750秒的掌上动作与“我／姓名／签字”的标注相容。“我们在哪儿？”和“Where are we?”把单数“我”改为“我们”，记wrong_person，第一slot得0；签名信息完全缺失，第二slot得0；仅保留地点疑问，未保留询问签名位置的关系，第三slot得0.5。两语同义但共同偏离原意。17.070—20.100秒显示窗与主要动作同步，语义错误不另作时间错位扣分。"
+    },
+    {
+      "id": "S06",
+      "errors": [
+        "wrong_object"
+      ],
+      "note": "按作者中文及gloss参照，36.851—39.351秒表达涉及结账、指向和台桌。字幕“那边的房间[无法确认]。”／“The room over there [unclear].”把“收银台”替换为“房间”，构成wrong_object；也没有保留对方或“请去结账”的请求，三个slot均不得分。两语内容及不确定语气一致。36.781—39.591秒覆盖主要动作，对齐不因语义错误另行扣分；细部词义判断受离散采样限制。"
+    },
+    {
+      "id": "S08",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "字幕“我今天想在家休息。”／“I want to rest at home today.”保留“我今天”和想做某事的意愿，第一、第三slot均为1；“在家玩游戏”只留下地点，第二slot为0.5。依据作者标注及52.668—53.418秒末段双手动作参照，“休息／rest”是对原活动的无依据替换，记invented_fact。两语信息一致，50.498—53.828秒时窗与主要表达同步；50.418秒初始抬手不据此强判漏译或错位。"
+    },
+    {
+      "id": "S10",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "65.596—69.976秒的“跟[无法确认]一起。”与“Together with [unclear].”彼此等价，但均未保留作者标注中的“这款玩具”“售卖”“今天卖完”，三个slot均为0。两语新增“一起/Together with”的共同关系，标记invented_fact；画面未提供足以推翻作者标注的明确证据。字幕覆盖约65.486—69.736秒的主要动作，内容错误与时间定位分别评分。"
+    },
+    {
+      "id": "S11",
+      "errors": [
+        "wrong_object"
+      ],
+      "note": "73.233—76.453秒的“那个人骑车去。”和“They're going by bike.”仅保留第三方人物，遗漏“他的弟弟”的亲属及所属关系，人物项各给0.5，不标wrong_person。原意为开汽车离去，“骑车/by bike”改变交通工具，车项为0并标wrong_object。两语保留移动或去的部分含义，却未完整表达“已经开走”，第三项各给0.5；英文进行表达比中文更明确，双语一致性给0.5，不将完成信息的缺失另贴翻转标签。"
+    },
+    {
+      "id": "S13",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "本项为模型辅助、相对作者标注的评审。84.423—87.613秒字幕“有这么长”及“is about this long”均未保留“收据”“保管”“请求对方保留”三个slot，并加入标注不支持的长度断言，故各slot为0。两语信息一致，但不因此获得内容分；字幕时窗与可见动作基本同步。"
+    },
+    {
+      "id": "S17",
+      "errors": [
+        "request_as_fact"
+      ],
+      "note": "本项为依据作者标注和时序图像的模型辅助评审。115.522—118.182秒字幕“这个[无法确认]适合你。”及“This [unclear] suits you.”仅保留“这”的指示信息，未识别slot1的发票，故各给0.5；slot2“保管”完全缺失，slot3“请你收好”的请求被改成“适合你”的陈述，均为0，并记request_as_fact。两语信息及语气一致，但不因此获得内容分。时窗覆盖可见主要动作；采样图未显示实质标注冲突。"
+    },
+    {
+      "id": "S18",
+      "errors": [
+        "question_as_fact",
+        "invented_fact"
+      ],
+      "note": "122.662—128.082秒字幕“你给我[无法确认]。”和“You [unclear] for me.”完整保留slot1“你”；slot2“下周一及上班”及slot3“询问可不可以”均未保留。英语将询问改成陈述，记question_as_fact；两语额外引入“给我／for me”的接受者或受益者关系，原标注无此信息，记invented_fact，不把单纯日期遗漏记为时间翻转。中文“给我”与英文“for me”关系仅部分对应，双语给0.5。依据全部采样图，主要动作落在字幕时窗内；手势细节判读仍有采样限制。"
+    },
+    {
+      "id": "S20",
+      "errors": [
+        "wrong_object"
+      ],
+      "note": "136.286—139.626秒字幕“我今天不想去图书馆。”及“I don't want to go to the library today.”完整保留slot1“我今天”和slot3“不想去”，各给1。slot2“去学校”保留“去”，却把目的地“学校”改成“图书馆／library”，各给0.5，并记wrong_object。两语内容与否定意愿一致。可见主要动作约在136.406—139.156秒，时窗覆盖表达；学校词义采用作者标注并结合末段双手动作核对，静态采样仍限制独立词汇辨认。"
+    },
+    {
+      "id": "S22",
+      "errors": [
+        "wrong_object"
+      ],
+      "note": "149.023—154.263秒中文“你觉得这件衣服大小合适吗？”只以泛称衣服保留部分服装对象信息，漏掉“你挑的”和裤子类别，第一项给0.5；英文“this top”明确改成上衣，与作者“裤子”冲突，第一项为0并记wrong_object。两语均表达是否适合你的尺码，第二项给1；却把原意“该尺码没有了”替换成合身与否的询问，第三项为0。没有直接断言有货，不另贴polarity_flip。中文泛称衣服、英文限定上衣，双语一致性为0.5。149.073—154.073秒可见动作与字幕时窗相合。判断以作者标注为参照，4fps手形细节有限。"
+    }
+  ],
+  "review_source": "live_api",
+  "inspection_limits": [
+    "Annotation-relative single LLM review; not CSL expert certification.",
+    "Ordered 4fps contact sheets plus available 8fps boundary sheets, not continuous playback.",
+    "Portable reviewer uses batches of up to four clips; it is not the historical interactive Codex judge.",
+    "Frame grid timestamps are not expert gesture boundary ground truth."
+  ],
+  "submission_sha256": {
+    "zh-CN.srt": "d2abac47466a773171e599539268b27e51f923ca25c89179c24dfd11b287596c",
+    "en.srt": "732c0b2813c36c6e7ae91639e85ab87b824a9b76b4041ecc17cf3741458c4128",
+    "segments.json": "05f8c6599f496081e76452e704cca6644d1c661400ca31d62d06120110c24a2b",
+    "subtitled.mkv": "4fb8f421a2658334f87bad05b2a82bd705f6ceaace0109007aabc91df9573bc1"
+  }
+}

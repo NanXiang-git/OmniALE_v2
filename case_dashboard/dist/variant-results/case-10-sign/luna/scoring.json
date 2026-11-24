@@ -1,0 +1,51 @@
+{
+  "score": 25.965,
+  "raw_score": 25.965,
+  "components": {
+    "meaning": 2.826,
+    "bilingual": 0.348,
+    "timing": 7.826,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.965
+  },
+  "caps": [
+    [
+      39,
+      "critical_semantic_error"
+    ],
+    [
+      39,
+      "semantic_coverage_below_half"
+    ]
+  ],
+  "critical_errors": [
+    {
+      "id": "S08",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "50.2—54.3秒提交“吃[无法确认]”和“Eat [unclear].”，均未保留slot“我今天”“在家玩游戏”“想做这件事”，三项记0。作者中文及gloss描述想在家玩游戏，未含“吃”；图中50.418—53.418秒的动作序列也未提供足以支持新增吃东西活动的证据，按标注参照记invented_fact。字幕时窗覆盖可见主要动作，对齐记1，仅评价时间覆盖；两语同样给出“吃”及未知提示，双语记1而不产生正确内容分。细部手形受4fps采样限制，降低置信度，未发现足以认定标注冲突的证据。"
+    },
+    {
+      "id": "S23",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "本项为基于作者标注的模型辅助评审。155.9—159.4秒的“我[无法确认]家”及“I [unclear] home.”只保留“我们”中的说话者成分，遗漏共同参与者，该slot各给0.5，不另将这一遗漏标为人称翻转；“明天”和“提议到时再出发”均未保留，各为0。“家/home”加入作者中文及gloss未提供的地点信息，记invented_fact。两语残片信息一致；时窗覆盖约155.890—158.390秒的主要动作，对齐为1。词义判断受静帧和运动模糊限制，已降低置信度。"
+    }
+  ],
+  "review_source": "live_api",
+  "inspection_limits": [
+    "Annotation-relative single LLM review; not CSL expert certification.",
+    "Ordered 4fps contact sheets plus available 8fps boundary sheets, not continuous playback.",
+    "Portable reviewer uses batches of up to four clips; it is not the historical interactive Codex judge.",
+    "Frame grid timestamps are not expert gesture boundary ground truth."
+  ],
+  "submission_sha256": {
+    "zh-CN.srt": "87f4f615a9dad5130e50df0d233772718177dec424afcaba80436b13bfdd3342",
+    "en.srt": "da077b0c4d017a73fb07583832b40aec13d814263651cb9159a79e87727504fd",
+    "segments.json": "af7aa5911788add63033e14481a3c4db149604b602b82a693e782b224a8059fe",
+    "subtitled.mkv": "ce2af96a78ccfe3116809d1beb24c36196cb45b4acc0cf11c75a1be66375b256"
+  }
+}
