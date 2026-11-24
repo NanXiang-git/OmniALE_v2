@@ -2623,7 +2623,355 @@ window.OMNIALE_VARIANT_CASES = {
         "text": "\"\"\"Optional local Windows TTS for solvers; no target-answer text is supplied.\nUsage: python tts.py --text-file UTF8.txt --voice V01 --output output.wav\n\"\"\"\nfrom pathlib import Path\nimport argparse,json,subprocess,tempfile\nfrom media import ROOT,ff,write_json\nVOICES={\n 'V01':('Microsoft Huihui Desktop',0,1.0),\n 'V02':('Microsoft Kangkang',0,1.0),\n 'V03':('Microsoft Yaoyao',0,1.0),\n 'V04':('Microsoft Huihui Desktop',0,.90),\n 'V05':('Microsoft Kangkang',0,.88),\n 'V06':('Microsoft Yaoyao',0,1.10),\n 'V07':('Microsoft Huihui Desktop',1,1.08),\n 'V08':('Microsoft Kangkang',1,1.10),\n}\ndef synth(text,voice,output,english=False):\n output=Path(output).resolve();output.parent.mkdir(parents=True,exist_ok=True)\n base,rate,pitch=('Microsoft Zira Desktop',0,1.0) if english else VOICES[voice]\n cache=output.parent/'_tts_tmp';cache.mkdir(exist_ok=True)\n with tempfile.TemporaryDirectory(dir=cache) as tmp:\n  tmp=Path(tmp);job=tmp/'job.json';wav=tmp/'voice.wav'\n  write_json(job,{'text':text,'voice':base,'rate':rate,'output':str(wav)})\n  ps=tmp/'voice.ps1';ps.write_text('''Add-Type -AssemblyName System.Speech\n$j=Get-Content -LiteralPath $args[0] -Raw -Encoding UTF8 | ConvertFrom-Json\n$s=New-Object System.Speech.Synthesis.SpeechSynthesizer\n$s.SelectVoice($j.voice);$s.Rate=$j.rate;$s.SetOutputToWaveFile($j.output);$s.Speak($j.text);$s.Dispose()\n''',encoding='utf-8-sig')\n  subprocess.run(['powershell','-NoProfile','-ExecutionPolicy','Bypass','-File',str(ps),str(job)],check=True,capture_output=True)\n  ff('-i',wav,'-af',f'aresample=48000,asetrate={round(48000*pitch)},aresample=48000,atempo={1/pitch}', '-c:a','pcm_s16le',output)\n return output\nif __name__=='__main__':\n p=argparse.ArgumentParser();p.add_argument('--text-file',required=True);p.add_argument('--voice',choices=VOICES,default='V01');p.add_argument('--output',required=True);a=p.parse_args();synth(Path(a.text_file).read_text(encoding='utf8'),a.voice,a.output)\n"
       }
     ],
-    "models": {},
-    "result_status": "素材已更换，新答卷评测中"
+    "models": {
+      "sol": {
+        "video": {
+          "name": "preview.mp4",
+          "path": "preview.mp4",
+          "url": "variant-results/case-31/sol/preview.mp4",
+          "kind": "video",
+          "bytes": 16555673,
+          "meta": {
+            "duration": 150.24,
+            "width": 1256,
+            "height": 640,
+            "fps": "25/1",
+            "sampleRate": null
+          }
+        },
+        "files": [
+          {
+            "name": "README.md",
+            "path": "README.md",
+            "url": "variant-results/case-31/sol/README.md",
+            "kind": "document",
+            "bytes": 1729
+          },
+          {
+            "name": "alignment.json",
+            "path": "alignment.json",
+            "url": "variant-results/case-31/sol/alignment.json",
+            "kind": "document",
+            "bytes": 19229
+          },
+          {
+            "name": "interview.srt",
+            "path": "interview.srt",
+            "url": "variant-results/case-31/sol/interview.srt",
+            "kind": "document",
+            "bytes": 7354
+          },
+          {
+            "name": "interview.ass",
+            "path": "interview.ass",
+            "url": "variant-results/case-31/sol/interview.ass",
+            "kind": "document",
+            "bytes": 11940
+          },
+          {
+            "name": "rebuild.py",
+            "path": "rebuild.py",
+            "url": "variant-results/case-31/sol/rebuild.py",
+            "kind": "document",
+            "bytes": 2032
+          },
+          {
+            "name": "rebuild.json",
+            "path": "rebuild.json",
+            "url": "variant-results/case-31/sol/rebuild.json",
+            "kind": "document",
+            "bytes": 117
+          }
+        ],
+        "milestones": [
+          {
+            "id": "item_7",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "python3"
+            ],
+            "title": "识别原声和定位发言"
+          },
+          {
+            "id": "item_9",
+            "type": "command_execution",
+            "exit_code": 1,
+            "status": "failed",
+            "tools": [
+              "faster_whisper",
+              "python3"
+            ],
+            "title": "核对说话人与字幕对轴"
+          },
+          {
+            "id": "item_45",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "FFmpeg",
+              "ffmpeg",
+              "python3",
+              "rebuild.py"
+            ],
+            "title": "生成或检查 ASS 和 SRT 字幕"
+          },
+          {
+            "id": "item_57",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "ffmpeg",
+              "python3"
+            ],
+            "title": "渲染或检查烧录视频"
+          },
+          {
+            "id": "item_58",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "rebuild.py"
+            ],
+            "title": "执行或检查离线重建"
+          }
+        ],
+        "scoring": {
+          "rows": [
+            {
+              "id": "timing",
+              "score": 17.6131,
+              "maximum": 30
+            },
+            {
+              "id": "speakers",
+              "score": 14.1953,
+              "maximum": 15
+            },
+            {
+              "id": "overlap",
+              "score": 4.8214,
+              "maximum": 10
+            },
+            {
+              "id": "text",
+              "score": 9.4839,
+              "maximum": 10
+            },
+            {
+              "id": "format",
+              "score": 10,
+              "maximum": 10
+            },
+            {
+              "id": "consistency",
+              "score": 7.7358,
+              "maximum": 10
+            },
+            {
+              "id": "rebuild",
+              "score": 5,
+              "maximum": 5
+            },
+            {
+              "id": "readability",
+              "score": 7.2504,
+              "maximum": 10
+            }
+          ],
+          "gates": [
+            "text_and_speakers",
+            "overlap_content",
+            "per_speaker_recall",
+            "overlap_duration",
+            "timing_floor",
+            "alignment_records",
+            "actual_preview@0"
+          ],
+          "pending": 0
+        },
+        "actions": 70,
+        "notes": "离线重建通过。重叠对白得 4.8214 / 10，时间对齐得 17.6131 / 30。"
+      },
+      "luna": {
+        "video": {
+          "name": "preview.mp4",
+          "path": "preview.mp4",
+          "url": "variant-results/case-31/luna/preview.mp4",
+          "kind": "video",
+          "bytes": 16565145,
+          "meta": {
+            "duration": 150.24,
+            "width": 1256,
+            "height": 640,
+            "fps": "25/1",
+            "sampleRate": null
+          }
+        },
+        "files": [
+          {
+            "name": "README.md",
+            "path": "README.md",
+            "url": "variant-results/case-31/luna/README.md",
+            "kind": "document",
+            "bytes": 1294
+          },
+          {
+            "name": "alignment.json",
+            "path": "alignment.json",
+            "url": "variant-results/case-31/luna/alignment.json",
+            "kind": "document",
+            "bytes": 21577
+          },
+          {
+            "name": "interview.srt",
+            "path": "interview.srt",
+            "url": "variant-results/case-31/luna/interview.srt",
+            "kind": "document",
+            "bytes": 7002
+          },
+          {
+            "name": "interview.ass",
+            "path": "interview.ass",
+            "url": "variant-results/case-31/luna/interview.ass",
+            "kind": "document",
+            "bytes": 13422
+          },
+          {
+            "name": "rebuild.py",
+            "path": "rebuild.py",
+            "url": "variant-results/case-31/luna/rebuild.py",
+            "kind": "document",
+            "bytes": 1695
+          },
+          {
+            "name": "rebuild.json",
+            "path": "rebuild.json",
+            "url": "variant-results/case-31/luna/rebuild.json",
+            "kind": "document",
+            "bytes": 179
+          }
+        ],
+        "milestones": [
+          {
+            "id": "item_18",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "faster_whisper",
+              "python3"
+            ],
+            "title": "识别原声和定位发言"
+          },
+          {
+            "id": "item_63",
+            "type": "command_execution",
+            "exit_code": 1,
+            "status": "failed",
+            "tools": [
+              "faster_whisper",
+              "python3"
+            ],
+            "title": "核对说话人与字幕对轴"
+          },
+          {
+            "id": "item_79",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "python3"
+            ],
+            "title": "生成或检查 ASS 和 SRT 字幕"
+          },
+          {
+            "id": "item_80",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "ffmpeg"
+            ],
+            "title": "渲染或检查烧录视频"
+          },
+          {
+            "id": "item_91",
+            "type": "command_execution",
+            "exit_code": 0,
+            "status": "completed",
+            "tools": [
+              "python3",
+              "rebuild.py"
+            ],
+            "title": "执行或检查离线重建"
+          }
+        ],
+        "scoring": {
+          "rows": [
+            {
+              "id": "timing",
+              "score": 10.8586,
+              "maximum": 30
+            },
+            {
+              "id": "speakers",
+              "score": 9.6245,
+              "maximum": 15
+            },
+            {
+              "id": "overlap",
+              "score": 0,
+              "maximum": 10
+            },
+            {
+              "id": "text",
+              "score": 6.3147,
+              "maximum": 10
+            },
+            {
+              "id": "format",
+              "score": 9.7468,
+              "maximum": 10
+            },
+            {
+              "id": "consistency",
+              "score": 3.2075,
+              "maximum": 10
+            },
+            {
+              "id": "rebuild",
+              "score": 5,
+              "maximum": 5
+            },
+            {
+              "id": "readability",
+              "score": 5.0009,
+              "maximum": 10
+            }
+          ],
+          "gates": [
+            "text_and_speakers",
+            "overlap_content",
+            "per_speaker_recall",
+            "overlap_duration",
+            "timing_floor",
+            "ass_srt_equivalence",
+            "alignment_records",
+            "critical_content@0",
+            "actual_preview@30",
+            "critical_content@60",
+            "critical_content@90"
+          ],
+          "pending": 0
+        },
+        "actions": 118,
+        "notes": "离线重建通过。重叠对白得 0 / 10，ASS 与 SRT 一致性未达门槛。"
+      }
+    }
   }
 };

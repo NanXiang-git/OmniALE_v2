@@ -8,6 +8,52 @@ window.OMNIALE_VARIANT_RESULTS = {
   "date": "2026-11-23",
   "runs": [
     {
+      "case": 31,
+      "model": "gpt-6.2-sol",
+      "score": 76.1,
+      "threshold": 80,
+      "passed": false,
+      "elapsed_seconds": 1504.298582792282,
+      "verified_solver_responses": 66,
+      "solver_requests": 66,
+      "sealed_files_verified": 7,
+      "failed_gates": [
+        "text_and_speakers",
+        "overlap_content",
+        "per_speaker_recall",
+        "overlap_duration",
+        "timing_floor",
+        "alignment_records",
+        "actual_preview@0"
+      ],
+      "unresolved_items_or_windows": 0
+    },
+    {
+      "case": 31,
+      "model": "gpt-6-luna",
+      "score": 49.753,
+      "threshold": 80,
+      "passed": false,
+      "elapsed_seconds": 2973.3496878147125,
+      "verified_solver_responses": 112,
+      "solver_requests": 112,
+      "sealed_files_verified": 7,
+      "failed_gates": [
+        "text_and_speakers",
+        "overlap_content",
+        "per_speaker_recall",
+        "overlap_duration",
+        "timing_floor",
+        "ass_srt_equivalence",
+        "alignment_records",
+        "critical_content@0",
+        "actual_preview@30",
+        "critical_content@60",
+        "critical_content@90"
+      ],
+      "unresolved_items_or_windows": 0
+    },
+    {
       "case": 40,
       "model": "gpt-6.2-sol",
       "score": 96.7982,
@@ -66,12 +112,6 @@ window.OMNIALE_VARIANT_RESULTS = {
         "critical_fact"
       ],
       "unresolved_items_or_windows": 0
-    }
-  ],
-  "withdrawn_cases": [
-    {
-      "case": 31,
-      "reason": "The earlier variant reused the original AMI IS1009a session and participants."
     }
   ]
 };

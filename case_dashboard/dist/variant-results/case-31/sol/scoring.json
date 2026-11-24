@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "id": "timing",
+      "score": 17.6131,
+      "maximum": 30
+    },
+    {
+      "id": "speakers",
+      "score": 14.1953,
+      "maximum": 15
+    },
+    {
+      "id": "overlap",
+      "score": 4.8214,
+      "maximum": 10
+    },
+    {
+      "id": "text",
+      "score": 9.4839,
+      "maximum": 10
+    },
+    {
+      "id": "format",
+      "score": 10,
+      "maximum": 10
+    },
+    {
+      "id": "consistency",
+      "score": 7.7358,
+      "maximum": 10
+    },
+    {
+      "id": "rebuild",
+      "score": 5,
+      "maximum": 5
+    },
+    {
+      "id": "readability",
+      "score": 7.2504,
+      "maximum": 10
+    }
+  ],
+  "gates": [
+    "text_and_speakers",
+    "overlap_content",
+    "per_speaker_recall",
+    "overlap_duration",
+    "timing_floor",
+    "alignment_records",
+    "actual_preview@0"
+  ],
+  "pending": 0
+}

@@ -1,0 +1,103 @@
+[Script Info]
+Title: EasyCom Session 2 – Four-speaker conversation
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 652
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: A,DejaVu Sans,22,&H00FFFFFF,&H00FFFFFF,&H26161110,&HFF000000,0,0,0,0,100,100,0,0,3,2.7,0,7,15,15,12,1
+Style: B,DejaVu Sans,22,&H00FFFFFF,&H00FFFFFF,&H26161110,&HFF000000,0,0,0,0,100,100,0,0,3,2.7,0,7,15,15,12,1
+Style: C,DejaVu Sans,22,&H00FFFFFF,&H00FFFFFF,&H26161110,&HFF000000,0,0,0,0,100,100,0,0,3,2.7,0,7,15,15,12,1
+Style: D,DejaVu Sans,22,&H00FFFFFF,&H00FFFFFF,&H26161110,&HFF000000,0,0,0,0,100,100,0,0,3,2.7,0,7,15,15,12,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.16,0:00:02.56,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah.
+Dialogue: 0,0:00:02.87,0:00:04.61,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Yeah, y- you have one question each
+Dialogue: 0,0:00:04.61,0:00:06.08,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} or just one question total?
+Dialogue: 0,0:00:05.97,0:00:06.58,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Just one.
+Dialogue: 0,0:00:06.57,0:00:07.08,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Just one.
+Dialogue: 0,0:00:07.22,0:00:09.40,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Oh. You can only ask\None guard one question,
+Dialogue: 0,0:00:09.40,0:00:10.95,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} so you can't even ask both guards.
+Dialogue: 0,0:00:10.98,0:00:12.30,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} You can only ask one guard.
+Dialogue: 0,0:00:12.42,0:00:13.85,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Do they look exactly the same?
+Dialogue: 0,0:00:14.55,0:00:15.90,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Would that make a difference?
+Dialogue: 0,0:00:15.94,0:00:17.15,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} It does make a difference
+Dialogue: 0,0:00:17.15,0:00:19.40,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} cause it's easier to read\Nbody language on people.
+Dialogue: 0,0:00:19.44,0:00:19.98,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Was like…
+Dialogue: 0,0:00:20.00,0:00:20.40,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Oh.
+Dialogue: 0,0:00:20.70,0:00:23.87,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Cause you have to ask\Nif one's heaven or hell.
+Dialogue: 0,0:00:24.42,0:00:26.55,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} You could ask which door feels hot.
+Dialogue: 0,0:00:27.94,0:00:28.79,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Which door? Oh.
+Dialogue: 0,0:00:29.10,0:00:30.16,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah, I guess it does.
+Dialogue: 0,0:00:30.16,0:00:31.47,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Cause it doesn't have to be—
+Dialogue: 0,0:00:31.48,0:00:33.40,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} It doesn't have to be\Na yes or no question.
+Dialogue: 0,0:00:33.70,0:00:37.05,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} It could just be a, any,\Nyeah, like, and…
+Dialogue: 0,0:00:39.34,0:00:41.50,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah, I guess, yeah. Are those doors?
+Dialogue: 0,0:00:41.87,0:00:44.65,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Surely there's other things\Nthat are coming out of those doors
+Dialogue: 0,0:00:45.44,0:00:47.21,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} other than just the name.
+Dialogue: 0,0:00:48.55,0:00:49.48,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} That's a hard one.
+Dialogue: 0,0:00:50.15,0:00:52.42,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Wouldn't it, wouldn't we\Njust turn the switches on?
+Dialogue: 0,0:00:51.18,0:00:53.98,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} I think I would switch two down\Nand middle one up
+Dialogue: 0,0:00:53.98,0:00:56.06,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} and see which bulb is lit in the room
+Dialogue: 0,0:00:56.06,0:00:57.62,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} and then figure it out from there.
+Dialogue: 0,0:00:57.33,0:00:58.18,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Which ones, what?
+Dialogue: 0,0:00:58.24,0:00:59.76,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Which one lights in the attic
+Dialogue: 0,0:00:59.76,0:01:01.42,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} when you have the middle switch up
+Dialogue: 0,0:01:01.42,0:01:02.97,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} and the left and right switch down
+Dialogue: 0,0:01:02.97,0:01:04.68,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} cause it could be a center light bulb.
+Dialogue: 0,0:01:04.68,0:01:05.52,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} And that would…
+Dialogue: 0,0:01:04.86,0:01:07.96,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Ah, and then what about the the two\Nthat aren't turned on?
+Dialogue: 0,0:01:06.48,0:01:07.43,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} The left and right.
+Dialogue: 0,0:01:08.07,0:01:09.37,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Yeah. That aren't turned on.
+Dialogue: 0,0:01:09.33,0:01:10.98,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah, wha- how would you know?
+Dialogue: 0,0:01:12.31,0:01:13.33,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Which switch?
+Dialogue: 0,0:01:14.40,0:01:15.46,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Which switch was what?
+Dialogue: 0,0:01:15.52,0:01:18.34,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Depending on where there switches\Nare located on the wall
+Dialogue: 0,0:01:18.47,0:01:20.88,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} on the left and right\Nand where the bulbs are.
+Dialogue: 0,0:01:20.90,0:01:23.47,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} It's kind of where you'd have\Nto figure it out from there.
+Dialogue: 0,0:01:23.50,0:01:25.34,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} But a lot of houses in this area,
+Dialogue: 0,0:01:25.34,0:01:26.63,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} the wiring is wonky,
+Dialogue: 0,0:01:26.63,0:01:28.26,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} so those switches might go anywhere.
+Dialogue: 0,0:01:28.32,0:01:28.71,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Yeah.
+Dialogue: 0,0:01:28.34,0:01:29.97,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Oh, okay. Ah, dang. Good idea. Yeah.
+Dialogue: 0,0:01:29.43,0:01:31.14,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} It could turn on the garbage exposal.
+Dialogue: 0,0:01:31.65,0:01:32.05,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Yeah.
+Dialogue: 0,0:01:32.21,0:01:33.70,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} There's our construction expert.
+Dialogue: 0,0:01:33.85,0:01:35.02,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Harry, nice to meet you.
+Dialogue: 0,0:01:34.98,0:01:35.70,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} I'm Thomas.
+Dialogue: 0,0:01:35.85,0:01:36.23,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Harry.
+Dialogue: 0,0:01:36.01,0:01:37.23,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Charlie. Nice to meet you.
+Dialogue: 0,0:01:37.26,0:01:38.12,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Nice to meet you.
+Dialogue: 0,0:01:37.94,0:01:39.03,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah. What do y'all do?
+Dialogue: 0,0:01:39.36,0:01:40.64,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} I'm a schoolteacher.
+Dialogue: 0,0:01:40.98,0:01:41.56,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Alright.
+Dialogue: 0,0:01:41.06,0:01:42.46,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Oh, okay. Very cool.
+Dialogue: 0,0:01:42.46,0:01:44.32,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} I'm a pediatric physician.
+Dialogue: 0,0:01:44.42,0:01:44.97,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Pediatric.
+Dialogue: 0,0:01:44.88,0:01:46.79,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Oh no way! I work with kids too.
+Dialogue: 0,0:01:46.85,0:01:47.88,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Oh, wonderful.
+Dialogue: 0,0:01:48.87,0:01:50.18,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} What grade are you teaching?
+Dialogue: 0,0:01:50.82,0:01:52.04,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Oh, I teach kindergarten.
+Dialogue: 0,0:01:52.50,0:01:53.83,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Kindergarten. Alright.
+Dialogue: 0,0:01:53.27,0:01:55.17,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Yes. It's great that it's summertime.
+Dialogue: 0,0:01:55.49,0:01:57.54,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Finally get a break\Nfrom those crazy monsters.
+Dialogue: 0,0:01:57.66,0:01:58.11,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} Yes.
+Dialogue: 0,0:02:01.10,0:02:03.03,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Yeah, Thomas, how bout you?\NWhat do you do?
+Dialogue: 0,0:02:03.02,0:02:04.46,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} I'm a construction worker.
+Dialogue: 0,0:02:04.69,0:02:06.39,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Oh wow. What kind of construction?
+Dialogue: 0,0:02:06.78,0:02:08.41,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} I mean, I'm building this building.
+Dialogue: 0,0:02:08.57,0:02:09.05,A,A,0,0,0,,{\an7\pos(402,448)\q2\b1\c&H9EDFFF&}A:{\b0\c&HFFFFFF&} Ah.
+Dialogue: 0,0:02:08.98,0:02:09.70,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Wow. It, the…
+Dialogue: 0,0:02:10.84,0:02:12.38,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} It's a lot of setbacks and
+Dialogue: 0,0:02:12.39,0:02:14.33,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} y'know, security precautions,
+Dialogue: 0,0:02:14.43,0:02:16.67,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} but it's been fine. Sort of.
+Dialogue: 0,0:02:17.25,0:02:18.52,C,C,0,0,0,,{\an7\pos(402,550)\q2\b1\c&HFFDDB3&}C:{\b0\c&HFFFFFF&} Yeah. Is it lead certified?
+Dialogue: 0,0:02:18.44,0:02:18.84,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Yep.
+Dialogue: 0,0:02:19.98,0:02:22.49,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} Oh, I don't know. I just\Nthe construction worker.
+Dialogue: 0,0:02:22.56,0:02:23.87,B,B,0,0,0,,{\an7\pos(402,499)\q2\b1\c&HDCEDD2&}B:{\b0\c&HFFFFFF&} You'd have to ask my boss.
+Dialogue: 0,0:02:26.37,0:02:29.99,D,D,0,0,0,,{\an7\pos(402,601)\q2\b1\c&HF3CDF2&}D:{\b0\c&HFFFFFF&} So are you like working in this\Nwe- weather as well?
