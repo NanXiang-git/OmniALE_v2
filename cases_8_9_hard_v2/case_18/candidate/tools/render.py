@@ -1,7 +1,7 @@
 """Trusted declarative renderer. Reads fixed media paths; executes no submission code."""
 from pathlib import Path
 import argparse,hashlib,json,subprocess,cv2,numpy as np,wave
-VERSION='omni18-v2'
+VERSION='omni18-v3'
 def sha(p):
  with Path(p).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
@@ -23,7 +23,7 @@ def srt(cues):
  boundaries=sorted({c[k] for c in cues for k in ('start','end')});rows=[]
  for a,b in zip(boundaries,boundaries[1:]):
   active=[c for c in cues if c['start']<=a+.000001 and c['end']>=b-.000001]
-  if active:rows.append((a,b,'\n'.join(f"[{c['speaker']}] {c['text']}" for c in active)))
+  if active:rows.append((a,b,'\n'.join(f"[{('受访者B' if c['speaker']=='B' else c['speaker'])}] {c['text']}" for c in active)))
  return '\n\n'.join(f'{i+1}\n{timestamp(a)} --> {timestamp(b)}\n{t}' for i,(a,b,t) in enumerate(rows))+'\n'
 def apply(frame,mask):
  if mask.ndim==3:mask=cv2.cvtColor(mask,cv2.COLOR_BGR2GRAY)
@@ -32,7 +32,7 @@ def render(sub,source):
  sub=Path(sub).resolve();source=Path(source).resolve();project(sub,source)
  cues=read(sub/'subtitles.json');(sub/'zh.srt').write_text(srt(cues),encoding='utf-8')
  cap=cv2.VideoCapture(str(source));m=cv2.VideoCapture(str(sub/'mask.mkv'));w=int(cap.get(3));h=int(cap.get(4));fps=cap.get(5)
- cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pixel_format','bgr24','-video_size',f'{w}x{h}','-framerate',str(fps),'-i','-','-i',str(sub/'final_audio.wav'),'-i',str(sub/'zh.srt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-map_metadata','-1','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-c:s','mov_text','-metadata:s:s:0','language=zho','-movflags','+faststart',str(sub/'anonymous.mp4')]
+ cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pixel_format','bgr24','-video_size',f'{w}x{h}','-framerate',str(fps),'-i','-','-i',str(sub/'final_audio.wav'),'-i',str(sub/'zh.srt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-map_metadata','-1','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','alac','-c:s','mov_text','-metadata:s:s:0','language=zho','-movflags','+faststart',str(sub/'anonymous.mp4')]
  p=subprocess.Popen(cmd,stdin=subprocess.PIPE);n=0
  try:
   while True:
