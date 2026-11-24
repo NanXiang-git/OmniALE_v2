@@ -1,0 +1,385 @@
+{
+  "model": "qwen3.8-omni-flash",
+  "protocol": "reference-with-residual-levels",
+  "calibration": {
+    "passed": true,
+    "checks": {
+      "8-12-identical": true,
+      "8-12-damaged-first": true,
+      "8-12-reference-first": true,
+      "13-17-identical": true,
+      "13-17-damaged-first": true,
+      "13-17-reference-first": true
+    },
+    "evidence": {
+      "8-12-identical": {
+        "verified": true,
+        "same_as_reference": true,
+        "difference_evidence": "D（差值信号）完全静音，X 与 R 逐样本一致，无可听差异。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "X 与 R 完全相同，配乐音符、节奏及原有音效均无缺失或改变。"
+          },
+          "timbre_detail": {
+            "rating": 1,
+            "reason": "音色、高频细节、起音与衰减与参考一致，无损伤。"
+          },
+          "audible_artifacts": {
+            "rating": 1,
+            "reason": "无额外底噪、爆音、电流声或失真引入，与参考完全一致。"
+          }
+        }
+      },
+      "8-12-damaged-first": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X 在本窗口前段（约对应成片8–11秒）存在一段明显的呼啸/风噪声，持续约3–4秒，强度较大，部分遮蔽了弦乐旋律的细节。R 中同一位置仅有干净的管弦乐（弦乐为主），无此额外呼啸声。D 信号清晰显示该呼啸声为正差值主导成分，证实 X 相比 R 叠加了额外的宽频噪声。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "弦乐主旋律、节奏骨架在 X 中仍可辨认，核心音乐内容保留；但前3–4秒的呼啸噪声对旋律线造成明显掩蔽，局部可听缺陷。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "弦乐音色在中低频段基本保持，但高频泛音和起音细节被呼啸噪声覆盖，衰减尾音清晰度下降，音色层次受损。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "存在持续约3–4秒的宽频呼啸/风噪，非 R 原有音效，属于额外引入的干扰；虽未完全淹没音乐，但显著影响听感纯净度。"
+          }
+        }
+      },
+      "8-12-reference-first": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X 中全程叠加了明显的宽带噪声/嘶嘶声，在 8–12 秒窗口内持续存在，相对参考 R 的差值 RMS 仅低约 0.8 dB，说明该噪声能量几乎与原始配乐等响。R 中干净的弦乐旋律、铺底 pad 及环境音效在 X 中被这层噪声严重遮蔽，高频细节和起音清晰度明显下降，但音乐主体仍可勉强辨识。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "弦乐主旋律、节奏骨架和原有音效在 X 中仍可听到，但被持续宽带噪声大幅遮蔽，细节丢失明显，核心保留但有可听局部缺陷。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "小提琴等弦乐的高频泛音和起音/衰减特征因噪声叠加而变得模糊，音色辨识度下降，但尚未完全丧失乐器可识别性。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "X 中存在全程持续的宽带嘶嘶/噪声干扰，非 R 原有内容，能量极大（差值接近参考响度），严重干扰听感，但尚未达到完全摧毁信号的程度。"
+          }
+        }
+      },
+      "13-17-identical": {
+        "verified": true,
+        "same_as_reference": true,
+        "difference_evidence": "D 完全静音，逐样本比对确认 X 与 R 完全相同，无可听差异。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "X 与 R 完全一致，管弦乐重击音效及后续机械摩擦声均完整保留，无任何缺失或 alteration。"
+          },
+          "timbre_detail": {
+            "rating": 1,
+            "reason": "音色、高频延伸、起音与衰减特征与参考完全相同，无差异。"
+          },
+          "audible_artifacts": {
+            "rating": 1,
+            "reason": "无额外噪声、嗡声、爆音或失真引入，与参考一致。"
+          }
+        }
+      },
+      "13-17-damaged-first": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "差值信号D的相对RMS仅为-1.3 dB，说明X与R之间存在非常显著的差异。在13-17秒窗口中，R包含清晰的电影配乐铺底（持续弦乐/合成器pad）以及冲击/呼啸类音效；X中这些核心元素虽可辨认，但整体动态和频谱分布有明显改变，高频部分出现额外的粗糙感或压缩痕迹，音效的起音与衰减包络与R不一致，导致差值能量极高。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "配乐主体（持续和弦/铺底）和主要音效仍可辨识，核心内容未完全丢失，但动态包络和层次关系与R有明显偏差，部分音效细节被模糊或改变。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "音色整体方向保留，但高频段出现可听的粗糙/颗粒感，起音瞬态不如R清晰锐利，衰减尾部的自然度下降，与R相比质感有可闻差异。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "未听到独立的持续底噪或电流声，但X中存在与R不同的压缩/处理痕迹（类似轻微泵动或高频毛刺），这些并非R原有的声音特征，属于额外引入的失真类缺陷，但未到完全遮蔽配乐的程度。"
+          }
+        }
+      },
+      "13-17-reference-first": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "D信号中包含明显的呼啸/扫频音效，相对R的RMS差值为-1.3 dB，属于显著可听差异。在X中，开头的金属撞击声的瞬态特征与R不同，R中清脆的金属clang在X里变得较为模糊或衰减更快；R中随后的低沉滚动/拖拽音效在X中高频成分有所变化，整体质感偏软。D中的whoosh成分表明X可能引入了额外的扫频噪声或处理痕迹，这些在R中不存在。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "底层配乐旋律和节奏框架基本保留，但关键音效（金属撞击、滚动声）的呈现方式与R有明显差异，属于核心保留但有可听局部缺陷。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "金属撞击的起音瞬态在X中变钝，高频泛音减少；滚动音效的音色偏暗，衰减特性与R不同。D中的whoosh成分提示存在额外的高频扫频或处理引入的音色偏移。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "D信号中可听到明确的呼啸/扫频成分（-1.3 dB相对RMS），说明X中存在R所没有的额外噪声或处理伪影，虽非持续性电流声，但属于可听的加工痕迹。"
+          }
+        }
+      }
+    }
+  },
+  "protected_passed": true,
+  "items": {
+    "musical_content": {
+      "rating": 0.5,
+      "verified": true,
+      "points": 1.0,
+      "confirmation": null,
+      "window_ratings": [
+        1,
+        1,
+        1,
+        0.5
+      ]
+    },
+    "timbre_detail": {
+      "rating": 0.5,
+      "verified": true,
+      "points": 1.0,
+      "confirmation": null,
+      "window_ratings": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "audible_artifacts": {
+      "rating": 0.5,
+      "verified": true,
+      "points": 1.0,
+      "confirmation": null,
+      "window_ratings": [
+        1,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "observations": [
+    {
+      "interval": [
+        0,
+        6
+      ],
+      "candidate": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "差值信号D并非完全静音，相对R的RMS为-4.5 dB，表明X与R之间存在可测量的差异。仔细对比X与R：两者均保留了弦乐旋律线条、氛围底噪及结尾处狗吠音效，核心音乐内容未丢失。但在音色层面，X的弦乐部分质感略显扁平，高频泛音的细腻度较R有所减弱；狗吠音效在X中听起来稍显干涩，空间残响不如R自然。整体差异属于轻度处理痕迹，未引入明显的新噪声或失真。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "音符走向、节奏型、狗吠等原有音效在X中完整保留，未出现核心内容缺失或错乱。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "X的弦乐高频泛音细腻度略低于R，狗吠的空间感稍弱，存在可听的音色细节损失，但整体起音与衰减轮廓仍可辨识。"
+          },
+          "audible_artifacts": {
+            "rating": 1,
+            "reason": "未听到额外加入的电流声、爆音或持续嗡鸣；差异主要体现为轻微音色变化而非新增干扰噪声。"
+          }
+        }
+      },
+      "damaged": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X 中全程叠加了一层明显的宽带噪声/呼啸声（类似风噪或嘶嘶声），从约第2秒起持续存在至片段结束。该噪声在 D 中表现为持续的能量分布，相对 RMS 仅比 R 低 1.4 dB，说明噪声强度接近原始信号本身。这层噪声部分遮蔽了弦乐的高频泛音和弓弦摩擦细节，使音色变得浑浊。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "低音咆哮、弦乐旋律和约第4–5秒的尖锐音效仍可辨认，节奏与音符走向保留，但持续的宽带噪声使音乐细节被部分掩盖，整体清晰度下降。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "弦乐的明亮泛音和高频起音被噪声层削弱，弓弦质感变得模糊；低音咆哮的胸腔共鸣尚可，但衰减段被噪声填充，缺乏干净的自然收尾。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "全程存在明显的宽带噪声/呼啸干扰，强度接近参考信号本身（-1.4 dB），属于持续性异常噪声，严重降低听感但未完全摧毁可辨识度。"
+          }
+        }
+      }
+    },
+    {
+      "interval": [
+        6,
+        12
+      ],
+      "candidate": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "在6–12秒窗口内，X与R存在可听差异。D信号非静音且相对R的RMS为-3.9 dB，说明差异显著。具体表现为：X中弦乐主奏（类似二胡/高把位弓弦）的音色较R略显扁平，高频泛音细节有所损失，起音与衰减的自然感减弱；同时背景音效层（风声/环境音）在X中与R有明显不同，部分频段出现轻微粗糙感或压缩痕迹。旋律走向和节奏骨架基本保留，但整体质感与R有可辨别的偏差。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "音符走向、节奏型及主要音效事件在X中均得到保留，未出现核心音乐内容缺失或错位。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "X中弓弦乐器的高频泛音与空气感较R有所削减，起音瞬态和尾音衰减的自然度下降，音色细节存在可听局部缺陷。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "X的背景音效层出现轻微粗糙/压缩感，虽非持续性严重噪声，但与R对比可辨识出额外处理痕迹，属于轻度可听异常。"
+          }
+        }
+      },
+      "damaged": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X 中全程存在明显的宽带嘶嘶/静电噪声（约6–12秒持续），该噪声在 R 中不存在。D 信号证实了这一差异，其 RMS 接近参考电平（-1.1 dB），说明噪声能量很大。该噪声部分遮蔽了弦乐旋律的高频细节和起音清晰度，但核心音乐（小提琴旋律线、节奏走向）仍可辨认。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "小提琴主旋律与节奏骨架仍可听见，但持续噪声使音符边缘模糊，局部乐句被遮蔽，核心保留但有可听缺陷。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "高频嘶声与弦乐泛音叠加，导致小提琴音色明亮度和起音/衰减细节下降，听感发闷且不够干净。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "全程存在显著的宽带白噪声/静电嘶声，能量接近参考电平，虽未完全淹没音乐，但对听感造成明显干扰，属于可听局部缺陷。"
+          }
+        }
+      }
+    },
+    {
+      "interval": [
+        12,
+        18
+      ],
+      "candidate": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X与R存在可听差异（差值RMS约-4.6 dB，相对参考能量约59%，差异明显）。在12–18秒窗口内，X的整体音乐结构和音效仍在，但音色质感有可感知的变化：高频细节略有衰减，弦乐的泛音光泽和起音瞬态不如R清晰自然，部分段落听起来像是经过降噪或压缩处理后的痕迹。底噪/嗡声未明显增加，但纹理细腻度有所下降。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "音符走向、节奏型、电影配乐层次以及原有音效（如撞击声、环境声）均完整保留，未出现核心内容缺失。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "弦乐高频泛音和瞬态起音细节较R有可闻衰减，整体音色略显平滑/闷，存在处理痕迹导致的局部音色缺陷，但核心频段仍保留。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "差值信号显著（-4.6 dB），表明存在可听的加工伪影，表现为细微的纹理损失和动态压缩感，虽非持续性刺耳噪声，但足以影响听感纯净度。"
+          }
+        }
+      },
+      "damaged": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "X 与 R 在 12–18 秒窗口内存在显著差异。差值信号 D 的相对 RMS 为 -1.2 dB，意味着差异能量接近参考本身能量的四分之三，属于大幅偏离。实际听感上，X 中叠加了一层明显的宽带噪声/嘶声底噪，贯穿整个窗口，使 R 中原本清晰的弦乐长音和打击乐起音被部分遮蔽；同时可听到轻微的压缩泵感或失真毛刺，尤其在低频冲击音效（约 13–14 秒处）附近更为突出。音乐主体仍可辨认，但细节层次和动态余量明显受损。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "弦乐旋律线、铜管铺底和打击乐节奏型仍可辨识，核心音乐内容未完全丢失，但被叠加的噪声层部分掩盖，弱奏段落（如 15–16 秒的过渡）细节模糊，整体清晰度下降。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "高频弦乐的泛音光泽被嘶声底噪侵蚀，起音瞬态（如 13 秒处的重击）出现轻微毛刺和压缩感，衰减尾音不够自然干净；中低频铜管的温暖质感尚存但略显浑浊。"
+          },
+          "audible_artifacts": {
+            "rating": 0,
+            "reason": "持续的宽带嘶声底噪贯穿全段，能量极大（差值相对 RMS 仅 -1.2 dB），已构成对配乐细节的实质性遮蔽；低频冲击处还伴有可闻的失真/削波毛刺，属于严重损伤级别。"
+          }
+        }
+      }
+    },
+    {
+      "interval": [
+        18,
+        24
+      ],
+      "candidate": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "在18–24秒窗口内，X与R存在明显可听差异（差值RMS约-4.2 dB）。R中清晰的电影音效层（呼啸声、冲击尾音、环境纹理）在X中显著衰减或模糊化，高频细节和起音瞬态被削弱，整体音效层听起来像被低通或压缩处理过。管弦乐主体（弦乐旋律线、铜管和声、打击乐节奏）基本保留，但音效与音乐的融合感明显变差，空间感和冲击力下降。",
+        "items": {
+          "musical_content": {
+            "rating": 0.5,
+            "reason": "核心音乐音符、节奏和配器结构保留，但原有音效层（呼啸、冲击、环境声）在X中明显衰减或变形，导致整体混音中音效与音乐的平衡被破坏，属于可听局部缺陷。"
+          },
+          "timbre_detail": {
+            "rating": 0.5,
+            "reason": "音效层的高频泛音和起音瞬态在X中被削弱，衰减尾音变短或模糊，音色细节损失明显；音乐部分音色基本保持，但整体高频空气感下降。"
+          },
+          "audible_artifacts": {
+            "rating": 0.5,
+            "reason": "未出现额外嗡声、爆音或电流噪声等新引入干扰，但音效层的处理痕迹（疑似低通或动态压缩）本身构成可听的加工伪影，使原本自然的音效质感变得不真实。"
+          }
+        }
+      },
+      "damaged": {
+        "verified": true,
+        "same_as_reference": false,
+        "difference_evidence": "D 信号在整个 18–24 秒窗口内持续存在宽带呼啸/冲刷噪声，其相对 RMS 仅比 R 低 1.4 dB，能量几乎与参考等量级。在 X 中可听到一层持续的中高频气流样噪声叠加在配乐之上，严重遮蔽弦乐与铜管的细节，使原本的电影配乐轮廓变得模糊。该噪声并非 R 中已有的音效，而是额外引入的干扰成分。",
+        "items": {
+          "musical_content": {
+            "rating": 0,
+            "reason": "差值能量接近参考电平（-1.4 dB），意味着 X 中音乐主体被大幅破坏或淹没；持续宽带噪声使旋律线与节奏型难以辨认，核心音乐内容实质缺失。"
+          },
+          "timbre_detail": {
+            "rating": 0,
+            "reason": "弦乐的弓擦质感、铜管的泛音结构以及起音/衰减特征均被呼啸噪声完全覆盖，无法分辨任何音色细节。"
+          },
+          "audible_artifacts": {
+            "rating": 0,
+            "reason": "全程存在高强度宽带气流样噪声，能量与配乐本身相当，属于严重且持续的异常干扰，远超可接受范围。"
+          }
+        }
+      }
+    },
+    {
+      "interval": [
+        24,
+        26
+      ],
+      "candidate": {
+        "verified": true,
+        "same_as_reference": true,
+        "difference_evidence": "盲核验确认逐样本完全相同，D 为静音，X 与 R 无任何可听差异。",
+        "items": {
+          "musical_content": {
+            "rating": 1,
+            "reason": "X 与 R 逐样本相同，管弦乐配器、节奏、音效完全一致，无缺失或改动。"
+          },
+          "timbre_detail": {
+            "rating": 1,
+            "reason": "音色、高频延展、起音与衰减特征与参考完全一致，无压缩或染色痕迹。"
+          },
+          "audible_artifacts": {
+            "rating": 1,
+            "reason": "无额外底噪、爆音、电流声或失真，与参考纯净度相同。"
+          }
+        }
+      }
+    }
+  ],
+  "media_sha256": {
+    "reference": "d050dfcc92931062c1b14ef3e5d7e7044cc83f55a11a60a767a26bf15ed080f8",
+    "damaged": "b7faa9c45b06c0b42321ae1c033da0dbe8e1a5ffe85b4b920236263f3fd26a06",
+    "output": "101a731093332f9a511650bda734213c8dd5586d6eb9c1faf528d7aa217171c4"
+  },
+  "listening_points": 3.0,
+  "visual_points": 46.719049999999996,
+  "automatic_audio_points": 8.865776627533961,
+  "audio_points": 11.865776627533961,
+  "total": 58.5848,
+  "passed": false,
+  "upper_bound": 58.5848
+}

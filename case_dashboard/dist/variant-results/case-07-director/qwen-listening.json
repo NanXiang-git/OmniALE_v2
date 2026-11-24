@@ -1,0 +1,39 @@
+{
+  "model": "qwen3.8-omni-flash",
+  "clips": [
+    {
+      "clip_id": "clip_1",
+      "audio_sha256": "61cceec6e269bda8890c57b8580cfbe0186e265c14d6a2e4cfd7553ede3e96a9",
+      "verified": true,
+      "transcript": "Keep the person on the right.",
+      "keep": "right",
+      "evidence": "音频中清晰可听到一句英语指令：\"Keep the person on the right.\"（约0:01–0:03），明确指示保留画面右侧的人物。"
+    },
+    {
+      "clip_id": "clip_2",
+      "audio_sha256": "427294baf9dbf9befafb7ef351fb373477e81af77dd00cd009297c20d660921b",
+      "verified": true,
+      "transcript": "Keep the person on the left.",
+      "keep": "left",
+      "evidence": "音频中女声清晰说出 'Keep the person on the left'（约0:00–0:02），指令明确要求保留画面左侧人物。"
+    }
+  ],
+  "models": {
+    "GPT-6.2-sol": {
+      "score": 2,
+      "maximum": 2,
+      "choices": {
+        "clip_1": "right",
+        "clip_2": "left"
+      }
+    },
+    "GPT-6.1-sol": {
+      "score": 2,
+      "maximum": 2,
+      "choices": {
+        "clip_1": "right",
+        "clip_2": "left"
+      }
+    }
+  }
+}

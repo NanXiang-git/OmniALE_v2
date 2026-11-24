@@ -23,6 +23,20 @@
       srclang="${esc(track.lang)}" label="${esc(track.label)}"${i===0 ? ' default' : ''}>`).join('')}
     </video><figcaption>${esc(media.label || media.name)} · ${link(media)}</figcaption></figure>`;
 
+  function bilingual(zh,en) {
+    const language = (cues, label, lang) => `<div lang="${lang}">
+      <strong>${label}</strong>${cues.length ? cues.map(cue=>`<p style="white-space:pre-line">${esc(cue.text ?? cue)}${cue.time ? `<br><small>${esc(cue.time)}</small>` : ''}</p>`).join('') : '<p>未提交字幕</p>'}</div>`;
+    return language(zh,'中文','zh-CN')+language(en,'English','en');
+  }
+
+  function signTable(comparison,segment) {
+    const columns = ['参考译文',...comparison.models];
+    const cards = [bilingual([segment.zh],[segment.en]),...segment.answers.map(answer=>
+      bilingual(answer.zh,answer.en)+`<details><summary>逐段评语</summary><p>${esc(answer.note)}</p></details>`)];
+    return `<div class="variant-grid">${cards.map((card,i)=>`<article class="variant-case">
+      <h4>${esc(columns[i])}</h4>${card}</article>`).join('')}</div>`;
+  }
+
   let sequence = Math.max(...registry.cases.map(x => Number(x.seq) || 0));
   for (const item of cases) {
     const original = registry.cases.find(entry => entry.key === item.original);
@@ -62,9 +76,12 @@
     const item = cases.find(candidate => key(candidate) === entry.key);
     if (!item) return old.render(entry,result,target);
     const panels = [['answer','模型交付'],['scores','分数构成'],['analysis','错误分析']];
+    if (item.comparison) panels.unshift(['compare','逐段答案对照']);
+    if (item.runs.some(run=>run.listening)) panels.push(['listening','音频独立听评']);
     const initial = item.runs.length > 1 && item.id===7 ? item.runs.length-1 : 0;
     let current = initial;
-    let selected = 'answer';
+    let selected = item.comparison ? 'compare' : 'answer';
+    let signIndex = 0;
     target.innerHTML = `<section class="variant-case-results" data-detailed-case="${item.id}">
       <h2 class="result-section-title">模型作答对照</h2>
       ${table(['模型','推理','作答预算','用时','正式分 / 100','状态'],
@@ -84,7 +101,36 @@
         || button.dataset.detailedPanel === selected)));
       const body = target.querySelector('[data-detailed-body]');
       const reports = (run.reports || []).map(link).join(' · ');
-      if (selected === 'answer') {
+      if (selected === 'compare' && item.comparison) {
+        const compare = item.comparison;
+        const segment = compare.segments[signIndex];
+        body.innerHTML = `<h3>逐段答案对照</h3>
+          <p>中文参考来自 CE-CSL 标注，英文是题方参考译文。右侧三份答案直接读取各模型封存的 SRT。</p>
+          <figure><video controls playsinline preload="metadata" style="width:100%" src="${esc(item.files.find(f=>f.name===item.main).url)}" data-sign-video></video></figure>
+          <div class="variant-result-nav"><label>表达片段
+            <select data-sign-segment>${compare.segments.map((entry,i)=>`<option value="${i}"${i===signIndex?' selected':''}>${entry.id} · ${entry.start.toFixed(2)}–${entry.end.toFixed(2)} 秒</option>`).join('')}</select></label>
+            <button type="button" class="button" data-sign-play>播放该片段</button>${link(compare.download)}</div>
+          <div data-sign-answers>${signTable(compare,segment)}</div>`;
+        const video = body.querySelector('[data-sign-video]');
+        const select = body.querySelector('[data-sign-segment]');
+        select.addEventListener('change',()=>{
+          signIndex=Number(select.value);
+          video.pause();
+          body.querySelector('[data-sign-answers]').innerHTML=signTable(compare,compare.segments[signIndex]);
+        });
+        body.querySelector('[data-sign-play]').addEventListener('click',()=>{
+          video.currentTime=compare.segments[signIndex].start;
+          video.play().catch(()=>{});
+        });
+        video.addEventListener('timeupdate',()=>{
+          if (video.currentTime>=compare.segments[signIndex].end) video.pause();
+        });
+      } else if (selected === 'listening' && run.listening) {
+        const listening = run.listening;
+        body.innerHTML = `<h3>${esc(listening.title)}</h3><p>${esc(listening.intro)}</p>
+          ${(listening.audio || []).map(clip=>`<figure><figcaption>${esc(clip.name)}</figcaption><audio controls preload="none" src="${esc(clip.url)}"></audio></figure>`).join('')}
+          ${table(listening.columns,listening.rows)}<p>${reports}</p>`;
+      } else if (selected === 'answer') {
         body.innerHTML = `<h3>模型交付</h3><p>${esc(run.summary)}</p>
           ${run.video.map(player).join('')}
           <h3>封存文件</h3><div class="variant-answer-files">${run.files.map(link).join('')}</div>`;
@@ -102,7 +148,10 @@
       }
     }
     buttons.forEach(button => button.addEventListener('click', () => {
-      if (button.dataset.detailedRun != null) current = Number(button.dataset.detailedRun);
+      if (button.dataset.detailedRun != null) {
+        current = Number(button.dataset.detailedRun);
+        if (selected==='compare') selected='answer';
+      }
       if (button.dataset.detailedPanel != null) selected = button.dataset.detailedPanel;
       update();
     }));
