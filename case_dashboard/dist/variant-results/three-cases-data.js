@@ -1,6 +1,614 @@
 window.OMNIALE_DETAILED_VARIANTS = [
   {
     "id": 7,
+    "key": "task-variant-7-interview",
+    "original": "task-variant-7",
+    "title": "双人访谈抠像与对白分轨",
+    "versionLabel": "移动遮挡与对白分离",
+    "summary": "12 秒双人镜头。人物交叉、道具遮挡，双人配录对白与器乐混合。",
+    "task": "# Case07｜双人访谈抠像与对白分轨\n\n交付一条访谈绿底成片和两条独立对白轨。A 是 person_A.jpg 中穿白色外套的人，B 是 person_B.jpg 中拿笔记本的人。A、B 会交换画面位置。素材为真人对白配录，画面动作为辅助。开场第一位说话者是 A，第二位是 B。\n\n## 输入\n\n- input/source.mp4 是 12 秒音画预览。input/frames/0000.png 到 0299.png 为权威图像，512×288、25 fps。\n- input/mix.wav 为混音的无损副本，双声道、48 kHz、576000 样本帧。\n- input/person_A.jpg、input/person_B.jpg 为人物参考，input/green.png 为标准绿底。\n\n## 模型交付\n\n在 /workspace/submission 提交 finished.mp4、voice_A.wav、voice_B.wav、project.drp、submission.json、README.md，以及重链接所需资产与脚本。submission.json 填 project_name、timeline、render_job_id 三个非空字符串。README.md 记录方法、色彩和重链接方式。\n\n- 画面只保留 A 的当帧可见部分。B、场记板和原背景换成标准纯绿。保留 A 的动作、发丝、手和位置。遮挡位置显示绿底，重新显露后接回同一人。保持全部 300 帧、分辨率、帧率和帧序。\n- 两条 WAV 均为双声道 PCM16、48 kHz、576000 样本帧，各自保留原声音色、对白、响度和时轴，去除音乐与另一位说话者。重叠时两条轨都应有各自内容。\n- finished.mp4 为 H.264 加 AAC，只带 A 的分离对白。使用 DaVinci Resolve 原生 API 实际编辑合成和渲染，保留独立绿底、带 Alpha 的 A 前景和 A 对白。可用传统算法或本地模型做中间资产。API 用法见 API_RUNTIME.md。\n- 临时文件放 /workspace/scratch。隔离工作区，无外网，作答无总时限。\n\n## 评分\n\n画面 70 分。预设帧覆盖无遮挡、交叉、前景道具滑过和重新显露。通过原题主体与编辑门槛后，按整帧边缘 IoU 30%、目标区边缘 IoU 70% 计分。\n\n声音 30 分。自动项 22 分，其中对齐波形保真 10 分、双人重叠区 8 分、非己方话段残留 4 分。A、B 等权且固定身份。独立听评 8 分，两位说话人的内容与音色各 2 分，隔离及伪影各 2 分。工程重开、重渲染和音画一致性单独核验。\n",
+    "main": "source.mp4",
+    "files": [
+      {
+        "name": "TASK.md",
+        "path": "TASK.md",
+        "url": "variant-results/case-07-interview/candidate/TASK.md",
+        "kind": "document",
+        "bytes": 2259
+      },
+      {
+        "name": "CREDITS.md",
+        "path": "CREDITS.md",
+        "url": "variant-results/case-07-interview/candidate/CREDITS.md",
+        "kind": "document",
+        "bytes": 535
+      },
+      {
+        "name": "API_RUNTIME.md",
+        "path": "API_RUNTIME.md",
+        "url": "variant-results/case-07-interview/candidate/API_RUNTIME.md",
+        "kind": "document",
+        "bytes": 1761
+      },
+      {
+        "name": "SCORING.md",
+        "path": "SCORING.md",
+        "url": "variant-results/case-07-interview/candidate/SCORING.md",
+        "kind": "document",
+        "bytes": 1093
+      },
+      {
+        "name": "person_A.jpg",
+        "path": "person_A.jpg",
+        "url": "variant-results/case-07-interview/candidate/person_A.jpg",
+        "kind": "image",
+        "bytes": 4504
+      },
+      {
+        "name": "person_B.jpg",
+        "path": "person_B.jpg",
+        "url": "variant-results/case-07-interview/candidate/person_B.jpg",
+        "kind": "image",
+        "bytes": 4417
+      },
+      {
+        "name": "green.png",
+        "path": "green.png",
+        "url": "variant-results/case-07-interview/candidate/green.png",
+        "kind": "image",
+        "bytes": 1230
+      },
+      {
+        "name": "mix.wav",
+        "path": "mix.wav",
+        "url": "variant-results/case-07-interview/candidate/mix.wav",
+        "kind": "audio",
+        "bytes": 2304044
+      },
+      {
+        "name": "source.mp4",
+        "path": "source.mp4",
+        "url": "variant-results/case-07-interview/candidate/source.mp4",
+        "kind": "video",
+        "bytes": 1041165
+      },
+      {
+        "name": "candidate.zip",
+        "path": "candidate.zip",
+        "url": "variant-results/case-07-interview/candidate/candidate.zip",
+        "kind": "archive",
+        "bytes": 37456207,
+        "label": "完整题包与 300 张权威输入帧"
+      }
+    ],
+    "formula": "视觉 70 分采用原 Case07 双门槛及 30/70 边缘 IoU。对白 22 分自动评测和 8 分独立听评。",
+    "delivery": [
+      "绿底成片",
+      "人物 A 和 B 的独立对白 WAV",
+      "原生 Resolve 工程与重链接资产"
+    ],
+    "note": "视觉参考用正确 Alpha 通过 Resolve 渲染为 H.264 4:2:0。初次用无损 4:4:4 参考产生编码偏差，正确 Alpha 的 Resolve 渲染仅得 36.36/70。修正后同编码参考验证为 70/70，沿用双门槛及原边缘公式。语音频带对照 7.53/22。对白为独立素材配录，近讲参考有极轻的现场串音。",
+    "runs": [
+      {
+        "model": "GPT-6.2-sol",
+        "effort": "xhigh",
+        "budget": "不限时",
+        "seconds": 1471.0934872627258,
+        "total": 74.1885,
+        "status": "已评分",
+        "summary": "总分 74.1885 / 100。视觉 44.1885 / 70，音频自动 22.0000 / 22。独立听评 8 / 8。",
+        "rows": [
+          [
+            "镜头 1 绿底画面",
+            14.58,
+            23.3333
+          ],
+          [
+            "镜头 2 绿底画面",
+            14.9381,
+            23.3333
+          ],
+          [
+            "镜头 3 绿底画面",
+            14.6704,
+            23.3333
+          ],
+          [
+            "A 对齐波形保真",
+            5.0,
+            5
+          ],
+          [
+            "A 双人重叠区",
+            4.0,
+            4
+          ],
+          [
+            "A 非己方话段残留",
+            2.0,
+            2
+          ],
+          [
+            "B 对齐波形保真",
+            5.0,
+            5
+          ],
+          [
+            "B 双人重叠区",
+            4.0,
+            4
+          ],
+          [
+            "B 非己方话段残留",
+            2.0,
+            2
+          ],
+          [
+            "Qwen Omni 独立听评",
+            8,
+            8
+          ]
+        ],
+        "breakdown": [
+          {
+            "label": "时间点与门槛",
+            "columns": [
+              "时间点",
+              "主体门槛",
+              "编辑门槛",
+              "边缘 IoU",
+              "帧分"
+            ],
+            "rows": [
+              [
+                "0.28 秒",
+                "通过",
+                1.0,
+                0.6119,
+                0.6119
+              ],
+              [
+                "1.04 秒",
+                "通过",
+                1.0,
+                0.6273,
+                0.6273
+              ],
+              [
+                "1.80 秒",
+                "通过",
+                1.0,
+                0.5986,
+                0.5986
+              ],
+              [
+                "2.56 秒",
+                "通过",
+                1.0,
+                0.6825,
+                0.6825
+              ],
+              [
+                "3.32 秒",
+                "通过",
+                1.0,
+                0.604,
+                0.604
+              ],
+              [
+                "4.28 秒",
+                "通过",
+                1.0,
+                0.6215,
+                0.6215
+              ],
+              [
+                "5.04 秒",
+                "通过",
+                1.0,
+                0.6506,
+                0.6506
+              ],
+              [
+                "5.44 秒",
+                "通过",
+                1.0,
+                0.632,
+                0.632
+              ],
+              [
+                "5.80 秒",
+                "通过",
+                1.0,
+                0.642,
+                0.642
+              ],
+              [
+                "6.56 秒",
+                "通过",
+                1.0,
+                0.6513,
+                0.6513
+              ],
+              [
+                "7.32 秒",
+                "通过",
+                1.0,
+                0.6439,
+                0.6439
+              ],
+              [
+                "8.28 秒",
+                "通过",
+                1.0,
+                0.6375,
+                0.6375
+              ],
+              [
+                "9.04 秒",
+                "通过",
+                1.0,
+                0.6109,
+                0.6109
+              ],
+              [
+                "9.44 秒",
+                "通过",
+                1.0,
+                0.623,
+                0.623
+              ],
+              [
+                "9.80 秒",
+                "通过",
+                1.0,
+                0.6483,
+                0.6483
+              ],
+              [
+                "10.56 秒",
+                "通过",
+                1.0,
+                0.6391,
+                0.6391
+              ],
+              [
+                "11.32 秒",
+                "通过",
+                1.0,
+                0.6136,
+                0.6136
+              ]
+            ]
+          }
+        ],
+        "files": [
+          {
+            "name": "finished.mp4",
+            "path": "finished.mp4",
+            "url": "variant-results/case-07-interview/sol/finished.mp4",
+            "kind": "video",
+            "bytes": 1633955
+          },
+          {
+            "name": "voice_A.wav",
+            "path": "voice_A.wav",
+            "url": "variant-results/case-07-interview/sol/voice_A.wav",
+            "kind": "audio",
+            "bytes": 2304044,
+            "label": "人物 A 的分离对白"
+          },
+          {
+            "name": "voice_B.wav",
+            "path": "voice_B.wav",
+            "url": "variant-results/case-07-interview/sol/voice_B.wav",
+            "kind": "audio",
+            "bytes": 2304044,
+            "label": "人物 B 的分离对白"
+          },
+          {
+            "name": "project.drp",
+            "path": "project.drp",
+            "url": "variant-results/case-07-interview/sol/project.drp",
+            "kind": "project",
+            "bytes": 27289
+          },
+          {
+            "name": "submission.json",
+            "path": "submission.json",
+            "url": "variant-results/case-07-interview/sol/submission.json",
+            "kind": "document",
+            "bytes": 151
+          },
+          {
+            "name": "README.md",
+            "path": "README.md",
+            "url": "variant-results/case-07-interview/sol/README.md",
+            "kind": "document",
+            "bytes": 2733
+          },
+          {
+            "name": "resolve-submission.zip",
+            "path": "resolve-submission.zip",
+            "url": "variant-results/case-07-interview/sol/resolve-submission.zip",
+            "kind": "archive",
+            "bytes": 34325404,
+            "label": "完整封存答卷及重链接素材"
+          }
+        ],
+        "video": [
+          {
+            "name": "finished.mp4",
+            "path": "finished.mp4",
+            "url": "variant-results/case-07-interview/sol/finished.mp4",
+            "kind": "video",
+            "bytes": 1633955
+          }
+        ],
+        "stems": [
+          {
+            "name": "人物 A · 分离对白",
+            "path": "voice_A.wav",
+            "url": "variant-results/case-07-interview/sol/voice_A.wav",
+            "kind": "audio",
+            "bytes": 2304044,
+            "label": "人物 A 的分离对白"
+          },
+          {
+            "name": "人物 B · 分离对白",
+            "path": "voice_B.wav",
+            "url": "variant-results/case-07-interview/sol/voice_B.wav",
+            "kind": "audio",
+            "bytes": 2304044,
+            "label": "人物 B 的分离对白"
+          }
+        ],
+        "evidence": [
+          {
+            "title": "1.80 秒 · 帧分 0.5986",
+            "files": [
+              {
+                "name": "frame-45-0.jpg",
+                "path": "frame-45-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-45-0.jpg",
+                "kind": "image",
+                "bytes": 10504,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-45-1.jpg",
+                "path": "frame-45-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-45-1.jpg",
+                "kind": "image",
+                "bytes": 7125,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "2.56 秒 · 帧分 0.6825",
+            "files": [
+              {
+                "name": "frame-64-0.jpg",
+                "path": "frame-64-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-64-0.jpg",
+                "kind": "image",
+                "bytes": 9320,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-64-1.jpg",
+                "path": "frame-64-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-64-1.jpg",
+                "kind": "image",
+                "bytes": 4786,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "3.32 秒 · 帧分 0.6040",
+            "files": [
+              {
+                "name": "frame-83-0.jpg",
+                "path": "frame-83-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-83-0.jpg",
+                "kind": "image",
+                "bytes": 10333,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-83-1.jpg",
+                "path": "frame-83-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-83-1.jpg",
+                "kind": "image",
+                "bytes": 7045,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "5.44 秒 · 帧分 0.6320",
+            "files": [
+              {
+                "name": "frame-136-0.jpg",
+                "path": "frame-136-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-136-0.jpg",
+                "kind": "image",
+                "bytes": 9652,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-136-1.jpg",
+                "path": "frame-136-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-136-1.jpg",
+                "kind": "image",
+                "bytes": 5503,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "6.12 秒 · 全帧诊断",
+            "files": [
+              {
+                "name": "frame-153-0.jpg",
+                "path": "frame-153-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-153-0.jpg",
+                "kind": "image",
+                "bytes": 10709,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-153-1.jpg",
+                "path": "frame-153-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-153-1.jpg",
+                "kind": "image",
+                "bytes": 7711,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "9.04 秒 · 帧分 0.6109",
+            "files": [
+              {
+                "name": "frame-226-0.jpg",
+                "path": "frame-226-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-226-0.jpg",
+                "kind": "image",
+                "bytes": 11224,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-226-1.jpg",
+                "path": "frame-226-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-226-1.jpg",
+                "kind": "image",
+                "bytes": 6820,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "9.44 秒 · 帧分 0.6230",
+            "files": [
+              {
+                "name": "frame-236-0.jpg",
+                "path": "frame-236-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-236-0.jpg",
+                "kind": "image",
+                "bytes": 10699,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-236-1.jpg",
+                "path": "frame-236-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-236-1.jpg",
+                "kind": "image",
+                "bytes": 6662,
+                "label": "模型交付"
+              }
+            ]
+          },
+          {
+            "title": "10.72 秒 · 全帧诊断",
+            "files": [
+              {
+                "name": "frame-268-0.jpg",
+                "path": "frame-268-0.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-268-0.jpg",
+                "kind": "image",
+                "bytes": 10324,
+                "label": "原镜头"
+              },
+              {
+                "name": "frame-268-1.jpg",
+                "path": "frame-268-1.jpg",
+                "url": "variant-results/case-07-interview/sol/frame-268-1.jpg",
+                "kind": "image",
+                "bytes": 6414,
+                "label": "模型交付"
+              }
+            ]
+          }
+        ],
+        "notes": [
+          "6.12 秒出现这一试次的最大背景残留。10.72 秒真值不透明区域约 5.9% 错抠为绿色。",
+          "1.80 秒 · 帧分 0.5986。输出仅保留举手至头侧的浅色外套 A，衣身及双腿鞋子完整可见；左下方 B 和原背景被去除，顶部裁切与输入一致。",
+          "3.32 秒 · 帧分 0.6040。A 已移动到左侧，输出仍保留浅色外套 A 的可见头部、双臂、衣身、双腿和鞋子；右侧黑衣 B 及其手中物品被去除，背景变为绿色，未因换位而保留错人。",
+          "9.04 秒 · 帧分 0.6109。输出为绿底，B、右侧进入画面的场记板及原背景均已排除；A 的主要可见身体与双脚保留完整。",
+          "A 对白。R与X逐段对比：0:00-0:01女声'I'm a school teacher'；0:04-0:06女声'Oh, no way, I work with kids too'；0:08-0:10女声'Oh, I teach kindergarten'，末尾约0:10处均有短暂男声重叠'Kindergarten'。两轨在内容、时序、音色及重叠程度上完全一致，判定为相同轨道。",
+          "B 对白。R与X完全一致：约0:03-0:06一位女性说'Oh, okay, very cool. I'm a pediatric physician.'，约0:07另一位回应'Oh, wonderful.'并伴有笑声。两段音频在音色、措辞、时序上无差异，无额外串音、音乐或处理伪影。",
+          "独立导入、重链接后重渲染，画面与声音均与封存成片的解码数据逐样本一致。"
+        ],
+        "reports": [
+          {
+            "name": "scoring.json",
+            "path": "scoring.json",
+            "url": "variant-results/case-07-interview/sol/scoring.json",
+            "kind": "document",
+            "bytes": 8469,
+            "label": "评分、听评与核验记录"
+          }
+        ],
+        "listening": {
+          "title": "Qwen Omni 3.8 独立听评",
+          "intro": "干净、原混音和错人对照均通过。答卷交换参考与待评音频顺序听评，分歧以第三次评审取中位数。",
+          "audio": [
+            {
+              "name": "原混音",
+              "path": "mix.wav",
+              "url": "variant-results/case-07-interview/candidate/mix.wav",
+              "kind": "audio",
+              "bytes": 2304044
+            },
+            {
+              "name": "人物 A · 分离对白",
+              "path": "voice_A.wav",
+              "url": "variant-results/case-07-interview/sol/voice_A.wav",
+              "kind": "audio",
+              "bytes": 2304044,
+              "label": "人物 A 的分离对白"
+            },
+            {
+              "name": "人物 B · 分离对白",
+              "path": "voice_B.wav",
+              "url": "variant-results/case-07-interview/sol/voice_B.wav",
+              "kind": "audio",
+              "bytes": 2304044,
+              "label": "人物 B 的分离对白"
+            }
+          ],
+          "columns": [
+            "说话人",
+            "内容与音色 / 2",
+            "隔离 / 2",
+            "伪影 / 2",
+            "可听证据"
+          ],
+          "rows": [
+            [
+              "A",
+              2,
+              2,
+              2,
+              "R与X逐段对比：0:00-0:01女声'I'm a school teacher'；0:04-0:06女声'Oh, no way, I work with kids too'；0:08-0:10女声'Oh, I teach kindergarten'，末尾约0:10处均有短暂男声重叠'Kindergarten'。两轨在内容、时序、音色及重叠程度上完全一致，判定为相同轨道。"
+            ],
+            [
+              "B",
+              2,
+              2,
+              2,
+              "R与X完全一致：约0:03-0:06一位女性说'Oh, okay, very cool. I'm a pediatric physician.'，约0:07另一位回应'Oh, wonderful.'并伴有笑声。两段音频在音色、措辞、时序上无差异，无额外串音、音乐或处理伪影。"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
     "original": "task-03",
     "title": "按导播口令提取人物",
     "summary": "两段四秒双人镜头。每段英语导播音频指定保留左侧或右侧人物。",

@@ -4,7 +4,7 @@
   const registry = window.OMNIALE_DATA;
   const old = window.OmniResults;
   if (!cases || !registry || !old) return;
-  const key = item => 'task-variant-' + item.id;
+  const key = item => item.key || 'task-variant-' + item.id;
   const route = item => '#' + key(item) + '/task';
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -47,7 +47,7 @@
     const freeze = item.runs.filter(run => run.total != null).map(run => run.model + ' ' + run.total);
     registry.cases.push({
       key:key(item), resultKey:key(item), caseId:item.id, seq:++sequence,
-      category:original?.category || '音视频制作', status:'packaged', versionLabel:'换素材变式',
+      category:original?.category || '音视频制作', status:'packaged', versionLabel:item.versionLabel || '换素材变式',
       title:item.title + ' · 换素材变式',summary:item.summary,
       main:files.find(f=>f.name===item.main)?.path, poster:main?.poster, directory:folder,
       task:item.task,contract:item.delivery.map(t=>'- '+t).join('\n')+'\n\n## 评分\n\n'+item.formula,
@@ -133,6 +133,7 @@
       } else if (selected === 'answer') {
         body.innerHTML = `<h3>模型交付</h3><p>${esc(run.summary)}</p>
           ${run.video.map(player).join('')}
+          ${(run.stems || []).map(clip=>`<figure><figcaption>${esc(clip.name)}</figcaption><audio controls preload="none" src="${esc(clip.url)}"></audio></figure>`).join('')}
           <h3>封存文件</h3><div class="variant-answer-files">${run.files.map(link).join('')}</div>`;
       } else if (selected === 'scores') {
         body.innerHTML = `<h3>分数构成</h3><p>${esc(item.formula)}</p><p>${esc(run.summary)}</p>

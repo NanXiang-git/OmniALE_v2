@@ -1,0 +1,222 @@
+{
+  "model": "gpt-6.2-sol",
+  "effort": "xhigh",
+  "time_limit_seconds": null,
+  "seconds": 1471.0934872627258,
+  "total": 74.1885,
+  "visual_points": 44.18850741205259,
+  "visual_shot_scores": [
+    {
+      "shot": 1,
+      "points": 14.580002503674622
+    },
+    {
+      "shot": 2,
+      "points": 14.938073504437742
+    },
+    {
+      "shot": 3,
+      "points": 14.670431403940219
+    }
+  ],
+  "visual_reference": {
+    "method": "Author visible alpha rendered in native Resolve over the green plate, H.264 4:2:0",
+    "sha256": "e87f406c6f4ffc3d02e804d6b93ef8214ba5ea6e9651cb8b9eb19e8403c373f5",
+    "unmatched_reference_points": 32.155690399974134
+  },
+  "audio_automatic": {
+    "subtotal": 22.0,
+    "speakers": [
+      {
+        "role": "A",
+        "aligned_snr_db": 33.21799439542385,
+        "mixture_snr_db": 1.9633448657164747,
+        "improvement_db": 31.254649529707375,
+        "overlap_snr_db": 33.98230473979591,
+        "other_speech_attenuation_db": 33.153778076171875,
+        "waveform_points": 5.0,
+        "overlap_points": 4.0,
+        "leakage_points": 2.0
+      },
+      {
+        "role": "B",
+        "aligned_snr_db": 34.43839458751414,
+        "mixture_snr_db": 3.122228408017817,
+        "improvement_db": 31.31616617949632,
+        "overlap_snr_db": 36.76695753982044,
+        "other_speech_attenuation_db": 32.9770622253418,
+        "waveform_points": 5.0,
+        "overlap_points": 4.0,
+        "leakage_points": 2.0
+      }
+    ],
+    "both_active_seconds": 1.9,
+    "overlap_share_of_active_dialogue": 0.2106430155210643
+  },
+  "audio_listening": {
+    "verified": true,
+    "model": "qwen3.8-omni-flash",
+    "points": 8,
+    "ratings": {
+      "A": {
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2
+      },
+      "B": {
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2
+      }
+    },
+    "observations": {
+      "A_reference_first": {
+        "verified": true,
+        "same": true,
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2,
+        "evidence": "R与X逐段对比：0:00-0:01女声'I'm a school teacher'；0:04-0:06女声'Oh, no way, I work with kids too'；0:08-0:10女声'Oh, I teach kindergarten'，末尾约0:10处均有短暂男声重叠'Kindergarten'。两轨在内容、时序、音色及重叠程度上完全一致，判定为相同轨道。",
+        "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten."
+      },
+      "A_candidate_first": {
+        "verified": true,
+        "same": true,
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2,
+        "evidence": "X与R完全一致：0:00-0:01女声'I'm a school teacher'，0:04-0:06女声'Oh, no way, I work with kids too'，0:08-0:10女声'Oh, I teach kindergarten'，约0:10处有短暂男声重叠'kindergarten'（R中同样存在，属原始场景）。无额外串音、漏词或处理伪影。",
+        "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten."
+      },
+      "B_reference_first": {
+        "verified": true,
+        "same": true,
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2,
+        "evidence": "R与X完全一致：约0:03-0:06一位女性说'Oh, okay, very cool. I'm a pediatric physician.'，约0:07另一位回应'Oh, wonderful.'并伴有笑声。两段音频在音色、措辞、时序上无差异，无额外串音、音乐或处理伪影。",
+        "transcript": "Oh, okay, very cool. I'm a pediatric physician. Oh, wonderful."
+      },
+      "B_candidate_first": {
+        "verified": true,
+        "same": true,
+        "content": 2,
+        "isolation": 2,
+        "artifacts": 2,
+        "evidence": "X与R完全相同。0:03-0:07目标说话人说'Oh, okay, very cool. I'm a pediatric physician.'，0:07-0:08另一人回应'Oh, wonderful.'。目标语音清晰完整，无漏词、无换人、无处理伪影，背景仅有轻微环境噪声，不影响主体可懂度。",
+        "transcript": "Oh, okay, very cool. I'm a pediatric physician. Oh, wonderful."
+      }
+    },
+    "order_disagreements": [],
+    "controls": {
+      "identity_A": true,
+      "mix_A": true,
+      "swapped_A": true,
+      "identity_B": true,
+      "mix_B": true,
+      "swapped_B": true
+    },
+    "submission_sha256": {
+      "A": "50863dc85fc42fcae6ee5c3aacec6ddfbd1d601fd713bd4394b3f4ad6bc709c4",
+      "B": "6bfeffb07f8bb8ba6c6c108dbb63185a4b9e01164bb3e5b3d0d4a1102237c415"
+    }
+  },
+  "delivery": {
+    "mux_vs_voice_A_snr_db": 37.35398252691449,
+    "audio_replay_matches": true,
+    "manifest": {
+      "project_name": "Case07_Interview_20261124_230104",
+      "timeline": "Case07 - Person A",
+      "render_job_id": "c814d3ce-d625-4e93-917b-27839f94c399"
+    }
+  },
+  "resolve_replay": {
+    "native_output_job": "c814d3ce-d625-4e93-917b-27839f94c399",
+    "independent_job": "241a0aff-6232-4ceb-89de-8c9a81910add",
+    "editable": {
+      "name": "Case07 - Person A",
+      "frames": 300,
+      "version": "21.1.2.10",
+      "tracks": {
+        "video": [
+          [
+            {
+              "name": "Green.mov",
+              "duration": 300,
+              "start": 0,
+              "path": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\assets\\Green.mov"
+            }
+          ],
+          [
+            {
+              "name": "Person_A_Straight.mov",
+              "duration": 300,
+              "start": 0,
+              "path": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\assets\\Person_A_Straight.mov"
+            }
+          ]
+        ],
+        "audio": [
+          [
+            {
+              "name": "voice_A.wav",
+              "duration": 300,
+              "start": 0,
+              "path": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\voice_A.wav"
+            }
+          ]
+        ]
+      }
+    },
+    "relocations": [
+      {
+        "before": "D:/omniALE/case07_interview_windows/solver/case3/submission/assets/Green.mov",
+        "after": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\assets\\Green.mov",
+        "requested": "D:/omniALE/case07_interview_windows/sealed/case3/submission/assets",
+        "ok": true
+      },
+      {
+        "before": "D:/omniALE/case07_interview_windows/solver/case3/submission/assets/Person_A_Straight.mov",
+        "after": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\assets\\Person_A_Straight.mov",
+        "requested": "D:/omniALE/case07_interview_windows/sealed/case3/submission/assets",
+        "ok": true
+      },
+      {
+        "before": "D:/omniALE/case07_interview_windows/solver/case3/submission/voice_A.wav",
+        "after": "D:\\omniALE\\case07_interview_windows\\sealed\\case3\\submission\\voice_A.wav",
+        "requested": "D:/omniALE/case07_interview_windows/sealed/case3/submission",
+        "ok": true
+      }
+    ],
+    "replay": {
+      "video": {
+        "exact": true,
+        "submitted_bytes": 132710400,
+        "replay_bytes": 132710400,
+        "max_difference": 0,
+        "mean_absolute_difference": 0.0
+      },
+      "audio": {
+        "exact": true,
+        "submitted_bytes": 2306048,
+        "replay_bytes": 2306048,
+        "max_difference": 0,
+        "mean_absolute_difference": 0.0
+      }
+    },
+    "project_sha256": "2cd7780a6f23d2e9e18ea05aa263ae6766bbbe4dd52f6e2246e9b0708b56737b",
+    "finished_sha256": "dac907632c06db9311096e219205c49923d0ed370e0c635112afa347550c088a"
+  },
+  "submission_sha256": {
+    "assets/Green.mov": "5c5b36fb3d41e0b8bab09d6c7c0448ab8aaf2f806f6238ea59974e4550c64d22",
+    "assets/Person_A_Straight.mov": "c204886fa3987f37645f3f1e1cf39152c34f93f304fdd70f27a8b5c03740f520",
+    "finished.mp4": "dac907632c06db9311096e219205c49923d0ed370e0c635112afa347550c088a",
+    "project.drp": "2cd7780a6f23d2e9e18ea05aa263ae6766bbbe4dd52f6e2246e9b0708b56737b",
+    "README.md": "759d0de2bba3df034cad2daec353055d229d8ddc41749dca05785761a04de196",
+    "scripts/relink_case07.py": "e9b034efed44716d323493a1e7122488f7d022d39f433190c63783b931fd6c0c",
+    "scripts/render_case07.py": "fcdb797266314a96ab16ab04b0da8256e38706b846786133ff90db1d79e91cf9",
+    "submission.json": "a463535be4479a7a15f2ebbae85b94d423fd7dc27ccd968083ae7eef16a55c5e",
+    "voice_A.wav": "50863dc85fc42fcae6ee5c3aacec6ddfbd1d601fd713bd4394b3f4ad6bc709c4",
+    "voice_B.wav": "6bfeffb07f8bb8ba6c6c108dbb63185a4b9e01164bb3e5b3d0d4a1102237c415"
+  }
+}
