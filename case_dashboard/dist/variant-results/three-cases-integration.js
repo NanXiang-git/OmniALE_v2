@@ -28,7 +28,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:12px">
         ${media.map(clip => `<figure style="margin:0;min-width:0">
           <video class="variant-video" style="display:block;width:100%;margin:0;aspect-ratio:640/338;background:#000"
-            playsinline preload="metadata" muted aria-label="${esc(clip.label)}" src="${esc(clip.url)}"></video>
+            playsinline preload="auto" muted aria-label="${esc(clip.label)}" src="${esc(clip.url)}"></video>
           <figcaption><a href="${esc(clip.url)}" target="_blank" rel="noopener">${esc(clip.label)}</a></figcaption>
         </figure>`).join('')}
       </div>
@@ -50,7 +50,9 @@
     const time = target.querySelector('[data-compare-time]');
     const status = target.querySelector('[data-compare-status]');
     const [leader, ...followers] = videos;
-    let playing = false;
+    let wantsPlayback = false;
+    let buffering = false;
+    let playbackAttempt = 0;
 
     function display(seconds) {
       seek.value = seconds;
@@ -58,53 +60,89 @@
     }
 
     function goTo(seconds) {
-      for (const video of videos) video.currentTime = seconds;
+      for (const video of videos) {
+        if (Math.abs(video.currentTime - seconds) > 0.02) video.currentTime = seconds;
+      }
       display(seconds);
     }
 
     function pause() {
-      playing = false;
+      wantsPlayback = false;
+      buffering = false;
+      playbackAttempt++;
       videos.forEach(video => video.pause());
       play.textContent = '同步播放';
+      status.textContent = '';
     }
 
-    play.addEventListener('click', async () => {
-      if (playing) {
+    function resumeWhenReady() {
+      if (!buffering || videos.some(video => video.seeking ||
+          video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA)) return;
+      buffering = false;
+      status.textContent = '';
+      const attempt = playbackAttempt;
+      Promise.all(videos.map(video => video.play())).catch(() => {
+        if (attempt !== playbackAttempt) return;
+        pause();
+        status.textContent = '同步播放未能启动。可重试，或点击视频下方的名称单独打开。';
+      });
+    }
+
+    function bufferAt(seconds) {
+      buffering = true;
+      playbackAttempt++;
+      videos.forEach(video => video.pause());
+      status.textContent = '正在缓冲三路视频…';
+      goTo(seconds);
+      resumeWhenReady();
+    }
+
+    play.addEventListener('click', () => {
+      if (wantsPlayback) {
         pause();
         return;
       }
-      status.textContent = '';
-      goTo(leader.ended ? 0 : Number(seek.value));
-      playing = true;
+      wantsPlayback = true;
       play.textContent = '暂停';
-      try {
-        await Promise.all(videos.map(video => video.play()));
-      } catch (error) {
-        const wasPlaying = playing;
-        pause();
-        if (wasPlaying) status.textContent = '同步播放未能启动。可重试，或点击视频下方的名称单独打开。';
-      }
+      bufferAt(Number(seek.value) >= Number(seek.max) ? 0 : Number(seek.value));
     });
     audio.addEventListener('change', () => {
       videos.forEach((video,i) => { video.muted = audio.value !== String(i); });
     });
-    seek.addEventListener('input', () => goTo(Number(seek.value)));
-    leader.addEventListener('timeupdate', () => {
-      if (leader.seeking) return;
-      const seconds = leader.currentTime;
-      display(seconds);
-      if (!playing) return;
-      for (const video of followers) {
-        if (!video.seeking && Math.abs(video.currentTime - seconds) > 0.16) {
-          video.currentTime = seconds;
-        }
+    seek.addEventListener('input', () => {
+      const seconds = Number(seek.value);
+      if (wantsPlayback && seconds < Number(seek.max)) {
+        bufferAt(seconds);
+      } else {
+        pause();
+        goTo(seconds);
       }
     });
-    leader.addEventListener('ended', pause);
-    videos.forEach(video => video.addEventListener('error', () => {
+    leader.addEventListener('timeupdate', () => {
+      if (!wantsPlayback || buffering || leader.seeking) return;
+      const seconds = leader.currentTime;
+      display(seconds);
+      for (const video of followers) {
+        if (!video.seeking && video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA &&
+            Math.abs(video.currentTime - seconds) > 0.16) video.currentTime = seconds;
+      }
+    });
+    leader.addEventListener('ended', () => {
       pause();
-      status.textContent = '有视频加载失败。可刷新页面，或点击视频下方的名称单独打开。';
-    }));
+      display(leader.duration);
+    });
+    for (const video of videos) {
+      video.addEventListener('canplay', resumeWhenReady);
+      video.addEventListener('seeked', resumeWhenReady);
+      video.addEventListener('waiting', () => {
+        if (wantsPlayback && !buffering && !video.ended &&
+            video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) bufferAt(video.currentTime);
+      });
+      video.addEventListener('error', () => {
+        pause();
+        status.textContent = '有视频加载失败。可刷新页面，或点击视频下方的名称单独打开。';
+      });
+    }
     return pause;
   }
 
