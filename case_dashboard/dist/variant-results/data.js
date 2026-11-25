@@ -58,7 +58,7 @@ window.OMNIALE_VARIANT_RESULTS = {
     {
       "case": 40,
       "model": "gpt-6.2-sol",
-      "score": null,
+      "score": 42.5579,
       "threshold": 80,
       "passed": false,
       "elapsed_seconds": 4193.618045568466,
@@ -96,10 +96,10 @@ window.OMNIALE_VARIANT_RESULTS = {
         "critical_H07.T_meaning.relation",
         "critical_H07.A_content.relation"
       ],
-      "unresolved_items_or_windows": 141,
-      "formula": "(E20 + T10) * (A70 / 70) * V * (100 / 30)",
-      "score_lower_bound": 36.2047,
-      "score_upper_bound": 49.2386,
+      "unresolved_items_or_windows": 0,
+      "formula": "(E20 + T10) * (A70 / 70) * V_coefficient * (100 / 30)",
+      "score_lower_bound": 42.5579,
+      "score_upper_bound": 42.5579,
       "solver_requests": 157,
       "verified_solver_responses": 157
     },

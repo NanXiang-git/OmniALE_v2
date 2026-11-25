@@ -243,6 +243,7 @@
           <td>${scoreText(row)}</td><td>${pretty(row.maximum)}</td></tr>`).join('')}</tbody>
         <tfoot><tr><th scope="row">最终总分</th><td><strong>${scoreText(run)}</strong></td><td>100</td></tr></tfoot>
       </table></div>
+      ${score.adjudication_summary?.original_pending ? `<p class="result-note">复评检查点 ${score.adjudication_summary.original_pending} 条 · 通过 ${score.adjudication_summary.majority_yes} · 不通过 ${score.adjudication_summary.majority_no} · 待判 ${score.pending}。</p>` : ''}
       <h3>验收与扣分</h3><p>通过线 ${run.threshold} 分 · ${verdict(run)}。${escape(note)}</p>
       ${run.failed_gates.length ? `<p class="variant-gates">${run.failed_gates.map(gate => `<code>${escape(gate)}</code>`).join(' ')}</p>` : ''}
       ${item.review ? `<p class="result-note">${escape(item.review)}</p>` : ''}

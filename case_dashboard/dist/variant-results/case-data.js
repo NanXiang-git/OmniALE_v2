@@ -465,97 +465,97 @@ window.OMNIALE_VARIANT_CASES = {
               "label": "瑞典语词序列准确性"
             },
             {
-              "score": null,
+              "score": 3.0322580645161277,
               "maximum": 4.0,
               "lower": 3.0322580645161277,
-              "upper": 3.161290322580643,
+              "upper": 3.0322580645161277,
               "id": "E_events",
               "label": "源事件覆盖与粗定位"
             },
             {
-              "score": null,
+              "score": 1.9662162162162191,
               "maximum": 3.0,
-              "lower": 1.8648648648648676,
-              "upper": 2.1891891891891926,
+              "lower": 1.9662162162162191,
+              "upper": 1.9662162162162191,
               "id": "E_roles",
               "label": "源说话人/声音实例归属"
             },
             {
-              "score": null,
+              "score": 3.1451612903225854,
               "maximum": 5.0,
-              "lower": 3.125000000000004,
-              "upper": 3.306451612903231,
+              "lower": 3.1451612903225854,
+              "upper": 3.1451612903225854,
               "id": "E_meaning",
               "label": "源语义与关键语气识别"
             },
             {
-              "score": null,
+              "score": 3.0275735294117663,
               "maximum": 4.5,
-              "lower": 2.9944852941176485,
-              "upper": 3.0937500000000004,
+              "lower": 3.0275735294117663,
+              "upper": 3.0275735294117663,
               "id": "T_meaning",
               "label": "中文意义准确完整"
             },
             {
-              "score": null,
+              "score": 2.9758064516128977,
               "maximum": 3.0,
-              "lower": 2.9274193548387046,
-              "upper": 2.9999999999999947,
+              "lower": 2.9758064516128977,
+              "upper": 2.9758064516128977,
               "id": "T_natural",
               "label": "中文自然度"
             },
             {
-              "score": null,
+              "score": 1.3790322580645145,
               "maximum": 1.5,
-              "lower": 1.3548387096774177,
-              "upper": 1.4274193548387082,
+              "lower": 1.3790322580645145,
+              "upper": 1.3790322580645145,
               "id": "T_terms",
               "label": "术语和称呼一致"
             },
             {
-              "score": null,
+              "score": 0.7419354838709679,
               "maximum": 1.0,
-              "lower": 0.7258064516129034,
+              "lower": 0.7419354838709679,
               "upper": 0.7419354838709679,
               "id": "T_style",
               "label": "语体与语用功能"
             },
             {
-              "score": null,
+              "score": 13.592945624195652,
               "maximum": 25,
-              "lower": 10.870770323895343,
-              "upper": 15.873049388674426,
+              "lower": 13.592945624195652,
+              "upper": 13.592945624195652,
               "id": "A_identity",
               "label": "原人物音色与身份保持"
             },
             {
-              "score": null,
+              "score": 6.25,
               "maximum": 15,
-              "lower": 3.7500000000000004,
-              "upper": 7.5,
+              "lower": 6.25,
+              "upper": 6.25,
               "id": "A_stable",
               "label": "同人物跨段声音一致性"
             },
             {
-              "score": null,
+              "score": 11.85483870967741,
               "maximum": 15,
-              "lower": 11.370967741935475,
-              "upper": 12.459677419354826,
+              "lower": 11.85483870967741,
+              "upper": 11.85483870967741,
               "id": "A_prosody",
               "label": "情绪语气与表演保持"
             },
             {
-              "score": null,
+              "score": 7.0588235294117565,
               "maximum": 10,
-              "lower": 6.985294117647051,
-              "upper": 7.09558823529411,
+              "lower": 7.0588235294117565,
+              "upper": 7.0588235294117565,
               "id": "A_content",
               "label": "实际中文内容忠实度"
             },
             {
-              "score": null,
+              "score": 4.854838709677437,
               "maximum": 5,
-              "lower": 4.806451612903243,
+              "lower": 4.854838709677437,
               "upper": 4.854838709677437,
               "id": "A_quality",
               "label": "自然度清晰度与双版本混音"
@@ -577,45 +577,35 @@ window.OMNIALE_VARIANT_CASES = {
               "label": "时间线完整性"
             },
             {
-              "score": null,
+              "score": 0.16451612903225818,
               "maximum": 0.2,
-              "lower": 0.15806451612903244,
-              "upper": 0.1881720430107526,
+              "lower": 0.16451612903225818,
+              "upper": 0.16451612903225818,
               "id": "V_display",
               "label": "声画时机与字幕呈现"
             }
           ],
           "groups": {
             "E": {
+              "score": 13.122257898845907,
               "maximum": 20,
-              "lower": 13.000745257171975,
-              "upper": 13.635553452464041,
               "id": "E",
               "label": "E"
             },
             "T": {
+              "score": 8.124347722960147,
               "maximum": 10,
-              "lower": 8.002549810246673,
-              "upper": 8.26310483870967,
               "id": "T",
               "label": "T"
             },
             "A": {
+              "score": 43.61144657296225,
               "maximum": 70,
-              "lower": 37.78348379638111,
-              "upper": 47.783153753000796,
               "id": "A",
               "label": "A"
-            },
-            "V": {
-              "maximum": 1,
-              "lower": 0.9580645161290323,
-              "upper": 0.9881720430107525,
-              "id": "V",
-              "label": "V"
             }
           },
-          "coefficient": null,
+          "coefficient": 0.9645161290322581,
           "gates": {
             "continuity_ledger": {
               "pass": null,
@@ -2746,6 +2736,23 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "role.Ida.A_stable.stable",
+              "reason": "样本中仅S053为Ida（金发），其余均为Mette（棕发）；成片将唯一的Ida台词错配给了Mette的配音轨，导致该角色无有效同角色样本进行音色比对。",
+              "lost": 1.25,
+              "source_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ],
+              "output_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ]
+            },
+            {
               "id": "role.Marta.A_stable.stable",
               "reason": "由于角色映射错误，实际听到的并非Marta的声音，无法评估其音色稳定性；且提交的marta.wav在对应时间段无有效语音输出。",
               "lost": 1.25,
@@ -3005,6 +3012,23 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "S056.A_identity.identity",
+              "reason": "源声为沙哑苍老的男性（Harald），成片却替换成了清晰平滑的年轻男声，音色与年龄感完全不符",
+              "lost": 0.390625,
+              "source_intervals": [
+                [
+                  637.68,
+                  647.16
+                ]
+              ],
+              "output_intervals": [
+                [
+                  637.68,
+                  647.16
+                ]
+              ]
+            },
+            {
               "id": "S036.A_identity.texture",
               "reason": "输出丢失源角色明显的颗粒感与气声摩擦，音质过于纯净。",
               "lost": 0.2604166666666667,
@@ -3052,6 +3076,40 @@ window.OMNIALE_VARIANT_CASES = {
                 [
                   7.98,
                   9.66
+                ]
+              ]
+            },
+            {
+              "id": "S013.A_prosody.intent",
+              "reason": "实际中文配音仅保留了“Ja!”对应的庆祝语气，完全遗漏了源音频中前置的强烈感叹词“Fan!”的情绪表达。",
+              "lost": 0.1814516129032258,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  60.49,
+                  61.65
+                ]
+              ]
+            },
+            {
+              "id": "S013.A_prosody.delivery",
+              "reason": "实际中文配音未能保留源句从急促感叹到兴奋肯定的明显停顿与语调突变结构，表演层次缺失。",
+              "lost": 0.1814516129032258,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  60.49,
+                  61.65
                 ]
               ]
             },
@@ -3145,6 +3203,23 @@ window.OMNIALE_VARIANT_CASES = {
                 [
                   492.28,
                   493.96
+                ]
+              ]
+            },
+            {
+              "id": "S044.A_prosody.delivery",
+              "reason": "源句“Det är inte du, Elsie.”在“inte”后有明显的迟疑停顿，成片中文配音语速连贯，未保留该停顿结构",
+              "lost": 0.1814516129032258,
+              "source_intervals": [
+                [
+                  490.08,
+                  497.68
+                ]
+              ],
+              "output_intervals": [
+                [
+                  490.08,
+                  497.68
                 ]
               ]
             },
@@ -3666,6 +3741,18 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "S013.E_meaning.intent",
+              "reason": "提交将说话人误标为Mette且时间错位至60.49秒，此时画面中Mette并未发声；该描述无法对应源段Ida的实际语用功能。",
+              "lost": 0.060483870967741944,
+              "source_intervals": [
+                [
+                  62.0,
+                  63.84
+                ]
+              ],
+              "output_intervals": []
+            },
+            {
               "id": "S014.E_meaning.proposition",
               "reason": "瑞典语转录混乱，将一句话拆碎并张冠李戴，破坏了原始命题结构。",
               "lost": 0.060483870967741944,
@@ -4024,6 +4111,74 @@ window.OMNIALE_VARIANT_CASES = {
               "output_intervals": []
             },
             {
+              "id": "S013.A_identity.pitch",
+              "reason": "源人物为Ida（短发、有纳粹纹身），其原声在62.06-63.84秒表现为高亢且极具爆发力的尖叫；而输出音频错误地使用了Mette的声音，在对应时间段（约59.36-60.50秒）呈现为中低音区平稳的“好耶”，音高区间完全不相容。",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  59.36,
+                  60.5
+                ]
+              ]
+            },
+            {
+              "id": "S013.A_identity.texture",
+              "reason": "源人物Ida的原声带有明显的撕裂感和极度兴奋的嘶吼质地（62.06-63.84秒）；输出的中文配音（59.36-60.50秒）音色干净平滑，缺乏源声音那种粗砺和失控的质感，未能保留可辨认的音质特征。",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  59.36,
+                  60.5
+                ]
+              ]
+            },
+            {
+              "id": "S013.A_identity.resonance",
+              "reason": "源人物Ida发声时喉部紧张，共鸣集中在头腔与鼻腔的高频区，听感尖锐单薄（62.06-63.84秒）；输出配音（59.36-60.50秒）胸腔共鸣较多，声音厚实圆润，两者共鸣位置与厚薄特征严重不符。",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  59.36,
+                  60.5
+                ]
+              ]
+            },
+            {
+              "id": "S013.A_identity.identity",
+              "reason": "存在严重的角色错配（Casting Swap）。源画面中说话者为Ida（短发纹身女），但提交计划明确标注使用Mette的声音进行配音。尽管两人均为年轻女性，但排除语言差异后，该通用女声无法被辨认为特定的Ida本人，属于身份识别失败。",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  59.36,
+                  60.5
+                ]
+              ]
+            },
+            {
               "id": "S030.A_identity.texture",
               "reason": "丢失了原角色特有的气声和略带沙哑的质感。",
               "lost": 0.15625,
@@ -4071,6 +4226,74 @@ window.OMNIALE_VARIANT_CASES = {
                 [
                   318.44,
                   320.44
+                ]
+              ]
+            },
+            {
+              "id": "S053.A_identity.pitch",
+              "reason": "源声为尖锐且带有攻击性的年轻女声，成片输出为平稳试探的中音区女声，音高区间不匹配",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ],
+              "output_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ]
+            },
+            {
+              "id": "S053.A_identity.texture",
+              "reason": "源声明亮且带有明显的急躁与沙哑感，成片输出平滑清晰无此音质特征",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ],
+              "output_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ]
+            },
+            {
+              "id": "S053.A_identity.resonance",
+              "reason": "源声共鸣靠前、单薄且具有穿透力，成片输出共鸣靠后、厚实且温和",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ],
+              "output_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ]
+            },
+            {
+              "id": "S053.A_identity.identity",
+              "reason": "源声表现出强烈的不耐烦与粗鲁情绪，成片输出语气平静试探，无法辨认为同一人物或同一状态下的声音",
+              "lost": 0.15625,
+              "source_intervals": [
+                [
+                  586.36,
+                  595.12
+                ]
+              ],
+              "output_intervals": [
+                [
+                  586.36,
+                  595.12
                 ]
               ]
             },
@@ -4508,6 +4731,23 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "S033.T_meaning.scope",
+              "reason": "源句“Blev du tappad i golvet”意为被摔在地上，译文误作“走散了”，语义完全改变",
+              "lost": 0.049632352941176475,
+              "source_intervals": [
+                [
+                  357.64,
+                  367.52
+                ]
+              ],
+              "output_intervals": [
+                [
+                  357.64,
+                  367.52
+                ]
+              ]
+            },
+            {
               "id": "S034.T_meaning.proposition",
               "reason": "中文译文把表示了然的“我猜到了”译成“我不知道”，核心命题错误。",
               "lost": 0.049632352941176475,
@@ -4781,6 +5021,23 @@ window.OMNIALE_VARIANT_CASES = {
                 [
                   458.34,
                   460.58
+                ]
+              ]
+            },
+            {
+              "id": "S040.A_identity.pitch",
+              "reason": "源角色为年长女性，成片配音音色年轻且音高偏高，与源人物不符",
+              "lost": 0.11160714285714286,
+              "source_intervals": [
+                [
+                  459.6,
+                  467.52
+                ]
+              ],
+              "output_intervals": [
+                [
+                  459.6,
+                  467.52
                 ]
               ]
             },
@@ -5074,6 +5331,30 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "S001.E_events.occurrence",
+              "reason": "源片段在指定时间窗口内无实际语音发生，属于空占位符。提交却将其记录为一次独立的发声事件并错误关联了另一处的台词内容，导致凭空捏造了不存在的源事件。",
+              "lost": 0.03225806451612903,
+              "source_intervals": [
+                [
+                  0.2,
+                  1.88
+                ]
+              ],
+              "output_intervals": []
+            },
+            {
+              "id": "S001.E_events.window",
+              "reason": "指定的时间窗口内仅有环境音和背景音乐，无任何说话人发声或屏幕动作事件。提交的窗口试图覆盖一个并不存在的语音事件，且其声称的内容实际发生在更晚的时间段。",
+              "lost": 0.03225806451612903,
+              "source_intervals": [
+                [
+                  0.2,
+                  1.88
+                ]
+              ],
+              "output_intervals": []
+            },
+            {
               "id": "S002.E_events.window",
               "reason": "提交窗口(1.06-3.3)早于源发声起点(约2.0)，存在明显时间错置。",
               "lost": 0.03225806451612903,
@@ -5184,6 +5465,23 @@ window.OMNIALE_VARIANT_CASES = {
               ]
             },
             {
+              "id": "S013.E_events.window",
+              "reason": "提交的事件窗口(60.49-61.65)完全未覆盖实际源发声区间(62.06-63.84)，存在明显的时序错置。",
+              "lost": 0.03225806451612903,
+              "source_intervals": [
+                [
+                  62.06,
+                  63.84
+                ]
+              ],
+              "output_intervals": [
+                [
+                  60.49,
+                  61.65
+                ]
+              ]
+            },
+            {
               "id": "S014.E_events.occurrence",
               "reason": "源事件Jävla... ja, ja, ja!被拆分并错误归属给不同说话人，且部分文本丢失。",
               "lost": 0.03225806451612903,
@@ -5232,354 +5530,9 @@ window.OMNIALE_VARIANT_CASES = {
                   70.14
                 ]
               ]
-            },
-            {
-              "id": "S015.E_events.window",
-              "reason": "提交的时间窗远远超出源事件范围，包含了前后多个不相干的动作周期。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  72.96,
-                  75.44
-                ]
-              ],
-              "output_intervals": [
-                [
-                  71.55,
-                  72.77
-                ],
-                [
-                  73.02,
-                  74.0
-                ],
-                [
-                  73.9,
-                  74.53
-                ],
-                [
-                  74.63,
-                  75.52
-                ],
-                [
-                  76.13,
-                  77.03
-                ]
-              ]
-            },
-            {
-              "id": "S017.E_events.window",
-              "reason": "提交窗口提前于实际发声起点，且包含无对应语音的静音段。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  103.64,
-                  106.84
-                ]
-              ],
-              "output_intervals": [
-                [
-                  101.68,
-                  105.44
-                ]
-              ]
-            },
-            {
-              "id": "S023.E_events.occurrence",
-              "reason": "源句包含Jag är ren，提交漏掉该轮次未作记录。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  145.72,
-                  149.68
-                ]
-              ],
-              "output_intervals": [
-                [
-                  145.03,
-                  150.26
-                ]
-              ]
-            },
-            {
-              "id": "S023.E_events.window",
-              "reason": "提交窗口未完全覆盖源发声区间，存在截断遗漏。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  145.72,
-                  149.68
-                ]
-              ],
-              "output_intervals": [
-                [
-                  145.03,
-                  150.26
-                ]
-              ]
-            },
-            {
-              "id": "S024.E_events.window",
-              "reason": "提交窗口起点晚于实际发声，且将后续台词错误归入该事件。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  246.88,
-                  249.76
-                ]
-              ],
-              "output_intervals": [
-                [
-                  247.87,
-                  252.46
-                ]
-              ]
-            },
-            {
-              "id": "S029.E_events.window",
-              "reason": "提交窗口提前且过短，未能完整覆盖实际源发声区间。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  313.88,
-                  316.52
-                ]
-              ],
-              "output_intervals": [
-                [
-                  313.16,
-                  314.59
-                ]
-              ]
-            },
-            {
-              "id": "S030.E_events.window",
-              "reason": "提交窗口提前结束，截断了实际的源发声尾部内容。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  318.44,
-                  320.44
-                ]
-              ],
-              "output_intervals": [
-                [
-                  317.63,
-                  319.0
-                ]
-              ]
-            },
-            {
-              "id": "S034.E_events.window",
-              "reason": "提交窗口起始时间早于实际源发声时间，存在错位。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  365.6,
-                  369.44
-                ]
-              ],
-              "output_intervals": [
-                [
-                  364.21,
-                  366.77
-                ]
-              ]
-            },
-            {
-              "id": "S035.E_events.window",
-              "reason": "提交窗口结束于369.02s，未能覆盖实际源音频延续至372.84s的部分。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  369.6,
-                  372.84
-                ]
-              ],
-              "output_intervals": []
-            },
-            {
-              "id": "S036.E_events.window",
-              "reason": "源音频在383秒后持续发声至约385秒，提交窗口提前结束导致截断。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  383.04,
-                  385.96
-                ]
-              ],
-              "output_intervals": [
-                [
-                  382.08,
-                  383.66
-                ]
-              ]
-            },
-            {
-              "id": "S037.E_events.occurrence",
-              "reason": "源事件为Mette的两轮提问，被拆分为friend的两个无关陈述句。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  417.8,
-                  421.32
-                ]
-              ],
-              "output_intervals": [
-                [
-                  417.14,
-                  420.84
-                ]
-              ]
-            },
-            {
-              "id": "S037.E_events.window",
-              "reason": "提交窗口未覆盖实际源发声区间，且存在明显的时间错位。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  417.8,
-                  421.32
-                ]
-              ],
-              "output_intervals": [
-                [
-                  417.14,
-                  420.84
-                ]
-              ]
-            },
-            {
-              "id": "S040.E_events.window",
-              "reason": "提交窗口提前截断，未完整覆盖实际源发声结束时间。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  462.0,
-                  465.12
-                ]
-              ],
-              "output_intervals": [
-                [
-                  461.62,
-                  464.17
-                ]
-              ]
-            },
-            {
-              "id": "S041.E_events.window",
-              "reason": "提交窗口严重错位，未能覆盖实际源发声时间段。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  468.44,
-                  471.44
-                ]
-              ],
-              "output_intervals": [
-                [
-                  465.85,
-                  470.07
-                ]
-              ]
-            },
-            {
-              "id": "S043.E_events.occurrence",
-              "reason": "将Mette的两句话拆分给不同角色，导致事件记录混乱。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  486.4,
-                  490.92
-                ]
-              ],
-              "output_intervals": [
-                [
-                  486.21,
-                  490.84
-                ]
-              ]
-            },
-            {
-              "id": "S053.E_events.occurrence",
-              "reason": "该时间段源音频缺失，提交计划中未记录此事件发生。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  588.76,
-                  592.72
-                ]
-              ],
-              "output_intervals": []
-            },
-            {
-              "id": "S056.E_events.window",
-              "reason": "提交窗口结束于644.14秒，未能完全覆盖源发声至644.76秒的尾音。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  640.08,
-                  644.76
-                ]
-              ],
-              "output_intervals": [
-                [
-                  639.07,
-                  644.14
-                ]
-              ]
-            },
-            {
-              "id": "S061.E_events.window",
-              "reason": "第一句台词实际发声在702.56-703.5s，但对应提交事件窗口为701.91-703.96s，起始点早于源音频约0.65秒。",
-              "lost": 0.03225806451612903,
-              "source_intervals": [
-                [
-                  702.56,
-                  703.5
-                ]
-              ],
-              "output_intervals": [
-                [
-                  701.91,
-                  703.96
-                ]
-              ]
-            },
-            {
-              "id": "S015.T_terms.terms",
-              "reason": "回避了关键的敏感词neger，导致术语层面信息失真。",
-              "lost": 0.024193548387096774,
-              "source_intervals": [
-                [
-                  72.96,
-                  75.44
-                ]
-              ],
-              "output_intervals": [
-                [
-                  71.55,
-                  72.77
-                ],
-                [
-                  73.02,
-                  74.0
-                ],
-                [
-                  73.9,
-                  74.53
-                ],
-                [
-                  74.63,
-                  75.52
-                ],
-                [
-                  76.13,
-                  77.03
-                ]
-              ]
             }
           ],
-          "pending": 141,
+          "pending": 0,
           "wer": {
             "reference_words": 421,
             "submitted_words": 425,
@@ -5587,8 +5540,8 @@ window.OMNIALE_VARIANT_CASES = {
             "wer": 0.37767220902612825,
             "score": 0.6223277909738718
           },
-          "score_lower_bound": 36.2047,
-          "score_upper_bound": 49.2386,
+          "score_lower_bound": 42.5579,
+          "score_upper_bound": 42.5579,
           "voice_review": {
             "clips": [
               {
@@ -5606,23 +5559,37 @@ window.OMNIALE_VARIANT_CASES = {
                 "verdict": "no"
               },
               {
-                "role": "Elsie",
-                "time": "462.00 秒",
-                "source": "variant-results/case-40/sol/voice-review/elsie-1-source.m4a",
-                "output": "variant-results/case-40/sol/voice-review/elsie-1-answer.m4a",
+                "role": "Ida",
+                "time": "62.06 秒",
+                "source": "variant-results/case-40/sol/voice-review/ida-0-source.m4a",
+                "output": "variant-results/case-40/sol/voice-review/ida-0-answer.m4a",
                 "verdict": "no"
               },
               {
-                "role": "Elsie",
-                "time": "703.50 秒",
-                "source": "variant-results/case-40/sol/voice-review/elsie-3-source.m4a",
-                "output": "variant-results/case-40/sol/voice-review/elsie-3-answer.m4a",
+                "role": "Ida",
+                "time": "588.76 秒",
+                "source": "variant-results/case-40/sol/voice-review/ida-3-source.m4a",
+                "output": "variant-results/case-40/sol/voice-review/ida-3-answer.m4a",
                 "verdict": "no"
               }
             ]
-          }
+          },
+          "adjudication_summary": {
+            "original_pending": 141,
+            "majority_yes": 52,
+            "majority_no": 89,
+            "majority_3_lost_points": 4.823759849406197,
+            "majority_3_lost_coefficient": 0.023655913978494623,
+            "invalid_original_response_zero_lost_points": 0,
+            "invalid_original_response_zero_lost_coefficient": 0,
+            "invalid_new_response_zero_lost_points": 0,
+            "invalid_new_response_zero_lost_coefficient": 0
+          },
+          "adjudication_method": "141条待判项三轮独立视听评审、多数票定案。哈尔德误标的原声样本剔除，使用同一场景两段确认对白复核。",
+          "checklist_total": 1836,
+          "checklist_resolved": 1836
         },
-        "notes": "瑞典语听写 WER 37.8%。已确认未通过 31 项验收检查。听觉裁判对照同角色的分轨复核跨段音色。"
+        "notes": "瑞典语听写 WER 37.8%。141 条待判项全部复评，52 条通过、89 条不通过。跨段稳定 6.25/15，原人物音色 13.5929/25。连续性台账仍有一处时间窗待核。"
       },
       "luna": {
         "state": "complete",
@@ -12354,7 +12321,7 @@ window.OMNIALE_VARIANT_CASES = {
         "notes": "瑞典语听写 WER 120.2%。已确认未通过 59 项验收检查。听觉裁判对照同角色的分轨复核跨段音色。"
       }
     },
-    "result_status": "两组封存答卷已评测。"
+    "result_status": "Sol 评分完成，Luna 仍保留评分区间。"
   },
   "46": {
     "task": "# 第14题 / Case46：《Sprite Fright》· 中文口述影像\n\n为 input/source.mp4 制作中文口述影像，让能听见原声、但看不见画面的观众跟上重要的视觉信息。请实际生成可听看的成片，不要只写方案。本轮按公开 SCORING.md 最终乘积公式评分；不提供私有参考或旁白参考答案。\n\n## 输入\n- source.mp4：选定公开片段的剧情部分，81 秒，1280×536，24 fps，1944 帧。正片 02:04–03:25 的连续片段。保留题包画面及时间轴。\n- original.wav：从本题主视频解码的48kHz立体声PCM原声。\n- reference_zh.srt：辅助中文字幕草稿，详见 SUBTITLE_NOTES.md。不得把字幕边界当对白边界，也不得认为没有字幕就没有对白。\n- glossary.json：译名与用语表，不包含视觉身份答案。\n- tools/tts.py：本地TTS接口；player.html：可独立关闭旁白的播放器模板。\n\n## 委托要求\n1. 自行分析实际原声，找出对白间的空隙，再结合画面决定哪些信息值得讲。不给可用窗口。需要区分原声能表达的信息与必须靠旁白补充的信息。\n2. 优先帮助观众跟上主体、关键动作、物件变化及因果。不要为了说全所有细节而塞满空隙；对白或明显音效已充分表达的信息可以不说。\n3. 不要说错主体、虚构心理或提前透露尚未在画面中揭示的信息。不确定人物姓名可用清楚且一致的外观指代。\n4. 旁白不得覆盖对白。中文措辞应短而自然，建议约3—4.5汉字/秒；必须实际合成并检查时长，不能只用字数估时。不得异常加速或截断词尾。\n5. 不得暂停、变速、删镜头、补黑场或修改画面。字幕外挂，不得烧录旁白字幕或遮住原画面。保留全部原声；旁白出现时对原声做-6dB压低，可用50—100ms平滑起落防止爆音，结束后恢复。不得借压低原声来覆盖对白；注意关键音效保护。\n6. 输出的base_track.wav为未加旁白、未局部压低的原声基轨；ducked_base_track.wav为按旁白安排压低的原声；ad_track.wav为全长旁白轨；mix.wav=ducked_base_track.wav+ad_track.wav。关闭旁白时播放base，开启时播放ducked_base+ad，画面与进度不变。四条轨从0开始、全长一致，48kHz立体声PCM。可统一降低整体增益以防削波，但须在README声明，保持旁白期间原声相对基轨低6dB。建议真峰值≤-1dBTP。\n\n## 必交文件\n- accessible.mp4：H.264/AAC，原画面与帧数不变，内置真实旁白混音。\n- ad.vtt：中文旁白稿及实际安排时间；所有时间为主片相对时间。\n- cues/：每条实际使用的配音WAV；不能静音占位，不可只交在线TTS链接。\n- base_track.wav、ducked_base_track.wav、ad_track.wav、mix.wav。\n- ad_plan.json：每条id/start/end/text/wav/visual_source_interval/knowledge_time，说明对应什么画面、信息最早何时可知；与VTT、配音实际时长一致。\n- self_check.json：逐条报告实际配音长度、自己判断的对白重叠风险、是否重复原声、未完成或不确定之处。可附省略重要事件的理由。自查不等于正式评测。\n- player_config.json、player.html：播放器可真实开关旁白。\n- rebuild.json、rebuild.py（或其他离线脚本）、README.md：可用输入与提交的配音素材离线重建成片；不得仅复制成片、联网或重新调用TTS。\n结构见 submission_schema.json。无需制作旧题的selection_audit.json，不要求达到固定事件数量。\n\n## 执行条件\n限时60分钟，含模型调用、分析、合成、渲染和自检；提前完成即冻结，到时终止全部子进程并保留当时文件。禁止子代理。输入只读；交付放/workspace/submission，临时文件放/workspace/scratch。\n模型为gpt-6-luna，推理high，使用Codex harness。当前接口不支持原生音频输入；可用离线ASR、波形/频谱分析、视频抽帧及本地媒体工具，不可调用其他在线模型替代。工具的实际使用与局限须在README如实说明。\n评分协议见SCORING.md；禁止寻找私有参考、历史答卷或评分器。\n",
