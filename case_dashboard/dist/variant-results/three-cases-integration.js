@@ -23,6 +23,91 @@
       srclang="${esc(track.lang)}" label="${esc(track.label)}"${i===0 ? ' default' : ''}>`).join('')}
     </video><figcaption>${esc(media.label || media.name)} · ${link(media)}</figcaption></figure>`;
 
+  function mediaComparison(target, media) {
+    target.innerHTML = `<h3>三路音画对比</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:12px">
+        ${media.map(clip => `<figure style="margin:0;min-width:0">
+          <video class="variant-video" style="display:block;width:100%;margin:0;aspect-ratio:640/338;background:#000"
+            playsinline preload="metadata" muted aria-label="${esc(clip.label)}" src="${esc(clip.url)}"></video>
+          <figcaption><a href="${esc(clip.url)}" target="_blank" rel="noopener">${esc(clip.label)}</a></figcaption>
+        </figure>`).join('')}
+      </div>
+      <div class="variant-result-nav" style="align-items:center" role="group" aria-label="同步播放">
+        <button type="button" class="button" data-compare-play>同步播放</button>
+        <label>收听 <select data-compare-audio>
+          <option value="mute">静音</option>
+          ${media.map((clip,i) => `<option value="${i}">${esc(clip.label)}</option>`).join('')}
+        </select></label>
+        <output data-compare-time>0.00 / 26.00 秒</output>
+      </div>
+      <input aria-label="三路同步进度" type="range" min="0" max="26" step="0.01" value="0"
+        data-compare-seek style="width:100%">
+      <p class="result-note" data-compare-status aria-live="polite"></p>`;
+    const videos = [...target.querySelectorAll('video')];
+    const play = target.querySelector('[data-compare-play]');
+    const audio = target.querySelector('[data-compare-audio]');
+    const seek = target.querySelector('[data-compare-seek]');
+    const time = target.querySelector('[data-compare-time]');
+    const status = target.querySelector('[data-compare-status]');
+    const [leader, ...followers] = videos;
+    let playing = false;
+
+    function display(seconds) {
+      seek.value = seconds;
+      time.textContent = seconds.toFixed(2) + ' / 26.00 秒';
+    }
+
+    function goTo(seconds) {
+      for (const video of videos) video.currentTime = seconds;
+      display(seconds);
+    }
+
+    function pause() {
+      playing = false;
+      videos.forEach(video => video.pause());
+      play.textContent = '同步播放';
+    }
+
+    play.addEventListener('click', async () => {
+      if (playing) {
+        pause();
+        return;
+      }
+      status.textContent = '';
+      goTo(leader.ended ? 0 : Number(seek.value));
+      playing = true;
+      play.textContent = '暂停';
+      try {
+        await Promise.all(videos.map(video => video.play()));
+      } catch (error) {
+        const wasPlaying = playing;
+        pause();
+        if (wasPlaying) status.textContent = '同步播放未能启动。可重试，或点击视频下方的名称单独打开。';
+      }
+    });
+    audio.addEventListener('change', () => {
+      videos.forEach((video,i) => { video.muted = audio.value !== String(i); });
+    });
+    seek.addEventListener('input', () => goTo(Number(seek.value)));
+    leader.addEventListener('timeupdate', () => {
+      if (leader.seeking) return;
+      const seconds = leader.currentTime;
+      display(seconds);
+      if (!playing) return;
+      for (const video of followers) {
+        if (!video.seeking && Math.abs(video.currentTime - seconds) > 0.16) {
+          video.currentTime = seconds;
+        }
+      }
+    });
+    leader.addEventListener('ended', pause);
+    videos.forEach(video => video.addEventListener('error', () => {
+      pause();
+      status.textContent = '有视频加载失败。可刷新页面，或点击视频下方的名称单独打开。';
+    }));
+    return pause;
+  }
+
   function bilingual(zh,en) {
     const language = (cues, label, lang) => `<div lang="${lang}">
       <strong>${label}</strong>${cues.length ? cues.map(cue=>`<p style="white-space:pre-line">${esc(cue.text ?? cue)}${cue.time ? `<br><small>${esc(cue.time)}</small>` : ''}</p>`).join('') : '<p>未提交字幕</p>'}</div>`;
@@ -76,12 +161,14 @@
     const item = cases.find(candidate => key(candidate) === entry.key);
     if (!item) return old.render(entry,result,target);
     const panels = [['answer','模型交付'],['scores','分数构成'],['analysis','错误分析']];
+    if (item.mediaComparison) panels.unshift(['media-compare','三路音画对比']);
     if (item.comparison) panels.unshift(['compare','逐段答案对照']);
     if (item.runs.some(run=>run.listening)) panels.push(['listening','音频独立听评']);
     const initial = item.runs.length > 1 && item.id===7 ? item.runs.length-1 : 0;
     let current = initial;
-    let selected = item.comparison ? 'compare' : 'answer';
+    let selected = panels[0][0];
     let signIndex = 0;
+    let stopComparison;
     target.innerHTML = `<section class="variant-case-results" data-detailed-case="${item.id}">
       <h2 class="result-section-title">模型作答对照</h2>
       ${table(['模型','推理','作答预算','用时','正式分 / 100','状态'],
@@ -96,12 +183,16 @@
       <a href="#results/variants">变式汇总</a></p></section>`;
     const buttons = target.querySelectorAll('[data-detailed-run],[data-detailed-panel]');
     function update() {
+      stopComparison?.();
+      stopComparison = undefined;
       const run = item.runs[current];
       buttons.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.detailedRun === String(current)
         || button.dataset.detailedPanel === selected)));
       const body = target.querySelector('[data-detailed-body]');
       const reports = (run.reports || []).map(link).join(' · ');
-      if (selected === 'compare' && item.comparison) {
+      if (selected === 'media-compare') {
+        stopComparison = mediaComparison(body, item.mediaComparison);
+      } else if (selected === 'compare' && item.comparison) {
         const compare = item.comparison;
         const segment = compare.segments[signIndex];
         body.innerHTML = `<h3>逐段答案对照</h3>
