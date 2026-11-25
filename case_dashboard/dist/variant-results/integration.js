@@ -268,7 +268,7 @@
     }
     let alias = models[0];
     let selected = source.models[alias].video ? 'answer' : 'process';
-    const tabs = [['answer', '答卷与成片'], ['process', '作答过程'], ['scores', '分数构成']];
+    const tabs = [['answer', '答卷与成片'], ['process', '作答过程'], ['scores', '分数构成'], ['analysis', '错误分析']];
     target.innerHTML = `<section class="variant-case-results" data-variant-results="${item.id}">
       <h2 class="result-section-title">模型作答对照</h2>
       <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">模型</th><th scope="col">用时</th><th scope="col">总分</th><th scope="col">验收</th></tr></thead>
@@ -299,6 +299,7 @@
       });
       if (selected === 'process') content.innerHTML = process(model, item, alias, root);
       else if (selected === 'scores') content.innerHTML = breakdown(model, item, run, model.notes || item.notes?.[index] || item.review, root);
+      else if (selected === 'analysis') content.innerHTML = window.OmniErrorAnalysis.primary(item.id, alias, source, model);
       else content.innerHTML = answer(model, root);
     }
     target.querySelectorAll('[data-variant-model]').forEach(button => button.addEventListener('click', () => {

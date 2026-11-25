@@ -270,11 +270,7 @@
           ${(run.breakdown || []).map(group => `<h4>${esc(group.label)}</h4>${table(group.columns,group.rows)}`).join('')}
           <p class="result-note">${esc(item.note)}</p><p>${reports}</p>`;
       } else {
-        body.innerHTML = `<h3>错误分析</h3><ul>${run.notes.map(note => `<li>${esc(note)}</li>`).join('')}</ul>
-          ${(run.evidence || []).map(group => `<h4>${esc(group.title)}</h4><div class="variant-grid">
-            ${group.files.map(file=>`<figure><img class="variant-video" src="${esc(file.url)}" loading="lazy"
-                alt="${esc(file.label || file.name)}"><figcaption>${esc(file.label || file.name)}</figcaption></figure>`).join('')}
-          </div>`).join('')}<p>${reports}</p>`;
+        body.innerHTML = window.OmniErrorAnalysis.detailed(item, run, current);
       }
     }
     buttons.forEach(button => button.addEventListener('click', () => {
