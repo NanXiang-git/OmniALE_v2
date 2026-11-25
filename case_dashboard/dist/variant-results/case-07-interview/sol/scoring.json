@@ -3,7 +3,7 @@
   "effort": "xhigh",
   "time_limit_seconds": null,
   "seconds": 1471.0934872627258,
-  "total": 73.1885,
+  "total": 61.0222,
   "visual_points": 44.18850741205259,
   "visual_shot_scores": [
     {
@@ -776,5 +776,10 @@
     "voice_A.wav": "50863dc85fc42fcae6ee5c3aacec6ddfbd1d601fd713bd4394b3f4ad6bc709c4",
     "voice_B.wav": "6bfeffb07f8bb8ba6c6c108dbb63185a4b9e01164bb3e5b3d0d4a1102237c415"
   },
-  "previous_listening_points": 8
+  "aggregation": {
+    "formula": "(visual_points / 70 * 100) * (audio_points / 30)",
+    "visual_percent": 63.12643916007512,
+    "audio_points": 29.0,
+    "audio_coefficient": 0.9666666666666667
+  }
 }

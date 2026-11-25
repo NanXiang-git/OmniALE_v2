@@ -6,7 +6,7 @@
     "title": "双人访谈抠像与对白分轨",
     "versionLabel": "移动遮挡与对白分离",
     "summary": "12 秒双人镜头。人物交叉、道具遮挡，双人配录对白与器乐混合。",
-    "task": "# Case07｜双人访谈抠像与对白分轨\n\n交付一条访谈绿底成片和两条独立对白轨。A 是 person_A.jpg 中穿白色外套的人，B 是 person_B.jpg 中拿笔记本的人。A、B 会交换画面位置。素材为真人对白配录，画面动作为辅助。开场第一位说话者是 A，第二位是 B。\n\n## 输入\n\n- input/source.mp4 是 12 秒音画预览。input/frames/0000.png 到 0299.png 为权威图像，512×288、25 fps。\n- input/mix.wav 为混音的无损副本，双声道、48 kHz、576000 样本帧。\n- input/person_A.jpg、input/person_B.jpg 为人物参考，input/green.png 为标准绿底。\n\n## 模型交付\n\n在 /workspace/submission 提交 finished.mp4、voice_A.wav、voice_B.wav、project.drp、submission.json、README.md，以及重链接所需资产与脚本。submission.json 填 project_name、timeline、render_job_id 三个非空字符串。README.md 记录方法、色彩和重链接方式。\n\n- 画面只保留 A 的当帧可见部分。B、场记板和原背景换成标准纯绿。保留 A 的动作、发丝、手和位置。遮挡位置显示绿底，重新显露后接回同一人。保持全部 300 帧、分辨率、帧率和帧序。\n- 两条 WAV 均为双声道 PCM16、48 kHz、576000 样本帧，各自保留原声音色、对白、响度和时轴，去除音乐与另一位说话者。重叠时两条轨都应有各自内容。\n- finished.mp4 为 H.264 加 AAC，只带 A 的分离对白。使用 DaVinci Resolve 原生 API 实际编辑合成和渲染，保留独立绿底、带 Alpha 的 A 前景和 A 对白。可用传统算法或本地模型做中间资产。API 用法见 API_RUNTIME.md。\n- 临时文件放 /workspace/scratch。隔离工作区，无外网，作答无总时限。\n\n## 评分\n\n画面 70 分。预设帧覆盖无遮挡、交叉、前景道具滑过和重新显露。通过原题主体与编辑门槛后，按整帧边缘 IoU 30%、目标区边缘 IoU 70% 计分。\n\n声音 30 分。自动项 22 分，其中对齐波形保真 10 分、双人重叠区 8 分、非己方话段残留 4 分。A、B 等权且固定身份。独立听评 8 分，两位说话人的内容与音色各 2 分，隔离及伪影各 2 分。工程重开、重渲染和音画一致性单独核验。\n",
+    "task": "# Case07｜双人访谈抠像与对白分轨\n\n交付一条访谈绿底成片和两条独立对白轨。A 是 person_A.jpg 中穿白色外套的人，B 是 person_B.jpg 中拿笔记本的人。A、B 会交换画面位置。素材为真人对白配录，画面动作为辅助。开场第一位说话者是 A，第二位是 B。\n\n## 输入\n\n- input/source.mp4 是 12 秒音画预览。input/frames/0000.png 到 0299.png 为权威图像，512×288、25 fps。\n- input/mix.wav 为混音的无损副本，双声道、48 kHz、576000 样本帧。\n- input/person_A.jpg、input/person_B.jpg 为人物参考，input/green.png 为标准绿底。\n\n## 模型交付\n\n在 /workspace/submission 提交 finished.mp4、voice_A.wav、voice_B.wav、project.drp、submission.json、README.md，以及重链接所需资产与脚本。submission.json 填 project_name、timeline、render_job_id 三个非空字符串。README.md 记录方法、色彩和重链接方式。\n\n- 画面只保留 A 的当帧可见部分。B、场记板和原背景换成标准纯绿。保留 A 的动作、发丝、手和位置。遮挡位置显示绿底，重新显露后接回同一人。保持全部 300 帧、分辨率、帧率和帧序。\n- 两条 WAV 均为双声道 PCM16、48 kHz、576000 样本帧，各自保留原声音色、对白、响度和时轴，去除音乐与另一位说话者。重叠时两条轨都应有各自内容。\n- finished.mp4 为 H.264 加 AAC，只带 A 的分离对白。使用 DaVinci Resolve 原生 API 实际编辑合成和渲染，保留独立绿底、带 Alpha 的 A 前景和 A 对白。可用传统算法或本地模型做中间资产。API 用法见 API_RUNTIME.md。\n- 临时文件放 /workspace/scratch。隔离工作区，无外网，作答无总时限。\n\n## 评分\n\n画面 70 分。预设帧覆盖无遮挡、交叉、前景道具滑过和重新显露。通过原题主体与编辑门槛后，按整帧边缘 IoU 30%、目标区边缘 IoU 70% 计分。\n\n声音 30 分。自动项 22 分，其中对齐波形保真 10 分、双人重叠区 8 分、非己方话段残留 4 分。A、B 等权且固定身份。独立听评 8 分，两位说话人的内容与音色各 2 分，隔离及伪影各 2 分。工程重开、重渲染和音画一致性单独核验。\n\n## 总分计算\n\n最终分 = 视觉得分 ÷ 70 × 100 ×（音频实得分 ÷ 30）。视觉得分采用原 Case07 双门槛及 30/70 边缘 IoU，音频实得分由自动评测 22 分与独立听评 8 分合成。\n",
     "main": "source.mp4",
     "files": [
       {
@@ -14,7 +14,7 @@
         "path": "TASK.md",
         "url": "variant-results/case-07-interview/candidate/TASK.md",
         "kind": "document",
-        "bytes": 2259
+        "bytes": 2476
       },
       {
         "name": "CREDITS.md",
@@ -35,7 +35,7 @@
         "path": "SCORING.md",
         "url": "variant-results/case-07-interview/candidate/SCORING.md",
         "kind": "document",
-        "bytes": 1093
+        "bytes": 1310
       },
       {
         "name": "person_A.jpg",
@@ -77,26 +77,26 @@
         "path": "candidate.zip",
         "url": "variant-results/case-07-interview/candidate/candidate.zip",
         "kind": "archive",
-        "bytes": 37456207,
+        "bytes": 37468712,
         "label": "完整题包与 300 张权威输入帧"
       }
     ],
-    "formula": "视觉 70 分采用原 Case07 双门槛及 30/70 边缘 IoU。对白 22 分自动评测和 8 分独立听评。",
+    "formula": "最终分 = 视觉得分 ÷ 70 × 100 ×（音频实得分 ÷ 30）。视觉得分采用原 Case07 双门槛及 30/70 边缘 IoU，音频实得分由自动评测 22 分与独立听评 8 分合成。",
     "delivery": [
       "绿底成片",
       "人物 A 和 B 的独立对白 WAV",
       "原生 Resolve 工程与重链接资产"
     ],
-    "note": "视觉参考用正确 Alpha 通过 Resolve 渲染为 H.264 4:2:0。初次用无损 4:4:4 参考产生编码偏差，正确 Alpha 的 Resolve 渲染仅得 36.36/70。修正后同编码参考验证为 70/70，沿用双门槛及原边缘公式。语音频带对照 7.53/22。对白为独立素材配录，近讲参考有极轻的现场串音。 听评于 2026-11-25 按 v2 重测，由 8 分改为 7 分。",
+    "note": "视觉参考用正确 Alpha 通过 Resolve 渲染为 H.264 4:2:0。初次用无损 4:4:4 参考产生编码偏差，正确 Alpha 的 Resolve 渲染仅得 36.36/70。修正后同编码参考验证为 70/70，沿用双门槛及原边缘公式。语音频带对照 7.53/22。对白为独立素材配录，近讲参考有极轻的现场串音。 听评采用严格 v2 量表。",
     "runs": [
       {
         "model": "GPT-6.2-sol",
         "effort": "xhigh",
         "budget": "不限时",
         "seconds": 1471.0934872627258,
-        "total": 73.1885,
+        "total": 61.0222,
         "status": "已评分",
-        "summary": "总分 73.1885 / 100。视觉 44.1885 / 70，音频自动 22 / 22，严格听评 7 / 8。",
+        "summary": "正式总分 61.0222 / 100。视觉 44.1885 / 70（百分制 63.1264），音频 29 / 30（自动 22 / 22、严格听评 7 / 8）。音频系数 0.9667，乘积计分。",
         "rows": [
           [
             "镜头 1 绿底画面",
@@ -165,6 +165,27 @@
           ]
         ],
         "breakdown": [
+          {
+            "label": "总分计算",
+            "columns": [
+              "计分项",
+              "数值"
+            ],
+            "rows": [
+              [
+                "视觉百分制",
+                63.1264
+              ],
+              [
+                "音频系数",
+                0.966667
+              ],
+              [
+                "正式总分",
+                61.0222
+              ]
+            ]
+          },
           {
             "label": "时间点与门槛",
             "columns": [
@@ -561,7 +582,7 @@
           {
             "name": "新版评分与听评记录",
             "url": "variant-results/case-07-interview/sol/scoring.json",
-            "bytes": 23470
+            "bytes": 23638
           },
           {
             "name": "严格听评 v2 量表",
