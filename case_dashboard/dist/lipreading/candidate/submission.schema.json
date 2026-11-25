@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "answers"
+  ],
+  "properties": {
+    "answers": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "question_id",
+          "decision",
+          "errors",
+          "uncertainty",
+          "alignment",
+          "review_evidence"
+        ],
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "pattern": "^Q(0[1-9]|10)$"
+          },
+          "decision": {
+            "enum": [
+              "no_error",
+              "has_errors"
+            ]
+          },
+          "errors": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": [
+                "subtitle_span",
+                "character_range",
+                "time_interval_seconds",
+                "suggested_text",
+                "uncertainty",
+                "evidence"
+              ],
+              "properties": {
+                "subtitle_span": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "character_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "time_interval_seconds": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "suggested_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "uncertainty": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "observation",
+                      "comparison",
+                      "frames"
+                    ],
+                    "properties": {
+                      "observation": {
+                        "type": "string"
+                      },
+                      "comparison": {
+                        "type": "string"
+                      },
+                      "frames": {
+                        "type": "array",
+                        "minItems": 3,
+                        "maxItems": 8,
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "time_seconds",
+                            "bbox_xywh",
+                            "source_frame",
+                            "annotated_frame",
+                            "mouth_crop"
+                          ],
+                          "properties": {
+                            "time_seconds": {
+                              "type": "number"
+                            },
+                            "bbox_xywh": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer"
+                              },
+                              "minItems": 4,
+                              "maxItems": 4
+                            },
+                            "source_frame": {
+                              "type": "string"
+                            },
+                            "annotated_frame": {
+                              "type": "string"
+                            },
+                            "mouth_crop": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "uncertainty": {
+            "type": "string"
+          },
+          "alignment": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "character_range",
+                "time_interval_seconds",
+                "status"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "character_range": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "time_interval_seconds": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "status": {
+                  "enum": [
+                    "consistent",
+                    "mismatch",
+                    "uncertain"
+                  ]
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "review_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "observation",
+                "comparison",
+                "frames"
+              ],
+              "properties": {
+                "observation": {
+                  "type": "string"
+                },
+                "comparison": {
+                  "type": "string"
+                },
+                "frames": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 8,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "time_seconds",
+                      "bbox_xywh",
+                      "source_frame",
+                      "annotated_frame",
+                      "mouth_crop"
+                    ],
+                    "properties": {
+                      "time_seconds": {
+                        "type": "number"
+                      },
+                      "bbox_xywh": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer"
+                        },
+                        "minItems": 4,
+                        "maxItems": 4
+                      },
+                      "source_frame": {
+                        "type": "string"
+                      },
+                      "annotated_frame": {
+                        "type": "string"
+                      },
+                      "mouth_crop": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

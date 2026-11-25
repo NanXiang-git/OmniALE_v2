@@ -1,0 +1,528 @@
+{
+  "model": "sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01",
+  "input": "original embedded audio; unprompted greedy recognition",
+  "timing_note": "CTC emission peaks, not word boundaries",
+  "results": [
+    {
+      "question_id": "Q01",
+      "result": "在会议中全神贯注的耾听同事的意见避免同事处理多项义",
+      "tokens": [
+        {
+          "token": "▁ƌŁŎ",
+          "global_seconds": 1.24
+        },
+        {
+          "token": "▁ƋŢĽ",
+          "global_seconds": 1.64
+        },
+        {
+          "token": "▁ƏŔŔ",
+          "global_seconds": 1.72
+        },
+        {
+          "token": "▁ƋŞœ",
+          "global_seconds": 1.88
+        },
+        {
+          "token": "▁ƌĦŎ",
+          "global_seconds": 2.44
+        },
+        {
+          "token": "▁ƎŋŃ",
+          "global_seconds": 2.6
+        },
+        {
+          "token": "▁Ə",
+          "global_seconds": 2.68
+        },
+        {
+          "token": "Ś",
+          "global_seconds": 2.92
+        },
+        {
+          "token": "ŕ",
+          "global_seconds": 2.96
+        },
+        {
+          "token": "▁ƍřŎ",
+          "global_seconds": 3.0
+        },
+        {
+          "token": "▁ƎĽĥ",
+          "global_seconds": 3.16
+        },
+        {
+          "token": "▁Ə",
+          "global_seconds": 3.24
+        },
+        {
+          "token": "ġ",
+          "global_seconds": 3.32
+        },
+        {
+          "token": "Ť",
+          "global_seconds": 3.4
+        },
+        {
+          "token": "▁ƌıŒ",
+          "global_seconds": 3.64
+        },
+        {
+          "token": "▁ƌıĭ",
+          "global_seconds": 3.8
+        },
+        {
+          "token": "▁ƋŠĬ",
+          "global_seconds": 3.96
+        },
+        {
+          "token": "▁ƎĽĥ",
+          "global_seconds": 4.04
+        },
+        {
+          "token": "▁ƍĥİ",
+          "global_seconds": 4.28
+        },
+        {
+          "token": "▁ƏōĢ",
+          "global_seconds": 4.44
+        },
+        {
+          "token": "▁",
+          "global_seconds": 4.88
+        },
+        {
+          "token": "Ɛ",
+          "global_seconds": 4.92
+        },
+        {
+          "token": "Ģ",
+          "global_seconds": 5.0
+        },
+        {
+          "token": "ť",
+          "global_seconds": 5.04
+        },
+        {
+          "token": "▁ƌĦĮ",
+          "global_seconds": 5.08
+        },
+        {
+          "token": "▁ƌıĭ",
+          "global_seconds": 5.24
+        },
+        {
+          "token": "▁ƋŠĬ",
+          "global_seconds": 5.48
+        },
+        {
+          "token": "▁ƌŊĥ",
+          "global_seconds": 5.64
+        },
+        {
+          "token": "▁Ǝıħ",
+          "global_seconds": 5.8
+        },
+        {
+          "token": "▁ƌŊĽ",
+          "global_seconds": 6.12
+        },
+        {
+          "token": "▁Ɛņş",
+          "global_seconds": 6.2
+        },
+        {
+          "token": "▁ƋşĪ",
+          "global_seconds": 6.44
+        }
+      ],
+      "character_emissions": [
+        {
+          "character": "在",
+          "first_emission_seconds": 1.24,
+          "last_emission_seconds": 1.24
+        },
+        {
+          "character": "会",
+          "first_emission_seconds": 1.64,
+          "last_emission_seconds": 1.64
+        },
+        {
+          "character": "议",
+          "first_emission_seconds": 1.72,
+          "last_emission_seconds": 1.72
+        },
+        {
+          "character": "中",
+          "first_emission_seconds": 1.88,
+          "last_emission_seconds": 1.88
+        },
+        {
+          "character": "全",
+          "first_emission_seconds": 2.44,
+          "last_emission_seconds": 2.44
+        },
+        {
+          "character": "神",
+          "first_emission_seconds": 2.6,
+          "last_emission_seconds": 2.6
+        },
+        {
+          "character": "贯",
+          "first_emission_seconds": 2.68,
+          "last_emission_seconds": 2.96
+        },
+        {
+          "character": "注",
+          "first_emission_seconds": 3.0,
+          "last_emission_seconds": 3.0
+        },
+        {
+          "character": "的",
+          "first_emission_seconds": 3.16,
+          "last_emission_seconds": 3.16
+        },
+        {
+          "character": "耾",
+          "first_emission_seconds": 3.24,
+          "last_emission_seconds": 3.4
+        },
+        {
+          "character": "听",
+          "first_emission_seconds": 3.64,
+          "last_emission_seconds": 3.64
+        },
+        {
+          "character": "同",
+          "first_emission_seconds": 3.8,
+          "last_emission_seconds": 3.8
+        },
+        {
+          "character": "事",
+          "first_emission_seconds": 3.96,
+          "last_emission_seconds": 3.96
+        },
+        {
+          "character": "的",
+          "first_emission_seconds": 4.04,
+          "last_emission_seconds": 4.04
+        },
+        {
+          "character": "意",
+          "first_emission_seconds": 4.28,
+          "last_emission_seconds": 4.28
+        },
+        {
+          "character": "见",
+          "first_emission_seconds": 4.44,
+          "last_emission_seconds": 4.44
+        },
+        {
+          "character": "避",
+          "first_emission_seconds": 4.88,
+          "last_emission_seconds": 5.04
+        },
+        {
+          "character": "免",
+          "first_emission_seconds": 5.08,
+          "last_emission_seconds": 5.08
+        },
+        {
+          "character": "同",
+          "first_emission_seconds": 5.24,
+          "last_emission_seconds": 5.24
+        },
+        {
+          "character": "事",
+          "first_emission_seconds": 5.48,
+          "last_emission_seconds": 5.48
+        },
+        {
+          "character": "处",
+          "first_emission_seconds": 5.64,
+          "last_emission_seconds": 5.64
+        },
+        {
+          "character": "理",
+          "first_emission_seconds": 5.8,
+          "last_emission_seconds": 5.8
+        },
+        {
+          "character": "多",
+          "first_emission_seconds": 6.12,
+          "last_emission_seconds": 6.12
+        },
+        {
+          "character": "项",
+          "first_emission_seconds": 6.2,
+          "last_emission_seconds": 6.2
+        },
+        {
+          "character": "义",
+          "first_emission_seconds": 6.44,
+          "last_emission_seconds": 6.44
+        }
+      ]
+    },
+    {
+      "question_id": "Q03",
+      "result": "随着时代的变化科学技术的发展我国已经迎来了真正的信息时代",
+      "tokens": [
+        {
+          "token": "▁ƐĽİ",
+          "global_seconds": 16.207
+        },
+        {
+          "token": "▁Ǝłġ",
+          "global_seconds": 16.367
+        },
+        {
+          "token": "▁ƍĺŜ",
+          "global_seconds": 16.607
+        },
+        {
+          "token": "▁Ƌšň",
+          "global_seconds": 16.687
+        },
+        {
+          "token": "▁ƎĽĥ",
+          "global_seconds": 16.767
+        },
+        {
+          "token": "▁ƌİĻ",
+          "global_seconds": 16.927
+        },
+        {
+          "token": "▁ƌĭĹ",
+          "global_seconds": 17.247
+        },
+        {
+          "token": "▁ƎōĴ",
+          "global_seconds": 17.407
+        },
+        {
+          "token": "▁ƌœŌ",
+          "global_seconds": 17.647
+        },
+        {
+          "token": "▁ƍīġ",
+          "global_seconds": 17.887
+        },
+        {
+          "token": "▁ƍŁŕ",
+          "global_seconds": 17.967
+        },
+        {
+          "token": "▁ƎĽĥ",
+          "global_seconds": 18.047
+        },
+        {
+          "token": "▁ƌİĴ",
+          "global_seconds": 18.207
+        },
+        {
+          "token": "▁ƌŗĸ",
+          "global_seconds": 18.367
+        },
+        {
+          "token": "▁ƍĩĴ",
+          "global_seconds": 19.327
+        },
+        {
+          "token": "▁ƌľţ",
+          "global_seconds": 19.447
+        },
+        {
+          "token": "▁ƌŝŘ",
+          "global_seconds": 19.567
+        },
+        {
+          "token": "▁Ǝšİ",
+          "global_seconds": 19.807
+        },
+        {
+          "token": "▁Əťį",
+          "global_seconds": 19.887
+        },
+        {
+          "token": "▁ƍłŋ",
+          "global_seconds": 20.007
+        },
+        {
+          "token": "▁ƋŠħ",
+          "global_seconds": 20.127
+        },
+        {
+          "token": "▁ƎŁń",
+          "global_seconds": 20.447
+        },
+        {
+          "token": "▁ƍœň",
+          "global_seconds": 20.527
+        },
+        {
+          "token": "▁ƎĽĥ",
+          "global_seconds": 20.607
+        },
+        {
+          "token": "▁Ƌťņ",
+          "global_seconds": 20.767
+        },
+        {
+          "token": "▁ƍĢŕ",
+          "global_seconds": 20.927
+        },
+        {
+          "token": "▁ƍĺŜ",
+          "global_seconds": 21.087
+        },
+        {
+          "token": "▁Ƌšň",
+          "global_seconds": 21.247
+        }
+      ],
+      "character_emissions": [
+        {
+          "character": "随",
+          "first_emission_seconds": 16.207,
+          "last_emission_seconds": 16.207
+        },
+        {
+          "character": "着",
+          "first_emission_seconds": 16.367,
+          "last_emission_seconds": 16.367
+        },
+        {
+          "character": "时",
+          "first_emission_seconds": 16.607,
+          "last_emission_seconds": 16.607
+        },
+        {
+          "character": "代",
+          "first_emission_seconds": 16.687,
+          "last_emission_seconds": 16.687
+        },
+        {
+          "character": "的",
+          "first_emission_seconds": 16.767,
+          "last_emission_seconds": 16.767
+        },
+        {
+          "character": "变",
+          "first_emission_seconds": 16.927,
+          "last_emission_seconds": 16.927
+        },
+        {
+          "character": "化",
+          "first_emission_seconds": 17.247,
+          "last_emission_seconds": 17.247
+        },
+        {
+          "character": "科",
+          "first_emission_seconds": 17.407,
+          "last_emission_seconds": 17.407
+        },
+        {
+          "character": "学",
+          "first_emission_seconds": 17.647,
+          "last_emission_seconds": 17.647
+        },
+        {
+          "character": "技",
+          "first_emission_seconds": 17.887,
+          "last_emission_seconds": 17.887
+        },
+        {
+          "character": "术",
+          "first_emission_seconds": 17.967,
+          "last_emission_seconds": 17.967
+        },
+        {
+          "character": "的",
+          "first_emission_seconds": 18.047,
+          "last_emission_seconds": 18.047
+        },
+        {
+          "character": "发",
+          "first_emission_seconds": 18.207,
+          "last_emission_seconds": 18.207
+        },
+        {
+          "character": "展",
+          "first_emission_seconds": 18.367,
+          "last_emission_seconds": 18.367
+        },
+        {
+          "character": "我",
+          "first_emission_seconds": 19.327,
+          "last_emission_seconds": 19.327
+        },
+        {
+          "character": "国",
+          "first_emission_seconds": 19.447,
+          "last_emission_seconds": 19.447
+        },
+        {
+          "character": "已",
+          "first_emission_seconds": 19.567,
+          "last_emission_seconds": 19.567
+        },
+        {
+          "character": "经",
+          "first_emission_seconds": 19.807,
+          "last_emission_seconds": 19.807
+        },
+        {
+          "character": "迎",
+          "first_emission_seconds": 19.887,
+          "last_emission_seconds": 19.887
+        },
+        {
+          "character": "来",
+          "first_emission_seconds": 20.007,
+          "last_emission_seconds": 20.007
+        },
+        {
+          "character": "了",
+          "first_emission_seconds": 20.127,
+          "last_emission_seconds": 20.127
+        },
+        {
+          "character": "真",
+          "first_emission_seconds": 20.447,
+          "last_emission_seconds": 20.447
+        },
+        {
+          "character": "正",
+          "first_emission_seconds": 20.527,
+          "last_emission_seconds": 20.527
+        },
+        {
+          "character": "的",
+          "first_emission_seconds": 20.607,
+          "last_emission_seconds": 20.607
+        },
+        {
+          "character": "信",
+          "first_emission_seconds": 20.767,
+          "last_emission_seconds": 20.767
+        },
+        {
+          "character": "息",
+          "first_emission_seconds": 20.927,
+          "last_emission_seconds": 20.927
+        },
+        {
+          "character": "时",
+          "first_emission_seconds": 21.087,
+          "last_emission_seconds": 21.087
+        },
+        {
+          "character": "代",
+          "first_emission_seconds": 21.247,
+          "last_emission_seconds": 21.247
+        }
+      ]
+    }
+  ]
+}

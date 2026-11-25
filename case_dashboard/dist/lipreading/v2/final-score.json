@@ -1,0 +1,107 @@
+{
+  "status": "final",
+  "formal_score": 10,
+  "max_score": 100,
+  "reviewer_model": "gpt-6-astra",
+  "evaluated_run": "sol_xhigh_attempt01",
+  "scoring_rules": "candidate/SCORING.md",
+  "independent_audio_crosscheck": "evaluation/astra_audio_crosscheck.json",
+  "error_detection": {
+    "event_TP": 1,
+    "event_FP": 1,
+    "event_FN": 9,
+    "event_F1": 0.16666666666666669
+  },
+  "questions": [
+    {
+      "question_id": "Q01",
+      "points": 0,
+      "detection_pass": true,
+      "timing": "not_applicable",
+      "evidence": "fail",
+      "delivery": "pass",
+      "reason": "「倾听」被放在 2.700–3.100 秒。源帧在该段主要呈圆唇，独立 Zipformer CTC 与 Whisper 均将其关联到前面的「贯注」及过渡，随后才出现「倾听」。相邻的「同事」也被提前，整句对齐存在实质错位。"
+    },
+    {
+      "question_id": "Q02",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 1 处，误报 0 处。"
+    },
+    {
+      "question_id": "Q03",
+      "points": 0,
+      "detection_pass": true,
+      "timing": "word_boundaries_unverified",
+      "evidence": "fail",
+      "delivery": "pass",
+      "reason": "找对「网络」。报告主要以未见明显合口作为判错依据，逐帧复核发现多帧口型保持近似，所给证据不足以排除该字幕。最终按证据项未通过计零。"
+    },
+    {
+      "question_id": "Q04",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 2 处，误报 0 处。"
+    },
+    {
+      "question_id": "Q05",
+      "points": 10,
+      "detection_pass": true,
+      "timing": "not_applicable",
+      "evidence": "pass",
+      "delivery": "pass",
+      "reason": "无错误判断正确。全段源帧与词组对齐整体相容，证据中两次收圆再展开可支持「拓宽，拓宽了」对应的重复动作。"
+    },
+    {
+      "question_id": "Q06",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 1 处，误报 0 处。"
+    },
+    {
+      "question_id": "Q07",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 0 处，误报 1 处。"
+    },
+    {
+      "question_id": "Q08",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 2 处，误报 0 处。"
+    },
+    {
+      "question_id": "Q09",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 2 处，误报 0 处。"
+    },
+    {
+      "question_id": "Q10",
+      "points": 0,
+      "detection_pass": false,
+      "timing": "not_required",
+      "evidence": "not_required",
+      "delivery": "not_required",
+      "reason": "漏报 1 处，误报 0 处。"
+    }
+  ]
+}

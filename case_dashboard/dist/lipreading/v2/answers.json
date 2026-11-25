@@ -1,0 +1,3250 @@
+{
+  "answers": [
+    {
+      "question_id": "Q01",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误（本次未检测到足以指认的替换）。整句已按词组顺序检查，但“义务”等相似口型不能唯一识别；尤其不能因为搭配读起来不自然就改成别的词。“的”的书写也不是可由口型核验的差异。词组边界约有0.2–0.35秒不确定性。",
+      "alignment": [
+        {
+          "text": "在会议中",
+          "character_range": [
+            0,
+            4
+          ],
+          "time_interval_seconds": [
+            1,
+            1.733
+          ],
+          "status": "uncertain",
+          "note": "句首已在运动中；横向浅开后收小，四字内部界限不清。"
+        },
+        {
+          "text": "全神贯注",
+          "character_range": [
+            4,
+            8
+          ],
+          "time_interval_seconds": [
+            1.733,
+            2.567
+          ],
+          "status": "uncertain",
+          "note": "浅开、露齿、收窄交替；不足以逐字确认四音节。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            8,
+            9
+          ],
+          "time_interval_seconds": [
+            2.567,
+            2.7
+          ],
+          "status": "uncertain",
+          "note": "短过渡，不能核验“的/地”的书写。"
+        },
+        {
+          "text": "倾听",
+          "character_range": [
+            9,
+            11
+          ],
+          "time_interval_seconds": [
+            2.7,
+            3.1
+          ],
+          "status": "consistent",
+          "note": "小开口向横向展开过渡，未见明显冲突；只作词组尺度相容判断。"
+        },
+        {
+          "text": "同事",
+          "character_range": [
+            11,
+            13
+          ],
+          "time_interval_seconds": [
+            3.1,
+            3.567
+          ],
+          "status": "uncertain",
+          "note": "横向开口保持较久，圆唇过渡难分。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            13,
+            14
+          ],
+          "time_interval_seconds": [
+            3.567,
+            3.7
+          ],
+          "status": "uncertain",
+          "note": "与相邻词连读，界限不独立。"
+        },
+        {
+          "text": "意见",
+          "character_range": [
+            14,
+            16
+          ],
+          "time_interval_seconds": [
+            3.7,
+            4.433
+          ],
+          "status": "uncertain",
+          "note": "浅开后露齿，保持帧较多，不能证明两字顺序。"
+        },
+        {
+          "text": "避免",
+          "character_range": [
+            17,
+            19
+          ],
+          "time_interval_seconds": [
+            4.433,
+            5.1
+          ],
+          "status": "consistent",
+          "note": "唇缝变小、接近合拢，再开启；与含闭唇动作的词组可相容。"
+        },
+        {
+          "text": "同时",
+          "character_range": [
+            19,
+            21
+          ],
+          "time_interval_seconds": [
+            5.1,
+            5.5
+          ],
+          "status": "uncertain",
+          "note": "由收小到露齿，精确分界不清。"
+        },
+        {
+          "text": "处理",
+          "character_range": [
+            21,
+            23
+          ],
+          "time_interval_seconds": [
+            5.5,
+            5.867
+          ],
+          "status": "uncertain",
+          "note": "小开口保持，两个字的视觉区分弱。"
+        },
+        {
+          "text": "多项",
+          "character_range": [
+            23,
+            25
+          ],
+          "time_interval_seconds": [
+            5.867,
+            6.233
+          ],
+          "status": "uncertain",
+          "note": "由收小到横向展开；与后词分界约±0.3秒。"
+        },
+        {
+          "text": "义务",
+          "character_range": [
+            25,
+            27
+          ],
+          "time_interval_seconds": [
+            6.233,
+            6.867
+          ],
+          "status": "uncertain",
+          "note": "横向浅开后收圆；与字幕可相容，不能据此排除“任”等近似口型。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "6.000秒唇缝较小；6.100–6.233秒嘴角向两侧展开、可见少量牙齿；6.367秒又收窄；6.500–6.767秒唇形更集中、前突，末尾回到较小开口。",
+          "comparison": "这是句尾“多项／义务”附近的连续动作。字幕“义务”的由横向开口转向合口的整体预期与画面可相容；第一音节的具体身份不清，不能用这条链证明“义”字，也不能按搭配习惯判为“任务”。",
+          "frames": [
+            {
+              "time_seconds": 6.0,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0180_t06.000000_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0180_t06.000000_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0180_t06.000000_mouth.png"
+            },
+            {
+              "time_seconds": 6.1,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0183_t06.100000_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0183_t06.100000_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0183_t06.100000_mouth.png"
+            },
+            {
+              "time_seconds": 6.233333,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0187_t06.233333_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0187_t06.233333_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0187_t06.233333_mouth.png"
+            },
+            {
+              "time_seconds": 6.366667,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0191_t06.366667_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0191_t06.366667_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0191_t06.366667_mouth.png"
+            },
+            {
+              "time_seconds": 6.5,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0195_t06.500000_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0195_t06.500000_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0195_t06.500000_mouth.png"
+            },
+            {
+              "time_seconds": 6.633333,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0199_t06.633333_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0199_t06.633333_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0199_t06.633333_mouth.png"
+            },
+            {
+              "time_seconds": 6.766667,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0203_t06.766667_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0203_t06.766667_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0203_t06.766667_mouth.png"
+            },
+            {
+              "time_seconds": 6.9,
+              "bbox_xywh": [
+                640,
+                465,
+                180,
+                110
+              ],
+              "source_frame": "evidence/Q01/R1/f0207_t06.900000_source.png",
+              "annotated_frame": "evidence/Q01/R1/f0207_t06.900000_annotated.png",
+              "mouth_crop": "evidence/Q01/R1/f0207_t06.900000_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q02",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误（未发现足够明确的口型冲突）。背光、低清晰度及口形保持限制了“女孩”“宝石”“玻璃物”等处的判断；这些均保留为不确定。“物”也不能仅因文本搭配而判错，近音、同音文字难以由无声画面区分。大部分词组时间约±0.3秒。",
+      "alignment": [
+        {
+          "text": "比如一个",
+          "character_range": [
+            0,
+            4
+          ],
+          "time_interval_seconds": [
+            8,
+            8.8
+          ],
+          "status": "uncertain",
+          "note": "起句已经张口，后转小开口；内部四字界限不清。"
+        },
+        {
+          "text": "女孩",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            8.8,
+            9.233
+          ],
+          "status": "uncertain",
+          "note": "小开口转横向露齿，首字是否有短暂收圆难以区分。"
+        },
+        {
+          "text": "置身在",
+          "character_range": [
+            6,
+            9
+          ],
+          "time_interval_seconds": [
+            9.233,
+            9.8
+          ],
+          "status": "consistent",
+          "note": "横向窄开口后出现较大张口，与末尾开口变化可相容。"
+        },
+        {
+          "text": "类似于",
+          "character_range": [
+            9,
+            12
+          ],
+          "time_interval_seconds": [
+            9.8,
+            10.433
+          ],
+          "status": "uncertain",
+          "note": "窄开口、露齿保持较多，三字不能独立确认。"
+        },
+        {
+          "text": "水晶",
+          "character_range": [
+            12,
+            14
+          ],
+          "time_interval_seconds": [
+            10.433,
+            10.867
+          ],
+          "status": "uncertain",
+          "note": "轻微收窄与露齿；未能可靠确定合口的时刻。"
+        },
+        {
+          "text": "宝石",
+          "character_range": [
+            15,
+            17
+          ],
+          "time_interval_seconds": [
+            10.867,
+            11.367
+          ],
+          "status": "uncertain",
+          "note": "嘴先收小再张开，但闭唇是否完整不可确认，不据此判替换。"
+        },
+        {
+          "text": "或者",
+          "character_range": [
+            17,
+            19
+          ],
+          "time_interval_seconds": [
+            11.367,
+            11.8
+          ],
+          "status": "consistent",
+          "note": "较开后收窄，整体可相容；字音不唯一。"
+        },
+        {
+          "text": "透明",
+          "character_range": [
+            19,
+            21
+          ],
+          "time_interval_seconds": [
+            11.8,
+            12.267
+          ],
+          "status": "uncertain",
+          "note": "唇缝较浅并露齿；闭唇过渡不清楚。"
+        },
+        {
+          "text": "玻璃物",
+          "character_range": [
+            21,
+            24
+          ],
+          "time_interval_seconds": [
+            12.267,
+            13.167
+          ],
+          "status": "uncertain",
+          "note": "小开口、展开、再收窄；三字及相似音文字不唯一。"
+        },
+        {
+          "text": "这类",
+          "character_range": [
+            24,
+            26
+          ],
+          "time_interval_seconds": [
+            13.167,
+            13.6
+          ],
+          "status": "consistent",
+          "note": "近合拢后再次张开，与由窄到开的节奏可相容。"
+        },
+        {
+          "text": "环境",
+          "character_range": [
+            26,
+            28
+          ],
+          "time_interval_seconds": [
+            13.6,
+            14.067
+          ],
+          "status": "uncertain",
+          "note": "开口幅度小，区分度弱。"
+        },
+        {
+          "text": "当中",
+          "character_range": [
+            28,
+            30
+          ],
+          "time_interval_seconds": [
+            14.067,
+            14.8
+          ],
+          "status": "uncertain",
+          "note": "横向浅开转向较小开口；尾部保持使终点约±0.3秒。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "8.533–8.667秒开口小、轮廓略集中；8.800秒仍为小开口；8.933–9.200秒横向开口变宽，牙齿亮带更明显。没有清楚可复核的完整闭唇。",
+          "comparison": "对应“一个／女孩”附近。观察到的先小后开与字幕可相容，但“女”所需的短促唇形变化在背光下不够清晰；这条链不能独立确认性别词，也不足以指认替换。",
+          "frames": [
+            {
+              "time_seconds": 8.533333,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0256_t08.533333_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0256_t08.533333_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0256_t08.533333_mouth.png"
+            },
+            {
+              "time_seconds": 8.666667,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0260_t08.666667_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0260_t08.666667_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0260_t08.666667_mouth.png"
+            },
+            {
+              "time_seconds": 8.8,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0264_t08.800000_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0264_t08.800000_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0264_t08.800000_mouth.png"
+            },
+            {
+              "time_seconds": 8.933333,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0268_t08.933333_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0268_t08.933333_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0268_t08.933333_mouth.png"
+            },
+            {
+              "time_seconds": 9.066667,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0272_t09.066667_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0272_t09.066667_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0272_t09.066667_mouth.png"
+            },
+            {
+              "time_seconds": 9.2,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R1/f0276_t09.200000_source.png",
+              "annotated_frame": "evidence/Q02/R1/f0276_t09.200000_annotated.png",
+              "mouth_crop": "evidence/Q02/R1/f0276_t09.200000_mouth.png"
+            }
+          ]
+        },
+        {
+          "observation": "12.200秒唇缝较窄；12.400秒上下唇分离；12.600–12.800秒开口变宽并露齿；13.000秒略回收，13.200秒接近合拢，13.400秒再次开启。",
+          "comparison": "对应“玻璃物／这类”附近的顺序检查。可见展开、回收和再开启，但“玻／璃／物”的独立边界及具体字音不能从这些低清晰度动作唯一确定，因此不按“玻璃物”的文本自然程度报错。",
+          "frames": [
+            {
+              "time_seconds": 12.2,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0366_t12.200000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0366_t12.200000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0366_t12.200000_mouth.png"
+            },
+            {
+              "time_seconds": 12.4,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0372_t12.400000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0372_t12.400000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0372_t12.400000_mouth.png"
+            },
+            {
+              "time_seconds": 12.6,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0378_t12.600000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0378_t12.600000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0378_t12.600000_mouth.png"
+            },
+            {
+              "time_seconds": 12.8,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0384_t12.800000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0384_t12.800000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0384_t12.800000_mouth.png"
+            },
+            {
+              "time_seconds": 13.0,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0390_t13.000000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0390_t13.000000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0390_t13.000000_mouth.png"
+            },
+            {
+              "time_seconds": 13.2,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0396_t13.200000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0396_t13.200000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0396_t13.200000_mouth.png"
+            },
+            {
+              "time_seconds": 13.4,
+              "bbox_xywh": [
+                460,
+                445,
+                170,
+                115
+              ],
+              "source_frame": "evidence/Q02/R2/f0402_t13.400000_source.png",
+              "annotated_frame": "evidence/Q02/R2/f0402_t13.400000_annotated.png",
+              "mouth_crop": "evidence/Q02/R2/f0402_t13.400000_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q03",
+      "decision": "has_errors",
+      "errors": [
+        {
+          "subtitle_span": "网络",
+          "character_range": [
+            26,
+            28
+          ],
+          "time_interval_seconds": [
+            20.267,
+            20.9
+          ],
+          "suggested_text": null,
+          "uncertainty": "最佳估计区间对应整词；起止边界各约±0.2–0.3秒。20.0–21.5秒逐帧复查后作不匹配判断；口形保持较多，不能把没有可辨收圆等同于证明收圆从未发生。原文不作唯一转写。",
+          "evidence": [
+            {
+              "observation": "20.133秒开口呈横向，露出牙齿；20.267秒收窄；20.400–20.800秒嘴角仍横向展开，唇缝浅，开口变化很小；20.933秒仍是浅开口。邻近19.5–21.5秒已加密逐帧查看。",
+              "comparison": "按整句先后顺序将“网络”落在20.267–20.900秒。“网／络”的读法预期有合口到较开、再收圆的可见变化；这段持续的横向浅开口与该预期不相称，据此判替换。发音预期只是比较依据；看不清的舌位、声调和具体原字均未作观测事实。保持帧可能掩盖瞬时动作，此处须视觉复核。",
+              "frames": [
+                {
+                  "time_seconds": 20.133333,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0604_t20.133333_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0604_t20.133333_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0604_t20.133333_mouth.png"
+                },
+                {
+                  "time_seconds": 20.266667,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0608_t20.266667_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0608_t20.266667_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0608_t20.266667_mouth.png"
+                },
+                {
+                  "time_seconds": 20.4,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0612_t20.400000_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0612_t20.400000_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0612_t20.400000_mouth.png"
+                },
+                {
+                  "time_seconds": 20.533333,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0616_t20.533333_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0616_t20.533333_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0616_t20.533333_mouth.png"
+                },
+                {
+                  "time_seconds": 20.666667,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0620_t20.666667_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0620_t20.666667_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0620_t20.666667_mouth.png"
+                },
+                {
+                  "time_seconds": 20.8,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0624_t20.800000_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0624_t20.800000_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0624_t20.800000_mouth.png"
+                },
+                {
+                  "time_seconds": 20.933333,
+                  "bbox_xywh": [
+                    690,
+                    470,
+                    165,
+                    110
+                  ],
+                  "source_frame": "evidence/Q03/E1/f0628_t20.933333_source.png",
+                  "annotated_frame": "evidence/Q03/E1/f0628_t20.933333_annotated.png",
+                  "mouth_crop": "evidence/Q03/E1/f0628_t20.933333_mouth.png"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "uncertainty": "最终判断：有1处替换，选定“网络”。依据句尾横向窄开口为主、缺乏清楚合口变化的连续观察，证据强度中低；说话者的小幅度发音和画面保持也可能弱化收圆，不能唯一恢复原文。其余词组仍有视觉歧义。",
+      "alignment": [
+        {
+          "text": "随着",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            15.966666666666667,
+            16.333
+          ],
+          "status": "uncertain",
+          "note": "浅开口；起句辅音不可分。"
+        },
+        {
+          "text": "时代",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            16.333,
+            16.733
+          ],
+          "status": "consistent",
+          "note": "露齿后开口扩张，与词组节奏可相容。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            4,
+            5
+          ],
+          "time_interval_seconds": [
+            16.733,
+            16.833
+          ],
+          "status": "uncertain",
+          "note": "短促过渡。"
+        },
+        {
+          "text": "变化",
+          "character_range": [
+            5,
+            7
+          ],
+          "time_interval_seconds": [
+            16.833,
+            17.3
+          ],
+          "status": "consistent",
+          "note": "唇缝先收小、近合拢，再明显张开；可相容。"
+        },
+        {
+          "text": "科学",
+          "character_range": [
+            8,
+            10
+          ],
+          "time_interval_seconds": [
+            17.3,
+            17.633
+          ],
+          "status": "uncertain",
+          "note": "中等开口变化，具体字音不唯一。"
+        },
+        {
+          "text": "技术",
+          "character_range": [
+            10,
+            12
+          ],
+          "time_interval_seconds": [
+            17.633,
+            18
+          ],
+          "status": "uncertain",
+          "note": "浅开到略收小，缺乏强区分线索。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            12,
+            13
+          ],
+          "time_interval_seconds": [
+            18,
+            18.133
+          ],
+          "status": "uncertain",
+          "note": "与后词连读。"
+        },
+        {
+          "text": "发展",
+          "character_range": [
+            13,
+            15
+          ],
+          "time_interval_seconds": [
+            18.133,
+            18.467
+          ],
+          "status": "consistent",
+          "note": "开口扩大并露齿，随后缩小；未见明显冲突。"
+        },
+        {
+          "text": "我国",
+          "character_range": [
+            16,
+            18
+          ],
+          "time_interval_seconds": [
+            18.467,
+            18.867
+          ],
+          "status": "uncertain",
+          "note": "小幅开合，合口程度不清晰。"
+        },
+        {
+          "text": "已经",
+          "character_range": [
+            18,
+            20
+          ],
+          "time_interval_seconds": [
+            18.867,
+            19.2
+          ],
+          "status": "uncertain",
+          "note": "连续浅开口，两音节界限不可靠。"
+        },
+        {
+          "text": "迎来了",
+          "character_range": [
+            20,
+            23
+          ],
+          "time_interval_seconds": [
+            19.2,
+            19.667
+          ],
+          "status": "uncertain",
+          "note": "先较开再横向收窄；三字内部时点不清。"
+        },
+        {
+          "text": "真正的",
+          "character_range": [
+            23,
+            26
+          ],
+          "time_interval_seconds": [
+            19.667,
+            20.267
+          ],
+          "status": "uncertain",
+          "note": "窄开、稍大张口再收小；与后词分界约±0.25秒。"
+        },
+        {
+          "text": "网络",
+          "character_range": [
+            26,
+            28
+          ],
+          "time_interval_seconds": [
+            20.267,
+            20.9
+          ],
+          "status": "mismatch",
+          "note": "连续帧以横向窄开口、露齿为主，未辨出与该词相称的合口变化；中低强度判断。"
+        },
+        {
+          "text": "时代",
+          "character_range": [
+            28,
+            30
+          ],
+          "time_interval_seconds": [
+            20.9,
+            21.5
+          ],
+          "status": "consistent",
+          "note": "末尾由浅开到较大开口再收小，与字幕节奏可相容。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "16.700秒嘴略开；16.867–16.967秒唇缝明显变小；17.067秒口腔开口增大；17.200–17.333秒仍较开，随后回收。",
+          "comparison": "对应前半句“的／变化”附近，收小再打开的动作与字幕可相容，帮助检查前半句顺序。它不能证明后半句正确，也不能提供“网络”的原文。",
+          "frames": [
+            {
+              "time_seconds": 16.7,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0501_t16.700000_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0501_t16.700000_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0501_t16.700000_mouth.png"
+            },
+            {
+              "time_seconds": 16.866667,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0506_t16.866667_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0506_t16.866667_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0506_t16.866667_mouth.png"
+            },
+            {
+              "time_seconds": 16.966667,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0509_t16.966667_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0509_t16.966667_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0509_t16.966667_mouth.png"
+            },
+            {
+              "time_seconds": 17.066667,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0512_t17.066667_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0512_t17.066667_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0512_t17.066667_mouth.png"
+            },
+            {
+              "time_seconds": 17.2,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0516_t17.200000_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0516_t17.200000_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0516_t17.200000_mouth.png"
+            },
+            {
+              "time_seconds": 17.333333,
+              "bbox_xywh": [
+                690,
+                470,
+                165,
+                110
+              ],
+              "source_frame": "evidence/Q03/R1/f0520_t17.333333_source.png",
+              "annotated_frame": "evidence/Q03/R1/f0520_t17.333333_annotated.png",
+              "mouth_crop": "evidence/Q03/R1/f0520_t17.333333_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q04",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。全句及配件枚举均已逐组检查；画面偏色、低分辨率、头部轻微移动，尤其“枪口／弹匣／枪托”中间的动作很小，存在漏检可能。词组时间一般约±0.25–0.4秒，不能当成已确认的音节界限。",
+      "alignment": [
+        {
+          "text": "配件",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            22.5,
+            22.9
+          ],
+          "status": "uncertain",
+          "note": "起句已张口，首个闭唇可能在片段开始前。"
+        },
+        {
+          "text": "用于",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            22.9,
+            23.3
+          ],
+          "status": "uncertain",
+          "note": "浅开并略收小，两个音节不能独立分辨。"
+        },
+        {
+          "text": "增强",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            23.3,
+            23.733
+          ],
+          "status": "consistent",
+          "note": "横向浅开后张口扩大，可相容。"
+        },
+        {
+          "text": "武器",
+          "character_range": [
+            6,
+            8
+          ],
+          "time_interval_seconds": [
+            23.733,
+            24.1
+          ],
+          "status": "uncertain",
+          "note": "开口变化小，合口程度难判断。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            8,
+            9
+          ],
+          "time_interval_seconds": [
+            24.1,
+            24.233
+          ],
+          "status": "uncertain",
+          "note": "连读的短过渡。"
+        },
+        {
+          "text": "威力",
+          "character_range": [
+            9,
+            11
+          ],
+          "time_interval_seconds": [
+            24.233,
+            24.767
+          ],
+          "status": "uncertain",
+          "note": "露齿、浅开交替，无法唯一确认字音。"
+        },
+        {
+          "text": "包括",
+          "character_range": [
+            12,
+            14
+          ],
+          "time_interval_seconds": [
+            24.767,
+            25.267
+          ],
+          "status": "uncertain",
+          "note": "嘴先收小再较开；是否完整闭合难确认。"
+        },
+        {
+          "text": "握把",
+          "character_range": [
+            14,
+            16
+          ],
+          "time_interval_seconds": [
+            25.267,
+            25.967
+          ],
+          "status": "consistent",
+          "note": "先收圆、随后近闭唇再展开，整体与字幕相容。"
+        },
+        {
+          "text": "枪口",
+          "character_range": [
+            17,
+            19
+          ],
+          "time_interval_seconds": [
+            25.967,
+            26.667
+          ],
+          "status": "uncertain",
+          "note": "由窄开到较开；与后词边界不清，不能凭弱收圆判错。"
+        },
+        {
+          "text": "弹匣",
+          "character_range": [
+            20,
+            22
+          ],
+          "time_interval_seconds": [
+            26.667,
+            27.267
+          ],
+          "status": "uncertain",
+          "note": "口形保持、再展开；内部字音分界不清。"
+        },
+        {
+          "text": "枪托",
+          "character_range": [
+            23,
+            25
+          ],
+          "time_interval_seconds": [
+            27.267,
+            28.033
+          ],
+          "status": "uncertain",
+          "note": "横向露齿保持较久，合口过渡不可可靠核验。"
+        },
+        {
+          "text": "和",
+          "character_range": [
+            25,
+            26
+          ],
+          "time_interval_seconds": [
+            28.033,
+            28.3
+          ],
+          "status": "uncertain",
+          "note": "由浅开到小开口，边界约±0.3秒。"
+        },
+        {
+          "text": "消音器",
+          "character_range": [
+            26,
+            29
+          ],
+          "time_interval_seconds": [
+            28.3,
+            29.267
+          ],
+          "status": "uncertain",
+          "note": "先收小再开、再回收；三字不能逐一确定。"
+        },
+        {
+          "text": "等",
+          "character_range": [
+            29,
+            30
+          ],
+          "time_interval_seconds": [
+            29.267,
+            29.933333333333334
+          ],
+          "status": "uncertain",
+          "note": "句尾浅开、露齿后收小；终点受保持帧影响。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "25.067秒口部较小；25.200–25.467秒唇形集中、前突；25.633–25.800秒唇缝近乎合拢；25.933秒开口扩大，可见牙齿。",
+          "comparison": "对应“包括／握把”附近；“握”附近的合口及“把”附近的近闭唇后张开与字幕可相容。闭合不清楚处保留限制，不据此精确断定辅音。",
+          "frames": [
+            {
+              "time_seconds": 25.066667,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0752_t25.066667_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0752_t25.066667_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0752_t25.066667_mouth.png"
+            },
+            {
+              "time_seconds": 25.2,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0756_t25.200000_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0756_t25.200000_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0756_t25.200000_mouth.png"
+            },
+            {
+              "time_seconds": 25.333333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0760_t25.333333_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0760_t25.333333_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0760_t25.333333_mouth.png"
+            },
+            {
+              "time_seconds": 25.466667,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0764_t25.466667_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0764_t25.466667_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0764_t25.466667_mouth.png"
+            },
+            {
+              "time_seconds": 25.633333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0769_t25.633333_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0769_t25.633333_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0769_t25.633333_mouth.png"
+            },
+            {
+              "time_seconds": 25.8,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0774_t25.800000_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0774_t25.800000_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0774_t25.800000_mouth.png"
+            },
+            {
+              "time_seconds": 25.933333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R1/f0778_t25.933333_source.png",
+              "annotated_frame": "evidence/Q04/R1/f0778_t25.933333_annotated.png",
+              "mouth_crop": "evidence/Q04/R1/f0778_t25.933333_mouth.png"
+            }
+          ]
+        },
+        {
+          "observation": "26.933–27.200秒唇缝较窄；27.333–27.600秒横向展开并露齿；27.733–27.867秒收小。中间有较长的相似口形保持。",
+          "comparison": "对应“弹匣／枪托”附近。能检查到连续的窄—宽—窄变化，但无法可靠把微小过渡分配给每个字；故此处为不确定，不把未辨出强收圆直接当成替换证据。",
+          "frames": [
+            {
+              "time_seconds": 26.933333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0808_t26.933333_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0808_t26.933333_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0808_t26.933333_mouth.png"
+            },
+            {
+              "time_seconds": 27.066667,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0812_t27.066667_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0812_t27.066667_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0812_t27.066667_mouth.png"
+            },
+            {
+              "time_seconds": 27.2,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0816_t27.200000_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0816_t27.200000_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0816_t27.200000_mouth.png"
+            },
+            {
+              "time_seconds": 27.333333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0820_t27.333333_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0820_t27.333333_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0820_t27.333333_mouth.png"
+            },
+            {
+              "time_seconds": 27.466667,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0824_t27.466667_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0824_t27.466667_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0824_t27.466667_mouth.png"
+            },
+            {
+              "time_seconds": 27.6,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0828_t27.600000_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0828_t27.600000_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0828_t27.600000_mouth.png"
+            },
+            {
+              "time_seconds": 27.733333,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0832_t27.733333_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0832_t27.733333_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0832_t27.733333_mouth.png"
+            },
+            {
+              "time_seconds": 27.866667,
+              "bbox_xywh": [
+                630,
+                510,
+                240,
+                180
+              ],
+              "source_frame": "evidence/Q04/R2/f0836_t27.866667_source.png",
+              "annotated_frame": "evidence/Q04/R2/f0836_t27.866667_annotated.png",
+              "mouth_crop": "evidence/Q04/R2/f0836_t27.866667_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q05",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。可见两次相似的收圆—展开动作，与“拓宽，拓宽”重复可相容；重复和口语停顿本身不报错。“它／他”“地／的”等同音文字无法用口型判别，后半句词组仍有歧义。一般分界约±0.2–0.3秒。",
+      "alignment": [
+        {
+          "text": "它",
+          "character_range": [
+            0,
+            1
+          ],
+          "time_interval_seconds": [
+            30.933333333333334,
+            31.1
+          ],
+          "status": "uncertain",
+          "note": "起句浅开，同音汉字不可区分。"
+        },
+        {
+          "text": "极大地",
+          "character_range": [
+            1,
+            4
+          ],
+          "time_interval_seconds": [
+            31.1,
+            31.733
+          ],
+          "status": "consistent",
+          "note": "张口扩大、露齿后回收，整体节奏相容；不核验“地”的书写。"
+        },
+        {
+          "text": "拓宽",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            31.733,
+            32.233
+          ],
+          "status": "consistent",
+          "note": "收圆后扩大开口，为第一组动作。"
+        },
+        {
+          "text": "拓宽",
+          "character_range": [
+            7,
+            9
+          ],
+          "time_interval_seconds": [
+            32.333,
+            32.733
+          ],
+          "status": "consistent",
+          "note": "再次收圆并展开，为第二组相似动作；保留重复。"
+        },
+        {
+          "text": "了",
+          "character_range": [
+            9,
+            10
+          ],
+          "time_interval_seconds": [
+            32.733,
+            32.933
+          ],
+          "status": "uncertain",
+          "note": "与第二组尾部连读。"
+        },
+        {
+          "text": "大学生",
+          "character_range": [
+            10,
+            13
+          ],
+          "time_interval_seconds": [
+            32.933,
+            33.6
+          ],
+          "status": "uncertain",
+          "note": "开、收小、露齿交替；三字内部不可精确定位。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            13,
+            14
+          ],
+          "time_interval_seconds": [
+            33.6,
+            33.8
+          ],
+          "status": "uncertain",
+          "note": "小幅浅开，连读边界不清。"
+        },
+        {
+          "text": "知识",
+          "character_range": [
+            14,
+            16
+          ],
+          "time_interval_seconds": [
+            33.8,
+            34.233
+          ],
+          "status": "uncertain",
+          "note": "浅开并露齿，两个窄口音区分弱。"
+        },
+        {
+          "text": "视野",
+          "character_range": [
+            16,
+            18
+          ],
+          "time_interval_seconds": [
+            34.233,
+            34.8
+          ],
+          "status": "consistent",
+          "note": "先较窄，后明显张开再收小；可相容。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "31.633秒仍可见牙齿；31.767–31.933秒口形逐渐集中、收圆；32.067秒开口变大；32.267秒回收；32.400–32.533秒再次收圆；32.667秒又张开。",
+          "comparison": "相邻两轮“收圆—展开”与两个“拓宽”的顺序相容，支持保留字幕中的重复。它只支持动作重复及大致时序，不能单凭这条链排除所有同口型替换；整句其余词组另见检查表。",
+          "frames": [
+            {
+              "time_seconds": 31.633333,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0949_t31.633333_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0949_t31.633333_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0949_t31.633333_mouth.png"
+            },
+            {
+              "time_seconds": 31.766667,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0953_t31.766667_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0953_t31.766667_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0953_t31.766667_mouth.png"
+            },
+            {
+              "time_seconds": 31.933333,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0958_t31.933333_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0958_t31.933333_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0958_t31.933333_mouth.png"
+            },
+            {
+              "time_seconds": 32.066667,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0962_t32.066667_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0962_t32.066667_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0962_t32.066667_mouth.png"
+            },
+            {
+              "time_seconds": 32.266667,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0968_t32.266667_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0968_t32.266667_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0968_t32.266667_mouth.png"
+            },
+            {
+              "time_seconds": 32.4,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0972_t32.400000_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0972_t32.400000_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0972_t32.400000_mouth.png"
+            },
+            {
+              "time_seconds": 32.533333,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0976_t32.533333_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0976_t32.533333_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0976_t32.533333_mouth.png"
+            },
+            {
+              "time_seconds": 32.666667,
+              "bbox_xywh": [
+                690,
+                480,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q05/R1/f0980_t32.666667_source.png",
+              "annotated_frame": "evidence/Q05/R1/f0980_t32.666667_annotated.png",
+              "mouth_crop": "evidence/Q05/R1/f0980_t32.666667_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q06",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。该题嘴部开合幅度小、面部高光强，许多音节在画面中难区分。“跳楼／跳窗”的先后节奏可相容，但尾字不能据单个圆唇静态形状确认；保留较高漏检不确定性。词组边界一般约±0.25–0.35秒。",
+      "alignment": [
+        {
+          "text": "人们",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            36,
+            36.467
+          ],
+          "status": "uncertain",
+          "note": "浅开、近闭合交替，首字起始可能被切入。"
+        },
+        {
+          "text": "就很",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            36.467,
+            36.833
+          ],
+          "status": "uncertain",
+          "note": "小开口略前突，内部界限不清。"
+        },
+        {
+          "text": "容易",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            36.833,
+            37.267
+          ],
+          "status": "uncertain",
+          "note": "收小到横向浅开，幅度很小。"
+        },
+        {
+          "text": "失去",
+          "character_range": [
+            6,
+            8
+          ],
+          "time_interval_seconds": [
+            37.267,
+            37.733
+          ],
+          "status": "uncertain",
+          "note": "露齿后回收，无法唯一辨字音。"
+        },
+        {
+          "text": "理智",
+          "character_range": [
+            8,
+            10
+          ],
+          "time_interval_seconds": [
+            37.733,
+            38.067
+          ],
+          "status": "uncertain",
+          "note": "持续浅开口，相似口型的字不能排除。"
+        },
+        {
+          "text": "选择",
+          "character_range": [
+            11,
+            13
+          ],
+          "time_interval_seconds": [
+            38.067,
+            38.467
+          ],
+          "status": "uncertain",
+          "note": "微小开合，与后词界限约±0.3秒。"
+        },
+        {
+          "text": "跳楼",
+          "character_range": [
+            13,
+            15
+          ],
+          "time_interval_seconds": [
+            38.467,
+            38.9
+          ],
+          "status": "consistent",
+          "note": "先露齿、再回收成较小开口，与词组节奏可相容。"
+        },
+        {
+          "text": "跳窗",
+          "character_range": [
+            16,
+            18
+          ],
+          "time_interval_seconds": [
+            38.9,
+            39.367
+          ],
+          "status": "uncertain",
+          "note": "再次浅开和收小；“窗”字的独特动作不清楚。"
+        },
+        {
+          "text": "等",
+          "character_range": [
+            18,
+            19
+          ],
+          "time_interval_seconds": [
+            39.367,
+            39.533
+          ],
+          "status": "uncertain",
+          "note": "小幅浅开，连读。"
+        },
+        {
+          "text": "极端",
+          "character_range": [
+            19,
+            21
+          ],
+          "time_interval_seconds": [
+            39.533,
+            39.9
+          ],
+          "status": "uncertain",
+          "note": "唇缝小，两个字边界不可靠。"
+        },
+        {
+          "text": "行为",
+          "character_range": [
+            21,
+            23
+          ],
+          "time_interval_seconds": [
+            39.9,
+            40.5
+          ],
+          "status": "uncertain",
+          "note": "轻微张开后近合拢，尾部保持较长。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "38.200–38.333秒唇缝浅开；38.500秒嘴角略展开、可见牙齿；38.667秒收窄；38.833秒小开口保持；39.000–39.167秒再次略展开；39.333秒又收小。",
+          "comparison": "这是“选择／跳楼／跳窗”附近的连续动作，可见先后两次小幅展开和回收，没有足够清楚的相反动作可指认替换。但这些变化不足以唯一确认“楼”“窗”，因此最终无错误带较高视觉不确定性。",
+          "frames": [
+            {
+              "time_seconds": 38.2,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1146_t38.200000_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1146_t38.200000_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1146_t38.200000_mouth.png"
+            },
+            {
+              "time_seconds": 38.333333,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1150_t38.333333_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1150_t38.333333_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1150_t38.333333_mouth.png"
+            },
+            {
+              "time_seconds": 38.5,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1155_t38.500000_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1155_t38.500000_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1155_t38.500000_mouth.png"
+            },
+            {
+              "time_seconds": 38.666667,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1160_t38.666667_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1160_t38.666667_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1160_t38.666667_mouth.png"
+            },
+            {
+              "time_seconds": 38.833333,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1165_t38.833333_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1165_t38.833333_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1165_t38.833333_mouth.png"
+            },
+            {
+              "time_seconds": 39.0,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1170_t39.000000_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1170_t39.000000_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1170_t39.000000_mouth.png"
+            },
+            {
+              "time_seconds": 39.166667,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1175_t39.166667_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1175_t39.166667_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1175_t39.166667_mouth.png"
+            },
+            {
+              "time_seconds": 39.333333,
+              "bbox_xywh": [
+                610,
+                350,
+                210,
+                150
+              ],
+              "source_frame": "evidence/Q06/R1/f1180_t39.333333_source.png",
+              "annotated_frame": "evidence/Q06/R1/f1180_t39.333333_annotated.png",
+              "mouth_crop": "evidence/Q06/R1/f1180_t39.333333_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q07",
+      "decision": "has_errors",
+      "errors": [
+        {
+          "subtitle_span": "短期",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            42.0,
+            42.6
+          ],
+          "suggested_text": null,
+          "uncertainty": "整词最佳区间为42.000–42.600秒。左边界受题目讲话起点限制，实际初始动作可能早于42.000秒；右边界约±0.2秒。不能由外部嘴形唯一恢复原字，也不能完全排除说话者对“期”的非典型开口。",
+          "evidence": [
+            {
+              "observation": "42.000秒唇缝已浅开；42.133秒上下分离增大；42.267秒又收窄；42.367–42.467秒第二次开口扩大，呈较宽的横向椭圆；42.567秒回收。起句没有可辨的长时间圆唇保持。",
+              "comparison": "这段位于起句、对应字幕“短期”。按“短／期”读取，第二音节预期以较窄横向口形为主；实际第二次开口扩张较明显，所以选定该词为替换。此为外部形状的相对比较，不把看不见的舌位写成事实；小画面、发音习惯和起句截断使该判断仍不稳固，无法唯一恢复原文。",
+              "frames": [
+                {
+                  "time_seconds": 42.0,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1260_t42.000000_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1260_t42.000000_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1260_t42.000000_mouth.png"
+                },
+                {
+                  "time_seconds": 42.133333,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1264_t42.133333_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1264_t42.133333_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1264_t42.133333_mouth.png"
+                },
+                {
+                  "time_seconds": 42.266667,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1268_t42.266667_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1268_t42.266667_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1268_t42.266667_mouth.png"
+                },
+                {
+                  "time_seconds": 42.366667,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1271_t42.366667_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1271_t42.366667_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1271_t42.366667_mouth.png"
+                },
+                {
+                  "time_seconds": 42.466667,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1274_t42.466667_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1274_t42.466667_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1274_t42.466667_mouth.png"
+                },
+                {
+                  "time_seconds": 42.566667,
+                  "bbox_xywh": [
+                    605,
+                    470,
+                    185,
+                    115
+                  ],
+                  "source_frame": "evidence/Q07/E1/f1277_t42.566667_source.png",
+                  "annotated_frame": "evidence/Q07/E1/f1277_t42.566667_annotated.png",
+                  "mouth_crop": "evidence/Q07/E1/f1277_t42.566667_mouth.png"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "uncertainty": "最终判断：有1处替换，选定“短期”。起句有两次较可辨的张口，第二次开口扩张与“期”的窄口预期不相称，因此作最佳不匹配判断；证据强度低至中，发音个体差异、起始切入和较小嘴部均可能影响判断，须复核。",
+      "alignment": [
+        {
+          "text": "短期",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            42,
+            42.6
+          ],
+          "status": "mismatch",
+          "note": "起句第二次张口的上下分离较明显，与“期”的较窄开口预期不相称；低至中强度。"
+        },
+        {
+          "text": "居民",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            42.6,
+            43.2
+          ],
+          "status": "uncertain",
+          "note": "浅开、收窄、再开；闭唇不清晰，两个字难分。"
+        },
+        {
+          "text": "收入",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            43.2,
+            43.8
+          ],
+          "status": "consistent",
+          "note": "唇形收圆并小幅前突，两次动作节奏可相容。"
+        },
+        {
+          "text": "和",
+          "character_range": [
+            6,
+            7
+          ],
+          "time_interval_seconds": [
+            43.8,
+            44
+          ],
+          "status": "uncertain",
+          "note": "开口略扩大，独立边界不明。"
+        },
+        {
+          "text": "就业",
+          "character_range": [
+            7,
+            9
+          ],
+          "time_interval_seconds": [
+            44,
+            44.5
+          ],
+          "status": "uncertain",
+          "note": "小开口到较开，字音不唯一。"
+        },
+        {
+          "text": "预期",
+          "character_range": [
+            9,
+            11
+          ],
+          "time_interval_seconds": [
+            44.5,
+            45
+          ],
+          "status": "uncertain",
+          "note": "先收小再浅开，细节受保持帧影响。"
+        },
+        {
+          "text": "尚未",
+          "character_range": [
+            11,
+            13
+          ],
+          "time_interval_seconds": [
+            45,
+            45.4
+          ],
+          "status": "uncertain",
+          "note": "横向开合，两个字无法精确划分。"
+        },
+        {
+          "text": "明显",
+          "character_range": [
+            13,
+            15
+          ],
+          "time_interval_seconds": [
+            45.4,
+            45.9
+          ],
+          "status": "uncertain",
+          "note": "有收窄再展开，完整闭唇不可确定。"
+        },
+        {
+          "text": "改善",
+          "character_range": [
+            15,
+            17
+          ],
+          "time_interval_seconds": [
+            45.9,
+            46.667
+          ],
+          "status": "consistent",
+          "note": "嘴部由较开到稍收，再较开，节奏与字幕可相容。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "43.233–43.400秒唇形较集中、开口很小；43.567–43.733秒仍略前突；43.900–44.067秒嘴部上下分离稍增，口形较开。",
+          "comparison": "对应“收入／和”附近，收小、前突再开启的相对顺序与字幕可相容。此链用于检查后续顺序，不用于证明起句原字。",
+          "frames": [
+            {
+              "time_seconds": 43.233333,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1297_t43.233333_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1297_t43.233333_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1297_t43.233333_mouth.png"
+            },
+            {
+              "time_seconds": 43.4,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1302_t43.400000_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1302_t43.400000_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1302_t43.400000_mouth.png"
+            },
+            {
+              "time_seconds": 43.566667,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1307_t43.566667_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1307_t43.566667_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1307_t43.566667_mouth.png"
+            },
+            {
+              "time_seconds": 43.733333,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1312_t43.733333_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1312_t43.733333_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1312_t43.733333_mouth.png"
+            },
+            {
+              "time_seconds": 43.9,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1317_t43.900000_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1317_t43.900000_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1317_t43.900000_mouth.png"
+            },
+            {
+              "time_seconds": 44.066667,
+              "bbox_xywh": [
+                605,
+                470,
+                185,
+                115
+              ],
+              "source_frame": "evidence/Q07/R1/f1322_t44.066667_source.png",
+              "annotated_frame": "evidence/Q07/R1/f1322_t44.066667_annotated.png",
+              "mouth_crop": "evidence/Q07/R1/f1322_t44.066667_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q08",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。句中有近闭唇、展开、收圆的可见顺序，与字幕大体相容；但“品牌”及句末“投资机构”的内部边界不能保证唯一。所有词组均已检查，不能用两条证据链代表逐字验证。一般边界约±0.2–0.35秒。",
+      "alignment": [
+        {
+          "text": "能够",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            47.833333333333336,
+            48.233
+          ],
+          "status": "uncertain",
+          "note": "起句浅开到较开，内部界限不清。"
+        },
+        {
+          "text": "帮助",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            48.233,
+            48.633
+          ],
+          "status": "consistent",
+          "note": "较开后收圆、收小，与词组的整体变化可相容。"
+        },
+        {
+          "text": "企业",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            48.633,
+            48.933
+          ],
+          "status": "uncertain",
+          "note": "横向露齿，两个字音区分弱。"
+        },
+        {
+          "text": "构建",
+          "character_range": [
+            6,
+            8
+          ],
+          "time_interval_seconds": [
+            48.933,
+            49.3
+          ],
+          "status": "consistent",
+          "note": "先收圆、后展开，整体可相容。"
+        },
+        {
+          "text": "差异化的",
+          "character_range": [
+            8,
+            12
+          ],
+          "time_interval_seconds": [
+            49.3,
+            49.8
+          ],
+          "status": "uncertain",
+          "note": "较大张口、浅开、回收；四字内部不能独立确认。"
+        },
+        {
+          "text": "品牌",
+          "character_range": [
+            12,
+            14
+          ],
+          "time_interval_seconds": [
+            49.8,
+            50.3
+          ],
+          "status": "consistent",
+          "note": "有近闭唇及随后的横向展开，与字幕可相容；不能精确断定两次辅音。"
+        },
+        {
+          "text": "优势",
+          "character_range": [
+            14,
+            16
+          ],
+          "time_interval_seconds": [
+            50.3,
+            50.767
+          ],
+          "status": "consistent",
+          "note": "收圆后转为较浅开口，与词组节奏相容。"
+        },
+        {
+          "text": "吸引",
+          "character_range": [
+            17,
+            19
+          ],
+          "time_interval_seconds": [
+            50.967,
+            51.4
+          ],
+          "status": "uncertain",
+          "note": "停顿后浅开，两个相似口型难分。"
+        },
+        {
+          "text": "更多",
+          "character_range": [
+            19,
+            21
+          ],
+          "time_interval_seconds": [
+            51.4,
+            51.867
+          ],
+          "status": "uncertain",
+          "note": "露齿后收小，具体字音不可唯一核验。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            21,
+            22
+          ],
+          "time_interval_seconds": [
+            51.867,
+            52
+          ],
+          "status": "uncertain",
+          "note": "短连读过渡。"
+        },
+        {
+          "text": "客户",
+          "character_range": [
+            22,
+            24
+          ],
+          "time_interval_seconds": [
+            52,
+            52.4
+          ],
+          "status": "uncertain",
+          "note": "由较开到较小开口，第二字收圆程度不明确。"
+        },
+        {
+          "text": "和",
+          "character_range": [
+            24,
+            25
+          ],
+          "time_interval_seconds": [
+            52.4,
+            52.6
+          ],
+          "status": "uncertain",
+          "note": "小幅开合，边界约±0.3秒。"
+        },
+        {
+          "text": "投资",
+          "character_range": [
+            25,
+            27
+          ],
+          "time_interval_seconds": [
+            52.6,
+            52.967
+          ],
+          "status": "uncertain",
+          "note": "由小开口转较开，两个音节界限不可靠。"
+        },
+        {
+          "text": "机构",
+          "character_range": [
+            27,
+            29
+          ],
+          "time_interval_seconds": [
+            52.967,
+            53.533
+          ],
+          "status": "uncertain",
+          "note": "开口略集中，后闭合并再次短开；尾部动作可能含收尾，不能唯一归字。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "49.767–49.900秒唇缝收小、接近合拢；50.033秒仍较窄；50.167秒横向展开并露齿；50.300–50.567秒唇形集中、略前突；50.700秒再回到浅开。",
+          "comparison": "对应“的／品牌优势”附近。可见近闭唇后展开，以及其后的合口过渡，与字幕整体顺序相容；画面不能可靠区分每个闭唇辅音，故不把这一链当作逐字识别结果。",
+          "frames": [
+            {
+              "time_seconds": 49.766667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1493_t49.766667_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1493_t49.766667_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1493_t49.766667_mouth.png"
+            },
+            {
+              "time_seconds": 49.9,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1497_t49.900000_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1497_t49.900000_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1497_t49.900000_mouth.png"
+            },
+            {
+              "time_seconds": 50.033333,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1501_t50.033333_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1501_t50.033333_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1501_t50.033333_mouth.png"
+            },
+            {
+              "time_seconds": 50.166667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1505_t50.166667_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1505_t50.166667_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1505_t50.166667_mouth.png"
+            },
+            {
+              "time_seconds": 50.3,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1509_t50.300000_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1509_t50.300000_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1509_t50.300000_mouth.png"
+            },
+            {
+              "time_seconds": 50.433333,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1513_t50.433333_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1513_t50.433333_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1513_t50.433333_mouth.png"
+            },
+            {
+              "time_seconds": 50.566667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1517_t50.566667_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1517_t50.566667_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1517_t50.566667_mouth.png"
+            },
+            {
+              "time_seconds": 50.7,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R1/f1521_t50.700000_source.png",
+              "annotated_frame": "evidence/Q08/R1/f1521_t50.700000_annotated.png",
+              "mouth_crop": "evidence/Q08/R1/f1521_t50.700000_mouth.png"
+            }
+          ]
+        },
+        {
+          "observation": "52.100–52.267秒唇缝横向浅开；52.433–52.600秒口形收小；52.767–52.933秒上下分离增大；53.100秒又收小；53.267秒接近合拢。",
+          "comparison": "对应“客户和投资机构”末段。能看见开—收小—再开—再收小的连续顺序，但无法把所有变化唯一分给“投／资／机／构”；没有据此报告替换，并保留句尾的不确定性。",
+          "frames": [
+            {
+              "time_seconds": 52.1,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1563_t52.100000_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1563_t52.100000_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1563_t52.100000_mouth.png"
+            },
+            {
+              "time_seconds": 52.266667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1568_t52.266667_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1568_t52.266667_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1568_t52.266667_mouth.png"
+            },
+            {
+              "time_seconds": 52.433333,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1573_t52.433333_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1573_t52.433333_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1573_t52.433333_mouth.png"
+            },
+            {
+              "time_seconds": 52.6,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1578_t52.600000_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1578_t52.600000_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1578_t52.600000_mouth.png"
+            },
+            {
+              "time_seconds": 52.766667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1583_t52.766667_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1583_t52.766667_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1583_t52.766667_mouth.png"
+            },
+            {
+              "time_seconds": 52.933333,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1588_t52.933333_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1588_t52.933333_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1588_t52.933333_mouth.png"
+            },
+            {
+              "time_seconds": 53.1,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1593_t53.100000_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1593_t53.100000_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1593_t53.100000_mouth.png"
+            },
+            {
+              "time_seconds": 53.266667,
+              "bbox_xywh": [
+                680,
+                450,
+                205,
+                170
+              ],
+              "source_frame": "evidence/Q08/R2/f1598_t53.266667_source.png",
+              "annotated_frame": "evidence/Q08/R2/f1598_t53.266667_annotated.png",
+              "mouth_crop": "evidence/Q08/R2/f1598_t53.266667_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q09",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。全句顺序已检查；胡须、压缩和较多相似开口限制了“步伐”“视觉”“艺术感染力”等处的辨别。证据只显示有限度相容，不能排除近口型替换。一般词组边界约±0.25–0.35秒。",
+      "alignment": [
+        {
+          "text": "使得",
+          "character_range": [
+            0,
+            2
+          ],
+          "time_interval_seconds": [
+            54.8,
+            55.2
+          ],
+          "status": "uncertain",
+          "note": "浅开口，起始两个字无法单独确认。"
+        },
+        {
+          "text": "舞者",
+          "character_range": [
+            2,
+            4
+          ],
+          "time_interval_seconds": [
+            55.2,
+            55.7
+          ],
+          "status": "consistent",
+          "note": "收圆后展开、露齿，整体可相容。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            4,
+            5
+          ],
+          "time_interval_seconds": [
+            55.7,
+            55.9
+          ],
+          "status": "uncertain",
+          "note": "与前后词连读。"
+        },
+        {
+          "text": "每一个",
+          "character_range": [
+            5,
+            8
+          ],
+          "time_interval_seconds": [
+            55.9,
+            56.5
+          ],
+          "status": "uncertain",
+          "note": "唇缝收小后张开，三个字内部界限不可靠。"
+        },
+        {
+          "text": "步伐",
+          "character_range": [
+            8,
+            10
+          ],
+          "time_interval_seconds": [
+            56.5,
+            57.033
+          ],
+          "status": "uncertain",
+          "note": "先较窄再较开，但闭唇、唇齿接触不能可靠核验。"
+        },
+        {
+          "text": "跳跃",
+          "character_range": [
+            11,
+            13
+          ],
+          "time_interval_seconds": [
+            57.033,
+            57.5
+          ],
+          "status": "consistent",
+          "note": "较开、回收、再开，词组节奏可相容。"
+        },
+        {
+          "text": "都",
+          "character_range": [
+            13,
+            14
+          ],
+          "time_interval_seconds": [
+            57.5,
+            57.8
+          ],
+          "status": "uncertain",
+          "note": "口形集中，独立音节边界不清。"
+        },
+        {
+          "text": "更具",
+          "character_range": [
+            14,
+            16
+          ],
+          "time_interval_seconds": [
+            57.8,
+            58.267
+          ],
+          "status": "uncertain",
+          "note": "开口保持较多，两字分界不清。"
+        },
+        {
+          "text": "视觉",
+          "character_range": [
+            16,
+            18
+          ],
+          "time_interval_seconds": [
+            58.267,
+            58.733
+          ],
+          "status": "uncertain",
+          "note": "由较开到收小，不能唯一识别前字。"
+        },
+        {
+          "text": "冲击力",
+          "character_range": [
+            18,
+            21
+          ],
+          "time_interval_seconds": [
+            58.733,
+            59.467
+          ],
+          "status": "uncertain",
+          "note": "收小到露齿、横向浅开；三字逐一定位不可靠。"
+        },
+        {
+          "text": "提升了",
+          "character_range": [
+            22,
+            25
+          ],
+          "time_interval_seconds": [
+            59.467,
+            60.267
+          ],
+          "status": "consistent",
+          "note": "连续浅开、露齿和回收，整体顺序未见明显冲突。"
+        },
+        {
+          "text": "舞蹈",
+          "character_range": [
+            25,
+            27
+          ],
+          "time_interval_seconds": [
+            60.267,
+            60.967
+          ],
+          "status": "consistent",
+          "note": "唇形集中、收圆后较大张开，动作相容。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            27,
+            28
+          ],
+          "time_interval_seconds": [
+            60.967,
+            61.1
+          ],
+          "status": "uncertain",
+          "note": "连读短过渡。"
+        },
+        {
+          "text": "艺术",
+          "character_range": [
+            28,
+            30
+          ],
+          "time_interval_seconds": [
+            61.1,
+            61.5
+          ],
+          "status": "uncertain",
+          "note": "露齿后收小，字音不唯一。"
+        },
+        {
+          "text": "感染力",
+          "character_range": [
+            30,
+            33
+          ],
+          "time_interval_seconds": [
+            61.5,
+            62.167
+          ],
+          "status": "uncertain",
+          "note": "较开再回收，三字边界及原字均存在歧义。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "60.300秒横向浅开；60.433–60.567秒唇形集中并略前突；60.700秒开口明显增大、下唇下降；60.833秒仍较开；60.967秒略回收。",
+          "comparison": "对应“舞蹈”附近的合口—展开顺序，与字幕的整体口部节奏可相容。这不是从单张圆唇图读出“舞”字；具体辅音和声调不可确认，其他词组的限制见表。",
+          "frames": [
+            {
+              "time_seconds": 60.3,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1809_t60.300000_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1809_t60.300000_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1809_t60.300000_mouth.png"
+            },
+            {
+              "time_seconds": 60.433333,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1813_t60.433333_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1813_t60.433333_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1813_t60.433333_mouth.png"
+            },
+            {
+              "time_seconds": 60.566667,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1817_t60.566667_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1817_t60.566667_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1817_t60.566667_mouth.png"
+            },
+            {
+              "time_seconds": 60.7,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1821_t60.700000_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1821_t60.700000_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1821_t60.700000_mouth.png"
+            },
+            {
+              "time_seconds": 60.833333,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1825_t60.833333_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1825_t60.833333_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1825_t60.833333_mouth.png"
+            },
+            {
+              "time_seconds": 60.966667,
+              "bbox_xywh": [
+                760,
+                470,
+                220,
+                170
+              ],
+              "source_frame": "evidence/Q09/R1/f1829_t60.966667_source.png",
+              "annotated_frame": "evidence/Q09/R1/f1829_t60.966667_annotated.png",
+              "mouth_crop": "evidence/Q09/R1/f1829_t60.966667_mouth.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "Q10",
+      "decision": "no_error",
+      "errors": [],
+      "uncertainty": "最终判断：无错误。两段“轮驱动”都有较长合口保持，前后张口节奏也与字幕可相容；嘴部在原帧较小且相似口形保持较久，不能把这种重复当作已确认每个数词。一般词组边界约±0.25–0.4秒。",
+      "alignment": [
+        {
+          "text": "最常见",
+          "character_range": [
+            0,
+            3
+          ],
+          "time_interval_seconds": [
+            63.4,
+            64
+          ],
+          "status": "uncertain",
+          "note": "起句开口、收小、再开，三字内部界限不清。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            3,
+            4
+          ],
+          "time_interval_seconds": [
+            64,
+            64.133
+          ],
+          "status": "uncertain",
+          "note": "短连读。"
+        },
+        {
+          "text": "分类",
+          "character_range": [
+            4,
+            6
+          ],
+          "time_interval_seconds": [
+            64.133,
+            64.567
+          ],
+          "status": "uncertain",
+          "note": "浅开并露齿，具体字音不唯一。"
+        },
+        {
+          "text": "标准",
+          "character_range": [
+            6,
+            8
+          ],
+          "time_interval_seconds": [
+            64.567,
+            65
+          ],
+          "status": "uncertain",
+          "note": "近闭唇后张开并收小；细节不够确认辅音。"
+        },
+        {
+          "text": "是",
+          "character_range": [
+            8,
+            9
+          ],
+          "time_interval_seconds": [
+            65,
+            65.3
+          ],
+          "status": "uncertain",
+          "note": "浅开口保持。"
+        },
+        {
+          "text": "按照",
+          "character_range": [
+            9,
+            11
+          ],
+          "time_interval_seconds": [
+            65.3,
+            66.1
+          ],
+          "status": "consistent",
+          "note": "较窄后明显张口、露齿，与词组节奏相容。"
+        },
+        {
+          "text": "驱动轮",
+          "character_range": [
+            11,
+            14
+          ],
+          "time_interval_seconds": [
+            66.1,
+            67.1
+          ],
+          "status": "consistent",
+          "note": "由较开转向较小、集中的唇形并保持，与合口占主导的整体预期相容。"
+        },
+        {
+          "text": "的",
+          "character_range": [
+            14,
+            15
+          ],
+          "time_interval_seconds": [
+            67.1,
+            67.3
+          ],
+          "status": "uncertain",
+          "note": "与前词连读。"
+        },
+        {
+          "text": "数量",
+          "character_range": [
+            15,
+            17
+          ],
+          "time_interval_seconds": [
+            67.3,
+            67.967
+          ],
+          "status": "consistent",
+          "note": "小开口后扩大并露齿，整体可相容。"
+        },
+        {
+          "text": "可分为",
+          "character_range": [
+            17,
+            20
+          ],
+          "time_interval_seconds": [
+            67.967,
+            69.267
+          ],
+          "status": "uncertain",
+          "note": "较开、收窄、再开，中间保持较久；三字分界不精确。"
+        },
+        {
+          "text": "两轮",
+          "character_range": [
+            20,
+            22
+          ],
+          "time_interval_seconds": [
+            69.267,
+            69.967
+          ],
+          "status": "consistent",
+          "note": "横向较开后收小、前突，动作可相容；首字不唯一。"
+        },
+        {
+          "text": "驱动",
+          "character_range": [
+            22,
+            24
+          ],
+          "time_interval_seconds": [
+            69.967,
+            70.633
+          ],
+          "status": "consistent",
+          "note": "较小合口形保持，尾部收窄；两个音节不能逐字确认。"
+        },
+        {
+          "text": "和",
+          "character_range": [
+            24,
+            25
+          ],
+          "time_interval_seconds": [
+            70.633,
+            71.1
+          ],
+          "status": "consistent",
+          "note": "从窄到较大开口，作为两组之间的过渡可相容。"
+        },
+        {
+          "text": "四轮",
+          "character_range": [
+            25,
+            27
+          ],
+          "time_interval_seconds": [
+            71.1,
+            71.633
+          ],
+          "status": "consistent",
+          "note": "较窄后口形集中、收圆，整体可相容；不能只凭此确认“四”。"
+        },
+        {
+          "text": "驱动",
+          "character_range": [
+            27,
+            29
+          ],
+          "time_interval_seconds": [
+            71.633,
+            72.267
+          ],
+          "status": "consistent",
+          "note": "再次出现较长的小开口保持，与前一组节奏相近。"
+        },
+        {
+          "text": "两大类",
+          "character_range": [
+            29,
+            32
+          ],
+          "time_interval_seconds": [
+            72.267,
+            72.967
+          ],
+          "status": "consistent",
+          "note": "展开、较大张口、再回收，整体节奏相容。"
+        }
+      ],
+      "review_evidence": [
+        {
+          "observation": "69.333–69.500秒横向张开、可见牙齿；69.667秒开始收小；69.833–70.167秒口形集中、略前突并保持；70.333–70.500秒唇缝更窄。",
+          "comparison": "对应第一组“两轮驱动”附近，前部较开而后部以合口保持为主，符合字幕的整体顺序；保持帧不支持把“轮／驱／动”精确分开，也不能唯一确认数词。",
+          "frames": [
+            {
+              "time_seconds": 69.333333,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2080_t69.333333_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2080_t69.333333_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2080_t69.333333_mouth.png"
+            },
+            {
+              "time_seconds": 69.5,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2085_t69.500000_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2085_t69.500000_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2085_t69.500000_mouth.png"
+            },
+            {
+              "time_seconds": 69.666667,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2090_t69.666667_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2090_t69.666667_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2090_t69.666667_mouth.png"
+            },
+            {
+              "time_seconds": 69.833333,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2095_t69.833333_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2095_t69.833333_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2095_t69.833333_mouth.png"
+            },
+            {
+              "time_seconds": 70.0,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2100_t70.000000_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2100_t70.000000_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2100_t70.000000_mouth.png"
+            },
+            {
+              "time_seconds": 70.166667,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2105_t70.166667_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2105_t70.166667_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2105_t70.166667_mouth.png"
+            },
+            {
+              "time_seconds": 70.333333,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2110_t70.333333_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2110_t70.333333_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2110_t70.333333_mouth.png"
+            },
+            {
+              "time_seconds": 70.5,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R1/f2115_t70.500000_source.png",
+              "annotated_frame": "evidence/Q10/R1/f2115_t70.500000_annotated.png",
+              "mouth_crop": "evidence/Q10/R1/f2115_t70.500000_mouth.png"
+            }
+          ]
+        },
+        {
+          "observation": "71.100秒开口较大；71.267秒收窄；71.433–71.933秒唇形较集中、小开口保持；72.100秒仍较小；72.267秒开始向横向展开过渡。",
+          "comparison": "对应“和／四轮驱动”附近，可见第二组与第一组相似的收小、保持、回开顺序。两组的视觉重复与字幕相容，但单凭这一链不能证明“四”与其他近口型数词的差别。",
+          "frames": [
+            {
+              "time_seconds": 71.1,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2133_t71.100000_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2133_t71.100000_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2133_t71.100000_mouth.png"
+            },
+            {
+              "time_seconds": 71.266667,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2138_t71.266667_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2138_t71.266667_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2138_t71.266667_mouth.png"
+            },
+            {
+              "time_seconds": 71.433333,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2143_t71.433333_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2143_t71.433333_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2143_t71.433333_mouth.png"
+            },
+            {
+              "time_seconds": 71.6,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2148_t71.600000_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2148_t71.600000_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2148_t71.600000_mouth.png"
+            },
+            {
+              "time_seconds": 71.766667,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2153_t71.766667_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2153_t71.766667_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2153_t71.766667_mouth.png"
+            },
+            {
+              "time_seconds": 71.933333,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2158_t71.933333_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2158_t71.933333_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2158_t71.933333_mouth.png"
+            },
+            {
+              "time_seconds": 72.1,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2163_t72.100000_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2163_t72.100000_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2163_t72.100000_mouth.png"
+            },
+            {
+              "time_seconds": 72.266667,
+              "bbox_xywh": [
+                585,
+                440,
+                160,
+                115
+              ],
+              "source_frame": "evidence/Q10/R2/f2168_t72.266667_source.png",
+              "annotated_frame": "evidence/Q10/R2/f2168_t72.266667_annotated.png",
+              "mouth_crop": "evidence/Q10/R2/f2168_t72.266667_mouth.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

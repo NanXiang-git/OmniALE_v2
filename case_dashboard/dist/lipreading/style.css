@@ -1,0 +1,33 @@
+.lipreading-results .score-table-wrap { overflow-x: auto; }
+.lipreading-results .result-table th[scope="row"] { text-align: left; }
+.lipreading-questions { display: grid; gap: 12px; }
+.lipreading-question {
+  border: 1px solid var(--line, #dce5da);
+  border-radius: 9px;
+  padding: 14px 16px;
+  min-width: 0;
+}
+.lipreading-question-head, .lipreading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  align-items: center;
+}
+.lipreading-question-head { justify-content: space-between; }
+.lipreading-question-head h4, .lipreading-question-head strong { margin: 0; }
+.lipreading-question dl {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: .45rem .85rem;
+  margin: .75rem 0;
+}
+.lipreading-question dt { font-weight: 650; }
+.lipreading-question dd { margin: 0; overflow-wrap: anywhere; }
+.lipreading-frame { display: block; margin: .6rem 0; }
+.lipreading-frame img { max-width: 100%; height: auto; display: block; }
+.lipreading-history { margin-top: 24px; }
+.lipreading-history .variant-answer-files { margin-bottom: 14px; }
+@media (max-width: 540px) {
+  .lipreading-question dl { grid-template-columns: 1fr; gap: .2rem; }
+  .lipreading-question dd { margin-bottom: .4rem; }
+}
