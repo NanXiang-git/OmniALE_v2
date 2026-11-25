@@ -3,7 +3,7 @@
   "effort": "xhigh",
   "time_limit_seconds": null,
   "seconds": 1471.0934872627258,
-  "total": 74.1885,
+  "total": 73.1885,
   "visual_points": 44.18850741205259,
   "visual_shot_scores": [
     {
@@ -56,11 +56,18 @@
   "audio_listening": {
     "verified": true,
     "model": "qwen3.8-omni-flash",
-    "points": 8,
+    "version": "strict-v2",
+    "points": 7,
+    "breakdown": {
+      "A_content": 2,
+      "B_content": 2,
+      "isolation": 1,
+      "artifacts": 2
+    },
     "ratings": {
       "A": {
         "content": 2,
-        "isolation": 2,
+        "isolation": 1,
         "artifacts": 2
       },
       "B": {
@@ -69,57 +76,607 @@
         "artifacts": 2
       }
     },
-    "observations": {
-      "A_reference_first": {
-        "verified": true,
-        "same": true,
-        "content": 2,
-        "isolation": 2,
-        "artifacts": 2,
-        "evidence": "R与X逐段对比：0:00-0:01女声'I'm a school teacher'；0:04-0:06女声'Oh, no way, I work with kids too'；0:08-0:10女声'Oh, I teach kindergarten'，末尾约0:10处均有短暂男声重叠'Kindergarten'。两轨在内容、时序、音色及重叠程度上完全一致，判定为相同轨道。",
-        "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten."
+    "confirmed_events": [
+      {
+        "role": "A",
+        "start": 7.26,
+        "end": 7.4,
+        "type": "other_voice",
+        "description": "A 说完 kids too 后短促的他人 Oh。短窗 Qwen 听评定位到句尾。与 B 的录音按原始近讲时间映射后相关系数 0.722，支持串音来自 B。参考 A 已存在该声音。",
+        "correlation": 0.7217327129224587,
+        "alignment_lag_ms": -2.9166666666666665,
+        "rms_dbfs": -35.137583732708705,
+        "snr_vs_contaminated_reference_db": 27.975895354379574,
+        "qwen": {
+          "verified": true,
+          "transcript": "I work with kids too. Oh",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 1.3,
+              "end": 1.5,
+              "description": "句尾可听到另一人极短的 'Oh' 感叹，与 O 参考中 'Oh wonderful' 的起始一致，属于对方串入 X 录音的串音。"
+            }
+          ]
+        }
+      }
+    ],
+    "suspected_events": [
+      {
+        "role": "A",
+        "start": 10.1,
+        "end": 11.01,
+        "description": "后段重复 kindergarten / 感叹声也被多次报告为他人声音。原录音中此时间窗与第三人发言重叠，精确词与身份存在分歧，列出疑似残留，避免重复扣分。"
+      }
+    ],
+    "controls": {
+      "checks": {
+        "clean": true,
+        "short_leak": true
       },
-      "A_candidate_first": {
-        "verified": true,
-        "same": true,
-        "content": 2,
-        "isolation": 2,
-        "artifacts": 2,
-        "evidence": "X与R完全一致：0:00-0:01女声'I'm a school teacher'，0:04-0:06女声'Oh, no way, I work with kids too'，0:08-0:10女声'Oh, I teach kindergarten'，约0:10处有短暂男声重叠'kindergarten'（R中同样存在，属原始场景）。无额外串音、漏词或处理伪影。",
-        "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten."
-      },
-      "B_reference_first": {
-        "verified": true,
-        "same": true,
-        "content": 2,
-        "isolation": 2,
-        "artifacts": 2,
-        "evidence": "R与X完全一致：约0:03-0:06一位女性说'Oh, okay, very cool. I'm a pediatric physician.'，约0:07另一位回应'Oh, wonderful.'并伴有笑声。两段音频在音色、措辞、时序上无差异，无额外串音、音乐或处理伪影。",
-        "transcript": "Oh, okay, very cool. I'm a pediatric physician. Oh, wonderful."
-      },
-      "B_candidate_first": {
-        "verified": true,
-        "same": true,
-        "content": 2,
-        "isolation": 2,
-        "artifacts": 2,
-        "evidence": "X与R完全相同。0:03-0:07目标说话人说'Oh, okay, very cool. I'm a pediatric physician.'，0:07-0:08另一人回应'Oh, wonderful.'。目标语音清晰完整，无漏词、无换人、无处理伪影，背景仅有轻微环境噪声，不影响主体可懂度。",
-        "transcript": "Oh, okay, very cool. I'm a pediatric physician. Oh, wonderful."
+      "passed": true,
+      "results": {
+        "clean": {
+          "verified": true,
+          "transcript": "I'm a schoolteacher.",
+          "events": []
+        },
+        "short_leak": {
+          "verified": true,
+          "transcript": "I'm a school teacher. Oh.",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 1.85,
+              "end": 2.1,
+              "description": "另一声音发出短促感叹词'Oh'，音色与主说话人略有不同，疑似不同说话人的回应"
+            }
+          ]
+        }
       }
     },
-    "order_disagreements": [],
-    "controls": {
-      "identity_A": true,
-      "mix_A": true,
-      "swapped_A": true,
-      "identity_B": true,
-      "mix_B": true,
-      "swapped_B": true
+    "failed_comparison_controls": {
+      "checks": {
+        "identical_forward": true,
+        "identical_reverse": false,
+        "brief_interjection_forward": false,
+        "brief_interjection_reverse": false
+      },
+      "passed": false,
+      "injection": {
+        "injected_start": 2.1,
+        "injected_end": 2.48,
+        "source_interval": [
+          2.73,
+          3.11
+        ],
+        "gain": 0.8
+      },
+      "results": {
+        "identical_forward": {
+          "verified": true,
+          "transcript": "Oh",
+          "events": []
+        },
+        "identical_reverse": {
+          "verified": true,
+          "transcript": "",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 0.0,
+              "end": 0.4,
+              "description": "A brief 'Oh/Ah' interjection from another speaker is audible in X. R (target close-mic) is silent during this window, while O (other speaker close-mic) contains the same 'Ah' sound, confirming the source is the other speaker, not target A."
+            }
+          ]
+        },
+        "brief_interjection_forward": {
+          "verified": true,
+          "transcript": "Oh",
+          "events": []
+        },
+        "brief_interjection_reverse": {
+          "verified": true,
+          "transcript": "Oh",
+          "events": []
+        }
+      }
+    },
+    "turn_reviews": [
+      {
+        "turn": {
+          "role": "A",
+          "start": 0.37,
+          "end": 1.83,
+          "text": "I'm a schoolteacher.",
+          "source": [
+            7.2,
+            8.66
+          ]
+        },
+        "answer": {
+          "verified": true,
+          "transcript": "I'm a school teacher.",
+          "events": [],
+          "content": 2,
+          "artifacts": 2,
+          "description": "The submitted separation (X) is a faithful reproduction of the target (R). Both contain the identical utterance 'I'm a school teacher.' spoken by the same female voice with matching timbre, pitch, and natural prosody. No processing artifacts, distortions, or content differences are detected."
+        }
+      },
+      {
+        "turn": {
+          "role": "B",
+          "start": 2.6,
+          "end": 6.630000000000001,
+          "text": "Oh, okay. Very cool. I'm a pediatric physician.",
+          "source": [
+            8.26,
+            12.29
+          ]
+        },
+        "answer": {
+          "verified": true,
+          "transcript": "Oh, okay. Very cool. I'm a pediatric physician.",
+          "events": [],
+          "content": 2,
+          "artifacts": 2,
+          "description": "The submitted separation X faithfully reproduces the target utterance from R. All words are present and correctly ordered, the timbre matches the close-mic reference, and no processing artifacts (clipping, warbling, spectral holes, or unnatural reverb) are detected. The trailing laugh is natural and preserved."
+        }
+      },
+      {
+        "turn": {
+          "role": "A",
+          "start": 4.92,
+          "end": 7.42,
+          "text": "Oh, no way. I work with kids too.",
+          "source": [
+            12.28,
+            14.78
+          ]
+        },
+        "answer": {
+          "verified": true,
+          "transcript": "Oh, no way. I work with kids too.",
+          "events": [],
+          "content": 2,
+          "artifacts": 2,
+          "description": "The submitted separation X faithfully reproduces the target utterance from R. Content, timbre, and prosody are preserved with no detectable processing artifacts."
+        }
+      },
+      {
+        "turn": {
+          "role": "B",
+          "start": 6.54,
+          "end": 8.870000000000001,
+          "text": "Oh. Wonderful.",
+          "source": [
+            14.62,
+            16.95
+          ]
+        },
+        "answer": {
+          "verified": true,
+          "transcript": "Oh, wonderful.",
+          "events": [],
+          "content": 2,
+          "artifacts": 2,
+          "description": "The submitted separation faithfully reproduces the target utterance 'Oh, wonderful.' with matching timbre, intonation, and timing. No processing artifacts or content losses detected."
+        }
+      },
+      {
+        "turn": {
+          "role": "A",
+          "start": 8.66,
+          "end": 11.01,
+          "text": "Oh, I teach kindergarten. Yes.",
+          "source": [
+            18.65,
+            21.0
+          ]
+        },
+        "answer": {
+          "verified": true,
+          "transcript": "Oh, I teach kindergarten.",
+          "events": [],
+          "content": 2,
+          "artifacts": 2,
+          "description": "The target speaker's utterance 'Oh, I teach kindergarten' is fully and faithfully reproduced in X with matching timbre and clarity. The trailing 'Yes' heard in R appears to come from a different voice (likely the interlocutor), which is handled separately per instructions. No processing artifacts (clipping, spectral holes, distortion) are detected in X relative to R."
+        }
+      }
+    ],
+    "window_reviews": [
+      {
+        "role": "A",
+        "index": 0,
+        "start": 0.0,
+        "end": 2.0,
+        "result": {
+          "verified": true,
+          "transcript": "I'm a school teacher",
+          "events": []
+        }
+      },
+      {
+        "role": "A",
+        "index": 1,
+        "start": 1.5,
+        "end": 3.5,
+        "result": {
+          "verified": true,
+          "transcript": "er",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 1.8,
+              "end": 2.0,
+              "description": "在X尾部可听到一声极短的'oh'，音色与O参考中的'Oh, okay'一致，属于另一位说话人的反应声串入成片，非目标说话人A本人发声。"
+            }
+          ]
+        }
+      },
+      {
+        "role": "A",
+        "index": 2,
+        "start": 3.0,
+        "end": 5.0,
+        "result": {
+          "verified": true,
+          "transcript": "Ah",
+          "events": []
+        }
+      },
+      {
+        "role": "A",
+        "index": 3,
+        "start": 4.5,
+        "end": 6.5,
+        "result": {
+          "verified": true,
+          "transcript": "Oh, no way, I work with kids too",
+          "events": []
+        }
+      },
+      {
+        "role": "A",
+        "index": 4,
+        "start": 6.0,
+        "end": 8.0,
+        "result": {
+          "verified": true,
+          "transcript": "I work with kids too. Oh",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 1.3,
+              "end": 1.5,
+              "description": "句尾可听到另一人极短的 'Oh' 感叹，与 O 参考中 'Oh wonderful' 的起始一致，属于对方串入 X 录音的串音。"
+            }
+          ]
+        }
+      },
+      {
+        "role": "A",
+        "index": 5,
+        "start": 7.5,
+        "end": 9.5,
+        "result": {
+          "verified": true,
+          "transcript": "Oh, I teach kin-",
+          "events": []
+        }
+      },
+      {
+        "role": "A",
+        "index": 6,
+        "start": 9.0,
+        "end": 11.0,
+        "result": {
+          "verified": true,
+          "transcript": "I teach kindergarten. Kindergarten.",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 1.5,
+              "end": 2.0,
+              "description": "另一说话人短促重复 'Kindergarten'，音色与目标A不同，属于现场串音进入X"
+            }
+          ]
+        }
+      },
+      {
+        "role": "A",
+        "index": 7,
+        "start": 10.5,
+        "end": 12,
+        "result": {
+          "verified": true,
+          "transcript": "Yeah",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 0,
+        "start": 0.0,
+        "end": 2.0,
+        "result": {
+          "verified": true,
+          "transcript": "I'm a school teacher.",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 1,
+        "start": 1.5,
+        "end": 3.5,
+        "result": {
+          "verified": true,
+          "transcript": "oh okay",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 0.0,
+              "end": 0.2,
+              "description": "片段起始处可听到一声短促的 'er'，音色与目标说话人B不同，与O参考一致，属于另一位说话人的近讲串入。"
+            }
+          ]
+        }
+      },
+      {
+        "role": "B",
+        "index": 2,
+        "start": 3.0,
+        "end": 5.0,
+        "result": {
+          "verified": true,
+          "transcript": "pediatric physician",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 3,
+        "start": 4.5,
+        "end": 6.5,
+        "result": {
+          "verified": true,
+          "transcript": "I'm a pediatric physician [laugh]",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 4,
+        "start": 6.0,
+        "end": 8.0,
+        "result": {
+          "verified": true,
+          "transcript": "[chuckle] Oh, wonderful!",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 5,
+        "start": 7.5,
+        "end": 9.5,
+        "result": {
+          "verified": true,
+          "transcript": "oh [laugh] yeah",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 6,
+        "start": 9.0,
+        "end": 11.0,
+        "result": {
+          "verified": true,
+          "transcript": "oh wonderful",
+          "events": []
+        }
+      },
+      {
+        "role": "B",
+        "index": 7,
+        "start": 10.5,
+        "end": 12,
+        "result": {
+          "verified": true,
+          "transcript": "Oh wonderful.",
+          "events": []
+        }
+      }
+    ],
+    "full_reviews": [
+      {
+        "role": "A",
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten. Kindergarten.",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 9.0,
+              "end": 10.0,
+              "description": "一个男性声音短暂说出类似'Kindergarten'或'In kindergarten'的词，与前面两位女性说话者明显不同，属于分离缺陷（他人声音混入）。"
+            }
+          ]
+        }
+      },
+      {
+        "role": "A",
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "I'm a school teacher. Oh, no way, I work with kids too. Oh, I teach kindergarten.",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 10.0,
+              "end": 11.0,
+              "description": "另一个声音（音调较低）重复说 'Kindergarten'，属于分离缺陷"
+            }
+          ]
+        }
+      },
+      {
+        "role": "B",
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "Oh, okay, very cool. I'm a pediatric physician. [laugh] Oh, wonderful.",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 6.5,
+              "end": 8.0,
+              "description": "另一位女性声音说 'Oh, wonderful.'，是对前面发言的回应，属于分离缺陷（非目标说话人B的声音）"
+            }
+          ]
+        }
+      },
+      {
+        "role": "B",
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "Oh, okay, very cool. I'm a pediatric physician. [giggle] Oh, wonderful. [giggle]",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 6.0,
+              "end": 7.2,
+              "description": "另一人声回应「Oh, wonderful」，音色与主说话人明显不同，属于他人插话"
+            }
+          ]
+        }
+      }
+    ],
+    "targeted_reviews": [
+      {
+        "name": "tail_first",
+        "role": "A",
+        "start": 6.78,
+        "end": 7.52,
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "two",
+          "events": []
+        }
+      },
+      {
+        "name": "tail_first",
+        "role": "A",
+        "start": 6.78,
+        "end": 7.52,
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "two",
+          "events": []
+        }
+      },
+      {
+        "name": "tail_second",
+        "role": "A",
+        "start": 9.8,
+        "end": 11.1,
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "pardon",
+          "events": []
+        }
+      },
+      {
+        "name": "tail_second",
+        "role": "A",
+        "start": 9.8,
+        "end": 11.1,
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "cardin…",
+          "events": []
+        }
+      },
+      {
+        "name": "tail_second_short",
+        "role": "A",
+        "start": 10.2,
+        "end": 11.1,
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "",
+          "events": []
+        }
+      },
+      {
+        "name": "tail_second_short",
+        "role": "A",
+        "start": 10.2,
+        "end": 11.1,
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "in the",
+          "events": []
+        }
+      },
+      {
+        "name": "B_tail",
+        "role": "B",
+        "start": 8.2,
+        "end": 9.4,
+        "kind": "X",
+        "result": {
+          "verified": true,
+          "transcript": "yeah",
+          "events": [
+            {
+              "kind": "other_voice",
+              "start": 0.0,
+              "end": 0.3,
+              "description": "开头有一声短促的气音轻笑或'yeah'，疑似女性声音"
+            }
+          ]
+        }
+      },
+      {
+        "name": "B_tail",
+        "role": "B",
+        "start": 8.2,
+        "end": 9.4,
+        "kind": "R",
+        "result": {
+          "verified": true,
+          "transcript": "啊",
+          "events": []
+        }
+      }
+    ],
+    "observations": {
+      "A_reference_first": {
+        "evidence": "A 说完 kids too 后短促的他人 Oh。短窗 Qwen 听评定位到句尾。与 B 的录音按原始近讲时间映射后相关系数 0.722，支持串音来自 B。参考 A 已存在该声音。 后段重复 kindergarten / 感叹声也被多次报告为他人声音。原录音中此时间窗与第三人发言重叠，精确词与身份存在分歧，列出疑似残留，避免重复扣分。"
+      },
+      "B_reference_first": {
+        "evidence": "两条完整发言的内容、音色和处理伪影各获满档。短窗不同说话人判断存在冲突，未确认额外串音。"
+      }
     },
     "submission_sha256": {
       "A": "50863dc85fc42fcae6ee5c3aacec6ddfbd1d601fd713bd4394b3f4ad6bc709c4",
       "B": "6bfeffb07f8bb8ba6c6c108dbb63185a4b9e01164bb3e5b3d0d4a1102237c415"
-    }
+    },
+    "limitations": [
+      "短窗多附件对照漏掉人工插话且曾在静音中假报，单附件干净及0.5秒注入对照通过。对短窗的实际串音必须复核来源时轴及波形。",
+      "10秒附近的附加人声有多份听评支持，但词与身份有分歧。B轨的 Oh wonderful 为该人物自身发言。"
+    ]
   },
   "delivery": {
     "mux_vs_voice_A_snr_db": 37.35398252691449,
@@ -218,5 +775,6 @@
     "submission.json": "a463535be4479a7a15f2ebbae85b94d423fd7dc27ccd968083ae7eef16a55c5e",
     "voice_A.wav": "50863dc85fc42fcae6ee5c3aacec6ddfbd1d601fd713bd4394b3f4ad6bc709c4",
     "voice_B.wav": "6bfeffb07f8bb8ba6c6c108dbb63185a4b9e01164bb3e5b3d0d4a1102237c415"
-  }
+  },
+  "previous_listening_points": 8
 }
