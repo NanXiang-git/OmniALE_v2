@@ -1,119 +1,272 @@
 {
   "rows": [
     {
+      "score": 0.0,
+      "maximum": 8.0,
+      "lower": 0.0,
+      "upper": 0.0,
       "id": "E_words",
-      "label": "英文词序列准确性",
-      "score": 7.822222222222221,
-      "maximum": 8.0
+      "label": "瑞典语词序列准确性"
     },
     {
+      "score": null,
+      "maximum": 4.0,
+      "lower": 2.322580645161291,
+      "upper": 2.6129032258064524,
       "id": "E_events",
-      "label": "源事件覆盖与粗定位",
-      "score": 3.7499999999999964,
-      "maximum": 4.0
+      "label": "源事件覆盖与粗定位"
     },
     {
+      "score": null,
+      "maximum": 3.0,
+      "lower": 1.2162162162162178,
+      "upper": 1.8851351351351378,
       "id": "E_roles",
-      "label": "源说话人/声音实例归属",
-      "score": 2.8125000000000013,
-      "maximum": 3.0
+      "label": "源说话人/声音实例归属"
     },
     {
+      "score": null,
+      "maximum": 5.0,
+      "lower": 1.6733870967741946,
+      "upper": 2.399193548387099,
       "id": "E_meaning",
-      "label": "源语义与关键语气识别",
-      "score": 4.625000000000002,
-      "maximum": 5.0
+      "label": "源语义与关键语气识别"
     },
     {
+      "score": null,
+      "maximum": 4.5,
+      "lower": 1.422794117647058,
+      "upper": 2.001838235294118,
       "id": "T_meaning",
-      "label": "中文意义准确完整",
-      "score": 4.499999999999999,
-      "maximum": 4.5
+      "label": "中文意义准确完整"
     },
     {
+      "score": null,
+      "maximum": 3.0,
+      "lower": 2.419354838709673,
+      "upper": 2.8306451612903176,
       "id": "T_natural",
-      "label": "中文自然度",
-      "score": 3.0000000000000013,
-      "maximum": 3.0
+      "label": "中文自然度"
     },
     {
+      "score": null,
+      "maximum": 1.5,
+      "lower": 1.0403225806451606,
+      "upper": 1.3064516129032244,
       "id": "T_terms",
-      "label": "术语和称呼一致",
-      "score": 1.4999999999999996,
-      "maximum": 1.5
+      "label": "术语和称呼一致"
     },
     {
+      "score": null,
+      "maximum": 1.0,
+      "lower": 0.5483870967741937,
+      "upper": 0.6451612903225808,
       "id": "T_style",
-      "label": "语体与语用功能",
-      "score": 1.0,
-      "maximum": 1.0
+      "label": "语体与语用功能"
     },
     {
+      "score": null,
+      "maximum": 25,
+      "lower": 0.31906906906906896,
+      "upper": 5.618196321321324,
       "id": "A_identity",
-      "label": "原人物音色与身份保持",
-      "score": 21.527777777777782,
-      "maximum": 25
+      "label": "原人物音色与身份保持"
     },
     {
+      "score": null,
+      "maximum": 15,
+      "lower": 1.25,
+      "upper": 10.0,
       "id": "A_stable",
-      "label": "同人物跨段声音一致性",
-      "score": 7.5,
-      "maximum": 15
+      "label": "同人物跨段声音一致性"
     },
     {
+      "score": null,
+      "maximum": 15,
+      "lower": 1.451612903225807,
+      "upper": 3.145161290322579,
       "id": "A_prosody",
-      "label": "情绪语气与表演保持",
-      "score": 15.000000000000004,
-      "maximum": 15
+      "label": "情绪语气与表演保持"
     },
     {
+      "score": null,
+      "maximum": 10,
+      "lower": 4.816176470588234,
+      "upper": 5.477941176470584,
       "id": "A_content",
-      "label": "实际中文内容忠实度",
-      "score": 9.791666666666671,
-      "maximum": 10
+      "label": "实际中文内容忠实度"
     },
     {
+      "score": null,
+      "maximum": 5,
+      "lower": 3.758064516129034,
+      "upper": 3.951612903225811,
       "id": "A_quality",
-      "label": "自然度清晰度与双版本混音",
-      "score": 5.000000000000005,
-      "maximum": 5
+      "label": "自然度清晰度与双版本混音"
     },
     {
-      "id": "V_frames",
-      "label": "原画面内容与顺序",
       "score": 0.5999999999999999,
-      "maximum": 0.6
+      "maximum": 0.6,
+      "lower": 0.5999999999999999,
+      "upper": 0.5999999999999999,
+      "id": "V_frames",
+      "label": "原画面内容与顺序"
     },
     {
-      "id": "V_timeline",
-      "label": "时间线完整性",
       "score": 0.2,
-      "maximum": 0.2
+      "maximum": 0.2,
+      "lower": 0.2,
+      "upper": 0.2,
+      "id": "V_timeline",
+      "label": "时间线完整性"
     },
     {
+      "score": null,
+      "maximum": 0.2,
+      "lower": 0.10860215053763457,
+      "upper": 0.16774193548387106,
       "id": "V_display",
-      "label": "声画时机与字幕呈现",
-      "score": 0.175,
-      "maximum": 0.2
+      "label": "声画时机与字幕呈现"
     }
   ],
   "groups": {
     "E": {
       "maximum": 20,
-      "score": 19.00972222222222
+      "lower": 5.212183958151703,
+      "upper": 6.897231909328689,
+      "id": "E",
+      "label": "E"
     },
     "T": {
       "maximum": 10,
-      "score": 10.0
+      "lower": 5.430858633776086,
+      "upper": 6.784096299810241,
+      "id": "T",
+      "label": "T"
     },
     "A": {
       "maximum": 70,
-      "score": 58.819444444444464
+      "lower": 11.594922959012143,
+      "upper": 28.1929116913403,
+      "id": "A",
+      "label": "A"
+    },
+    "V": {
+      "maximum": 1,
+      "lower": 0.9086021505376345,
+      "upper": 0.967741935483871,
+      "id": "V",
+      "label": "V"
     }
   },
-  "coefficient": 0.9749999999999999,
-  "core": 81.2540830761317,
+  "coefficient": null,
   "gates": {
+    "source_event_accounting": {
+      "pass": false,
+      "evidence": {
+        "accounted": 1,
+        "required": 62,
+        "invalid_events": [
+          "E001",
+          "E002",
+          "E003",
+          "E004",
+          "E005",
+          "E006",
+          "E007",
+          "E008",
+          "E009",
+          "E010",
+          "E011",
+          "E012",
+          "E013",
+          "E014",
+          "E015",
+          "E016",
+          "E017",
+          "E018",
+          "E019",
+          "E020",
+          "E021",
+          "E022",
+          "E023",
+          "E024",
+          "E025",
+          "E026",
+          "E027",
+          "E028",
+          "E029",
+          "E030",
+          "E031",
+          "E032",
+          "E033",
+          "E034",
+          "E035",
+          "E036",
+          "E037",
+          "E038",
+          "E039",
+          "E040",
+          "E041",
+          "E042",
+          "E043",
+          "E044",
+          "E045",
+          "E046",
+          "E047",
+          "E048",
+          "E049",
+          "E050",
+          "E051",
+          "E052",
+          "E053",
+          "E054",
+          "E055",
+          "E056",
+          "E057",
+          "E058",
+          "E059",
+          "E060",
+          "E061",
+          "E062",
+          "E063",
+          "E064",
+          "E065",
+          "E066",
+          "E067",
+          "E068",
+          "E069",
+          "E070",
+          "E071",
+          "E072",
+          "E073",
+          "E074",
+          "E075",
+          "E077",
+          "E078",
+          "E079",
+          "E080",
+          "E081",
+          "E082",
+          "E083",
+          "E084",
+          "E085"
+        ],
+        "unsplit_mixed_references": []
+      }
+    },
+    "role_voice_inside_plan": {
+      "pass": false,
+      "evidence": {
+        "outside_fraction_by_role": {
+          "METTE": 0.19221122112211164,
+          "HARALD": 0.002631578947367802,
+          "ELSIE": 0.12327044025157029,
+          "MARTA": 0.3026196928635996
+        },
+        "maximum": 0.03
+      }
+    },
     "continuity_ledger": {
       "pass": null,
       "evidence": {
@@ -122,18 +275,76 @@
         "structural_issues": [],
         "private_subtitle_window_diagnostic": [
           {
-            "challenge_id": "C03",
+            "challenge_id": "C01",
             "source_ids_without_private_subtitle_window_overlap": [
-              "S004"
+              "S004",
+              "S009"
             ],
             "submitted_evidence_intervals": [
               [
-                12.42,
-                15.56
+                11.16,
+                13.44
               ],
               [
-                16.65,
-                19.88
+                16.28,
+                17.8
+              ],
+              [
+                25.82,
+                28.24
+              ],
+              [
+                37.06,
+                41.84
+              ]
+            ]
+          },
+          {
+            "challenge_id": "C02",
+            "source_ids_without_private_subtitle_window_overlap": [
+              "S013",
+              "S014"
+            ],
+            "submitted_evidence_intervals": [
+              [
+                45.88,
+                46.44
+              ]
+            ]
+          },
+          {
+            "challenge_id": "C03",
+            "source_ids_without_private_subtitle_window_overlap": [
+              "S016"
+            ],
+            "submitted_evidence_intervals": [
+              [
+                102.26,
+                110.46
+              ],
+              [
+                116.02,
+                119.78
+              ],
+              [
+                144.92,
+                147.86
+              ]
+            ]
+          },
+          {
+            "challenge_id": "C05",
+            "source_ids_without_private_subtitle_window_overlap": [
+              "S035"
+            ],
+            "submitted_evidence_intervals": [
+              [
+                340.08,
+                348.14
+              ],
+              [
+                364.38,
+                368.82
               ]
             ]
           }
@@ -142,20 +353,3075 @@
           "pass": false,
           "evidence": {
             "passed": false,
-            "valid_records": 7,
+            "valid_records": 4,
             "expected_records": 8,
             "issues": [
-              "C03"
+              "C01",
+              "C02",
+              "C03",
+              "C05"
             ]
           }
         }
       }
     },
+    "subtitle_layout": {
+      "pass": false,
+      "evidence": {
+        "compliant": 162,
+        "total": 171
+      }
+    },
     "offline_rebuild": {
       "pass": false,
       "evidence": {
-        "exit": null,
-        "output_present": false
+        "exit": 0,
+        "output_present": true,
+        "video_mae": 0.0,
+        "audio_correlation": 0.0892025250030563
+      }
+    },
+    "critical_S004.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S004.A_content.critical",
+        "answer": "no",
+        "reason": "源句包含“十年”与“一晚开花后死亡”，中文仅译出前半部分，后半关键信息缺失。",
+        "source_intervals": [
+          [
+            8.96,
+            10.64
+          ]
+        ],
+        "output_intervals": [
+          [
+            8.18,
+            9.54
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S004.A_content.critical",
+            "answer": "no",
+            "reason": "源句包含“十年”与“一晚开花后死亡”，中文仅译出前半部分，后半关键信息缺失。",
+            "source_intervals": [
+              [
+                8.96,
+                10.64
+              ]
+            ],
+            "output_intervals": [
+              [
+                8.18,
+                9.54
+              ]
+            ]
+          },
+          {
+            "id": "S004.A_content.critical",
+            "answer": "no",
+            "reason": "源句含“十年”与“一晚”，中文仅译出“要等十年”，漏掉后半句关键信息。",
+            "source_intervals": [
+              [
+                8.96,
+                10.64
+              ]
+            ],
+            "output_intervals": [
+              [
+                8.18,
+                9.54
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S008.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S008.A_content.critical",
+        "answer": "no",
+        "reason": "源为疑问句，译文变陈述且人称由你改为他，语义完全反转。",
+        "source_intervals": [
+          [
+            25.96,
+            29.28
+          ]
+        ],
+        "output_intervals": [
+          [
+            25.82,
+            28.24
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S008.A_content.critical",
+            "answer": "no",
+            "reason": "源为疑问句，译文变陈述且人称由你改为他，语义完全反转。",
+            "source_intervals": [
+              [
+                25.96,
+                29.28
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.82,
+                28.24
+              ]
+            ]
+          },
+          {
+            "id": "S008.A_content.critical",
+            "answer": "no",
+            "reason": "源为疑问句，译文变陈述句且将第二人称改第三人称，语义反转。",
+            "source_intervals": [
+              [
+                25.96,
+                29.28
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.71,
+                29.53
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S009.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S009.A_content.critical",
+        "answer": "no",
+        "reason": "源句意为“差不多二十四”，中文错译为“最早种下”，擅自补全错误信息。",
+        "source_intervals": [
+          [
+            30.92,
+            34.16
+          ]
+        ],
+        "output_intervals": [
+          [
+            30.36,
+            33.1
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S009.A_content.critical",
+            "answer": "no",
+            "reason": "源句意为“差不多二十四”，中文错译为“最早种下”，擅自补全错误信息。",
+            "source_intervals": [
+              [
+                30.92,
+                34.16
+              ]
+            ],
+            "output_intervals": [
+              [
+                30.36,
+                33.1
+              ]
+            ]
+          },
+          {
+            "id": "S009.A_content.critical",
+            "answer": "no",
+            "reason": "实际发音将“不同植物”错读为“最早种下”，语义被篡改。",
+            "source_intervals": [
+              [
+                30.92,
+                34.16
+              ]
+            ],
+            "output_intervals": [
+              [
+                30.36,
+                33.1
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S012.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S012.A_content.critical",
+        "answer": "no",
+        "reason": "源句“我不这么觉得”被篡改为反问“你真这么觉得”，语义完全反转。",
+        "source_intervals": [
+          [
+            46.2,
+            47.96
+          ]
+        ],
+        "output_intervals": [
+          [
+            45.88,
+            46.44
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S012.A_content.critical",
+            "answer": "no",
+            "reason": "源句“我不这么觉得”被篡改为反问“你真这么觉得”，语义完全反转。",
+            "source_intervals": [
+              [
+                46.2,
+                47.96
+              ]
+            ],
+            "output_intervals": [
+              [
+                45.88,
+                46.44
+              ]
+            ]
+          },
+          {
+            "id": "S012.A_content.critical",
+            "answer": "no",
+            "reason": "源句为“我不这么觉得”，译文误作反问“你真这么觉得？”，语义完全反转。",
+            "source_intervals": [
+              [
+                44.16,
+                47.96
+              ]
+            ],
+            "output_intervals": [
+              [
+                44.08,
+                46.44
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S012.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S012.V_display.burned",
+        "answer": "no",
+        "reason": "影院版画面只显示你真这么觉得，缺少对应瑞典语字幕",
+        "source_intervals": [
+          [
+            46.553,
+            46.554
+          ]
+        ],
+        "output_intervals": [
+          [
+            46.553,
+            46.554
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S012.V_display.burned",
+            "answer": "no",
+            "reason": "影院版画面只显示你真这么觉得，缺少对应瑞典语字幕",
+            "source_intervals": [
+              [
+                46.553,
+                46.554
+              ]
+            ],
+            "output_intervals": [
+              [
+                46.553,
+                46.554
+              ]
+            ]
+          },
+          {
+            "id": "S012.V_display.burned",
+            "answer": "pending",
+            "reason": "Judge transport/format/evidence failure: Expecting ',' delimiter: line 1 column 273 (char 272)",
+            "source_intervals": [],
+            "output_intervals": []
+          },
+          {
+            "id": "S012.V_display.burned",
+            "answer": "no",
+            "reason": "影院帧只显示你真这么觉得，画面中缺少对应瑞文字幕",
+            "source_intervals": [
+              [
+                46.2,
+                46.553
+              ]
+            ],
+            "output_intervals": [
+              [
+                46.2,
+                46.553
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S014.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S014.A_content.critical",
+        "answer": "no",
+        "reason": "源句为肯定语气“ja”，提交译为否定“不要”，语义完全反转。",
+        "source_intervals": [
+          [
+            67.4,
+            69.4
+          ]
+        ],
+        "output_intervals": [
+          [
+            71.22,
+            74.02
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S014.A_content.critical",
+            "answer": "no",
+            "reason": "源句为肯定语气“ja”，提交译为否定“不要”，语义完全反转。",
+            "source_intervals": [
+              [
+                67.4,
+                69.4
+              ]
+            ],
+            "output_intervals": [
+              [
+                71.22,
+                74.02
+              ]
+            ]
+          },
+          {
+            "id": "S014.A_content.critical",
+            "answer": "no",
+            "reason": "源句为肯定语气“Jävla... ja”，被错译为否定含义“不要”。",
+            "source_intervals": [
+              [
+                67.4,
+                69.4
+              ]
+            ],
+            "output_intervals": [
+              [
+                71.22,
+                74.02
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S016.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S016.A_content.spoken",
+        "answer": "no",
+        "reason": "中文音频实际说出的是“记住”和“说话”，并未包含源句的核心意思（问候与呼唤名字）。",
+        "source_intervals": [
+          [
+            92.06,
+            93.891
+          ]
+        ],
+        "output_intervals": [
+          [
+            90.82,
+            94.94
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S016.A_content.spoken",
+            "answer": "no",
+            "reason": "中文音频实际说出的是“记住”和“说话”，并未包含源句的核心意思（问候与呼唤名字）。",
+            "source_intervals": [
+              [
+                92.06,
+                93.891
+              ]
+            ],
+            "output_intervals": [
+              [
+                90.82,
+                94.94
+              ]
+            ]
+          },
+          {
+            "id": "S016.A_content.spoken",
+            "answer": "no",
+            "reason": "音频中实际发出的是错误的中文内容，未包含源句的核心意思（问候）。",
+            "source_intervals": [
+              [
+                92.06,
+                93.89
+              ]
+            ],
+            "output_intervals": [
+              [
+                91.51,
+                94.97
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S016.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S016.A_content.critical",
+        "answer": "no",
+        "reason": "源句为“早安！玛尔塔”，提交内容却译为“记住”和“说话”，完全丢失了原意。",
+        "source_intervals": [
+          [
+            92.06,
+            93.891
+          ]
+        ],
+        "output_intervals": [
+          [
+            90.82,
+            94.94
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S016.A_content.critical",
+            "answer": "no",
+            "reason": "源句为“早安！玛尔塔”，提交内容却译为“记住”和“说话”，完全丢失了原意。",
+            "source_intervals": [
+              [
+                92.06,
+                93.891
+              ]
+            ],
+            "output_intervals": [
+              [
+                90.82,
+                94.94
+              ]
+            ]
+          },
+          {
+            "id": "S016.A_content.critical",
+            "answer": "no",
+            "reason": "源句为问候语“早安！玛尔塔”，中文却译为指令“记住”和“说话”，语义完全错误。",
+            "source_intervals": [
+              [
+                92.06,
+                93.89
+              ]
+            ],
+            "output_intervals": [
+              [
+                91.51,
+                94.97
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S017.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S017.V_display.burned",
+        "answer": "no",
+        "reason": "影院版问候段的护工侧脸采样帧未显示中瑞字幕",
+        "source_intervals": [
+          [
+            106.367,
+            106.368
+          ]
+        ],
+        "output_intervals": [
+          [
+            106.367,
+            106.368
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S017.V_display.burned",
+            "answer": "no",
+            "reason": "影院版问候段的护工侧脸采样帧未显示中瑞字幕",
+            "source_intervals": [
+              [
+                106.367,
+                106.368
+              ]
+            ],
+            "output_intervals": [
+              [
+                106.367,
+                106.368
+              ]
+            ]
+          },
+          {
+            "id": "S017.V_display.burned",
+            "answer": "pending",
+            "reason": "影院抽帧未见字幕，两次问候的字幕呈现均无法核对",
+            "source_intervals": [],
+            "output_intervals": []
+          },
+          {
+            "id": "S017.V_display.burned",
+            "answer": "no",
+            "reason": "影院版在问候字幕参考时段的采样帧缺少中瑞两行字幕",
+            "source_intervals": [
+              [
+                106.367,
+                106.368
+              ]
+            ],
+            "output_intervals": [
+              [
+                106.367,
+                106.368
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S019.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S019.A_content.spoken",
+        "answer": "no",
+        "reason": "源角色的核心反问内容未被配音演绎，仅有前半句对话，属于实质性遗漏。",
+        "source_intervals": [
+          [
+            117.22,
+            123.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            116.02,
+            119.78
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S019.A_content.spoken",
+            "answer": "no",
+            "reason": "源角色的核心反问内容未被配音演绎，仅有前半句对话，属于实质性遗漏。",
+            "source_intervals": [
+              [
+                117.22,
+                123.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                119.78
+              ]
+            ]
+          },
+          {
+            "id": "S019.A_content.spoken",
+            "answer": "no",
+            "reason": "仅听到前半句翻译，核心反问未实际发声",
+            "source_intervals": [
+              [
+                119.3,
+                123.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                119.0,
+                119.78
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S019.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S019.A_content.critical",
+        "answer": "no",
+        "reason": "严重漏译：源句后半部分“我该感到害怕还是荣幸？”未在音频中出现，导致信息缺失。",
+        "source_intervals": [
+          [
+            117.22,
+            123.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            116.02,
+            119.78
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S019.A_content.critical",
+            "answer": "no",
+            "reason": "严重漏译：源句后半部分“我该感到害怕还是荣幸？”未在音频中出现，导致信息缺失。",
+            "source_intervals": [
+              [
+                117.22,
+                123.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                119.78
+              ]
+            ]
+          },
+          {
+            "id": "S019.A_content.critical",
+            "answer": "no",
+            "reason": "源句后半部分反问内容在输出中完全缺失",
+            "source_intervals": [
+              [
+                119.3,
+                123.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                119.0,
+                119.78
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S019.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S019.V_display.burned",
+        "answer": "no",
+        "reason": "影院版护工微笑回应的采样帧未显示中瑞字幕",
+        "source_intervals": [
+          [
+            120.247,
+            120.248
+          ]
+        ],
+        "output_intervals": [
+          [
+            120.247,
+            120.248
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S019.V_display.burned",
+            "answer": "no",
+            "reason": "影院版护工微笑回应的采样帧未显示中瑞字幕",
+            "source_intervals": [
+              [
+                120.247,
+                120.248
+              ]
+            ],
+            "output_intervals": [
+              [
+                120.247,
+                120.248
+              ]
+            ]
+          },
+          {
+            "id": "S019.V_display.burned",
+            "answer": "pending",
+            "reason": "影院在护工微笑处的抽帧无字幕，未采到两轮对白的字幕",
+            "source_intervals": [],
+            "output_intervals": []
+          },
+          {
+            "id": "S019.V_display.burned",
+            "answer": "no",
+            "reason": "影院版在梦境对话字幕参考时段的采样帧缺少中瑞两行字幕",
+            "source_intervals": [
+              [
+                120.247,
+                120.248
+              ]
+            ],
+            "output_intervals": [
+              [
+                120.247,
+                120.248
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S023.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S023.A_content.spoken",
+        "answer": "no",
+        "reason": "老年女性的拒绝理由（我很干净）未在音频中实际播出。",
+        "source_intervals": [
+          [
+            145.72,
+            149.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            144.92,
+            150.0
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S023.A_content.spoken",
+            "answer": "no",
+            "reason": "老年女性的拒绝理由（我很干净）未在音频中实际播出。",
+            "source_intervals": [
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          },
+          {
+            "id": "S023.A_content.spoken",
+            "answer": "no",
+            "reason": "关键台词未被配音，仅有短促的拒绝和无关感叹。",
+            "source_intervals": [
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S023.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S023.A_content.critical",
+        "answer": "no",
+        "reason": "严重漏译：源句包含“我很干净”，输出完全缺失该关键信息。",
+        "source_intervals": [
+          [
+            145.72,
+            149.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            144.92,
+            150.0
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S023.A_content.critical",
+            "answer": "no",
+            "reason": "严重漏译：源句包含“我很干净”，输出完全缺失该关键信息。",
+            "source_intervals": [
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          },
+          {
+            "id": "S023.A_content.critical",
+            "answer": "no",
+            "reason": "缺失“我很干净”的核心回应，导致对话逻辑断裂。",
+            "source_intervals": [
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S024.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S024.A_content.critical",
+        "answer": "no",
+        "reason": "漏译了后半段条件承诺内容，导致语义不完整。",
+        "source_intervals": [
+          [
+            246.88,
+            249.76
+          ]
+        ],
+        "output_intervals": [
+          [
+            246.82,
+            254.52
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S024.A_content.critical",
+            "answer": "no",
+            "reason": "漏译了后半段条件承诺内容，导致语义不完整。",
+            "source_intervals": [
+              [
+                246.88,
+                249.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                246.82,
+                254.52
+              ]
+            ]
+          },
+          {
+            "id": "S024.A_content.critical",
+            "answer": "yes",
+            "reason": "实际配音完整保留了否定、关系及条件，未反转或擅自补全信息。",
+            "source_intervals": [
+              [
+                246.88,
+                249.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                246.82,
+                254.52
+              ]
+            ]
+          },
+          {
+            "id": "S024.A_content.critical",
+            "answer": "no",
+            "reason": "实际音频只读了前半句指责，漏读后半句条件承诺内容。",
+            "source_intervals": [
+              [
+                246.88,
+                249.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                246.82,
+                254.52
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S028.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S028.V_display.burned",
+        "answer": "no",
+        "reason": "影院版在该句对应的两帧中均未显示中文或瑞典语字幕",
+        "source_intervals": [
+          [
+            270.5,
+            272.0
+          ]
+        ],
+        "output_intervals": [
+          [
+            270.5,
+            272.0
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S028.V_display.burned",
+            "answer": "no",
+            "reason": "影院版在该句对应的两帧中均未显示中文或瑞典语字幕",
+            "source_intervals": [
+              [
+                270.5,
+                272.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                270.5,
+                272.0
+              ]
+            ]
+          },
+          {
+            "id": "S028.V_display.burned",
+            "answer": "no",
+            "reason": "影院版在该句时段内的两帧均未显示中文或瑞典语字幕",
+            "source_intervals": [
+              [
+                270.5,
+                272.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                270.5,
+                272.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S030.A_quality.mobile": {
+      "pass": false,
+      "evidence": {
+        "id": "S030.A_quality.mobile",
+        "answer": "no",
+        "reason": "手机单声道版同样使用老年男声配年轻女角，性别年龄完全不符。",
+        "source_intervals": [
+          [
+            318.44,
+            320.44
+          ]
+        ],
+        "output_intervals": [
+          [
+            317.42,
+            318.82
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S030.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机单声道版同样使用老年男声配年轻女角，性别年龄完全不符。",
+            "source_intervals": [
+              [
+                318.44,
+                320.44
+              ]
+            ],
+            "output_intervals": [
+              [
+                317.42,
+                318.82
+              ]
+            ]
+          },
+          {
+            "id": "S030.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版同样存在“哪儿”读音含混问题，短句清晰度受损。",
+            "source_intervals": [
+              [
+                318.44,
+                320.44
+              ]
+            ],
+            "output_intervals": [
+              [
+                317.42,
+                318.82
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S031.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S031.A_content.spoken",
+        "answer": "no",
+        "reason": "核心意思虽已发声，但因翻译错误导致传达的信息与源意完全相反。",
+        "source_intervals": [
+          [
+            340.24,
+            345.78
+          ]
+        ],
+        "output_intervals": [
+          [
+            340.08,
+            345.64
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S031.A_content.spoken",
+            "answer": "no",
+            "reason": "核心意思虽已发声，但因翻译错误导致传达的信息与源意完全相反。",
+            "source_intervals": [
+              [
+                340.24,
+                345.78
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.08,
+                345.64
+              ]
+            ]
+          },
+          {
+            "id": "S031.A_content.spoken",
+            "answer": "no",
+            "reason": "园丁台词被错误翻译并配音为关于进食的内容，核心信息缺失。",
+            "source_intervals": [
+              [
+                340.24,
+                345.78
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.08,
+                345.64
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S031.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S031.A_content.critical",
+        "answer": "no",
+        "reason": "源句“没怎么睡”被错译为“吃得不多”，语义发生根本性反转错误。",
+        "source_intervals": [
+          [
+            340.24,
+            345.78
+          ]
+        ],
+        "output_intervals": [
+          [
+            340.08,
+            345.64
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S031.A_content.critical",
+            "answer": "no",
+            "reason": "源句“没怎么睡”被错译为“吃得不多”，语义发生根本性反转错误。",
+            "source_intervals": [
+              [
+                340.24,
+                345.78
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.08,
+                345.64
+              ]
+            ]
+          },
+          {
+            "id": "S031.A_content.critical",
+            "answer": "no",
+            "reason": "源句意为“没怎么睡”，译文错译为“吃得不多”，语义完全反转。",
+            "source_intervals": [
+              [
+                340.24,
+                345.78
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.08,
+                345.64
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S032.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S032.A_content.spoken",
+        "answer": "no",
+        "reason": "核心意思错译导致信息失真，且Mette的回应也变成无关内容。",
+        "source_intervals": [
+          [
+            345.2,
+            348.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            344.76,
+            348.14
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S032.A_content.spoken",
+            "answer": "yes",
+            "reason": "核心意思已实际发声，虽翻译错误但非仅停留在文本。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          },
+          {
+            "id": "S032.A_content.spoken",
+            "answer": "no",
+            "reason": "核心意思错译导致信息失真，且Mette的回应也变成无关内容。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          },
+          {
+            "id": "S032.A_content.spoken",
+            "answer": "no",
+            "reason": "核心意思缺失：园丁的回答被译错，导致关键信息不可听。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S032.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S032.A_content.critical",
+        "answer": "no",
+        "reason": "源意“没怎么睡”被错译为“吃得不多”，语义严重反转。",
+        "source_intervals": [
+          [
+            345.2,
+            348.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            344.76,
+            348.14
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S032.A_content.critical",
+            "answer": "no",
+            "reason": "源意“没怎么睡”被错译为“吃得不多”，语义严重反转。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          },
+          {
+            "id": "S032.A_content.critical",
+            "answer": "no",
+            "reason": "语义严重错误：源意“没怎么睡”被译为“吃得不多”，逻辑不通。",
+            "source_intervals": [
+              [
+                345.2,
+                346.8
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                345.64
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S032.A_quality.mobile": {
+      "pass": false,
+      "evidence": {
+        "id": "S032.A_quality.mobile",
+        "answer": "no",
+        "reason": "手机版同样存在严重译文错误（把sleep译成eat），短句不可正确理解。",
+        "source_intervals": [
+          [
+            345.2,
+            348.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            344.76,
+            348.14
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S032.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版同样存在严重译文错误（把sleep译成eat），短句不可正确理解。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          },
+          {
+            "id": "S032.A_quality.mobile",
+            "answer": "yes",
+            "reason": "手机单声道版保留完整中文及必要音效短句依然可懂。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                344.76,
+                348.14
+              ]
+            ]
+          },
+          {
+            "id": "S032.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版同样存在严重误译，且未保留必要环境音效。",
+            "source_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                345.2,
+                348.32
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S033.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S033.A_content.spoken",
+        "answer": "no",
+        "reason": "对应时间段内无任何中文语音发声，核心意思未能实际可听",
+        "source_intervals": [
+          [
+            360.04,
+            365.12
+          ]
+        ],
+        "output_intervals": [
+          [
+            358.04,
+            364.38
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S033.A_content.spoken",
+            "answer": "no",
+            "reason": "对应时间段内无任何中文语音发声，核心意思未能实际可听",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                358.04,
+                364.38
+              ]
+            ]
+          },
+          {
+            "id": "S033.A_content.spoken",
+            "answer": "no",
+            "reason": "对应时间段内无中文语音发声，核心意思不可听。",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S033.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S033.A_content.critical",
+        "answer": "no",
+        "reason": "源句Mette的调侃台词在输出中完全缺失，未保留任何语义内容",
+        "source_intervals": [
+          [
+            360.04,
+            365.12
+          ]
+        ],
+        "output_intervals": [
+          [
+            358.04,
+            364.38
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S033.A_content.critical",
+            "answer": "no",
+            "reason": "源句Mette的调侃台词在输出中完全缺失，未保留任何语义内容",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                358.04,
+                364.38
+              ]
+            ]
+          },
+          {
+            "id": "S033.A_content.critical",
+            "answer": "no",
+            "reason": "源句Mette的两句调侃台词在输出中完全缺失，未保留任何语义内容。",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S033.A_quality.mobile": {
+      "pass": false,
+      "evidence": {
+        "id": "S033.A_quality.mobile",
+        "answer": "no",
+        "reason": "手机单声道版同样缺失该段源句的中文配音",
+        "source_intervals": [
+          [
+            360.04,
+            365.12
+          ]
+        ],
+        "output_intervals": [
+          [
+            360.04,
+            365.12
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S033.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机单声道版同样缺失该段源句的中文配音",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ]
+          },
+          {
+            "id": "S033.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机单声道版同样存在严重错配，将Mette台词配给园丁且内容错误，无法理解原意。",
+            "source_intervals": [
+              [
+                360.04,
+                365.12
+              ]
+            ],
+            "output_intervals": [
+              [
+                364.38,
+                365.48
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S033.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S033.V_display.burned",
+        "answer": "no",
+        "reason": "影院版胡须男子反应镜头的抽帧未见中文或瑞典语字幕",
+        "source_intervals": [
+          [
+            360.04,
+            363.127
+          ]
+        ],
+        "output_intervals": [
+          [
+            360.04,
+            363.127
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S033.V_display.burned",
+            "answer": "pending",
+            "reason": "Judge transport/format/evidence failure: {\"S033.V_display.burned\": \"Invalid time interval\", \"S033.V_display.safe_area\": \"Invalid time interval\", \"S036.V_display.safe_area\": \"Invalid time interval\"}",
+            "source_intervals": [],
+            "output_intervals": []
+          },
+          {
+            "id": "S033.V_display.burned",
+            "answer": "no",
+            "reason": "影院版胡须男子反应镜头的抽帧未见中文或瑞典语字幕",
+            "source_intervals": [
+              [
+                360.04,
+                363.127
+              ]
+            ],
+            "output_intervals": [
+              [
+                360.04,
+                363.127
+              ]
+            ]
+          },
+          {
+            "id": "S033.V_display.burned",
+            "answer": "no",
+            "reason": "大胡子男子的反应镜头中，影院版未显示中瑞字幕",
+            "source_intervals": [
+              [
+                360.04,
+                363.127
+              ]
+            ],
+            "output_intervals": [
+              [
+                360.04,
+                363.127
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S034.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S034.A_content.critical",
+        "answer": "no",
+        "reason": "将“我猜是这样”错译为“我不知道”，语义发生根本反转",
+        "source_intervals": [
+          [
+            367.0,
+            369.44
+          ]
+        ],
+        "output_intervals": [
+          [
+            365.96,
+            366.68
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S034.A_content.critical",
+            "answer": "no",
+            "reason": "将“我猜是这样”错译为“我不知道”，语义发生根本反转",
+            "source_intervals": [
+              [
+                367.0,
+                369.44
+              ]
+            ],
+            "output_intervals": [
+              [
+                365.96,
+                366.68
+              ]
+            ]
+          },
+          {
+            "id": "S034.A_content.critical",
+            "answer": "no",
+            "reason": "源句“Ja, jag misstänkte det”被译为“我不知道”，语义反转；后续问答也出现张冠李戴。",
+            "source_intervals": [
+              [
+                365.6,
+                369.44
+              ]
+            ],
+            "output_intervals": [
+              [
+                365.96,
+                370.32
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S035.A_content.spoken": {
+      "pass": false,
+      "evidence": {
+        "id": "S035.A_content.spoken",
+        "answer": "no",
+        "reason": "虽然发出了声音，但内容是错误的“我挨了一脚”，未能传达源句真实含义。",
+        "source_intervals": [
+          [
+            369.6,
+            372.84
+          ]
+        ],
+        "output_intervals": [
+          [
+            369.6,
+            372.84
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S035.A_content.spoken",
+            "answer": "no",
+            "reason": "虽然发出了声音，但内容是错误的“我挨了一脚”，未能传达源句真实含义。",
+            "source_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ]
+          },
+          {
+            "id": "S035.A_content.spoken",
+            "answer": "no",
+            "reason": "源中应发声的核心意思未完整可听，实际输出变成了不相关的短句“我挨了一脚”。",
+            "source_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                369.3,
+                370.32
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S035.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S035.A_content.critical",
+        "answer": "no",
+        "reason": "源意“谁在森林里发现你”，译文错译为“我挨了一脚”，核心语义完全错误。",
+        "source_intervals": [
+          [
+            369.6,
+            372.84
+          ]
+        ],
+        "output_intervals": [
+          [
+            369.6,
+            372.84
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S035.A_content.critical",
+            "answer": "no",
+            "reason": "源意“谁在森林里发现你”，译文错译为“我挨了一脚”，核心语义完全错误。",
+            "source_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ]
+          },
+          {
+            "id": "S035.A_content.critical",
+            "answer": "no",
+            "reason": "源句为Mette询问对方在森林被谁发现，中文却由另一角色回答“我挨了一脚”，语义完全反转且擅自补全。",
+            "source_intervals": [
+              [
+                369.6,
+                372.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                369.3,
+                370.32
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S037.A_quality.mobile": {
+      "pass": false,
+      "evidence": {
+        "id": "S037.A_quality.mobile",
+        "answer": "no",
+        "reason": "手机版同样存在误译问题，且单声道下合成音更显突兀难懂。",
+        "source_intervals": [
+          [
+            417.8,
+            421.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            418.0,
+            420.8
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S037.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版同样存在误译问题，且单声道下合成音更显突兀难懂。",
+            "source_intervals": [
+              [
+                417.8,
+                421.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                418.0,
+                420.8
+              ]
+            ]
+          },
+          {
+            "id": "S037.A_quality.mobile",
+            "answer": "yes",
+            "reason": "手机版保留了相同的错误翻译，但音频清晰度与完整版保持一致。",
+            "source_intervals": [
+              [
+                417.8,
+                421.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                418.0,
+                420.8
+              ]
+            ]
+          },
+          {
+            "id": "S037.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版虽清晰但内容错误，将演讲误读为数字，导致关键信息不可懂且偏离原意。",
+            "source_intervals": [
+              [
+                417.8,
+                421.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                418.0,
+                420.8
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S042.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S042.A_content.critical",
+        "answer": "no",
+        "reason": "将“vibrera”译为“往下”，丢失震动语义并擅自补全。",
+        "source_intervals": [
+          [
+            481.48,
+            485.72
+          ]
+        ],
+        "output_intervals": [
+          [
+            481.48,
+            485.72
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S042.A_content.critical",
+            "answer": "no",
+            "reason": "将“vibrera”译为“往下”，丢失震动语义并擅自补全。",
+            "source_intervals": [
+              [
+                481.48,
+                485.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                481.48,
+                485.72
+              ]
+            ]
+          },
+          {
+            "id": "S042.A_content.critical",
+            "answer": "no",
+            "reason": "将“vibrera”错译为“往下”，改变了原意状态。",
+            "source_intervals": [
+              [
+                481.48,
+                485.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                481.48,
+                485.72
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S043.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S043.A_content.critical",
+        "answer": "no",
+        "reason": "译文擅自增加“还有别的东西”，源句仅表达有臭味，属于过度补全。",
+        "source_intervals": [
+          [
+            486.4,
+            490.92
+          ]
+        ],
+        "output_intervals": [
+          [
+            486.4,
+            490.6
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S043.A_content.critical",
+            "answer": "no",
+            "reason": "译文擅自增加“还有别的东西”，源句仅表达有臭味，属于过度补全。",
+            "source_intervals": [
+              [
+                486.4,
+                490.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                486.4,
+                490.6
+              ]
+            ]
+          },
+          {
+            "id": "S043.A_content.critical",
+            "answer": "no",
+            "reason": "译文擅自添加“还有别的东西”，源句仅指有臭味，属于过度翻译/幻觉。",
+            "source_intervals": [
+              [
+                486.4,
+                490.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                486.4,
+                490.6
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S044.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S044.A_content.critical",
+        "answer": "no",
+        "reason": "译文丢失了源句中明确的人名称呼Elsie，属于擅自删减关键信息。",
+        "source_intervals": [
+          [
+            492.78,
+            494.3
+          ]
+        ],
+        "output_intervals": [
+          [
+            492.5,
+            493.86
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S044.A_content.critical",
+            "answer": "no",
+            "reason": "译文丢失了源句中明确的人名称呼Elsie，属于擅自删减关键信息。",
+            "source_intervals": [
+              [
+                492.78,
+                494.3
+              ]
+            ],
+            "output_intervals": [
+              [
+                492.5,
+                493.86
+              ]
+            ]
+          },
+          {
+            "id": "S044.A_content.critical",
+            "answer": "no",
+            "reason": "源句包含否定词inte和人名Elsie，译文丢失了这些关键信息。",
+            "source_intervals": [
+              [
+                492.48,
+                495.28
+              ]
+            ],
+            "output_intervals": [
+              [
+                492.5,
+                493.86
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S050.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S050.A_content.critical",
+        "answer": "no",
+        "reason": "将源句“Mycket på gång?”错译为“有多少？”，丢失了“事情多不多”的核心语义。",
+        "source_intervals": [
+          [
+            574.36,
+            577.76
+          ]
+        ],
+        "output_intervals": [
+          [
+            573.64,
+            574.9
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S050.A_content.critical",
+            "answer": "no",
+            "reason": "将源句“Mycket på gång?”错译为“有多少？”，丢失了“事情多不多”的核心语义。",
+            "source_intervals": [
+              [
+                574.36,
+                577.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                573.64,
+                574.9
+              ]
+            ]
+          },
+          {
+            "id": "S050.A_content.critical",
+            "answer": "yes",
+            "reason": "中文准确传达了源句关于事情进展和有趣事件的询问内容。",
+            "source_intervals": [
+              [
+                574.36,
+                577.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                573.64,
+                577.66
+              ]
+            ]
+          },
+          {
+            "id": "S050.A_content.critical",
+            "answer": "no",
+            "reason": "源句为两个独立问句，译文将其拆分并遗漏了第一句的主语信息。",
+            "source_intervals": [
+              [
+                574.36,
+                577.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                573.64,
+                577.66
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S051.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S051.A_content.critical",
+        "answer": "no",
+        "reason": "源句提及特定人名Harald，译文擅自补全为“他已经”，丢失关键信息并改变语义。",
+        "source_intervals": [
+          [
+            580.2,
+            582.0
+          ]
+        ],
+        "output_intervals": [
+          [
+            580.06,
+            582.52
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S051.A_content.critical",
+            "answer": "no",
+            "reason": "源句提及特定人名Harald，译文擅自补全为“他已经”，丢失关键信息并改变语义。",
+            "source_intervals": [
+              [
+                580.2,
+                582.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                582.52
+              ]
+            ]
+          },
+          {
+            "id": "S051.A_content.critical",
+            "answer": "no",
+            "reason": "源句提及人名Harald，译文擅自改为“他已经”，丢失关键信息并产生歧义。",
+            "source_intervals": [
+              [
+                580.2,
+                582.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                582.52
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S052.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S052.A_content.critical",
+        "answer": "no",
+        "reason": "译文将“墓地里的精神病患者”错译为“去过很多次墓园”，核心语义完全反转。",
+        "source_intervals": [
+          [
+            583.08,
+            585.92
+          ]
+        ],
+        "output_intervals": [
+          [
+            582.52,
+            584.58
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S052.A_content.critical",
+            "answer": "no",
+            "reason": "译文将“墓地里的精神病患者”错译为“去过很多次墓园”，核心语义完全反转。",
+            "source_intervals": [
+              [
+                583.08,
+                585.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                582.52,
+                584.58
+              ]
+            ]
+          },
+          {
+            "id": "S052.A_content.critical",
+            "answer": "no",
+            "reason": "源句提及“精神病”，译文改为“去过很多次”，擅自补全且丢失核心信息。",
+            "source_intervals": [
+              [
+                583.08,
+                585.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                582.52,
+                584.58
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S053.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S053.A_content.critical",
+        "answer": "no",
+        "reason": "漏译“来月经了吗”，擅自补全“你们这些人”改变语义",
+        "source_intervals": [
+          [
+            588.76,
+            592.72
+          ]
+        ],
+        "output_intervals": [
+          [
+            588.38,
+            590.12
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S053.A_content.critical",
+            "answer": "no",
+            "reason": "漏译“来月经了吗”，擅自补全“你们这些人”改变语义",
+            "source_intervals": [
+              [
+                588.76,
+                592.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                588.38,
+                590.12
+              ]
+            ]
+          },
+          {
+            "id": "S053.A_content.critical",
+            "answer": "no",
+            "reason": "源句包含“Har du mens eller?”（你来月经了吗？），译文擅自将其替换为“到底怎么回事”，丢失了具体的侮辱性内容。",
+            "source_intervals": [
+              [
+                588.76,
+                592.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                588.38,
+                590.12
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S054.A_content.critical": {
+      "pass": false,
+      "evidence": {
+        "id": "S054.A_content.critical",
+        "answer": "no",
+        "reason": "源句含明确否定指令 skit i honom，输出改为管它呢谁在乎丢失了针对特定对象的排斥态度。",
+        "source_intervals": [
+          [
+            596.32,
+            599.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            596.72,
+            597.98
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S054.A_content.critical",
+            "answer": "no",
+            "reason": "源句含明确否定指令 skit i honom，输出改为管它呢谁在乎丢失了针对特定对象的排斥态度。",
+            "source_intervals": [
+              [
+                596.32,
+                599.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                596.72,
+                597.98
+              ]
+            ]
+          },
+          {
+            "id": "S054.A_content.critical",
+            "answer": "yes",
+            "reason": "中文“管它呢谁在乎”准确对应了源句的否定与不在乎态度。",
+            "source_intervals": [
+              [
+                596.32,
+                599.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                596.72,
+                597.98
+              ]
+            ]
+          },
+          {
+            "id": "S054.A_content.critical",
+            "answer": "no",
+            "reason": "将源句针对特定男性的指代擅自泛化为“谁在乎”，改变了语义范围。",
+            "source_intervals": [
+              [
+                596.32,
+                599.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                596.72,
+                597.98
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S056.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S056.V_display.burned",
+        "answer": "no",
+        "reason": "影院版在翻找纸张的两个采样帧仅显示瑞典语，缺少中文字幕",
+        "source_intervals": [
+          [
+            641.18,
+            642.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            641.18,
+            642.68
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S056.V_display.burned",
+            "answer": "no",
+            "reason": "影院版在翻找纸张的两个采样帧仅显示瑞典语，缺少中文字幕",
+            "source_intervals": [
+              [
+                641.18,
+                642.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                641.18,
+                642.68
+              ]
+            ]
+          },
+          {
+            "id": "S056.V_display.burned",
+            "answer": "no",
+            "reason": "影院版只显示瑞典语残句，缺少中文，瑞典语也缺夜间措辞",
+            "source_intervals": [
+              [
+                641.18,
+                642.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                641.18,
+                642.68
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S059.A_quality.mobile": {
+      "pass": false,
+      "evidence": {
+        "id": "S059.A_quality.mobile",
+        "answer": "no",
+        "reason": "手机版本同样缺失该段落的中文人声，导致内容不可懂。",
+        "source_intervals": [
+          [
+            693.08,
+            695.72
+          ]
+        ],
+        "output_intervals": [
+          [
+            693.08,
+            695.72
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S059.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版本同样缺失该段落的中文人声，导致内容不可懂。",
+            "source_intervals": [
+              [
+                693.08,
+                695.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                693.08,
+                695.72
+              ]
+            ]
+          },
+          {
+            "id": "S059.A_quality.mobile",
+            "answer": "no",
+            "reason": "手机版同样在该时段处于静音状态，未能提供可懂的中文短句。",
+            "source_intervals": [
+              [
+                693.08,
+                695.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                693.08,
+                695.72
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_S059.V_display.burned": {
+      "pass": false,
+      "evidence": {
+        "id": "S059.V_display.burned",
+        "answer": "no",
+        "reason": "影院版卧床人物特写全帧未见中文或瑞文字幕",
+        "source_intervals": [
+          [
+            694.5,
+            694.51
+          ]
+        ],
+        "output_intervals": [
+          [
+            694.5,
+            694.51
+          ]
+        ],
+        "votes": [
+          {
+            "id": "S059.V_display.burned",
+            "answer": "no",
+            "reason": "影院版卧床人物特写全帧未见中文或瑞文字幕",
+            "source_intervals": [
+              [
+                694.5,
+                694.51
+              ]
+            ],
+            "output_intervals": [
+              [
+                694.5,
+                694.51
+              ]
+            ]
+          },
+          {
+            "id": "S059.V_display.burned",
+            "answer": "no",
+            "reason": "影院帧在老妇卧床近景中漏烧该段中文和瑞文字幕",
+            "source_intervals": [
+              [
+                693.08,
+                694.5
+              ]
+            ],
+            "output_intervals": [
+              [
+                693.08,
+                694.5
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_role.Gardener.A_stable.distinct": {
+      "pass": false,
+      "evidence": {
+        "id": "role.Gardener.A_stable.distinct",
+        "answer": "no",
+        "reason": "源声园丁低沉沙哑，输出却用同一女声TTS配音，完全丧失角色音色特征。",
+        "source_intervals": [
+          [
+            1.32,
+            3.48
+          ]
+        ],
+        "output_intervals": [
+          [
+            1.24,
+            3.28
+          ]
+        ],
+        "votes": [
+          {
+            "id": "role.Gardener.A_stable.distinct",
+            "answer": "no",
+            "reason": "源声园丁低沉沙哑，输出却用同一女声TTS配音，完全丧失角色音色特征。",
+            "source_intervals": [
+              [
+                1.32,
+                3.48
+              ]
+            ],
+            "output_intervals": [
+              [
+                1.24,
+                3.28
+              ]
+            ]
+          },
+          {
+            "id": "role.Gardener.A_stable.distinct",
+            "answer": "yes",
+            "reason": "源音频中园丁为低沉沙哑男声，与女声明显不同。",
+            "source_intervals": [
+              [
+                1.32,
+                3.48
+              ]
+            ],
+            "output_intervals": [
+              [
+                0.0,
+                4.48
+              ]
+            ]
+          },
+          {
+            "id": "role.Gardener.A_stable.distinct",
+            "answer": "no",
+            "reason": "源声园丁音色沙哑低沉，输出全为同一平直女声TTS，未保留原角色特征。",
+            "source_intervals": [
+              [
+                1.32,
+                3.48
+              ]
+            ],
+            "output_intervals": [
+              [
+                1.24,
+                3.28
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_role.Elsie.A_stable.distinct": {
+      "pass": false,
+      "evidence": {
+        "id": "role.Elsie.A_stable.distinct",
+        "answer": "no",
+        "reason": "源声为沙哑老年女，输出全角色共用同一年轻TTS音色。",
+        "source_intervals": [
+          [
+            147.0,
+            149.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            147.56,
+            147.86
+          ]
+        ],
+        "votes": [
+          {
+            "id": "role.Elsie.A_stable.distinct",
+            "answer": "no",
+            "reason": "源声为沙哑老年女，输出全角色共用同一年轻TTS音色。",
+            "source_intervals": [
+              [
+                147.0,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                147.56,
+                147.86
+              ]
+            ]
+          },
+          {
+            "id": "role.Elsie.A_stable.distinct",
+            "answer": "no",
+            "reason": "源声为沙哑老年女，输出却用年轻女TTS且角色错配。",
+            "source_intervals": [
+              [
+                147.0,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                147.56,
+                147.86
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_role.Harald.A_stable.distinct": {
+      "pass": false,
+      "evidence": {
+        "id": "role.Harald.A_stable.distinct",
+        "answer": "no",
+        "reason": "源音频S036为老年男声，提交却分配给梅特女声，导致角色混淆。",
+        "source_intervals": [
+          [
+            382.79,
+            386.21
+          ]
+        ],
+        "output_intervals": [
+          [
+            382.79,
+            386.21
+          ]
+        ],
+        "votes": [
+          {
+            "id": "role.Harald.A_stable.distinct",
+            "answer": "no",
+            "reason": "源音频S036为老年男声，提交却分配给梅特女声，导致角色混淆。",
+            "source_intervals": [
+              [
+                382.79,
+                386.21
+              ]
+            ],
+            "output_intervals": [
+              [
+                382.79,
+                386.21
+              ]
+            ]
+          },
+          {
+            "id": "role.Harald.A_stable.distinct",
+            "answer": "no",
+            "reason": "源音为老年男声，输出却用年轻女声TTS配音，性别完全相反无法区分。",
+            "source_intervals": [
+              [
+                260.14,
+                264.76
+              ]
+            ],
+            "output_intervals": [
+              [
+                259.89,
+                265.01
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H01.T_meaning.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H01.T_meaning.relation",
+        "answer": "no",
+        "reason": "译文将“你等了十年”错译为“他没有等十年”，改变了原意。",
+        "source_intervals": [
+          [
+            25.96,
+            29.28
+          ]
+        ],
+        "output_intervals": [
+          [
+            25.82,
+            28.24
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H01.T_meaning.relation",
+            "answer": "no",
+            "reason": "译文将“你等了十年”错译为“他没有等十年”，改变了原意。",
+            "source_intervals": [
+              [
+                25.96,
+                29.28
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.82,
+                28.24
+              ]
+            ]
+          },
+          {
+            "id": "H01.T_meaning.relation",
+            "answer": "no",
+            "reason": "译文将“你等了十年吗”错译为“他真的没等”，改变了原意。",
+            "source_intervals": [
+              [
+                25.96,
+                29.28
+              ]
+            ],
+            "output_intervals": [
+              [
+                25.82,
+                28.24
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H02.T_meaning.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H02.T_meaning.relation",
+        "answer": "no",
+        "reason": "S013中Ida的台词被错译为Mette的“谢谢你来”，且丢失了S014中的回应内容。",
+        "source_intervals": [
+          [
+            61.76,
+            63.84
+          ],
+          [
+            67.4,
+            69.4
+          ]
+        ],
+        "output_intervals": [
+          [
+            54.86,
+            56.38
+          ],
+          [
+            61.96,
+            63.36
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H02.T_meaning.relation",
+            "answer": "no",
+            "reason": "S013中Ida的台词被错译为Mette的“谢谢你来”，且丢失了S014中的回应内容。",
+            "source_intervals": [
+              [
+                61.76,
+                63.84
+              ],
+              [
+                67.4,
+                69.4
+              ]
+            ],
+            "output_intervals": [
+              [
+                54.86,
+                56.38
+              ],
+              [
+                61.96,
+                63.36
+              ]
+            ]
+          },
+          {
+            "id": "H02.T_meaning.relation",
+            "answer": "no",
+            "reason": "将园丁的陈述改为反问，且转场后未保留反复出现的肯定回应。",
+            "source_intervals": [
+              [
+                46.2,
+                47.96
+              ],
+              [
+                62.06,
+                63.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                45.88,
+                46.44
+              ],
+              [
+                61.96,
+                63.36
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H02.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H02.A_content.relation",
+        "answer": "no",
+        "reason": "源音频中Ida与Mette的不同女声，在输出中被统一为同一TTS音色，未保留角色声音区别。",
+        "source_intervals": [
+          [
+            61.76,
+            63.84
+          ],
+          [
+            67.4,
+            69.4
+          ]
+        ],
+        "output_intervals": [
+          [
+            54.86,
+            56.38
+          ],
+          [
+            61.96,
+            63.36
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H02.A_content.relation",
+            "answer": "no",
+            "reason": "源音频中Ida与Mette的不同女声，在输出中被统一为同一TTS音色，未保留角色声音区别。",
+            "source_intervals": [
+              [
+                61.76,
+                63.84
+              ],
+              [
+                67.4,
+                69.4
+              ]
+            ],
+            "output_intervals": [
+              [
+                54.86,
+                56.38
+              ],
+              [
+                61.96,
+                63.36
+              ]
+            ]
+          },
+          {
+            "id": "H02.A_content.relation",
+            "answer": "no",
+            "reason": "园丁台词被替换为女声反问，后续场景缺失原声中连续的肯定呼喊。",
+            "source_intervals": [
+              [
+                46.2,
+                47.96
+              ],
+              [
+                62.06,
+                63.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                45.88,
+                46.44
+              ],
+              [
+                61.96,
+                63.36
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H03.T_meaning.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H03.T_meaning.relation",
+        "answer": "no",
+        "reason": "梦话归属错给护工，老人拒绝洗澡时语气平淡无激动感。",
+        "source_intervals": [
+          [
+            116.92,
+            123.32
+          ],
+          [
+            145.72,
+            149.68
+          ]
+        ],
+        "output_intervals": [
+          [
+            116.02,
+            117.98
+          ],
+          [
+            147.56,
+            147.86
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H03.T_meaning.relation",
+            "answer": "no",
+            "reason": "梦话归属错给护工，老人拒绝洗澡时语气平淡无激动感。",
+            "source_intervals": [
+              [
+                116.92,
+                123.32
+              ],
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                117.98
+              ],
+              [
+                147.56,
+                147.86
+              ]
+            ]
+          },
+          {
+            "id": "H03.T_meaning.relation",
+            "answer": "no",
+            "reason": "提交文本将梦中话语错归给梅特，且未翻译出老人的拒绝。",
+            "source_intervals": [
+              [
+                116.92,
+                123.32
+              ],
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                119.78
+              ],
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H03.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H03.A_content.relation",
+        "answer": "no",
+        "reason": "原声为老人说梦见你，输出却由年轻女声说出该句。",
+        "source_intervals": [
+          [
+            116.92,
+            123.32
+          ]
+        ],
+        "output_intervals": [
+          [
+            116.02,
+            117.98
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H03.A_content.relation",
+            "answer": "no",
+            "reason": "原声为老人说梦见你，输出却由年轻女声说出该句。",
+            "source_intervals": [
+              [
+                116.92,
+                123.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                117.98
+              ]
+            ]
+          },
+          {
+            "id": "H03.A_content.relation",
+            "answer": "no",
+            "reason": "输出音频中梦话由年轻女声说出，老人拒绝时仅出现短促男声和惊呼。",
+            "source_intervals": [
+              [
+                116.92,
+                123.32
+              ],
+              [
+                145.72,
+                149.68
+              ]
+            ],
+            "output_intervals": [
+              [
+                116.02,
+                119.78
+              ],
+              [
+                144.92,
+                150.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H05.T_meaning.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H05.T_meaning.relation",
+        "answer": "no",
+        "reason": "译文将睡眠误译为进食，且遗漏了关于父母的核心对话。",
+        "source_intervals": [
+          [
+            340.24,
+            348.32
+          ],
+          [
+            360.04,
+            372.84
+          ]
+        ],
+        "output_intervals": [
+          [
+            340.08,
+            348.14
+          ],
+          [
+            364.38,
+            370.32
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H05.T_meaning.relation",
+            "answer": "no",
+            "reason": "译文将睡眠误译为进食，且遗漏了关于父母的核心对话。",
+            "source_intervals": [
+              [
+                340.24,
+                348.32
+              ],
+              [
+                360.04,
+                372.84
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.08,
+                348.14
+              ],
+              [
+                364.38,
+                370.32
+              ]
+            ]
+          },
+          {
+            "id": "H05.T_meaning.relation",
+            "answer": "no",
+            "reason": "将睡眠问答错译为饮食，且把园丁台词错配给女性角色。",
+            "source_intervals": [
+              [
+                340.24,
+                348.32
+              ]
+            ],
+            "output_intervals": [
+              [
+                340.24,
+                348.32
+              ]
+            ]
+          }
+        ]
       }
     },
     "critical_H05.A_content.relation": {
@@ -163,199 +3429,323 @@
       "evidence": {
         "id": "H05.A_content.relation",
         "answer": "no",
-        "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
+        "reason": "音频缺失关键台词，且将睡眠话题错误替换为进食内容。",
         "source_intervals": [
           [
-            61.41,
-            63.542
+            340.24,
+            348.32
           ],
           [
-            64.0,
-            65.125
-          ],
-          [
-            65.825,
-            66.5
+            360.04,
+            372.84
           ]
         ],
         "output_intervals": [
           [
-            61.41,
-            63.542
+            340.08,
+            348.14
           ],
           [
-            64.0,
-            65.125
-          ],
-          [
-            65.825,
-            66.5
+            364.38,
+            370.32
           ]
         ],
         "votes": [
           {
             "id": "H05.A_content.relation",
             "answer": "no",
-            "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
+            "reason": "音频缺失关键台词，且将睡眠话题错误替换为进食内容。",
             "source_intervals": [
               [
-                61.41,
-                63.542
+                340.24,
+                348.32
               ],
               [
-                64.0,
-                65.125
-              ],
-              [
-                65.825,
-                66.5
+                360.04,
+                372.84
               ]
             ],
             "output_intervals": [
               [
-                61.41,
-                63.542
+                340.08,
+                348.14
               ],
               [
-                64.0,
-                65.125
-              ],
-              [
-                65.825,
-                66.5
+                364.38,
+                370.32
               ]
             ]
           },
           {
             "id": "H05.A_content.relation",
             "answer": "no",
-            "reason": "音频将断开的句子合并为完整句，破坏了原片犹豫和中断的语流关系。",
+            "reason": "将关于睡眠的回答错译为饮食，且遗漏了调侃对方古怪的关键台词。",
             "source_intervals": [
               [
-                61.41,
-                63.542
-              ],
-              [
-                64.0,
-                65.125
-              ],
-              [
-                65.825,
-                66.5
+                340.24,
+                372.84
               ]
             ],
             "output_intervals": [
               [
-                61.24,
-                63.78
-              ],
-              [
-                63.81,
-                66.27
+                340.24,
+                372.84
               ]
             ]
           }
         ]
       }
     },
-    "critical_role.Victor.A_stable.distinct": {
+    "critical_H06.T_meaning.relation": {
       "pass": false,
       "evidence": {
-        "id": "role.Victor.A_stable.distinct",
+        "id": "H06.T_meaning.relation",
         "answer": "no",
-        "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+        "reason": "S042原为老年女性要求震动，译文错归给年轻护工；S044原为年轻女称呼老者，译文错归给老者。",
         "source_intervals": [
           [
-            1.0,
-            3.0
-          ],
-          [
-            37.17,
-            39.75
-          ],
-          [
-            76.25,
-            78.708
+            481.48,
+            485.72
           ]
         ],
         "output_intervals": [
           [
-            1.0,
-            3.0
-          ],
-          [
-            37.17,
-            39.75
-          ],
-          [
-            76.25,
-            78.708
+            481.22,
+            485.42
           ]
         ],
         "votes": [
           {
-            "id": "role.Victor.A_stable.distinct",
+            "id": "H06.T_meaning.relation",
             "answer": "no",
-            "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
+            "reason": "S042原为老年女性要求震动，译文错归给年轻护工；S044原为年轻女称呼老者，译文错归给老者。",
             "source_intervals": [
               [
-                1.0,
-                3.0
-              ],
-              [
-                37.17,
-                39.75
-              ],
-              [
-                76.25,
-                78.708
+                481.48,
+                485.72
               ]
             ],
             "output_intervals": [
               [
-                1.0,
-                3.0
-              ],
-              [
-                37.17,
-                39.75
-              ],
-              [
-                76.25,
-                78.708
+                481.22,
+                485.42
               ]
             ]
           },
           {
-            "id": "role.Victor.A_stable.distinct",
+            "id": "H06.T_meaning.relation",
             "answer": "no",
-            "reason": "Role distinction fails due to an exchange error. At interval 76.25-78.708, the source indicates Victor speaking, but the output places his lines on the Franck track while leaving the Victor track silent. Conversely, checking other intervals confirms roles are generally distinct, but this specific swap violates the requirement that roles remain distinct without exchanges.",
+            "reason": "S042原为Marta，译文错归给Mette；且S045、S046角色归属也发生互换错误。",
             "source_intervals": [
               [
-                1,
-                3
+                481.48,
+                485.72
               ],
               [
-                37.17,
-                39.75
+                497.6,
+                502.44
               ],
               [
-                76.25,
-                78.708
+                506.88,
+                508.8
               ]
             ],
             "output_intervals": [
               [
-                1,
-                3
+                481.22,
+                485.42
               ],
               [
-                37.17,
-                39.75
+                497.38,
+                500.98
               ],
               [
-                76.25,
-                78.708
+                506.4,
+                507.78
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H06.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H06.A_content.relation",
+        "answer": "no",
+        "reason": "源片S042与S044由不同年龄音色发声，输出却将两者均替换为同一年轻TTS音色，角色归属完全错误。",
+        "source_intervals": [
+          [
+            481.48,
+            485.72
+          ]
+        ],
+        "output_intervals": [
+          [
+            481.22,
+            485.42
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H06.A_content.relation",
+            "answer": "no",
+            "reason": "源片S042与S044由不同年龄音色发声，输出却将两者均替换为同一年轻TTS音色，角色归属完全错误。",
+            "source_intervals": [
+              [
+                481.48,
+                485.72
+              ]
+            ],
+            "output_intervals": [
+              [
+                481.22,
+                485.42
+              ]
+            ]
+          },
+          {
+            "id": "H06.A_content.relation",
+            "answer": "no",
+            "reason": "音频中各句均由同一年轻女声说出，未区分老年与年轻角色的音色差异，导致角色归属完全混乱。",
+            "source_intervals": [
+              [
+                481.48,
+                485.72
+              ],
+              [
+                497.6,
+                502.44
+              ],
+              [
+                506.88,
+                508.8
+              ]
+            ],
+            "output_intervals": [
+              [
+                481.22,
+                485.42
+              ],
+              [
+                497.38,
+                500.98
+              ],
+              [
+                506.4,
+                507.78
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H07.T_meaning.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H07.T_meaning.relation",
+        "answer": "no",
+        "reason": "译文将提及哈尔德的台词错译为去墓园，丢失了人物指代与态度。",
+        "source_intervals": [
+          [
+            580.2,
+            585.92
+          ]
+        ],
+        "output_intervals": [
+          [
+            580.06,
+            584.58
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H07.T_meaning.relation",
+            "answer": "no",
+            "reason": "译文将提及哈尔德的台词错译为去墓园，丢失了人物指代与态度。",
+            "source_intervals": [
+              [
+                580.2,
+                585.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                584.58
+              ]
+            ]
+          },
+          {
+            "id": "H07.T_meaning.relation",
+            "answer": "no",
+            "reason": "译文将“Harald”错译为“他”，丢失了关键人名指代。",
+            "source_intervals": [
+              [
+                580.2,
+                582.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                582.52
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "critical_H07.A_content.relation": {
+      "pass": false,
+      "evidence": {
+        "id": "H07.A_content.relation",
+        "answer": "no",
+        "reason": "配音未读出哈尔德的名字，且错误地加入了关于墓园的无关内容。",
+        "source_intervals": [
+          [
+            580.2,
+            585.92
+          ]
+        ],
+        "output_intervals": [
+          [
+            580.06,
+            584.58
+          ]
+        ],
+        "votes": [
+          {
+            "id": "H07.A_content.relation",
+            "answer": "no",
+            "reason": "配音未读出哈尔德的名字，且错误地加入了关于墓园的无关内容。",
+            "source_intervals": [
+              [
+                580.2,
+                585.92
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                584.58
+              ]
+            ]
+          },
+          {
+            "id": "H07.A_content.relation",
+            "answer": "no",
+            "reason": "配音未读出“Harald”，仅说“他已经”，与源音频内容不符。",
+            "source_intervals": [
+              [
+                580.2,
+                582.0
+              ]
+            ],
+            "output_intervals": [
+              [
+                580.06,
+                582.52
               ]
             ]
           }
@@ -365,1456 +3755,2767 @@
   },
   "losses": [
     {
-      "id": "role.Victor.A_stable.stable",
-      "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
-      "lost": 3.75,
+      "id": "role.Gardener.A_stable.stable",
+      "reason": "输出将园丁替换为无沙哑感的平稳TTS，音色特征与源音频不一致。",
+      "lost": 1.25,
       "source_intervals": [
         [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
+          1.32,
+          3.48
         ]
       ],
       "output_intervals": [
         [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
+          1.24,
+          3.28
         ]
       ]
     },
     {
-      "id": "role.Victor.A_stable.distinct",
-      "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
-      "lost": 3.75,
+      "id": "role.Gardener.A_stable.distinct",
+      "reason": "源声园丁低沉沙哑，输出却用同一女声TTS配音，完全丧失角色音色特征。",
+      "lost": 1.25,
       "source_intervals": [
         [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
+          1.32,
+          3.48
         ]
       ],
       "output_intervals": [
         [
-          1.0,
-          3.0
+          1.24,
+          3.28
+        ]
+      ]
+    },
+    {
+      "id": "role.Elsie.A_stable.distinct",
+      "reason": "源声为沙哑老年女，输出全角色共用同一年轻TTS音色。",
+      "lost": 1.25,
+      "source_intervals": [
+        [
+          147.0,
+          149.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          147.56,
+          147.86
+        ]
+      ]
+    },
+    {
+      "id": "role.Harald.A_stable.distinct",
+      "reason": "源音频S036为老年男声，提交却分配给梅特女声，导致角色混淆。",
+      "lost": 1.25,
+      "source_intervals": [
+        [
+          382.79,
+          386.21
+        ]
+      ],
+      "output_intervals": [
+        [
+          382.79,
+          386.21
+        ]
+      ]
+    },
+    {
+      "id": "S056.A_identity.pitch",
+      "reason": "中文TTS为平稳女声，与源沙哑颤抖的老年男声音高不符",
+      "lost": 0.390625,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          639.83,
+          645.01
+        ]
+      ]
+    },
+    {
+      "id": "S056.A_identity.texture",
+      "reason": "源有明显气声和沙哑质感，中文输出干净平滑完全丢失该特征",
+      "lost": 0.390625,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          639.83,
+          645.01
+        ]
+      ]
+    },
+    {
+      "id": "S056.A_identity.resonance",
+      "reason": "中文缺乏源老年男性的胸腔共鸣与沉重感，音色单薄不相容",
+      "lost": 0.390625,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          639.83,
+          645.01
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_identity.pitch",
+      "reason": "合成音高偏高且平稳，未体现老年男性低沉的基频特征。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_identity.texture",
+      "reason": "完全丢失了原声中明显的沙哑颗粒感和气声特质。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_identity.resonance",
+      "reason": "声音单薄缺乏胸腔共鸣，与原角色浑厚的质感不符。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_identity.identity",
+      "reason": "输出为通用TTS，缺乏原角色特有的苍老音色与辨识度。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_identity.pitch",
+      "reason": "源为老年男性低沉嗓音，输出却使用明显偏高的女性TTS音色，音高区间完全不相容。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          269.4,
+          272.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.18,
+          270.38
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_identity.texture",
+      "reason": "源带有明显的沙哑和颗粒感，输出则是平滑干净的标准女声，未保留任何可辨识的音质特征。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          269.4,
+          272.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.18,
+          270.38
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_identity.resonance",
+      "reason": "源具有苍老男性的胸腔共鸣与厚重感，输出为单薄的女性合成器共鸣，缺乏应有的重量。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          269.4,
+          272.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.18,
+          270.38
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_identity.identity",
+      "reason": "源声为低沉沙哑的老年男声，输出为平滑清晰的TTS女声（huayan），音色特征完全不同。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          269.4,
+          271.5
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.18,
+          270.38
+        ]
+      ]
+    },
+    {
+      "id": "S036.A_identity.pitch",
+      "reason": "输出音调偏高属年轻女声，与源低沉男声音域不符。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          383.04,
+          385.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          381.74,
+          383.24
+        ]
+      ]
+    },
+    {
+      "id": "S036.A_identity.texture",
+      "reason": "输出音色平滑干净，完全缺失源角色明显的沙哑质感。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          383.04,
+          385.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          381.74,
+          383.24
+        ]
+      ]
+    },
+    {
+      "id": "S036.A_identity.resonance",
+      "reason": "输出共鸣单薄清亮，缺乏源角色的厚重胸腔共鸣特征。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          383.04,
+          385.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          381.74,
+          383.24
+        ]
+      ]
+    },
+    {
+      "id": "S036.A_identity.identity",
+      "reason": "源角色Harald为老年男性，输出使用年轻女性Mette的声音。",
+      "lost": 0.2604166666666667,
+      "source_intervals": [
+        [
+          383.04,
+          385.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          381.74,
+          383.24
+        ]
+      ]
+    },
+    {
+      "id": "S004.A_prosody.intent",
+      "reason": "源语气沉重充满敬畏，输出平淡陈述，缺失情感色彩和意图传达。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          8.96,
+          10.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          8.18,
+          9.54
+        ]
+      ]
+    },
+    {
+      "id": "S004.A_prosody.delivery",
+      "reason": "语速均匀机械，完全缺失源句中自然的思考停顿和犹豫节奏。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          8.96,
+          10.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          8.18,
+          9.54
+        ]
+      ]
+    },
+    {
+      "id": "S005.A_prosody.delivery",
+      "reason": "源语音有明显的思考停顿和节奏变化，译文处理得过于平滑机械，缺失表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          11.44,
+          14.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          11.16,
+          13.44
+        ]
+      ]
+    },
+    {
+      "id": "S008.A_prosody.intent",
+      "reason": "原声是震惊质问，TTS是平淡陈述，情绪功能完全丢失。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          25.96,
+          29.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          25.82,
+          28.24
+        ]
+      ]
+    },
+    {
+      "id": "S008.A_prosody.delivery",
+      "reason": "原声语速快带惊讶停顿，TTS节奏均匀死板，无表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          25.96,
+          29.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          25.82,
+          28.24
+        ]
+      ]
+    },
+    {
+      "id": "S009.A_prosody.intent",
+      "reason": "源句语气平稳陈述事实，中文配音语调起伏较大带有解释意味，情绪不符。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          30.92,
+          34.16
+        ]
+      ],
+      "output_intervals": [
+        [
+          30.36,
+          33.1
+        ]
+      ]
+    },
+    {
+      "id": "S012.A_prosody.intent",
+      "reason": "源表达不认同的冷静态度，输出误读为好奇询问意图相反。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          44.16,
+          47.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          44.08,
+          46.44
+        ]
+      ]
+    },
+    {
+      "id": "S012.A_prosody.delivery",
+      "reason": "源第二句平淡坚定陈述，输出变为上扬疑问语调结构破坏。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          44.16,
+          47.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          44.08,
+          46.44
+        ]
+      ]
+    },
+    {
+      "id": "S014.A_prosody.intent",
+      "reason": "语气平淡冷漠，完全丧失了源角色极度兴奋、狂喜的情绪感染力。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          67.4,
+          69.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          71.22,
+          74.02
+        ]
+      ]
+    },
+    {
+      "id": "S014.A_prosody.delivery",
+      "reason": "节奏均匀刻板，未能复现源句中因情绪高涨导致的急促重复与停顿结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          67.4,
+          69.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          71.22,
+          74.02
+        ]
+      ]
+    },
+    {
+      "id": "S016.A_prosody.intent",
+      "reason": "源意图是亲切的问候与唤醒，输出变成了生硬的命令式语气，情绪功能完全错误。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          92.06,
+          93.891
+        ]
+      ],
+      "output_intervals": [
+        [
+          90.82,
+          94.94
+        ]
+      ]
+    },
+    {
+      "id": "S016.A_prosody.delivery",
+      "reason": "源句是轻柔的唤醒语调，有自然的停顿和情感起伏；输出节奏机械均匀，毫无情感波动。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          92.06,
+          93.891
+        ]
+      ],
+      "output_intervals": [
+        [
+          90.82,
+          94.94
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_prosody.intent",
+      "reason": "源语气幽默戏谑，中文平淡机械，未能传达关键的情绪功能和互动意图。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          116.92,
+          123.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          119.78
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_prosody.delivery",
+      "reason": "源句包含完整反问“我该感到害怕还是荣幸”，中文仅译出“是吗？”，严重缺失表演结构和语义内容。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          116.92,
+          123.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          119.78
+        ]
+      ]
+    },
+    {
+      "id": "S023.A_prosody.intent",
+      "reason": "源拒绝语气激烈抗拒，中文仅平铺直叙未传达愤怒或激动情绪。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          145.72,
+          149.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          144.92,
+          149.08
+        ]
+      ]
+    },
+    {
+      "id": "S023.A_prosody.delivery",
+      "reason": "源句有强烈情绪起伏与停顿，中文配音平淡机械无表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          145.72,
+          149.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          144.92,
+          149.08
+        ]
+      ]
+    },
+    {
+      "id": "S024.A_prosody.intent",
+      "reason": "语调平淡缺乏起伏，未能传达出原角色直接同情的态度。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          246.88,
+          249.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          246.82,
+          254.52
+        ]
+      ]
+    },
+    {
+      "id": "S024.A_prosody.delivery",
+      "reason": "语速均匀单调，完全缺失原句中明显的停顿和重音强调。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          246.88,
+          249.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          246.82,
+          254.52
+        ]
+      ]
+    },
+    {
+      "id": "S025.A_prosody.intent",
+      "reason": "未能传达出源句中直言不讳且带有同情的复杂语气。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          250.64,
+          254.2
+        ]
+      ],
+      "output_intervals": [
+        [
+          246.82,
+          254.52
+        ]
+      ]
+    },
+    {
+      "id": "S025.A_prosody.delivery",
+      "reason": "抹除了源句中强调“混蛋”时的明显停顿和重音处理。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          250.64,
+          254.2
+        ]
+      ],
+      "output_intervals": [
+        [
+          246.82,
+          254.52
+        ]
+      ]
+    },
+    {
+      "id": "S026.A_prosody.intent",
+      "reason": "未能传达出关切与承诺的语气，情感色彩过于冷淡。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          255.72,
+          259.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          255.38,
+          258.24
+        ]
+      ]
+    },
+    {
+      "id": "S026.A_prosody.delivery",
+      "reason": "语调平直机械，完全缺失原句的情感重音与停顿设计。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          255.72,
+          259.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          255.38,
+          258.24
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_prosody.intent",
+      "reason": "语调平淡客观，未能传达出原角色苦涩与认命的情绪色彩。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S027.A_prosody.delivery",
+      "reason": "语速均匀机械，缺失原句中表现无奈的长停顿与叹息感。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          259.84,
+          264.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          259.1,
+          265.14
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_prosody.intent",
+      "reason": "源语气充满无奈与宿命感的沉重叹息，输出语调平淡客观，丢失了关键的情绪功能。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          269.4,
+          272.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.15,
+          272.65
+        ]
+      ]
+    },
+    {
+      "id": "S028.A_prosody.delivery",
+      "reason": "源句语速缓慢且伴有沉重的停顿，输出节奏均匀机械，未复现原表演的迟疑与强调结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          269.4,
+          272.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          269.15,
+          272.65
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_prosody.intent",
+      "reason": "源句带好奇调侃，中文为平直陈述语调，丢失情绪功能。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_prosody.delivery",
+      "reason": "源句有停顿与调侃语气，中文TTS节奏机械且无自然停顿。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S032.A_prosody.intent",
+      "reason": "源意是“我也没怎么睡”，中文错译为“我从来不吃”，语义反转导致关键意图彻底丧失。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          345.2,
+          348.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          344.76,
+          348.14
+        ]
+      ]
+    },
+    {
+      "id": "S032.A_prosody.delivery",
+      "reason": "源句含随意附和的语气起伏，中文输出呈均匀死板的机械节拍，丢失表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          345.2,
+          348.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          344.76,
+          348.14
+        ]
+      ]
+    },
+    {
+      "id": "S033.A_prosody.intent",
+      "reason": "因缺乏实际发声，源句的挑衅语气和情绪功能完全丢失",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          360.04,
+          365.12
+        ]
+      ],
+      "output_intervals": [
+        [
+          358.04,
+          364.38
+        ]
+      ]
+    },
+    {
+      "id": "S033.A_prosody.delivery",
+      "reason": "该时段无中文语音输出，无法体现源句的停顿与反问结构",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          360.04,
+          365.12
+        ]
+      ],
+      "output_intervals": [
+        [
+          358.04,
+          364.38
+        ]
+      ]
+    },
+    {
+      "id": "S034.A_prosody.intent",
+      "reason": "源句男声平静女声得意，输出两句均为尖锐机械童声，完全丢失原有情绪对比。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          365.6,
+          369.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          365.6,
+          369.44
+        ]
+      ]
+    },
+    {
+      "id": "S034.A_prosody.delivery",
+      "reason": "未能还原源句中那种略带得意和了然的语气起伏",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          365.6,
+          369.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          364.38,
+          368.82
+        ]
+      ]
+    },
+    {
+      "id": "S035.A_prosody.intent",
+      "reason": "源句意图是询问身世，译文变成陈述受伤事实，语气功能完全背离。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ],
+      "output_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ]
+    },
+    {
+      "id": "S035.A_prosody.delivery",
+      "reason": "源句带有好奇追问的语气停顿，译文因内容错误导致节奏断裂且不自然。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ],
+      "output_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ]
+    },
+    {
+      "id": "S042.A_prosody.intent",
+      "reason": "源语气微弱带恳求，中配声音年轻且平淡，完全丢失了原角色的情绪功能。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          481.48,
+          485.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          481.22,
+          485.42
+        ]
+      ]
+    },
+    {
+      "id": "S042.A_prosody.delivery",
+      "reason": "源为老年女性虚弱恳求，中配为年轻女声且语调平稳机械，未保留表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          481.48,
+          485.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          481.22,
+          485.42
+        ]
+      ]
+    },
+    {
+      "id": "S043.A_prosody.intent",
+      "reason": "源后半句带有明显的厌恶/嫌弃情绪，中文语调平淡客观未传达此意图。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          486.4,
+          490.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          486.4,
+          490.6
+        ]
+      ]
+    },
+    {
+      "id": "S043.A_prosody.delivery",
+      "reason": "源句间有明显停顿和凑近闻的动作节奏，中文连读过快丢失表演结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          486.4,
+          490.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          486.4,
+          490.6
+        ]
+      ]
+    },
+    {
+      "id": "S046.A_prosody.intent",
+      "reason": "源句带有明显的厌恶与质问语气，中文配音语调平直机械，未传达任何情绪功能。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          506.88,
+          509.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          506.88,
+          509.72
+        ]
+      ]
+    },
+    {
+      "id": "S046.A_prosody.delivery",
+      "reason": "源为年轻女声嫌弃追问，中文却由苍老女声平淡念出，表演结构完全丢失。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          506.88,
+          509.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          506.88,
+          509.72
+        ]
+      ]
+    },
+    {
+      "id": "S051.A_prosody.intent",
+      "reason": "语气平淡，未传达出源句中提起某人时的随意感或潜在情绪。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          580.2,
+          582.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          580.06,
+          582.52
+        ]
+      ]
+    },
+    {
+      "id": "S051.A_prosody.delivery",
+      "reason": "未能保留源句中自然的犹豫和被打断的表演结构，语调平直。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          580.2,
+          582.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          580.06,
+          582.52
+        ]
+      ]
+    },
+    {
+      "id": "S052.A_prosody.intent",
+      "reason": "语气平淡陈述，未能传达源句解释性的急切情绪功能。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          583.08,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          582.52,
+          584.58
+        ]
+      ]
+    },
+    {
+      "id": "S052.A_prosody.delivery",
+      "reason": "语调机械平直，未体现源句中强调“当然”的重音结构。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          583.08,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          582.52,
+          584.58
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_prosody.intent",
+      "reason": "语气平淡机械，完全缺失源角色的不耐烦与攻击性",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_prosody.delivery",
+      "reason": "未保留源句两个独立问句间的停顿结构",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S054.A_prosody.intent",
+      "reason": "源句意图是无奈地劝慰对方放下，中文配音呈现出烦躁和突兀的命令感，关键情绪功能发生反转。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          596.32,
+          599.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          596.72,
+          598.22
+        ]
+      ]
+    },
+    {
+      "id": "S054.A_prosody.delivery",
+      "reason": "源句为连贯短句，译文拆成三段并加多余停顿，破坏原有节奏。",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          596.32,
+          599.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          595.7,
+          598.22
+        ]
+      ]
+    },
+    {
+      "id": "S056.A_prosody.intent",
+      "reason": "源含轻蔑不耐烦情绪，中文语调平淡客观未能传达原意功能",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          639.83,
+          645.01
+        ]
+      ]
+    },
+    {
+      "id": "S056.A_prosody.delivery",
+      "reason": "源语速缓慢且有喘息停顿，中文节奏均匀机械无表演结构保留",
+      "lost": 0.1814516129032258,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          639.83,
+          645.01
+        ]
+      ]
+    },
+    {
+      "id": "S004.A_content.critical",
+      "reason": "源句包含“十年”与“一晚开花后死亡”，中文仅译出前半部分，后半关键信息缺失。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          8.96,
+          10.64
+        ]
+      ],
+      "output_intervals": [
+        [
+          8.18,
+          9.54
+        ]
+      ]
+    },
+    {
+      "id": "S008.A_content.critical",
+      "reason": "源为疑问句，译文变陈述且人称由你改为他，语义完全反转。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          25.96,
+          29.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          25.82,
+          28.24
+        ]
+      ]
+    },
+    {
+      "id": "S009.A_content.critical",
+      "reason": "源句意为“差不多二十四”，中文错译为“最早种下”，擅自补全错误信息。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          30.92,
+          34.16
+        ]
+      ],
+      "output_intervals": [
+        [
+          30.36,
+          33.1
+        ]
+      ]
+    },
+    {
+      "id": "S012.A_content.critical",
+      "reason": "源句“我不这么觉得”被篡改为反问“你真这么觉得”，语义完全反转。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          46.2,
+          47.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          45.88,
+          46.44
+        ]
+      ]
+    },
+    {
+      "id": "S014.A_content.critical",
+      "reason": "源句为肯定语气“ja”，提交译为否定“不要”，语义完全反转。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          67.4,
+          69.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          71.22,
+          74.02
+        ]
+      ]
+    },
+    {
+      "id": "S016.A_content.spoken",
+      "reason": "中文音频实际说出的是“记住”和“说话”，并未包含源句的核心意思（问候与呼唤名字）。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          92.06,
+          93.891
+        ]
+      ],
+      "output_intervals": [
+        [
+          90.82,
+          94.94
+        ]
+      ]
+    },
+    {
+      "id": "S016.A_content.critical",
+      "reason": "源句为“早安！玛尔塔”，提交内容却译为“记住”和“说话”，完全丢失了原意。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          92.06,
+          93.891
+        ]
+      ],
+      "output_intervals": [
+        [
+          90.82,
+          94.94
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_content.spoken",
+      "reason": "源角色的核心反问内容未被配音演绎，仅有前半句对话，属于实质性遗漏。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          117.22,
+          123.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          119.78
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_content.critical",
+      "reason": "严重漏译：源句后半部分“我该感到害怕还是荣幸？”未在音频中出现，导致信息缺失。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          117.22,
+          123.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          119.78
+        ]
+      ]
+    },
+    {
+      "id": "S023.A_content.spoken",
+      "reason": "老年女性的拒绝理由（我很干净）未在音频中实际播出。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          145.72,
+          149.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          144.92,
+          150.0
+        ]
+      ]
+    },
+    {
+      "id": "S023.A_content.critical",
+      "reason": "严重漏译：源句包含“我很干净”，输出完全缺失该关键信息。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          145.72,
+          149.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          144.92,
+          150.0
+        ]
+      ]
+    },
+    {
+      "id": "S024.A_content.critical",
+      "reason": "漏译了后半段条件承诺内容，导致语义不完整。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          246.88,
+          249.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          246.82,
+          254.52
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_content.spoken",
+      "reason": "核心意思虽已发声，但因翻译错误导致传达的信息与源意完全相反。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          340.24,
+          345.78
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          345.64
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_content.critical",
+      "reason": "源句“没怎么睡”被错译为“吃得不多”，语义发生根本性反转错误。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          340.24,
+          345.78
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          345.64
+        ]
+      ]
+    },
+    {
+      "id": "S032.A_content.spoken",
+      "reason": "核心意思错译导致信息失真，且Mette的回应也变成无关内容。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          345.2,
+          348.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          344.76,
+          348.14
+        ]
+      ]
+    },
+    {
+      "id": "S032.A_content.critical",
+      "reason": "源意“没怎么睡”被错译为“吃得不多”，语义严重反转。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          345.2,
+          348.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          344.76,
+          348.14
+        ]
+      ]
+    },
+    {
+      "id": "S033.A_content.spoken",
+      "reason": "对应时间段内无任何中文语音发声，核心意思未能实际可听",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          360.04,
+          365.12
+        ]
+      ],
+      "output_intervals": [
+        [
+          358.04,
+          364.38
+        ]
+      ]
+    },
+    {
+      "id": "S033.A_content.critical",
+      "reason": "源句Mette的调侃台词在输出中完全缺失，未保留任何语义内容",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          360.04,
+          365.12
+        ]
+      ],
+      "output_intervals": [
+        [
+          358.04,
+          364.38
+        ]
+      ]
+    },
+    {
+      "id": "S034.A_content.critical",
+      "reason": "将“我猜是这样”错译为“我不知道”，语义发生根本反转",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          367.0,
+          369.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          365.96,
+          366.68
+        ]
+      ]
+    },
+    {
+      "id": "S035.A_content.spoken",
+      "reason": "虽然发出了声音，但内容是错误的“我挨了一脚”，未能传达源句真实含义。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ],
+      "output_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ]
+    },
+    {
+      "id": "S035.A_content.critical",
+      "reason": "源意“谁在森林里发现你”，译文错译为“我挨了一脚”，核心语义完全错误。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ],
+      "output_intervals": [
+        [
+          369.6,
+          372.84
+        ]
+      ]
+    },
+    {
+      "id": "S042.A_content.critical",
+      "reason": "将“vibrera”译为“往下”，丢失震动语义并擅自补全。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          481.48,
+          485.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          481.48,
+          485.72
+        ]
+      ]
+    },
+    {
+      "id": "S043.A_content.critical",
+      "reason": "译文擅自增加“还有别的东西”，源句仅表达有臭味，属于过度补全。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          486.4,
+          490.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          486.4,
+          490.6
+        ]
+      ]
+    },
+    {
+      "id": "S044.A_content.critical",
+      "reason": "译文丢失了源句中明确的人名称呼Elsie，属于擅自删减关键信息。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          492.78,
+          494.3
+        ]
+      ],
+      "output_intervals": [
+        [
+          492.5,
+          493.86
+        ]
+      ]
+    },
+    {
+      "id": "S050.A_content.critical",
+      "reason": "将源句“Mycket på gång?”错译为“有多少？”，丢失了“事情多不多”的核心语义。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          574.36,
+          577.76
+        ]
+      ],
+      "output_intervals": [
+        [
+          573.64,
+          574.9
+        ]
+      ]
+    },
+    {
+      "id": "S051.A_content.critical",
+      "reason": "源句提及特定人名Harald，译文擅自补全为“他已经”，丢失关键信息并改变语义。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          580.2,
+          582.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          580.06,
+          582.52
+        ]
+      ]
+    },
+    {
+      "id": "S052.A_content.critical",
+      "reason": "译文将“墓地里的精神病患者”错译为“去过很多次墓园”，核心语义完全反转。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          583.08,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          582.52,
+          584.58
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_content.critical",
+      "reason": "漏译“来月经了吗”，擅自补全“你们这些人”改变语义",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S054.A_content.critical",
+      "reason": "源句含明确否定指令 skit i honom，输出改为管它呢谁在乎丢失了针对特定对象的排斥态度。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          596.32,
+          599.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          596.72,
+          597.98
+        ]
+      ]
+    },
+    {
+      "id": "H02.A_content.relation",
+      "reason": "源音频中Ida与Mette的不同女声，在输出中被统一为同一TTS音色，未保留角色声音区别。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          61.76,
+          63.84
         ],
         [
-          37.17,
-          39.75
+          67.4,
+          69.4
+        ]
+      ],
+      "output_intervals": [
+        [
+          54.86,
+          56.38
         ],
         [
-          76.25,
-          78.708
+          61.96,
+          63.36
+        ]
+      ]
+    },
+    {
+      "id": "H03.A_content.relation",
+      "reason": "原声为老人说梦见你，输出却由年轻女声说出该句。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          116.92,
+          123.32
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          117.98
         ]
       ]
     },
     {
       "id": "H05.A_content.relation",
-      "reason": "配音将原片断开的句子合并为“这不是办法”，破坏了犹豫和断开的跨事件关系。",
-      "lost": 0.20833333333333334,
+      "reason": "音频缺失关键台词，且将睡眠话题错误替换为进食内容。",
+      "lost": 0.11029411764705883,
       "source_intervals": [
         [
-          61.41,
-          63.542
+          340.24,
+          348.32
         ],
         [
-          64.0,
-          65.125
-        ],
-        [
-          65.825,
-          66.5
+          360.04,
+          372.84
         ]
       ],
       "output_intervals": [
         [
-          61.41,
-          63.542
+          340.08,
+          348.14
         ],
         [
-          64.0,
-          65.125
-        ],
+          364.38,
+          370.32
+        ]
+      ]
+    },
+    {
+      "id": "H06.A_content.relation",
+      "reason": "源片S042与S044由不同年龄音色发声，输出却将两者均替换为同一年轻TTS音色，角色归属完全错误。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
         [
-          65.825,
-          66.5
+          481.48,
+          485.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          481.22,
+          485.42
+        ]
+      ]
+    },
+    {
+      "id": "H07.A_content.relation",
+      "reason": "配音未读出哈尔德的名字，且错误地加入了关于墓园的无关内容。",
+      "lost": 0.11029411764705883,
+      "source_intervals": [
+        [
+          580.2,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          580.06,
+          584.58
         ]
       ]
     },
     {
       "id": "S004.E_meaning.proposition",
-      "reason": "英文转录保留了源命题，但因后续事件映射完全错乱，破坏了整体叙事逻辑。",
-      "lost": 0.125,
+      "reason": "提交事件仅包含前半句“要等十年”，遗漏了后半句关于开花和死亡的核心命题。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          9.813,
-          11.5
+          8.96,
+          12.64
         ]
       ],
       "output_intervals": []
     },
     {
-      "id": "S004.E_meaning.intent",
-      "reason": "源句是惊讶发现对方真实身份，并非温和劝说；语气急促且带确信感。",
-      "lost": 0.125,
+      "id": "S008.E_meaning.proposition",
+      "reason": "源文本转录错误，将肯定疑问句记成了否定陈述句。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          9.813,
-          11.5
+          25.96,
+          29.28
         ]
       ],
       "output_intervals": [
         [
-          9.46,
-          10.22
+          25.82,
+          28.24
         ]
       ]
     },
     {
-      "id": "S020.E_meaning.intent",
-      "reason": "源句实为请求给一分钟，笔记误判为否定挽回局面。",
-      "lost": 0.125,
+      "id": "S008.E_meaning.intent",
+      "reason": "源句为惊讶反问，delivery_note误判为纠正数字。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          65.825,
-          66.5
+          25.96,
+          29.28
         ]
       ],
       "output_intervals": [
         [
-          63.81,
-          66.27
+          25.82,
+          28.24
         ]
       ]
     },
     {
-      "id": "S004.E_events.window",
-      "reason": "源句为You are Frank，提交却将其错配至下一句羊的台词。",
-      "lost": 0.08333333333333333,
+      "id": "S009.E_meaning.proposition",
+      "reason": "瑞典语转录将fast(但是)错录为först(首先)，改变逻辑关系。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          9.813,
-          11.5
+          30.92,
+          34.16
+        ]
+      ],
+      "output_intervals": [
+        [
+          30.36,
+          33.1
+        ]
+      ]
+    },
+    {
+      "id": "S009.E_meaning.intent",
+      "reason": "delivery_note误判为词句不清，实为平稳陈述事实。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          30.92,
+          34.16
+        ]
+      ],
+      "output_intervals": [
+        [
+          30.36,
+          33.1
+        ]
+      ]
+    },
+    {
+      "id": "S012.E_meaning.proposition",
+      "reason": "瑞典语转录严重失真，将“Tycker inte jag”（我不这么认为）错录为问句。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          44.16,
+          47.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          45.88,
+          46.44
+        ]
+      ]
+    },
+    {
+      "id": "S012.E_meaning.intent",
+      "reason": "delivery_note标注为反问，但源语境中园丁是在平静地否定对方的悲伤观点。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          44.16,
+          47.96
+        ]
+      ],
+      "output_intervals": [
+        [
+          45.88,
+          46.44
+        ]
+      ]
+    },
+    {
+      "id": "S014.E_meaning.proposition",
+      "reason": "源事件为“该死...是，是，是！”，提交却记作“天哪！”丢失了肯定与咒骂语义。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          67.4,
+          69.4
         ]
       ],
       "output_intervals": []
     },
     {
-      "id": "S020.E_events.occurrence",
-      "reason": "源事件被合并入前一事件窗口，未作为独立条目单独记录呈现。",
-      "lost": 0.08333333333333333,
+      "id": "S014.E_meaning.intent",
+      "reason": "delivery_note“惊呼”与实际源句中连续快速重复的高昂兴奋语气不符。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          65.825,
-          66.5
+          67.4,
+          69.4
         ]
       ],
       "output_intervals": [
         [
-          63.81,
-          66.27
+          61.96,
+          63.36
         ]
       ]
     },
     {
-      "id": "S020.E_events.window",
-      "reason": "提交窗口将原属不同事件的台词错误合并，导致时间轴错置。",
-      "lost": 0.08333333333333333,
+      "id": "S016.E_meaning.proposition",
+      "reason": "瑞典语转录文本与实际音频不符，遗漏了核心的问候语和人名信息。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          63.81,
-          66.5
+          91.76,
+          94.72
         ]
       ],
       "output_intervals": [
         [
-          63.81,
-          66.27
+          90.82,
+          92.72
         ]
       ]
     },
     {
-      "id": "S002.E_roles.source_role",
-      "reason": "说话人应为绵羊弗兰克，但提交标记为维克托。",
-      "lost": 0.06250000000000001,
+      "id": "S016.E_meaning.intent",
+      "reason": "源句是轻柔的晨间问候并呼唤名字，并非单纯的轻声提醒记忆事项。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          4.0,
-          6.0
+          91.76,
+          94.72
         ]
       ],
       "output_intervals": [
         [
-          4.34,
-          4.72
+          90.82,
+          92.72
         ]
       ]
     },
     {
-      "id": "S021.E_roles.source_role",
-      "reason": "源画面为黑脸羊说话，提交却标为红发男子维克托。",
-      "lost": 0.06250000000000001,
+      "id": "S019.E_meaning.proposition",
+      "reason": "瑞典语文本缺失了关键的时间状语“i natt”（昨晚/今夜）。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          66.583,
-          69.27
+          117.22,
+          118.8
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S023.E_meaning.proposition",
+      "reason": "提交转录漏掉了老人强调自己干净的后续话语“Jag är ren!”，核心信息缺失。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          145.72,
+          149.68
         ]
       ],
       "output_intervals": [
         [
-          66.61,
-          69.19
+          144.92,
+          146.46
+        ],
+        [
+          147.56,
+          147.86
         ]
       ]
     },
     {
-      "id": "S023.E_roles.source_role",
-      "reason": "源音频中该句由弗兰克说出，提交错误地将其标记为维克托。",
-      "lost": 0.06250000000000001,
+      "id": "S023.E_meaning.intent",
+      "reason": "源句中老人的拒绝极其大声、沙哑且激动，提交仅标注为平淡的“短促拒绝”。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          74.12,
-          76.17
+          145.72,
+          149.68
         ]
       ],
       "output_intervals": [
         [
-          72.33,
-          75.41
+          144.92,
+          146.46
+        ],
+        [
+          147.56,
+          147.86
         ]
       ]
     },
     {
-      "id": "S002.V_display.sync",
-      "reason": "源画面为维克托张嘴，但输出中文配音却由弗兰克音色说出你好，角色与口型严重不符。",
-      "lost": 0.002777777777777778,
+      "id": "S024.E_meaning.proposition",
+      "reason": "源文本将hitta误写为hit，且提交声明截断了后半句。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          4.0,
-          6.0
+          246.88,
+          249.76
         ]
       ],
       "output_intervals": [
         [
-          4.34,
-          4.72
+          246.82,
+          254.52
         ]
       ]
     },
     {
-      "id": "S004.V_display.sync",
-      "reason": "源视频该时段为画外音无可见嘴部动作，输出却出现对应中文配音及字幕。",
-      "lost": 0.002777777777777778,
+      "id": "S031.E_meaning.proposition",
+      "reason": "提交声称源文为“planta eller natten”，实际发音是“hela natten”，篡改了原意。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          9.813,
-          11.5
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S032.E_meaning.proposition",
+      "reason": "瑞典语转录将sover（睡）错写成äter（吃），核心命题发生根本性改变。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          345.2,
+          348.32
         ]
       ],
       "output_intervals": [
         [
-          9.46,
-          10.22
+          344.76,
+          345.64
         ]
       ]
     },
     {
-      "id": "S006.V_display.safe_area",
-      "reason": "影院版中文字幕横压在弗兰克张开的嘴上，遮住部分口型",
-      "lost": 0.002777777777777778,
+      "id": "S032.E_meaning.intent",
+      "reason": "源意是回答睡眠少，提交误读为饮食少，delivery_note与实际意图不符。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          18.6,
-          18.64
+          345.2,
+          348.32
         ]
       ],
       "output_intervals": [
         [
-          18.6,
-          18.64
+          344.76,
+          345.64
         ]
       ]
     },
     {
-      "id": "S009.V_display.safe_area",
-      "reason": "切到羊脸近景后，底部中文行压住羊嘴，遮挡嘴部表情",
-      "lost": 0.002777777777777778,
+      "id": "S034.E_meaning.proposition",
+      "reason": "源事件包含园丁否认与Mette回应，提交却将两句话分别错配给不同角色并篡改语义。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          32.725,
-          32.765
+          365.6,
+          369.44
         ]
       ],
       "output_intervals": [
         [
-          32.725,
-          32.765
+          364.38,
+          368.82
         ]
       ]
     },
     {
-      "id": "S015.V_display.safe_area",
-      "reason": "影院版英文字幕虽在底部且清晰，却横压在羊张开的嘴上",
-      "lost": 0.002777777777777778,
+      "id": "S034.E_meaning.intent",
+      "reason": "将园丁平静的陈述误标为Mette的“克制地纠正”，完全偏离原意与角色。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          53.1,
-          53.14
+          365.6,
+          366.8
         ]
       ],
       "output_intervals": [
         [
-          53.1,
-          53.14
+          364.38,
+          365.48
         ]
       ]
     },
     {
-      "id": "S016.V_display.safe_area",
-      "reason": "影院帧的英文字幕末行压在羊的唇线上，遮住部分嘴部",
-      "lost": 0.002777777777777778,
+      "id": "S035.E_meaning.proposition",
+      "reason": "提交计划中完全没有保留S035的核心命题，相关文本被篡改为毫无关联的内容。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          55.515,
-          55.555
+          369.6,
+          372.84
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S035.E_meaning.intent",
+      "reason": "delivery_note标注为“追问身世”，符合源语境，但因整体事件对齐错误，该意图归属于错误的文本片段。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          369.6,
+          372.84
         ]
       ],
       "output_intervals": [
         [
-          55.515,
-          55.555
+          367.54,
+          368.82
         ]
       ]
     },
     {
-      "id": "S018.V_display.safe_area",
-      "reason": "影院字幕压在前景拦阻手势上，遮住部分手指和掌缘",
-      "lost": 0.002777777777777778,
+      "id": "S042.E_meaning.proposition",
+      "reason": "源文本vibrera mer被误转为liberera ner，改变核心语义。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          62.1,
-          62.14
+          481.48,
+          485.72
         ]
       ],
       "output_intervals": [
         [
-          62.1,
-          62.14
+          481.22,
+          485.42
         ]
       ]
     },
     {
-      "id": "S022.V_display.safe_area",
-      "reason": "影院版英文字幕盖住羊嘴上缘，遮挡部分口部动作",
-      "lost": 0.002777777777777778,
+      "id": "S042.E_meaning.intent",
+      "reason": "源意图是要求增强振动感，交付注仅泛称谈论物件不清。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          71.6,
-          71.64
+          481.48,
+          485.72
         ]
       ],
       "output_intervals": [
         [
-          71.6,
-          71.64
+          481.22,
+          485.42
         ]
       ]
     },
     {
-      "id": "S024.V_display.safe_area",
-      "reason": "院线版英文首行横跨羊的下口部，遮住部分嘴部轮廓",
-      "lost": 0.002777777777777778,
+      "id": "S044.E_meaning.intent",
+      "reason": "源句是直接的疑问确认，并非“半开玩笑”，且发音清晰而非词句不清。",
+      "lost": 0.060483870967741944,
       "source_intervals": [
         [
-          76.683,
-          76.723
+          492.78,
+          494.3
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S050.E_meaning.proposition",
+      "reason": "源句核心命题是询问是否有有趣的事发生，而译文仅表达数量疑问，丢失关键信息。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          574.36,
+          577.76
         ]
       ],
       "output_intervals": [
         [
-          76.683,
-          76.723
+          573.64,
+          574.9
+        ],
+        [
+          576.66,
+          577.66
+        ]
+      ]
+    },
+    {
+      "id": "S051.E_meaning.proposition",
+      "reason": "源句提及Harald，提交文本改为“他已经”，丢失了核心人物信息。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          580.2,
+          582.0
+        ]
+      ],
+      "output_intervals": [
+        [
+          580.06,
+          582.52
+        ]
+      ]
+    },
+    {
+      "id": "S052.E_meaning.proposition",
+      "reason": "源句意为“当然是墓园里的那个疯子”，提交转录误听为“我去过很多次墓园”。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          583.08,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          582.52,
+          584.58
+        ]
+      ]
+    },
+    {
+      "id": "S052.E_meaning.intent",
+      "reason": "源句带有强调和解释口吻，delivery_note仅描述为“平静补充”，不够准确。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          583.08,
+          585.92
+        ]
+      ],
+      "output_intervals": [
+        [
+          582.52,
+          584.58
+        ]
+      ]
+    },
+    {
+      "id": "S053.E_meaning.proposition",
+      "reason": "事件文本遗漏了关于月经的核心命题内容。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S053.E_meaning.intent",
+      "reason": "delivery_note称原声词句不清，实际发音清晰且情绪明确，描述与事实不符。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S054.E_meaning.proposition",
+      "reason": "源文本为“Men skit i honom nu.”，提交将其错误拆分并遗漏了代词“honom”。",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          596.32,
+          599.68
+        ]
+      ],
+      "output_intervals": [
+        [
+          595.7,
+          596.18
+        ],
+        [
+          596.72,
+          597.98
+        ],
+        [
+          597.98,
+          598.22
+        ]
+      ]
+    },
+    {
+      "id": "S056.E_meaning.intent",
+      "reason": "源句带不耐烦与轻蔑语气，交付说明仅写专注说明未体现情绪",
+      "lost": 0.060483870967741944,
+      "source_intervals": [
+        [
+          640.08,
+          644.76
+        ]
+      ],
+      "output_intervals": []
+    },
+    {
+      "id": "S030.A_identity.pitch",
+      "reason": "源音调较高属女性，输出音调低沉属男性，音高区间严重不匹配。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          318.44,
+          320.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          317.42,
+          318.82
+        ]
+      ]
+    },
+    {
+      "id": "S030.A_identity.texture",
+      "reason": "源声音自然柔和，输出呈现典型的Piper TTS颗粒感与僵硬质地。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          318.44,
+          320.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          317.42,
+          318.82
+        ]
+      ]
+    },
+    {
+      "id": "S030.A_identity.resonance",
+      "reason": "源共鸣清亮偏前，输出厚重且带有明显的机械合成感，特征不相容。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          318.44,
+          320.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          317.42,
+          318.82
+        ]
+      ]
+    },
+    {
+      "id": "S030.A_identity.identity",
+      "reason": "源为年轻女声，输出使用老年男声TTS，音色与角色完全不符。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          318.44,
+          320.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          317.42,
+          318.82
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_identity.1.pitch",
+      "reason": "TTS固定音高曲线平滑单调，缺乏源角色自然的音调变化和情感重音。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_identity.1.texture",
+      "reason": "音质干净无杂质，丢失了源角色可能具备的气声、沙哑或特定呼吸纹理。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_identity.1.resonance",
+      "reason": "声音共鸣特征为典型电子合成质感，缺失源真人嗓音的胸腔/头腔共振。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S031.A_identity.1.identity",
+      "reason": "源角色Ida为年轻女性，输出却使用通用女声TTS，非同一演员音色。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          340.24,
+          344.28
+        ]
+      ],
+      "output_intervals": [
+        [
+          340.08,
+          344.14
+        ]
+      ]
+    },
+    {
+      "id": "S047.A_identity.identity",
+      "reason": "输出使用通用TTS合成音，缺乏原角色特有的音色特征，无法辨认为同一人物。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          519.52,
+          521.2
+        ]
+      ],
+      "output_intervals": [
+        [
+          519.0,
+          519.86
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_identity.pitch",
+      "reason": "TTS音高平稳，缺乏源角色愤怒时的高亢起伏",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_identity.texture",
+      "reason": "TTS音质光滑，丢失源角色激动时的沙哑质感",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_identity.resonance",
+      "reason": "TTS共鸣单薄，与源角色饱满的胸腔共鸣不符",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S053.A_identity.identity",
+      "reason": "使用通用TTS音色，无法辨认为同一人物Ida",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          588.76,
+          592.72
+        ]
+      ],
+      "output_intervals": [
+        [
+          588.38,
+          590.12
+        ]
+      ]
+    },
+    {
+      "id": "S017.A_identity.1.pitch",
+      "reason": "原声音高低沉，输出音高明显偏高不符。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          103.94,
+          104.7
+        ]
+      ],
+      "output_intervals": [
+        [
+          102.26,
+          103.48
+        ]
+      ]
+    },
+    {
+      "id": "S017.A_identity.1.texture",
+      "reason": "完全丢失原声明显的沙哑和气声质感。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          103.94,
+          104.7
+        ]
+      ],
+      "output_intervals": [
+        [
+          102.26,
+          103.48
+        ]
+      ]
+    },
+    {
+      "id": "S017.A_identity.1.resonance",
+      "reason": "原声胸腔共鸣弱且干瘪，输出圆润饱满不符。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          103.94,
+          104.7
+        ]
+      ],
+      "output_intervals": [
+        [
+          102.26,
+          103.48
+        ]
+      ]
+    },
+    {
+      "id": "S017.A_identity.1.identity",
+      "reason": "原声为虚弱沙哑老妇，输出为清脆年轻TTS音色。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          103.94,
+          104.7
+        ]
+      ],
+      "output_intervals": [
+        [
+          102.26,
+          103.48
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_identity.1.pitch",
+      "reason": "源角色音调低沉苍老，中文配音音调偏高清脆，两者音高区间完全不兼容。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          117.22,
+          118.8
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          117.98
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_identity.1.texture",
+      "reason": "源角色带有明显的沙哑和气声质感，中文配音平滑干净，丢失了关键的音质纹理。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          117.22,
+          118.8
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          117.98
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_identity.1.resonance",
+      "reason": "源角色声音虚弱单薄，中文配音共鸣饱满有力，未能还原老人的生理声学特征。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          117.22,
+          118.8
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          117.98
+        ]
+      ]
+    },
+    {
+      "id": "S019.A_identity.1.identity",
+      "reason": "源角色（Marta）为老年女性，中文却使用了年轻女性（Mette）的声音进行配音，身份错乱。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          117.22,
+          118.8
+        ]
+      ],
+      "output_intervals": [
+        [
+          116.02,
+          117.98
+        ]
+      ]
+    },
+    {
+      "id": "S041.A_identity.pitch",
+      "reason": "配音音调偏高且平稳，不符合老年虚弱角色的音域。",
+      "lost": 0.15625,
+      "source_intervals": [
+        [
+          468.44,
+          471.44
+        ]
+      ],
+      "output_intervals": [
+        [
+          468.44,
+          471.44
         ]
       ]
     }
   ],
-  "total_score": 79.2227,
-  "passed": false,
-  "audio_coefficient": 0.840277777777778,
-  "formula": "(E20 + T10) * (A70 / 70) * V_coefficient * (100 / 30)",
-  "voice_review": {
-    "judge": "qwen3.8-omni-flash",
-    "scope": [
-      "A_identity",
-      "A_stable"
-    ],
-    "source": "aligned original dialogue and submitted isolated role tracks",
-    "method": "two independent reviews; independent third vote on disagreement; retain unresolved items",
-    "other_evidence": "prior fixed checklist decisions and measured delivery checks",
-    "targeted_review": "Standalone pair comparisons with source performance controls. Per-role macro averaging and original item weights."
+  "pending": 237,
+  "wer": {
+    "reference_words": 421,
+    "submitted_words": 736,
+    "edit_distance": 506,
+    "wer": 1.2019002375296912,
+    "score": 0
   },
-  "voice_evidence": [
-    {
-      "id": "S002.A_identity.pitch",
-      "answer": "no",
-      "reason": "源音频是Victor低沉的男声。但在对应的输出时间窗口内，实际发声的是Franck的角色轨道，其音调明显高于Victor，属于年轻男性的中高音区，音高完全不相容。",
-      "source_intervals": [
-        [
-          4.0,
-          6.0
-        ]
-      ],
-      "output_intervals": [
-        [
-          3.82,
-          6.12
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S002.A_identity.pitch",
-          "answer": "no",
-          "reason": "源音频是Victor低沉的男声。但在对应的输出时间窗口内，实际发声的是Franck的角色轨道，其音调明显高于Victor，属于年轻男性的中高音区，音高完全不相容。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        },
-        {
-          "id": "S002.A_identity.pitch",
-          "answer": "no",
-          "reason": "源音频中Victor的声音为中低音区；而实际输出的Franck轨道声音音调较高，属于中高音区，两者音高区间不相容。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S002.A_identity.texture",
-      "answer": "no",
-      "reason": "源音频具有标志性的沙哑和气声特质。然而，输出片段中听到的是Franck清晰、平滑且年轻的嗓音，缺乏Victor特有的颗粒感和呼吸噪音，音质特征不匹配。",
-      "source_intervals": [
-        [
-          4.0,
-          6.0
-        ]
-      ],
-      "output_intervals": [
-        [
-          3.82,
-          6.12
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S002.A_identity.texture",
-          "answer": "no",
-          "reason": "源音频具有标志性的沙哑和气声特质。然而，输出片段中听到的是Franck清晰、平滑且年轻的嗓音，缺乏Victor特有的颗粒感和呼吸噪音，音质特征不匹配。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        },
-        {
-          "id": "S002.A_identity.texture",
-          "answer": "no",
-          "reason": "源音频中Victor的声音带有明显的气声和沙哑质感；而实际输出的Franck轨道声音清晰明亮，缺乏气声和沙哑特征，音质纹理不匹配。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S002.A_identity.resonance",
-      "answer": "no",
-      "reason": "源声音表现出深厚的胸腔共鸣。相比之下，输出声音（来自Franck）显得更薄、更靠前，缺乏那种沉稳的低频共振感，厚薄特征不一致。",
-      "source_intervals": [
-        [
-          4.0,
-          6.0
-        ]
-      ],
-      "output_intervals": [
-        [
-          3.82,
-          6.12
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S002.A_identity.resonance",
-          "answer": "no",
-          "reason": "源声音表现出深厚的胸腔共鸣。相比之下，输出声音（来自Franck）显得更薄、更靠前，缺乏那种沉稳的低频共振感，厚薄特征不一致。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        },
-        {
-          "id": "S002.A_identity.resonance",
-          "answer": "no",
-          "reason": "源音频中Victor的声音具有深沉的胸腔共鸣；而实际输出的Franck轨道声音共鸣位置偏前，偏向口腔/鼻腔共鸣，厚薄特征不符。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S002.A_identity.identity",
-      "answer": "no",
-      "reason": "这是一个错误的角色路由。尽管标签为Victor，但实际播放的是Franck的声音。听众可以轻易分辨出这是两个不同的人：一个是苍老沙哑的Victor，另一个是清脆年轻的Franck。",
-      "source_intervals": [
-        [
-          4.0,
-          6.0
-        ]
-      ],
-      "output_intervals": [
-        [
-          3.82,
-          6.12
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S002.A_identity.identity",
-          "answer": "no",
-          "reason": "这是一个错误的角色路由。尽管标签为Victor，但实际播放的是Franck的声音。听众可以轻易分辨出这是两个不同的人：一个是苍老沙哑的Victor，另一个是清脆年轻的Franck。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        },
-        {
-          "id": "S002.A_identity.identity",
-          "answer": "no",
-          "reason": "实际输出的是Franck的声音轨道，其声学特征（高音调、明亮音色、靠前共鸣）与源人物Victor（低音调、气声沙哑、深沉共鸣）完全不同，无法辨认为同一人物。",
-          "source_intervals": [
-            [
-              4.0,
-              6.0
-            ]
-          ],
-          "output_intervals": [
-            [
-              3.82,
-              6.12
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S024.A_identity.pitch",
-      "answer": "no",
-      "reason": "源音频中Victor的声音是中高音调的清亮男声，而实际输出的音频（错误路由到了Franck的轨道）是极低沉的沙哑男声，音高区间完全不符。",
-      "source_intervals": [
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          76.07,
-          77.95
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S024.A_identity.pitch",
-          "answer": "no",
-          "reason": "源音频中Victor的声音是中高音调的清亮男声，而实际输出的音频（错误路由到了Franck的轨道）是极低沉的沙哑男声，音高区间完全不符。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        },
-        {
-          "id": "S024.A_identity.pitch",
-          "answer": "no",
-          "reason": "源音频是Victor原本较高、年轻的音调，但实际输出的音频（来自Franck轨道）是中低音调，音高区间不匹配。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S024.A_identity.texture",
-      "answer": "no",
-      "reason": "源音频中Victor的声音平滑干净，而实际输出的音频（错误路由到了Franck的轨道）充满了强烈的沙哑感和气声摩擦，音质特征截然相反。",
-      "source_intervals": [
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          76.07,
-          77.95
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S024.A_identity.texture",
-          "answer": "no",
-          "reason": "源音频中Victor的声音平滑干净，而实际输出的音频（错误路由到了Franck的轨道）充满了强烈的沙哑感和气声摩擦，音质特征截然相反。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        },
-        {
-          "id": "S024.A_identity.texture",
-          "answer": "no",
-          "reason": "源声音清脆直接，实际输出的声音（Franck轨道）带有标志性的沙哑和气声质感，纹理完全不同。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S024.A_identity.resonance",
-      "answer": "no",
-      "reason": "源音频中Victor的声音共鸣较轻快明亮，而实际输出的音频（错误路由到了Franck的轨道）展现出极其深沉厚重的胸腔共鸣，厚薄特征严重冲突。",
-      "source_intervals": [
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          76.07,
-          77.95
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S024.A_identity.resonance",
-          "answer": "no",
-          "reason": "源音频中Victor的声音共鸣较轻快明亮，而实际输出的音频（错误路由到了Franck的轨道）展现出极其深沉厚重的胸腔共鸣，厚薄特征严重冲突。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        },
-        {
-          "id": "S024.A_identity.resonance",
-          "answer": "no",
-          "reason": "源声音较薄，实际输出声音（Franck轨道）具有明显的胸腔厚度和低频共振，共鸣特征不符。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S024.A_identity.identity",
-      "answer": "no",
-      "reason": "实际输出的音频并非Victor的声音，而是另一个角色（Franck）的低沉沙哑嗓音，属于客观错误的角色轨道分配，无法辨认为同一人物。",
-      "source_intervals": [
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          76.07,
-          77.95
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S024.A_identity.identity",
-          "answer": "no",
-          "reason": "实际输出的音频并非Victor的声音，而是另一个角色（Franck）的低沉沙哑嗓音，属于客观错误的角色轨道分配，无法辨认为同一人物。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        },
-        {
-          "id": "S024.A_identity.identity",
-          "answer": "no",
-          "reason": "路由错误：预期应为Victor的台词，但实际播放的是Franck的声音（参考S022的特征），身份完全不匹配。",
-          "source_intervals": [
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              76.07,
-              77.95
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S013.A_identity.texture",
-      "answer": "no",
-      "reason": "源音频具有非常显著的沙哑、颗粒感和喉音摩擦（vocal fry），听起来像是一个年迈或声带受损的角色；而输出音频的声音相对干净、平滑，缺乏这种标志性的粗糙质感，更像是普通成年男性的声音。",
-      "source_intervals": [
-        [
-          47.415,
-          50.75
-        ]
-      ],
-      "output_intervals": [
-        [
-          47.235,
-          50.87
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S013.A_identity.texture",
-          "answer": "no",
-          "reason": "源音频具有非常显著的沙哑、颗粒感和喉音摩擦（vocal fry），听起来像是一个年迈或声带受损的角色；而输出音频的声音相对干净、平滑，缺乏这种标志性的粗糙质感，更像是普通成年男性的声音。",
-          "source_intervals": [
-            [
-              47.415,
-              50.75
-            ]
-          ],
-          "output_intervals": [
-            [
-              47.235,
-              50.87
-            ]
-          ]
-        },
-        {
-          "id": "S013.A_identity.texture",
-          "answer": "no",
-          "reason": "源声音带有明显的沙哑和颗粒感（raspy），而中文配音的声音非常平滑干净，缺乏这种可辨认的沙哑音质特征。",
-          "source_intervals": [
-            [
-              47.415,
-              50.75
-            ]
-          ],
-          "output_intervals": [
-            [
-              47.235,
-              50.87
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S013.A_identity.identity",
-      "answer": "no",
-      "reason": "尽管性别相同，但由于音色纹理（沙哑度）和共鸣特征的显著不同，排除语言因素后，无法将输出声音辨认为与源音频相同的特定角色。输出声音丢失了源角色独特的病态或苍老特征。",
-      "source_intervals": [
-        [
-          47.415,
-          50.75
-        ]
-      ],
-      "output_intervals": [
-        [
-          47.235,
-          50.87
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S013.A_identity.identity",
-          "answer": "no",
-          "reason": "尽管性别相同，但由于音色纹理（沙哑度）和共鸣特征的显著不同，排除语言因素后，无法将输出声音辨认为与源音频相同的特定角色。输出声音丢失了源角色独特的病态或苍老特征。",
-          "source_intervals": [
-            [
-              47.415,
-              50.75
-            ]
-          ],
-          "output_intervals": [
-            [
-              47.235,
-              50.87
-            ]
-          ]
-        },
-        {
-          "id": "S013.A_identity.identity",
-          "answer": "no",
-          "reason": "由于中文配音完全丢失了源声音标志性的沙哑/粗糙质感，听起来像是一个通用的平滑男声，无法在排除语言差异后辨认为同一特定人物。",
-          "source_intervals": [
-            [
-              47.415,
-              50.75
-            ]
-          ],
-          "output_intervals": [
-            [
-              47.235,
-              50.87
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S015.A_identity.texture",
-      "answer": "no",
-      "reason": "源音频再次展现了强烈的沙哑和撕裂感（gravelly/raspy texture）；相比之下，输出音频的声音过于圆润和平滑，完全缺失了源角色那种磨损的音质特征。",
-      "source_intervals": [
-        [
-          52.0,
-          53.833
-        ]
-      ],
-      "output_intervals": [
-        [
-          51.82,
-          53.952999999999996
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S015.A_identity.texture",
-          "answer": "no",
-          "reason": "源音频再次展现了强烈的沙哑和撕裂感（gravelly/raspy texture）；相比之下，输出音频的声音过于圆润和平滑，完全缺失了源角色那种磨损的音质特征。",
-          "source_intervals": [
-            [
-              52.0,
-              53.833
-            ]
-          ],
-          "output_intervals": [
-            [
-              51.82,
-              53.952999999999996
-            ]
-          ]
-        },
-        {
-          "id": "S015.A_identity.texture",
-          "answer": "no",
-          "reason": "源声音具有显著的沙哑和摩擦感（gravelly/raspy），这是该角色的核心听觉标识；而中文配音则是标准的平滑嗓音，完全缺失了这一关键纹理。",
-          "source_intervals": [
-            [
-              52.0,
-              53.833
-            ]
-          ],
-          "output_intervals": [
-            [
-              51.82,
-              53.952999999999996
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "S015.A_identity.identity",
-      "answer": "no",
-      "reason": "由于关键的沙哑质感和深厚共鸣的缺失，输出声音听起来像是一个普通的中年男性，而非源音频中那个具有特殊嗓音条件的角色，身份辨识度失败。",
-      "source_intervals": [
-        [
-          52.0,
-          53.833
-        ]
-      ],
-      "output_intervals": [
-        [
-          51.82,
-          53.952999999999996
-        ]
-      ],
-      "votes": [
-        {
-          "id": "S015.A_identity.identity",
-          "answer": "no",
-          "reason": "由于关键的沙哑质感和深厚共鸣的缺失，输出声音听起来像是一个普通的中年男性，而非源音频中那个具有特殊嗓音条件的角色，身份辨识度失败。",
-          "source_intervals": [
-            [
-              52.0,
-              53.833
-            ]
-          ],
-          "output_intervals": [
-            [
-              51.82,
-              53.952999999999996
-            ]
-          ]
-        },
-        {
-          "id": "S015.A_identity.identity",
-          "answer": "no",
-          "reason": "中文配音未能复现源人物独特的沙哑声线，导致其听起来像一个普通的男性角色，而非特定的Franck，身份辨识度失败。",
-          "source_intervals": [
-            [
-              52.0,
-              53.833
-            ]
-          ],
-          "output_intervals": [
-            [
-              51.82,
-              53.952999999999996
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "role.Victor.A_stable.stable",
-      "answer": "no",
-      "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
-      "source_intervals": [
-        [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "votes": [
-        {
-          "id": "role.Victor.A_stable.stable",
-          "answer": "no",
-          "reason": "对比样本发现音色不稳定：在1-3秒和37.17-39.75秒，Victor的输出为低沉、沙哑的男声；但在76.25-78.708秒，对应的台词被错误地分配给了Franck轨道，呈现出完全不同的年轻清亮男声，导致同一角色的声音身份发生断裂。",
-          "source_intervals": [
-            [
-              1.0,
-              3.0
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              1.0,
-              3.0
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ]
-        },
-        {
-          "id": "role.Victor.A_stable.stable",
-          "answer": "no",
-          "reason": "Stability fails because the third sample (76.25-78.708) assigned to Victor in the metadata is actually delivered on the Franck track. Comparing only the valid first two samples (1-3 and 37.17-39.75), the voice remains stable, but the inclusion of the misassigned clip breaks the consistency check for the named role across all provided instances.",
-          "source_intervals": [
-            [
-              1,
-              3
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              1,
-              3
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "role.Victor.A_stable.distinct",
-      "answer": "no",
-      "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
-      "source_intervals": [
-        [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "output_intervals": [
-        [
-          1.0,
-          3.0
-        ],
-        [
-          37.17,
-          39.75
-        ],
-        [
-          76.25,
-          78.708
-        ]
-      ],
-      "votes": [
-        {
-          "id": "role.Victor.A_stable.distinct",
-          "answer": "no",
-          "reason": "存在明显的声线交换：在76.25-78.708秒，源音频中属于Victor的台词“You would have one more minute...”在输出文件中出现在Franck轨道上，而Victor轨道为数字静音。这导致Victor的声音与其他角色发生了混淆和交换。",
-          "source_intervals": [
-            [
-              1.0,
-              3.0
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              1.0,
-              3.0
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ]
-        },
-        {
-          "id": "role.Victor.A_stable.distinct",
-          "answer": "no",
-          "reason": "Role distinction fails due to an exchange error. At interval 76.25-78.708, the source indicates Victor speaking, but the output places his lines on the Franck track while leaving the Victor track silent. Conversely, checking other intervals confirms roles are generally distinct, but this specific swap violates the requirement that roles remain distinct without exchanges.",
-          "source_intervals": [
-            [
-              1,
-              3
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ],
-          "output_intervals": [
-            [
-              1,
-              3
-            ],
-            [
-              37.17,
-              39.75
-            ],
-            [
-              76.25,
-              78.708
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "role.Franck.A_stable.stable",
-      "answer": "yes",
-      "reason": "四段音频均保持了沙哑、低沉且带有颗粒感的音色，角色声音特征在跨语言演绎中高度一致。",
-      "source_intervals": [
-        [
-          17,
-          20
-        ],
-        [
-          53.917,
-          57.333
-        ],
-        [
-          70.5,
-          73.417
-        ]
-      ],
-      "output_intervals": [
-        [
-          16.65,
-          19.88
-        ],
-        [
-          53.49,
-          57.07
-        ],
-        [
-          70.89,
-          71.85
-        ]
-      ],
-      "votes": [
-        {
-          "id": "role.Franck.A_stable.stable",
-          "answer": "yes",
-          "reason": "四段音频均保持了沙哑、低沉且带有颗粒感的音色，角色声音特征在跨语言演绎中高度一致。",
-          "source_intervals": [
-            [
-              17,
-              20
-            ],
-            [
-              53.917,
-              57.333
-            ],
-            [
-              70.5,
-              73.417
-            ]
-          ],
-          "output_intervals": [
-            [
-              16.65,
-              19.88
-            ],
-            [
-              53.49,
-              57.07
-            ],
-            [
-              70.89,
-              71.85
-            ]
-          ]
-        },
-        {
-          "id": "role.Franck.A_stable.stable",
-          "answer": "yes",
-          "reason": "在S022、S016、S013和S006中，Franck的普通话配音均保持了低沉沙哑且略带疲惫的音色特征，与英文原声的角色听感高度一致，未出现明显的音色断裂。",
-          "source_intervals": [
-            [
-              17,
-              20
-            ],
-            [
-              53.917,
-              57.333
-            ],
-            [
-              70.5,
-              73.417
-            ]
-          ],
-          "output_intervals": [
-            [
-              16.65,
-              19.88
-            ],
-            [
-              53.49,
-              57.07
-            ],
-            [
-              70.89,
-              71.85
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "role.Franck.A_stable.distinct",
-      "answer": "yes",
-      "reason": "Franck的音色低沉沙哑且带有明显的颗粒感，而Victor的音色相对清亮平滑，两者在音高和音质上存在显著差异。",
-      "source_intervals": [
-        [
-          17,
-          20
-        ],
-        [
-          53.917,
-          57.333
-        ],
-        [
-          70.5,
-          73.417
-        ]
-      ],
-      "output_intervals": [
-        [
-          16.65,
-          19.88
-        ],
-        [
-          53.49,
-          57.07
-        ],
-        [
-          70.89,
-          71.85
-        ]
-      ],
-      "votes": [
-        {
-          "id": "role.Franck.A_stable.distinct",
-          "answer": "yes",
-          "reason": "Franck的音色低沉沙哑且带有明显的颗粒感，而Victor的音色相对清亮平滑，两者在音高和音质上存在显著差异。",
-          "source_intervals": [
-            [
-              17,
-              20
-            ],
-            [
-              53.917,
-              57.333
-            ],
-            [
-              70.5,
-              73.417
-            ]
-          ],
-          "output_intervals": [
-            [
-              16.65,
-              19.88
-            ],
-            [
-              53.49,
-              57.07
-            ],
-            [
-              70.89,
-              71.85
-            ]
-          ]
-        },
-        {
-          "id": "role.Franck.A_stable.distinct",
-          "answer": "yes",
-          "reason": "Victor的音色低沉沙哑且带有明显的气声和颗粒感，而Franck的音色相对清亮平滑，两者在音高和质感上差异显著。",
-          "source_intervals": [
-            [
-              17,
-              20
-            ],
-            [
-              53.917,
-              57.333
-            ],
-            [
-              70.5,
-              73.417
-            ]
-          ],
-          "output_intervals": [
-            [
-              16.65,
-              19.88
-            ],
-            [
-              53.49,
-              57.07
-            ],
-            [
-              70.89,
-              71.85
-            ]
-          ]
-        }
-      ]
-    }
-  ]
+  "score_lower_bound": 5.3393,
+  "score_upper_bound": 17.775,
+  "voice_review": {
+    "clips": [
+      {
+        "role": "Mette",
+        "time": "487.84 秒",
+        "source": "variant-results/case-40/luna/voice-review/mette-2-source.m4a",
+        "output": "variant-results/case-40/luna/voice-review/mette-2-answer.m4a",
+        "verdict": "pending"
+      },
+      {
+        "role": "Mette",
+        "time": "708.80 秒",
+        "source": "variant-results/case-40/luna/voice-review/mette-3-source.m4a",
+        "output": "variant-results/case-40/luna/voice-review/mette-3-answer.m4a",
+        "verdict": "pending"
+      },
+      {
+        "role": "Ida",
+        "time": "318.44 秒",
+        "source": "variant-results/case-40/luna/voice-review/ida-1-source.m4a",
+        "output": "variant-results/case-40/luna/voice-review/ida-1-answer.m4a",
+        "verdict": "pending"
+      },
+      {
+        "role": "Ida",
+        "time": "340.24 秒",
+        "source": "variant-results/case-40/luna/voice-review/ida-2-source.m4a",
+        "output": "variant-results/case-40/luna/voice-review/ida-2-answer.m4a",
+        "verdict": "pending"
+      }
+    ]
+  }
 }

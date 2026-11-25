@@ -1,424 +1,1364 @@
 {
   "events": [
     {
-      "event_id": "S001",
+      "start": 1.24,
+      "end": 3.28,
+      "type": "speech",
+      "source_text": "Den blommar på natten.",
+      "zh_text": "它夜里开花。",
+      "delivery_note": "平静说明",
       "source_ids": [
         "S001"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "My name is Victor.",
-      "zh_text": "我叫维克托。",
-      "start": 1.01,
-      "end": 1.97,
-      "visible_speech": true,
-      "delivery_note": "自我介绍，平静清楚。"
+      "event_id": "E001",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S002",
+      "start": 5.98,
+      "end": 7.3,
+      "type": "speech",
+      "source_text": "Jag ser inga blommor.",
+      "zh_text": "我没看见花。",
+      "delivery_note": "困惑地观察",
       "source_ids": [
         "S002"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "Hi.",
-      "zh_text": "你好。",
-      "start": 4.34,
-      "end": 4.72,
-      "visible_speech": true,
-      "delivery_note": "短促、礼貌地回应。"
+      "event_id": "E002",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S003",
+      "start": 8.18,
+      "end": 9.54,
+      "type": "speech",
+      "source_text": "Det tar 10 år.",
+      "zh_text": "要等十年。",
+      "delivery_note": "补充说明",
       "source_ids": [
         "S003"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "And you are? You are Frank.",
-      "zh_text": "你呢？你是弗兰克。",
-      "start": 6.91,
-      "end": 10.22,
-      "visible_speech": true,
-      "delivery_note": "先询问名字，停顿后立即判断并称呼对方。",
-      "audio_segments": [
-        {
-          "start": 6.91,
-          "end": 7.43,
-          "text": "你呢？"
-        },
-        {
-          "start": 9.46,
-          "end": 10.22,
-          "text": "你是弗兰克。"
-        }
-      ]
+      "event_id": "E003",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S004",
+      "start": 11.16,
+      "end": 13.44,
+      "type": "speech",
+      "source_text": "Blommar den ena natten så dör den.",
+      "zh_text": "它只在一个夜晚开花，然后就死了。",
+      "delivery_note": "解释植物的短暂花期",
       "source_ids": [
         "S004"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "You are so much more than just a sheep, aren't you?",
-      "zh_text": "你可不只是一只羊，对吧？",
-      "start": 12.42,
-      "end": 15.56,
-      "visible_speech": false,
-      "delivery_note": "温和劝说，句末带确认意味。"
+      "event_id": "E004",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S005",
+      "start": 16.28,
+      "end": 17.08,
+      "type": "speech",
+      "source_text": "Han har åkat.",
+      "zh_text": "他已经出发了，",
+      "delivery_note": "带着惋惜，句子未完",
       "source_ids": [
         "S005"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "Yeah.",
-      "zh_text": "是啊。",
-      "start": 16.65,
-      "end": 17.14,
-      "visible_speech": false,
-      "delivery_note": "简短肯定，语气带些怀疑。"
+      "event_id": "E005",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S006",
+      "start": 17.08,
+      "end": 17.8,
+      "type": "speech",
+      "source_text": "Och väntat så länge.",
+      "zh_text": "还等了那么久。",
+      "delivery_note": "接续前句，带着惋惜",
       "source_ids": [
         "S006"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "How would you know?",
-      "zh_text": "你怎么知道？",
-      "start": 18.48,
-      "end": 19.88,
-      "visible_speech": true,
-      "delivery_note": "质疑而非认同，反问。"
+      "event_id": "E006",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S007",
+      "start": 21.52,
+      "end": 23.04,
+      "type": "speech",
+      "source_text": "Man får ta tid.",
+      "zh_text": "这事得花时间。",
+      "delivery_note": "平静回应",
       "source_ids": [
         "S007"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Look at you, you're an adventurer, Frank.",
-      "zh_text": "看看你，你是个冒险家，弗兰克。",
-      "start": 22.31,
-      "end": 24.37,
-      "visible_speech": true,
-      "delivery_note": "热情地举例，直接称呼弗兰克。"
+      "event_id": "E007",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S008",
+      "start": 25.82,
+      "end": 28.24,
+      "type": "speech",
+      "source_text": "Men han har verkligen inte väntat i tio år.",
+      "zh_text": "可他真的没有等十年。",
+      "delivery_note": "纠正前述数字",
       "source_ids": [
         "S008"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Just like me, you're a lone wolf.",
-      "zh_text": "你跟我一样，也是匹独行狼。",
-      "start": 25.65,
-      "end": 28.53,
-      "visible_speech": false,
-      "delivery_note": "把孤狼作为比喻，带一点犹豫。"
+      "event_id": "E008",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S009",
+      "start": 30.36,
+      "end": 33.1,
+      "type": "speech",
+      "source_text": "24 nästan först med olika planter.",
+      "zh_text": "二十四……差不多是最早种下的不同植物。",
+      "delivery_note": "原声此处词句不清，保留可辨信息",
       "source_ids": [
         "S009"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Tell me, does one choose to be alone?",
-      "zh_text": "告诉我，人能选择孤独吗？",
-      "start": 30.43,
-      "end": 33.59,
-      "visible_speech": false,
-      "delivery_note": "沉思式设问，突出是否能选择。"
+      "event_id": "E009",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S010",
+      "start": 35.96,
+      "end": 36.64,
+      "type": "speech",
+      "source_text": "Superkarkar!",
+      "zh_text": "太厉害了！",
+      "delivery_note": "兴奋短呼",
       "source_ids": [
         "S010"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "No, one doesn't.",
-      "zh_text": "不，人不会自己选孤独。",
-      "start": 34.59,
-      "end": 35.97,
-      "visible_speech": false,
-      "delivery_note": "明确否定前句的选择。"
+      "event_id": "E010",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S011",
+      "start": 37.06,
+      "end": 41.34,
+      "type": "speech",
+      "source_text": "Jag har tänkt på planter. Jag väntar hela livet och sen...",
+      "zh_text": "我一直在想那些植物。我等了一辈子，然后……",
+      "delivery_note": "迟疑，句中停顿",
       "source_ids": [
         "S011"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "One doesn't even choose to be a wolf.",
-      "zh_text": "人甚至不能选择当狼。",
-      "start": 36.77,
-      "end": 38.85,
-      "visible_speech": true,
-      "delivery_note": "接續解释，强调 even。"
+      "event_id": "E011",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S012",
+      "start": 41.34,
+      "end": 41.84,
+      "type": "speech",
+      "source_text": "...dör.",
+      "zh_text": "……它就死了。",
+      "delivery_note": "接上前句，失落",
+      "source_ids": [
+        "U001"
+      ],
+      "event_id": "E012",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 44.08,
+      "end": 45.42,
+      "type": "speech",
+      "source_text": "Fyra vad sårligt!",
+      "zh_text": "真是太难过了！",
+      "delivery_note": "感叹，原声词句不清",
+      "source_ids": [
+        "U002"
+      ],
+      "event_id": "E013",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 45.88,
+      "end": 46.44,
+      "type": "speech",
+      "source_text": "Tycker du det?",
+      "zh_text": "你真这么觉得？",
+      "delivery_note": "反问",
       "source_ids": [
         "S012"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Or does one?",
-      "zh_text": "还是说能选？",
-      "start": 41.66,
-      "end": 42.48,
-      "visible_speech": true,
-      "delivery_note": "回转成自我追问，轻微迟疑。"
+      "event_id": "E014",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
     },
     {
-      "event_id": "S013",
+      "start": 54.86,
+      "end": 56.38,
+      "type": "speech",
+      "source_text": "Tack för att du var här!",
+      "zh_text": "谢谢你来！",
+      "delivery_note": "热闹场景中的喊话",
       "source_ids": [
         "S013"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "Oh, Mr. Hector.",
-      "zh_text": "哦，赫克托先生。",
-      "start": 47.69,
-      "end": 50.51,
-      "visible_speech": true,
-      "delivery_note": "把对方误称为赫克托先生；Oh 后明显停顿。",
-      "audio_segments": [
-        {
-          "start": 47.69,
-          "end": 48.05,
-          "text": "哦，"
-        },
-        {
-          "start": 49.7,
-          "end": 50.51,
-          "text": "赫克托先生。"
-        }
-      ]
+      "event_id": "E015",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S014",
+      "start": 61.96,
+      "end": 63.36,
+      "type": "speech",
+      "source_text": "Gud!",
+      "zh_text": "天哪！",
+      "delivery_note": "惊呼",
       "source_ids": [
         "S014"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Victor, Victor.",
-      "zh_text": "维克托，维克托。",
-      "start": 50.89,
-      "end": 51.47,
-      "visible_speech": true,
-      "delivery_note": "立刻打断并重复自己的名字纠正对方。"
+      "event_id": "E016",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S015",
+      "start": 71.22,
+      "end": 74.02,
+      "type": "speech",
+      "source_text": "Nej, nej!",
+      "zh_text": "不要，不要！",
+      "delivery_note": "急促拒绝",
       "source_ids": [
         "S015"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "I don't know what you're on about,",
-      "zh_text": "我不知道你在说什么，",
-      "start": 51.83,
-      "end": 53.31,
-      "visible_speech": true,
-      "delivery_note": "否定自己理解對方的说法。"
+      "event_id": "E017",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S016",
+      "start": 74.56,
+      "end": 75.4,
+      "type": "speech",
+      "source_text": "Öppna!",
+      "zh_text": "开门！",
+      "delivery_note": "大声催促",
+      "source_ids": [
+        "U003"
+      ],
+      "event_id": "E018",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 76.28,
+      "end": 77.12,
+      "type": "speech",
+      "source_text": "Yes!",
+      "zh_text": "好耶！",
+      "delivery_note": "兴奋",
+      "source_ids": [
+        "U004"
+      ],
+      "event_id": "E019",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 90.82,
+      "end": 92.72,
+      "type": "speech",
+      "source_text": "Kom ihåg.",
+      "zh_text": "记住。",
+      "delivery_note": "轻声提醒",
       "source_ids": [
         "S016"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "but I'm just a sheep minding its own business.",
-      "zh_text": "不过我只是一只过自己日子的羊。",
-      "start": 53.49,
-      "end": 57.07,
-      "visible_speech": true,
-      "delivery_note": "转而自我定义，强调只是普通的羊。"
+      "event_id": "E020",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S017",
+      "start": 93.76,
+      "end": 94.94,
+      "type": "speech",
+      "source_text": "Prata.",
+      "zh_text": "说话。",
+      "delivery_note": "虚弱地催促",
+      "source_ids": [
+        "U005"
+      ],
+      "event_id": "E021",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 102.26,
+      "end": 103.48,
+      "type": "speech",
+      "source_text": "Hej.",
+      "zh_text": "嗨。",
+      "delivery_note": "温柔问候",
       "source_ids": [
         "S017"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "And I suggest you do the same.",
-      "zh_text": "我也劝你这么做。",
-      "start": 58.45,
-      "end": 60.61,
-      "visible_speech": false,
-      "delivery_note": "反向建议对方也别管闲事，语气坚定。"
+      "event_id": "E022",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S018",
+      "start": 104.78,
+      "end": 105.16,
+      "type": "speech",
+      "source_text": "Gå.",
+      "zh_text": "来。",
+      "delivery_note": "简短引导，原声较轻",
+      "source_ids": [
+        "U006"
+      ],
+      "event_id": "E023",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 106.66,
+      "end": 108.06,
+      "type": "speech",
+      "source_text": "Ska jag ta och sitta upp?",
+      "zh_text": "要不要坐起来？",
+      "delivery_note": "温和询问",
       "source_ids": [
         "S018"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "No, no, no, no, Frank, wait, wait, wait.",
-      "zh_text": "不，不，不，不，弗兰克，等等，等等，等等！",
-      "start": 61.24,
-      "end": 63.78,
-      "visible_speech": true,
-      "delivery_note": "重复拦阻，急切喊住对方。"
+      "event_id": "E024",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S019",
+      "start": 109.8,
+      "end": 110.46,
+      "type": "speech",
+      "source_text": "Så ska vi se.",
+      "zh_text": "我看看。",
+      "delivery_note": "安抚",
+      "source_ids": [
+        "U007"
+      ],
+      "event_id": "E025",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 116.02,
+      "end": 117.98,
+      "type": "speech",
+      "source_text": "Jag drömde om dig.",
+      "zh_text": "我梦见你了。",
+      "delivery_note": "亲近、平静",
       "source_ids": [
         "S019"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "No, this is not the way.",
-      "zh_text": "不，这不是办法。",
-      "start": 63.81,
-      "end": 66.27,
-      "visible_speech": true,
-      "delivery_note": "短暂停顿后否定，试图挽回局面。"
+      "event_id": "E026",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S020",
+      "start": 119.0,
+      "end": 119.78,
+      "type": "speech",
+      "source_text": "Ja, det är det.",
+      "zh_text": "是吗？",
+      "delivery_note": "轻声回应",
       "source_ids": [
         "S020"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Just give me one minute of your precious time.",
-      "zh_text": "就给我你宝贵的一分钟。",
-      "start": 66.61,
-      "end": 69.19,
-      "visible_speech": true,
-      "delivery_note": "请求对方给一分钟，珍贵一词带说服意味。"
+      "event_id": "E027",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
     },
     {
-      "event_id": "S021",
+      "start": 124.34,
+      "end": 125.36,
+      "type": "speech",
+      "source_text": "Vad är det?",
+      "zh_text": "怎么了？",
+      "delivery_note": "关切询问",
       "source_ids": [
         "S021"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "Precious time?",
-      "zh_text": "宝贵时间？",
-      "start": 70.89,
-      "end": 71.85,
-      "visible_speech": true,
-      "delivery_note": "反讽式重复对方的措辞。"
+      "event_id": "E028",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S022",
+      "start": 126.14,
+      "end": 126.94,
+      "type": "speech",
+      "source_text": "Varför lejnar du åt?",
+      "zh_text": "你为什么那样看我？",
+      "delivery_note": "原声词句含混，疑问",
       "source_ids": [
         "S022"
       ],
-      "type": "speech",
-      "speaker_id": "VICTOR",
-      "speaker_instance": "VICTOR_MALE_01",
-      "voice_id": "F5_VICTOR",
-      "source_text": "Yeah, just give me one minute.",
-      "zh_text": "对，就给我一分钟。",
-      "start": 72.33,
-      "end": 75.41,
-      "visible_speech": false,
-      "delivery_note": "先答应式回应，停顿后再次请求同一分钟。",
-      "audio_segments": [
-        {
-          "start": 72.33,
-          "end": 72.79,
-          "text": "对，"
-        },
-        {
-          "start": 74.21,
-          "end": 75.41,
-          "text": "就给我一分钟。"
-        }
-      ]
+      "event_id": "E029",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S023",
+      "start": 130.06,
+      "end": 132.06,
+      "type": "speech",
+      "source_text": "Titta här.",
+      "zh_text": "看这里。",
+      "delivery_note": "引导注意",
+      "source_ids": [
+        "U008"
+      ],
+      "event_id": "E030",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 134.52,
+      "end": 137.08,
+      "type": "speech",
+      "source_text": "Jag ska inte läsa.",
+      "zh_text": "我不会念的。",
+      "delivery_note": "安抚、承诺",
+      "source_ids": [
+        "U009"
+      ],
+      "event_id": "E031",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 144.92,
+      "end": 146.46,
+      "type": "speech",
+      "source_text": "Ska vi duscha?",
+      "zh_text": "我们去洗澡好吗？",
+      "delivery_note": "温和提议",
       "source_ids": [
         "S023"
       ],
-      "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "You would have one more minute,",
-      "zh_text": "你又能多要一分钟，",
-      "start": 76.07,
-      "end": 77.45,
-      "visible_speech": true,
-      "delivery_note": "指出对方还会接着多要时间。"
+      "event_id": "E032",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     },
     {
-      "event_id": "S024",
+      "start": 147.56,
+      "end": 147.86,
+      "type": "speech",
+      "source_text": "Nej.",
+      "zh_text": "不。",
+      "delivery_note": "短促拒绝",
+      "source_ids": [
+        "U010"
+      ],
+      "event_id": "E033",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 147.98,
+      "end": 149.08,
+      "type": "speech",
+      "source_text": "Ej!",
+      "zh_text": "哎！",
+      "delivery_note": "惊讶短呼",
+      "source_ids": [
+        "U011"
+      ],
+      "event_id": "E034",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 149.08,
+      "end": 150.0,
+      "type": "speech",
+      "source_text": "Det är sjön!",
+      "zh_text": "是湖！",
+      "delivery_note": "原声词句不清",
+      "source_ids": [
+        "U012"
+      ],
+      "event_id": "E035",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 246.82,
+      "end": 254.52,
+      "type": "speech",
+      "source_text": "Harald, jag tycker att din son är en stor idiot som inte kommer hitta hälsa på.",
+      "zh_text": "哈尔德，我觉得你儿子真是个混蛋，他根本不会来看你。",
+      "delivery_note": "直言不讳，明确未到访",
       "source_ids": [
         "S024"
       ],
+      "event_id": "E036",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 255.38,
+      "end": 258.24,
       "type": "speech",
-      "speaker_id": "FRANCK",
-      "speaker_instance": "FRANCK_MALE_01",
-      "voice_id": "F5_FRANCK",
-      "source_text": "wouldn't you?",
-      "zh_text": "对吧？",
-      "start": 77.57,
-      "end": 77.95,
-      "visible_speech": true,
-      "delivery_note": "以反问补上句末限定，不改成肯定陈述。"
+      "source_text": "Men om du vill så kan jag se till att han kommer hit.",
+      "zh_text": "但如果你愿意，我可以想办法让他过来。",
+      "delivery_note": "提出干预办法",
+      "source_ids": [
+        "S025"
+      ],
+      "event_id": "E037",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 259.1,
+      "end": 261.18,
+      "type": "speech",
+      "source_text": "Han kommer inte hit.",
+      "zh_text": "他不会来的。",
+      "delivery_note": "平静而固执，明确否定",
+      "source_ids": [
+        "S026"
+      ],
+      "event_id": "E038",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
+    },
+    {
+      "start": 262.14,
+      "end": 265.14,
+      "type": "speech",
+      "source_text": "Men när jag är död då kan han inte komma undan.",
+      "zh_text": "但等我死后，他就躲不掉了。",
+      "delivery_note": "保留死亡条件和否定范围",
+      "source_ids": [
+        "S027"
+      ],
+      "event_id": "E039",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
+    },
+    {
+      "start": 269.18,
+      "end": 270.38,
+      "type": "speech",
+      "source_text": "Då har han inget val.",
+      "zh_text": "那时他就别无选择。",
+      "delivery_note": "补足前句因果",
+      "source_ids": [
+        "S028"
+      ],
+      "event_id": "E040",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
+    },
+    {
+      "start": 312.68,
+      "end": 314.3,
+      "type": "speech",
+      "source_text": "Vad ska du?",
+      "zh_text": "你要去哪儿？",
+      "delivery_note": "询问",
+      "source_ids": [
+        "S029"
+      ],
+      "event_id": "E041",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 317.42,
+      "end": 318.82,
+      "type": "speech",
+      "source_text": "Ingenstans.",
+      "zh_text": "哪儿也不去。",
+      "delivery_note": "简短回答",
+      "source_ids": [
+        "S030"
+      ],
+      "event_id": "E042",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
+    },
+    {
+      "start": 325.18,
+      "end": 327.98,
+      "type": "speech",
+      "source_text": "Vad ska du?",
+      "zh_text": "你要做什么？",
+      "delivery_note": "追问",
+      "source_ids": [
+        "U013"
+      ],
+      "event_id": "E043",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 340.08,
+      "end": 342.68,
+      "type": "speech",
+      "source_text": "Håller du på att stirra på en planta eller natten?",
+      "zh_text": "你是在盯着一株植物，还是在看夜色？",
+      "delivery_note": "带一点调侃",
+      "source_ids": [
+        "S031"
+      ],
+      "event_id": "E044",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 343.26,
+      "end": 344.14,
+      "type": "speech",
+      "source_text": "Sover du aldrig?",
+      "zh_text": "你从来不睡觉吗？",
+      "delivery_note": "反问",
+      "source_ids": [
+        "S032"
+      ],
+      "event_id": "E045",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 344.76,
+      "end": 345.64,
+      "type": "speech",
+      "source_text": "Jag äter inte mycket.",
+      "zh_text": "我吃得不多。",
+      "delivery_note": "平静回答",
+      "source_ids": [
+        "S033"
+      ],
+      "event_id": "E046",
+      "speaker_id": "HARALD",
+      "speaker_instance": "HARALD",
+      "voice_id": "ZH-HARALD",
+      "visible_speech": true
+    },
+    {
+      "start": 347.1,
+      "end": 348.14,
+      "type": "speech",
+      "source_text": "Jag äter aldrig.",
+      "zh_text": "我从来不吃。",
+      "delivery_note": "反讽回应",
+      "source_ids": [
+        "S034"
+      ],
+      "event_id": "E047",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 364.38,
+      "end": 365.48,
+      "type": "speech",
+      "source_text": "Jag har inga föräldrar.",
+      "zh_text": "我没有父母。",
+      "delivery_note": "克制地纠正",
+      "source_ids": [
+        "S035"
+      ],
+      "event_id": "E048",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 365.96,
+      "end": 366.68,
+      "type": "speech",
+      "source_text": "Jag visste inte det.",
+      "zh_text": "我不知道。",
+      "delivery_note": "惊讶、收敛",
+      "source_ids": [
+        "U014"
+      ],
+      "event_id": "E049",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 367.54,
+      "end": 368.82,
+      "type": "speech",
+      "source_text": "Vem var du som hittade i skogen?",
+      "zh_text": "那你是在森林里被谁发现的？",
+      "delivery_note": "追问身世",
+      "source_ids": [
+        "U015"
+      ],
+      "event_id": "E050",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 369.3,
+      "end": 370.32,
+      "type": "speech",
+      "source_text": "Jag fick ett steg.",
+      "zh_text": "我挨了一脚。",
+      "delivery_note": "原声词句含混",
+      "source_ids": [
+        "U016"
+      ],
+      "event_id": "E051",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 381.74,
+      "end": 383.24,
+      "type": "speech",
+      "source_text": "Du har fått lite.",
+      "zh_text": "你得到了一点。",
+      "delivery_note": "安静说明，原声不完整",
+      "source_ids": [
+        "S036"
+      ],
+      "event_id": "E052",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 418.0,
+      "end": 420.8,
+      "type": "speech",
+      "source_text": "Det här talet. För att höra talet nu.",
+      "zh_text": "这个数字。现在要听这个数字。",
+      "delivery_note": "原声有遮蔽",
+      "source_ids": [
+        "S037"
+      ],
+      "event_id": "E053",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 425.4,
+      "end": 426.94,
+      "type": "speech",
+      "source_text": "Jag vet inte vad du sysslar med.",
+      "zh_text": "我不知道你在搞什么。",
+      "delivery_note": "不耐烦",
+      "source_ids": [
+        "S038"
+      ],
+      "event_id": "E054",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 457.84,
+      "end": 461.6,
+      "type": "speech",
+      "source_text": "Du är en dålig flicka.",
+      "zh_text": "你真是个坏女孩。",
+      "delivery_note": "带着戏谑责备",
+      "source_ids": [
+        "S039"
+      ],
+      "event_id": "E055",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 461.6,
+      "end": 464.18,
+      "type": "speech",
+      "source_text": "Du både kämmas!",
+      "zh_text": "你还害羞呢！",
+      "delivery_note": "继续戏谑",
+      "source_ids": [
+        "S040"
+      ],
+      "event_id": "E056",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 466.08,
+      "end": 470.0,
+      "type": "speech",
+      "source_text": "Jag vill bihålla henne!",
+      "zh_text": "我想留住她！",
+      "delivery_note": "急切，原声词句不清",
+      "source_ids": [
+        "S041"
+      ],
+      "event_id": "E057",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 481.22,
+      "end": 485.42,
+      "type": "speech",
+      "source_text": "Jag vill att den ska liberera lite ner. Det känns inte så mycket.",
+      "zh_text": "我想让它再往下一点。感觉不太明显。",
+      "delivery_note": "谈论物件，原声动词不清",
+      "source_ids": [
+        "S042"
+      ],
+      "event_id": "E058",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 486.4,
+      "end": 490.6,
+      "type": "speech",
+      "source_text": "Det är bara batteri, ja. Det är stink och någonting här inne.",
+      "zh_text": "只是电池。对，里面有股臭味，还有别的东西。",
+      "delivery_note": "先确认物件，再评论气味",
+      "source_ids": [
+        "S043"
+      ],
+      "event_id": "E059",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 492.5,
+      "end": 493.86,
+      "type": "speech",
+      "source_text": "Det är väl inte du, ensi?",
+      "zh_text": "总不会是你吧？",
+      "delivery_note": "半开玩笑，词句不清",
+      "source_ids": [
+        "S044"
+      ],
+      "event_id": "E060",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 497.38,
+      "end": 498.82,
+      "type": "speech",
+      "source_text": "De ska vara bra i sängen.",
+      "zh_text": "听说它们在床上很好用。",
+      "delivery_note": "低声调侃",
+      "source_ids": [
+        "S045"
+      ],
+      "event_id": "E061",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 499.62,
+      "end": 500.98,
+      "type": "speech",
+      "source_text": "Det är helt man behöver dem till.",
+      "zh_text": "这就是人们需要它们的用途。",
+      "delivery_note": "继续解释，原声含混",
+      "source_ids": [
+        "U017"
+      ],
+      "event_id": "E062",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 506.4,
+      "end": 507.78,
+      "type": "speech",
+      "source_text": "Vad är det som är stink?",
+      "zh_text": "什么东西这么臭？",
+      "delivery_note": "追问气味来源",
+      "source_ids": [
+        "S046"
+      ],
+      "event_id": "E063",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 507.78,
+      "end": 508.48,
+      "type": "speech",
+      "source_text": "Kom här.",
+      "zh_text": "过来。",
+      "delivery_note": "轻声招呼",
+      "source_ids": [
+        "S047"
+      ],
+      "event_id": "E064",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 519.0,
+      "end": 519.86,
+      "type": "speech",
+      "source_text": "Det är bara present.",
+      "zh_text": "这只是个礼物。",
+      "delivery_note": "轻松说明",
+      "source_ids": [
+        "S048"
+      ],
+      "event_id": "E065",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 525.14,
+      "end": 527.12,
+      "type": "speech",
+      "source_text": "Åh fy helvete.",
+      "zh_text": "噢，真见鬼！",
+      "delivery_note": "嫌恶惊呼",
+      "source_ids": [
+        "S049"
+      ],
+      "event_id": "E066",
+      "speaker_id": "ELSIE",
+      "speaker_instance": "ELSIE",
+      "voice_id": "ZH-ELSIE",
+      "visible_speech": true
+    },
+    {
+      "start": 528.26,
+      "end": 530.22,
+      "type": "speech",
+      "source_text": "Då kan vi lägga den under alls kudde.",
+      "zh_text": "那我们可以把它放到枕头底下。",
+      "delivery_note": "轻松提议",
+      "source_ids": [
+        "U018"
+      ],
+      "event_id": "E067",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 573.64,
+      "end": 574.9,
+      "type": "speech",
+      "source_text": "Hur mycket på gång?",
+      "zh_text": "有多少？",
+      "delivery_note": "原声含混，简短提问",
+      "source_ids": [
+        "S050"
+      ],
+      "event_id": "E068",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 576.66,
+      "end": 577.66,
+      "type": "speech",
+      "source_text": "Hände något roligt?",
+      "zh_text": "有什么好玩的事吗？",
+      "delivery_note": "随口问",
+      "source_ids": [
+        "S051"
+      ],
+      "event_id": "E069",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 580.06,
+      "end": 582.52,
+      "type": "speech",
+      "source_text": "Du vet, han har...",
+      "zh_text": "你知道，他已经……",
+      "delivery_note": "犹豫，被打断",
+      "source_ids": [
+        "S052"
+      ],
+      "event_id": "E070",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 582.52,
+      "end": 584.58,
+      "type": "speech",
+      "source_text": "Jag gick väldigt på kyrkogården, förstås.",
+      "zh_text": "我当然去过很多次墓园。",
+      "delivery_note": "平静补充",
+      "source_ids": [
+        "S053"
+      ],
+      "event_id": "E071",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 588.38,
+      "end": 590.12,
+      "type": "speech",
+      "source_text": "Du männisar, vad fan är det?",
+      "zh_text": "你们这些人，到底怎么回事？",
+      "delivery_note": "恼火，原声词句不清",
+      "source_ids": [
+        "S054"
+      ],
+      "event_id": "E072",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 595.7,
+      "end": 596.18,
+      "type": "speech",
+      "source_text": "Men...",
+      "zh_text": "可是……",
+      "delivery_note": "犹豫",
+      "source_ids": [
+        "U019"
+      ],
+      "event_id": "E073",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 596.72,
+      "end": 597.98,
+      "type": "speech",
+      "source_text": "Skit i håll, nån.",
+      "zh_text": "管它呢，谁在乎。",
+      "delivery_note": "烦躁，原声含混",
+      "source_ids": [
+        "U020"
+      ],
+      "event_id": "E074",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 597.98,
+      "end": 598.22,
+      "type": "speech",
+      "source_text": "Nu!",
+      "zh_text": "现在！",
+      "delivery_note": "短促插话",
+      "source_ids": [
+        "U021"
+      ],
+      "event_id": "E075",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 627.64,
+      "end": 631.94,
+      "type": "screen_text",
+      "source_text": "1. Ta bort fästningarna.",
+      "zh_text": "1. 移除固定物。",
+      "delivery_note": "画面文字，不配音；原字迹辨识不确定",
+      "source_ids": [
+        "S055"
+      ],
+      "event_id": "E076",
+      "speaker_id": "",
+      "speaker_instance": "",
+      "voice_id": "",
+      "visible_speech": false
+    },
+    {
+      "start": 631.98,
+      "end": 644.08,
+      "type": "speech",
+      "source_text": "Om två månader kommer den vara lika stor som högra hjärnhalvan. Det är på nätterna den växer; resten är oklart.",
+      "zh_text": "两个月后，它会和右半边大脑一样大。它在夜里生长；后半句听不清。",
+      "delivery_note": "专注说明；保留可辨的时间、右半边大脑比较和夜间生长",
+      "source_ids": [
+        "S056"
+      ],
+      "event_id": "E077",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 688.0,
+      "end": 689.5,
+      "type": "speech",
+      "source_text": "70 plus.",
+      "zh_text": "七十岁以上。",
+      "delivery_note": "像在念一则启事",
+      "source_ids": [
+        "S057"
+      ],
+      "event_id": "E078",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 689.5,
+      "end": 691.76,
+      "type": "speech",
+      "source_text": "Söker nog en kvinna.",
+      "zh_text": "想找一位女士。",
+      "delivery_note": "继续念启事",
+      "source_ids": [
+        "S058"
+      ],
+      "event_id": "E079",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 695.96,
+      "end": 698.14,
+      "type": "speech",
+      "source_text": "Det låter väl inte så farligt?",
+      "zh_text": "听起来没那么糟吧？",
+      "delivery_note": "试探、安慰",
+      "source_ids": [
+        "S059"
+      ],
+      "event_id": "E080",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 699.2,
+      "end": 701.36,
+      "type": "speech",
+      "source_text": "Jag tycker inte om att prata.",
+      "zh_text": "我不喜欢说话。",
+      "delivery_note": "平淡、坦率",
+      "source_ids": [
+        "S060"
+      ],
+      "event_id": "E081",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 701.96,
+      "end": 703.9,
+      "type": "speech",
+      "source_text": "Nej, vi passar inte bara att skriva.",
+      "zh_text": "不，我们不适合写信。",
+      "delivery_note": "回应，原声含混",
+      "source_ids": [
+        "S061"
+      ],
+      "event_id": "E082",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 704.7,
+      "end": 706.02,
+      "type": "speech",
+      "source_text": "Jag vill sofa.",
+      "zh_text": "我想睡觉。",
+      "delivery_note": "疲惫",
+      "source_ids": [
+        "U022"
+      ],
+      "event_id": "E083",
+      "speaker_id": "MARTA",
+      "speaker_instance": "MARTA",
+      "voice_id": "ZH-MARTA",
+      "visible_speech": true
+    },
+    {
+      "start": 708.8,
+      "end": 709.44,
+      "type": "speech",
+      "source_text": "Förlåt.",
+      "zh_text": "对不起。",
+      "delivery_note": "轻声道歉",
+      "source_ids": [
+        "S062"
+      ],
+      "event_id": "E084",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
+    },
+    {
+      "start": 718.58,
+      "end": 719.98,
+      "type": "speech",
+      "source_text": "Välkomna!",
+      "zh_text": "欢迎！",
+      "delivery_note": "远处招呼",
+      "source_ids": [
+        "U023"
+      ],
+      "event_id": "E085",
+      "speaker_id": "METTE",
+      "speaker_instance": "METTE",
+      "voice_id": "ZH-METTE",
+      "visible_speech": true
     }
   ]
 }

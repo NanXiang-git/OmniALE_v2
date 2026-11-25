@@ -1,45 +1,107 @@
 {
+  "source": "题包 original.wav 与对齐的 music_effects.wav 的差分，时间以 720 秒源片段的开头为零。",
+  "model": "本地 F5-TTS v1 Base 和 Vocos。部分补录对同一 F5 权重使用 oneDNN 动态 int8 线性层。语音参考仅取自题包。",
   "voices": [
     {
-      "speaker_id": "victor",
-      "voice_id": "f5_victor",
-      "method": "由本题源片对话条件化的离线 F5-TTS v1 Base 跨语言生成，使用 Vocos。对选中的普通话分句进行节拍编辑和动态处理。",
+      "speaker_id": "mette",
+      "method": "F5-TTS / Vocos 源声条件合成，按球赛欢呼、床边轻声、日常对话等不同表演剪辑。",
       "reference_intervals": [
         [
-          1.38,
-          4.76
+          5.8,
+          7.35
         ],
         [
-          34.96,
-          38.97
-        ],
-        [
-          66.4,
-          69.76
+          25.75,
+          28.4
         ]
       ],
-      "reference_source": "original.wav 的中置声道减去对齐的 M&E 估计背景。"
+      "reference_text": [
+        "Jag ser inga blommor.",
+        "Men har du verkligen väntat i tio år?"
+      ]
     },
     {
-      "speaker_id": "franck",
-      "voice_id": "f5_franck",
-      "method": "由本题源片对话条件化的离线 F5-TTS v1 Base 跨语言生成，使用 Vocos。另从本题原声差分保留一次无词干笑。",
+      "speaker_id": "harald",
+      "method": "F5-TTS / Vocos 源声条件合成，保留温室男子低声的音高与音质参考。",
       "reference_intervals": [
         [
-          51.84,
-          57.11
-        ],
-        [
-          72.43,
-          73.17
+          10.91,
+          13.52
         ]
       ],
-      "reference_source": "original.wav 的中置声道减去对齐的 M&E 估计背景。",
-      "non_speech_retained_intervals": [
+      "reference_text": [
+        "Blommar den en natt, sen så dör den."
+      ]
+    },
+    {
+      "speaker_id": "marta",
+      "method": "F5-TTS / Vocos 源声条件合成。床上的短拒声单独生成并作轻微音高和发声强度调整。",
+      "reference_intervals": [
         [
-          72.43,
-          73.17
+          116.61,
+          118.5
         ]
+      ],
+      "reference_text": [
+        "Jag drömde om dig innan."
+      ]
+    },
+    {
+      "speaker_id": "father",
+      "method": "F5-TTS / Vocos 源声条件合成，单一厨房老人参考贯穿其对白。",
+      "reference_intervals": [
+        [
+          261.72,
+          265.28
+        ]
+      ],
+      "reference_text": [
+        "Men när jag är död, då kan han inte komma undan."
+      ]
+    },
+    {
+      "speaker_id": "friend",
+      "method": "F5-TTS / Vocos 源声条件合成，球赛喊声单独调整强弱。无词笑喘使用源角色的短人声残差。",
+      "reference_intervals": [
+        [
+          313.13,
+          314.61
+        ]
+      ],
+      "reference_text": [
+        "Vart ska du?"
+      ],
+      "retained_non_speech": [
+        [
+          74.08,
+          74.48
+        ]
+      ]
+    },
+    {
+      "speaker_id": "elsie",
+      "method": "F5-TTS / Vocos 源声条件合成。玩偶对白通过轻微带宽和空间处理表现隔墙偷听。",
+      "reference_intervals": [
+        [
+          481.09,
+          483.6
+        ]
+      ],
+      "reference_text": [
+        "Jag vill att den ska vibrera lite mer."
+      ]
+    },
+    {
+      "speaker_id": "observer",
+      "method": "F5-TTS / Vocos 源声条件合成，用同一参考承接脑图解说的画内和画外段。",
+      "reference_intervals": [
+        [
+          631.85,
+          633.36
+        ]
+      ],
+      "reference_text": [
+        "Om två månader."
       ]
     }
   ]

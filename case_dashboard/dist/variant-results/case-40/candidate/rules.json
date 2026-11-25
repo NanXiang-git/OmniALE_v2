@@ -4,7 +4,7 @@
     "dub_zh.mp4",
     "mix.wav",
     "subtitles_zh.srt",
-    "subtitles_en.srt",
+    "subtitles_sv.srt",
     "bilingual.ass",
     "speakers.json",
     "translation_plan.json",
@@ -14,7 +14,7 @@
     "mobile_mix.wav",
     "mix_config.json",
     "continuity_ledger.json",
-    "transcript_en.txt",
+    "transcript_sv.txt",
     "transcript_zh.txt",
     "source_events.json",
     "voice_provenance.json"
@@ -38,7 +38,7 @@
       "group": "E",
       "within_group_weight": 0.4,
       "maximum": 8.0,
-      "label": "英文词序列准确性",
+      "label": "瑞典语词序列准确性",
       "method": "automatic",
       "unit": "points"
     },
@@ -187,7 +187,7 @@
     "E_meaning": [
       [
         "proposition",
-        "英文转录及事件声明是否保留本次源事件的核心命题、关系及限定方向？"
+        "瑞典语转录及事件声明是否保留本次源事件的核心命题、关系及限定方向？"
       ],
       [
         "intent",
@@ -285,7 +285,7 @@
       ],
       [
         "clean",
-        "实际混音是否无妨碍听辨的伪影、削波或英语双叠？"
+        "实际混音是否无妨碍听辨的伪影、削波或瑞典语双叠？"
       ],
       [
         "effects",
@@ -303,7 +303,7 @@
       ],
       [
         "burned",
-        "中英文字幕是否均实际烧录且对应交付文本？"
+        "中瑞双语字幕是否均实际烧录且对应交付文本？"
       ],
       [
         "safe_area",
@@ -326,7 +326,7 @@
     "global_review_weight": "only cross-scene check items; no double full-duration weighting",
     "no_answer": "pending, not zero"
   },
-  "source_reference_policy": "Official subtitles are coarse and may conflict with actual audio; label conflicts pending. WER is provisional until source speech transcript reviewed.",
+  "source_reference_policy": "English translation captions are timing and semantic hints. Actual source language is Swedish. Source listening and independent Swedish ASR supply an audit reference; irresolvable acoustic disagreements are pending.",
   "voice_minimum_policy": "No uncalibrated numeric identity gate. Identity/stability scores reported; entire-role identity swap remains critical gate.",
   "automatic_definitions": {
     "E_words": "max(0,1-word Levenshtein distance/reference word count); lowercase, punctuation ignored, screen labels removed, Fourty/40/forty normalized; no semantic paraphrase credit for English transcription",

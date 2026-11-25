@@ -1,404 +1,1541 @@
 {
   "events": [
     {
-      "event_id": "S001",
+      "event_id": "E001",
       "source_ids": [
         "S001"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "My name is Victor.",
-      "zh_text": "我叫维克托。",
-      "start": 1.33,
-      "end": 2.2,
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Den blommar på natten.",
+      "zh_text": "它呀，夜里才开花。",
+      "start": 1.06,
+      "end": 3.3,
       "visible_speech": true,
-      "delivery_note": "站着自我介绍。音量克制，名字说清，接着等回应。"
+      "delivery_note": "低声指出眼前的花，平静。"
     },
     {
-      "event_id": "S002",
+      "event_id": "E002",
       "source_ids": [
         "S002"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Hi.",
-      "zh_text": "嗨。",
-      "start": 4.44,
-      "end": 4.88,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Jag ser inga blommor.",
+      "zh_text": "我没看见花啊。",
+      "start": 5.83,
+      "end": 7.42,
       "visible_speech": true,
-      "delivery_note": "隔了一拍才补上一声轻轻的招呼，尾音落下。"
+      "delivery_note": "低头找花，轻声说出观察。"
     },
     {
-      "event_id": "S003",
+      "event_id": "E003",
       "source_ids": [
-        "S003"
-      ],
-      "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "And you are... You're Franck.",
-      "zh_text": "你是……你是弗兰克。",
-      "start": 6.94,
-      "end": 10.62,
-      "visible_speech": true,
-      "delivery_note": "先在弗兰克的反打镜头外试探地问。等不到回答，镜头切回后自己认出他并叫出名字。"
-    },
-    {
-      "event_id": "S004",
-      "source_ids": [
+        "S003",
         "S004"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Oh, you're so much more than just a sheep, aren't you?",
-      "zh_text": "哦，你可远不止是一只羊，对吧？",
-      "start": 12.44,
-      "end": 15.73,
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Det tar tio år.",
+      "zh_text": "得等上十年。",
+      "start": 7.98,
+      "end": 9.66,
       "visible_speech": true,
-      "delivery_note": "先在反打镜头外开口，重读夸赞的程度，顿一拍再抛出带引导意味的反问。"
+      "delivery_note": "朴素直说，重音落在十年。"
     },
     {
-      "event_id": "S005",
+      "event_id": "E005",
       "source_ids": [
         "S005"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "Yeah?",
-      "zh_text": "嗯？",
-      "start": 16.7,
-      "end": 17.3,
-      "visible_speech": false,
-      "delivery_note": "弗兰克在前景背面有一声猛然上扬的应声，介于开口回应和羊叫语气之间。维克托双手搭着，嘴基本合拢。"
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Blommar den en natt, sen så dör den.",
+      "zh_text": "只开一晚，然后它就死了。",
+      "start": 10.94,
+      "end": 13.55,
+      "visible_speech": true,
+      "delivery_note": "一晚后稍停，结尾收低。"
     },
     {
-      "event_id": "S006",
+      "event_id": "E006",
       "source_ids": [
         "S006"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "How would you know?",
-      "zh_text": "你怎么会知道？",
-      "start": 18.69,
-      "end": 20.25,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Hur orkar du vänta så länge?",
+      "zh_text": "等那么久，你怎么熬得住？",
+      "start": 16.1,
+      "end": 18.01,
       "visible_speech": true,
-      "delivery_note": "切到弗兰克。他不领情，带着疑心反问，重心在“知道”。"
+      "delivery_note": "带惊讶问本人怎么等得下去。"
     },
     {
-      "event_id": "S007",
+      "event_id": "E007",
       "source_ids": [
         "S007"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Look at you. You're an adventurer, Franck.",
-      "zh_text": "你看，你可是个冒险家，弗兰克。",
-      "start": 22.33,
-      "end": 24.7,
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Det här, det får ta tid.",
+      "zh_text": "这事啊，急不得。",
+      "start": 20.64,
+      "end": 23.08,
       "visible_speech": true,
-      "delivery_note": "维克托打量对方，摊手顺势恭维，落到对方的名字上。"
+      "delivery_note": "平静，接纳慢慢等。"
     },
     {
-      "event_id": "S008",
+      "event_id": "E008",
       "source_ids": [
         "S008"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Just like me. You're a lone wolf.",
-      "zh_text": "跟我一样。你是个独狼。",
-      "start": 25.9,
-      "end": 28.73,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Men har du verkligen väntat i tio år?",
+      "zh_text": "可你真等了十年吗？",
+      "start": 25.78,
+      "end": 28.39,
       "visible_speech": true,
-      "delivery_note": "弗兰克反打时维克托先拿自己作比。中间停一拍，切回维克托后才给对方贴“独狼”的比喻。"
+      "delivery_note": "转回当事人的实际年数，真字上挑。"
     },
     {
-      "event_id": "S009",
+      "event_id": "E009",
       "source_ids": [
         "S009"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Tell me, does one choose to be alone?",
-      "zh_text": "你说，人会自己选择孤身一人吗？",
-      "start": 30.57,
-      "end": 33.8,
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Tjugofyra nästan. Fast med olika plantor.",
+      "zh_text": "都快二十四年了。不过换过几株。",
+      "start": 30.27,
+      "end": 33.35,
       "visible_speech": true,
-      "delivery_note": "维克托连着发问。中段先抬高“选择”，空一拍才把独处的设问说完。后半句越过镜头切换。"
+      "delivery_note": "先答实数，再补充不是同一株。"
     },
     {
-      "event_id": "S010",
+      "event_id": "E010a",
       "source_ids": [
         "S010"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "No, one doesn't.",
-      "zh_text": "不，人不会。",
-      "start": 34.92,
-      "end": 36.13,
-      "visible_speech": true,
-      "delivery_note": "维克托接自己的问话，先落一个“不”，稍顿再确认。否定的是自己选择独处。"
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Du verkar …",
+      "zh_text": "你好像……",
+      "start": 35.12,
+      "end": 36.19,
+      "visible_speech": false,
+      "delivery_note": "迟疑开口，停在半句。"
     },
     {
-      "event_id": "S011",
+      "event_id": "E010b",
+      "source_ids": [
+        "S010"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Jag tänkte på plantan.",
+      "zh_text": "我是在想那株花。",
+      "start": 36.97,
+      "end": 38.45,
+      "visible_speech": true,
+      "delivery_note": "低男声说明他想的是植株，语声比上一句低。"
+    },
+    {
+      "event_id": "E011a",
       "source_ids": [
         "S011"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "One doesn't even choose to be a wolf.",
-      "zh_text": "连当狼都不是自己选的。",
-      "start": 37.12,
-      "end": 39.03,
-      "visible_speech": true,
-      "delivery_note": "同一人把否定推进一层，转到连是否成为狼都无从选择，重音落在“连”和“选”上。"
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Den väntar hela livet, och sen …",
+      "zh_text": "等了一辈子，然后……",
+      "start": 38.6,
+      "end": 40.7,
+      "visible_speech": false,
+      "delivery_note": "男声继续说下去，切到听者且尾部保留后面的悬停。"
     },
     {
-      "event_id": "S012",
+      "event_id": "E011b",
+      "source_ids": [
+        "S011"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "… dör.",
+      "zh_text": "……就死了。",
+      "start": 41.2,
+      "end": 41.96,
+      "visible_speech": false,
+      "delivery_note": "停顿后还是同一低男声落下，镜头在听者脸上。"
+    },
+    {
+      "event_id": "E012a",
       "source_ids": [
         "S012"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Or does one?",
-      "zh_text": "还是能选？",
-      "start": 41.91,
-      "end": 42.65,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Fan vad sorgligt.",
+      "zh_text": "真他妈让人难过。",
+      "start": 44.14,
+      "end": 45.54,
       "visible_speech": true,
-      "delivery_note": "停过一个完整节拍之后，维克托又试探性地把刚才的结论翻成疑问。"
+      "delivery_note": "感伤，粗口短促，不发怒。"
     },
     {
-      "event_id": "S013",
+      "event_id": "E012b",
+      "source_ids": [
+        "S012"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Tycker inte jag.",
+      "zh_text": "我倒不觉得。",
+      "start": 45.57,
+      "end": 46.53,
+      "visible_speech": true,
+      "delivery_note": "低声接话，有分寸地反驳。"
+    },
+    {
+      "event_id": "E013a",
       "source_ids": [
         "S013"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "Well, Mr. Hector...",
-      "zh_text": "呃……赫克托先生……",
-      "start": 47.36,
-      "end": 50.69,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ja!",
+      "zh_text": "好耶！",
+      "start": 55.9,
+      "end": 56.49,
       "visible_speech": true,
-      "delivery_note": "弗兰克拖了一拍才开口，半吞半吐地误叫赫克托。尾巴被对方接过去。"
+      "delivery_note": "进球举手，爆发式欢呼。"
     },
     {
-      "event_id": "S014",
+      "event_id": "E013b",
+      "source_ids": [
+        "S013"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ja!",
+      "zh_text": "好耶！",
+      "start": 60.49,
+      "end": 61.65,
+      "visible_speech": true,
+      "delivery_note": "俯身笑着喊，尾音比前次轻。"
+    },
+    {
+      "event_id": "E014a",
       "source_ids": [
         "S014"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Victor. Victor.",
-      "zh_text": "维克托，维克托。",
-      "start": 50.58,
-      "end": 51.7,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ja!",
+      "zh_text": "好耶！",
+      "start": 65.04,
+      "end": 66.28,
       "visible_speech": true,
-      "delivery_note": "维克托抢拍截住误称。同一个真名说两次，第一次纠正，第二次更短更明确。"
+      "delivery_note": "边打边喊，咬字快。"
     },
     {
-      "event_id": "S015",
+      "event_id": "E014b",
+      "source_ids": [
+        "S014"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Ja, ja, ja!",
+      "zh_text": "好，好，好！",
+      "start": 67.9,
+      "end": 68.92,
+      "visible_speech": true,
+      "delivery_note": "桌子另一侧急促连喊。"
+    },
+    {
+      "event_id": "E014c",
+      "source_ids": [
+        "S014"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Fan!",
+      "zh_text": "该死！",
+      "start": 69.35,
+      "end": 70.14,
+      "visible_speech": false,
+      "delivery_note": "隔着冰球台的懊恼短喊。"
+    },
+    {
+      "event_id": "E015a",
       "source_ids": [
         "S015"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "I don't know what you're on about,",
-      "zh_text": "我不知道你在说什么，",
-      "start": 51.91,
-      "end": 53.44,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ja, ja!",
+      "zh_text": "好！好！",
+      "start": 71.55,
+      "end": 72.77,
       "visible_speech": true,
-      "delivery_note": "弗兰克接回话头，带着不耐烦，否定的是听懂维克托在讲什么。"
+      "delivery_note": "扬起手时重复欢呼，第二声更高。"
     },
     {
-      "event_id": "S016",
+      "event_id": "E015e",
+      "source_ids": [
+        "S015"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Jävlar, nej!",
+      "zh_text": "哎呀，不行！",
+      "start": 73.02,
+      "end": 74.0,
+      "visible_speech": true,
+      "delivery_note": "进球落空后的烦急爆发，接在笑喊后。"
+    },
+    {
+      "event_id": "E015b",
+      "source_ids": [
+        "S015"
+      ],
+      "type": "non_speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "",
+      "zh_text": "",
+      "start": 73.9,
+      "end": 74.53,
+      "visible_speech": true,
+      "delivery_note": "桌子另一边笑喘，保留无词的声响。"
+    },
+    {
+      "event_id": "E015d",
+      "source_ids": [
+        "S015"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Öppna!",
+      "zh_text": "开啊！",
+      "start": 74.63,
+      "end": 75.52,
+      "visible_speech": true,
+      "delivery_note": "金发同伴大声催开，贴着球台动作。"
+    },
+    {
+      "event_id": "E015c",
+      "source_ids": [
+        "S015"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Yes!",
+      "zh_text": "耶！",
+      "start": 76.13,
+      "end": 77.03,
+      "visible_speech": false,
+      "delivery_note": "跨到出门镜头前的最后一声，短而亮。"
+    },
+    {
+      "event_id": "E016a",
       "source_ids": [
         "S016"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "but I'm just a sheep minding its own business.",
-      "zh_text": "可我就是一只羊，只管自己的事。",
-      "start": 53.45,
-      "end": 57.24,
-      "visible_speech": true,
-      "delivery_note": "转折后先划清自己的身份，再强调只管自己的事，尾部放缓。"
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "God morgon.",
+      "zh_text": "早上好。",
+      "start": 91.39,
+      "end": 92.37,
+      "visible_speech": false,
+      "delivery_note": "扶着肩膀唤醒床上的梅尔塔。"
     },
     {
-      "event_id": "S017",
+      "event_id": "E016b",
+      "source_ids": [
+        "S016"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "God morgon, Märta.",
+      "zh_text": "梅尔塔，早上好。",
+      "start": 94.0,
+      "end": 95.24,
+      "visible_speech": true,
+      "delivery_note": "先没有回应，再贴近轻声叫她的名字。"
+    },
+    {
+      "event_id": "E017a",
       "source_ids": [
         "S017"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "And I suggest you do the same.",
-      "zh_text": "我劝你也只管自己的事。",
-      "start": 58.54,
-      "end": 60.71,
-      "visible_speech": true,
-      "delivery_note": "弗兰克把刚说的处事原则反向丢给维克托。语气是冷冷的劝止，镜头先在对方脸上。"
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "God morgon.",
+      "zh_text": "早上好。",
+      "start": 101.68,
+      "end": 103.13,
+      "visible_speech": false,
+      "delivery_note": "低声重复，等她醒来。"
     },
     {
-      "event_id": "S018",
+      "event_id": "E017b",
+      "source_ids": [
+        "S017"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Hej.",
+      "zh_text": "你好。",
+      "start": 103.19,
+      "end": 103.63,
+      "visible_speech": true,
+      "delivery_note": "刚醒，略沙哑的短答。"
+    },
+    {
+      "event_id": "E017c",
+      "source_ids": [
+        "S017"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "God morgon.",
+      "zh_text": "早上好。",
+      "start": 104.48,
+      "end": 105.44,
+      "visible_speech": true,
+      "delivery_note": "贴近且带笑地再问候一次。"
+    },
+    {
+      "event_id": "E018a",
       "source_ids": [
         "S018"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "No, no, no, no! Franck! Wait, wait, wait!",
-      "zh_text": "不、不、不、不！弗兰克！等、等、等等！",
-      "start": 61.3,
-      "end": 63.38,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ska vi ta och sitta upp?",
+      "zh_text": "来，咱们坐起来？",
+      "start": 106.52,
+      "end": 108.2,
       "visible_speech": true,
-      "delivery_note": "维克托先冒出一个“不”，举手时三个“不”挤在一起。喊名字后连续三次叫他等，后半切到维克托的嘴。"
+      "delivery_note": "一边商量一边搀扶。"
     },
     {
-      "event_id": "S019",
+      "event_id": "E018b",
+      "source_ids": [
+        "S018"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Så ska vi se.",
+      "zh_text": "来，慢慢来。",
+      "start": 109.34,
+      "end": 110.55,
+      "visible_speech": true,
+      "delivery_note": "用力时压低的安抚声。"
+    },
+    {
+      "event_id": "E019a",
       "source_ids": [
         "S019"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "No. This is not...",
-      "zh_text": "不……不能……",
-      "start": 63.91,
-      "end": 65.21,
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Jag drömde om dig innan.",
+      "zh_text": "我刚才梦到你了。",
+      "start": 116.58,
+      "end": 118.53,
       "visible_speech": true,
-      "delivery_note": "手势过后，维克托低一层重启，说了“不”又停住，否定句悬在半空中。"
+      "delivery_note": "醒后露出笑，带气息的悄声。"
     },
     {
-      "event_id": "S020",
+      "event_id": "E019b",
+      "source_ids": [
+        "S019"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Gjorde du det?",
+      "zh_text": "是吗？",
+      "start": 118.99,
+      "end": 119.85,
+      "visible_speech": true,
+      "delivery_note": "笑着往上挑的短问。"
+    },
+    {
+      "event_id": "E020a",
       "source_ids": [
         "S020"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "...the way.",
-      "zh_text": "……这么做。",
-      "start": 65.88,
-      "end": 66.37,
-      "visible_speech": false,
-      "delivery_note": "镜头已经切开，这一小截从画外把上一句接完。尾音收住，留出下一次请求的起拍。"
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ska jag känna mig rädd, eller?",
+      "zh_text": "那我该害怕吗？",
+      "start": 121.39,
+      "end": 123.17,
+      "visible_speech": true,
+      "delivery_note": "笑着逗她，不是真的害怕。"
     },
     {
-      "event_id": "S021",
+      "event_id": "E020b",
+      "source_ids": [
+        "S020"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Vad är det?",
+      "zh_text": "这是什么？",
+      "start": 124.31,
+      "end": 125.3,
+      "visible_speech": true,
+      "delivery_note": "注意到手里的东西。"
+    },
+    {
+      "event_id": "E020c",
+      "source_ids": [
+        "S020"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Vad flinar du åt?",
+      "zh_text": "你笑什么呀？",
+      "start": 125.93,
+      "end": 127.05,
+      "visible_speech": false,
+      "delivery_note": "问梅特在笑什么，眼神已转向她。"
+    },
+    {
+      "event_id": "E021",
       "source_ids": [
         "S021"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Just give me one minute of your precious time.",
-      "zh_text": "就耽误你一分钟宝贵的时间。",
-      "start": 66.52,
-      "end": 69.33,
-      "visible_speech": false,
-      "delivery_note": "坐下的维克托放软声音提出请求，一分钟四字的数字部分要清澈，后半“宝贵的时间”略带讨好。"
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Titta.",
+      "zh_text": "你看。",
+      "start": 129.6,
+      "end": 130.63,
+      "visible_speech": true,
+      "delivery_note": "笑着把东西递过去。"
     },
     {
-      "event_id": "S022",
+      "event_id": "E022",
       "source_ids": [
         "S022"
       ],
       "type": "speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "Precious time.",
-      "zh_text": "宝贵的时间？",
-      "start": 70.48,
-      "end": 72.25,
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Jag ska inte läsa.",
+      "zh_text": "我才不看。",
+      "start": 135.71,
+      "end": 137.29,
       "visible_speech": true,
-      "delivery_note": "弗兰克抬起嘴角，把对方的话冷冷重复出来。中间咬出空拍，带反讽和质疑。"
+      "delivery_note": "把眼光移开，声音冷下来。"
     },
     {
-      "event_id": "S022-2",
-      "source_ids": [
-        "S022"
-      ],
-      "type": "non_speech",
-      "speaker_id": "franck",
-      "speaker_instance": "franck_adult_sheep",
-      "voice_id": "f5_franck",
-      "source_text": "",
-      "zh_text": "",
-      "start": 72.39,
-      "end": 73.22,
-      "visible_speech": true,
-      "delivery_note": "反讽后弗兰克嘴角露齿，有三下短促的干笑。保留独立的原声反应，末尾很轻。"
-    },
-    {
-      "event_id": "S023",
+      "event_id": "E023a",
       "source_ids": [
         "S023"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "Yeah, just give me one minute.",
-      "zh_text": "对，就给我一分钟。",
-      "start": 74.03,
-      "end": 75.57,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ska vi duscha?",
+      "zh_text": "咱们洗个澡吧？",
+      "start": 145.03,
+      "end": 146.57,
       "visible_speech": false,
-      "delivery_note": "维克托稳住声量，先承接对方的反讽，再直截了当重提同样的一分钟。"
+      "delivery_note": "从床边画外柔声提议。"
     },
     {
-      "event_id": "S024",
+      "event_id": "E023b",
+      "source_ids": [
+        "S023"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Nej!",
+      "zh_text": "不要！",
+      "start": 147.65,
+      "end": 148.15,
+      "visible_speech": true,
+      "delivery_note": "枕上突然尖声拒绝。"
+    },
+    {
+      "event_id": "E023c",
+      "source_ids": [
+        "S023"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Inte igen!",
+      "zh_text": "又来！",
+      "start": 149.01,
+      "end": 150.26,
+      "visible_speech": true,
+      "delivery_note": "拒绝之后烦躁地再顶一句。"
+    },
+    {
+      "event_id": "E024",
       "source_ids": [
         "S024"
       ],
       "type": "speech",
-      "speaker_id": "victor",
-      "speaker_instance": "victor_adult",
-      "voice_id": "f5_victor",
-      "source_text": "You would have one more minute, wouldn't you?",
-      "zh_text": "你总还有一分钟吧？",
-      "start": 76.15,
-      "end": 78.13,
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Jag tycker att din son är en stor idiot",
+      "zh_text": "我看你儿子真是个混蛋，",
+      "start": 247.87,
+      "end": 252.46,
       "visible_speech": false,
-      "delivery_note": "维克托继续追问还能不能给一分钟。弗兰克在前景收拢嘴、垂眼听，句尾仍来自画外的维克托。"
+      "delivery_note": "替老人鸣不平，先落到对儿子的评价。"
+    },
+    {
+      "event_id": "E025",
+      "source_ids": [
+        "S025"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "som inte kommer hit och hälsar på.",
+      "zh_text": "都不来这儿看看你。",
+      "start": 252.47,
+      "end": 254.7,
+      "visible_speech": true,
+      "delivery_note": "说清到访没有发生，接上刚才的判断。"
+    },
+    {
+      "event_id": "E026",
+      "source_ids": [
+        "S026"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Men om du vill, så kan jag se till att han kommer hit.",
+      "zh_text": "不过你要是愿意，我能让他来。",
+      "start": 255.26,
+      "end": 258.43,
+      "visible_speech": true,
+      "delivery_note": "口气放软，条件在前，强调可以代为出面。"
+    },
+    {
+      "event_id": "E027a",
+      "source_ids": [
+        "S027"
+      ],
+      "type": "speech",
+      "speaker_id": "father",
+      "speaker_instance": "father_kitchen",
+      "voice_id": "father_f5",
+      "source_text": "Han kommer inte hit.",
+      "zh_text": "他不会来的。",
+      "start": 259.42,
+      "end": 261.02,
+      "visible_speech": false,
+      "delivery_note": "低沉干涩，对提议不抱希望。"
+    },
+    {
+      "event_id": "E027b",
+      "source_ids": [
+        "S027"
+      ],
+      "type": "speech",
+      "speaker_id": "father",
+      "speaker_instance": "father_kitchen",
+      "voice_id": "father_f5",
+      "source_text": "Men när jag är död, då kan han inte komma undan.",
+      "zh_text": "等我死了，他就躲不掉了。",
+      "start": 261.74,
+      "end": 265.3,
+      "visible_speech": true,
+      "delivery_note": "先停再说死后的条件，语气笃定。"
+    },
+    {
+      "event_id": "E028",
+      "source_ids": [
+        "S028"
+      ],
+      "type": "speech",
+      "speaker_id": "father",
+      "speaker_instance": "father_kitchen",
+      "voice_id": "father_f5",
+      "source_text": "Då har han inget val.",
+      "zh_text": "到那时他没得选。",
+      "start": 268.98,
+      "end": 270.51,
+      "visible_speech": true,
+      "delivery_note": "压低收尾，接续未来条件。"
+    },
+    {
+      "event_id": "E029",
+      "source_ids": [
+        "S029"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Vart ska du?",
+      "zh_text": "你去哪儿？",
+      "start": 313.16,
+      "end": 314.59,
+      "visible_speech": true,
+      "delivery_note": "站在门里，试探着问。"
+    },
+    {
+      "event_id": "E030",
+      "source_ids": [
+        "S030"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ingenstans.",
+      "zh_text": "哪儿也不去。",
+      "start": 317.63,
+      "end": 319.0,
+      "visible_speech": true,
+      "delivery_note": "穿外套回头随口搪塞。"
+    },
+    {
+      "event_id": "E031",
+      "source_ids": [
+        "S031"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Håller du på och stirrar på en planta hela natten?",
+      "zh_text": "你就整晚盯着一株花看吗？",
+      "start": 339.95,
+      "end": 343.09,
+      "visible_speech": true,
+      "delivery_note": "真心好奇，整晚是问句重心。"
+    },
+    {
+      "event_id": "E032a",
+      "source_ids": [
+        "S032"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Sover du aldrig?",
+      "zh_text": "你从来不睡吗？",
+      "start": 343.14,
+      "end": 344.18,
+      "visible_speech": true,
+      "delivery_note": "紧接追问；提高句尾。"
+    },
+    {
+      "event_id": "E032b",
+      "source_ids": [
+        "S032"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Nej, inte mycket.",
+      "zh_text": "睡得不多。",
+      "start": 344.73,
+      "end": 345.66,
+      "visible_speech": false,
+      "delivery_note": "画外低声作答。"
+    },
+    {
+      "event_id": "E032c",
+      "source_ids": [
+        "S032"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Nej, inte alls.",
+      "zh_text": "根本没睡嘛。",
+      "start": 347.02,
+      "end": 348.26,
+      "visible_speech": true,
+      "delivery_note": "轻声把程度再推一步。"
+    },
+    {
+      "event_id": "E033a",
+      "source_ids": [
+        "S033"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Du är lite knäpp, eller hur?",
+      "zh_text": "你这人有点怪，对吧？",
+      "start": 359.8,
+      "end": 361.36,
+      "visible_speech": false,
+      "delivery_note": "对方端杯时画外起句，半认真半试探。"
+    },
+    {
+      "event_id": "E033b",
+      "source_ids": [
+        "S033"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Du tappade väl bort dina föräldrar?",
+      "zh_text": "你跟爸妈走散了？",
+      "start": 361.95,
+      "end": 363.61,
+      "visible_speech": false,
+      "delivery_note": "画外对杯子后的人追问，带揣测。"
+    },
+    {
+      "event_id": "E034a",
+      "source_ids": [
+        "S034"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Det var inga föräldrar.",
+      "zh_text": "我没爸妈。",
+      "start": 364.21,
+      "end": 365.61,
+      "visible_speech": true,
+      "delivery_note": "低声否认问话的预设。"
+    },
+    {
+      "event_id": "E034b",
+      "source_ids": [
+        "S034"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Nej, jag visste inte det.",
+      "zh_text": "哦，我不知道。",
+      "start": 365.82,
+      "end": 366.77,
+      "visible_speech": true,
+      "delivery_note": "接一句，嘴角微动，视线放低。"
+    },
+    {
+      "event_id": "E035a",
+      "source_ids": [
+        "S035"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Så vem var det som hittade dig i skogen då?",
+      "zh_text": "那是谁在林子里找到你的？",
+      "start": 367.33,
+      "end": 369.02,
+      "visible_speech": false,
+      "delivery_note": "持续用女声追问树林里的人，发声跨镜头。"
+    },
+    {
+      "event_id": "E035b",
+      "source_ids": [
+        "S035"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Jag fick en sticka.",
+      "zh_text": "我扎到刺了。",
+      "start": 369.2,
+      "end": 370.73,
+      "visible_speech": true,
+      "delivery_note": "男子往下一俯，低声转开话头。末字辨识较弱。"
+    },
+    {
+      "event_id": "E036",
+      "source_ids": [
+        "S036"
+      ],
+      "type": "speech",
+      "speaker_id": "harald",
+      "speaker_instance": "harald_greenhouse",
+      "voice_id": "harald_f5",
+      "source_text": "Nu har vi fått lite.",
+      "zh_text": "这下有一点儿了。",
+      "start": 382.08,
+      "end": 383.66,
+      "visible_speech": false,
+      "delivery_note": "照料花时低声说，梅特抬眼后微笑。"
+    },
+    {
+      "event_id": "E037a",
+      "source_ids": [
+        "S037"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Det går väl bra, i alla fall.",
+      "zh_text": "反正这样也挺好。",
+      "start": 417.14,
+      "end": 418.65,
+      "visible_speech": true,
+      "delivery_note": "低声开口，斟酌话头。"
+    },
+    {
+      "event_id": "E037b",
+      "source_ids": [
+        "S037"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Förra talet nu.",
+      "zh_text": "就刚才那件事。",
+      "start": 419.7,
+      "end": 420.84,
+      "visible_speech": false,
+      "delivery_note": "接着压低声音再提一句。"
+    },
+    {
+      "event_id": "E038",
+      "source_ids": [
+        "S038"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Jag vet inte vad du sysslar med.",
+      "zh_text": "我不知道你在搞什么。",
+      "start": 425.35,
+      "end": 427.02,
+      "visible_speech": true,
+      "delivery_note": "低眼回答，冷淡地挡回去。"
+    },
+    {
+      "event_id": "E039b",
+      "source_ids": [
+        "S039"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Du är en dålig flicka.",
+      "zh_text": "你可真是个坏姑娘。",
+      "start": 458.34,
+      "end": 460.58,
+      "visible_speech": false,
+      "delivery_note": "隔墙透出来的戏谑女声，玩偶情境。"
+    },
+    {
+      "event_id": "E040",
+      "source_ids": [
+        "S040"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Du borde skämmas!",
+      "zh_text": "你不嫌丢人吗？",
+      "start": 461.62,
+      "end": 464.17,
+      "visible_speech": true,
+      "delivery_note": "用扮演的训斥口吻，句尾一甩。"
+    },
+    {
+      "event_id": "E041",
+      "source_ids": [
+        "S041"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Men … jag vill behålla henne!",
+      "zh_text": "可是……我想留下她呀！",
+      "start": 465.85,
+      "end": 470.07,
+      "visible_speech": false,
+      "delivery_note": "切回偷听者，还是隔壁的声音。先顿一下，再用央求口吻。"
+    },
+    {
+      "event_id": "E042a",
+      "source_ids": [
+        "S042"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Jag vill att den ska vibrera lite mer.",
+      "zh_text": "我想让它震得再强点。",
+      "start": 481.02,
+      "end": 483.61,
+      "visible_speech": true,
+      "delivery_note": "拿着物件试用，觉得劲儿不够。"
+    },
+    {
+      "event_id": "E042b",
+      "source_ids": [
+        "S042"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Det känns inte så mycket.",
+      "zh_text": "这都没什么感觉。",
+      "start": 483.96,
+      "end": 485.54,
+      "visible_speech": true,
+      "delivery_note": "说明原因，嫌力度太小。"
+    },
+    {
+      "event_id": "E042c",
+      "source_ids": [
+        "S042"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Det är bara batterier.",
+      "zh_text": "就靠电池嘛。",
+      "start": 486.21,
+      "end": 487.6,
+      "visible_speech": true,
+      "delivery_note": "就事论事，回应物件动力。"
+    },
+    {
+      "event_id": "E043",
+      "source_ids": [
+        "S043"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Det stinker någonting här inne.",
+      "zh_text": "屋里有股臭味。",
+      "start": 488.67,
+      "end": 490.84,
+      "visible_speech": true,
+      "delivery_note": "从物件转到房间的异味，带嫌恶。"
+    },
+    {
+      "event_id": "E044",
+      "source_ids": [
+        "S044"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Det är inte du, Elsie.",
+      "zh_text": "埃尔茜，不是你。",
+      "start": 492.28,
+      "end": 493.96,
+      "visible_speech": true,
+      "delivery_note": "叫她的名字，平静地排除她是异味来源。"
+    },
+    {
+      "event_id": "E045a",
+      "source_ids": [
+        "S045"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "De ska vara bra i sängen.",
+      "zh_text": "这东西在床上好用。",
+      "start": 497.32,
+      "end": 499.0,
+      "visible_speech": true,
+      "delivery_note": "语气正经，内容带调侃。"
+    },
+    {
+      "event_id": "E045b",
+      "source_ids": [
+        "S045"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Det är det man behöver dem till.",
+      "zh_text": "本来就是干这个的。",
+      "start": 499.53,
+      "end": 501.12,
+      "visible_speech": true,
+      "delivery_note": "继续解释其用途，笃定。"
+    },
+    {
+      "event_id": "E046",
+      "source_ids": [
+        "S046"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Vad är det som stinker?",
+      "zh_text": "什么东西这么难闻？",
+      "start": 506.19,
+      "end": 508.1,
+      "visible_speech": true,
+      "delivery_note": "起身后再次闻到异味，认真追问来源。"
+    },
+    {
+      "event_id": "E047",
+      "source_ids": [
+        "S047"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Det är bara en present.",
+      "zh_text": "不过是份礼物。",
+      "start": 518.3,
+      "end": 519.97,
+      "visible_speech": false,
+      "delivery_note": "她指桌子下面的东西，放轻语气。"
+    },
+    {
+      "event_id": "E048",
+      "source_ids": [
+        "S048"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Åh, för helvete.",
+      "zh_text": "啊，该死。",
+      "start": 525.14,
+      "end": 527.21,
+      "visible_speech": true,
+      "delivery_note": "忙着搬东西，突然低声骂出。"
+    },
+    {
+      "event_id": "E049",
+      "source_ids": [
+        "S049"
+      ],
+      "type": "speech",
+      "speaker_id": "elsie",
+      "speaker_instance": "elsie_adult",
+      "voice_id": "elsie_f5",
+      "source_text": "Nu kan vi lägga den under hans kudde.",
+      "zh_text": "可以把它放到他枕头底下了。",
+      "start": 527.8,
+      "end": 530.38,
+      "visible_speech": true,
+      "delivery_note": "交代礼物放到他枕下，带一点盘算的口气。"
+    },
+    {
+      "event_id": "E050a",
+      "source_ids": [
+        "S050"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Mycket på gång?",
+      "zh_text": "最近忙什么呢？",
+      "start": 573.81,
+      "end": 575.16,
+      "visible_speech": true,
+      "delivery_note": "主动打破吃早饭时的沉默。"
+    },
+    {
+      "event_id": "E050b",
+      "source_ids": [
+        "S050"
+      ],
+      "type": "speech",
+      "speaker_id": "friend",
+      "speaker_instance": "friend_adult",
+      "voice_id": "friend_f5",
+      "source_text": "Hänt nåt roligt?",
+      "zh_text": "遇上什么好事了？",
+      "start": 576.34,
+      "end": 577.74,
+      "visible_speech": true,
+      "delivery_note": "抬眼盯着，口吻有点揶揄。"
+    },
+    {
+      "event_id": "E051",
+      "source_ids": [
+        "S051"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Du vet han Harald.",
+      "zh_text": "你知道哈尔德吧。",
+      "start": 579.94,
+      "end": 581.63,
+      "visible_speech": true,
+      "delivery_note": "说起哈尔德，稍顿一下才继续。"
+    },
+    {
+      "event_id": "E052",
+      "source_ids": [
+        "S052"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Jag gick vilse på kyrkogården, förstås.",
+      "zh_text": "我在墓地迷路了嘛。",
+      "start": 582.7,
+      "end": 584.83,
+      "visible_speech": true,
+      "delivery_note": "解释和哈尔德相遇的背景。"
+    },
+    {
+      "event_id": "E053",
+      "source_ids": [
+        "S053"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Du märkte väl det på Harald, eller?",
+      "zh_text": "你也留意到哈尔德了吧？",
+      "start": 588.05,
+      "end": 590.23,
+      "visible_speech": false,
+      "delivery_note": "金发同伴盯着桌对面，嘴唇未开合。画外女声试探。确切瑞典语词尾不清。"
+    },
+    {
+      "event_id": "E054",
+      "source_ids": [
+        "S054"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Men … skit i honom nu.",
+      "zh_text": "不过……先别管他了。",
+      "start": 595.72,
+      "end": 598.31,
+      "visible_speech": true,
+      "delivery_note": "先迟疑一下，然后称他，想结束这个话题。"
+    },
+    {
+      "event_id": "E055t",
+      "source_ids": [
+        "S055"
+      ],
+      "type": "screen_text",
+      "speaker_id": "",
+      "speaker_instance": "",
+      "voice_id": "",
+      "source_text": "Bulbus olfactorius",
+      "zh_text": "嗅球",
+      "start": 621.82,
+      "end": 627.96,
+      "visible_speech": false,
+      "delivery_note": "黑板脑部草图上的拉丁文标注。保留原画，译名只上字幕。"
+    },
+    {
+      "event_id": "E055a",
+      "source_ids": [
+        "S055"
+      ],
+      "type": "speech",
+      "speaker_id": "observer",
+      "speaker_instance": "observer_adult",
+      "voice_id": "observer_f5",
+      "source_text": "Om två månader",
+      "zh_text": "再过两个月，",
+      "start": 631.76,
+      "end": 633.35,
+      "visible_speech": true,
+      "delivery_note": "指着脑图说时间。保留重读和后面的长停顿。"
+    },
+    {
+      "event_id": "E055b",
+      "source_ids": [
+        "S055"
+      ],
+      "type": "speech",
+      "speaker_id": "observer",
+      "speaker_instance": "observer_adult",
+      "voice_id": "observer_f5",
+      "source_text": "kommer den att bli lika stor som högra hjärnhalvan.",
+      "zh_text": "它会长得跟右脑半球一样大。",
+      "start": 634.54,
+      "end": 638.99,
+      "visible_speech": true,
+      "delivery_note": "指着草图继续，右脑半球是比较尺度。"
+    },
+    {
+      "event_id": "E056a",
+      "source_ids": [
+        "S056"
+      ],
+      "type": "speech",
+      "speaker_id": "observer",
+      "speaker_instance": "observer_adult",
+      "voice_id": "observer_f5",
+      "source_text": "Det är på nätterna den växer.",
+      "zh_text": "它是在夜里生长的。",
+      "start": 639.07,
+      "end": 641.53,
+      "visible_speech": false,
+      "delivery_note": "画面切到梅特翻找，仍是男性画外解说，重读夜里。"
+    },
+    {
+      "event_id": "E056b",
+      "source_ids": [
+        "S056"
+      ],
+      "type": "speech",
+      "speaker_id": "observer",
+      "speaker_instance": "observer_adult",
+      "voice_id": "observer_f5",
+      "source_text": "Och nu har jag fattat det igen.",
+      "zh_text": "我现在又弄明白了。",
+      "start": 642.08,
+      "end": 644.14,
+      "visible_speech": false,
+      "delivery_note": "接着夜里生长的解释。后半句源声较含混。"
+    },
+    {
+      "event_id": "E057",
+      "source_ids": [
+        "S057"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Ung man på sjuttio plus",
+      "zh_text": "一位七十多岁的年轻男士，",
+      "start": 686.91,
+      "end": 688.68,
+      "visible_speech": false,
+      "delivery_note": "楼道镜头尾部先响起下一场床边读稿的声音，照文字念。"
+    },
+    {
+      "event_id": "E058a",
+      "source_ids": [
+        "S058"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "söker ung kvinna i samma ålder.",
+      "zh_text": "想找一位同龄的年轻女士。",
+      "start": 688.72,
+      "end": 692.57,
+      "visible_speech": true,
+      "delivery_note": "顺势接完征友启事，年轻和同龄都保留。"
+    },
+    {
+      "event_id": "E058b",
+      "source_ids": [
+        "S058"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "För promenader och samtal.",
+      "zh_text": "一起散散步，聊聊天。",
+      "start": 692.96,
+      "end": 694.45,
+      "visible_speech": false,
+      "delivery_note": "照稿念想结伴做什么，镜头在听的人。"
+    },
+    {
+      "event_id": "E059",
+      "source_ids": [
+        "S059"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Det låter väl inte så farligt?",
+      "zh_text": "听起来也没那么吓人吧？",
+      "start": 696.35,
+      "end": 698.1,
+      "visible_speech": true,
+      "delivery_note": "放下稿件的朗读语气，试着征求床上人的意见。"
+    },
+    {
+      "event_id": "E060a",
+      "source_ids": [
+        "S060"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Jag tycker inte om att prata.",
+      "zh_text": "我不爱说话。",
+      "start": 699.13,
+      "end": 701.64,
+      "visible_speech": true,
+      "delivery_note": "枕上疲倦地拒绝交谈，低声。"
+    },
+    {
+      "event_id": "E060b",
+      "source_ids": [
+        "S060"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Vi passar inte att skriva.",
+      "zh_text": "写信也不合适。",
+      "start": 701.91,
+      "end": 703.96,
+      "visible_speech": false,
+      "delivery_note": "接着又拒绝动笔，低而短促。"
+    },
+    {
+      "event_id": "E061",
+      "source_ids": [
+        "S061"
+      ],
+      "type": "speech",
+      "speaker_id": "marta",
+      "speaker_instance": "marta_bedroom",
+      "voice_id": "marta_f5",
+      "source_text": "Jag vill sova.",
+      "zh_text": "我想睡觉。",
+      "start": 704.52,
+      "end": 705.9,
+      "visible_speech": true,
+      "delivery_note": "阖着眼往枕头里缩，只想休息。"
+    },
+    {
+      "event_id": "E062",
+      "source_ids": [
+        "S062"
+      ],
+      "type": "speech",
+      "speaker_id": "mette",
+      "speaker_instance": "mette_adult",
+      "voice_id": "mette_f5",
+      "source_text": "Förlåt.",
+      "zh_text": "对不起。",
+      "start": 708.47,
+      "end": 709.5,
+      "visible_speech": true,
+      "delivery_note": "床边轻声道歉，停下劝说。"
     }
   ]
 }

@@ -16,14 +16,10 @@
       review: '使用 EasyCom 的官方发言者标注和逐句稿，逐词时间由离线对齐生成。'
     },
     {
-      id: 40, title: '中文配音', original: 'task-13', source: '《Cosmos Laundromat: First Cycle》· 02:48–04:07',
-      method: '总分 =（英文理解 E + 中文译文 T）×（配音 A ÷ 70）× 画面系数 V ×（100 ÷ 30）。',
-      finding: '角色分轨复评确认 Sol 的维克托跨段音色漂移。两份答卷均未通过验收。',
-      notes: [
-        '约 26 秒处译配丢失原声在 “you’re…” 后的明显犹豫停顿。离线重建通过。',
-        '末段 76.25–78.708 秒的维克托台词进入弗兰克轨。拒绝句缺少原声的停顿。离线重建在 600 秒内未完成。'
-      ],
-      review: '视觉裁判为 GPT‑6.2 Sol。qwen3.8-omni-flash 对照官方角色分轨和交付分轨，复评原人物音色与跨段稳定。每项至少两次听审。两份连续性记录各有一项时间窗诊断待确认。'
+      id: 40, title: '中文配音', original: 'task-13', source: '《Nasty Old People》· 38:00–50:00 · 瑞典语',
+      method: '总分 =（瑞典语理解 E + 中文译文 T）×（配音 A ÷ 70）× 画面系数 V ×（100 ÷ 30）。',
+      finding: '12 分钟连续剧情，角色在不同场景反复出场。按实际分轨复核跨段音色。',
+      review: 'GPT‑6.2 Sol 评审画面，qwen3.8-omni-flash 听审原混音和答卷分轨。底轨由原片混音分离。瑞典语听写以听审记录和多语种 ASR 的核对稿计 WER。'
     },
     {
       id: 46, title: '口述影像', original: 'task-14', source: '《Sprite Fright》· 81 秒片段',
@@ -40,7 +36,12 @@
     ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[char]);
   const viewingVariants = () => location.hash === route;
   const caseKey = id => 'task-variant-' + id;
-  const pretty = value => Number(value.toFixed(4)).toString();
+  const pretty = value => Number.isFinite(value) ? Number(value.toFixed(4)).toString() : '—';
+  const scoreText = entry => Number.isFinite(entry?.score) ? pretty(entry.score)
+    : Number.isFinite(entry?.score_lower_bound ?? entry?.lower)
+      ? pretty(entry.score_lower_bound ?? entry.lower) + '–' + pretty(entry.score_upper_bound ?? entry.upper) : '待评';
+  const verdict = run => run?.passed === true ? '通过' : run?.passed === false ? '未通过' : '待确认';
+  const aliasFor = run => run.model === 'gpt-6-luna' ? 'luna' : 'sol';
   const mediaLink = (url, label, attributes = '') => `<a href="${escape(url)}" ${attributes}>${escape(label)}</a>`;
   const reportRoot = (id, alias) => 'variant-results/case-' + id + '/' + alias + '/';
   const scoringLabels = {
@@ -53,10 +54,6 @@
     46: ['普通话口述影像成片', '独立原声、旁白与混音', 'VTT、口述计划、播放器和离线重建']
   };
   const milestones = {
-    40: {
-      sol: ['抽取末段原声和角色参考', '检查本地 F5-TTS 试生成记录', '调整本地语音生成脚本', '检查预览渲染', '执行离线重建', '用本地 Whisper 复核译配'],
-      luna: ['抽帧检查人物动作及口型', '分析对白残差声轨', '测试低内存 F5-TTS 生成', '检查译配工程及离线合成入口', '检查成片的口型与字幕帧', '剪出片段复核最终画面']
-    },
     46: {
       sol: ['用本地 Whisper 定位原片对白', '以 Piper 生成逐句旁白', '加密抽帧核对后段动作', '编写音轨与成片的重建脚本', '编写可开关旁白的播放器', '校验交付文件和音画'],
       luna: ['按秒抽帧梳理原片镜头', '继续检查林间段的动作', '合成瓢虫段旁白', '生成开场红帽旁白', '装配播放器和交付文件', '执行离线重建命令']
@@ -86,7 +83,7 @@
       contract: (source.task.match(/^## (?:交付|必交文件)[^\n]*\n[\s\S]*?(?=^## |(?![\s\S]))/m)?.[0] || source.task)
         + '\n\n## 评分\n\n' + item.method,
       files, delivery: delivery[item.id], resultCount: runs.length,
-      resultSummary: runs.length ? runs.map(run => modelNames[run.model] + ' ' + run.score).join(' · ') : source.result_status
+      resultSummary: runs.length ? runs.map(run => modelNames[run.model] + ' ' + scoreText(run)).join(' · ') : source.result_status
     });
     const toResult = run => ({
       model: run.model, effort: report.solver_effort, total: run.score, verified: run.score,
@@ -105,6 +102,11 @@
 
   function comparison(item) {
     const runs = allRuns(item.id);
+    if (!runs.length && item.id === 40) {
+      return '<article class="variant-case" data-variant-case="40"><p class="variant-case-id">Case 40</p>'
+        + '<h2>中文配音</h2><p>' + escape(item.source) + '</p><p>' + escape(caseData[40].result_status)
+        + '</p><a class="button primary" href="#task-variant-40/task">查看瑞典语素材 ↗</a></article>';
+    }
     if (!runs.length) {
       const source = caseData[item.id];
       return '<article class="variant-case" data-variant-case="31"><p class="variant-case-id">Case 31</p>'
@@ -122,10 +124,10 @@
       <div class="variant-scores">${runs.map(run => `
         <div class="variant-score">
           <span>${modelNames[run.model]}</span>
-          <b data-variant-score="${run.score}">${run.score} <small>/ 100</small></b>
-          <meter min="0" max="100" value="${run.score}" aria-label="${modelNames[run.model]}得分"></meter>
+          <b data-variant-score="${run.score}">${scoreText(run)} <small>/ 100</small></b>
+          ${Number.isFinite(run.score) ? `<meter min="0" max="100" value="${run.score}" aria-label="${modelNames[run.model]}得分"></meter>` : ''}
           <div class="variant-run-meta"><span>${duration(run.elapsed_seconds)}</span>
-            <span class="${run.passed ? 'variant-pass' : 'variant-fail'}">${run.passed ? '通过' : '未通过'}</span></div>
+            <span class="${run.passed ? 'variant-pass' : 'variant-fail'}">${verdict(run)}</span></div>
         </div>`).join('')}</div>
       <p class="variant-finding">${escape(item.finding)}</p>
       <details class="variant-details">
@@ -197,6 +199,7 @@
   }
 
   function answer(model, root) {
+    if (!model?.video) return '<h3>封存答卷</h3><p>成片正在生成。</p>';
     return `<h3>封存答卷</h3>
       <video class="variant-video" controls playsinline preload="metadata" src="${escape(model.video.url)}"></video>
       <p class="result-note">完整成片的浏览器转码。${mediaLink(model.video.url, '下载视频', 'download')} · ${mediaLink(root + 'video_provenance.json', '视频校验记录', 'download')}</p>
@@ -213,11 +216,12 @@
   }
 
   function breakdown(model, item, run, note, root) {
-    const score = model.scoring;
+    const score = model?.scoring;
+    if (!score || !run) return '<h3>分数构成</h3><p>评分待完成。</p>';
     const isMeeting = item.id === 31;
     const isDub = item.id === 40;
     const isDescription = item.id === 46;
-    const showVoiceClips = isDub && model.video.url.includes('/sol/') && score.voice_review;
+    const voiceClips = isDub ? score.voice_review?.clips || [] : [];
     let computation = '';
     if (isMeeting) {
       const {content, delivery} = score.groups;
@@ -225,8 +229,8 @@
         + ' · 交付 ' + pretty(delivery.score) + ' / ' + delivery.maximum
         + ' · 质量系数 ' + delivery.coefficient.toFixed(5);
     } else if (isDub) {
-      computation = ['E', 'T', 'A'].map(key => key + ' ' + pretty(score.groups[key].score) + ' / ' + score.groups[key].maximum)
-        .join(' · ') + ' · 配音系数 ' + pretty(score.audio_coefficient ?? score.groups.A.score / 70)
+      computation = ['E', 'T', 'A'].map(key => key + ' ' + scoreText(score.groups[key]) + ' / ' + score.groups[key].maximum)
+        .join(' · ') + ' · 配音系数 ' + pretty(score.audio_coefficient ?? (Number.isFinite(score.groups.A.score) ? score.groups.A.score / 70 : null))
         + ' · V ' + pretty(score.coefficient);
     } else if (isDescription) {
       computation = '视觉理解 ' + pretty(score.core) + ' / 100 · 交付 ' + pretty(score.delivery) + ' / '
@@ -236,19 +240,17 @@
     return `<h3>分数构成</h3><p>${escape(item.method)}</p>${computation ? `<p class="variant-calculation">${computation}</p>` : ''}
       <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">评分项</th><th scope="col">得分</th><th scope="col">满分</th></tr></thead>
         <tbody>${score.rows.map(row => `<tr><th scope="row">${isMeeting ? (row.group === 'content' ? '内容 · ' : '交付 · ') : ''}${escape(row.label || scoringLabels[row.id] || row.id)}</th>
-          <td>${pretty(row.score)}</td><td>${pretty(row.maximum)}</td></tr>`).join('')}</tbody>
-        <tfoot><tr><th scope="row">最终总分</th><td><strong>${run.score}</strong></td><td>100</td></tr></tfoot>
+          <td>${scoreText(row)}</td><td>${pretty(row.maximum)}</td></tr>`).join('')}</tbody>
+        <tfoot><tr><th scope="row">最终总分</th><td><strong>${scoreText(run)}</strong></td><td>100</td></tr></tfoot>
       </table></div>
-      <h3>验收与扣分</h3><p>通过线 ${run.threshold} 分 · ${run.passed ? '通过' : '未通过'}。${escape(note)}</p>
+      <h3>验收与扣分</h3><p>通过线 ${run.threshold} 分 · ${verdict(run)}。${escape(note)}</p>
       ${run.failed_gates.length ? `<p class="variant-gates">${run.failed_gates.map(gate => `<code>${escape(gate)}</code>`).join(' ')}</p>` : ''}
       ${item.review ? `<p class="result-note">${escape(item.review)}</p>` : ''}
-      ${showVoiceClips ? `<details><summary>试听维克托的跨段音色</summary>
-        <p class="result-note">片段做了音量匹配。时间为变式视频的时间轴。</p>
-        ${[[22, 74], [26, 61]].map(pair => `<div class="score-table-wrap"><table class="result-table">
-          <thead><tr><th scope="col">约在</th><th scope="col">官方原声</th><th scope="col">Sol 配音分轨</th></tr></thead>
-          <tbody>${pair.map(second => `<tr><th scope="row">${second} 秒</th>${['source', 'sol'].map((track, index) =>
-            `<td><audio controls preload="none" aria-label="${second} 秒 ${index ? '配音分轨' : '官方原声'}" src="variant-results/case-40/voice-review/${track}-${second}.wav"></audio></td>`).join('')}</tr>`).join('')}</tbody>
-        </table></div>`).join('')}
+      ${voiceClips.length ? `<details><summary>试听同角色跨段音色</summary>
+        <div class="score-table-wrap"><table class="result-table"><thead><tr><th>角色与时间</th><th>原片音频</th><th>答卷角色轨</th></tr></thead>
+        <tbody>${voiceClips.map(clip => `<tr><th scope="row">${escape(clip.role)} · ${escape(clip.time)}</th>
+        <td><audio controls preload="none" src="${escape(clip.source)}"></audio></td>
+        <td><audio controls preload="none" src="${escape(clip.output)}"></audio></td></tr>`).join('')}</tbody></table></div>
       </details>` : ''}
       <p>${mediaLink(root + 'scoring.json', '下载分项评分记录', 'download')}</p>`;
   }
@@ -258,17 +260,25 @@
     if (!item) return previous.render(entry, record, target);
     const source = caseData[item.id];
     const runs = allRuns(item.id);
-    if (!runs.length) {
+    const models = Object.keys(source.models);
+    if (!models.length) {
       target.innerHTML = '<div class="result-empty"><h2>作答结果</h2><p>' + escape(source.result_status) + '</p></div>';
       return;
     }
-    let alias = 'sol';
-    let selected = 'answer';
+    let alias = models[0];
+    let selected = source.models[alias].video ? 'answer' : 'process';
     const tabs = [['answer', '答卷与成片'], ['process', '作答过程'], ['scores', '分数构成']];
     target.innerHTML = `<section class="variant-case-results" data-variant-results="${item.id}">
       <h2 class="result-section-title">模型作答对照</h2>
       <div class="score-table-wrap"><table class="result-table"><thead><tr><th scope="col">模型</th><th scope="col">用时</th><th scope="col">总分</th><th scope="col">验收</th></tr></thead>
-      <tbody>${runs.map((run, index) => `<tr><td><button type="button" class="button" data-variant-model="${index ? 'luna' : 'sol'}">${modelNames[run.model]}</button></td><td>${duration(run.elapsed_seconds)}</td><td><b>${run.score}</b> / 100</td><td>${run.passed ? '通过' : '未通过'}</td></tr>`).join('')}</tbody></table></div>
+      <tbody>${models.map(key => {
+        const model = source.models[key];
+        const run = runs.find(entry => aliasFor(entry) === key);
+        const name = modelNames[key === 'luna' ? 'gpt-6-luna' : 'gpt-6.2-sol'];
+        const state = run ? verdict(run) : model.state === 'judging' ? '评分中' : '进行中';
+        return `<tr><td><button type="button" class="button" data-variant-model="${key}">${name}</button></td>
+          <td>${run ? duration(run.elapsed_seconds) : '—'}</td><td><b>${scoreText(run)}</b></td><td>${state}</td></tr>`;
+      }).join('')}</tbody></table></div>
       <p class="result-note">Codex ${escape(report.codex)} · ${escape(report.solver_effort)} · 不限时。视觉裁判 GPT‑6.2 Sol，听觉裁判 ${escape(report.audio_judge)}。</p>
       <div class="variant-result-nav" role="group" aria-label="作答结果分区">${tabs.map(([id, label]) => `<button type="button" class="button" data-variant-panel="${id}">${label}</button>`).join('')}</div>
       <div class="variant-result-content"></div>
@@ -276,6 +286,7 @@
     </section>`;
     const content = target.querySelector('.variant-result-content');
     function update() {
+      const run = runs.find(entry => aliasFor(entry) === alias);
       const index = alias === 'sol' ? 0 : 1;
       const model = source.models[alias];
       const root = reportRoot(item.id, alias);
@@ -286,7 +297,7 @@
         button.setAttribute('aria-pressed', String(button.dataset.variantPanel === selected));
       });
       if (selected === 'process') content.innerHTML = process(model, item, alias, root);
-      else if (selected === 'scores') content.innerHTML = breakdown(model, item, runs[index], model.notes || item.notes?.[index] || item.review, root);
+      else if (selected === 'scores') content.innerHTML = breakdown(model, item, run, model.notes || item.notes?.[index] || item.review, root);
       else content.innerHTML = answer(model, root);
     }
     target.querySelectorAll('[data-variant-model]').forEach(button => button.addEventListener('click', () => {

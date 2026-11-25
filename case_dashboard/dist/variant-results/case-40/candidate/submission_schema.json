@@ -6,7 +6,7 @@
       "properties": {
         "speakers": {
           "type": "array",
-          "minItems": 2,
+          "minItems": 4,
           "items": {
             "type": "object",
             "properties": {
@@ -241,12 +241,12 @@
                     "start": {
                       "type": "number",
                       "minimum": 0,
-                      "maximum": 79
+                      "maximum": 720
                     },
                     "end": {
                       "type": "number",
                       "exclusiveMinimum": 0,
-                      "maximum": 79
+                      "maximum": 720
                     },
                     "observation": {
                       "type": "string",

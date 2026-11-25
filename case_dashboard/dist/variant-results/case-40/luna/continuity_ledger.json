@@ -3,244 +3,242 @@
     {
       "challenge_id": "C01",
       "source_ids": [
-        "S009",
-        "S010",
-        "S011",
-        "S012"
-      ],
-      "event_indices": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "source_evidence": [
-        {
-          "start": 30.38,
-          "end": 33.6,
-          "observation": "维克托以 Tell me 开场，提出是否能选择独处的疑问。"
-        },
-        {
-          "start": 34.59,
-          "end": 38.9,
-          "observation": "先说 No, one doesn't，再补充甚至不能选择成为狼；两个否定作用范围不同。"
-        },
-        {
-          "start": 41.66,
-          "end": 42.5,
-          "observation": "维克托在停顿后用 Or does one? 回问，语气从断言转为迟疑。"
-        }
-      ],
-      "decision": "四个事件分开保留设问、否定、狼的补充和句末回问。中文分别保留‘选择孤独’、‘不选择’、‘甚至不能选择当狼’及最后的反问。",
-      "alternative_rejected": "不把 No, one doesn't 改成‘不会孤独’，也不把 Or does one? 合并成前句肯定結論；那會反轉否定方向並丟掉回問。"
-    },
-    {
-      "challenge_id": "C02",
-      "source_ids": [
-        "S013",
-        "S014"
-      ],
-      "event_indices": [
-        12,
-        13
-      ],
-      "source_evidence": [
-        {
-          "start": 47.56,
-          "end": 50.56,
-          "observation": "弗兰克在羊的近景中先说 Oh, Mr.，停顿后误称 Hector。"
-        },
-        {
-          "start": 50.88,
-          "end": 51.52,
-          "observation": "维克托在自己的近景中重复 Victor, Victor，立即纠正名字。"
-        }
-      ],
-      "decision": "保留弗兰克的误称‘赫克托先生’，并把维克托的两次纠正单独交给维克托声线；中文配音也留出 Oh 后的停顿。",
-      "alternative_rejected": "不把两句都交给一个人，也不把 Hector 静默改成 Victor；这样会抹掉误称、打断和即时纠正。"
-    },
-    {
-      "challenge_id": "C03",
-      "source_ids": [
         "S004",
         "S005",
-        "S006"
+        "S008",
+        "S009"
       ],
       "event_indices": [
         3,
         4,
-        5
+        7,
+        8
       ],
       "source_evidence": [
         {
-          "start": 12.42,
-          "end": 15.56,
-          "observation": "維克托把弗兰克描述为不只是羊，并以 aren't you? 寻求确认。"
+          "start": 11.16,
+          "end": 13.44,
+          "observation": "只在一个夜晚开花，之后死亡。"
         },
         {
-          "start": 16.65,
-          "end": 19.88,
-          "observation": "弗兰克先短答 Yeah，稍停後追问 How would you know?。"
+          "start": 16.28,
+          "end": 17.8,
+          "observation": "说话者转而谈他等了很久。"
+        },
+        {
+          "start": 25.82,
+          "end": 28.24,
+          "observation": "明确否定等了十年。"
+        },
+        {
+          "start": 37.06,
+          "end": 41.84,
+          "observation": "回到等一生、随后花死的想象。"
         }
       ],
-      "decision": "维克托的身份判断与弗兰克的肯定、反问按三条事件处理；把简短 Yeah 保留为实际语音，不将反问归给维克托。",
-      "alternative_rejected": "不把 Yeah 当成认同维克托整套推断，也不因画面切到聆听者而交换反问说话者。"
+      "decision": "译文分别保留植物只开一夜、等待年数及随后死亡，避免把十年归给植物的开花时长。",
+      "alternative_rejected": "不把“十年”误作植物开花时间，也不删除开花后死亡。"
     },
     {
-      "challenge_id": "C04",
+      "challenge_id": "C02",
       "source_ids": [
-        "S015",
-        "S016",
-        "S017"
+        "S012",
+        "S013",
+        "S014"
       ],
       "event_indices": [
+        13,
         14,
-        15,
-        16
+        15
       ],
       "source_evidence": [
         {
-          "start": 51.83,
-          "end": 53.31,
-          "observation": "弗兰克说不知道维克托在说什么，否定只作用于理解对方的话。"
-        },
-        {
-          "start": 53.49,
-          "end": 57.07,
-          "observation": "停顿后以 but 转入‘我只是一只羊’，并说它只管自己的事。"
-        },
-        {
-          "start": 58.45,
-          "end": 60.61,
-          "observation": "弗兰克反向建议维克托也这样做。"
+          "start": 45.88,
+          "end": 46.44,
+          "observation": "前句感叹后另一人反问；后续约90秒切到提醒和催促。"
         }
       ],
-      "decision": "把‘不知道你在说什么’、but 后的自我描述和‘我也劝你这么做’分开，保留否定轉折及人称方向。",
-      "alternative_rejected": "不把 I don't know 译成不认识维克托，也不把 I suggest you do the same 误配成维克托劝羊。"
+      "decision": "保留相邻说话人的独立问答和切场后的重复提醒，不合并成同一人的复述。",
+      "alternative_rejected": "不把转场前后的回应拼成一次连续话语。"
     },
     {
-      "challenge_id": "C05",
+      "challenge_id": "C03",
       "source_ids": [
-        "S018",
+        "S016",
         "S019",
-        "S020"
-      ],
-      "event_indices": [
-        17,
-        18,
-        19
-      ],
-      "source_evidence": [
-        {
-          "start": 61.33,
-          "end": 63.17,
-          "observation": "维克托连续喊 No 四次，再叫弗兰克停下，wait 也重复三次。"
-        },
-        {
-          "start": 63.81,
-          "end": 66.27,
-          "observation": "短停顿后维克托说 No, this is not the way。"
-        },
-        {
-          "start": 66.61,
-          "end": 69.19,
-          "observation": "随后才提出占用一分钟的请求，句子实际说完。"
-        }
-      ],
-      "decision": "重复的拦阻、否定句和一分钟请求按原顺序译配；没有续写未说出的内容，保留弗兰克名字及等待请求。",
-      "alternative_rejected": "不把四个 No 压成一个，不把 wait 重复删掉，也不将后续的一分钟请求提前接进上一句。"
-    },
-    {
-      "challenge_id": "C06",
-      "source_ids": [
-        "S021",
-        "S022",
         "S023"
       ],
       "event_indices": [
         19,
-        20,
-        21,
-        22
+        25,
+        31
       ],
       "source_evidence": [
         {
-          "start": 66.61,
-          "end": 69.19,
-          "observation": "维克托第一次提出只要一分钟的请求，明确提到 precious time。"
+          "start": 102.26,
+          "end": 110.46,
+          "observation": "梅特先问候并扶人坐起。"
         },
         {
-          "start": 70.89,
-          "end": 71.85,
-          "observation": "弗兰克疑问式重复 precious time，构成反讽回应。"
+          "start": 116.02,
+          "end": 119.78,
+          "observation": "梅特说梦见对方，埃尔茜回应。"
         },
         {
-          "start": 72.33,
-          "end": 75.41,
-          "observation": "维克托先答 Yeah，停顿后再重复同样的一分钟请求。"
+          "start": 144.92,
+          "end": 147.86,
+          "observation": "梅特提议洗澡，埃尔茜短促拒绝。"
         }
       ],
-      "decision": "保留‘宝贵时间？’的反讽、对方先说‘对’再重复一分钟请求，以及后续反问；没有将一分钟改成其他时长。",
-      "alternative_rejected": "不把 precious time? 当作中性复述，也不漏掉停顿后的重复请求或把 one minute 改成泛指‘一会儿’。"
+      "decision": "将梦境陈述、对梦境的回应、洗澡提议及明确拒绝分开配音。",
+      "alternative_rejected": "不把问候对象、梦中对象和拒绝洗澡者混为一人。"
+    },
+    {
+      "challenge_id": "C04",
+      "source_ids": [
+        "S024",
+        "S025",
+        "S026",
+        "S027",
+        "S028"
+      ],
+      "event_indices": [
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "source_evidence": [
+        {
+          "start": 246.82,
+          "end": 258.24,
+          "observation": "梅特说儿子没有来探望，并提出可设法让他来。"
+        },
+        {
+          "start": 259.1,
+          "end": 270.38,
+          "observation": "哈尔德说他不会来，转而说自己死后儿子无法逃避、别无选择。"
+        }
+      ],
+      "decision": "梅特提出帮助；哈尔德否认儿子会来，并保留“等我死后”条件和“别无选择”的结果。",
+      "alternative_rejected": "不译成儿子已经来访，也不删掉死亡条件。"
+    },
+    {
+      "challenge_id": "C05",
+      "source_ids": [
+        "S031",
+        "S032",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "event_indices": [
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "source_evidence": [
+        {
+          "start": 340.08,
+          "end": 348.14,
+          "observation": "先问盯着植物/夜色及是否睡觉，再以吃得少/从不吃回应。"
+        },
+        {
+          "start": 364.38,
+          "end": 368.82,
+          "observation": "梅特说没有父母，另一说话者表示不知道并追问森林经历。"
+        }
+      ],
+      "decision": "拆分睡眠/饮食问答与父母/森林追问，按画面和声音分配不同角色。",
+      "alternative_rejected": "不把睡眠与饮食回答合并，也不把“没有父母”改成失忆。"
+    },
+    {
+      "challenge_id": "C06",
+      "source_ids": [
+        "S042",
+        "S043",
+        "S044",
+        "S046"
+      ],
+      "event_indices": [
+        57,
+        58,
+        59,
+        62
+      ],
+      "source_evidence": [
+        {
+          "start": 481.22,
+          "end": 490.6,
+          "observation": "梅特讨论物件的位置和感觉，随后明确提到电池及臭味。"
+        },
+        {
+          "start": 492.5,
+          "end": 507.78,
+          "observation": "另一人回应；之后再次问气味，梅特招呼靠近。"
+        }
+      ],
+      "decision": "将物件、电池和气味评论按轮次分配；保留后续再次提及的气味。",
+      "alternative_rejected": "不把气味评价错记为物件问题，也不漏掉再次提味。"
     },
     {
       "challenge_id": "C07",
       "source_ids": [
-        "S007",
-        "S008"
+        "S050",
+        "S051",
+        "S052",
+        "S053",
+        "S054"
       ],
       "event_indices": [
-        6,
-        7
+        67,
+        68,
+        69,
+        70,
+        71
       ],
       "source_evidence": [
         {
-          "start": 22.31,
-          "end": 24.37,
-          "observation": "维克托称弗兰克为冒险家，并直接叫出 Frank。"
+          "start": 573.64,
+          "end": 584.58,
+          "observation": "玛尔塔提问，梅特犹豫后玛尔塔提到墓园。"
         },
         {
-          "start": 25.65,
-          "end": 28.53,
-          "observation": "维克托以 Just like me 建立比较，随后称对方 lone wolf。"
+          "start": 588.38,
+          "end": 598.22,
+          "observation": "梅特恼火回应，另一人短促插话。"
         }
       ],
-      "decision": "中文保留冒险家、弗兰克称呼、‘跟我一样’的比较关系，以及‘独行狼’比喻，不当作字面身份。",
-      "alternative_rejected": "不把 lone wolf 译成动物身份，也不删掉 Just like me 的比较对象。"
+      "decision": "保留玛尔塔、梅特间的称呼和态度差异，分别处理两段对话。",
+      "alternative_rejected": "不把哈尔德称呼套给其他说话者。"
     },
     {
       "challenge_id": "C08",
       "source_ids": [
-        "S021",
-        "S023",
-        "S024"
+        "S055",
+        "S056"
       ],
       "event_indices": [
-        19,
-        20,
-        21,
-        22,
-        23
+        75,
+        76
       ],
       "source_evidence": [
         {
-          "start": 66.61,
-          "end": 69.19,
-          "observation": "维克托请求占用对方宝贵的一分钟。"
+          "start": 627.64,
+          "end": 631.94,
+          "observation": "黑板上可见一行手写文字，按画面文字处理而不配音。"
         },
         {
-          "start": 72.33,
-          "end": 75.41,
-          "observation": "维克托确认后再次请求同一分钟。"
-        },
-        {
-          "start": 76.07,
-          "end": 77.95,
-          "observation": "弗兰克用 one more minute 及 wouldn't you? 反问对方是否还会再多要一分钟。"
+          "start": 631.98,
+          "end": 644.08,
+          "observation": "同段提到两个月、大小比较和夜间生长；身体部位词在原声中不清。"
         }
       ],
-      "decision": "一分钟在两次请求和弗兰克的句末反问中保持一致；手机混音按声明的单声道参考链生成，并单独实测响度和峰值。",
-      "alternative_rejected": "不把最后一句改成‘你还有一分钟’的状态陈述，也不以影院版可懂代替手机单声道检查。"
+      "decision": "将黑板字作为无声画面文字；对白保留两个月、大小比较和夜间生长，对听不清的身体部位不擅自确定。",
+      "alternative_rejected": "不把听不清的比较部位猜成确定事实，也不让文字配音。"
     }
   ]
 }
