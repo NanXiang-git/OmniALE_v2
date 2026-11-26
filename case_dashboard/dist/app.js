@@ -158,7 +158,7 @@
     const c=state.current, panel=document.querySelector('#detail-panel'), result=resultData[c.resultKey];
     if (result?.version === "single-mix-v4") {
       const rows = result.models.map(run => '<tr><td>'+esc(run.model)+' / xhigh</td><td>'+run.audio+'/45</td><td>'+run.program+'/90</td><td><b>'+run.total+'/100</b></td><td>'+(run.accepted?'通过':'未通过')+'</td></tr>').join('');
-      panel.innerHTML = '<section class="result-comparison"><h3 class="result-section-title">单混音 v4 双模型评测</h3><div class="score-table-wrap"><table class="result-table"><thead><tr><th>模型 / 推理</th><th>音频</th><th>程序</th><th>正式总分</th><th>验收</th></tr></thead><tbody>'+rows+'</tbody></table></div><p><a class="button" href="case18-mix-v4/index.html">查看 Rubric、重叠片段试听与扣分证据 ↗</a> · <a href="case18-v3/index.html">分轨版历史结果</a></p></section>';
+      panel.innerHTML = '<section class="result-comparison"><h3 class="result-section-title">单混音 v4 双模型评测</h3><div class="score-table-wrap"><table class="result-table"><thead><tr><th>模型 / 推理</th><th>音频</th><th>程序</th><th>正式总分</th><th>验收</th></tr></thead><tbody>'+rows+'</tbody></table></div><p><a class="button" href="case18-mix-v4/index.html#video-comparison">并排播放成片与逐帧对照 ↗</a> · <a class="button" href="case18-mix-v4/index.html">查看 Rubric、重叠片段试听与扣分证据 ↗</a> · <a href="case18-v3/index.html">分轨版历史结果</a></p></section>';
       return;
     }
     if (result?.case18v3) {
