@@ -1,0 +1,48 @@
+[
+  {
+    "model": "gpt-6.2-sol",
+    "components": {
+      "audio_conservation": 5,
+      "audio_protected": 5,
+      "audio_solo": 8.0,
+      "audio_overlap_sdr": 10.063,
+      "audio_overlap_suppression": 6.424,
+      "face_privacy": 20,
+      "non_target_visual": 0,
+      "faithful_video": 7,
+      "subtitles_metadata": 10
+    },
+    "verified_subtotal": 71.487,
+    "total": 59,
+    "accepted": false,
+    "hard_failures": [
+      "suppress_target_in_overlap",
+      "other_people_and_minimal_area"
+    ],
+    "judge_status": "hard_failure"
+  },
+  {
+    "model": "gpt-6-luna",
+    "components": {
+      "audio_conservation": 5,
+      "audio_protected": 5,
+      "audio_solo": 6.794,
+      "audio_overlap_sdr": 2.548,
+      "audio_overlap_suppression": 2.69,
+      "face_privacy": 0,
+      "non_target_visual": 0,
+      "faithful_video": 7,
+      "subtitles_metadata": 10
+    },
+    "verified_subtotal": 39.032,
+    "total": 39.032,
+    "accepted": false,
+    "hard_failures": [
+      "preserve_overlapping_speech",
+      "suppress_target_in_overlap",
+      "every_frame_privacy",
+      "other_people_and_minimal_area"
+    ],
+    "judge_status": "hard_failure"
+  }
+]

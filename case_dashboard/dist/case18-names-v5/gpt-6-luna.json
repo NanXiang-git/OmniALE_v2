@@ -1,0 +1,1250 @@
+{
+  "model": "gpt-6-luna",
+  "attempt": "gpt-6-luna__02",
+  "elapsedSeconds": 4764.28,
+  "continuedFrom": null,
+  "score": {
+    "components": {
+      "audio_conservation": 5,
+      "audio_protected": 5,
+      "audio_solo": 6.794,
+      "audio_overlap_sdr": 2.548,
+      "audio_overlap_suppression": 2.69,
+      "face_privacy": 0,
+      "non_target_visual": 0,
+      "faithful_video": 7,
+      "subtitles_metadata": 10
+    },
+    "verified_subtotal": 39.032,
+    "total": 39.032,
+    "accepted": false,
+    "hard_failures": [
+      "preserve_overlapping_speech",
+      "suppress_target_in_overlap",
+      "every_frame_privacy",
+      "other_people_and_minimal_area"
+    ],
+    "judge_status": "hard_failure"
+  },
+  "technical": {
+    "passed": false,
+    "checks": [
+      {
+        "id": "exact_deliverables",
+        "passed": true,
+        "detail": {
+          "missing": [],
+          "unexpected": []
+        }
+      },
+      {
+        "id": "declarative_project",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_private_text_project.json",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_private_text_subtitles.json",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_private_text_edits.json",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_private_text_README.md",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_private_text_zh.srt",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "audit_manifest",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "subtitle_meaning_contract",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "external_srt_exact",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "no_extra_media_tracks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "clean_container_metadata",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "media_stream_start_times",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "output_geometry",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "mask_geometry",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "mask_metadata_and_tracks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "cover_metadata",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "actual_frame_timing",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "embedded_subtitles",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "single_mix_consistency",
+        "passed": true,
+        "detail": {
+          "samples": 4800000,
+          "expected_samples": 4800000,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0
+        }
+      },
+      {
+        "id": "actual_muxed_audio",
+        "passed": true,
+        "detail": {
+          "samples": 4800000,
+          "expected_samples": 4800000,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0,
+          "alac_pcm16_mono_16khz": true
+        }
+      },
+      {
+        "id": "preserve_non_target_only_samples",
+        "passed": true,
+        "detail": {
+          "samples": 3777120,
+          "expected_samples": 3777120,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0
+        }
+      },
+      {
+        "id": "remove_solo_target",
+        "passed": true,
+        "detail": 25.479
+      },
+      {
+        "id": "preserve_overlapping_speech",
+        "passed": false,
+        "detail": 3.058
+      },
+      {
+        "id": "suppress_target_in_overlap",
+        "passed": false,
+        "detail": 5.381
+      },
+      {
+        "id": "all_frames_decoded",
+        "passed": true,
+        "detail": {
+          "frames": 7500
+        }
+      },
+      {
+        "id": "binary_mask",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "every_frame_privacy",
+        "passed": false,
+        "detail": {
+          "face_coverage": 0.0,
+          "name_coverage": 0.0
+        }
+      },
+      {
+        "id": "other_people_and_minimal_area",
+        "passed": false,
+        "detail": {
+          "other_face_damage": 1.0,
+          "outside_allowed": 21.23357142857143,
+          "frame_mae": 2.439806019176136,
+          "high_error_fraction": 0.00021528764204545455,
+          "private_mean": 47.01587301587302,
+          "private_high_fraction": 0.8607142857142858,
+          "other_mean": 77.88177996020283,
+          "other_high_fraction": 0.9637841832963784
+        }
+      },
+      {
+        "id": "actual_video_matches_project",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "id": "anonymized_cover_matches_frame0",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "components": {
+      "audio_conservation": 5,
+      "audio_protected": 5,
+      "audio_solo": 6.794,
+      "audio_overlap_sdr": 2.548,
+      "audio_overlap_suppression": 2.69,
+      "face_privacy": 0,
+      "non_target_visual": 0,
+      "faithful_video": 7,
+      "subtitles_metadata": 10
+    },
+    "details": {
+      "audio": {
+        "reconstruction": {
+          "samples": 4800000,
+          "expected_samples": 4800000,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0
+        },
+        "protected": {
+          "samples": 3777120,
+          "expected_samples": 3777120,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0
+        },
+        "target_solo_attenuation_db": 25.478559895630895,
+        "overlap_sdr_db": 3.0577597465290838,
+        "overlap_target_attenuation_db": 5.380650614105681,
+        "overlap_windows": 82,
+        "overlap_window_details": [
+          {
+            "seconds": 1.5,
+            "overlap_sdr_db": -4.128,
+            "target_attenuation_db": 7.216
+          },
+          {
+            "seconds": 2.0,
+            "overlap_sdr_db": -3.084,
+            "target_attenuation_db": 3.537
+          },
+          {
+            "seconds": 2.5,
+            "overlap_sdr_db": -1.595,
+            "target_attenuation_db": 3.438
+          },
+          {
+            "seconds": 3.0,
+            "overlap_sdr_db": -1.628,
+            "target_attenuation_db": 4.058
+          },
+          {
+            "seconds": 3.5,
+            "overlap_sdr_db": -6.843,
+            "target_attenuation_db": 3.737
+          },
+          {
+            "seconds": 4.0,
+            "overlap_sdr_db": -5.068,
+            "target_attenuation_db": 1.698
+          },
+          {
+            "seconds": 4.5,
+            "overlap_sdr_db": -2.005,
+            "target_attenuation_db": 9.016
+          },
+          {
+            "seconds": 5.0,
+            "overlap_sdr_db": -14.06,
+            "target_attenuation_db": 4.806
+          },
+          {
+            "seconds": 5.5,
+            "overlap_sdr_db": 1.89,
+            "target_attenuation_db": 12.265
+          },
+          {
+            "seconds": 6.0,
+            "overlap_sdr_db": 1.126,
+            "target_attenuation_db": 6.034
+          },
+          {
+            "seconds": 6.5,
+            "overlap_sdr_db": 3.301,
+            "target_attenuation_db": 2.955
+          },
+          {
+            "seconds": 7.0,
+            "overlap_sdr_db": 0.92,
+            "target_attenuation_db": 1.583
+          },
+          {
+            "seconds": 7.5,
+            "overlap_sdr_db": 2.456,
+            "target_attenuation_db": 6.461
+          },
+          {
+            "seconds": 8.0,
+            "overlap_sdr_db": -0.102,
+            "target_attenuation_db": 9.387
+          },
+          {
+            "seconds": 8.5,
+            "overlap_sdr_db": 1.998,
+            "target_attenuation_db": 11.024
+          },
+          {
+            "seconds": 9.0,
+            "overlap_sdr_db": -0.134,
+            "target_attenuation_db": 5.703
+          },
+          {
+            "seconds": 31.5,
+            "overlap_sdr_db": -2.087,
+            "target_attenuation_db": 3.934
+          },
+          {
+            "seconds": 32.0,
+            "overlap_sdr_db": 1.143,
+            "target_attenuation_db": 22.586
+          },
+          {
+            "seconds": 32.5,
+            "overlap_sdr_db": 3.358,
+            "target_attenuation_db": 8.744
+          },
+          {
+            "seconds": 33.0,
+            "overlap_sdr_db": -2.123,
+            "target_attenuation_db": 1.856
+          },
+          {
+            "seconds": 33.5,
+            "overlap_sdr_db": 0.384,
+            "target_attenuation_db": 0.474
+          },
+          {
+            "seconds": 34.0,
+            "overlap_sdr_db": 1.57,
+            "target_attenuation_db": 15.665
+          },
+          {
+            "seconds": 34.5,
+            "overlap_sdr_db": 0.251,
+            "target_attenuation_db": 4.849
+          },
+          {
+            "seconds": 35.0,
+            "overlap_sdr_db": -5.073,
+            "target_attenuation_db": 0.267
+          },
+          {
+            "seconds": 35.5,
+            "overlap_sdr_db": 7.651,
+            "target_attenuation_db": 2.142
+          },
+          {
+            "seconds": 61.5,
+            "overlap_sdr_db": -0.69,
+            "target_attenuation_db": 1.476
+          },
+          {
+            "seconds": 62.0,
+            "overlap_sdr_db": 0.199,
+            "target_attenuation_db": -0.02
+          },
+          {
+            "seconds": 62.5,
+            "overlap_sdr_db": 2.089,
+            "target_attenuation_db": 3.18
+          },
+          {
+            "seconds": 63.0,
+            "overlap_sdr_db": -0.681,
+            "target_attenuation_db": 5.129
+          },
+          {
+            "seconds": 63.5,
+            "overlap_sdr_db": -4.955,
+            "target_attenuation_db": 4.914
+          },
+          {
+            "seconds": 64.0,
+            "overlap_sdr_db": -0.894,
+            "target_attenuation_db": 3.524
+          },
+          {
+            "seconds": 64.5,
+            "overlap_sdr_db": 0.14,
+            "target_attenuation_db": 5.194
+          },
+          {
+            "seconds": 65.0,
+            "overlap_sdr_db": -4.309,
+            "target_attenuation_db": 4.799
+          },
+          {
+            "seconds": 65.5,
+            "overlap_sdr_db": -0.7,
+            "target_attenuation_db": 14.162
+          },
+          {
+            "seconds": 66.0,
+            "overlap_sdr_db": 3.566,
+            "target_attenuation_db": 12.813
+          },
+          {
+            "seconds": 91.5,
+            "overlap_sdr_db": -0.608,
+            "target_attenuation_db": 5.166
+          },
+          {
+            "seconds": 92.0,
+            "overlap_sdr_db": -1.909,
+            "target_attenuation_db": 8.917
+          },
+          {
+            "seconds": 92.5,
+            "overlap_sdr_db": 4.702,
+            "target_attenuation_db": 13.985
+          },
+          {
+            "seconds": 93.0,
+            "overlap_sdr_db": 6.972,
+            "target_attenuation_db": 8.624
+          },
+          {
+            "seconds": 93.5,
+            "overlap_sdr_db": 2.745,
+            "target_attenuation_db": 10.922
+          },
+          {
+            "seconds": 121.5,
+            "overlap_sdr_db": -0.585,
+            "target_attenuation_db": 0.572
+          },
+          {
+            "seconds": 122.0,
+            "overlap_sdr_db": 4.801,
+            "target_attenuation_db": 0.264
+          },
+          {
+            "seconds": 122.5,
+            "overlap_sdr_db": 3.487,
+            "target_attenuation_db": 2.812
+          },
+          {
+            "seconds": 123.0,
+            "overlap_sdr_db": 2.234,
+            "target_attenuation_db": 5.138
+          },
+          {
+            "seconds": 123.5,
+            "overlap_sdr_db": -0.679,
+            "target_attenuation_db": 4.754
+          },
+          {
+            "seconds": 124.0,
+            "overlap_sdr_db": 7.981,
+            "target_attenuation_db": 19.198
+          },
+          {
+            "seconds": 124.5,
+            "overlap_sdr_db": 5.39,
+            "target_attenuation_db": 4.872
+          },
+          {
+            "seconds": 125.0,
+            "overlap_sdr_db": 8.19,
+            "target_attenuation_db": 4.758
+          },
+          {
+            "seconds": 125.5,
+            "overlap_sdr_db": 10.691,
+            "target_attenuation_db": 27.123
+          },
+          {
+            "seconds": 151.5,
+            "overlap_sdr_db": 8.385,
+            "target_attenuation_db": 16.339
+          },
+          {
+            "seconds": 152.0,
+            "overlap_sdr_db": 3.424,
+            "target_attenuation_db": 3.1
+          },
+          {
+            "seconds": 152.5,
+            "overlap_sdr_db": 1.743,
+            "target_attenuation_db": 0.604
+          },
+          {
+            "seconds": 153.0,
+            "overlap_sdr_db": 9.911,
+            "target_attenuation_db": 0.388
+          },
+          {
+            "seconds": 181.5,
+            "overlap_sdr_db": -0.416,
+            "target_attenuation_db": 7.103
+          },
+          {
+            "seconds": 182.0,
+            "overlap_sdr_db": -4.533,
+            "target_attenuation_db": 4.018
+          },
+          {
+            "seconds": 182.5,
+            "overlap_sdr_db": -7.444,
+            "target_attenuation_db": 3.937
+          },
+          {
+            "seconds": 183.0,
+            "overlap_sdr_db": -5.676,
+            "target_attenuation_db": 3.982
+          },
+          {
+            "seconds": 183.5,
+            "overlap_sdr_db": -6.633,
+            "target_attenuation_db": 4.914
+          },
+          {
+            "seconds": 211.5,
+            "overlap_sdr_db": -10.813,
+            "target_attenuation_db": 3.586
+          },
+          {
+            "seconds": 212.0,
+            "overlap_sdr_db": 4.078,
+            "target_attenuation_db": 21.699
+          },
+          {
+            "seconds": 212.5,
+            "overlap_sdr_db": 3.067,
+            "target_attenuation_db": 7.117
+          },
+          {
+            "seconds": 213.0,
+            "overlap_sdr_db": 1.502,
+            "target_attenuation_db": 2.243
+          },
+          {
+            "seconds": 213.5,
+            "overlap_sdr_db": 3.396,
+            "target_attenuation_db": 0.273
+          },
+          {
+            "seconds": 214.0,
+            "overlap_sdr_db": 5.013,
+            "target_attenuation_db": 15.144
+          },
+          {
+            "seconds": 214.5,
+            "overlap_sdr_db": 4.385,
+            "target_attenuation_db": 5.137
+          },
+          {
+            "seconds": 215.0,
+            "overlap_sdr_db": 7.941,
+            "target_attenuation_db": 0.437
+          },
+          {
+            "seconds": 215.5,
+            "overlap_sdr_db": 9.308,
+            "target_attenuation_db": 1.792
+          },
+          {
+            "seconds": 241.5,
+            "overlap_sdr_db": 1.327,
+            "target_attenuation_db": 1.043
+          },
+          {
+            "seconds": 242.0,
+            "overlap_sdr_db": 3.773,
+            "target_attenuation_db": -0.191
+          },
+          {
+            "seconds": 242.5,
+            "overlap_sdr_db": 1.747,
+            "target_attenuation_db": 3.621
+          },
+          {
+            "seconds": 243.0,
+            "overlap_sdr_db": -0.15,
+            "target_attenuation_db": 5.374
+          },
+          {
+            "seconds": 243.5,
+            "overlap_sdr_db": 3.068,
+            "target_attenuation_db": 4.803
+          },
+          {
+            "seconds": 244.0,
+            "overlap_sdr_db": 5.065,
+            "target_attenuation_db": 2.264
+          },
+          {
+            "seconds": 244.5,
+            "overlap_sdr_db": 1.508,
+            "target_attenuation_db": 6.051
+          },
+          {
+            "seconds": 245.0,
+            "overlap_sdr_db": -0.431,
+            "target_attenuation_db": 5.464
+          },
+          {
+            "seconds": 245.5,
+            "overlap_sdr_db": 2.111,
+            "target_attenuation_db": 12.391
+          },
+          {
+            "seconds": 271.5,
+            "overlap_sdr_db": -2.348,
+            "target_attenuation_db": 5.455
+          },
+          {
+            "seconds": 272.0,
+            "overlap_sdr_db": -15.387,
+            "target_attenuation_db": 11.594
+          },
+          {
+            "seconds": 272.5,
+            "overlap_sdr_db": -21.37,
+            "target_attenuation_db": 3.624
+          },
+          {
+            "seconds": 273.0,
+            "overlap_sdr_db": 4.036,
+            "target_attenuation_db": 14.873
+          },
+          {
+            "seconds": 273.5,
+            "overlap_sdr_db": -6.765,
+            "target_attenuation_db": 6.919
+          },
+          {
+            "seconds": 274.0,
+            "overlap_sdr_db": -4.291,
+            "target_attenuation_db": 9.938
+          }
+        ],
+        "mux": {
+          "samples": 4800000,
+          "expected_samples": 4800000,
+          "exact": true,
+          "changed_samples": 0,
+          "first_changed_sample": null,
+          "peak_error_pcm": 0,
+          "alac_pcm16_mono_16khz": true
+        }
+      },
+      "visual": {
+        "minimum": {
+          "face_coverage": 0.0,
+          "name_coverage": 0.0
+        },
+        "maximum": {
+          "other_face_damage": 1.0,
+          "outside_allowed": 21.23357142857143,
+          "frame_mae": 2.439806019176136,
+          "high_error_fraction": 0.00021528764204545455,
+          "private_mean": 47.01587301587302,
+          "private_high_fraction": 0.8607142857142858,
+          "other_mean": 77.88177996020283,
+          "other_high_fraction": 0.9637841832963784
+        },
+        "first_bad_frames": [
+          {
+            "frame": 0,
+            "seconds": 0.0,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.30631081203964716,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 1,
+            "seconds": 0.04,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.28816950077293807,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 2,
+            "seconds": 0.08,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3162393162393162,
+            "target_pixels": 7178
+          },
+          {
+            "frame": 3,
+            "seconds": 0.12,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.23991717680950667,
+            "target_pixels": 7178
+          },
+          {
+            "frame": 4,
+            "seconds": 0.16,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.22794382427079582,
+            "target_pixels": 7178
+          },
+          {
+            "frame": 5,
+            "seconds": 0.2,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.28816950077293807,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 6,
+            "seconds": 0.24,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.1974404196626419,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 7,
+            "seconds": 0.28,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.21761374017906085,
+            "target_pixels": 6935
+          },
+          {
+            "frame": 8,
+            "seconds": 0.32,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.22635165833711948,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 9,
+            "seconds": 0.36,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3224922346062489,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 10,
+            "seconds": 0.4,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2977130597525905,
+            "target_pixels": 7178
+          },
+          {
+            "frame": 11,
+            "seconds": 0.44,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.1915244909190974,
+            "target_pixels": 7178
+          },
+          {
+            "frame": 12,
+            "seconds": 0.48,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3406730947524569,
+            "target_pixels": 7300
+          },
+          {
+            "frame": 13,
+            "seconds": 0.52,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.12995186967789707,
+            "target_pixels": 7104
+          },
+          {
+            "frame": 14,
+            "seconds": 0.56,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.16007342817806333,
+            "target_pixels": 7373
+          },
+          {
+            "frame": 15,
+            "seconds": 0.6,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.195919112612407,
+            "target_pixels": 7474
+          },
+          {
+            "frame": 16,
+            "seconds": 0.64,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.32017163463733056,
+            "target_pixels": 7300
+          },
+          {
+            "frame": 17,
+            "seconds": 0.68,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2976378664016982,
+            "target_pixels": 7425
+          },
+          {
+            "frame": 18,
+            "seconds": 0.72,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.15756035578144853,
+            "target_pixels": 7425
+          },
+          {
+            "frame": 19,
+            "seconds": 0.76,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.1635036496350365,
+            "target_pixels": 7425
+          },
+          {
+            "frame": 20,
+            "seconds": 0.8,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2653284671532847,
+            "target_pixels": 7326
+          },
+          {
+            "frame": 21,
+            "seconds": 0.84,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.27995681899964014,
+            "target_pixels": 7800
+          },
+          {
+            "frame": 22,
+            "seconds": 0.88,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.30642924253948367,
+            "target_pixels": 7725
+          },
+          {
+            "frame": 23,
+            "seconds": 0.92,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.29944968905194397,
+            "target_pixels": 7725
+          },
+          {
+            "frame": 24,
+            "seconds": 0.96,
+            "target_instances": [
+              {
+                "layer": 1,
+                "region": "name",
+                "uncovered_pixels": 5896
+              }
+            ],
+            "face_coverage": 1.0,
+            "name_coverage": 0.4017857142857143,
+            "other_face_damage": 0.09389436402833384,
+            "outside_allowed": 1.626727498228207,
+            "target_pixels": 7980
+          },
+          {
+            "frame": 25,
+            "seconds": 1.0,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.24799432649262002,
+            "target_pixels": 7875
+          },
+          {
+            "frame": 26,
+            "seconds": 1.04,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3248526217809494,
+            "target_pixels": 7875
+          },
+          {
+            "frame": 27,
+            "seconds": 1.08,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.1718008953503834,
+            "target_pixels": 7800
+          },
+          {
+            "frame": 28,
+            "seconds": 1.12,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3633828571428571,
+            "target_pixels": 7056
+          },
+          {
+            "frame": 29,
+            "seconds": 1.16,
+            "target_instances": [
+              {
+                "layer": 1,
+                "region": "name",
+                "uncovered_pixels": 5872
+              }
+            ],
+            "face_coverage": 1.0,
+            "name_coverage": 0.4042207792207792,
+            "other_face_damage": 0.0866065439367966,
+            "outside_allowed": 1.722272976429746,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 30,
+            "seconds": 1.2,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.1726480036714089,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 31,
+            "seconds": 1.24,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2172260337474504,
+            "target_pixels": 6768
+          },
+          {
+            "frame": 32,
+            "seconds": 1.28,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2477748933803078,
+            "target_pixels": 6696
+          },
+          {
+            "frame": 33,
+            "seconds": 1.32,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3711340206185567,
+            "target_pixels": 6603
+          },
+          {
+            "frame": 34,
+            "seconds": 1.36,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.37043050658749305,
+            "target_pixels": 6768
+          },
+          {
+            "frame": 35,
+            "seconds": 1.4,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3734654905883423,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 36,
+            "seconds": 1.44,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3938346821860507,
+            "target_pixels": 7008
+          },
+          {
+            "frame": 37,
+            "seconds": 1.48,
+            "target_instances": [
+              {
+                "layer": 1,
+                "region": "name",
+                "uncovered_pixels": 6412
+              }
+            ],
+            "face_coverage": 1.0,
+            "name_coverage": 0.3494318181818182,
+            "other_face_damage": 0.08783068783068783,
+            "outside_allowed": 1.7099653853160868,
+            "target_pixels": 7128
+          },
+          {
+            "frame": 38,
+            "seconds": 1.52,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3447560645684913,
+            "target_pixels": 7128
+          },
+          {
+            "frame": 39,
+            "seconds": 1.56,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.38227071873027324,
+            "target_pixels": 7227
+          },
+          {
+            "frame": 40,
+            "seconds": 1.6,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.38402248821182444,
+            "target_pixels": 6958
+          },
+          {
+            "frame": 41,
+            "seconds": 1.64,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3528550512445095,
+            "target_pixels": 6840
+          },
+          {
+            "frame": 42,
+            "seconds": 1.68,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3873139455003435,
+            "target_pixels": 6745
+          },
+          {
+            "frame": 43,
+            "seconds": 1.72,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3302058662780106,
+            "target_pixels": 6768
+          },
+          {
+            "frame": 44,
+            "seconds": 1.76,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.2687192566952086,
+            "target_pixels": 6768
+          },
+          {
+            "frame": 45,
+            "seconds": 1.8,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.281016578611769,
+            "target_pixels": 6768
+          },
+          {
+            "frame": 46,
+            "seconds": 1.84,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.27520856002901706,
+            "target_pixels": 6840
+          },
+          {
+            "frame": 47,
+            "seconds": 1.88,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3835965359144167,
+            "target_pixels": 6580
+          },
+          {
+            "frame": 48,
+            "seconds": 1.92,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3293591654247392,
+            "target_pixels": 6392
+          },
+          {
+            "frame": 49,
+            "seconds": 1.96,
+            "target_instances": [],
+            "face_coverage": 1.0,
+            "name_coverage": 1.0,
+            "other_face_damage": 0.0,
+            "outside_allowed": 0.3542938449534126,
+            "target_pixels": 6650
+          }
+        ]
+      }
+    }
+  },
+  "listening": {
+    "model": "qwen3.8-omni-flash",
+    "status": "sampled",
+    "windows": [
+      {
+        "start": 271.0,
+        "end": 275.0,
+        "status": "reviewed",
+        "target_residual": "fail",
+        "other_speech": "pass",
+        "finding": "成片音轨与多人原混音基本一致，没有可闻的删除或压低；约00:01仍能听到与目标B参考句首相符的“yeah”（B参考：“Yeah my name…”），同时其他人的“design should be … it should be different …”仍清楚可辨。"
+      },
+      {
+        "start": 3.5,
+        "end": 7.5,
+        "status": "reviewed",
+        "target_residual": "fail",
+        "other_speech": "pass",
+        "finding": "与原混音相比，成片并未移除目标B：约0:00起仍能听到与参考一致的B声线说出‘I'm a user interface my role is’；其他人的可辨内容（如结尾‘the present’）没有被成片进一步删掉或压到听不清，两条对照录音差异很小。"
+      },
+      {
+        "start": 210.0,
+        "end": 214.0,
+        "status": "reviewed",
+        "target_residual": "fail",
+        "other_speech": "pass",
+        "finding": "对比第二段原混音与第三段成片，可听内容基本一致，没有听到对目标 B 的有效清除。约 00:01 处仍能听到 B 参考中对应的词句片段“and my”（参考段 00:00 有“my name”、00:05 有“my role”），说明 B 的原声/用词仍有残留。其他人的语句“certain darkness ... has a center and it gives out a sig”在成片中仍清楚可辨，未被删除或压到听不清，因此 other_speech 为 pass。"
+      }
+    ]
+  }
+}
