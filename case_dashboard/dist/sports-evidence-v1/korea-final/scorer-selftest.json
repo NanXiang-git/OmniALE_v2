@@ -1,0 +1,224 @@
+{
+  "expert_fixture": {
+    "score": 97.0,
+    "parts": {
+      "reconstruction": {
+        "score": 25.0,
+        "max": 25
+      },
+      "timing": {
+        "score": 20.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 20.0,
+        "max": 20
+      },
+      "positions": {
+        "score": 20.0,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 5.0,
+        "max": 5
+      },
+      "pdf": {
+        "score": 7.0,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 662,
+      "matched": 662,
+      "missed": 0,
+      "extra": 0,
+      "f1": 1.0
+    }
+  },
+  "missing_shots": {
+    "score": 58.26,
+    "parts": {
+      "reconstruction": {
+        "score": 17.64,
+        "max": 25
+      },
+      "timing": {
+        "score": 10.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 10.76,
+        "max": 20
+      },
+      "positions": {
+        "score": 9.94,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 4.93,
+        "max": 5
+      },
+      "pdf": {
+        "score": 5.0,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 331,
+      "matched": 331,
+      "missed": 331,
+      "extra": 0,
+      "f1": 0.6667
+    }
+  },
+  "shift_all_12_frames": {
+    "score": 77.0,
+    "parts": {
+      "reconstruction": {
+        "score": 25.0,
+        "max": 25
+      },
+      "timing": {
+        "score": 0.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 20.0,
+        "max": 20
+      },
+      "positions": {
+        "score": 20.0,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 5.0,
+        "max": 5
+      },
+      "pdf": {
+        "score": 7.0,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 662,
+      "matched": 662,
+      "missed": 0,
+      "extra": 0,
+      "f1": 1.0
+    }
+  },
+  "teammates_swapped": {
+    "score": 87.02,
+    "parts": {
+      "reconstruction": {
+        "score": 25.0,
+        "max": 25
+      },
+      "timing": {
+        "score": 20.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 20.0,
+        "max": 20
+      },
+      "positions": {
+        "score": 10.02,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 5.0,
+        "max": 5
+      },
+      "pdf": {
+        "score": 7.0,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 662,
+      "matched": 662,
+      "missed": 0,
+      "extra": 0,
+      "f1": 1.0
+    }
+  },
+  "duplicates": {
+    "score": 96.69,
+    "parts": {
+      "reconstruction": {
+        "score": 24.99,
+        "max": 25
+      },
+      "timing": {
+        "score": 20.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 20.0,
+        "max": 20
+      },
+      "positions": {
+        "score": 20.0,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 5.0,
+        "max": 5
+      },
+      "pdf": {
+        "score": 6.7,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 663,
+      "matched": 662,
+      "missed": 0,
+      "extra": 1,
+      "f1": 0.9992
+    }
+  },
+  "chart_mismatch": {
+    "score": 94.0,
+    "parts": {
+      "reconstruction": {
+        "score": 25.0,
+        "max": 25
+      },
+      "timing": {
+        "score": 20.0,
+        "max": 20
+      },
+      "attributes": {
+        "score": 20.0,
+        "max": 20
+      },
+      "positions": {
+        "score": 20.0,
+        "max": 20
+      },
+      "loss_reason": {
+        "score": 5.0,
+        "max": 5
+      },
+      "pdf": {
+        "score": 4.0,
+        "max": 10
+      }
+    },
+    "shots": {
+      "gold": 662,
+      "predicted": 662,
+      "matched": 662,
+      "missed": 0,
+      "extra": 0,
+      "f1": 1.0
+    }
+  }
+}

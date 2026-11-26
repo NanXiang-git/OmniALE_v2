@@ -50,7 +50,7 @@ details p{white-space:pre-wrap;color:var(--soft);margin:9px 0 4px;font-size:.91r
 <small>OMNIALE BENCHMARK</small>
 <h1>体育长视频<br>Agent 任务</h1>
 <p>从转播找出裁决、比分与击球证据，交付可复核的结构化记录和剪辑。两道可运行任务的计分依据来自赛事官方记录。羽球条目另有逐拍专家标注版本。</p>
-<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打比分复盘</a><a href="#race-experiment">盲测结果</a></nav>
+<nav class="nav" aria-label="案例"><a href="#race">竞走裁决核验</a><a href="#badminton">羽球双打比分复盘</a><a href="#race-experiment">盲测结果</a><a href="#korea-final">韩国大师赛逐拍复盘</a></nav>
 </section>
 <section class="cards" aria-label="案例">
 <article id="race">
@@ -121,6 +121,17 @@ finish.status 使用 pending_final_board 或 final_board_visible，按当前素�
   <p class="trial-description">计时与裁决使用世界田联官方记录，证据定位及成片使用转播。评分规则在开跑前冻结。每段成片比较三个画面位置和三个音频窗口。通过须至少 90 分且所有评分项通过。单次盲测结果仅代表该提交。</p>
 </section>
 
+<section class="trial" id="korea-final" aria-labelledby="korea-final-title">
+  <h2 id="korea-final-title">2022 韩国大师赛男双决赛逐拍复盘</h2>
+  <p>Agent 从完整原声转播恢复每拍击球、球员站位和终局属性，再生成赛后 PDF。DShuttleNet 的专家标注覆盖 72 个回合和 662 拍。</p>
+  <p><strong>GPT-6.2 Sol xhigh · 51.59 / 100 · 未通过</strong>。匹配 576 拍，逐拍 F1 为 0.8312。</p>
+  <video controls playsinline preload="metadata" width="640" style="display:block;max-width:100%;height:auto" aria-label="第 54 回合原声预览">
+    <source src="korea-final/rally-54-preview.mp4" type="video/mp4">
+    <a href="korea-final/rally-54-preview.mp4">打开 20 秒预览</a>
+  </video>
+  <p>原声预览取自第二局第 54 回合，原转播时间 31 分 43.5 秒至 32 分 03.5 秒。专家记录为 27 拍，Agent 匹配到 16 拍。</p>
+  <p><a href="korea-final/">查看完整评分和误差分析</a> · <a href="korea-final/task.md">题面</a> · <a href="https://github.com/NanXiang-git/OmniALE_v2/releases/download/korea-masters-2022-shot-review/match_report.pdf">Agent 答卷 PDF</a></p>
+</section>
 </main>
 <footer>题包和评分器部署在评测服务器。页面状态来自基准自检。</footer>
 <script>

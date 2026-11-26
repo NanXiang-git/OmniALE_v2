@@ -1,0 +1,124 @@
+{
+  "games": [
+    {
+      "game": 1,
+      "shots": 314,
+      "matched": 280,
+      "median_start_error": 1.0,
+      "start_within_3": 211,
+      "end_within_3": 142
+    },
+    {
+      "game": 2,
+      "shots": 348,
+      "matched": 296,
+      "median_start_error": 1.0,
+      "start_within_3": 222,
+      "end_within_3": 145
+    }
+  ],
+  "largest_misses": [
+    {
+      "rally": 54,
+      "game": 2,
+      "shots": 27,
+      "matched": 16
+    },
+    {
+      "rally": 70,
+      "game": 2,
+      "shots": 23,
+      "matched": 16
+    },
+    {
+      "rally": 71,
+      "game": 2,
+      "shots": 47,
+      "matched": 41
+    },
+    {
+      "rally": 24,
+      "game": 1,
+      "shots": 22,
+      "matched": 18
+    },
+    {
+      "rally": 29,
+      "game": 1,
+      "shots": 38,
+      "matched": 34
+    },
+    {
+      "rally": 22,
+      "game": 1,
+      "shots": 10,
+      "matched": 7
+    },
+    {
+      "rally": 61,
+      "game": 2,
+      "shots": 19,
+      "matched": 16
+    },
+    {
+      "rally": 18,
+      "game": 1,
+      "shots": 10,
+      "matched": 8
+    }
+  ],
+  "top_ball_type_confusions": [
+    {
+      "expected": "net shot",
+      "predicted": "NA",
+      "count": 124
+    },
+    {
+      "expected": "lift",
+      "predicted": "NA",
+      "count": 94
+    },
+    {
+      "expected": "drive",
+      "predicted": "NA",
+      "count": 91
+    },
+    {
+      "expected": "smash",
+      "predicted": "NA",
+      "count": 69
+    },
+    {
+      "expected": "push",
+      "predicted": "NA",
+      "count": 58
+    },
+    {
+      "expected": "drop",
+      "predicted": "NA",
+      "count": 24
+    },
+    {
+      "expected": "net shot",
+      "predicted": "short serve",
+      "count": 19
+    },
+    {
+      "expected": "push",
+      "predicted": "drive",
+      "count": 5
+    }
+  ],
+  "explicit_unknowns": {
+    "hitter": 364,
+    "type": 597,
+    "backhand": 638,
+    "reason": 543
+  },
+  "submitted_coordinates_by_player": {
+    "A": 698,
+    "B": 698,
+    "C": 688,
+    "D": 686
+  }
+}

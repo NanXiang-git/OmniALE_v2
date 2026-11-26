@@ -1,0 +1,395 @@
+{
+  "score": 51.59,
+  "passed": false,
+  "parts": {
+    "reconstruction": {
+      "score": 20.41,
+      "max": 25
+    },
+    "timing": {
+      "score": 12.51,
+      "max": 20
+    },
+    "attributes": {
+      "score": 2.59,
+      "max": 20
+    },
+    "positions": {
+      "score": 5.51,
+      "max": 20
+    },
+    "loss_reason": {
+      "score": 0.57,
+      "max": 5
+    },
+    "pdf": {
+      "score": 10.0,
+      "max": 10
+    }
+  },
+  "shots": {
+    "gold": 662,
+    "predicted": 724,
+    "matched": 576,
+    "missed": 86,
+    "extra": 148,
+    "f1": 0.8312
+  },
+  "rallies": {
+    "gold": 72,
+    "predicted": 72,
+    "matched": 71,
+    "f1": 0.9861
+  },
+  "attribute_accuracy": {
+    "hitter": 0.19637462235649547,
+    "type": 0.0852359208523592,
+    "backhand": 0.09516616314199396
+  },
+  "type_macro_f1": 0.09805555555555555,
+  "per_type": {
+    "short serve": {
+      "gold": 66,
+      "predicted": 70,
+      "correct": 43,
+      "f1": 0.6324
+    },
+    "long serve": {
+      "gold": 2,
+      "predicted": 0,
+      "correct": 0,
+      "f1": 0.0
+    },
+    "net shot": {
+      "gold": 188,
+      "predicted": 12,
+      "correct": 2,
+      "f1": 0.02
+    },
+    "push": {
+      "gold": 77,
+      "predicted": 7,
+      "correct": 4,
+      "f1": 0.0952
+    },
+    "drive": {
+      "gold": 106,
+      "predicted": 16,
+      "correct": 2,
+      "f1": 0.0328
+    },
+    "lift": {
+      "gold": 115,
+      "predicted": 3,
+      "correct": 3,
+      "f1": 0.0508
+    },
+    "clear": {
+      "gold": 3,
+      "predicted": 4,
+      "correct": 0,
+      "f1": 0.0
+    },
+    "drop": {
+      "gold": 26,
+      "predicted": 9,
+      "correct": 0,
+      "f1": 0.0
+    },
+    "smash": {
+      "gold": 74,
+      "predicted": 4,
+      "correct": 2,
+      "f1": 0.0513
+    }
+  },
+  "positions": {
+    "valid": 2624,
+    "submitted": 2199,
+    "coverage": 0.8380335365853658,
+    "mean_error": 15.329387356533019
+  },
+  "loss_reasons": {
+    "correct": 8,
+    "total": 70
+  },
+  "pdf": {
+    "pages": 184,
+    "count_rows_matching_fraction": 1.0,
+    "rows_with_image_pair_slots": 724,
+    "audited_screenshots": 24,
+    "screenshots_matching": 24,
+    "examples": []
+  },
+  "timing": {
+    "mean_start_error_frames": 2.4565972222222223
+  },
+  "issues": {},
+  "errors": [
+    {
+      "rally": 1,
+      "shot": 5,
+      "page": 5,
+      "start_delta": 9,
+      "end_delta": 2,
+      "gold_type": "drive",
+      "predicted_type": "drive",
+      "gold_hitter": "B",
+      "predicted_hitter": "B"
+    },
+    {
+      "rally": 1,
+      "shot": 6,
+      "page": 5,
+      "start_delta": 2,
+      "end_delta": 5,
+      "gold_type": "push",
+      "predicted_type": "drive",
+      "gold_hitter": "C",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 1,
+      "shot": 7,
+      "page": 5,
+      "start_delta": 5,
+      "end_delta": -11,
+      "gold_type": "drive",
+      "predicted_type": "NA",
+      "gold_hitter": "B",
+      "predicted_hitter": "B"
+    },
+    {
+      "rally": 2,
+      "shot": 2,
+      "page": 5,
+      "start_delta": -3,
+      "end_delta": -14,
+      "gold_type": "net shot",
+      "predicted_type": "short serve",
+      "gold_hitter": "B",
+      "predicted_hitter": "D"
+    },
+    {
+      "rally": 2,
+      "shot": 3,
+      "page": 6,
+      "start_delta": -5,
+      "end_delta": 1,
+      "gold_type": "lift",
+      "predicted_type": "clear",
+      "gold_hitter": "D",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 2,
+      "shot": 4,
+      "page": 6,
+      "start_delta": 1,
+      "end_delta": 1,
+      "gold_type": "smash",
+      "predicted_type": "NA",
+      "gold_hitter": "A",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 5,
+      "page": 6,
+      "start_delta": 1,
+      "end_delta": -7,
+      "gold_type": "drive",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 6,
+      "page": 7,
+      "start_delta": -7,
+      "end_delta": 0,
+      "gold_type": "lift",
+      "predicted_type": "NA",
+      "gold_hitter": "B",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 7,
+      "page": 7,
+      "start_delta": 0,
+      "end_delta": 5,
+      "gold_type": "smash",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 8,
+      "page": 7,
+      "start_delta": 5,
+      "end_delta": -6,
+      "gold_type": "lift",
+      "predicted_type": "NA",
+      "gold_hitter": "B",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 9,
+      "page": 8,
+      "start_delta": 1,
+      "end_delta": 1,
+      "gold_type": "clear",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 10,
+      "page": 8,
+      "start_delta": 1,
+      "end_delta": 1,
+      "gold_type": "smash",
+      "predicted_type": "NA",
+      "gold_hitter": "A",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 11,
+      "page": 8,
+      "start_delta": 1,
+      "end_delta": -13,
+      "gold_type": "lift",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 12,
+      "page": 9,
+      "start_delta": 1,
+      "end_delta": 1,
+      "gold_type": "drop",
+      "predicted_type": "NA",
+      "gold_hitter": "A",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 2,
+      "shot": 13,
+      "page": 9,
+      "start_delta": 1,
+      "end_delta": -8,
+      "gold_type": "net shot",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 2,
+      "shot": 14,
+      "page": 9,
+      "start_delta": 0,
+      "end_delta": 3,
+      "gold_type": "push",
+      "predicted_type": "NA",
+      "gold_hitter": "B",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 3,
+      "shot": 2,
+      "page": 10,
+      "start_delta": 0,
+      "end_delta": 1,
+      "gold_type": "push",
+      "predicted_type": "NA",
+      "gold_hitter": "D",
+      "predicted_hitter": "D"
+    },
+    {
+      "rally": 3,
+      "shot": 3,
+      "page": 10,
+      "start_delta": 1,
+      "end_delta": -7,
+      "gold_type": "net shot",
+      "predicted_type": "NA",
+      "gold_hitter": "B",
+      "predicted_hitter": "NA"
+    },
+    {
+      "rally": 3,
+      "shot": 4,
+      "page": 11,
+      "start_delta": 0,
+      "end_delta": -11,
+      "gold_type": "push",
+      "predicted_type": "push",
+      "gold_hitter": "D",
+      "predicted_hitter": "A"
+    },
+    {
+      "rally": 4,
+      "shot": 1,
+      "page": 11,
+      "start_delta": 5,
+      "end_delta": 0,
+      "gold_type": "short serve",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "A"
+    },
+    {
+      "rally": 4,
+      "shot": 2,
+      "page": 12,
+      "start_delta": 0,
+      "end_delta": -6,
+      "gold_type": "net shot",
+      "predicted_type": "NA",
+      "gold_hitter": "A",
+      "predicted_hitter": "D"
+    },
+    {
+      "rally": 4,
+      "shot": 3,
+      "page": 12,
+      "start_delta": 0,
+      "end_delta": -13,
+      "gold_type": "net shot",
+      "predicted_type": "NA",
+      "gold_hitter": "C",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 4,
+      "shot": 4,
+      "page": 13,
+      "start_delta": 0,
+      "end_delta": -8,
+      "gold_type": "drive",
+      "predicted_type": "drive",
+      "gold_hitter": "B",
+      "predicted_hitter": "C"
+    },
+    {
+      "rally": 4,
+      "shot": 5,
+      "page": 13,
+      "start_delta": 4,
+      "end_delta": 0,
+      "gold_type": "net shot",
+      "predicted_type": "drop",
+      "gold_hitter": "D",
+      "predicted_hitter": "D"
+    }
+  ],
+  "validation_only": false
+}
