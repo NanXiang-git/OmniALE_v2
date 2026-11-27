@@ -1,0 +1,902 @@
+{
+  "criteria": [
+    {
+      "id": "V_geometry",
+      "title": "构图、标志结构与曲率",
+      "weight": 6,
+      "components": [
+        {
+          "name": "位置尺度留白",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "主体位置和留白接近，后半段尺度与厚度偏差。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "拓扑结构",
+          "weight": 1,
+          "tier": 1,
+          "reason": "标志拓扑完整。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部轮廓曲率",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "环尾、手与建筑、花园轮廓明显近似。",
+          "evidence": [
+            "reports/evidence/R_all_stages.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_grid",
+      "title": "网格色卡与印刷拼装",
+      "weight": 5,
+      "components": [
+        {
+          "name": "布局",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "色卡与网格总体布局接近，左套准标记及局部边界有误差。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "纹理渐变",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "网点颗粒与渐变分布明显简化。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "拼装显露退场",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "有实际逐段显露，但缺少参考移动粉色端帽等关键局部动作。",
+          "evidence": [
+            "reports/evidence/R_compare_0125.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_ui",
+      "title": "立体UI、玻璃与光学结构",
+      "weight": 7,
+      "components": [
+        {
+          "name": "对象布局",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "控件、指针及管道布局接近。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "截面体积",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "截面和厚度由平面描边近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "玻璃折射高光",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "多层渐变和模糊只有光学提示，未充分复现玻璃厚度及真实折射结构。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "阴影微细节",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "阴影存在，表面层次和微细节明显简化。",
+          "evidence": [
+            "reports/evidence/R_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_illustration",
+      "title": "插画细节、字形与非刚性展开",
+      "weight": 8,
+      "components": [
+        {
+          "name": "装饰覆盖密度",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "主要装饰对象和密度保留。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "轮廓构图",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "皇冠、蘑菇、花朵与卷纸等形状明显近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手绘字形",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "均匀块状字形未复现手绘挤压及鼓胀。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "非刚性展开",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "装饰以整体缩放弹出，未重建参考卷纸弯折与局部非刚性展开机制。",
+          "evidence": [
+            "reports/evidence/R_compare_0350.jpg",
+            "sealed/stage2/submission/project/motifs.py",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "V_late",
+      "title": "切片、手与建筑、花草骑行",
+      "weight": 8,
+      "components": [
+        {
+          "name": "人物周围切片",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "切片和环存在，空间交错与透明光学明显简化；不扣豁免的原人物身份、姿态、火焰。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.0
+        },
+        {
+          "name": "手与建筑形体材质",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "卡通手、径向扇片台阶和棉球云代替复杂形体。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "花草骑行形体材质运动",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "植物木板与骑行者都有运动，但材质、尺度及空间关系明显近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0550.jpg",
+            "reports/evidence/R_compare_0680.jpg",
+            "reports/evidence/R_compare_0850.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        }
+      ],
+      "score": 4.0
+    },
+    {
+      "id": "V_transition",
+      "title": "源片时序、转换机制与遮挡",
+      "weight": 8,
+      "components": [
+        {
+          "name": "参考进程与阶段完整性",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "共用的无声重建在 4.5 秒仍有大面积插画，偏离参考进程。新版由音轨决定输出落点，按设计移动的切点不计入该偏差。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "跨阶段形变机制",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "关键切片位移和翻卷以整场透明度叠化替代，严重重影。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "局部遮挡层次",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "有可编辑遮挡，但原片细部交错关系近似。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "全段稳定与运动",
+          "weight": 1,
+          "tier": 1,
+          "reason": "全240帧可解码，后半段有实际动作且正常退出。",
+          "evidence": [
+            "reports/evidence/R_compare_0450.jpg",
+            "reports/evidence/R_all_stages.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        }
+      ],
+      "score": 3.75
+    },
+    {
+      "id": "V_text",
+      "title": "返修文字内容、方向及曲线形变",
+      "weight": 8,
+      "components": [
+        {
+          "name": "全部目标文字覆盖",
+          "weight": 1,
+          "tier": 1,
+          "reason": "彩色与黑白文字环均替换，保留长环的原有 CREATE 前缀。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "阅读方向可读性",
+          "weight": 2,
+          "tier": 0.25,
+          "reason": "显著弧段阅读方向与拥挤程度不佳，沿用v2同类错误的严格档位；不将保留原CREATE前缀单独扣分。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "曲线字形手绘变形",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "规整字形沿线排布，缺乏原片夸张曲线形变。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        },
+        {
+          "name": "填色描边间距遮挡",
+          "weight": 2,
+          "tier": 0.5,
+          "reason": "暖色、描边保留，字距和转场叠字明显影响排版。",
+          "evidence": [
+            "reports/evidence/E_compare_0350.jpg",
+            "reports/evidence/E_compare_0450.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.0
+        }
+      ],
+      "score": 3.25
+    },
+    {
+      "id": "V_material",
+      "title": "返修材质与局部范围",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定色彩",
+          "weight": 1,
+          "tier": 1,
+          "reason": "指定蓝青渐变实际生效。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "局部范围",
+          "weight": 1,
+          "tier": 1,
+          "reason": "目标局部改色，其他对象保持。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "原片光学质感保留",
+          "weight": 3,
+          "tier": 0.25,
+          "reason": "原片透明边缘、体积及折射未充分恢复，不能以改色正确替代材质保真。",
+          "evidence": [
+            "reports/evidence/E_compare_0225.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.75
+        }
+      ],
+      "score": 2.75
+    },
+    {
+      "id": "V_portrait",
+      "title": "真实人像、边缘、融合与层次",
+      "weight": 10,
+      "components": [
+        {
+          "name": "真实素材和背景去除",
+          "weight": 1,
+          "tier": 1,
+          "reason": "指定真实素材及RVM衍生alpha去除了街景。",
+          "evidence": [
+            "reports/evidence/head_109.jpg",
+            "reports/evidence/stage1_portrait_checker.jpg",
+            "sealed/stage2/submission/project/renderer.py",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "边缘与时间稳定",
+          "weight": 3,
+          "tier": 0.75,
+          "reason": "新增相邻人像帧插值，发丝轮廓大体稳定，软边和轻微色边仍在。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/evidence/variant.jpg"
+          ],
+          "score": 2.25
+        },
+        {
+          "name": "连续运动及自然融合",
+          "weight": 3,
+          "tier": 0.5,
+          "reason": "真实人物动作连续，仍用纵向 4 倍拉伸补齐下方衣服，身体比例和照明融合存在明显差距。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "窗口头部越界前景遮挡",
+          "weight": 3,
+          "tier": 1,
+          "reason": "关闭位移对照与实际第 109 帧显示单头上探，头部最大位移 36 像素，保留裁切和前景环边。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 7.75
+    },
+    {
+      "id": "V_local",
+      "title": "光标局部延迟与未改内容保持",
+      "weight": 5,
+      "components": [
+        {
+          "name": "指定光标及非目标保持",
+          "weight": 2,
+          "tier": 1,
+          "reason": "第 6 至 239 帧的蓝光标均读取六帧前的场景时间，绿橙光标留在当前场景时间。",
+          "evidence": [
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 2
+        },
+        {
+          "name": "自由重排与非目标内容保持",
+          "weight": 3,
+          "tier": 1,
+          "reason": "单调曲线完整保留各阶段，6.25 秒起源帧等于输出帧。后 90 帧同旧片对照为 49.03 dB，未见内容变化。",
+          "evidence": [
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/evidence/media.json",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 3
+        }
+      ],
+      "score": 5
+    },
+    {
+      "id": "A_cues",
+      "title": "声音线索识别与选择理由",
+      "components": [
+        {
+          "name": "网格重音",
+          "weight": 1,
+          "tier": 1,
+          "reason": "0.855 秒处有可核对的低频冲击起音。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "插画重音",
+          "weight": 1,
+          "tier": 1,
+          "reason": "2.570 秒处出现新的低频瞬态，与前面的偏亮短音区分明确。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "人像重音",
+          "weight": 1,
+          "tier": 1,
+          "reason": "4.290 秒出现宽频起音，随后中高频衰减。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "瞬态与短动作落点",
+          "weight": 1,
+          "tier": 1,
+          "reason": "两次低频冲击和宽频起音均有明确的短时声学依据，模型据此布置动作落点。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "持续升能或回落与渐进动作",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立测量 2.75–3.30、3.30–3.70、3.70–4.20 秒的单声道 RMS 分别为 0.091、0.129、0.159。另以首个冲击后衰减和 1.7 秒后反弹驱动管体。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        }
+      ],
+      "weight": 5,
+      "score": 5
+    },
+    {
+      "id": "A_grid",
+      "title": "网格拼装的实际落点",
+      "components": [
+        {
+          "name": "完成可辨",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立卡片陆续出现并完成几何拼装，全组清楚存在。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "相对所选重音的时机",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "最后卡片的遮罩在输出约 0.665 秒结束，比 0.855 秒起音早 4.56 帧。0.875 秒是同张卡的色彩收束。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "动作与声音形态匹配",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "短促的重音落在色彩收束附近，卡片最后一次显露已经结束，重音的几何锁定感有限。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/evidence/audio_bands.png"
+          ],
+          "score": 0.5
+        }
+      ],
+      "weight": 3,
+      "score": 2.0
+    },
+    {
+      "id": "A_illustration",
+      "title": "插画展开的实际落点",
+      "components": [
+        {
+          "name": "完成可辨",
+          "weight": 1,
+          "tier": 1,
+          "reason": "十二个装饰实际达到完整尺寸，彩色全图在黑白扫过之前出现。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "相对所选重音的时机",
+          "weight": 1,
+          "tier": 1,
+          "reason": "连续完成点约 2.567 秒，首个完成采样为第 62 帧（2.583 秒），与 2.570 秒起音相差不足一帧。旧版最后装饰约 2.877 秒完成。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/evidence/audio_bands.png"
+          ],
+          "score": 1
+        },
+        {
+          "name": "动作与声音形态匹配",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "插画先快速长出主装饰，最后一颗小星完成时落在冲击附近。最后的像素变化面积偏小，前面的主要张开动作更抢眼。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 0.75
+        }
+      ],
+      "weight": 3,
+      "score": 2.75
+    },
+    {
+      "id": "A_portrait",
+      "title": "人像揭示的实际落点",
+      "components": [
+        {
+          "name": "完成可辨",
+          "weight": 1,
+          "tier": 1,
+          "reason": "第 103 帧真人揭示达到全不透明，环边与切片还在前景。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv"
+          ],
+          "score": 1
+        },
+        {
+          "name": "相对所选重音的时机",
+          "weight": 1,
+          "tier": 1,
+          "reason": "实际完成 4.292 秒，相对 4.290 秒起音约晚 0.002 秒。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv"
+          ],
+          "score": 1
+        },
+        {
+          "name": "动作与声音形态匹配",
+          "weight": 1,
+          "tier": 0.75,
+          "reason": "升能段先让黑白结构扫过，再在宽频起音附近让人像到达全不透明。揭示以大范围叠化为主，最后一帧缺少明确的形变收束。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/evidence/audio_bands.png"
+          ],
+          "score": 0.75
+        }
+      ],
+      "weight": 3,
+      "score": 2.75
+    },
+    {
+      "id": "A_pacing",
+      "title": "整段节奏与管体响应",
+      "components": [
+        {
+          "name": "主次与节奏变化",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "开头离散色卡、两次低频冲击、由黑白扫过通向真人、随后减速停留，能看出节奏设计。首个重音缺少显眼的几何终点，削弱第一段的重拍。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/evidence/audio_bands.png"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "过渡连贯性",
+          "weight": 2,
+          "tier": 0.75,
+          "reason": "节奏曲线平滑且阶段顺序完整，2.8 秒左右矩形黑白扫过开头仍有明显跳变，部分 UI 和人物切换靠叠化。",
+          "evidence": [
+            "rhythm_v4/evidence/timeline.jpg",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv"
+          ],
+          "score": 1.5
+        },
+        {
+          "name": "信号与管体可见时段匹配",
+          "weight": 1,
+          "tier": 1,
+          "reason": "约 1.17 秒至 1.67 秒从 +8.08% 回落至 +2.76%，再在完全可见的第 43 帧（1.792 秒）回弹至 +10.18%。",
+          "evidence": [
+            "rhythm_v4/evidence/audio_bands.png",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/evidence/variant.jpg"
+          ],
+          "score": 1
+        },
+        {
+          "name": "正常尺度可辨",
+          "weight": 1,
+          "tier": 0.5,
+          "reason": "1.79 秒比旧版有更可定位的局部回弹。整画面下仍主要是描边宽度变动，局部变粗比声音重拍和 UI 本身运动更轻。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/evidence/timeline.jpg"
+          ],
+          "score": 0.5
+        },
+        {
+          "name": "局部性与幅度上限",
+          "weight": 1,
+          "tier": 1,
+          "reason": "控制仅改变管体描边、管体高光和匹配的阴影，中心路径不缩放。关闭脉冲后相关帧改变，段外抽查一致，控制增量不超过 12%。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/evidence/variant.json",
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv"
+          ],
+          "score": 1
+        }
+      ],
+      "weight": 7,
+      "score": 5.5
+    },
+    {
+      "id": "A_delivery",
+      "title": "音轨与可编辑控制",
+      "components": [
+        {
+          "name": "原音轨内容与增益",
+          "weight": 1,
+          "tier": 1,
+          "reason": "解码左右声道相关系数 0.99894、0.99919，增益误差小于 0.05 dB。",
+          "evidence": [
+            "rhythm_v4/evidence/media.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "原位原速、时长与无削波",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立互相关得到零样本偏移，输出为 10 秒，无削波。",
+          "evidence": [
+            "rhythm_v4/evidence/media.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "时序设计可复核",
+          "weight": 1,
+          "tier": 1,
+          "reason": "事件说明、逐帧表和可编辑时间映射齐全，可以定位模型主张与实际动作差异。",
+          "evidence": [
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/run/sealed/submission/audio_events.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "声音控制可编辑",
+          "weight": 1,
+          "tier": 1,
+          "reason": "关掉脉冲的独立重渲染在管体可见段改变实际像素。重排曲线和响应参数可单独编辑。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/evidence/rebuild.json"
+          ],
+          "score": 1
+        }
+      ],
+      "weight": 4,
+      "score": 4
+    },
+    {
+      "id": "ENG",
+      "title": "工程与有效参数变体",
+      "components": [
+        {
+          "name": "R 独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立重渲染与原 R 的 240 帧逐像素一致。",
+          "evidence": [
+            "rhythm_v4/evidence/rebuild.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "E 独立重渲染",
+          "weight": 1,
+          "tier": 1,
+          "reason": "独立重渲染与封存 E 的 240 帧逐像素一致。",
+          "evidence": [
+            "rhythm_v4/evidence/rebuild.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "依赖素材完整",
+          "weight": 1,
+          "tier": 1,
+          "reason": "隔离复跑未挂载参考视频、输入或工具素材。工程内音轨和人像素材足够重渲染。",
+          "evidence": [
+            "rhythm_v4/evidence/rebuild.json",
+            "rhythm_v4/evidence/media.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "参数实际生效",
+          "weight": 1,
+          "tier": 1,
+          "reason": "关闭头部位移和脉冲可分别在非重叠时段改变对应像素。",
+          "evidence": [
+            "rhythm_v4/evidence/variant.jpg",
+            "rhythm_v4/evidence/variant.json"
+          ],
+          "score": 1
+        },
+        {
+          "name": "诊断与图层定位",
+          "weight": 1,
+          "tier": 1,
+          "reason": "分开的真人 alpha、棋盘格、头部越界素材和逐帧控制表俱全。",
+          "evidence": [
+            "rhythm_v4/run/sealed/submission/diagnostics/control_signals.csv",
+            "rhythm_v4/run/sealed/submission/diagnostics/head_overflow.mp4"
+          ],
+          "score": 1
+        }
+      ],
+      "weight": 5,
+      "score": 5
+    }
+  ],
+  "events": [
+    {
+      "action": "网格拼装",
+      "sound": "0.855 秒 · 低频起音",
+      "actual": "0.665 秒拼装完成，0.875 秒色彩收束",
+      "finding": "几何完成早 4.56 帧，颜色接近重音。旧版几何完成早 4.75 帧。"
+    },
+    {
+      "action": "插画展开",
+      "sound": "2.570 秒 · 低频冲击",
+      "actual": "2.567 秒最后一件装饰完成",
+      "finding": "在一帧内对齐。旧版约 2.877 秒完成，相对其目标晚 6.41 帧。"
+    },
+    {
+      "action": "人像揭示",
+      "sound": "4.290 秒 · 宽频起音",
+      "actual": "4.292 秒揭示完成",
+      "finding": "在一帧内对齐，随后头发越界。旧版也与其 4.30 秒目标对齐。"
+    }
+  ],
+  "summary": "插画展开提前到低频起音附近，人像仍准确揭示。Sol 用持续升能安排扫过和人物过渡，管体在可见时回弹。网格几何拼装仍抢拍，玻璃材质、曲线字形和转场保真仍限制视觉分。",
+  "limitations": [
+    "仅重跑第二阶段，沿用原 Sol 的同一份封存重建。两个版本均由 GPT-6.1-Sol xhigh 完成，但属于单次配对试验。",
+    "两版音画评分项不同。正式分差同时包含改题与量表变化，无法单独量化改题效果。",
+    "评分依据独立信号分析、逐帧检查、可编辑控制和独立重渲染。未进行独立人耳盲评，提供 0.25 秒偏移样片供观看者对照。",
+    "首次启动的旧凭据被网关拒绝，当时完成请求数为零。可用凭据下的正式作答完成 41 次请求，另有两次未完成的 HTTP 200 响应，Codex 在同一会话内继续。"
+  ],
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "version": "v4",
+  "categories": [
+    {
+      "title": "视觉重建与返修",
+      "score": 39.5,
+      "maximum": 70
+    },
+    {
+      "title": "音画节奏与同步",
+      "score": 22.0,
+      "maximum": 25
+    },
+    {
+      "title": "工程交付",
+      "score": 5,
+      "maximum": 5
+    }
+  ],
+  "total": 66.5,
+  "maximum": 100,
+  "passed": false,
+  "pass_threshold": 85,
+  "rubric_sha256": "a96ec5c012e8546b1ee9b45b078f1f2cac080ab0fa8be48942344888212e090d",
+  "stage1_shared": true,
+  "runtime_seconds": 1832.5958771705627,
+  "completed_requests": 41,
+  "attempts": 2,
+  "infra_attempts_without_completed_calls": 1
+}

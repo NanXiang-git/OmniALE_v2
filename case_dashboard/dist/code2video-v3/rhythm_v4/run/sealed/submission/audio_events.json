@@ -1,0 +1,310 @@
+{
+  "frame_basis": "All movie frame numbers are zero-based at 24 fps. Frame n starts at n/24 seconds; ranges are inclusive unless identified as half-open.",
+  "audio": {
+    "path": "project/assets/brand_B_10s.wav",
+    "sha256": "801762d84958c2b5daf955417349e9eeeda1e78a31ed50ec5d9274b09e11ef40",
+    "sample_rate": 48000,
+    "channels": 2,
+    "duration_s": 10.0,
+    "processing_in_movie": "Original samples at time zero, original speed and unity gain. Only AAC 320 kb/s encoding; no filters, added audio, fades or retiming."
+  },
+  "analysis": {
+    "entry": "project/revision_diagnostics.py::audio_evidence",
+    "method": "Stereo mean; Hann STFT, 1024 samples, hop 240 samples = 5 ms. Square magnitudes summed in indicated bands. Spectral flux is the sum of positive magnitude differences. RMS and centroid intervals are explicitly recorded. Analysis filters are used for controls only, never applied to the movie audio."
+  },
+  "design": "First assembly lands on a low impact; a second low impact completes the full sticker bloom; a sustained rising passage drives a gradual monochrome sweep and portrait reveal into the third broadband attack. The UI uses a separate, continuous filtered decay-and-rebound relationship. The portrait then holds while the sound releases.",
+  "events": [
+    {
+      "id": "opening_tap",
+      "sound_time_s": 0.06,
+      "feature": {
+        "stft_time_s": 0.060000000000000005,
+        "positive_spectral_flux": 1.337351
+      },
+      "output_frames": [
+        2,
+        6
+      ],
+      "action": "First swatch starts at frame 2; further cards join the opening bright taps.",
+      "relationship": "short transients introduce small, discrete pieces",
+      "reason": "The first strong high-frequency onset gives the opening a small pickup before the main low impact."
+    },
+    {
+      "id": "grid_lock",
+      "sound_time_s": 0.855,
+      "feature": {
+        "stft_time_s": 0.855,
+        "positive_spectral_flux": 1.392764,
+        "measurement_interval_s": [
+          0.8,
+          0.96
+        ],
+        "mono_rms_linear": 0.292947,
+        "spectral_centroid_hz": 220.2,
+        "power_fraction_30_180_Hz": 0.68759,
+        "power_fraction_2500_10000_Hz": 0.0173
+      },
+      "output_frame": 21,
+      "output_time_s": 0.875,
+      "source_frame": 32,
+      "action": "Grid assembly completes: last cyan-to-magenta tile color settles; all panels and guides are present.",
+      "relationship": "short low impact -> exact action endpoint",
+      "sync_error_ms": 20.0,
+      "reason": "The 0.855 s onset is the first broad low-frequency impact; finishing the final card at the nearest video frame creates a legible first downbeat."
+    },
+    {
+      "id": "tube_decay_rebound",
+      "sound_interval_s": [
+        0.94,
+        2.05
+      ],
+      "features": [
+        {
+          "measurement_interval_s": [
+            1.0,
+            1.5
+          ],
+          "mono_rms_linear": 0.190775,
+          "spectral_centroid_hz": 328.74,
+          "power_fraction_30_180_Hz": 0.51782,
+          "power_fraction_2500_10000_Hz": 0.02691
+        },
+        {
+          "measurement_interval_s": [
+            1.65,
+            1.88
+          ],
+          "mono_rms_linear": 0.123921,
+          "spectral_centroid_hz": 2422.11,
+          "power_fraction_30_180_Hz": 0.17388,
+          "power_fraction_2500_10000_Hz": 0.45555
+        }
+      ],
+      "output_frames": [
+        23,
+        50
+      ],
+      "fully_visible_frames": [
+        28,
+        43
+      ],
+      "second_bulge_frame": 43,
+      "action": "Blue/cyan tube thickness contracts through the first impact decay, then expands again at the 1.72\u20131.80 s low-mid attack.",
+      "relationship": "continuous band-envelope -> local cross-section thickness",
+      "reason": "This sustained change is visibly different from endpoint synchronization; its faster rebound gives the UI a secondary accent without moving the center paths or controls.",
+      "control": {
+        "bands_hz": [
+          [
+            30,
+            180
+          ],
+          [
+            180,
+            800
+          ]
+        ],
+        "band_weights": [
+          0.35,
+          1.0
+        ],
+        "rms_window_ms": 12,
+        "attack_ms": 10,
+        "release_ms": 65,
+        "normalization_interval_s": [
+          0.94,
+          2.05
+        ],
+        "normalization_percentile": 95,
+        "noise_floor": 0.008,
+        "curve_exponent": 0.7,
+        "design_interval_s": [
+          0.94,
+          2.05
+        ]
+      },
+      "maximum_fractional_thickness_increase": 0.12,
+      "equation": "width = original_width * (1 + pulse_amount * clamp(normalized_envelope,0,1)); 10ms attack, 65ms release, 0.7 power curve. Stroke widths alone change."
+    },
+    {
+      "id": "illustration_pickup",
+      "sound_interval_s": [
+        2.035,
+        2.52
+      ],
+      "features": [
+        {
+          "stft_time_s": 2.0349999999999997,
+          "positive_spectral_flux": 0.77176
+        },
+        {
+          "stft_time_s": 2.25,
+          "positive_spectral_flux": 1.559743
+        },
+        {
+          "stft_time_s": 2.355,
+          "positive_spectral_flux": 1.104735
+        },
+        {
+          "measurement_interval_s": [
+            2.25,
+            2.52
+          ],
+          "mono_rms_linear": 0.119499,
+          "spectral_centroid_hz": 5332.79,
+          "power_fraction_30_180_Hz": 0.00105,
+          "power_fraction_2500_10000_Hz": 0.70301
+        }
+      ],
+      "output_frames": [
+        49,
+        61
+      ],
+      "action": "Independent crown, mushroom, arrow, coil, flower and final small star continue their unfolding; no stages or stickers are dropped.",
+      "relationship": "increasingly bright short attacks -> staggered arrivals",
+      "reason": "The cluster of high-frequency attacks acts as a pickup to the following bass impact."
+    },
+    {
+      "id": "illustration_bloom",
+      "sound_time_s": 2.57,
+      "feature": {
+        "stft_time_s": 2.57,
+        "positive_spectral_flux": 1.425194,
+        "measurement_interval_s": [
+          2.55,
+          2.7
+        ],
+        "mono_rms_linear": 0.284547,
+        "spectral_centroid_hz": 316.14,
+        "power_fraction_30_180_Hz": 0.69582,
+        "power_fraction_2500_10000_Hz": 0.02117
+      },
+      "output_frame": 62,
+      "output_time_s": 2.5833333333333335,
+      "source_frame_at_completion": 92.0,
+      "exact_continuous_completion_output_frame": 61.570985344597624,
+      "action": "All twelve independent sticker reveals have completed; the last small star finishes the illustration bloom.",
+      "relationship": "short low impact -> clear action endpoint",
+      "sync_error_ms": 13.333,
+      "reason": "The 2.57 s impact has 69.6% of its measured power in 30\u2013180 Hz; it resolves the preceding bright attacks with a fully assembled illustration."
+    },
+    {
+      "id": "sustained_build",
+      "sound_interval_s": [
+        2.75,
+        4.29
+      ],
+      "features": [
+        {
+          "measurement_interval_s": [
+            2.75,
+            3.3
+          ],
+          "mono_rms_linear": 0.090742,
+          "spectral_centroid_hz": 1383.47,
+          "power_fraction_30_180_Hz": 0.36849,
+          "power_fraction_2500_10000_Hz": 0.14527
+        },
+        {
+          "measurement_interval_s": [
+            3.3,
+            3.7
+          ],
+          "mono_rms_linear": 0.128782,
+          "spectral_centroid_hz": 453.67,
+          "power_fraction_30_180_Hz": 0.49325,
+          "power_fraction_2500_10000_Hz": 0.02918
+        },
+        {
+          "measurement_interval_s": [
+            3.7,
+            4.2
+          ],
+          "mono_rms_linear": 0.159489,
+          "spectral_centroid_hz": 436.01,
+          "power_fraction_30_180_Hz": 0.42975,
+          "power_fraction_2500_10000_Hz": 0.02403
+        }
+      ],
+      "output_frames": [
+        66,
+        102
+      ],
+      "monochrome_sweep_frames": [
+        68,
+        86
+      ],
+      "portrait_reveal_frames": [
+        90,
+        103
+      ],
+      "action": "A progressive monochrome sweep passes across the type rings, then the portrait reveals through the continuously moving slices.",
+      "relationship": "sustained rising energy -> gradual visual progression and increasing emphasis",
+      "reason": "Measured RMS rises from about 0.091 to 0.159 over the recorded subintervals. The time curve slows through the sweep, then allows the portrait reveal to settle on the next broadband attack."
+    },
+    {
+      "id": "portrait_settle",
+      "sound_time_s": 4.29,
+      "feature": {
+        "stft_time_s": 4.29,
+        "positive_spectral_flux": 1.132397,
+        "measurement_interval_s": [
+          4.28,
+          4.42
+        ],
+        "mono_rms_linear": 0.233793,
+        "spectral_centroid_hz": 2433.9,
+        "power_fraction_30_180_Hz": 0.06964,
+        "power_fraction_2500_10000_Hz": 0.23958
+      },
+      "output_frame": 103,
+      "output_time_s": 4.291666666666667,
+      "source_frame": 113,
+      "action": "Portrait reveal reaches full opacity and the illustration handoff finishes; a colored foreground slice and glass rails still occlude the live person.",
+      "relationship": "broadband attack -> completed reveal",
+      "sync_error_ms": 1.667,
+      "reason": "The next distinct broadband attack provides the strongest perceptual arrival for the person. It is followed by a long release, allowing a portrait hold."
+    },
+    {
+      "id": "hair_follow_through",
+      "sound_interval_s": [
+        4.291666666666667,
+        4.791666666666667
+      ],
+      "output_frames": [
+        103,
+        115
+      ],
+      "peak_frame": 109,
+      "peak_extra_height_px": 36,
+      "action": "A single crown warp eases above the original window edge for 6 frames and returns over 6 frames, while the face and torso stay in their original positions.",
+      "relationship": "small visual follow-through during the attack release",
+      "reason": "This secondary motion follows the portrait arrival instead of introducing a competing full-frame accent."
+    },
+    {
+      "id": "restore_frozen_progress",
+      "sound_time_s": 6.25,
+      "output_frame": 150,
+      "source_frame": 150,
+      "action": "Source time and its first derivative join the frozen reconstruction. Architecture, hands, plants and riders retain the frozen progress through frame 239.",
+      "relationship": "long release supports the preserved later scenes",
+      "reason": "The task fixes the restoration boundary at 6.25 s."
+    }
+  ],
+  "action_completions": {
+    "grid": {
+      "frame": 21,
+      "seconds": 0.875,
+      "definition": "All grid cards visible; last card hue reaches final value at source frame 32."
+    },
+    "illustration": {
+      "frame": 62,
+      "seconds": 2.5833333333333335,
+      "definition": "Last staggered sticker (smallstar) reaches scale 1 at source frame 91.58; first fully completed output sample is frame 62."
+    },
+    "portrait": {
+      "frame": 103,
+      "seconds": 4.291666666666667,
+      "definition": "Portrait handoff opacity reaches 1 at source frame 113."
+    }
+  }
+}
